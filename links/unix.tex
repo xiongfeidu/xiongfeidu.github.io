@@ -1,0 +1,138 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+
+\title{Using Unix}
+\author{Xiong-Fei Du}
+\date{Updated \today}
+
+\begin{document}
+
+\maketitle
+
+\section{Introduction}
+
+\paragraph{} Learning to use the Unix terminal well is probably one of the most important skills to grasp as a beginner programmer. This document will cover some of the most basic ideas -- it is not meant to be a comprehensive documentation. Most of what you learn about using terminal will come with experience. This was written for Linux systems using \texttt{bash}. In case you aren't using the \texttt{bash} shell, most of this is sill applicable to other shells, such as \texttt{csh} or \texttt{tcsh}, although some of the syntax might differ slightly.
+
+\paragraph{} Linux and Mac OS both have very similar terminals. Windows has a command prompt, but it's a bit different.
+
+\section{Keyboard Tricks}
+
+\paragraph{} In most terminals, the up and down keys allow you to visit previous commands so that you don't have to retype them. Additionally, the tab key will allow you to autofill whatever you're beginning to type so that you don't have to type out really long file names. Also, Shift + Insert will allow you to paste text into terminal.
+
+\section{Links}
+
+\paragraph{} In each directory, every subdirectory and file can be referenced by links. Each directory has links to all of its files and subdirectories. Additionally, in any directory, \texttt{.} links to the directory itself and \texttt{..} link to its parent directory. \texttt{/} refers to the root directory, and \texttt{\~} refers to the home directory of the user.
+
+\section{Files and Directories}
+
+\paragraph{} Being able to work with files and directories is the most important tool in navigating your directory tree in terminal. The most basic commands are:
+
+\paragraph{} \texttt{\$ ls} shows you all non-hidden files and subdirectories of your current directory. Alternatively \texttt{\$ ls <dir>} will list all non-hidden files and subdirectories of the directory \texttt{<dir>}. Additionally, \texttt{\$ ls -a} will show you all files and directories, including hidden ones. \texttt{\$ ls -l} will show you details of all files in the directory.
+
+\paragraph{} \texttt{\$ cd <dir>} changes your current directory to \texttt{<dir>}. \texttt{\$ cd ..} will change your current directory to the parent directory. For example, say that you are in the directory \texttt{/home/johndoe}. Then typing \texttt{\$ cd Documents} will change your current directory to \texttt{/home/johndoe/Documents}. If you are in the directory \texttt{/home/johndoe}, then typing \texttt{\$ cd ..} will change your current directory to \texttt{/home}. Typing \texttt{\$ cd /} will change your current directory to the root directory of your machine \texttt{/}. Typing \texttt{\$ cd \~} will change your current directory to your home directory, which might look something like \texttt{/home/johndoe}.
+
+\paragraph{} \texttt{\$ mv <src> <dst>} moves a file or directory \texttt{<src>} to the directory \texttt{<dst>}. For example, \texttt{\$ mv Documents/pic.jpg Pictures} will move the file \texttt{pic.jpg} from the \texttt{Documents} subdirectory to the \texttt{Pictures} subdirectory. Alternatively, say that you're currently in the \texttt{Pictures} directory and you're trying to accomplish the same task. Then \texttt{\$ mv ../Documents/pic.jpg .} will also work. If you want to rename a file or directory, then \texttt{\$ mv <src> <dst>} renames a file or directory \texttt{<src>} to the file or directory \texttt{<dst>}.
+
+\paragraph{} \texttt{\$ cp <src> <dst>} copies a file or directory \texttt{<src>} to the directory \texttt{<dst>}. For example, \texttt{\$ cp Documents/pic.jpg Pictures} will copy the file \texttt{pic.jpg} from the \texttt{Documents} directory to the \texttt{Pictures} directory. Alternatively, say that you're currently in the \texttt{Pictures} directory and you're trying to accomplish the same task. Then \texttt{\$ cp ../Documents/pic.jpg .} will also work. Note that if you are copying a directory, just typing \texttt{\$ cp <src> <dst>} will not copy the subdirectories. To do this, you must use the recursive option, \texttt{\$ cp -r <src> <dst>}.
+
+\paragraph{} \texttt{\$ rm <src>} will remove a file \texttt{<src>}. Sometimes, you want to use the force option \texttt{\$ rm -f <src>} to forcibly remove a file. You can also use the recursive option \texttt{\$ rm -r <src>} to remove all files in the entire directory \texttt{<src>} and any subdirectories. CAUTION: DO NOT ATTEMPT TO USE ANY VERSION OF \texttt{\$ rm -rf /} -- this will permanently damage your operating system.
+
+\paragraph{} \texttt{\$ mkdir <dir>} will make a directory \texttt{<dir>} in your current directory.
+
+\paragraph{} \texttt{\$ rmdir <dir>} will remove the empty directory \texttt{<dir>} in your current directory.
+
+\paragraph{} \texttt{\$ pwd} (path to working directory) gives the absolute path to your current directory.
+
+\section{Working between machines}
+
+\paragraph{} \texttt{ssh} (Secure Shell) allows users to log in to remote servers. \texttt{\$ ssh user@example.com} will allow you to log in as \texttt{user} onto the server \texttt{example.com}.
+
+\paragraph{} \texttt{scp} (Secure Copy) allows users to copy files between their local machine and their remote machine. For example, to copy a local file to a remote directory, \texttt{\$ scp <src> user@example.com:\~\-/} will copy the file linked at \texttt{<src>} to the home directory of \texttt{user} at the remote machine found at \texttt{example.com}. To copy a remote file to a local machine, \texttt{\$ scp user@example.com:\~\-/Pictures/pic.jpg <dst>} will copy the file \texttt{pic.jpg} found in the \texttt{Pictures} subdirectory of the home directory of \texttt{user} on the remote server \texttt{example.com} to the local directory linked at \texttt{<dst>}, which can just be \texttt{.} for the current directory.
+
+\section{Signals in Shell}
+
+\paragraph{} Ctrl + C sends the signal \texttt{SIGINT} to the foreground process, which usually means terminating the foreground process. For example, if you're running a program and you want to kill the program, Ctrl + C will do so.
+
+\paragraph{} Ctrl + D registers an \texttt{EOF} (end of file) on standard input, which usually means exiting your current environment. For example, if you are remotely logged in via \texttt{ssh}, then Ctrl + D will end your session and log you out. Similarly, if you're in some interpreter, such as \texttt{python} for example, then Ctrl + D will exit that interpreter.
+
+\section{Using \texttt{vim}}
+
+\paragraph{} \texttt{vim} is a very popular command-line text editor that allows you to edit files. I'm not going to get into the \texttt{vim} versus \texttt{emacs} holy war -- this is just to get an overview of the basics in \texttt{vim}. Although \texttt{vim} can be difficult to learn for those used to word processors like Microsoft Office Word, it can substantially increase your productivity as you get better -- the idea of \texttt{vim} is so that your hands never leave the keyboard. For that matter, clicking on the terminal won't change your position within the file, unless you edit your \texttt{\~\//.vimrc} file.
+
+\paragraph{} The command \texttt{vim example.txt} will allow you to open the file linked at \texttt{example.txt}. If this file does not already exist, then \texttt{vim} will create it.
+
+\paragraph{} Now, you are in the normal mode for \texttt{vim}. In normal mode, anything you type will be treated as a command and will not change the file itself.
+
+\paragraph{} To actually edit the file, pressing the \texttt{insert} key, the \texttt{a} key, or the \texttt{i} key will allow you to enter insert mode, which allows you to insert characters into the file. You can press any of those keys again to enter replace mode, where anything you type will replace the character at your current position. The \texttt{esc} key will allow you to exit insert mode and return to normal mode.
+
+\paragraph{} Now back in normal mode, you can type the \texttt{v} key to enter visual mode, which allows you to highlight text so that you can do stuff like copy-paste and delete. In normal mode, hitting Shift + v allows you to enter visual block mode, which allows you to select blocks of text. This is good if you want to highlight entire lines of code. In visual mode, \texttt{c} will cut what you've selected and enter insert mode. \texttt{y} will copy the text and exit visual mode. In normal mode, \texttt{p} will paste it. Again, the \texttt{esc} key will allow you to exit visual mode and return to normal mode.
+
+\paragraph{} In normal mode, you can also type \texttt{:} to enter the command line to give a command. The most commonly used ones are the following. \texttt{:w} writes/saves your file without quitting. \texttt{:q!} quits \texttt{vim} without saving. \texttt{:wq} writes your file and then quits. \texttt{:37} will jump to line 37. There are tons of other commands out there.
+
+\paragraph{} The settings for \texttt{vim} can be found in the \texttt{.vimrc} file in the home directory. You can change these settings by using \texttt{\$ vim \~\//.vimrc} (note the irony of using \texttt{vim} to change the \texttt{vim} settings).
+
+\paragraph{} There are tons of other cool features that can be used in \texttt{vim} that I'm not going to get into. To learn more about \texttt{vim}, just give the command \texttt{\$ vimtutor}.
+
+\paragraph{} In case you hate \texttt{vim}, there are other text editors out there too, such as \texttt{emacs}, Sublime Text, and \texttt{nano}.
+
+\section{Executables}
+
+\paragraph{} Executables are simply the programs that you run in Unix. Everything that you can run is an executable, whether it's a compiler, an interpreter, a bash script, or your own compiled program.
+
+\paragraph{} To run an executable, simply type the command to the link of the executable. For example, if you compiled an executable \texttt{a.out} in your current directory, then run it by simply typing \texttt{\$ ./a.out} in the command line.
+
+\paragraph{} However, this can cause issues sometimes since we would have to give the full path to link files in different directories. For example, let's just say that we want the Python interpreter to interpret the file \texttt{example.py} and our Python interpreter is installed in a system location such as \texttt{/example/path/to/bin/python}. In the directory that contains \texttt{example.py}, we don't want to give the command \texttt{\$ /example/path/to/bin/python example.py} every time we want interpret our Python script -- we want to be able to just type \texttt{\$ python example.py}. To do this, we can change our \texttt{.bashrc} file located in the home directory by adding the line \texttt{export PATH=\$PATH:/example/path/to/bin}. Then we can run the command \texttt{\$ source \~\//.bashrc}, and then, the command \texttt{\$ python example.py} will work.
+
+\section{Permissions}
+
+\paragraph{} When you run the command \texttt{\$ ls -l}, the first column contains the permissions of each file. The first character will be \texttt{d} if the link is a directory, otherwise it's a file. The next three characters are the owner's permissions, the following three characters are the group's permissions, and the next three characters are the general user's permissions. \texttt{r} is for read, \texttt{w} is for write, and \texttt{x} is for execute.
+
+\paragraph{} A common problem that you'll likely run into when you're running a \texttt{bash} script or something else is that you'll get a permission denied error. That's because you did not set that script to be executable. To change this, just give the command \texttt{\$ chmod +x <src>} to make the file \texttt{<src>} executable.
+
+\paragraph{} \texttt{sudo} allows the user to use the security permissions of another user, usually the administrator. However, depending on your user settings, you might not be able to use \texttt{sudo}, especially on work, school, or government computers.
+
+\section{Regular Expressions}
+
+\paragraph{} The Unix terminal also recognizes regular expressions. The most basic and most useful example is when you want to copy all files in your current directory to a directory \texttt{<dst>}, you can just do \texttt{\$ cp * <dst>}. Or let's say that you're trying to remove all of the files that end in \texttt{.c} in your current directory, you could do \texttt{\$ rm *.c}.
+
+\section{\texttt{tar}}
+
+\paragraph{} \texttt{tar} files allow you to create an archive of a set of files and directories into one file and transfer them easily. The \texttt{cf} options allow you to archive the files. For example, if you want to archive all \texttt{.c} files in your current directory, the file \texttt{readme.txt} in your current directory, and all of your \texttt{.pdf} files in your \texttt{example} subdirectory into a file \texttt{foo.tar}, you can give the command \texttt{\$ tar -cf foo.tar *.c readme.txt example/*.pdf}. To do it the other way around, say that you want to extract everything in \texttt{foo.tar}. Then you can give the command \texttt{\$ tar -xf foo.tar}. The \texttt{c} option creates the archive, the \texttt{x} option extracts the archive, and the \texttt{f} option specifies the file. You can also add the \texttt{v} (verbose) option, which most people do in practice, so that you can see what it's doing.
+
+\paragraph{} Additionally, most people also choose to add the \texttt{z} option to compress their \texttt{tar} archive. Using the same example, if you want to compress all \texttt{.c} files in your current directory, the file \texttt{readme.txt} in your current directory, and all of your \texttt{.pdf} files in your \texttt{example} subdirectory into a file \texttt{foo.tgz} while also printing out what exactly it's doing, you can give the command \texttt{\$ tar -czvf foo.tgz *.c readme.txt example/*.pdf}. To do it the other way around, to extract everything in \texttt{foo.tgz}, you can give the command \texttt{\$ tar -xzvf foo.tgz}. It's standard practice to use the file extension \texttt{.tgz} or \texttt{.tar.gz} to distinguish a compressed archive from an uncompressed archive \texttt{.tar}.
+
+\paragraph{} It's also worth noting that \texttt{tar} archives also preserve the structure of the directories and subdirectories. This can be useful if you just want to create a tarball of everything in a directory. For example, if you want to \texttt{tar} your entire \texttt{Documents} subdirectory, then you can give the command \texttt{\$ tar -czvf foo.tgz Documents}. Then you can move the file \texttt{foo.tgz} around, and when you give the command \texttt{\$ tar -xzvf foo.tgz}, it will extract the tarball \texttt{foo.tgz} and create an exact copy of your \texttt{Documents} directory within your current directory.
+
+\section{\texttt{make}}
+
+\paragraph{} Makefiles are a simpler alternative to shell scripts that are usually used to create tarballs or compile executables. Makefiles are always simply named \texttt{Makefile}. You can only have one makefile in a directory.
+
+\paragraph{} A very simple makefile might look like this:
+
+\begin{verbatim}
+CC=gcc
+
+all: bar
+
+bar:
+    $(CC) -o bar foo1.c foo2.c
+
+clean:
+    rm bar
+
+blah.tgz:
+    tar -czvf blah.tgz bar *.c
+
+\end{verbatim}
+
+\paragraph{} In this example, say we are working on files \texttt{foo1.c} and \texttt{foo2.c} in the same directory that contains this makefile. Then the command \texttt{\$ make} or \texttt{\$ make bar} will have the same effect as the command \texttt{\$ gcc -o bar foo1.c foo2.c}. The command \texttt{\$ make clean} is usually coded to undo what \texttt{\$ make} does, and in this case, \texttt{\$ make clean} will do the same thing as the command \texttt{\$ rm bar}. Additionally \texttt{\$ make blah.tgz} will have the same effect as the command \texttt{\$ tar -czvf blah.tgz bar *.c}. Generally speaking, most people by convention name the make targets as the names of the file that target will produce. This is because \texttt{make} is smart enough to recognize if any relevant files have been changed when this is done. If the affected files were not changed since the last time you ran \texttt{make}, then \texttt{make} will skip that step. This feature can save a lot of time when recompiling large programs. There are also other fancy things that makefiles can do. Note that you always use a tab rather than 4 spaces for indentation in makefiles.
+
+\section{Variables and Programming in Shell}
+
+\paragraph{} \texttt{bash} also allows you to set variables. For example, you can give the command \texttt{\$ x=5} or \texttt{\$ y="foo bar"}. Then if you give the command \texttt{\$ echo \$x} or \texttt{\$ echo \$y}, you can see what is stored in the variables \texttt{x} and \texttt{y}. Variables can be referenced by \texttt{\$x}, if you forget the \texttt{\$} sign, then you'll just be referencing the string \texttt{x}. The \texttt{\$ echo <arg>} command is basically just a print command in \texttt{bash}. Important variables set by default include \texttt{HOME}, which references your home directory, \texttt{SHELL}, which references where and what your shell is, and \texttt{PATH}, which has a list of links to places where your shell will look for executables.
+
+\paragraph{} Also, you want to avoid putting spaces in strings, but in case you do, you can always use the escape character $\backslash$ right before you enter a space, or you can put the entire string in either double or single quotes, e.g. \texttt{foo\textbackslash\space bar} or \texttt{"foo bar"}. Otherwise, \texttt{bash} will treat it as separate strings.
+
+\paragraph{} Also, \texttt{bash} is technically Turing-complete, which means that you can write any computable program in \texttt{bash} -- but why would anyone ever want to do that...
+
+\end{document}

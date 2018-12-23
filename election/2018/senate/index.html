@@ -1,0 +1,476 @@
+<head>
+<title>2018 Forecast - Senate</title>
+</head>
+<body style="background-color:lightgray; font-family:verdana;">
+<div style="word-wrap: break-word; width: 640px; margin-left: 100px; margin-top: 0px;">
+<font size = "2">
+<h1>2018 Senate Forecast</h1>
+<hr />
+<h3>| Senate | <a title="Governors" href="../governors/">Governors</a> | <a title="Results" href="../results/">Results</a> |</h3>
+<p>This year's model will mainly be a continuation of the probabilistic model that I came up with <a title="2017 Elections Forecast" href="../../election2017">last year</a>, which uses regression to predict the expected margin of an election then uses Monte Carlo simulation to model the uncertainty in the result. So far, it's been working with the exception of the 2017 special Senate election in Alabama.</p>
+<p>My primary reason for switching to a probabilistic model is because a deterministic model does not account for uncertainty in an election, as seen in the 2016 election. For example, suppose that in one race, Candidate A leads Candidate B 51-47, but Candidate C leads Candidate D 44-40. Both Candidate A and Candidate C lead by 4 points, even though Candidate A is much more likely to win the election due the absence of uncertainty in the polling.</p>
+<p>Here's an important caveat in reading probabilistic models: <em>Just because someone is more likely to win an election does not mean that they will</em>. It's important to keep in mind that election outcomes are extremely uncertain, as proven two years ago.</p>
+<p>The probabilistic model tested last year is shown below as the 2018 model, now with two different loss criteria, OLS and LAD. The version tested last year was the OLS criteria, which is less robust than LAD. The weighted average model I used previously is shown as the 2012 model. There's also the 2018-M model, which estimates the spread based on undecided voters across all polls. I'm also experimenting with a 2018-N model, which is a deep neural network -- but the issue here is that neural networks are not very suitable for the kind of sparce and inaccurate data that we're dealing with. Hence, I may redact the 2018-N model as we get closer to the election, since all that it seems to do right now when there's a close race is to guess that the Republican wins. All of these models are based on polls, so how accurate these models are depends on how well the polls perform. For most races so far, there is not enough polling data to sufficiently estimate the outcome in the 2018 model. Generally, my models tend to underestimate the winning candidate.</p>
+<p>The final forecast for this year's Senate races is that the GOP is very likely to retain control of the Senate, given that the model puts North Dakota and Texas both in the likely Republican column. An extremely tight race is forecasted in Missouri, with the different models diverging on the estimated winner.</p>
+<p>&nbsp;</p>
+<h2>State-by-state breakdown</h2>
+<p><img src="map.png" alt="" width="640" height="480" border="3" /></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<h3>Predictions</h3>
+<table style="height: px; font-size: 12;" width="1000">
+<tbody>
+<tr>
+<td style="text-align: center;"><strong>Race</strong></td>
+<td style="text-align: center;"><strong>Democrat</strong></td>
+<td style="text-align: center;"><strong>Republican</strong></td>
+<td style="text-align: center;"><strong>2018-OLS</br> Expected</strong></td>
+<td style="text-align: center;"><strong>2018-OLS</br> Probability</strong></td>
+<td style="text-align: center;"><strong>2018-LAD</br> Expected</strong></td>
+<td style="text-align: center;"><strong>2018-LAD</br> Probability</strong></td>
+<td style="text-align: center;"><strong>2012 Spread</strong></td>
+<td style="text-align: center;"><strong>2018-M Spread</strong></td>
+<td style="text-align: center;"><strong>Prediction</strong></td>
+</tr>
+<tr>
+<td style="text-align: center;">Arizona</td>
+<td style="text-align: center;">Kyrsten Sinema</td>
+<td style="text-align: center;">Martha McSally</td>
+<td style="text-align: center;"><span style="color: #0000ff;">Sinema +1.0</span></td>
+<td style="text-align: center;"><span style="color: #0000ff;">61.0% D</span></td>
+<td style="text-align: center;"><span style="color: #0000ff;">Sinema +0.9</span></td>
+<td style="text-align: center;"><span style="color: #0000ff;">61.4% D</span></td>
+<td style="text-align: center;"><span style="color: #0000ff;">Sinema +0.7</span></td>
+<td style="text-align: center;"><span style="color: #0000ff;">Sinema +1</span></td>
+<td style="text-align: center;"><span style="color: #0000ff;">Leans D</span></td>
+</tr>
+<tr>
+<td style="text-align: center;">California</td>
+<td style="text-align: center;">Dianne Feinstein</br> Kevin de Leon</td>
+<td style="text-align: center;">--</td>
+<td style="text-align: center;"><span style="color: #0000ff;">--</span></td>
+<td style="text-align: center;"><span style="color: #0000ff;">100% D</span></td>
+<td style="text-align: center;"><span style="color: #0000ff;">--</span></td>
+<td style="text-align: center;"><span style="color: #0000ff;">100% D</span></td>
+<td style="text-align: center;"><span style="color: #0000ff;">--</span></td>
+<td style="text-align: center;"><span style="color: #0000ff;">--</span></td>
+<td style="text-align: center;"><span style="color: #0000ff;">Safe D</span></td>
+</tr>
+<tr>
+<td style="text-align: center;">Connecticut</td>
+<td style="text-align: center;">Chris Murphy</td>
+<td style="text-align: center;">Matthew Corey</td>
+<td style="text-align: center;"><span style="color: #0000ff;">--</span></td>
+<td style="text-align: center;"><span style="color: #0000ff;">--</span></td>
+<td style="text-align: center;"><span style="color: #0000ff;">--</span></td>
+<td style="text-align: center;"><span style="color: #0000ff;">--</span></td>
+<td style="text-align: center;"><span style="color: #0000ff;">Murphy +18.9</span></td>
+<td style="text-align: center;"><span style="color: #0000ff;">Murphy +16</span></td>
+<td style="text-align: center;"><span style="color: #0000ff;">Safe D</span></td>
+</tr>
+<tr>
+<td style="text-align: center;">Delaware</td>
+<td style="text-align: center;">Tom Carper</td>
+<td style="text-align: center;">Rob Arlett</td>
+<td style="text-align: center;"><span style="color: #0000ff;">--</span></td>
+<td style="text-align: center;"><span style="color: #0000ff;">--</span></td>
+<td style="text-align: center;"><span style="color: #0000ff;">--</span></td>
+<td style="text-align: center;"><span style="color: #0000ff;">--</span></td>
+<td style="text-align: center;"><span style="color: #0000ff;">--</span></td>
+<td style="text-align: center;"><span style="color: #0000ff;">--</span></td>
+<td style="text-align: center;"><span style="color: #0000ff;">Safe D</span></td>
+</tr>
+<tr>
+<td style="text-align: center;">Florida</td>
+<td style="text-align: center;">Bill Nelson</td>
+<td style="text-align: center;">Rick Scott</td>
+<td style="text-align: center;"><span style="color: #0000ff;">Nelson +2.9</span></td>
+<td style="text-align: center;"><span style="color: #0000ff;">74.7% D</span></td>
+<td style="text-align: center;"><span style="color: #0000ff;">Nelson +3.5</span></td>
+<td style="text-align: center;"><span style="color: #0000ff;">88.0% D</span></td>
+<td style="text-align: center;"><span style="color: #0000ff;">Nelson +3.0</span></td>
+<td style="text-align: center;"><span style="color: #0000ff;">Nelson +3</span></td>
+<td style="text-align: center;"><span style="color: #0000ff;">Leans D</span></td>
+</tr>
+<tr>
+<td style="text-align: center;">Hawaii</td>
+<td style="text-align: center;">Mazie Hirono</td>
+<td style="text-align: center;">Ron Curtis</td>
+<td style="text-align: center;"><span style="color: #0000ff;">--</span></td>
+<td style="text-align: center;"><span style="color: #0000ff;">--</span></td>
+<td style="text-align: center;"><span style="color: #0000ff;">--</span></td>
+<td style="text-align: center;"><span style="color: #0000ff;">--</span></td>
+<td style="text-align: center;"><span style="color: #0000ff;">--</span></td>
+<td style="text-align: center;"><span style="color: #0000ff;">--</span></td>
+<td style="text-align: center;"><span style="color: #0000ff;">Safe D</span></td>
+</tr>
+<tr>
+<td style="text-align: center;">Indiana</td>
+<td style="text-align: center;">Joe Donnelly</td>
+<td style="text-align: center;">Mike Braun</td>
+<td style="text-align: center;"><span style="color: #0000ff;">Donnelly +1.5</span></td>
+<td style="text-align: center;"><span style="color: #0000ff;">55.7% D</span></td>
+<td style="text-align: center;"><span style="color: #0000ff;">Donnelly +0.9</span></td>
+<td style="text-align: center;"><span style="color: #0000ff;">53.6% D</span></td>
+<td style="text-align: center;"><span style="color: #0000ff;">Donnelly +2.1</span></td>
+<td style="text-align: center;"><span style="color: #0000ff;">Donnelly +3</span></td>
+<td style="text-align: center;"><span style="color: #0000ff;">Leans D</span></td>
+</tr>
+<tr>
+<td style="text-align: center;">Maine</td>
+<td style="text-align: center;">Angus King*<br>Zak Ringelstein</td>
+<td style="text-align: center;">Eric Brakey</td>
+<td style="text-align: center;"><span style="color: #0000ff;">--</span></td>
+<td style="text-align: center;"><span style="color: #0000ff;">--</span></td>
+<td style="text-align: center;"><span style="color: #0000ff;">--</span></td>
+<td style="text-align: center;"><span style="color: #0000ff;">--</span></td>
+<td style="text-align: center;"><span style="color: #0000ff;">--</span></td>
+<td style="text-align: center;"><span style="color: #0000ff;">--</span></td>
+<td style="text-align: center;"><span style="color: #0000ff;">Safe I</span></td>
+</tr>
+<tr>
+<td style="text-align: center;">Maryland</td>
+<td style="text-align: center;">Ben Cardin</td>
+<td style="text-align: center;">Tony Campbell</td>
+<td style="text-align: center;"><span style="color: #0000ff;">--</span></td>
+<td style="text-align: center;"><span style="color: #0000ff;">--</span></td>
+<td style="text-align: center;"><span style="color: #0000ff;">--</span></td>
+<td style="text-align: center;"><span style="color: #0000ff;">--</span></td>
+<td style="text-align: center;"><span style="color: #0000ff;">--</span></td>
+<td style="text-align: center;"><span style="color: #0000ff;">--</span></td>
+<td style="text-align: center;"><span style="color: #0000ff;">Safe D</span></td>
+</tr>
+<tr>
+<td style="text-align: center;">Massachusetts</td>
+<td style="text-align: center;">Elizabeth Warren</td>
+<td style="text-align: center;">Geoff Diehl</td>
+<td style="text-align: center;"><span style="color: #0000ff;">--</span></td>
+<td style="text-align: center;"><span style="color: #0000ff;">--</span></td>
+<td style="text-align: center;"><span style="color: #0000ff;">--</span></td>
+<td style="text-align: center;"><span style="color: #0000ff;">--</span></td>
+<td style="text-align: center;"><span style="color: #0000ff;">Warren +25.1</span></td>
+<td style="text-align: center;"><span style="color: #0000ff;">Warren +24</span></td>
+<td style="text-align: center;"><span style="color: #0000ff;">Safe D</span></td>
+</tr>
+<tr>
+<td style="text-align: center;">Michigan</td>
+<td style="text-align: center;">Debbie Stabenow</td>
+<td style="text-align: center;">John James</td>
+<td style="text-align: center;"><span style="color: #0000ff;">Stabenow +7.3</span></td>
+<td style="text-align: center;"><span style="color: #0000ff;">94.9% D</span></td>
+<td style="text-align: center;"><span style="color: #0000ff;">Stabenow +8.7</span></td>
+<td style="text-align: center;"><span style="color: #0000ff;">98.9% D</span></td>
+<td style="text-align: center;"><span style="color: #0000ff;">Stabenow +11.1</span></td>
+<td style="text-align: center;"><span style="color: #0000ff;">Stabenow +9</span></td>
+<td style="text-align: center;"><span style="color: #0000ff;">Likely D</span></td>
+</tr>
+<tr>
+<td style="text-align: center;">Minnesota</td>
+<td style="text-align: center;">Amy Klobuchar</td>
+<td style="text-align: center;">Jim Newberger</td>
+<td style="text-align: center;"><span style="color: #0000ff;">--</span></td>
+<td style="text-align: center;"><span style="color: #0000ff;">--</span></td>
+<td style="text-align: center;"><span style="color: #0000ff;">--</span></td>
+<td style="text-align: center;"><span style="color: #0000ff;">--</span></td>
+<td style="text-align: center;"><span style="color: #0000ff;">Klobuchar +24.0</span></td>
+<td style="text-align: center;"><span style="color: #0000ff;">Klobuchar +26</span></td>
+<td style="text-align: center;"><span style="color: #0000ff;">Safe D</span></td>
+</tr>
+<tr>
+<td style="text-align: center;">Minnesota</td>
+<td style="text-align: center;">Tina Smith</td>
+<td style="text-align: center;">Karin Housley</td>
+<td style="text-align: center;"><span style="color: #0000ff;">--</span></td>
+<td style="text-align: center;"><span style="color: #0000ff;">--</span></td>
+<td style="text-align: center;"><span style="color: #0000ff;">--</span></td>
+<td style="text-align: center;"><span style="color: #0000ff;">--</span></td>
+<td style="text-align: center;"><span style="color: #0000ff;">Smith +8.7</span></td>
+<td style="text-align: center;"><span style="color: #0000ff;">Smith +8</span></td>
+<td style="text-align: center;"><span style="color: #0000ff;">Likely D</span></td>
+</tr>
+<tr>
+<td style="text-align: center;">Mississippi</td>
+<td style="text-align: center;">David Baria</td>
+<td style="text-align: center;">Roger Wicker</td>
+<td style="text-align: center;"><span style="color: #ff0000;">--</span></td>
+<td style="text-align: center;"><span style="color: #ff0000;">--</span></td>
+<td style="text-align: center;"><span style="color: #ff0000;">--</span></td>
+<td style="text-align: center;"><span style="color: #ff0000;">--</span></td>
+<td style="text-align: center;"><span style="color: #ff0000;">--</span></td>
+<td style="text-align: center;"><span style="color: #ff0000;">--</span></td>
+<td style="text-align: center;"><span style="color: #ff0000;">Safe R</span></td>
+</tr>
+<tr>
+<td style="text-align: center;">Mississippi</td>
+<td style="text-align: center;">Mike Espy</td>
+<td style="text-align: center;">Cindy Hyde-Smith</td>
+<td style="text-align: center;"><span style="color: #ff0000;">--</span></td>
+<td style="text-align: center;"><span style="color: #ff0000;">--</span></td>
+<td style="text-align: center;"><span style="color: #ff0000;">--</span></td>
+<td style="text-align: center;"><span style="color: #ff0000;">--</span></td>
+<td style="text-align: center;"><span style="color: #ff0000;">--</span></td>
+<td style="text-align: center;"><span style="color: #ff0000;">--</span></td>
+<td style="text-align: center;"><span style="color: #ff0000;">Safe R</span></td>
+</tr>
+<tr>
+<td style="text-align: center;">Missouri</td>
+<td style="text-align: center;">Claire McCaskill</td>
+<td style="text-align: center;">Josh Hawley</td>
+<td style="text-align: center;"><span style="color: #ff0000;">Hawley +0.9</span></td>
+<td style="text-align: center;"><span style="color: #ff0000;">58.5% R</span></td>
+<td style="text-align: center;"><span style="color: #ff0000;">Hawley +1.2</span></td>
+<td style="text-align: center;"><span style="color: #ff0000;">61.4% R</span></td>
+<td style="text-align: center;"><span style="color: #ff0000;">Hawley +0.6</span></td>
+<td style="text-align: center;"><span style="color: #007f00;">Tie</span></td>
+<td style="text-align: center;"><span style="color: #ff0000;">Leans R</span></td>
+</tr>
+<tr>
+<td style="text-align: center;">Montana</td>
+<td style="text-align: center;">Jon Tester</td>
+<td style="text-align: center;">Matt Rosendale</td>
+<td style="text-align: center;"><span style="color: #0000ff;">Tester +4.3</span></td>
+<td style="text-align: center;"><span style="color: #0000ff;">79.2% D</span></td>
+<td style="text-align: center;"><span style="color: #0000ff;">Tester +5.3</span></td>
+<td style="text-align: center;"><span style="color: #0000ff;">89.1% D</span></td>
+<td style="text-align: center;"><span style="color: #0000ff;">Tester +3.8</span></td>
+<td style="text-align: center;"><span style="color: #0000ff;">Tester +4</span></td>
+<td style="text-align: center;"><span style="color: #0000ff;">Leans D</span></td>
+</tr>
+<tr>
+<td style="text-align: center;">Nebraska</td>
+<td style="text-align: center;">Jane Raybould</td>
+<td style="text-align: center;">Deb Fischer</td>
+<td style="text-align: center;"><span style="color: #ff0000;">--</span></td>
+<td style="text-align: center;"><span style="color: #ff0000;">--</span></td>
+<td style="text-align: center;"><span style="color: #ff0000;">--</span></td>
+<td style="text-align: center;"><span style="color: #ff0000;">--</span></td>
+<td style="text-align: center;"><span style="color: #ff0000;">--</span></td>
+<td style="text-align: center;"><span style="color: #ff0000;">--</span></td>
+<td style="text-align: center;"><span style="color: #ff0000;">Safe R</span></td>
+</tr>
+<tr>
+<td style="text-align: center;">Nevada</td>
+<td style="text-align: center;">Jacky Rosen</td>
+<td style="text-align: center;">Dean Heller</td>
+<td style="text-align: center;"><span style="color: #0000ff;">Rosen +3.1</span></td>
+<td style="text-align: center;"><span style="color: #0000ff;">79.4% D</span></td>
+<td style="text-align: center;"><span style="color: #0000ff;">Rosen +5.6</span></td>
+<td style="text-align: center;"><span style="color: #0000ff;">96.4% D</span></td>
+<td style="text-align: center;"><span style="color: #0000ff;">Rosen +2.7</span></td>
+<td style="text-align: center;"><span style="color: #0000ff;">Rosen +2</span></td>
+<td style="text-align: center;"><span style="color: #0000ff;">Leans D</span></td>
+</tr>
+<tr>
+<td style="text-align: center;">New Jersey</td>
+<td style="text-align: center;">Bob Menendez</td>
+<td style="text-align: center;">Bob Hugin</td>
+<td style="text-align: center;"><span style="color: #0000ff;">Menendez +11.8</span></td>
+<td style="text-align: center;"><span style="color: #0000ff;">98.3% D</span></td>
+<td style="text-align: center;"><span style="color: #0000ff;">Menendez +15.6</span></td>
+<td style="text-align: center;"><span style="color: #0000ff;">99.8% D</span></td>
+<td style="text-align: center;"><span style="color: #0000ff;">Menendez +9.1</span></td>
+<td style="text-align: center;"><span style="color: #0000ff;">Menendez +7</span></td>
+<td style="text-align: center;"><span style="color: #0000ff;">Likely D</span></td>
+</tr>
+<tr>
+<td style="text-align: center;">New Mexico</td>
+<td style="text-align: center;">Martin Heinrich</td>
+<td style="text-align: center;">Mick Rich</td>
+<td style="text-align: center;"><span style="color: #0000ff;">--</span></td>
+<td style="text-align: center;"><span style="color: #0000ff;">--</span></td>
+<td style="text-align: center;"><span style="color: #0000ff;">--</span></td>
+<td style="text-align: center;"><span style="color: #0000ff;">--</span></td>
+<td style="text-align: center;"><span style="color: #0000ff;">--</span></td>
+<td style="text-align: center;"><span style="color: #0000ff;">--</span></td>
+<td style="text-align: center;"><span style="color: #0000ff;">Safe D</span></td>
+</tr>
+<tr>
+<td style="text-align: center;">New York</td>
+<td style="text-align: center;">Kirsten Gillibrand</td>
+<td style="text-align: center;">Chele Farley</td>
+<td style="text-align: center;"><span style="color: #0000ff;">--</span></td>
+<td style="text-align: center;"><span style="color: #0000ff;">--</span></td>
+<td style="text-align: center;"><span style="color: #0000ff;">--</span></td>
+<td style="text-align: center;"><span style="color: #0000ff;">--</span></td>
+<td style="text-align: center;"><span style="color: #0000ff;">--</span></td>
+<td style="text-align: center;"><span style="color: #0000ff;">--</span></td>
+<td style="text-align: center;"><span style="color: #0000ff;">Safe D</span></td>
+</tr>
+<tr>
+<td style="text-align: center;">North Dakota</td>
+<td style="text-align: center;">Heidi Heitkamp</td>
+<td style="text-align: center;">Kevin Cramer</td>
+<td style="text-align: center;"><span style="color: #ff0000;">Cramer +10.7</span></td>
+<td style="text-align: center;"><span style="color: #ff0000;">99.5% R</span></td>
+<td style="text-align: center;"><span style="color: #ff0000;">Cramer +12.3</span></td>
+<td style="text-align: center;"><span style="color: #ff0000;">>99.9% R</span></td>
+<td style="text-align: center;"><span style="color: #ff0000;">Cramer +11.1</span></td>
+<td style="text-align: center;"><span style="color: #ff0000;">Cramer +10</span></td>
+<td style="text-align: center;"><span style="color: #ff0000;">Likely R</span></td>
+</tr>
+<tr>
+<td style="text-align: center;">Ohio</td>
+<td style="text-align: center;">Sherrod Brown</td>
+<td style="text-align: center;">Jim Renacci</td>
+<td style="text-align: center;"><span style="color: #0000ff;">--</span></td>
+<td style="text-align: center;"><span style="color: #0000ff;">--</span></td>
+<td style="text-align: center;"><span style="color: #0000ff;">--</span></td>
+<td style="text-align: center;"><span style="color: #0000ff;">--</span></td>
+<td style="text-align: center;"><span style="color: #0000ff;">Brown +9.6</span></td>
+<td style="text-align: center;"><span style="color: #0000ff;">Brown +11</span></td>
+<td style="text-align: center;"><span style="color: #0000ff;">Likely D</span></td>
+</tr>
+<tr>
+<td style="text-align: center;">Pennsylvania</td>
+<td style="text-align: center;">Bob Casey</td>
+<td style="text-align: center;">Lou Barletta</td>
+<td style="text-align: center;"><span style="color: #0000ff;">--</span></td>
+<td style="text-align: center;"><span style="color: #0000ff;">--</span></td>
+<td style="text-align: center;"><span style="color: #0000ff;">--</span></td>
+<td style="text-align: center;"><span style="color: #0000ff;">--</span></td>
+<td style="text-align: center;"><span style="color: #0000ff;">Casey +15.2</span></td>
+<td style="text-align: center;"><span style="color: #0000ff;">Casey +15</span></td>
+<td style="text-align: center;"><span style="color: #0000ff;">Safe D</span></td>
+</tr>
+<tr>
+<td style="text-align: center;">Rhode Island</td>
+<td style="text-align: center;">Sheldon Whitehouse</td>
+<td style="text-align: center;">Robert Flanders</td>
+<td style="text-align: center;"><span style="color: #0000ff;">--</span></td>
+<td style="text-align: center;"><span style="color: #0000ff;">--</span></td>
+<td style="text-align: center;"><span style="color: #0000ff;">--</span></td>
+<td style="text-align: center;"><span style="color: #0000ff;">--</span></td>
+<td style="text-align: center;"><span style="color: #0000ff;">--</span></td>
+<td style="text-align: center;"><span style="color: #0000ff;">--</span></td>
+<td style="text-align: center;"><span style="color: #0000ff;">Safe D</span></td>
+</tr>
+<tr>
+<td style="text-align: center;">Tennessee</td>
+<td style="text-align: center;">Phil Bredesen</td>
+<td style="text-align: center;">Marsha Blackburn</td>
+<td style="text-align: center;"><span style="color: #ff0000;">Blackburn +4.9</span></td>
+<td style="text-align: center;"><span style="color: #ff0000;">81.0% R</span></td>
+<td style="text-align: center;"><span style="color: #ff0000;">Blackburn +6.0</span></td>
+<td style="text-align: center;"><span style="color: #ff0000;">91.7% R</span></td>
+<td style="text-align: center;"><span style="color: #ff0000;">Blackburn +5.4</span></td>
+<td style="text-align: center;"><span style="color: #ff0000;">Blackburn +7</span></td>
+<td style="text-align: center;"><span style="color: #ff0000;">Likely R</span></td>
+<tr>
+<td style="text-align: center;">Texas</td>
+<td style="text-align: center;">Beto O'Rourke</td>
+<td style="text-align: center;">Ted Cruz</td>
+<td style="text-align: center;"><span style="color: #ff0000;">Cruz +6.9</span></td>
+<td style="text-align: center;"><span style="color: #ff0000;">98.6% R</span></td>
+<td style="text-align: center;"><span style="color: #ff0000;">Cruz +6.1</span></td>
+<td style="text-align: center;"><span style="color: #ff0000;">99.9% R</span></td>
+<td style="text-align: center;"><span style="color: #ff0000;">Cruz +6.7</span></td>
+<td style="text-align: center;"><span style="color: #ff0000;">Cruz +7</span></td>
+<td style="text-align: center;"><span style="color: #ff0000;">Likely R</span></td>
+</tr>
+<tr>
+<td style="text-align: center;">Utah</td>
+<td style="text-align: center;">Jenny Wilson</td>
+<td style="text-align: center;">Mitt Romney</td>
+<td style="text-align: center;"><span style="color: #ff0000;">--</span></td>
+<td style="text-align: center;"><span style="color: #ff0000;">--</span></td>
+<td style="text-align: center;"><span style="color: #ff0000;">--</span></td>
+<td style="text-align: center;"><span style="color: #ff0000;">--</span></td>
+<td style="text-align: center;"><span style="color: #ff0000;">--</span></td>
+<td style="text-align: center;"><span style="color: #ff0000;">--</span></td>
+<td style="text-align: center;"><span style="color: #ff0000;">Safe R</span></td>
+</tr>
+<tr>
+<td style="text-align: center;">Vermont</td>
+<td style="text-align: center;">Bernie Sanders*</td>
+<td style="text-align: center;">Brooke Paige</td>
+<td style="text-align: center;"><span style="color: #0000ff;">--</span></td>
+<td style="text-align: center;"><span style="color: #0000ff;">--</span></td>
+<td style="text-align: center;"><span style="color: #0000ff;">--</span></td>
+<td style="text-align: center;"><span style="color: #0000ff;">--</span></td>
+<td style="text-align: center;"><span style="color: #0000ff;">--</span></td>
+<td style="text-align: center;"><span style="color: #0000ff;">--</span></td>
+<td style="text-align: center;"><span style="color: #0000ff;">Safe I</span></td>
+</tr>
+<tr>
+<td style="text-align: center;">Virginia</td>
+<td style="text-align: center;">Tim Kaine</td>
+<td style="text-align: center;">Corey Stewart</td>
+<td style="text-align: center;"><span style="color: #0000ff;">--</span></td>
+<td style="text-align: center;"><span style="color: #0000ff;">--</span></td>
+<td style="text-align: center;"><span style="color: #0000ff;">--</span></td>
+<td style="text-align: center;"><span style="color: #0000ff;">--</span></td>
+<td style="text-align: center;"><span style="color: #0000ff;">Kaine +16.5</span></td>
+<td style="text-align: center;"><span style="color: #0000ff;">Kaine +16</span></td>
+<td style="text-align: center;"><span style="color: #0000ff;">Safe D</span></td>
+</tr>
+<tr>
+<td style="text-align: center;">Washington</td>
+<td style="text-align: center;">Maria Cantwell</td>
+<td style="text-align: center;">Susan Hutchison</td>
+<td style="text-align: center;"><span style="color: #0000ff;">--</span></td>
+<td style="text-align: center;"><span style="color: #0000ff;">--</span></td>
+<td style="text-align: center;"><span style="color: #0000ff;">--</span></td>
+<td style="text-align: center;"><span style="color: #0000ff;">--</span></td>
+<td style="text-align: center;"><span style="color: #0000ff;">--</span></td>
+<td style="text-align: center;"><span style="color: #0000ff;">--</span></td>
+<td style="text-align: center;"><span style="color: #0000ff;">Safe D</span></td>
+</tr>
+<tr>
+<td style="text-align: center;">West Virginia</td>
+<td style="text-align: center;">Joe Manchin</td>
+<td style="text-align: center;">Patrick Morrisey</td>
+<td style="text-align: center;"><span style="color: #0000ff;">--</span></td>
+<td style="text-align: center;"><span style="color: #0000ff;">--</span></td>
+<td style="text-align: center;"><span style="color: #0000ff;">--</span></td>
+<td style="text-align: center;"><span style="color: #0000ff;">--</span></td>
+<td style="text-align: center;"><span style="color: #0000ff;">Manchin +8.4</span></td>
+<td style="text-align: center;"><span style="color: #0000ff;">Manchin +7</span></td>
+<td style="text-align: center;"><span style="color: #0000ff;">Likely D</span></td>
+</tr>
+<tr>
+<td style="text-align: center;">Wisconsin</td>
+<td style="text-align: center;">Tammy Baldwin</td>
+<td style="text-align: center;">Leah Vukmir</td>
+<td style="text-align: center;"><span style="color: #0000ff;">--</span></td>
+<td style="text-align: center;"><span style="color: #0000ff;">--</span></td>
+<td style="text-align: center;"><span style="color: #0000ff;">--</span></td>
+<td style="text-align: center;"><span style="color: #0000ff;">--</span></td>
+<td style="text-align: center;"><span style="color: #0000ff;">Baldwin +10.6</span></td>
+<td style="text-align: center;"><span style="color: #0000ff;">Baldwin +11</span></td>
+<td style="text-align: center;"><span style="color: #0000ff;">Likely D</span></td>
+</tr>
+<tr>
+<td style="text-align: center;">Wyoming</td>
+<td style="text-align: center;">Leah Vukmir</td>
+<td style="text-align: center;">John Barrasso</td>
+<td style="text-align: center;"><span style="color: #ff0000;">--</span></td>
+<td style="text-align: center;"><span style="color: #ff0000;">--</span></td>
+<td style="text-align: center;"><span style="color: #ff0000;">--</span></td>
+<td style="text-align: center;"><span style="color: #ff0000;">--</span></td>
+<td style="text-align: center;"><span style="color: #ff0000;">--</span></td>
+<td style="text-align: center;"><span style="color: #ff0000;">--</span></td>
+<td style="text-align: center;"><span style="color: #ff0000;">Safe R</span></td>
+</tr>
+</tbody>
+</table>
+<p>*Sen. Angus King (I-ME) and Sen. Bernie Sanders (I-VT) caucus with the Democrats.</p>
+<p>&nbsp;</p>
+<h2>Analysis</h2>
+<p>Some pundits believe that a 'blue wave' is to sweep the nation, but given that the Democrats are defending way more seats than Republicans this year, the question is whether it will be enough for the Democrats to take the Senate. Recent evidence suggests that the anticipated 'blue wave' is not quite as blue as it seems, particularly due to the jump in Republican energy following the confirmation battle of Justice Brett Kavanaugh to the Supreme Court. Moreover, President Trump's approval ratings are in much better shape than former President Obama's were in 2010. To take control of the Senate, the Democrats must win all but one of Arizona, Florida, Indiana, Missouri, Montana, Nevada, North Dakota, Ohio, Tennessee, West Virginia, and Wisconsin. On a typical election year, such a position would have doomed the Democrats, but given the uncertainty of the election, a scenario where the Democrats take the Senate is not unimaginable. The Democrats are expected to lose North Dakota, and the Republicans are strongly favored to retain control of the Senate.</p>
+<p>Control of the Senate will hinge on the following races:</p>
+<p><strong>Arizona (Sinema +1.0; 61.0% chance)</strong>. Incumbent Sen. Jeff Flake (R) is not running for reelection, leaving the door wide open for a Democrat to take this seat. Arizona has long been a red state. The last Democrat to have been elected to the Senate here was Dennis DeConcini in 1988. However, due to immigration into this state, Arizona has been shifting rapidly to the left, and Hillary Clinton proved in 2016 that Arizona has moved to become a battleground state. The Democratic candidate, Congresswoman Kyrsten Sinema, has a mixed political history. She was originally a Green Party activist before becoming a bipartisan Blue Dog when elected to the House in 2012. If elected, she will be the second LGBT member of the Senate following Sen. Tammy Baldwin (D-WI). Meanwhile, GOP nominee Rep. Martha McSally is running on the Trump platform. Recent evidence suggests that Democrats have been underperforming among Latino voters, a key demographic that Democrats must win over and turn out. This fact plus Arizona's historic lean to the right may give Rep. Martha McSally the chance to hold this seat for the GOP.</p>
+<p><strong>Florida (Nelson +2.9; 74.7% chance)</strong>. Incumbent Sen. Bill Nelson (D) is running for reelection challeged by incumbent Gov. Rick Scott (R). Nelson, the former astronaut, was first elected to the Senate in 2000 and has consistently been one of the more moderate Democrats in the Senate. Hence, it's unlikely that strong enthusiasm from the liberal left flank of the Democratic Party will strongly benefit Nelson. In 2006, Nelson caught a bit of a break when the GOP nominated the polarizing Bush v. Gore former Florida Secretary of State Katherine Harris. In 2012, he easily defeated Connie Mack IV, the son of his predecessor. On the other hand, Scott has never broken 50 percent in his runs for Governor despite the 2010 and 2014 midterms being Republican waves and consistently receives low approval ratings, although recent times have shown Scott's approval increasing. However, Scott is able to pour tons of money into his campaigns in an extremely expensive state to run statewide. In a generic year, Nelson would likely edge out Scott by a narrow margin, but given the political climate expected this midterm season, Nelson enters the election with the upper hand.</p>
+<p><strong>Indiana (Donnelly +1.5; 55.7% chance)</strong>. Incumbent Sen. Joe Donnelly (D) is running for reelection in a solid red state. Donnelly was quite lucky to have been elected to the Senate in the first place - in 2012, the popular centrist incumbent Sen. Dick Lugar (R) lost to Tea Party conservative Richard Mourdock (R) in the GOP primary. However, Mourdock's controversial comment that pregnancy following rape was the intention of God cleared the way for Donnelly to win the seat. However, Donnelly might not have the same luck this time against businessman Mike Braun, although the a blue wave could save Donnelly from defeat.</p>
+<p><strong>Missouri (Hawley +0.9; 58.5% chance)</strong>. Missouri is the only race so far where the models diverge in their estimates, showing the competitiveness of this race. Missouri Attorney General Josh Hawley (R) is giving a tough challenge for incumbent Sen. Claire McCaskill (D), who is seeking a third term. McCaskill is another red-state Democrat who lucked out of losing in 2012. The GOP looked poised to defeat McCaskill until Tea Party candidate Todd Akin made controversial remarks regarding "legitimate rape", which allowed McCaskill to cruise to victory. Meanwhile, the Missouri GOP is again facing internal trouble after former Gov. Eric Greitens was forced to resign in June following an extramarital affair and alleged blackmail. Though a close election is forecasted, the Democratic wave just might not be enough to save McCaskill again.</p>
+<p><strong>Montana (Tester +4.3; 79.2% chance)</strong>. Incumbent Sen. Jon Tester (D) is running for reelection in a state that voted for President Trump in a landslide. However, Montana is one of those states that have a history of voting blue on occasion, electing politicians such as former Sen. Max Baucus (D) and incumbent Gov. Steve Bullock (D). However, Tester has never broken 50 percent here, so we'll see whether or not he has more lives than fingers on his left hand. It's going to be very tough for Tester to win, although the national mood might carry him across the finish line.</p>
+<p><strong>Nevada (Rosen +3.1; 79.4% chance)</strong>. Incumbent Sen. Dean Heller (R) is running for reelection in a state that narrowly voted for former Secretary of State Hillary Clinton (D) in 2016. Additionally, like Arizona, Nevada is also another state that is drifting blue due to demographic changes and immigration, not to mention the Democratic excitement sweeping the country. A concoction of all of these factors make it difficult for Heller to win reelection. However, recent evidence suggests that Democrats are underperforming among Latino voters, a factor that could carry Heller to victory in Nevada. However, note that polls in Nevada tend to lean Republican by 2 to 3 points, which explains why my own models are more optimistic for the Democrat than most polls.</p>
+<p><strong>New Jersey (Menendez +9.2; 69.5% chance)</strong>. Incumbent Sen. Bob Menendez (D) is running for reelection in a solid blue state. However, his 2015 indictment and 2017 mistrial for federal corruption charges have further tanked his already low approval ratings, giving businessman Bob Hugin (R) a chance in Democratic territory in a similar manner that allowed former Gov. Chris Christie (R) to pickup the Governor's seat from Menendez's predesessor, Jon Corzine (D). Although Menendez has been recovering in the polls, he is not out of the woods yet.</p>
+<p><strong>North Dakota (Cramer +10.7; 99.5% chance)</strong>. Incumbent Sen. Heidi Heitkemp (D-NPL) is seeking reelection in a state that voted for President Trump in a landslide. Heitkamp pulled an upset victory over Congressman Rick Berg (R) in 2012 and is poised for another tight match. Like Montana, North Dakota is a rural state that elects a Democrat every now and then. If Heitkamp loses, it will be the first time since 1959 that no Democrat is part of North Dakota's congressional delegation. This is the Republican Party's best chance of picking up a Democratic seat.</p>
+<p><strong>Ohio (Brown +9.6)</strong>. Incumbent Sen. Sherrod Brown (D) is seeking reelection in a perennial battleground state. Despite the decline of unions throughout the Midwest, Brown's style of economic populism works well with the Ohio working class, which carried him to a close but comfortable victory in 2012 against Josh Mandel, who dropped out of this year's Senate race after citing concerns of his wife's health, which paved the way for Jim Renacci to claim the GOP nomination. Moreover, Brown is seen as one of the few Democrats with the ability to bridge the divide betweeen the establishment and progressive elements in the Democratic Party. However, despite the rightwards drift of Ohio in the past decade, Brown looks to cruise to victory.</p>
+<p><strong>Tennessee (Blackburn +4.9; 81.0% R)</strong>. Incumbent Sen. Bob Corker (R) is retiring after two terms in the Senate and a feud with President Trump. What normally would be a reliably Republican hold appears very competitive this season, especially following the entry of popular former Gov. Phil Bredesen (D). Praised by the retiring Corker, Bredesen is among the last of the disappearing moderate Southern Democrats and the type of politician that the Democratic Party needs to have hope of reclaiming the Senate. Tennessee has not seen a close senate race since Bob Corker ran against then-Congressman Harold Ford in 2006. If elected, Bredesen would be the first Democrat elected to the Senate from Tennessee since former Vice President Al Gore in 1990. However, the Democrats have had a bad history of nominating popular former politicians in GOP territory, particularly Bob Kerrey in Nebraska in 2012 and Evan Bayh in Indiana in 2016, only for both to lose by a decisive margin. The solid Republican roots of Tennessee is likely carry Rep. Marsha Blackburn (R), a staunch conservative, to the Senate.</p>
+<p><strong>West Virginia (Manchin +8.4)</strong>. Incumbent Sen. Joe Manchin (D) is one of the last of a brand of socially conservative Democratic politicians holding statewide office in Appalachia. The political situation in this state is a bit of a mixed bag for Manchin. Manchin is a popular Senator and former Governor in West Virginia, a state that was for a long time solidly Democratic territory. Coal and unions once ruled the politics of this state until the dawn of the 21st century, when the state began to rapidly shift towards Republicans, especially after the GOP wave in 2010. Today, the decline of coal has hit West Virginia hard, and following the rise of socially liberal policies championed by coastal Democrats, West Virginia has become solid Republican territory. To win, Manchin must steer clear of the social liberalism that is toxic to many areas of the country and survive Republican attempts to brand him as another liberal Democrat in league with Hillary Clinton and Nancy Pelosi and out of touch with West Virginia. His votes to confirm Trump appointees Justice Neil Gorsuch and Justice Brett Kavanaugh to the Supreme Court further cement his reputation as a conservative Democrat. If Manchin loses reelection, it will be the first time in almost a century that no Democrat is part of the West Virginia congressional delegation, and the first time in over half a century that Manchin's seat is occupied by a Republican, as this seat was occupied by Senate Majority Leader Robert Byrd from 1959 to 2010. Although he's in a tough battle against West Virginia Attorney General Patrick Morrisey, Manchin is not going away quietly, and he remains the favorite to win.</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</div>
