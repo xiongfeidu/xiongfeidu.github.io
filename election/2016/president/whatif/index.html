@@ -1,0 +1,617 @@
+<head>
+<title>2016 Revisited</title>
+</head>
+<body style="background-color:lightgray; font-family:verdana;">
+<div style="word-wrap: break-word; width: 640px; margin-left: 100px; margin-top: 0px;">
+<font size = "2">
+<h1>Revisiting 2016: How well would my probabilistic model have performed?</h1>
+<hr />
+<p>24 July 2019</p>
+<p>People frequently ask me whether I predicted Trump winning the 2016 election, and I tell them <a title="2016 President" href="../">no, that my model gave Clinton a very comfortable victory</a>. But then I mention that the same model predicted all 50 states in 2012.</p>
+<p>Then I explain to them about how after 2016, I completely redesigned my model and how it incorporates uncertainties, etc., etc. So then the natural question to ask is, well, then how would it have done on the 2016 election?</p>
+<p>Good question.</p>
+<p>Especially because of the fact that the redesign happened because of 2016, I was curious myself as to how it would have measured up if it had been run in 2016.</p>
+<p>So here's the answer.</p>
+<p>Methodology: I ran the model on the polling data from 2016 on 15 battleground states along with ME-2 and NE-2. A weaker model was used on MN and NM due to absence of sufficient good polling data. The remaining 33 states and DC were assumed to be safely Democratic or Republican according to their partisan lean. So overall, my model was partially run on the overall election, which is probably what is going to happen when I run it on the presidential election next year, since few states have enough polling data for my model to work. Here were the results:</p>
+<p><img src="map.png" alt="" width="640" height="480" border = "3"/></p>
+<p>&nbsp;</p>
+<p>The following table compares the results of my 2018-OLS and LAD models to FiveThirtyEight's Polls-Only model and the RealClearPolitics average, with the actual result shown in the final column.</p>
+<table style="font-size: 12; text-align: center;" width="1020">
+<tbody>
+<tr style="font-weight: bold">
+<td>State</td>
+<td>Electoral Votes</td>
+<td>2018-OLS Expected</td>
+<td>2018-OLS Probability</td>
+<td>2018-LAD Expected</td>
+<td>2018-LAD Probability</td>
+<td>FiveThirtyEight<br> Polls-Only Probability</td>
+<td>FiveThirtyEight<br> Polls-Only Margin</td>
+<td>RealClearPolitics Spread</td>
+<td style="width: 100px">Actual Result</td>
+</tr>
+<tr>
+<td>Arizona</td>
+<td>11</td>
+<td><span style="color: #ff0000;">Trump +3.94</span></td>
+<td><span style="color: #ff0000;">Trump 88.0%</span></td>
+<td><span style="color: #ff0000;">Trump +2.75</span></td>
+<td><span style="color: #ff0000;">Trump 88.9%</span></td>
+<td><span style="color: #ff0000;">Trump 66.6%</span></td>
+<td><span style="color: #ff0000;">Trump +2.2</span></td>
+<td><span style="color: #ff0000;">Trump +4.0</span></td>
+<td><span style="color: #ff0000;">Trump +3.55</span></td>
+</tr>
+<tr>
+<td>Colorado</td>
+<td>9</td>
+<td><span style="color: #0000ff;">Clinton +4.33</span></td>
+<td><span style="color: #0000ff;">Clinton 66.4%</span></td>
+<td><span style="color: #0000ff;">Clinton +4.00</span></td>
+<td><span style="color: #0000ff;">Clinton 64.0%</span></td>
+<td><span style="color: #0000ff;">Clinton 77.5%</span></td>
+<td><span style="color: #0000ff;">Clinton +4.1</span></td>
+<td><span style="color: #0000ff;">Clinton +2.9</span></td>
+<td><span style="color: #0000ff;">Clinton +4.91</span></td>
+</tr>
+<tr>
+<td>Florida</td>
+<td>29</td>
+<td><span style="color: #0000ff;">Clinton +0.71</span></td>
+<td><span style="color: #0000ff;">Clinton 57.8%</span></td>
+<td><span style="color: #0000ff;">Clinton +1.39</span></td>
+<td><span style="color: #0000ff;">Clinton 64.4%</span></td>
+<td><span style="color: #0000ff;">Clinton 55.1%</span></td>
+<td><span style="color: #0000ff;">Clinton +0.6</span></td>
+<td><span style="color: #ff0000;">Trump +0.2</span></td>
+<td><span style="color: #ff0000;">Trump +1.20</span></td>
+</tr>
+<tr>
+<td>Georgia</td>
+<td>16</td>
+<td><span style="color: #ff0000;">Trump +3.27</span></td>
+<td><span style="color: #ff0000;">Trump 82.2%</span></td>
+<td><span style="color: #ff0000;">Trump +2.76</span></td>
+<td><span style="color: #ff0000;">Trump 93.5%</span></td>
+<td><span style="color: #ff0000;">Trump 79.1%</span></td>
+<td><span style="color: #ff0000;">Trump +4.0</span></td>
+<td><span style="color: #ff0000;">Trump +4.8</span></td>
+<td><span style="color: #ff0000;">Trump +5.16</span></td>
+</tr>
+<tr>
+<td>Iowa</td>
+<td>6</td>
+<td><span style="color: #ff0000;">Trump +2.13</span></td>
+<td><span style="color: #ff0000;">Trump 59.7%</span></td>
+<td><span style="color: #ff0000;">Trump +2.81</span></td>
+<td><span style="color: #ff0000;">Trump 60.9%</span></td>
+<td><span style="color: #ff0000;">Trump 69.8%</span></td>
+<td><span style="color: #ff0000;">Trump +2.9</span></td>
+<td><span style="color: #ff0000;">Trump +3.0</span></td>
+<td><span style="color: #ff0000;">Trump +9.41</span></td>
+</tr>
+<tr>
+<td>Maine</td>
+<td>4</td>
+<td><span style="color: #0000ff;">Clinton +1.54</span></td>
+<td><span style="color: #0000ff;">Clinton 56.7%</span></td>
+<td><span style="color: #0000ff;">Clinton +2.80</span></td>
+<td><span style="color: #0000ff;">Clinton 61.3%</span></td>
+<td><span style="color: #0000ff;">Clinton 82.6%</span></td>
+<td><span style="color: #0000ff;">Clinton +7.5</span></td>
+<td><span style="color: #0000ff;">Clinton +4.5</span></td>
+<td><span style="color: #0000ff;">Clinton +2.96</span></td>
+</tr>
+<tr>
+<td>Michigan</td>
+<td>16</td>
+<td><span style="color: #0000ff;">Clinton +3.72</span></td>
+<td><span style="color: #0000ff;">Clinton 72.2%</span></td>
+<td><span style="color: #0000ff;">Clinton +4.50</span></td>
+<td><span style="color: #0000ff;">Clinton 85.2%</span></td>
+<td><span style="color: #0000ff;">Clinton 78.9%</span></td>
+<td><span style="color: #0000ff;">Clinton +4.2</span></td>
+<td><span style="color: #0000ff;">Clinton +3.4</span></td>
+<td><span style="color: #ff0000;">Trump +0.23</span></td>
+</tr>
+<tr>
+<td nowrap>North Carolina</td>
+<td>15</td>
+<td><span style="color: #ff0000;">Trump +1.01</span></td>
+<td><span style="color: #ff0000;">Trump 56.9%</span></td>
+<td><span style="color: #ff0000;">Trump +0.25</span></td>
+<td><span style="color: #ff0000;">Trump 51.6%</span></td>
+<td><span style="color: #0000ff;">Clinton 55.5%</span></td>
+<td><span style="color: #0000ff;">Clinton +0.7</span></td>
+<td><span style="color: #ff0000;">Trump +1.0</span></td>
+<td><span style="color: #ff0000;">Trump +3.66</span></td>
+</tr>
+<tr>
+<td nowrap>New Hampshire</td>
+<td>4</td>
+<td><span style="color: #ff0000;">Trump +0.75</span></td>
+<td><span style="color: #ff0000;">Trump 54.1%</span></td>
+<td><span style="color: #ff0000;">Trump +1.14</span></td>
+<td><span style="color: #ff0000;">Trump 56.3%</span></td>
+<td><span style="color: #0000ff;">Clinton 69.8%</span></td>
+<td><span style="color: #0000ff;">Clinton +3.6</span></td>
+<td><span style="color: #0000ff;">Clinton +0.6</span></td>
+<td><span style="color: #0000ff;">Clinton +0.37</span></td>
+</tr>
+<tr>
+<td>Nevada</td>
+<td>6</td>
+<td><span style="color: #0000ff;">Clinton +2.06</span></td>
+<td><span style="color: #0000ff;">Clinton 66.9%</span></td>
+<td><span style="color: #0000ff;">Clinton +0.25</span></td>
+<td><span style="color: #0000ff;">Clinton 52.2%</span></td>
+<td><span style="color: #0000ff;">Clinton 58.3%</span></td>
+<td><span style="color: #0000ff;">Clinton +1.2</span></td>
+<td><span style="color: #ff0000;">Trump +0.8</span></td>
+<td><span style="color: #0000ff;">Clinton +2.42</span></td>
+</tr>
+<tr>
+<td>Ohio</td>
+<td>18</td>
+<td><span style="color: #ff0000;">Trump +3.01</span></td>
+<td><span style="color: #ff0000;">Trump 67.2%</span></td>
+<td><span style="color: #ff0000;">Trump +1.22</span></td>
+<td><span style="color: #ff0000;">Trump 58.7%</span></td>
+<td><span style="color: #ff0000;">Trump 64.6%</span></td>
+<td><span style="color: #ff0000;">Trump +1.9</span></td>
+<td><span style="color: #ff0000;">Trump +3.5</span></td>
+<td><span style="color: #ff0000;">Trump +8.13</span></td>
+</tr>
+<tr>
+<td>Pennsylvania</td>
+<td>20</td>
+<td><span style="color: #0000ff;">Clinton +3.89</span></td>
+<td><span style="color: #0000ff;">Clinton 76.2%</span></td>
+<td><span style="color: #0000ff;">Clinton +2.15</span></td>
+<td><span style="color: #0000ff;">Clinton 69.4%</span></td>
+<td><span style="color: #0000ff;">Clinton 77.0%</span></td>
+<td><span style="color: #0000ff;">Clinton +3.7</span></td>
+<td><span style="color: #0000ff;">Clinton +1.9</span></td>
+<td><span style="color: #ff0000;">Trump +0.72</span></td>
+</tr>
+<tr>
+<td>Texas</td>
+<td>38</td>
+<td nowrap><span style="color: #ff0000;">Trump +11.33</span></td>
+<td><span style="color: #ff0000;">Trump 94.9%</span></td>
+<td nowrap><span style="color: #ff0000;">Trump +10.48</span></td>
+<td><span style="color: #ff0000;">Trump 95.4%</span></td>
+<td><span style="color: #ff0000;">Trump 94.0%</span></td>
+<td><span style="color: #ff0000;">Trump +8.5</span></td>
+<td><span style="color: #ff0000;">Trump +12.0</span></td>
+<td><span style="color: #ff0000;">Trump +8.99</span></td>
+</tr>
+<tr>
+<td>Virginia</td>
+<td>13</td>
+<td><span style="color: #0000ff;">Clinton +3.76</span></td>
+<td><span style="color: #0000ff;">Clinton 72.9%</span></td>
+<td><span style="color: #0000ff;">Clinton +5.13</span></td>
+<td><span style="color: #0000ff;">Clinton 79.6%</span></td>
+<td><span style="color: #0000ff;">Clinton 85.5%</span></td>
+<td><span style="color: #0000ff;">Clinton +5.5</span></td>
+<td><span style="color: #0000ff;">Clinton +5.0</span></td>
+<td><span style="color: #0000ff;">Clinton +5.32</span></td>
+</tr>
+<tr>
+<td>Wisconsin</td>
+<td>10</td>
+<td><span style="color: #0000ff;">Clinton +4.97</span></td>
+<td><span style="color: #0000ff;">Clinton 77.2%</span></td>
+<td><span style="color: #0000ff;">Clinton +4.70</span></td>
+<td><span style="color: #0000ff;">Clinton 77.3%</span></td>
+<td><span style="color: #0000ff;">Clinton 83.5%</span></td>
+<td><span style="color: #0000ff;">Clinton +5.3</span></td>
+<td><span style="color: #0000ff;">Clinton +6.5</span></td>
+<td><span style="color: #ff0000;">Trump +0.77</span></td>
+</tr>
+</tbody>
+</table>
+<p>So even this model shows Clinton winning over 300 electoral votes. However, this is a closer prediction than what my old model said in 2016, which gave Clinton 347 electoral votes.</p>
+<p>However, this is only half of the story. The other half of the story is the <i>probability</i> of the result:</p>
+<table style="font-size: 12; text-align: center;">
+<tbody>
+<tr style="font-weight: bold">
+<td>Candidate</td>
+<td>Probability</td>
+</tr>
+<tr>
+<td><span style="color: #0000ff;">Hillary Clinton</span></td>
+<td><span style="color: #0000ff;">73.7%</span></td>
+</tr>
+<tr>
+<td><span style="color: #ff0000;">Donald Trump</span></td>
+<td><span style="color: #ff0000;">25.8%</span></td>
+</tr>
+</tbody>
+</table>
+<p>The remaining 0.5% is the possiblity of a 269-269 tie.</p>
+<p>The median result was Clinton winning 320-218.</p>
+<p>So these results now look a lot closer to FiveThirtyEight's election forecast, which gave Clinton a 71.4% chance of winning. Nonetheless, the 2018-OLS model performed slightly worse.</p>
+<p>To compare this forecast with FiveThirtyEight and RealClearPolitics, I computed the total loss for each of the outcomes across these 15 states. Here, loss was defined as negative log-likelihood (NLL) for the probabilistic models and sum of squared errors (SSE) for the margins. For those who don't have a background in statistical modeling, remember that smaller loss is better.</p>
+<table style="font-size: 12; text-align: center;" width="640">
+<tbody>
+<tr>
+<td>State</td>
+<td>2018-OLS NLL</td>
+<td>2018-LAD NLL</td>
+<td>FiveThirtyEight<br>Polls-Only NLL</td>
+<td>2018-OLS SSE</td>
+<td>2018-LAD SSE</td>
+<td>FiveThirtyEight<br>Polls-Only SSE</td>
+<td>RealClearPolitics SSE</td>
+</tr>
+<tr>
+<td>Arizona</td>
+<td>0.13</td>
+<td>0.12</td>
+<td>0.41</td>
+<td>0.15</td>
+<td>0.64</td>
+<td>1.82</td>
+<td>0.20</td>
+</tr>
+<tr>
+<td>Colorado</td>
+<td>0.41</td>
+<td>0.45</td>
+<td>0.25</td>
+<td>0.34</td>
+<td>0.83</td>
+<td>0.66</td>
+<td>4.04</td>
+</tr>
+<tr>
+<td>Florida</td>
+<td>0.86</td>
+<td>1.03</td>
+<td>0.80</td>
+<td>3.66</td>
+<td>6.71</td>
+<td>3.24</td>
+<td>1.00</td>
+</tr>
+<tr>
+<td>Georgia</td>
+<td>0.20</td>
+<td>0.18</td>
+<td>0.23</td>
+<td>3.57</td>
+<td>5.76</td>
+<td>1.35</td>
+<td>0.13</td>
+</tr>
+<tr>
+<td>Iowa</td>
+<td>0.52</td>
+<td>0.50</td>
+<td>0.36</td>
+<td>53.00</td>
+<td>43.56</td>
+<td>42.38</td>
+<td>41.09</td>
+</tr>
+<tr>
+<td>Maine</td>
+<td>0.57</td>
+<td>0.49</td>
+<td>0.19</td>
+<td>2.02</td>
+<td>0.03</td>
+<td>20.61</td>
+<td>2.37</td>
+</tr>
+<tr>
+<td>Michigan</td>
+<td>1.28</td>
+<td>1.91</td>
+<td>1.56</td>
+<td>15.60</td>
+<td>22.37</td>
+<td>19.62</td>
+<td>13.18</td>
+</tr>
+<tr>
+<td nowrap>North Carolina</td>
+<td>0.56</td>
+<td>0.66</td>
+<td>0.81</td>
+<td>7.02</td>
+<td>11.63</td>
+<td>19.01</td>
+<td>7.08</td>
+</tr>
+<tr>
+<td nowrap>New Hampshire</td>
+<td>0.78</td>
+<td>0.83</td>
+<td>0.36</td>
+<td>1.25</td>
+<td>2.28</td>
+<td>10.43</td>
+<td>0.05</td>
+</tr>
+<tr>
+<td>Nevada</td>
+<td>0.40</td>
+<td>0.65</td>
+<td>0.54</td>
+<td>0.13</td>
+<td>4.73</td>
+<td>1.49</td>
+<td>10.37</td>
+</tr>
+<tr>
+<td>Ohio</td>
+<td>0.40</td>
+<td>0.53</td>
+<td>0.44</td>
+<td>26.21</td>
+<td>47.75</td>
+<td>38.81</td>
+<td>21.44</td>
+</tr>
+<tr>
+<td>Pennsylvania</td>
+<td>1.44</td>
+<td>1.18</td>
+<td>1.47</td>
+<td>21.25</td>
+<td>8.24</td>
+<td>19.54</td>
+<td>6.86</td>
+</tr>
+<tr>
+<td>Texas</td>
+<td>0.05</td>
+<td>0.05</td>
+<td>0.06</td>
+<td>5.48</td>
+<td>2.22</td>
+<td>0.24</td>
+<td>9.06</td>
+</tr>
+<tr>
+<td>Virginia</td>
+<td>0.32</td>
+<td>0.23</td>
+<td>0.16</td>
+<td>2.43</td>
+<td>0.04</td>
+<td>0.03</td>
+<td>0.10</td>
+</tr>
+<tr>
+<td>Wisconsin</td>
+<td>1.48</td>
+<td>1.48</td>
+<td>1.80</td>
+<td>32.95</td>
+<td>29.92</td>
+<td>36.84</td>
+<td>52.85</td>
+</tr>
+<tr style="font-weight: bold">
+<td>TOTAL</td>
+<td>9.38</td>
+<td>10.29</td>
+<td>9.44</td>
+<td>175.07</td>
+<td>186.70</td>
+<td>216.08</td>
+<td>169.82</td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
+<p>Now let's compare our probabilistic forecast to the other ones listed on the New York Times's Upshot. The following table shows the NLL losses on the probabilistic predictions of various published forecasts. The data is collected from <a title="2016 Election Forecast: Who Will Be President? - The New York Times" href="https://www.nytimes.com/interactive/2016/upshot/presidential-polls-forecast.html">here</a>.</p>
+<table style="font-size: 12; text-align: center;" width="640">
+<tbody>
+<tr>
+<td>State</td>
+<td>2018-OLS</td>
+<td>2018-LAD</td>
+<td>FiveThirtyEight<br>Polls-Only</td>
+<td>NYT Upshot</td>
+<td>HuffPost</td>
+<td>PredictWise</td>
+<td>Princeton<br>Election<br>Consortium</td>
+<td>Daily Kos</td>
+</tr>
+<tr>
+<td>Arizona</td>
+<td>0.13</td>
+<td>0.12</td>
+<td>0.41</td>
+<td>0.17</td>
+<td>0.09</td>
+<td>0.20</td>
+<td>0.09</td>
+<td>0.08</td>
+</tr>
+<tr>
+<td>Colorado</td>
+<td>0.41</td>
+<td>0.45</td>
+<td>0.25</td>
+<td>0.12</td>
+<td>0.01</td>
+<td>0.05</td>
+<td>0.04</td>
+<td>0.01</td>
+</tr>
+<tr>
+<td>Florida</td>
+<td>0.86</td>
+<td>1.03</td>
+<td>0.80</td>
+<td>1.11</td>
+<td>2.12</td>
+<td>1.47</td>
+<td>1.17</td>
+<td>1.97</td>
+</tr>
+<tr>
+<td>Georgia</td>
+<td>0.20</td>
+<td>0.18</td>
+<td>0.23</td>
+<td>0.19</td>
+<td>0.07</td>
+<td>0.09</td>
+<td>0.13</td>
+<td>0.02</td>
+</tr>
+<tr>
+<td>Iowa</td>
+<td>0.52</td>
+<td>0.50</td>
+<td>0.36</td>
+<td>0.48</td>
+<td>0.12</td>
+<td>0.24</td>
+<td>0.30</td>
+<td>0.01</td>
+</tr>
+<tr>
+<td>Maine</td>
+<td>0.57</td>
+<td>0.49</td>
+<td>0.19</td>
+<td>0.09</td>
+<td>0.01</td>
+<td>0.02</td>
+<td>0.02</td>
+<td>0.01</td>
+</tr>
+<tr>
+<td>Michigan</td>
+<td>1.28</td>
+<td>1.91</td>
+<td>1.56</td>
+<td>2.81</td>
+<td>4.61</td>
+<td>3.00</td>
+<td>1.56</td>
+<td>5.30</td>
+</tr>
+<tr>
+<td>North Carolina</td>
+<td>0.56</td>
+<td>0.66</td>
+<td>0.81</td>
+<td>1.02</td>
+<td>1.77</td>
+<td>1.08</td>
+<td>1.11</td>
+<td>1.39</td>
+</tr>
+<tr>
+<td nowrap>New Hampshire</td>
+<td>0.78</td>
+<td>0.83</td>
+<td>0.36</td>
+<td>0.24</td>
+<td>0.08</td>
+<td>0.17</td>
+<td>0.46</td>
+<td>0.01</td>
+</tr>
+<tr>
+<td>Nevada</td>
+<td>0.40</td>
+<td>0.65</td>
+<td>0.54</td>
+<td>0.39</td>
+<td>0.16</td>
+<td>0.09</td>
+<td>0.17</td>
+<td>0.36</td>
+</tr>
+<tr>
+<td>Ohio</td>
+<td>0.40</td>
+<td>0.53</td>
+<td>0.44</td>
+<td>0.62</td>
+<td>0.31</td>
+<td>0.40</td>
+<td>0.46</td>
+<td>0.13</td>
+</tr>
+<tr>
+<td>Pennsylvania</td>
+<td>1.44</td>
+<td>1.18</td>
+<td>1.47</td>
+<td>2.21</td>
+<td>4.61</td>
+<td>2.66</td>
+<td>1.56</td>
+<td>5.30</td>
+</tr>
+<tr>
+<td>Texas</td>
+<td>0.05</td>
+<td>0.05</td>
+<td>0.06</td>
+<td>0.04</td>
+<td>0.01</td>
+<td>0.01</td>
+<td>0.01</td>
+<td>0.01</td>
+</tr>
+<tr>
+<td>Virginia</td>
+<td>0.32</td>
+<td>0.23</td>
+<td>0.16</td>
+<td>0.04</td>
+<td>0.01</td>
+<td>0.02</td>
+<td>0.02</td>
+<td>0.01</td>
+</tr>
+<tr>
+<td>Wisconsin</td>
+<td>1.48</td>
+<td>1.48</td>
+<td>1.80</td>
+<td>2.66</td>
+<td>4.61</td>
+<td>3.91</td>
+<td>3.91</td>
+<td>5.30</td>
+</tr>
+<tr style="font-weight: bold">
+<td>TOTAL</td>
+<td>9.38</td>
+<td>10.29</td>
+<td>9.44</td>
+<td>12.18</td>
+<td>18.58</td>
+<td>13.41</td>
+<td>11.02</td>
+<td>19.88</td>
+</tr>
+</tbody>
+</table>
+<p>Note that the columns of these two tables may not add up perfectly due since these presented numbers are rounded.</p>
+<p>First, let's take a look at the NLL losses. They were the largest in Wisconsin, Pennsylvania, and Michigan, as we expected. We see here that the OLS model did relatively similar to (though slightly better than) FiveThirtyEight in these 15 states. The LAD model did much worse, but still beat all of the other predictions, including the Princeton Election Consortium.</p>
+<p>Now consider the SSE losses. The models missed the most in Iowa, Michigan, Ohio, Pennsylvania, and Wisconsin all around. However, we also see something else in the SSE losses - both the OLS and the LAD models outperformed FiveThirtyEight significantly, though neither did as well as a simple average of the polls done by RealClearPolitics. However, one should bear in mind that the RealClearPolitics average includes lower quality polls that tend to oversample Republicans, and it's merely coincidence this election that the Republican significantly outperformed the polls. This phenomenon did not repeat itself in the 2018 midterms.</p>
+<p>So here are the key takeaways:</p>
+<ol>
+<li>The 2018-OLS would have performed similarly to FiveThirtyEight's polls-only forecast in terms of predicting the likelihood of a candidate winning the 2016 election.</li>
+<li>Both the 2018-OLS and LAD models outperformed FiveThirtyEight's polls-only forecast in terms of predicting the margin of victory in the 2016 election.</li>
+<li>So as we could see, none of the models showed Pennsylvania, Michigan, and Wisconsin all going to Trump. In fact, one could argue that it would have been almost mathematically impossible for an unbiased model to foresee this result just from the polling data alone, which showed Clinton leading in all three states. The bottom line is that a good model should not have shown that Trump <i>would</i> have won these states, but should have shown that he <i>could</i>.</li>
+</ol>
+<p>We'll have to find out in 2020 whether or not this was a one-off occurrence, or whether my model holds in its ability to compare against the best election forecasts out there.</p>
+<p>&nbsp;</p>
+</font>
+</div>
+</body>
