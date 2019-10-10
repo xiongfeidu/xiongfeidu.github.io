@@ -6,8 +6,9 @@
 <font size = "2">
 <h1>Election Results Stream</h1>
 <hr />
-<h3><a title="Elections" href="../">Back to Elections Home</a></h3>
+<h3><a title="Elections" href="../"><< Back to Elections Home</a></h3>
 <p>This page will serve as the live stream for all upcoming election results. Most of the time, this stream is dormant. See the calendar below for a schedule of when this stream will broadcast.</p>
+<p>When this stream is broadcasting, it analyzes election results as they come in, and for major statewide non-primary elections, it also features a live estimate of the final election result.</p>
 <html>
   <body>
     <!-- Add a placeholder for the Twitch embed -->
@@ -26,6 +27,12 @@
     </script>
   </body>
 </html>
+<p>The election analysis uses the following terminology:</p>
+<ul>
+<li><strong>Likely</strong> means that based on exit polls, pre-election polling data, and initial reports, it is <i>very likely</i> that a candidate will win the race.</li>
+<li><strong>High probability</strong> means that based on our model, it is <i>almost certain</i> that a candidate will win the election, or that a candidate will win unless there's an extremely unlikely shift in the results being reported and that absentee and preliminary ballots shift the election outcome.</li>
+<li><strong>Called</strong> means that a major news organization, such as the AP, has <i>called</i> the election for a candidate.</li>
+</ul>
 <p>In the color scheme, light represents 'likely', moderate represents 'high probability', and dark represents 'called'.</p>
 <p>The following calendar displays all future scheduled streams. All times EST/EDT.</p>
 <h2>Calendar</h2>
@@ -96,7 +103,7 @@
 </tr>
 </tbody>
 </table>
-<h2>Past Streams</h2>
+<h3>Past Streams</h3>
 <table style="height: px; font-size: 12;" width="600">
 <tbody>
 <tr>
@@ -115,6 +122,9 @@
 </tr>
 </tbody>
 </table>
+<h2>Live Model Methodology</h2>
+<p>In terms of methodology, this model essentially guesses the final results of the election based on the geographic distribution of results that are reporting so far and the historical partisan lean of that region. This model is currently being run for statewide elections in 21 states: CO, FL, GA, IA, IN, KS, KY, MI, MN, MO, MS, MT, NC, ND, OH, PA, TN, TX, VA, WI, WV. This model is not suitable to be run on AZ, IL, MD, NM, NV, UT, WA because these states have a high concentration of votes all in one area of the state, nor is this method effective in small states or states with too few subdivisions, such as AK, CT, DE, HI, MA, ME, NH, NJ, RI, VT, WY. Otherwise, this model is not set up in other states.</p>
+<p><img src="models.png" alt="" height="480" border="3" /></p>
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 <p>&nbsp;</p>
