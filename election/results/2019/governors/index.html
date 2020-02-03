@@ -10,13 +10,16 @@
 <h1>2019 Governors Election Results</h1>
 <hr />
 <!--<h3>| Home | </h3>-->
+<div class="description">
 <p>In the 2019 off-year gubernatorial elections, unpopular GOP Gov. Matt Bevin loses by a hair to state Attorney General Andy Beshear (D) in Kentucky, while conservative Democrat John Bel Edwards wins reelection in a runoff in Louisiana.</p>
+</div>
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 <p>&nbsp;</p>  
 <div class="dropdown">
   <div class="dropbtn">Choose Election<span style="float:right;">▼</span></div>
   <div class="dropdown-content">
+    <a href="../../2020/demprimaries">2020 Democratic Primaries</a>
     <a href="../../2019/governors">2019 Governors</a>
     <a href="../../2018/senate">2018 Senate</a>
     <a href="../../2018/governors">2018 Governors</a>
@@ -6407,7 +6410,7 @@
 </div>
 
 
-<div id="results">
+<div id="results-score">
   <defs>
     <style type="text/css">
     #board {
@@ -6436,10 +6439,154 @@
     </table>
   </div>
   <div style="width:960px; height:20px; left: 100px; top: 200px; background-color: #fff; position: absolute;">&nbsp;</div>
-  <div style="width:460px; height:20px; left: 100px; top: 200px; background-color: #00f; position: absolute;">&nbsp;</div>
-  <div style="width:499px; height:20px; left: 560px; top: 200px; background-color: #f00; position: absolute;">&nbsp;</div>
+  <div style="width:461px; height:20px; left: 100px; top: 200px; background-color: #00f; position: absolute;">&nbsp;</div>
+  <div style="width:499px; height:20px; left: 561px; top: 200px; background-color: #f00; position: absolute;">&nbsp;</div>
   <div style="width:960px; height:20px; left: 100px; top: 200px; position: absolute; text-align: center; font-size: 18;">|<br><span style="font-size: 12;">26 to win</span></div>
 
+</div>
+
+
+<div id="buttons">
+  <div id="back-button" class="button" style="top: 240px;" onclick="zoomCounties('0 0 990 627'); show('national-map'); hide('counties-map'); hideAllResults(); hide('back-button')">
+    << Back to all states
+  </div>
+  <div id="results-button" class="button margin-button" style="top: 750px;" onclick="colorCounties(current_fips, actual);">
+    See actual margins
+  </div>
+  <div id="margins-button" class="button margin-button" style="top: 800px;" onclick="colorCounties(current_fips, margins);">
+    See performance margins
+  </div>
+</div>
+<script type="text/javascript">
+  var current_fips = "00";
+  function displayResults(id, resultsId, anchor) {
+    var e = window.event;
+    if (document.getElementById(resultsId)) {
+      var resultsStyle = document.getElementById(resultsId).style;
+      var nationalView = document.getElementById('national-map').style.visibility;
+      if (anchor) {
+        resultsStyle.left = 900;
+        resultsStyle.top = 240;
+      } else if (id.startsWith('c') || nationalView === "visible") {
+        resultsStyle.left = window.scrollX + e.clientX + 10;
+        resultsStyle.top = window.scrollY + e.clientY + 10;
+      }
+      show(resultsId);
+    }
+    var element = document.getElementById(id);
+    if (element.className.baseVal == 'county') {
+      var big_state_fips = ["02","41","06","16","32","49","04","30","35","48","27","26","17","12"];
+      if (big_state_fips.includes(current_fips)) {
+        element.style.strokeWidth = "0.8px";   
+      } else {
+        element.style.strokeWidth = "0.5px";      
+      }
+      element.style.stroke = "black";        
+    } else {
+      element.style.strokeWidth = "2px";
+    }
+  }
+  function zoomCounties(box) {
+    document.getElementById('counties-svg').setAttribute('viewBox', box);
+  }
+  function showCountiesState(box, state, fips) {
+    var model_states = ["KY","MS","LA"];
+    if (model_states.includes(state)) {
+      show('results-button');
+      show('margins-button');
+    }
+    current_fips = fips;
+    zoomCounties(box);
+    var counties = document.getElementsByClassName('county');
+    colorCounties(fips);
+    /*for (var i = 0; i < counties.length; i++) {
+        if (counties[i].id.startsWith('c' + fips)) {
+            counties[i].style.visibility = "visible";
+        } else {
+            counties[i].style.fill = "white";        
+        }
+    }*/
+    hide('national-map');
+    show('counties-map');
+    show('back-button');
+  }
+  function hideResults(id, resultsId) {
+    hide(resultsId);
+    var element = document.getElementById(id);
+    if (element.className.baseVal == 'county') {
+      element.style.strokeWidth = "0.2px";
+      element.style.stroke = "darkgray";        
+    } else {
+      element.style.strokeWidth = "0px";
+    }
+  }
+  function hideAllResults() {
+    var results = document.getElementsByClassName('results');
+    for (var i = 0; i < results.length; i++) {
+      results[i].style.visibility = "hidden";
+    }
+    hide('results-button');
+    hide('margins-button');
+  }
+  function leaveState(stateId, resultsId) {
+    if (document.getElementById('national-map').style.visibility === 'visible') {
+      hideResults(stateId, resultsId);
+    } else {
+      document.getElementById(stateId).style.strokeWidth = 0;
+    }
+  }
+  function hide(id) {
+    if (document.getElementById(id)) {
+      var resultsStyle = document.getElementById(id).style;
+      resultsStyle.visibility = "hidden";
+    }
+  }
+  function show(id) {
+    if (document.getElementById(id)) {
+      var resultsStyle = document.getElementById(id).style;
+      resultsStyle.visibility = "visible";    
+    }
+  }
+  function setColor(id, color) {
+    document.getElementById(id).style.fill = color;
+  }
+  var stateColors = {"KY": "#0000FF", "MS": "#FF0000", "LA": "#0000FF"};
+  function colorAll() {
+    for (var state in stateColors) {
+      setColor(state, stateColors[state]);
+    }
+  }
+  colorAll();
+  var actual = {"c21001": "#C00000", "c21003": "#C00000", "c21005": "#FF0000", "c21007": "#C00000", "c21009": "#FF0000", "c21011": "#3030FF", "c21013": "#C00000", "c21015": "#FF0000", "c21017": "#FF6060", "c21019": "#3030FF", "c21021": "#FF9090", "c21023": "#FF0000", "c21025": "#9090FF", "c21027": "#FF0000", "c21029": "#FF0000", "c21031": "#C00000", "c21033": "#C00000", "c21035": "#FF0000", "c21037": "#3030FF", "c21039": "#C00000", "c21041": "#FF3030", "c21043": "#6060FF", "c21045": "#C00000", "c21047": "#FF0000", "c21049": "#FF3030", "c21051": "#C00000", "c21053": "#C00000", "c21055": "#C00000", "c21057": "#C00000", "c21059": "#FF6060", "c21061": "#C00000", "c21063": "#0000C0", "c21065": "#FF0000", "c21067": "#0000C0", "c21069": "#C00000", "c21071": "#3030FF", "c21073": "#0000C0", "c21075": "#FF0000", "c21077": "#FF0000", "c21079": "#C00000", "c21081": "#C00000", "c21083": "#C00000", "c21085": "#C00000", "c21087": "#C00000", "c21089": "#FF3030", "c21091": "#3030FF", "c21093": "#FF6060", "c21095": "#C00000", "c21097": "#FF0000", "c21099": "#C00000", "c21101": "#6060FF", "c21103": "#FF0000", "c21105": "#C00000", "c21107": "#FF0000", "c21109": "#C00000", "c21111": "#0000C0", "c21113": "#FF0000", "c21115": "#C00000", "c21117": "#9090FF", "c21119": "#9090FF", "c21121": "#C00000", "c21123": "#C00000", "c21125": "#C00000", "c21127": "#C00000", "c21129": "#C00000", "c21131": "#C00000", "c21133": "#FF3030", "c21135": "#C00000", "c21137": "#C00000", "c21139": "#C00000", "c21141": "#C00000", "c21143": "#FF0000", "c21151": "#9090FF", "c21153": "#3030FF", "c21155": "#3030FF", "c21157": "#C00000", "c21159": "#C00000", "c21161": "#FF3030", "c21145": "#FF0000", "c21147": "#C00000", "c21149": "#C00000", "c21163": "#FF3030", "c21165": "#FF3030", "c21167": "#FF0000", "c21169": "#FF0000", "c21171": "#C00000", "c21173": "#FF3030", "c21175": "#FF3030", "c21177": "#FF3030", "c21179": "#FF9090", "c21181": "#9090FF", "c21183": "#FF0000", "c21185": "#FF3030", "c21187": "#C00000", "c21189": "#C00000", "c21191": "#C00000", "c21193": "#FF3030", "c21195": "#FF0000", "c21197": "#FF3030", "c21199": "#C00000", "c21201": "#FF0000", "c21203": "#C00000", "c21205": "#0000FF", "c21207": "#C00000", "c21209": "#9090FF", "c21211": "#FF0000", "c21213": "#FF3030", "c21215": "#C00000", "c21217": "#C00000", "c21219": "#C00000", "c21221": "#C00000", "c21223": "#FF0000", "c21225": "#FF0000", "c21227": "#6060FF", "c21229": "#FF0000", "c21231": "#C00000", "c21233": "#C00000", "c21235": "#C00000", "c21237": "#0000FF", "c21239": "#3030FF", "c28001": "#0000FF", "c28003": "#C00000", "c28005": "#FF0000", "c28007": "#FF3030", "c28009": "#FF0000", "c28011": "#0000C0", "c28013": "#FF0000", "c28015": "#C00000", "c28017": "#0000C0", "c28019": "#C00000", "c28021": "#0000C0", "c28023": "#C00000", "c28025": "#0000C0", "c28027": "#0000C0", "c28029": "#0000FF", "c28031": "#FF0000", "c28033": "#C00000", "c28035": "#FF9090", "c28037": "#FF0000", "c28039": "#C00000", "c28041": "#C00000", "c28043": "#FF9090", "c28045": "#C00000", "c28047": "#FF0000", "c28049": "#0000C0", "c28051": "#0000C0", "c28053": "#0000C0", "c28055": "#0000FF", "c28057": "#C00000", "c28059": "#C00000", "c28061": "#0000FF", "c28065": "#0000C0", "c28063": "#0000C0", "c28067": "#C00000", "c28069": "#0000C0", "c28071": "#3030FF", "c28073": "#C00000", "c28075": "#FF0000", "c28077": "#FF0000", "c28079": "#FF3030", "c28081": "#FF0000", "c28083": "#0000C0", "c28085": "#C00000", "c28087": "#FF6060", "c28089": "#9090FF", "c28091": "#C00000", "c28093": "#3030FF", "c28095": "#FF0000", "c28097": "#FF6060", "c28099": "#C00000", "c28101": "#C00000", "c28103": "#0000C0", "c28105": "#0000FF", "c28107": "#6060FF", "c28109": "#C00000", "c28111": "#C00000", "c28113": "#3030FF", "c28115": "#C00000", "c28117": "#C00000", "c28119": "#0000C0", "c28121": "#C00000", "c28123": "#FF6060", "c28125": "#0000C0", "c28127": "#FF0000", "c28129": "#C00000", "c28131": "#C00000", "c28133": "#0000C0", "c28135": "#0000C0", "c28137": "#C00000", "c28139": "#C00000", "c28141": "#C00000", "c28143": "#0000C0", "c28145": "#C00000", "c28147": "#FF0000", "c28149": "#3030FF", "c28151": "#0000C0", "c28153": "#FF0000", "c28155": "#C00000", "c28157": "#0000C0", "c28159": "#FF6060", "c28161": "#FF9090", "c28163": "#0000FF", "c22001": "#C00000", "c22003": "#C00000", "c22005": "#FF6060", "c22007": "#3030FF", "c22009": "#FF0000", "c22011": "#C00000", "c22013": "#6060FF", "c22015": "#C00000", "c22017": "#0000FF", "c22019": "#FF6060", "c22021": "#C00000", "c22023": "#C00000", "c22025": "#C00000", "c22027": "#FF3030", "c22029": "#FF3030", "c22031": "#FF3030", "c22033": "#0000C0", "c22035": "#0000C0", "c22037": "#0000FF", "c22039": "#C00000", "c22041": "#C00000", "c22043": "#C00000", "c22045": "#C00000", "c22047": "#0000C0", "c22049": "#C00000", "c22053": "#C00000", "c22051": "#0000FF", "c22059": "#C00000", "c22055": "#FF0000", "c22057": "#C00000", "c22061": "#FF6060", "c22063": "#C00000", "c22065": "#0000C0", "c22067": "#6060FF", "c22069": "#6060FF", "c22071": "#0000C0", "c22073": "#FF3030", "c22075": "#FF3030", "c22077": "#0000FF", "c22079": "#FF0000", "c22081": "#9090FF", "c22083": "#FF0000", "c22085": "#C00000", "c22087": "#3030FF", "c22089": "#9090FF", "c22091": "#0000C0", "c22093": "#0000C0", "c22095": "#0000C0", "c22097": "#6060FF", "c22099": "#C00000", "c22101": "#FF0000", "c22103": "#FF0000", "c22105": "#3030FF", "c22107": "#0000C0", "c22109": "#C00000", "c22111": "#C00000", "c22113": "#C00000", "c22115": "#C00000", "c22117": "#FF6060", "c22119": "#FF0000", "c22121": "#0000FF", "c22123": "#C00000", "c22125": "#0000FF", "c22127": "#C00000"};
+  var margins = {"c21001": "#FF0000", "c21003": "#FF3030", "c21005": "#FF6060", "c21007": "#FF0000", "c21009": "#FF3030", "c21011": "#FF6060", "c21013": "#9090FF", "c21015": "#3030FF", "c21017": "#FF3030", "c21019": "#9090FF", "c21021": "#9090FF", "c21023": "#6060FF", "c21025": "#6060FF", "c21027": "#FF3030", "c21029": "#9090FF", "c21031": "#FF3030", "c21033": "#FF0000", "c21035": "#FF6060", "c21037": "#3030FF", "c21039": "#C00000", "c21041": "#FF0000", "c21043": "#3030FF", "c21045": "#FF3030", "c21047": "#FF3030", "c21049": "#FF6060", "c21051": "#FF9090", "c21053": "#FF6060", "c21055": "#FF3030", "c21057": "#FF0000", "c21059": "#FF6060", "c21061": "#FF6060", "c21063": "#6060FF", "c21065": "#9090FF", "c21067": "#6060FF", "c21069": "#FF0000", "c21071": "#3030FF", "c21073": "#FF6060", "c21075": "#C00000", "c21077": "#FF3030", "c21079": "#FF6060", "c21081": "#FF6060", "c21083": "#FF0000", "c21085": "#FF0000", "c21087": "#FF0000", "c21089": "#FF3030", "c21091": "#9090FF", "c21093": "#FF6060", "c21095": "#FF3030", "c21097": "#FF3030", "c21099": "#FF0000", "c21101": "#FF6060", "c21103": "#FF3030", "c21105": "#C00000", "c21107": "#FF9090", "c21109": "#FF0000", "c21111": "#6060FF", "c21113": "#9090FF", "c21115": "#6060FF", "c21117": "#3030FF", "c21119": "#0000FF", "c21121": "#FF6060", "c21123": "#FF3030", "c21125": "#FF3030", "c21127": "#FF6060", "c21129": "#FF3030", "c21131": "#FF9090", "c21133": "#0000FF", "c21135": "#FF0000", "c21137": "#FF3030", "c21139": "#FF3030", "c21141": "#FF3030", "c21143": "#FF0000", "c21151": "#6060FF", "c21153": "#0000FF", "c21155": "#FF0000", "c21157": "#FF0000", "c21159": "#FF3030", "c21161": "#FF6060", "c21145": "#FF6060", "c21147": "#FF6060", "c21149": "#FF0000", "c21163": "#FF3030", "c21165": "#FF3030", "c21167": "#9090FF", "c21169": "#FF3030", "c21171": "#FF3030", "c21173": "#FF3030", "c21175": "#9090FF", "c21177": "#FF6060", "c21179": "#FF3030", "c21181": "#FF3030", "c21183": "#FF9090", "c21185": "#3030FF", "c21187": "#FF3030", "c21189": "#FF3030", "c21191": "#FF6060", "c21193": "#0000FF", "c21195": "#3030FF", "c21197": "#FF3030", "c21199": "#FF3030", "c21201": "#FF6060", "c21203": "#FF6060", "c21205": "#6060FF", "c21207": "#FF3030", "c21209": "#FF9090", "c21211": "#FF6060", "c21213": "#6060FF", "c21215": "#FF3030", "c21217": "#FF3030", "c21219": "#FF9090", "c21221": "#FF0000", "c21223": "#FF0000", "c21225": "#FF3030", "c21227": "#3030FF", "c21229": "#FF3030", "c21231": "#FF6060", "c21233": "#FF3030", "c21235": "#FF6060", "c21237": "#6060FF", "c21239": "#9090FF", "c28001": "#FF0000", "c28003": "#FF0000", "c28005": "#FF0000", "c28007": "#FF3030", "c28009": "#C00000", "c28011": "#FF3030", "c28013": "#FF9090", "c28015": "#FF3030", "c28017": "#3030FF", "c28019": "#FF0000", "c28021": "#FF0000", "c28023": "#FF3030", "c28025": "#FF3030", "c28027": "#FF0000", "c28029": "#FF6060", "c28031": "#FF3030", "c28033": "#FF3030", "c28035": "#FF6060", "c28037": "#FF3030", "c28039": "#FF0000", "c28041": "#FF3030", "c28043": "#FF3030", "c28045": "#FF3030", "c28047": "#FF3030", "c28049": "#FF9090", "c28051": "#FF3030", "c28053": "#FF3030", "c28055": "#FF3030", "c28057": "#FF3030", "c28059": "#FF3030", "c28061": "#FF0000", "c28065": "#FF0000", "c28063": "#FF6060", "c28067": "#FF0000", "c28069": "#FF3030", "c28071": "#3030FF", "c28073": "#FF9090", "c28075": "#FF3030", "c28077": "#FF6060", "c28079": "#FF3030", "c28081": "#FF9090", "c28083": "#FF6060", "c28085": "#FF9090", "c28087": "#FF0000", "c28089": "#6060FF", "c28091": "#FF0000", "c28093": "#C00000", "c28095": "#FF3030", "c28097": "#FF3030", "c28099": "#FF9090", "c28101": "#FF6060", "c28103": "#FF0000", "c28105": "#FF9090", "c28107": "#FF0000", "c28109": "#FF0000", "c28111": "#FF9090", "c28113": "#FF3030", "c28115": "#9090FF", "c28117": "#FF3030", "c28119": "#FF0000", "c28121": "#3030FF", "c28123": "#FF6060", "c28125": "#9090FF", "c28127": "#FF3030", "c28129": "#9090FF", "c28131": "#FF3030", "c28133": "#FF0000", "c28135": "#FF3030", "c28137": "#FF0000", "c28139": "#FF0000", "c28141": "#FF3030", "c28143": "#FF0000", "c28145": "#FF9090", "c28147": "#FF0000", "c28149": "#FF3030", "c28151": "#FF3030", "c28153": "#FF3030", "c28155": "#FF3030", "c28157": "#FF0000", "c28159": "#FF3030", "c28161": "#FF3030", "c28163": "#FF3030", "c22001": "#FF0000", "c22003": "#FF6060", "c22005": "#3030FF", "c22007": "#9090FF", "c22009": "#FF6060", "c22011": "#FF3030", "c22013": "#FF3030", "c22015": "#FF9090", "c22017": "#FF6060", "c22019": "#3030FF", "c22021": "#FF0000", "c22023": "#FF3030", "c22025": "#FF0000", "c22027": "#FF3030", "c22029": "#FF3030", "c22031": "#FF3030", "c22033": "#3030FF", "c22035": "#FF9090", "c22037": "#6060FF", "c22039": "#FF0000", "c22041": "#FF9090", "c22043": "#FF9090", "c22045": "#FF3030", "c22047": "#3030FF", "c22049": "#FF3030", "c22053": "#FF6060", "c22051": "#0000FF", "c22059": "#FF3030", "c22055": "#FF9090", "c22057": "#9090FF", "c22061": "#9090FF", "c22063": "#3030FF", "c22065": "#FF6060", "c22067": "#FF6060", "c22069": "#FF6060", "c22071": "#9090FF", "c22073": "#FF9090", "c22075": "#3030FF", "c22077": "#6060FF", "c22079": "#FF9090", "c22081": "#FF3030", "c22083": "#FF9090", "c22085": "#FF0000", "c22087": "#0000FF", "c22089": "#0000FF", "c22091": "#3030FF", "c22093": "#6060FF", "c22095": "#3030FF", "c22097": "#FF3030", "c22099": "#FF0000", "c22101": "#FF9090", "c22103": "#0000FF", "c22105": "#0000FF", "c22107": "#FF9090", "c22109": "#FF9090", "c22111": "#FF3030", "c22113": "#FF0000", "c22115": "#FF0000", "c22117": "#3030FF", "c22119": "#FF3030", "c22121": "#6060FF", "c22123": "#FF9090", "c22125": "#3030FF", "c22127": "#FF3030"};
+  function colorCounties(fips, colors) {
+    if (!fips && fips !== "") {
+      fips = current_fips;
+    }
+    if (!colors) {
+      colors = actual;
+    }
+    for (var county in colors) {
+      if (county.startsWith('c' + fips)) {
+        setColor(county, colors[county]);    
+      } else {
+        setColor(county, 'white');    
+      }
+    }
+  }
+  hide('back-button');
+</script>
+<div style="position: absolute; top: 860;">
+<p>Results from the <a href="https://www.nytimes.com/interactive/2019/11/05/us/elections/results-kentucky-governor-general-election.html">New York Times</a>.</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>  
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</div>
+<div id="results">
   
 <div id="KY-results" class="results">
 <b class="name">Kentucky </b><br>
@@ -6511,23 +6658,8 @@ Model: <b>Edwards +3.0</b><br>
 Pre-election estimate: <b>Leans D</b>
 </div>
 
-  <div id="NM-results" class="results">
-    <b class="name">New Mexico</b><br>
-    No election
-  </div>
-
-  <div id="OK-results" class="results">
-    <b class="name">Oklahoma</b><br>
-    No election
-  </div>
-
-  <div id="MA-results" class="results">
-    <b class="name">Massachusetts</b><br>
-    No election
-  </div>
-
-  <div id="NH-results" class="results">
-    <b class="name">New Hampshire</b><br>
+  <div id="MO-results" class="results">
+    <b class="name">Missouri</b><br>
     No election
   </div>
 
@@ -6536,23 +6668,8 @@ Pre-election estimate: <b>Leans D</b>
     No election
   </div>
 
-  <div id="MI-results" class="results">
-    <b class="name">Michigan</b><br>
-    No election
-  </div>
-
-  <div id="WY-results" class="results">
-    <b class="name">Wyoming</b><br>
-    No election
-  </div>
-
   <div id="PA-results" class="results">
     <b class="name">Pennsylvania</b><br>
-    No election
-  </div>
-
-  <div id="SD-results" class="results">
-    <b class="name">South Dakota</b><br>
     No election
   </div>
 
@@ -6561,28 +6678,13 @@ Pre-election estimate: <b>Leans D</b>
     No election
   </div>
 
-  <div id="NY-results" class="results">
-    <b class="name">New York</b><br>
+  <div id="VT-results" class="results">
+    <b class="name">Vermont</b><br>
     No election
   </div>
 
-  <div id="UT-results" class="results">
-    <b class="name">Utah</b><br>
-    No election
-  </div>
-
-  <div id="AK-results" class="results">
-    <b class="name">Alaska</b><br>
-    No election
-  </div>
-
-  <div id="CT-results" class="results">
-    <b class="name">Connecticut</b><br>
-    No election
-  </div>
-
-  <div id="MT-results" class="results">
-    <b class="name">Montana</b><br>
+  <div id="GA-results" class="results">
+    <b class="name">Georgia</b><br>
     No election
   </div>
 
@@ -6596,8 +6698,78 @@ Pre-election estimate: <b>Leans D</b>
     No election
   </div>
 
-  <div id="MO-results" class="results">
-    <b class="name">Missouri</b><br>
+  <div id="MA-results" class="results">
+    <b class="name">Massachusetts</b><br>
+    No election
+  </div>
+
+  <div id="FL-results" class="results">
+    <b class="name">Florida</b><br>
+    No election
+  </div>
+
+  <div id="KS-results" class="results">
+    <b class="name">Kansas</b><br>
+    No election
+  </div>
+
+  <div id="AK-results" class="results">
+    <b class="name">Alaska</b><br>
+    No election
+  </div>
+
+  <div id="CO-results" class="results">
+    <b class="name">Colorado</b><br>
+    No election
+  </div>
+
+  <div id="NC-results" class="results">
+    <b class="name">North Carolina</b><br>
+    No election
+  </div>
+
+  <div id="OK-results" class="results">
+    <b class="name">Oklahoma</b><br>
+    No election
+  </div>
+
+  <div id="DE-results" class="results">
+    <b class="name">Delaware</b><br>
+    No election
+  </div>
+
+  <div id="ME-results" class="results">
+    <b class="name">Maine</b><br>
+    No election
+  </div>
+
+  <div id="MD-results" class="results">
+    <b class="name">Maryland</b><br>
+    No election
+  </div>
+
+  <div id="CT-results" class="results">
+    <b class="name">Connecticut</b><br>
+    No election
+  </div>
+
+  <div id="HI-results" class="results">
+    <b class="name">Hawaii</b><br>
+    No election
+  </div>
+
+  <div id="IA-results" class="results">
+    <b class="name">Iowa</b><br>
+    No election
+  </div>
+
+  <div id="NM-results" class="results">
+    <b class="name">New Mexico</b><br>
+    No election
+  </div>
+
+  <div id="NY-results" class="results">
+    <b class="name">New York</b><br>
     No election
   </div>
 
@@ -6611,93 +6783,13 @@ Pre-election estimate: <b>Leans D</b>
     No election
   </div>
 
-  <div id="ME-results" class="results">
-    <b class="name">Maine</b><br>
-    No election
-  </div>
-
-  <div id="DC-results" class="results">
-    <b class="name">District of Columbia</b><br>
-    No election
-  </div>
-
-  <div id="GA-results" class="results">
-    <b class="name">Georgia</b><br>
-    No election
-  </div>
-
-  <div id="DE-results" class="results">
-    <b class="name">Delaware</b><br>
-    No election
-  </div>
-
-  <div id="IA-results" class="results">
-    <b class="name">Iowa</b><br>
-    No election
-  </div>
-
-  <div id="AZ-results" class="results">
-    <b class="name">Arizona</b><br>
-    No election
-  </div>
-
-  <div id="VT-results" class="results">
-    <b class="name">Vermont</b><br>
-    No election
-  </div>
-
-  <div id="AR-results" class="results">
-    <b class="name">Arkansas</b><br>
-    No election
-  </div>
-
-  <div id="VA-results" class="results">
-    <b class="name">Virginia</b><br>
-    No election
-  </div>
-
-  <div id="MN-results" class="results">
-    <b class="name">Minnesota</b><br>
-    No election
-  </div>
-
-  <div id="ND-results" class="results">
-    <b class="name">North Dakota</b><br>
-    No election
-  </div>
-
-  <div id="NC-results" class="results">
-    <b class="name">North Carolina</b><br>
-    No election
-  </div>
-
-  <div id="WI-results" class="results">
-    <b class="name">Wisconsin</b><br>
-    No election
-  </div>
-
-  <div id="CO-results" class="results">
-    <b class="name">Colorado</b><br>
-    No election
-  </div>
-
-  <div id="IN-results" class="results">
-    <b class="name">Indiana</b><br>
-    No election
-  </div>
-
   <div id="WV-results" class="results">
     <b class="name">West Virginia</b><br>
     No election
   </div>
 
-  <div id="NE-results" class="results">
-    <b class="name">Nebraska</b><br>
-    No election
-  </div>
-
-  <div id="MD-results" class="results">
-    <b class="name">Maryland</b><br>
+  <div id="SD-results" class="results">
+    <b class="name">South Dakota</b><br>
     No election
   </div>
 
@@ -6706,13 +6798,33 @@ Pre-election estimate: <b>Leans D</b>
     No election
   </div>
 
+  <div id="CA-results" class="results">
+    <b class="name">California</b><br>
+    No election
+  </div>
+
   <div id="IL-results" class="results">
     <b class="name">Illinois</b><br>
     No election
   </div>
 
-  <div id="AL-results" class="results">
-    <b class="name">Alabama</b><br>
+  <div id="IN-results" class="results">
+    <b class="name">Indiana</b><br>
+    No election
+  </div>
+
+  <div id="DC-results" class="results">
+    <b class="name">District of Columbia</b><br>
+    No election
+  </div>
+
+  <div id="AZ-results" class="results">
+    <b class="name">Arizona</b><br>
+    No election
+  </div>
+
+  <div id="ND-results" class="results">
+    <b class="name">North Dakota</b><br>
     No election
   </div>
 
@@ -6721,18 +6833,8 @@ Pre-election estimate: <b>Leans D</b>
     No election
   </div>
 
-  <div id="KS-results" class="results">
-    <b class="name">Kansas</b><br>
-    No election
-  </div>
-
-  <div id="HI-results" class="results">
-    <b class="name">Hawaii</b><br>
-    No election
-  </div>
-
-  <div id="NJ-results" class="results">
-    <b class="name">New Jersey</b><br>
+  <div id="WY-results" class="results">
+    <b class="name">Wyoming</b><br>
     No election
   </div>
 
@@ -6741,13 +6843,58 @@ Pre-election estimate: <b>Leans D</b>
     No election
   </div>
 
-  <div id="FL-results" class="results">
-    <b class="name">Florida</b><br>
+  <div id="UT-results" class="results">
+    <b class="name">Utah</b><br>
     No election
   </div>
 
-  <div id="CA-results" class="results">
-    <b class="name">California</b><br>
+  <div id="MN-results" class="results">
+    <b class="name">Minnesota</b><br>
+    No election
+  </div>
+
+  <div id="AL-results" class="results">
+    <b class="name">Alabama</b><br>
+    No election
+  </div>
+
+  <div id="NE-results" class="results">
+    <b class="name">Nebraska</b><br>
+    No election
+  </div>
+
+  <div id="MT-results" class="results">
+    <b class="name">Montana</b><br>
+    No election
+  </div>
+
+  <div id="NJ-results" class="results">
+    <b class="name">New Jersey</b><br>
+    No election
+  </div>
+
+  <div id="WI-results" class="results">
+    <b class="name">Wisconsin</b><br>
+    No election
+  </div>
+
+  <div id="NH-results" class="results">
+    <b class="name">New Hampshire</b><br>
+    No election
+  </div>
+
+  <div id="VA-results" class="results">
+    <b class="name">Virginia</b><br>
+    No election
+  </div>
+
+  <div id="MI-results" class="results">
+    <b class="name">Michigan</b><br>
+    No election
+  </div>
+
+  <div id="AR-results" class="results">
+    <b class="name">Arkansas</b><br>
     No election
   </div>
 
@@ -11878,148 +12025,6 @@ Lead: <b>Edwards +13.2</b><br>
 Lead: <b>Rispone +31.3</b><br>
 </div>
 
-</div>
-
-
-<div id="buttons">
-  <div id="back-button" class="button" style="top: 240px;" onclick="zoomCounties('0 0 990 627'); show('national-map'); hide('counties-map'); hideAllResults(); hide('back-button')">
-    << Back to all states
-  </div>
-  <div id="results-button" class="button margin-button" style="top: 750px;" onclick="colorCounties(current_fips, actual);">
-    See actual margins
-  </div>
-  <div id="margins-button" class="button margin-button" style="top: 800px;" onclick="colorCounties(current_fips, margins);">
-    See performance margins
-  </div>
-</div>
-<script type="text/javascript">
-  var current_fips = "00";
-  function displayResults(id, resultsId, anchor) {
-    var e = window.event;
-    if (document.getElementById(resultsId)) {
-      var resultsStyle = document.getElementById(resultsId).style;
-      var nationalView = document.getElementById('national-map').style.visibility;
-      if (anchor) {
-        resultsStyle.left = 900;
-        resultsStyle.top = 240;
-      } else if (id.startsWith('c') || nationalView === "visible") {
-        resultsStyle.left = window.scrollX + e.clientX + 10;
-        resultsStyle.top = window.scrollY + e.clientY + 10;
-      }
-      show(resultsId);
-    }
-    var element = document.getElementById(id);
-    if (element.className.baseVal == 'county') {
-      var big_state_fips = ["02","41","06","16","32","49","04","30","35","48","27","26","17","12"];
-      if (big_state_fips.includes(current_fips)) {
-        element.style.strokeWidth = "0.8px";   
-      } else {
-        element.style.strokeWidth = "0.5px";      
-      }
-      element.style.stroke = "black";        
-    } else {
-      element.style.strokeWidth = "2px";
-    }
-  }
-  function zoomCounties(box) {
-    document.getElementById('counties-svg').setAttribute('viewBox', box);
-  }
-  function showCountiesState(box, state, fips) {
-    var model_states = ["KY","MS","LA"];
-    if (model_states.includes(state)) {
-      show('results-button');
-      show('margins-button');
-    }
-    current_fips = fips;
-    zoomCounties(box);
-    var counties = document.getElementsByClassName('county');
-    colorCounties(fips);
-    /*for (var i = 0; i < counties.length; i++) {
-        if (counties[i].id.startsWith('c' + fips)) {
-            counties[i].style.visibility = "visible";
-        } else {
-            counties[i].style.fill = "white";        
-        }
-    }*/
-    hide('national-map');
-    show('counties-map');
-    show('back-button');
-  }
-  function hideResults(id, resultsId) {
-    hide(resultsId);
-    var element = document.getElementById(id);
-    if (element.className.baseVal == 'county') {
-      element.style.strokeWidth = "0.2px";
-      element.style.stroke = "darkgray";        
-    } else {
-      element.style.strokeWidth = "0px";
-    }
-  }
-  function hideAllResults() {
-    var results = document.getElementsByClassName('results');
-    for (var i = 0; i < results.length; i++) {
-      results[i].style.visibility = "hidden";
-    }
-    hide('results-button');
-    hide('margins-button');
-  }
-  function leaveState(stateId, resultsId) {
-    if (document.getElementById('national-map').style.visibility === 'visible') {
-      hideResults(stateId, resultsId);
-    } else {
-      document.getElementById(stateId).style.strokeWidth = 0;
-    }
-  }
-  function hide(id) {
-    if (document.getElementById(id)) {
-      var resultsStyle = document.getElementById(id).style;
-      resultsStyle.visibility = "hidden";
-    }
-  }
-  function show(id) {
-    if (document.getElementById(id)) {
-      var resultsStyle = document.getElementById(id).style;
-      resultsStyle.visibility = "visible";    
-    }
-  }
-  function setColor(id, color) {
-    document.getElementById(id).style.fill = color;
-  }
-  var stateColors = {"KY": "#0000FF", "MS": "#FF0000", "LA": "#0000FF"};
-  function colorAll() {
-    for (var state in stateColors) {
-      setColor(state, stateColors[state]);
-    }
-  }
-  colorAll();
-  var actual = {"c21001": "#C00000", "c21003": "#C00000", "c21005": "#FF0000", "c21007": "#C00000", "c21009": "#FF0000", "c21011": "#3030FF", "c21013": "#C00000", "c21015": "#FF0000", "c21017": "#FF6060", "c21019": "#3030FF", "c21021": "#FF9090", "c21023": "#FF0000", "c21025": "#9090FF", "c21027": "#FF0000", "c21029": "#FF0000", "c21031": "#C00000", "c21033": "#C00000", "c21035": "#FF0000", "c21037": "#3030FF", "c21039": "#C00000", "c21041": "#FF3030", "c21043": "#6060FF", "c21045": "#C00000", "c21047": "#FF0000", "c21049": "#FF3030", "c21051": "#C00000", "c21053": "#C00000", "c21055": "#C00000", "c21057": "#C00000", "c21059": "#FF6060", "c21061": "#C00000", "c21063": "#0000C0", "c21065": "#FF0000", "c21067": "#0000C0", "c21069": "#C00000", "c21071": "#3030FF", "c21073": "#0000C0", "c21075": "#FF0000", "c21077": "#FF0000", "c21079": "#C00000", "c21081": "#C00000", "c21083": "#C00000", "c21085": "#C00000", "c21087": "#C00000", "c21089": "#FF3030", "c21091": "#3030FF", "c21093": "#FF6060", "c21095": "#C00000", "c21097": "#FF0000", "c21099": "#C00000", "c21101": "#6060FF", "c21103": "#FF0000", "c21105": "#C00000", "c21107": "#FF0000", "c21109": "#C00000", "c21111": "#0000C0", "c21113": "#FF0000", "c21115": "#C00000", "c21117": "#9090FF", "c21119": "#9090FF", "c21121": "#C00000", "c21123": "#C00000", "c21125": "#C00000", "c21127": "#C00000", "c21129": "#C00000", "c21131": "#C00000", "c21133": "#FF3030", "c21135": "#C00000", "c21137": "#C00000", "c21139": "#C00000", "c21141": "#C00000", "c21143": "#FF0000", "c21151": "#9090FF", "c21153": "#3030FF", "c21155": "#3030FF", "c21157": "#C00000", "c21159": "#C00000", "c21161": "#FF3030", "c21145": "#FF0000", "c21147": "#C00000", "c21149": "#C00000", "c21163": "#FF3030", "c21165": "#FF3030", "c21167": "#FF0000", "c21169": "#FF0000", "c21171": "#C00000", "c21173": "#FF3030", "c21175": "#FF3030", "c21177": "#FF3030", "c21179": "#FF9090", "c21181": "#9090FF", "c21183": "#FF0000", "c21185": "#FF3030", "c21187": "#C00000", "c21189": "#C00000", "c21191": "#C00000", "c21193": "#FF3030", "c21195": "#FF0000", "c21197": "#FF3030", "c21199": "#C00000", "c21201": "#FF0000", "c21203": "#C00000", "c21205": "#0000FF", "c21207": "#C00000", "c21209": "#9090FF", "c21211": "#FF0000", "c21213": "#FF3030", "c21215": "#C00000", "c21217": "#C00000", "c21219": "#C00000", "c21221": "#C00000", "c21223": "#FF0000", "c21225": "#FF0000", "c21227": "#6060FF", "c21229": "#FF0000", "c21231": "#C00000", "c21233": "#C00000", "c21235": "#C00000", "c21237": "#0000FF", "c21239": "#3030FF", "c28001": "#0000FF", "c28003": "#C00000", "c28005": "#FF0000", "c28007": "#FF3030", "c28009": "#FF0000", "c28011": "#0000C0", "c28013": "#FF0000", "c28015": "#C00000", "c28017": "#0000C0", "c28019": "#C00000", "c28021": "#0000C0", "c28023": "#C00000", "c28025": "#0000C0", "c28027": "#0000C0", "c28029": "#0000FF", "c28031": "#FF0000", "c28033": "#C00000", "c28035": "#FF9090", "c28037": "#FF0000", "c28039": "#C00000", "c28041": "#C00000", "c28043": "#FF9090", "c28045": "#C00000", "c28047": "#FF0000", "c28049": "#0000C0", "c28051": "#0000C0", "c28053": "#0000C0", "c28055": "#0000FF", "c28057": "#C00000", "c28059": "#C00000", "c28061": "#0000FF", "c28065": "#0000C0", "c28063": "#0000C0", "c28067": "#C00000", "c28069": "#0000C0", "c28071": "#3030FF", "c28073": "#C00000", "c28075": "#FF0000", "c28077": "#FF0000", "c28079": "#FF3030", "c28081": "#FF0000", "c28083": "#0000C0", "c28085": "#C00000", "c28087": "#FF6060", "c28089": "#9090FF", "c28091": "#C00000", "c28093": "#3030FF", "c28095": "#FF0000", "c28097": "#FF6060", "c28099": "#C00000", "c28101": "#C00000", "c28103": "#0000C0", "c28105": "#0000FF", "c28107": "#6060FF", "c28109": "#C00000", "c28111": "#C00000", "c28113": "#3030FF", "c28115": "#C00000", "c28117": "#C00000", "c28119": "#0000C0", "c28121": "#C00000", "c28123": "#FF6060", "c28125": "#0000C0", "c28127": "#FF0000", "c28129": "#C00000", "c28131": "#C00000", "c28133": "#0000C0", "c28135": "#0000C0", "c28137": "#C00000", "c28139": "#C00000", "c28141": "#C00000", "c28143": "#0000C0", "c28145": "#C00000", "c28147": "#FF0000", "c28149": "#3030FF", "c28151": "#0000C0", "c28153": "#FF0000", "c28155": "#C00000", "c28157": "#0000C0", "c28159": "#FF6060", "c28161": "#FF9090", "c28163": "#0000FF", "c22001": "#C00000", "c22003": "#C00000", "c22005": "#FF6060", "c22007": "#3030FF", "c22009": "#FF0000", "c22011": "#C00000", "c22013": "#6060FF", "c22015": "#C00000", "c22017": "#0000FF", "c22019": "#FF6060", "c22021": "#C00000", "c22023": "#C00000", "c22025": "#C00000", "c22027": "#FF3030", "c22029": "#FF3030", "c22031": "#FF3030", "c22033": "#0000C0", "c22035": "#0000C0", "c22037": "#0000FF", "c22039": "#C00000", "c22041": "#C00000", "c22043": "#C00000", "c22045": "#C00000", "c22047": "#0000C0", "c22049": "#C00000", "c22053": "#C00000", "c22051": "#0000FF", "c22059": "#C00000", "c22055": "#FF0000", "c22057": "#C00000", "c22061": "#FF6060", "c22063": "#C00000", "c22065": "#0000C0", "c22067": "#6060FF", "c22069": "#6060FF", "c22071": "#0000C0", "c22073": "#FF3030", "c22075": "#FF3030", "c22077": "#0000FF", "c22079": "#FF0000", "c22081": "#9090FF", "c22083": "#FF0000", "c22085": "#C00000", "c22087": "#3030FF", "c22089": "#9090FF", "c22091": "#0000C0", "c22093": "#0000C0", "c22095": "#0000C0", "c22097": "#6060FF", "c22099": "#C00000", "c22101": "#FF0000", "c22103": "#FF0000", "c22105": "#3030FF", "c22107": "#0000C0", "c22109": "#C00000", "c22111": "#C00000", "c22113": "#C00000", "c22115": "#C00000", "c22117": "#FF6060", "c22119": "#FF0000", "c22121": "#0000FF", "c22123": "#C00000", "c22125": "#0000FF", "c22127": "#C00000"};
-  var margins = {"c21001": "#FF0000", "c21003": "#FF3030", "c21005": "#FF6060", "c21007": "#FF0000", "c21009": "#FF3030", "c21011": "#FF6060", "c21013": "#9090FF", "c21015": "#3030FF", "c21017": "#FF3030", "c21019": "#9090FF", "c21021": "#9090FF", "c21023": "#6060FF", "c21025": "#6060FF", "c21027": "#FF3030", "c21029": "#9090FF", "c21031": "#FF3030", "c21033": "#FF0000", "c21035": "#FF6060", "c21037": "#3030FF", "c21039": "#C00000", "c21041": "#FF0000", "c21043": "#3030FF", "c21045": "#FF3030", "c21047": "#FF3030", "c21049": "#FF6060", "c21051": "#FF9090", "c21053": "#FF6060", "c21055": "#FF3030", "c21057": "#FF0000", "c21059": "#FF6060", "c21061": "#FF6060", "c21063": "#6060FF", "c21065": "#9090FF", "c21067": "#6060FF", "c21069": "#FF0000", "c21071": "#3030FF", "c21073": "#FF6060", "c21075": "#C00000", "c21077": "#FF3030", "c21079": "#FF6060", "c21081": "#FF6060", "c21083": "#FF0000", "c21085": "#FF0000", "c21087": "#FF0000", "c21089": "#FF3030", "c21091": "#9090FF", "c21093": "#FF6060", "c21095": "#FF3030", "c21097": "#FF3030", "c21099": "#FF0000", "c21101": "#FF6060", "c21103": "#FF3030", "c21105": "#C00000", "c21107": "#FF9090", "c21109": "#FF0000", "c21111": "#6060FF", "c21113": "#9090FF", "c21115": "#6060FF", "c21117": "#3030FF", "c21119": "#0000FF", "c21121": "#FF6060", "c21123": "#FF3030", "c21125": "#FF3030", "c21127": "#FF6060", "c21129": "#FF3030", "c21131": "#FF9090", "c21133": "#0000FF", "c21135": "#FF0000", "c21137": "#FF3030", "c21139": "#FF3030", "c21141": "#FF3030", "c21143": "#FF0000", "c21151": "#6060FF", "c21153": "#0000FF", "c21155": "#FF0000", "c21157": "#FF0000", "c21159": "#FF3030", "c21161": "#FF6060", "c21145": "#FF6060", "c21147": "#FF6060", "c21149": "#FF0000", "c21163": "#FF3030", "c21165": "#FF3030", "c21167": "#9090FF", "c21169": "#FF3030", "c21171": "#FF3030", "c21173": "#FF3030", "c21175": "#9090FF", "c21177": "#FF6060", "c21179": "#FF3030", "c21181": "#FF3030", "c21183": "#FF9090", "c21185": "#3030FF", "c21187": "#FF3030", "c21189": "#FF3030", "c21191": "#FF6060", "c21193": "#0000FF", "c21195": "#3030FF", "c21197": "#FF3030", "c21199": "#FF3030", "c21201": "#FF6060", "c21203": "#FF6060", "c21205": "#6060FF", "c21207": "#FF3030", "c21209": "#FF9090", "c21211": "#FF6060", "c21213": "#6060FF", "c21215": "#FF3030", "c21217": "#FF3030", "c21219": "#FF9090", "c21221": "#FF0000", "c21223": "#FF0000", "c21225": "#FF3030", "c21227": "#3030FF", "c21229": "#FF3030", "c21231": "#FF6060", "c21233": "#FF3030", "c21235": "#FF6060", "c21237": "#6060FF", "c21239": "#9090FF", "c28001": "#FF0000", "c28003": "#FF0000", "c28005": "#FF0000", "c28007": "#FF3030", "c28009": "#C00000", "c28011": "#FF3030", "c28013": "#FF9090", "c28015": "#FF3030", "c28017": "#3030FF", "c28019": "#FF0000", "c28021": "#FF0000", "c28023": "#FF3030", "c28025": "#FF3030", "c28027": "#FF0000", "c28029": "#FF6060", "c28031": "#FF3030", "c28033": "#FF3030", "c28035": "#FF6060", "c28037": "#FF3030", "c28039": "#FF0000", "c28041": "#FF3030", "c28043": "#FF3030", "c28045": "#FF3030", "c28047": "#FF3030", "c28049": "#FF9090", "c28051": "#FF3030", "c28053": "#FF3030", "c28055": "#FF3030", "c28057": "#FF3030", "c28059": "#FF3030", "c28061": "#FF0000", "c28065": "#FF0000", "c28063": "#FF6060", "c28067": "#FF0000", "c28069": "#FF3030", "c28071": "#3030FF", "c28073": "#FF9090", "c28075": "#FF3030", "c28077": "#FF6060", "c28079": "#FF3030", "c28081": "#FF9090", "c28083": "#FF6060", "c28085": "#FF9090", "c28087": "#FF0000", "c28089": "#6060FF", "c28091": "#FF0000", "c28093": "#C00000", "c28095": "#FF3030", "c28097": "#FF3030", "c28099": "#FF9090", "c28101": "#FF6060", "c28103": "#FF0000", "c28105": "#FF9090", "c28107": "#FF0000", "c28109": "#FF0000", "c28111": "#FF9090", "c28113": "#FF3030", "c28115": "#9090FF", "c28117": "#FF3030", "c28119": "#FF0000", "c28121": "#3030FF", "c28123": "#FF6060", "c28125": "#9090FF", "c28127": "#FF3030", "c28129": "#9090FF", "c28131": "#FF3030", "c28133": "#FF0000", "c28135": "#FF3030", "c28137": "#FF0000", "c28139": "#FF0000", "c28141": "#FF3030", "c28143": "#FF0000", "c28145": "#FF9090", "c28147": "#FF0000", "c28149": "#FF3030", "c28151": "#FF3030", "c28153": "#FF3030", "c28155": "#FF3030", "c28157": "#FF0000", "c28159": "#FF3030", "c28161": "#FF3030", "c28163": "#FF3030", "c22001": "#FF0000", "c22003": "#FF6060", "c22005": "#3030FF", "c22007": "#9090FF", "c22009": "#FF6060", "c22011": "#FF3030", "c22013": "#FF3030", "c22015": "#FF9090", "c22017": "#FF6060", "c22019": "#3030FF", "c22021": "#FF0000", "c22023": "#FF3030", "c22025": "#FF0000", "c22027": "#FF3030", "c22029": "#FF3030", "c22031": "#FF3030", "c22033": "#3030FF", "c22035": "#FF9090", "c22037": "#6060FF", "c22039": "#FF0000", "c22041": "#FF9090", "c22043": "#FF9090", "c22045": "#FF3030", "c22047": "#3030FF", "c22049": "#FF3030", "c22053": "#FF6060", "c22051": "#0000FF", "c22059": "#FF3030", "c22055": "#FF9090", "c22057": "#9090FF", "c22061": "#9090FF", "c22063": "#3030FF", "c22065": "#FF6060", "c22067": "#FF6060", "c22069": "#FF6060", "c22071": "#9090FF", "c22073": "#FF9090", "c22075": "#3030FF", "c22077": "#6060FF", "c22079": "#FF9090", "c22081": "#FF3030", "c22083": "#FF9090", "c22085": "#FF0000", "c22087": "#0000FF", "c22089": "#0000FF", "c22091": "#3030FF", "c22093": "#6060FF", "c22095": "#3030FF", "c22097": "#FF3030", "c22099": "#FF0000", "c22101": "#FF9090", "c22103": "#0000FF", "c22105": "#0000FF", "c22107": "#FF9090", "c22109": "#FF9090", "c22111": "#FF3030", "c22113": "#FF0000", "c22115": "#FF0000", "c22117": "#3030FF", "c22119": "#FF3030", "c22121": "#6060FF", "c22123": "#FF9090", "c22125": "#3030FF", "c22127": "#FF3030"};
-  function colorCounties(fips, colors) {
-    if (!fips && fips !== "") {
-      fips = current_fips;
-    }
-    if (!colors) {
-      colors = actual;
-    }
-    for (var county in colors) {
-      if (county.startsWith('c' + fips)) {
-        setColor(county, colors[county]);    
-      } else {
-        setColor(county, 'white');    
-      }
-    }
-  }
-  hide('back-button');
-</script>
-<div style="position: absolute; top: 860;">
-<p>Results from the <a href="https://www.nytimes.com/interactive/2019/11/05/us/elections/results-kentucky-governor-general-election.html">New York Times</a>.</p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>  
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
 </div>
 </div>
 </body>

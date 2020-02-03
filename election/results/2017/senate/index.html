@@ -10,13 +10,16 @@
 <h1>2017 Senate Election Results</h1>
 <hr />
 <!--<h3>| Home | </h3>-->
+<div class="description">
 <p>In deep-red Alabama, former US Attorney Doug Jones (D) manages an upset victory over the deeply flawed GOP candidate in former Alabama Chief Justice Roy Moore, who was dogged by accusations of misconduct. Jones is the first Democrat to win a Senate seat in Alabama since Richard Shelby in 1992, who remains in office as a Republican.</p>
+</div>
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 <p>&nbsp;</p>  
 <div class="dropdown">
   <div class="dropbtn">Choose Election<span style="float:right;">▼</span></div>
   <div class="dropdown-content">
+    <a href="../../2020/demprimaries">2020 Democratic Primaries</a>
     <a href="../../2019/governors">2019 Governors</a>
     <a href="../../2018/senate">2018 Senate</a>
     <a href="../../2018/governors">2018 Governors</a>
@@ -6407,7 +6410,7 @@
 </div>
 
 
-<div id="results">
+<div id="results-score">
   <defs>
     <style type="text/css">
     #board {
@@ -6437,9 +6440,153 @@
   </div>
   <div style="width:960px; height:20px; left: 100px; top: 200px; background-color: #fff; position: absolute;">&nbsp;</div>
   <div style="width:470px; height:20px; left: 100px; top: 200px; background-color: #00f; position: absolute;">&nbsp;</div>
-  <div style="width:489px; height:20px; left: 570px; top: 200px; background-color: #f00; position: absolute;">&nbsp;</div>
+  <div style="width:490px; height:20px; left: 570px; top: 200px; background-color: #f00; position: absolute;">&nbsp;</div>
   <div style="width:960px; height:20px; left: 100px; top: 200px; position: absolute; text-align: center; font-size: 18;">|<br><span style="font-size: 12;">51 to win</span></div>
 
+</div>
+
+
+<div id="buttons">
+  <div id="back-button" class="button" style="top: 240px;" onclick="zoomCounties('0 0 990 627'); show('national-map'); hide('counties-map'); hideAllResults(); hide('back-button')">
+    << Back to all states
+  </div>
+  <div id="results-button" class="button margin-button" style="top: 750px;" onclick="colorCounties(current_fips, actual);">
+    See actual margins
+  </div>
+  <div id="margins-button" class="button margin-button" style="top: 800px;" onclick="colorCounties(current_fips, margins);">
+    See performance margins
+  </div>
+</div>
+<script type="text/javascript">
+  var current_fips = "00";
+  function displayResults(id, resultsId, anchor) {
+    var e = window.event;
+    if (document.getElementById(resultsId)) {
+      var resultsStyle = document.getElementById(resultsId).style;
+      var nationalView = document.getElementById('national-map').style.visibility;
+      if (anchor) {
+        resultsStyle.left = 900;
+        resultsStyle.top = 240;
+      } else if (id.startsWith('c') || nationalView === "visible") {
+        resultsStyle.left = window.scrollX + e.clientX + 10;
+        resultsStyle.top = window.scrollY + e.clientY + 10;
+      }
+      show(resultsId);
+    }
+    var element = document.getElementById(id);
+    if (element.className.baseVal == 'county') {
+      var big_state_fips = ["02","41","06","16","32","49","04","30","35","48","27","26","17","12"];
+      if (big_state_fips.includes(current_fips)) {
+        element.style.strokeWidth = "0.8px";   
+      } else {
+        element.style.strokeWidth = "0.5px";      
+      }
+      element.style.stroke = "black";        
+    } else {
+      element.style.strokeWidth = "2px";
+    }
+  }
+  function zoomCounties(box) {
+    document.getElementById('counties-svg').setAttribute('viewBox', box);
+  }
+  function showCountiesState(box, state, fips) {
+    var model_states = ["AL"];
+    if (model_states.includes(state)) {
+      show('results-button');
+      show('margins-button');
+    }
+    current_fips = fips;
+    zoomCounties(box);
+    var counties = document.getElementsByClassName('county');
+    colorCounties(fips);
+    /*for (var i = 0; i < counties.length; i++) {
+        if (counties[i].id.startsWith('c' + fips)) {
+            counties[i].style.visibility = "visible";
+        } else {
+            counties[i].style.fill = "white";        
+        }
+    }*/
+    hide('national-map');
+    show('counties-map');
+    show('back-button');
+  }
+  function hideResults(id, resultsId) {
+    hide(resultsId);
+    var element = document.getElementById(id);
+    if (element.className.baseVal == 'county') {
+      element.style.strokeWidth = "0.2px";
+      element.style.stroke = "darkgray";        
+    } else {
+      element.style.strokeWidth = "0px";
+    }
+  }
+  function hideAllResults() {
+    var results = document.getElementsByClassName('results');
+    for (var i = 0; i < results.length; i++) {
+      results[i].style.visibility = "hidden";
+    }
+    hide('results-button');
+    hide('margins-button');
+  }
+  function leaveState(stateId, resultsId) {
+    if (document.getElementById('national-map').style.visibility === 'visible') {
+      hideResults(stateId, resultsId);
+    } else {
+      document.getElementById(stateId).style.strokeWidth = 0;
+    }
+  }
+  function hide(id) {
+    if (document.getElementById(id)) {
+      var resultsStyle = document.getElementById(id).style;
+      resultsStyle.visibility = "hidden";
+    }
+  }
+  function show(id) {
+    if (document.getElementById(id)) {
+      var resultsStyle = document.getElementById(id).style;
+      resultsStyle.visibility = "visible";    
+    }
+  }
+  function setColor(id, color) {
+    document.getElementById(id).style.fill = color;
+  }
+  var stateColors = {"AL": "#0000FF"};
+  function colorAll() {
+    for (var state in stateColors) {
+      setColor(state, stateColors[state]);
+    }
+  }
+  colorAll();
+  var actual = {"c01001": "#C00000", "c01003": "#C00000", "c01005": "#0000FF", "c01007": "#C00000", "c01009": "#C00000", "c01011": "#0000C0", "c01013": "#6060FF", "c01015": "#FF0000", "c01017": "#0000FF", "c01019": "#C00000", "c01021": "#C00000", "c01023": "#3030FF", "c01025": "#6060FF", "c01027": "#C00000", "c01029": "#C00000", "c01031": "#C00000", "c01033": "#FF3030", "c01035": "#0000FF", "c01037": "#FF0000", "c01039": "#C00000", "c01041": "#C00000", "c01043": "#C00000", "c01045": "#C00000", "c01047": "#0000C0", "c01049": "#C00000", "c01051": "#C00000", "c01053": "#FF0000", "c01055": "#FF0000", "c01057": "#C00000", "c01059": "#C00000", "c01061": "#C00000", "c01063": "#0000C0", "c01065": "#0000C0", "c01067": "#C00000", "c01069": "#C00000", "c01071": "#C00000", "c01073": "#0000C0", "c01075": "#C00000", "c01077": "#FF0000", "c01079": "#C00000", "c01081": "#0000FF", "c01083": "#FF0000", "c01085": "#0000C0", "c01087": "#0000C0", "c01089": "#0000FF", "c01091": "#0000C0", "c01093": "#C00000", "c01095": "#C00000", "c01097": "#0000FF", "c01099": "#FF9090", "c01101": "#0000C0", "c01103": "#C00000", "c01105": "#0000C0", "c01107": "#9090FF", "c01109": "#FF6060", "c01111": "#C00000", "c01113": "#0000C0", "c01115": "#C00000", "c01117": "#FF0000", "c01119": "#0000C0", "c01121": "#9090FF", "c01123": "#C00000", "c01125": "#0000FF", "c01127": "#C00000", "c01129": "#C00000", "c01131": "#0000C0", "c01133": "#C00000"};
+  var margins = {"c01001": "#FF9090", "c01003": "#6060FF", "c01005": "#FF3030", "c01007": "#FF0000", "c01009": "#FF0000", "c01011": "#FF0000", "c01013": "#FF3030", "c01015": "#9090FF", "c01017": "#FF6060", "c01019": "#FF3030", "c01021": "#FF0000", "c01023": "#FF6060", "c01025": "#FF3030", "c01027": "#FF0000", "c01029": "#FF0000", "c01031": "#FF3030", "c01033": "#FF6060", "c01035": "#FF3030", "c01037": "#FF0000", "c01039": "#FF0000", "c01041": "#FF0000", "c01043": "#FF0000", "c01045": "#FF6060", "c01047": "#FF3030", "c01049": "#FF3030", "c01051": "#FF6060", "c01053": "#FF3030", "c01055": "#FF6060", "c01057": "#FF0000", "c01059": "#FF0000", "c01061": "#FF0000", "c01063": "#FF0000", "c01065": "#FF3030", "c01067": "#FF3030", "c01069": "#FF6060", "c01071": "#FF3030", "c01073": "#3030FF", "c01075": "#FF0000", "c01077": "#9090FF", "c01079": "#FF0000", "c01081": "#0000FF", "c01083": "#6060FF", "c01085": "#FF3030", "c01087": "#FF0000", "c01089": "#0000FF", "c01091": "#FF3030", "c01093": "#FF0000", "c01095": "#FF6060", "c01097": "#9090FF", "c01099": "#FF3030", "c01101": "#FF9090", "c01103": "#FF6060", "c01105": "#FF0000", "c01107": "#FF3030", "c01109": "#FF3030", "c01111": "#FF3030", "c01113": "#9090FF", "c01115": "#FF6060", "c01117": "#3030FF", "c01119": "#FF0000", "c01121": "#FF6060", "c01123": "#FF3030", "c01125": "#3030FF", "c01127": "#FF0000", "c01129": "#FF0000", "c01131": "#FF3030", "c01133": "#FF0000"};
+  function colorCounties(fips, colors) {
+    if (!fips && fips !== "") {
+      fips = current_fips;
+    }
+    if (!colors) {
+      colors = actual;
+    }
+    for (var county in colors) {
+      if (county.startsWith('c' + fips)) {
+        setColor(county, colors[county]);    
+      } else {
+        setColor(county, 'white');    
+      }
+    }
+  }
+  hide('back-button');
+</script>
+<div style="position: absolute; top: 860;">
+<p>Results from the <a href="https://www.nytimes.com/elections/results/alabama-senate-special-election-roy-moore-doug-jones">New York Times</a>.</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>  
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</div>
+<div id="results">
   
 <div id="AL-results" class="results">
 <b class="name">Alabama </b><br>
@@ -6464,58 +6611,18 @@ Model: <b>Moore +0.2</b><br>
 Pre-election estimate: <b>Leans R</b>
 </div>
 
-  <div id="ID-results" class="results">
-    <b class="name">Idaho</b><br>
+  <div id="RI-results" class="results">
+    <b class="name">Rhode Island</b><br>
     No election
   </div>
 
-  <div id="VA-results" class="results">
-    <b class="name">Virginia</b><br>
+  <div id="MS-results" class="results">
+    <b class="name">Mississippi</b><br>
     No election
   </div>
 
-  <div id="WY-results" class="results">
-    <b class="name">Wyoming</b><br>
-    No election
-  </div>
-
-  <div id="MO-results" class="results">
-    <b class="name">Missouri</b><br>
-    No election
-  </div>
-
-  <div id="CA-results" class="results">
-    <b class="name">California</b><br>
-    No election
-  </div>
-
-  <div id="NM-results" class="results">
-    <b class="name">New Mexico</b><br>
-    No election
-  </div>
-
-  <div id="NY-results" class="results">
-    <b class="name">New York</b><br>
-    No election
-  </div>
-
-  <div id="MT-results" class="results">
-    <b class="name">Montana</b><br>
-    No election
-  </div>
-
-  <div id="KS-results" class="results">
-    <b class="name">Kansas</b><br>
-    No election
-  </div>
-
-  <div id="OR-results" class="results">
-    <b class="name">Oregon</b><br>
-    No election
-  </div>
-
-  <div id="NV-results" class="results">
-    <b class="name">Nevada</b><br>
+  <div id="WA-results" class="results">
+    <b class="name">Washington</b><br>
     No election
   </div>
 
@@ -6524,43 +6631,18 @@ Pre-election estimate: <b>Leans R</b>
     No election
   </div>
 
-  <div id="DE-results" class="results">
-    <b class="name">Delaware</b><br>
+  <div id="LA-results" class="results">
+    <b class="name">Louisiana</b><br>
     No election
   </div>
 
-  <div id="SC-results" class="results">
-    <b class="name">South Carolina</b><br>
+  <div id="OH-results" class="results">
+    <b class="name">Ohio</b><br>
     No election
   </div>
 
-  <div id="WV-results" class="results">
-    <b class="name">West Virginia</b><br>
-    No election
-  </div>
-
-  <div id="IA-results" class="results">
-    <b class="name">Iowa</b><br>
-    No election
-  </div>
-
-  <div id="MD-results" class="results">
-    <b class="name">Maryland</b><br>
-    No election
-  </div>
-
-  <div id="AK-results" class="results">
-    <b class="name">Alaska</b><br>
-    No election
-  </div>
-
-  <div id="CO-results" class="results">
-    <b class="name">Colorado</b><br>
-    No election
-  </div>
-
-  <div id="GA-results" class="results">
-    <b class="name">Georgia</b><br>
+  <div id="WY-results" class="results">
+    <b class="name">Wyoming</b><br>
     No election
   </div>
 
@@ -6569,13 +6651,18 @@ Pre-election estimate: <b>Leans R</b>
     No election
   </div>
 
-  <div id="IN-results" class="results">
-    <b class="name">Indiana</b><br>
+  <div id="NC-results" class="results">
+    <b class="name">North Carolina</b><br>
     No election
   </div>
 
-  <div id="PA-results" class="results">
-    <b class="name">Pennsylvania</b><br>
+  <div id="NV-results" class="results">
+    <b class="name">Nevada</b><br>
+    No election
+  </div>
+
+  <div id="NM-results" class="results">
+    <b class="name">New Mexico</b><br>
     No election
   </div>
 
@@ -6584,13 +6671,33 @@ Pre-election estimate: <b>Leans R</b>
     No election
   </div>
 
-  <div id="LA-results" class="results">
-    <b class="name">Louisiana</b><br>
+  <div id="PA-results" class="results">
+    <b class="name">Pennsylvania</b><br>
     No election
   </div>
 
-  <div id="NC-results" class="results">
-    <b class="name">North Carolina</b><br>
+  <div id="VT-results" class="results">
+    <b class="name">Vermont</b><br>
+    No election
+  </div>
+
+  <div id="FL-results" class="results">
+    <b class="name">Florida</b><br>
+    No election
+  </div>
+
+  <div id="KY-results" class="results">
+    <b class="name">Kentucky</b><br>
+    No election
+  </div>
+
+  <div id="GA-results" class="results">
+    <b class="name">Georgia</b><br>
+    No election
+  </div>
+
+  <div id="MA-results" class="results">
+    <b class="name">Massachusetts</b><br>
     No election
   </div>
 
@@ -6604,33 +6711,23 @@ Pre-election estimate: <b>Leans R</b>
     No election
   </div>
 
-  <div id="KY-results" class="results">
-    <b class="name">Kentucky</b><br>
+  <div id="DE-results" class="results">
+    <b class="name">Delaware</b><br>
     No election
   </div>
 
-  <div id="ND-results" class="results">
-    <b class="name">North Dakota</b><br>
+  <div id="NY-results" class="results">
+    <b class="name">New York</b><br>
     No election
   </div>
 
-  <div id="MI-results" class="results">
-    <b class="name">Michigan</b><br>
+  <div id="MN-results" class="results">
+    <b class="name">Minnesota</b><br>
     No election
   </div>
 
-  <div id="MS-results" class="results">
-    <b class="name">Mississippi</b><br>
-    No election
-  </div>
-
-  <div id="TX-results" class="results">
-    <b class="name">Texas</b><br>
-    No election
-  </div>
-
-  <div id="FL-results" class="results">
-    <b class="name">Florida</b><br>
+  <div id="MD-results" class="results">
+    <b class="name">Maryland</b><br>
     No election
   </div>
 
@@ -6639,58 +6736,23 @@ Pre-election estimate: <b>Leans R</b>
     No election
   </div>
 
-  <div id="OK-results" class="results">
-    <b class="name">Oklahoma</b><br>
-    No election
-  </div>
-
-  <div id="DC-results" class="results">
-    <b class="name">District of Columbia</b><br>
-    No election
-  </div>
-
-  <div id="VT-results" class="results">
-    <b class="name">Vermont</b><br>
-    No election
-  </div>
-
-  <div id="RI-results" class="results">
-    <b class="name">Rhode Island</b><br>
-    No election
-  </div>
-
-  <div id="WA-results" class="results">
-    <b class="name">Washington</b><br>
-    No election
-  </div>
-
-  <div id="AZ-results" class="results">
-    <b class="name">Arizona</b><br>
-    No election
-  </div>
-
-  <div id="TN-results" class="results">
-    <b class="name">Tennessee</b><br>
-    No election
-  </div>
-
   <div id="IL-results" class="results">
     <b class="name">Illinois</b><br>
     No election
   </div>
 
-  <div id="AR-results" class="results">
-    <b class="name">Arkansas</b><br>
+  <div id="MO-results" class="results">
+    <b class="name">Missouri</b><br>
     No election
   </div>
 
-  <div id="OH-results" class="results">
-    <b class="name">Ohio</b><br>
+  <div id="AK-results" class="results">
+    <b class="name">Alaska</b><br>
     No election
   </div>
 
-  <div id="UT-results" class="results">
-    <b class="name">Utah</b><br>
+  <div id="OK-results" class="results">
+    <b class="name">Oklahoma</b><br>
     No election
   </div>
 
@@ -6699,8 +6761,68 @@ Pre-election estimate: <b>Leans R</b>
     No election
   </div>
 
-  <div id="MA-results" class="results">
-    <b class="name">Massachusetts</b><br>
+  <div id="AZ-results" class="results">
+    <b class="name">Arizona</b><br>
+    No election
+  </div>
+
+  <div id="CO-results" class="results">
+    <b class="name">Colorado</b><br>
+    No election
+  </div>
+
+  <div id="TN-results" class="results">
+    <b class="name">Tennessee</b><br>
+    No election
+  </div>
+
+  <div id="MI-results" class="results">
+    <b class="name">Michigan</b><br>
+    No election
+  </div>
+
+  <div id="CA-results" class="results">
+    <b class="name">California</b><br>
+    No election
+  </div>
+
+  <div id="IA-results" class="results">
+    <b class="name">Iowa</b><br>
+    No election
+  </div>
+
+  <div id="ND-results" class="results">
+    <b class="name">North Dakota</b><br>
+    No election
+  </div>
+
+  <div id="UT-results" class="results">
+    <b class="name">Utah</b><br>
+    No election
+  </div>
+
+  <div id="OR-results" class="results">
+    <b class="name">Oregon</b><br>
+    No election
+  </div>
+
+  <div id="KS-results" class="results">
+    <b class="name">Kansas</b><br>
+    No election
+  </div>
+
+  <div id="TX-results" class="results">
+    <b class="name">Texas</b><br>
+    No election
+  </div>
+
+  <div id="IN-results" class="results">
+    <b class="name">Indiana</b><br>
+    No election
+  </div>
+
+  <div id="VA-results" class="results">
+    <b class="name">Virginia</b><br>
     No election
   </div>
 
@@ -6709,8 +6831,33 @@ Pre-election estimate: <b>Leans R</b>
     No election
   </div>
 
-  <div id="MN-results" class="results">
-    <b class="name">Minnesota</b><br>
+  <div id="ID-results" class="results">
+    <b class="name">Idaho</b><br>
+    No election
+  </div>
+
+  <div id="SC-results" class="results">
+    <b class="name">South Carolina</b><br>
+    No election
+  </div>
+
+  <div id="DC-results" class="results">
+    <b class="name">District of Columbia</b><br>
+    No election
+  </div>
+
+  <div id="MT-results" class="results">
+    <b class="name">Montana</b><br>
+    No election
+  </div>
+
+  <div id="AR-results" class="results">
+    <b class="name">Arkansas</b><br>
+    No election
+  </div>
+
+  <div id="WV-results" class="results">
+    <b class="name">West Virginia</b><br>
     No election
   </div>
 
@@ -7995,148 +8142,6 @@ Lead: <b>Jones +53.8</b><br>
 Lead: <b>Moore +66.6</b><br>
 </div>
 
-</div>
-
-
-<div id="buttons">
-  <div id="back-button" class="button" style="top: 240px;" onclick="zoomCounties('0 0 990 627'); show('national-map'); hide('counties-map'); hideAllResults(); hide('back-button')">
-    << Back to all states
-  </div>
-  <div id="results-button" class="button margin-button" style="top: 750px;" onclick="colorCounties(current_fips, actual);">
-    See actual margins
-  </div>
-  <div id="margins-button" class="button margin-button" style="top: 800px;" onclick="colorCounties(current_fips, margins);">
-    See performance margins
-  </div>
-</div>
-<script type="text/javascript">
-  var current_fips = "00";
-  function displayResults(id, resultsId, anchor) {
-    var e = window.event;
-    if (document.getElementById(resultsId)) {
-      var resultsStyle = document.getElementById(resultsId).style;
-      var nationalView = document.getElementById('national-map').style.visibility;
-      if (anchor) {
-        resultsStyle.left = 900;
-        resultsStyle.top = 240;
-      } else if (id.startsWith('c') || nationalView === "visible") {
-        resultsStyle.left = window.scrollX + e.clientX + 10;
-        resultsStyle.top = window.scrollY + e.clientY + 10;
-      }
-      show(resultsId);
-    }
-    var element = document.getElementById(id);
-    if (element.className.baseVal == 'county') {
-      var big_state_fips = ["02","41","06","16","32","49","04","30","35","48","27","26","17","12"];
-      if (big_state_fips.includes(current_fips)) {
-        element.style.strokeWidth = "0.8px";   
-      } else {
-        element.style.strokeWidth = "0.5px";      
-      }
-      element.style.stroke = "black";        
-    } else {
-      element.style.strokeWidth = "2px";
-    }
-  }
-  function zoomCounties(box) {
-    document.getElementById('counties-svg').setAttribute('viewBox', box);
-  }
-  function showCountiesState(box, state, fips) {
-    var model_states = ["AL"];
-    if (model_states.includes(state)) {
-      show('results-button');
-      show('margins-button');
-    }
-    current_fips = fips;
-    zoomCounties(box);
-    var counties = document.getElementsByClassName('county');
-    colorCounties(fips);
-    /*for (var i = 0; i < counties.length; i++) {
-        if (counties[i].id.startsWith('c' + fips)) {
-            counties[i].style.visibility = "visible";
-        } else {
-            counties[i].style.fill = "white";        
-        }
-    }*/
-    hide('national-map');
-    show('counties-map');
-    show('back-button');
-  }
-  function hideResults(id, resultsId) {
-    hide(resultsId);
-    var element = document.getElementById(id);
-    if (element.className.baseVal == 'county') {
-      element.style.strokeWidth = "0.2px";
-      element.style.stroke = "darkgray";        
-    } else {
-      element.style.strokeWidth = "0px";
-    }
-  }
-  function hideAllResults() {
-    var results = document.getElementsByClassName('results');
-    for (var i = 0; i < results.length; i++) {
-      results[i].style.visibility = "hidden";
-    }
-    hide('results-button');
-    hide('margins-button');
-  }
-  function leaveState(stateId, resultsId) {
-    if (document.getElementById('national-map').style.visibility === 'visible') {
-      hideResults(stateId, resultsId);
-    } else {
-      document.getElementById(stateId).style.strokeWidth = 0;
-    }
-  }
-  function hide(id) {
-    if (document.getElementById(id)) {
-      var resultsStyle = document.getElementById(id).style;
-      resultsStyle.visibility = "hidden";
-    }
-  }
-  function show(id) {
-    if (document.getElementById(id)) {
-      var resultsStyle = document.getElementById(id).style;
-      resultsStyle.visibility = "visible";    
-    }
-  }
-  function setColor(id, color) {
-    document.getElementById(id).style.fill = color;
-  }
-  var stateColors = {"AL": "#0000FF"};
-  function colorAll() {
-    for (var state in stateColors) {
-      setColor(state, stateColors[state]);
-    }
-  }
-  colorAll();
-  var actual = {"c01001": "#C00000", "c01003": "#C00000", "c01005": "#0000FF", "c01007": "#C00000", "c01009": "#C00000", "c01011": "#0000C0", "c01013": "#6060FF", "c01015": "#FF0000", "c01017": "#0000FF", "c01019": "#C00000", "c01021": "#C00000", "c01023": "#3030FF", "c01025": "#6060FF", "c01027": "#C00000", "c01029": "#C00000", "c01031": "#C00000", "c01033": "#FF3030", "c01035": "#0000FF", "c01037": "#FF0000", "c01039": "#C00000", "c01041": "#C00000", "c01043": "#C00000", "c01045": "#C00000", "c01047": "#0000C0", "c01049": "#C00000", "c01051": "#C00000", "c01053": "#FF0000", "c01055": "#FF0000", "c01057": "#C00000", "c01059": "#C00000", "c01061": "#C00000", "c01063": "#0000C0", "c01065": "#0000C0", "c01067": "#C00000", "c01069": "#C00000", "c01071": "#C00000", "c01073": "#0000C0", "c01075": "#C00000", "c01077": "#FF0000", "c01079": "#C00000", "c01081": "#0000FF", "c01083": "#FF0000", "c01085": "#0000C0", "c01087": "#0000C0", "c01089": "#0000FF", "c01091": "#0000C0", "c01093": "#C00000", "c01095": "#C00000", "c01097": "#0000FF", "c01099": "#FF9090", "c01101": "#0000C0", "c01103": "#C00000", "c01105": "#0000C0", "c01107": "#9090FF", "c01109": "#FF6060", "c01111": "#C00000", "c01113": "#0000C0", "c01115": "#C00000", "c01117": "#FF0000", "c01119": "#0000C0", "c01121": "#9090FF", "c01123": "#C00000", "c01125": "#0000FF", "c01127": "#C00000", "c01129": "#C00000", "c01131": "#0000C0", "c01133": "#C00000"};
-  var margins = {"c01001": "#FF9090", "c01003": "#6060FF", "c01005": "#FF3030", "c01007": "#FF0000", "c01009": "#FF0000", "c01011": "#FF0000", "c01013": "#FF3030", "c01015": "#9090FF", "c01017": "#FF6060", "c01019": "#FF3030", "c01021": "#FF0000", "c01023": "#FF6060", "c01025": "#FF3030", "c01027": "#FF0000", "c01029": "#FF0000", "c01031": "#FF3030", "c01033": "#FF6060", "c01035": "#FF3030", "c01037": "#FF0000", "c01039": "#FF0000", "c01041": "#FF0000", "c01043": "#FF0000", "c01045": "#FF6060", "c01047": "#FF3030", "c01049": "#FF3030", "c01051": "#FF6060", "c01053": "#FF3030", "c01055": "#FF6060", "c01057": "#FF0000", "c01059": "#FF0000", "c01061": "#FF0000", "c01063": "#FF0000", "c01065": "#FF3030", "c01067": "#FF3030", "c01069": "#FF6060", "c01071": "#FF3030", "c01073": "#3030FF", "c01075": "#FF0000", "c01077": "#9090FF", "c01079": "#FF0000", "c01081": "#0000FF", "c01083": "#6060FF", "c01085": "#FF3030", "c01087": "#FF0000", "c01089": "#0000FF", "c01091": "#FF3030", "c01093": "#FF0000", "c01095": "#FF6060", "c01097": "#9090FF", "c01099": "#FF3030", "c01101": "#FF9090", "c01103": "#FF6060", "c01105": "#FF0000", "c01107": "#FF3030", "c01109": "#FF3030", "c01111": "#FF3030", "c01113": "#9090FF", "c01115": "#FF6060", "c01117": "#3030FF", "c01119": "#FF0000", "c01121": "#FF6060", "c01123": "#FF3030", "c01125": "#3030FF", "c01127": "#FF0000", "c01129": "#FF0000", "c01131": "#FF3030", "c01133": "#FF0000"};
-  function colorCounties(fips, colors) {
-    if (!fips && fips !== "") {
-      fips = current_fips;
-    }
-    if (!colors) {
-      colors = actual;
-    }
-    for (var county in colors) {
-      if (county.startsWith('c' + fips)) {
-        setColor(county, colors[county]);    
-      } else {
-        setColor(county, 'white');    
-      }
-    }
-  }
-  hide('back-button');
-</script>
-<div style="position: absolute; top: 860;">
-<p>Results from the <a href="https://www.nytimes.com/elections/results/alabama-senate-special-election-roy-moore-doug-jones">New York Times</a>.</p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>  
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
 </div>
 </div>
 </body>

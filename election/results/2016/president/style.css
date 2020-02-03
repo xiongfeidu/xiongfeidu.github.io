@@ -11,6 +11,11 @@
   font-size: 13;
 }
 
+.description {
+  position: absolute;
+  width: 640px;
+}
+
 .dropdown {
   position: absolute;
   left: 900px;
