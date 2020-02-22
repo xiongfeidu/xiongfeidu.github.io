@@ -2,7 +2,7 @@
 <html>
 <head>
 <title>2020 Democratic Presidential Primaries Election Results</title>
-<!--meta http-equiv="refresh" content="600"-->
+<meta http-equiv="refresh" content="600">
 <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body class="webpage">
@@ -11,7 +11,7 @@
 <hr />
 <!--<h3>| Home | </h3>-->
 <div class="description">
-<p>The hotly contested 2020 Democratic primaries and caucuses are underway. In the first-of-the-nation Iowa caucuses, former Mayor Pete Buttigieg (D-IN) leads in state delegate equivalents after a fiasco in results reporting, and Sen. Bernie Sanders (I-VT) narrowly wins the New Hampshire primary.</p>
+<p>The hotly contested 2020 Democratic primaries and caucuses are underway. Former South Bend Mayor Pete Buttigieg (D-IN) narrowly leads in delegates over Sen. Bernie Sanders (I-VT). In the Nevada caucuses, Sanders is favored to win and overtake the lead in delegate count.</p>
 </div>
 <p>&nbsp;</p>
 <p>&nbsp;</p>
@@ -6565,14 +6565,14 @@
   function setColor(id, color) {
     document.getElementById(id).style.fill = color;
   }
-  var stateColors = {"IA": "#FFFFFF", "NH": "#007F00"};
+  var stateColors = {"IA": "#FFFFFF", "NH": "#007F00", "NV": "#FFFFFF"};
   function colorAll() {
     for (var state in stateColors) {
       setColor(state, stateColors[state]);
     }
   }
   colorAll();
-  var actual = {"c19001": "#90CF90", "c19003": "#FFFFFF", "c19005": "#FFFF00", "c19007": "#FFFF30", "c19009": "#FFFFFF", "c19011": "#9090FF", "c19013": "#309F30", "c19015": "#FFFF60", "c19017": "#FFFF00", "c19019": "#6060FF", "c19021": "#309F30", "c19023": "#309F30", "c19025": "#FFFF00", "c19027": "#FFFF30", "c19029": "#FFFF30", "c19031": "#FFFF60", "c19033": "#FFFF30", "c19035": "#90CF90", "c19037": "#FFFF00", "c19039": "#FFFF60", "c19041": "#6060FF", "c19043": "#FFFF00", "c19045": "#FFFF60", "c19047": "#0000FF", "c19049": "#FFFF00", "c19051": "#FFFF30", "c19053": "#FFFF30", "c19055": "#FFFF60", "c19057": "#FFFF00", "c19059": "#FFFF30", "c19061": "#FFFF30", "c19063": "#FFFF30", "c19065": "#FFFF00", "c19067": "#FFFFFF", "c19069": "#FFFFFF", "c19071": "#FFFF60", "c19073": "#FFFF60", "c19075": "#FFFF30", "c19077": "#FFFF90", "c19079": "#FFFF30", "c19081": "#FFFF30", "c19083": "#FFFF00", "c19085": "#60BF60", "c19087": "#FFFF60", "c19089": "#FFFF00", "c19091": "#FFFFFF", "c19093": "#FFFF30", "c19095": "#FFFFFF", "c19097": "#FFFF30", "c19099": "#FFFF00", "c19101": "#005000", "c19103": "#FF90FF", "c19105": "#FFFF30", "c19107": "#FFFF30", "c19109": "#FFFF00", "c19111": "#FFFF00", "c19113": "#60BF60", "c19115": "#60BF60", "c19117": "#3030FF", "c19119": "#FF0000", "c19121": "#FFFF00", "c19123": "#FFFFFF", "c19125": "#C0C000", "c19127": "#309F30", "c19129": "#FFFF30", "c19131": "#FF3030", "c19133": "#FFFF30", "c19135": "#FFFF00", "c19137": "#FFFF00", "c19139": "#007F00", "c19141": "#9090FF", "c19143": "#FFFF00", "c19145": "#FFFF60", "c19147": "#3030FF", "c19149": "#FFFF60", "c19151": "#FFFF00", "c19153": "#90CF90", "c19155": "#90CF90", "c19157": "#309F30", "c19159": "#3030FF", "c19161": "#FFFF30", "c19163": "#90CF90", "c19165": "#FFFF30", "c19167": "#FF9090", "c19169": "#60BF60", "c19171": "#60BF60", "c19173": "#FFFF00", "c19175": "#309F30", "c19177": "#FFFF00", "c19179": "#FFFF60", "c19181": "#FFFF00", "c19183": "#309F30", "c19185": "#FF0000", "c19187": "#FFFF00", "c19189": "#FFFF00", "c19191": "#FFFF30", "c19193": "#007F00", "c19195": "#FF0000", "c19197": "#FFFF00", "c33001": "#FFFF90", "c33003": "#FFFF90", "c33005": "#007F00", "c33007": "#309F30", "c33009": "#60BF60", "c33011": "#90CF90", "c33013": "#90CF90", "c33015": "#FFFF60", "c33017": "#309F30", "c33019": "#60BF60"};
+  var actual = {"c19001": "#60BF60", "c19003": "#FFFFFF", "c19005": "#FFFF00", "c19007": "#FFFF30", "c19009": "#FFFFFF", "c19011": "#9090FF", "c19013": "#309F30", "c19015": "#FFFF60", "c19017": "#FFFF00", "c19019": "#6060FF", "c19021": "#309F30", "c19023": "#309F30", "c19025": "#FFFF00", "c19027": "#FFFF30", "c19029": "#FFFF30", "c19031": "#FFFF60", "c19033": "#FFFF30", "c19035": "#90CF90", "c19037": "#FFFF00", "c19039": "#FFFF60", "c19041": "#6060FF", "c19043": "#FFFF00", "c19045": "#FFFF60", "c19047": "#0000FF", "c19049": "#FFFF00", "c19051": "#FFFF30", "c19053": "#FFFF30", "c19055": "#FFFF60", "c19057": "#FFFF00", "c19059": "#FFFF30", "c19061": "#FFFF30", "c19063": "#FFFF30", "c19065": "#FFFF00", "c19067": "#FFFFFF", "c19069": "#FFFFFF", "c19071": "#FFFF60", "c19073": "#FFFF60", "c19075": "#FFFF30", "c19077": "#FFFFFF", "c19079": "#FFFF30", "c19081": "#FFFF30", "c19083": "#FFFF30", "c19085": "#90CF90", "c19087": "#FFFF60", "c19089": "#FFFF00", "c19091": "#FFFFFF", "c19093": "#FFFF30", "c19095": "#FFFFFF", "c19097": "#FFFF30", "c19099": "#FFFF00", "c19101": "#005000", "c19103": "#FF90FF", "c19105": "#FFFF30", "c19107": "#FFFF30", "c19109": "#FFFF00", "c19111": "#FFFF00", "c19113": "#60BF60", "c19115": "#60BF60", "c19117": "#3030FF", "c19119": "#FF0000", "c19121": "#FFFF00", "c19123": "#FFFFFF", "c19125": "#C0C000", "c19127": "#309F30", "c19129": "#FFFF30", "c19131": "#FF3030", "c19133": "#FFFF30", "c19135": "#FFFF00", "c19137": "#FFFF00", "c19139": "#007F00", "c19141": "#9090FF", "c19143": "#FFFF30", "c19145": "#FFFF60", "c19147": "#3030FF", "c19149": "#FFFF60", "c19151": "#FFFF00", "c19153": "#90CF90", "c19155": "#90CF90", "c19157": "#309F30", "c19159": "#3030FF", "c19161": "#FFFF30", "c19163": "#90CF90", "c19165": "#FFFF30", "c19167": "#FF9090", "c19169": "#60BF60", "c19171": "#60BF60", "c19173": "#FFFF00", "c19175": "#309F30", "c19177": "#FFFF00", "c19179": "#FFFF90", "c19181": "#FFFF00", "c19183": "#309F30", "c19185": "#FF0000", "c19187": "#FFFF00", "c19189": "#FFFF00", "c19191": "#FFFF30", "c19193": "#007F00", "c19195": "#FF0000", "c19197": "#FFFF00", "c33001": "#FFFF90", "c33003": "#FFFF90", "c33005": "#007F00", "c33007": "#309F30", "c33009": "#60BF60", "c33011": "#90CF90", "c33013": "#90CF90", "c33015": "#FFFF60", "c33017": "#309F30", "c33019": "#60BF60", "c32510": "#FFFFFF", "c32001": "#FFFFFF", "c32003": "#FFFFFF", "c32005": "#FFFFFF", "c32007": "#FFFFFF", "c32009": "#FFFFFF", "c32011": "#FFFFFF", "c32013": "#FFFFFF", "c32015": "#FFFFFF", "c32017": "#FFFFFF", "c32019": "#FFFFFF", "c32021": "#FFFFFF", "c32023": "#FFFFFF", "c32027": "#FFFFFF", "c32029": "#FFFFFF", "c32031": "#FFFFFF", "c32033": "#FFFFFF"};
   var margins = {};
   function colorCounties(fips, colors) {
     if (!fips && fips !== "") {
@@ -6592,7 +6592,7 @@
   hide('back-button');
 </script>
 <div style="position: absolute; top: 1010;">
-<p>Results from the <a href="https://www.nytimes.com/interactive/2020/02/11/us/elections/results-new-hampshire-primary-election.html">New York Times</a>.</p><p>Find a bug? Feel free to email me at xiongfed [AT] alumni [DOT] cmu [DOT] edu.</p>
+<p>Results from the <a href="https://www.nytimes.com/interactive/2020/us/elections/delegate-count-primary-results.html">New York Times</a>.</p><p>Find a bug? Feel free to email me at xiongfed [AT] alumni [DOT] cmu [DOT] edu.</p>
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 <p>&nbsp;</p>  
@@ -6614,8 +6614,8 @@
 <td>Pct</td>
 <td>Del</td>
 </tr>
-<tr><td>Pete Buttigieg</td><td>DEM</td><td class="votes">564</td><td class="pct">26.2</td><td class="votes">13</td></tr>
-<tr><td>Bernie Sanders</td><td>DEM</td><td class="votes">562</td><td class="pct">26.1</td><td class="votes">12</td></tr>
+<tr><td>Pete Buttigieg</td><td>DEM</td><td class="votes">563</td><td class="pct">26.2</td><td class="votes">13</td></tr>
+<tr><td>Bernie Sanders</td><td>DEM</td><td class="votes">563</td><td class="pct">26.2</td><td class="votes">12</td></tr>
 <tr><td>Elizabeth Warren</td><td>DEM</td><td class="votes">388</td><td class="pct">18.0</td><td class="votes">8</td></tr>
 <tr><td>Joseph R. Biden Jr.</td><td>DEM</td><td class="votes">340</td><td class="pct">15.8</td><td class="votes">6</td></tr>
 <tr><td>Amy Klobuchar</td><td>DEM</td><td class="votes">264</td><td class="pct">12.3</td><td class="votes">1</td></tr>
@@ -6625,7 +6625,7 @@
 </table>
 100.0% of precincts reporting<br>
 Status: <b>Not called</b><br>
-Lead: <b>Buttigieg +0.1</b><br>
+Lead: <b>Tie</b><br>
 Model: <b>N/A</b><br>
 Pre-election estimate: <b>Leans Sanders</b>
 </div>
@@ -6660,83 +6660,44 @@ Model: <b>N/A</b><br>
 Pre-election estimate: <b>Leans Sanders</b>
 </div>
 
-  <div id="NM-results" class="results">
-    <b class="name">New Mexico</b><br>
-    Election to be held on Tuesday, June 02, 2020
-  </div>
+<div id="NV-results" class="results">
+<b class="name">Nevada </b> Caucus, Feb 22<br>
+<table class="resultstable">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+<td>Del</td>
+</tr>
+<tr><td>Bernie Sanders</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td><td class="votes">0</td></tr>
+<tr><td>Pete Buttigieg</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td><td class="votes">0</td></tr>
+<tr><td>Elizabeth Warren</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td><td class="votes">0</td></tr>
+<tr><td>Joseph R. Biden Jr.</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td><td class="votes">0</td></tr>
+<tr><td>Amy Klobuchar</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td><td class="votes">0</td></tr>
 
-  <div id="OH-results" class="results">
-    <b class="name">Ohio</b><br>
-    Election to be held on Tuesday, March 17, 2020
-  </div>
-
-  <div id="AK-results" class="results">
-    <b class="name">Alaska</b><br>
-    Election to be held on Saturday, April 04, 2020
-  </div>
-
-  <div id="KY-results" class="results">
-    <b class="name">Kentucky</b><br>
-    Election to be held on Tuesday, May 19, 2020
-  </div>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Status: <b>Not called</b><br>
+Lead: <b>Tie</b><br>
+Model: <b>N/A</b><br>
+Pre-election estimate: <b>Leans Sanders</b>
+</div>
 
   <div id="MI-results" class="results">
     <b class="name">Michigan</b><br>
     Election to be held on Tuesday, March 10, 2020
   </div>
 
-  <div id="NE-results" class="results">
-    <b class="name">Nebraska</b><br>
-    Election to be held on Tuesday, May 12, 2020
-  </div>
-
-  <div id="WI-results" class="results">
-    <b class="name">Wisconsin</b><br>
-    Election to be held on Tuesday, April 07, 2020
-  </div>
-
-  <div id="DE-results" class="results">
-    <b class="name">Delaware</b><br>
-    Election to be held on Tuesday, April 28, 2020
-  </div>
-
-  <div id="NJ-results" class="results">
-    <b class="name">New Jersey</b><br>
-    Election to be held on Tuesday, June 02, 2020
-  </div>
-
-  <div id="AL-results" class="results">
-    <b class="name">Alabama</b><br>
-    Election to be held on Tuesday, March 03, 2020
-  </div>
-
-  <div id="OK-results" class="results">
-    <b class="name">Oklahoma</b><br>
-    Election to be held on Tuesday, March 03, 2020
+  <div id="WA-results" class="results">
+    <b class="name">Washington</b><br>
+    Election to be held on Tuesday, March 10, 2020
   </div>
 
   <div id="ME-results" class="results">
     <b class="name">Maine</b><br>
-    Election to be held on Tuesday, March 03, 2020
-  </div>
-
-  <div id="VT-results" class="results">
-    <b class="name">Vermont</b><br>
-    Election to be held on Tuesday, March 03, 2020
-  </div>
-
-  <div id="VA-results" class="results">
-    <b class="name">Virginia</b><br>
-    Election to be held on Tuesday, March 03, 2020
-  </div>
-
-  <div id="SD-results" class="results">
-    <b class="name">South Dakota</b><br>
-    Election to be held on Tuesday, June 02, 2020
-  </div>
-
-  <div id="CO-results" class="results">
-    <b class="name">Colorado</b><br>
     Election to be held on Tuesday, March 03, 2020
   </div>
 
@@ -6745,13 +6706,28 @@ Pre-election estimate: <b>Leans Sanders</b>
     Election to be held on Tuesday, April 28, 2020
   </div>
 
-  <div id="CA-results" class="results">
-    <b class="name">California</b><br>
+  <div id="OH-results" class="results">
+    <b class="name">Ohio</b><br>
+    Election to be held on Tuesday, March 17, 2020
+  </div>
+
+  <div id="MN-results" class="results">
+    <b class="name">Minnesota</b><br>
     Election to be held on Tuesday, March 03, 2020
   </div>
 
-  <div id="NC-results" class="results">
-    <b class="name">North Carolina</b><br>
+  <div id="AR-results" class="results">
+    <b class="name">Arkansas</b><br>
+    Election to be held on Tuesday, March 03, 2020
+  </div>
+
+  <div id="LA-results" class="results">
+    <b class="name">Louisiana</b><br>
+    Election to be held on Saturday, April 04, 2020
+  </div>
+
+  <div id="CO-results" class="results">
+    <b class="name">Colorado</b><br>
     Election to be held on Tuesday, March 03, 2020
   </div>
 
@@ -6760,28 +6736,63 @@ Pre-election estimate: <b>Leans Sanders</b>
     Election to be held on Tuesday, March 10, 2020
   </div>
 
-  <div id="NY-results" class="results">
-    <b class="name">New York</b><br>
-    Election to be held on Tuesday, April 28, 2020
-  </div>
-
   <div id="MS-results" class="results">
     <b class="name">Mississippi</b><br>
     Election to be held on Tuesday, March 10, 2020
   </div>
 
-  <div id="NV-results" class="results">
-    <b class="name">Nevada</b><br>
-    Election to be held on Saturday, February 22, 2020
+  <div id="VA-results" class="results">
+    <b class="name">Virginia</b><br>
+    Election to be held on Tuesday, March 03, 2020
   </div>
 
-  <div id="MO-results" class="results">
-    <b class="name">Missouri</b><br>
-    Election to be held on Tuesday, March 10, 2020
+  <div id="WV-results" class="results">
+    <b class="name">West Virginia</b><br>
+    Election to be held on Tuesday, May 12, 2020
+  </div>
+
+  <div id="OK-results" class="results">
+    <b class="name">Oklahoma</b><br>
+    Election to be held on Tuesday, March 03, 2020
+  </div>
+
+  <div id="RI-results" class="results">
+    <b class="name">Rhode Island</b><br>
+    Election to be held on Tuesday, April 28, 2020
+  </div>
+
+  <div id="HI-results" class="results">
+    <b class="name">Hawaii</b><br>
+    Election to be held on Saturday, April 04, 2020
+  </div>
+
+  <div id="UT-results" class="results">
+    <b class="name">Utah</b><br>
+    Election to be held on Tuesday, March 03, 2020
+  </div>
+
+  <div id="IL-results" class="results">
+    <b class="name">Illinois</b><br>
+    Election to be held on Tuesday, March 17, 2020
+  </div>
+
+  <div id="DC-results" class="results">
+    <b class="name">District of Columbia</b><br>
+    Election to be held on Tuesday, June 02, 2020
   </div>
 
   <div id="MD-results" class="results">
     <b class="name">Maryland</b><br>
+    Election to be held on Tuesday, April 28, 2020
+  </div>
+
+  <div id="NM-results" class="results">
+    <b class="name">New Mexico</b><br>
+    Election to be held on Tuesday, June 02, 2020
+  </div>
+
+  <div id="PA-results" class="results">
+    <b class="name">Pennsylvania</b><br>
     Election to be held on Tuesday, April 28, 2020
   </div>
 
@@ -6790,59 +6801,14 @@ Pre-election estimate: <b>Leans Sanders</b>
     Election to be held on Saturday, May 02, 2020
   </div>
 
-  <div id="PA-results" class="results">
-    <b class="name">Pennsylvania</b><br>
-    Election to be held on Tuesday, April 28, 2020
-  </div>
-
-  <div id="GA-results" class="results">
-    <b class="name">Georgia</b><br>
-    Election to be held on Tuesday, March 24, 2020
-  </div>
-
-  <div id="LA-results" class="results">
-    <b class="name">Louisiana</b><br>
-    Election to be held on Saturday, April 04, 2020
-  </div>
-
-  <div id="AR-results" class="results">
-    <b class="name">Arkansas</b><br>
-    Election to be held on Tuesday, March 03, 2020
-  </div>
-
-  <div id="MN-results" class="results">
-    <b class="name">Minnesota</b><br>
-    Election to be held on Tuesday, March 03, 2020
-  </div>
-
-  <div id="TX-results" class="results">
-    <b class="name">Texas</b><br>
-    Election to be held on Tuesday, March 03, 2020
-  </div>
-
-  <div id="UT-results" class="results">
-    <b class="name">Utah</b><br>
-    Election to be held on Tuesday, March 03, 2020
-  </div>
-
-  <div id="WA-results" class="results">
-    <b class="name">Washington</b><br>
-    Election to be held on Tuesday, March 10, 2020
-  </div>
-
-  <div id="WY-results" class="results">
-    <b class="name">Wyoming</b><br>
-    Election to be held on Saturday, April 04, 2020
-  </div>
-
-  <div id="WV-results" class="results">
-    <b class="name">West Virginia</b><br>
-    Election to be held on Tuesday, May 12, 2020
-  </div>
-
-  <div id="MT-results" class="results">
-    <b class="name">Montana</b><br>
+  <div id="SD-results" class="results">
+    <b class="name">South Dakota</b><br>
     Election to be held on Tuesday, June 02, 2020
+  </div>
+
+  <div id="AL-results" class="results">
+    <b class="name">Alabama</b><br>
+    Election to be held on Tuesday, March 03, 2020
   </div>
 
   <div id="FL-results" class="results">
@@ -6850,18 +6816,33 @@ Pre-election estimate: <b>Leans Sanders</b>
     Election to be held on Tuesday, March 17, 2020
   </div>
 
-  <div id="MA-results" class="results">
-    <b class="name">Massachusetts</b><br>
-    Election to be held on Tuesday, March 03, 2020
-  </div>
-
   <div id="IN-results" class="results">
     <b class="name">Indiana</b><br>
     Election to be held on Tuesday, May 5, 2020
   </div>
 
-  <div id="HI-results" class="results">
-    <b class="name">Hawaii</b><br>
+  <div id="VT-results" class="results">
+    <b class="name">Vermont</b><br>
+    Election to be held on Tuesday, March 03, 2020
+  </div>
+
+  <div id="NE-results" class="results">
+    <b class="name">Nebraska</b><br>
+    Election to be held on Tuesday, May 12, 2020
+  </div>
+
+  <div id="MA-results" class="results">
+    <b class="name">Massachusetts</b><br>
+    Election to be held on Tuesday, March 03, 2020
+  </div>
+
+  <div id="AZ-results" class="results">
+    <b class="name">Arizona</b><br>
+    Election to be held on Tuesday, March 17, 2020
+  </div>
+
+  <div id="AK-results" class="results">
+    <b class="name">Alaska</b><br>
     Election to be held on Saturday, April 04, 2020
   </div>
 
@@ -6870,23 +6851,33 @@ Pre-election estimate: <b>Leans Sanders</b>
     Election to be held on Tuesday, March 10, 2020
   </div>
 
-  <div id="DC-results" class="results">
-    <b class="name">District of Columbia</b><br>
+  <div id="NJ-results" class="results">
+    <b class="name">New Jersey</b><br>
     Election to be held on Tuesday, June 02, 2020
   </div>
 
-  <div id="AZ-results" class="results">
-    <b class="name">Arizona</b><br>
-    Election to be held on Tuesday, March 17, 2020
+  <div id="DE-results" class="results">
+    <b class="name">Delaware</b><br>
+    Election to be held on Tuesday, April 28, 2020
   </div>
 
-  <div id="IL-results" class="results">
-    <b class="name">Illinois</b><br>
-    Election to be held on Tuesday, March 17, 2020
+  <div id="NY-results" class="results">
+    <b class="name">New York</b><br>
+    Election to be held on Tuesday, April 28, 2020
   </div>
 
-  <div id="TN-results" class="results">
-    <b class="name">Tennessee</b><br>
+  <div id="MT-results" class="results">
+    <b class="name">Montana</b><br>
+    Election to be held on Tuesday, June 02, 2020
+  </div>
+
+  <div id="WI-results" class="results">
+    <b class="name">Wisconsin</b><br>
+    Election to be held on Tuesday, April 07, 2020
+  </div>
+
+  <div id="CA-results" class="results">
+    <b class="name">California</b><br>
     Election to be held on Tuesday, March 03, 2020
   </div>
 
@@ -6895,14 +6886,44 @@ Pre-election estimate: <b>Leans Sanders</b>
     Election to be held on Saturday, February 29, 2020
   </div>
 
-  <div id="RI-results" class="results">
-    <b class="name">Rhode Island</b><br>
-    Election to be held on Tuesday, April 28, 2020
+  <div id="WY-results" class="results">
+    <b class="name">Wyoming</b><br>
+    Election to be held on Saturday, April 04, 2020
+  </div>
+
+  <div id="GA-results" class="results">
+    <b class="name">Georgia</b><br>
+    Election to be held on Tuesday, March 24, 2020
+  </div>
+
+  <div id="KY-results" class="results">
+    <b class="name">Kentucky</b><br>
+    Election to be held on Tuesday, May 19, 2020
   </div>
 
   <div id="OR-results" class="results">
     <b class="name">Oregon</b><br>
     Election to be held on Tuesday, May 19, 2020
+  </div>
+
+  <div id="TN-results" class="results">
+    <b class="name">Tennessee</b><br>
+    Election to be held on Tuesday, March 03, 2020
+  </div>
+
+  <div id="TX-results" class="results">
+    <b class="name">Texas</b><br>
+    Election to be held on Tuesday, March 03, 2020
+  </div>
+
+  <div id="NC-results" class="results">
+    <b class="name">North Carolina</b><br>
+    Election to be held on Tuesday, March 03, 2020
+  </div>
+
+  <div id="MO-results" class="results">
+    <b class="name">Missouri</b><br>
+    Election to be held on Tuesday, March 10, 2020
   </div>
 
 <div id="19001-results" class="results">
@@ -6915,18 +6936,18 @@ Pre-election estimate: <b>Leans Sanders</b>
 <td>Votes</td>
 <td>Pct</td>
 </tr>
-<tr><td>Bernie Sanders</td><td>DEM</td><td class="votes">0.94</td><td class="pct">23.5</td></tr>
+<tr><td>Bernie Sanders</td><td>DEM</td><td class="votes">1.02</td><td class="pct">25.5</td></tr>
 <tr><td>Amy Klobuchar</td><td>DEM</td><td class="votes">0.86</td><td class="pct">21.5</td></tr>
 <tr><td>Pete Buttigieg</td><td>DEM</td><td class="votes">0.71</td><td class="pct">17.8</td></tr>
 <tr><td>Andrew Yang</td><td>DEM</td><td class="votes">0.55</td><td class="pct">13.8</td></tr>
 <tr><td>Joseph R. Biden Jr.</td><td>DEM</td><td class="votes">0.39</td><td class="pct">9.8</td></tr>
-<tr><td>Elizabeth Warren</td><td>DEM</td><td class="votes">0.39</td><td class="pct">9.8</td></tr>
+<tr><td>Elizabeth Warren</td><td>DEM</td><td class="votes">0.31</td><td class="pct">7.8</td></tr>
 <tr><td>Tom Steyer</td><td>DEM</td><td class="votes">0.16</td><td class="pct">4.0</td></tr>
 
 </tbody>
 </table>
 100.0% of precincts reporting<br>
-Lead: <b>Sanders +2.0</b><br>
+Lead: <b>Sanders +4.0</b><br>
 </div>
 
 <div id="19003-results" class="results">
@@ -6986,8 +7007,8 @@ Lead: <b>Buttigieg +15.6</b><br>
 <td>Pct</td>
 </tr>
 <tr><td>Pete Buttigieg</td><td>DEM</td><td class="votes">2.32</td><td class="pct">38.7</td></tr>
-<tr><td>Joseph R. Biden Jr.</td><td>DEM</td><td class="votes">1.84</td><td class="pct">30.7</td></tr>
-<tr><td>Bernie Sanders</td><td>DEM</td><td class="votes">0.96</td><td class="pct">16.0</td></tr>
+<tr><td>Joseph R. Biden Jr.</td><td>DEM</td><td class="votes">1.76</td><td class="pct">29.3</td></tr>
+<tr><td>Bernie Sanders</td><td>DEM</td><td class="votes">1.04</td><td class="pct">17.3</td></tr>
 <tr><td>Amy Klobuchar</td><td>DEM</td><td class="votes">0.48</td><td class="pct">8.0</td></tr>
 <tr><td>Tom Steyer</td><td>DEM</td><td class="votes">0.24</td><td class="pct">4.0</td></tr>
 <tr><td>Elizabeth Warren</td><td>DEM</td><td class="votes">0.08</td><td class="pct">1.3</td></tr>
@@ -6996,7 +7017,7 @@ Lead: <b>Buttigieg +15.6</b><br>
 </tbody>
 </table>
 100.0% of precincts reporting<br>
-Lead: <b>Buttigieg +8.0</b><br>
+Lead: <b>Buttigieg +9.3</b><br>
 </div>
 
 <div id="19009-results" class="results">
@@ -7212,9 +7233,9 @@ Lead: <b>Buttigieg +20.0</b><br>
 <td>Votes</td>
 <td>Pct</td>
 </tr>
-<tr><td>Pete Buttigieg</td><td>DEM</td><td class="votes">3.74</td><td class="pct">34.0</td></tr>
+<tr><td>Pete Buttigieg</td><td>DEM</td><td class="votes">3.63</td><td class="pct">33.0</td></tr>
 <tr><td>Joseph R. Biden Jr.</td><td>DEM</td><td class="votes">2.75</td><td class="pct">25.0</td></tr>
-<tr><td>Amy Klobuchar</td><td>DEM</td><td class="votes">1.98</td><td class="pct">18.0</td></tr>
+<tr><td>Amy Klobuchar</td><td>DEM</td><td class="votes">2.09</td><td class="pct">19.0</td></tr>
 <tr><td>Bernie Sanders</td><td>DEM</td><td class="votes">1.43</td><td class="pct">13.0</td></tr>
 <tr><td>Elizabeth Warren</td><td>DEM</td><td class="votes">0.99</td><td class="pct">9.0</td></tr>
 <tr><td>Andrew Yang</td><td>DEM</td><td class="votes">0.11</td><td class="pct">1.0</td></tr>
@@ -7222,7 +7243,7 @@ Lead: <b>Buttigieg +20.0</b><br>
 </tbody>
 </table>
 100.0% of precincts reporting<br>
-Lead: <b>Buttigieg +9.0</b><br>
+Lead: <b>Buttigieg +8.0</b><br>
 </div>
 
 <div id="19029-results" class="results">
@@ -7303,8 +7324,8 @@ Lead: <b>Buttigieg +6.3</b><br>
 </tr>
 <tr><td>Bernie Sanders</td><td>DEM</td><td class="votes">1.64</td><td class="pct">27.8</td></tr>
 <tr><td>Joseph R. Biden Jr.</td><td>DEM</td><td class="votes">1.53</td><td class="pct">25.9</td></tr>
-<tr><td>Pete Buttigieg</td><td>DEM</td><td class="votes">1.2</td><td class="pct">20.3</td></tr>
-<tr><td>Amy Klobuchar</td><td>DEM</td><td class="votes">0.87</td><td class="pct">14.7</td></tr>
+<tr><td>Pete Buttigieg</td><td>DEM</td><td class="votes">1.31</td><td class="pct">22.2</td></tr>
+<tr><td>Amy Klobuchar</td><td>DEM</td><td class="votes">0.76</td><td class="pct">12.9</td></tr>
 <tr><td>Elizabeth Warren</td><td>DEM</td><td class="votes">0.33</td><td class="pct">5.6</td></tr>
 <tr><td>Andrew Yang</td><td>DEM</td><td class="votes">0.22</td><td class="pct">3.7</td></tr>
 <tr><td>Tom Steyer</td><td>DEM</td><td class="votes">0.11</td><td class="pct">1.9</td></tr>
@@ -7505,16 +7526,16 @@ Lead: <b>Buttigieg +6.0</b><br>
 <td>Votes</td>
 <td>Pct</td>
 </tr>
-<tr><td>Pete Buttigieg</td><td>DEM</td><td class="votes">1.27</td><td class="pct">31.4</td></tr>
-<tr><td>Bernie Sanders</td><td>DEM</td><td class="votes">0.94</td><td class="pct">23.3</td></tr>
-<tr><td>Elizabeth Warren</td><td>DEM</td><td class="votes">0.8</td><td class="pct">19.8</td></tr>
-<tr><td>Amy Klobuchar</td><td>DEM</td><td class="votes">0.56</td><td class="pct">13.9</td></tr>
-<tr><td>Joseph R. Biden Jr.</td><td>DEM</td><td class="votes">0.47</td><td class="pct">11.6</td></tr>
+<tr><td>Pete Buttigieg</td><td>DEM</td><td class="votes">1.27</td><td class="pct">31.8</td></tr>
+<tr><td>Bernie Sanders</td><td>DEM</td><td class="votes">0.89</td><td class="pct">22.3</td></tr>
+<tr><td>Elizabeth Warren</td><td>DEM</td><td class="votes">0.75</td><td class="pct">18.8</td></tr>
+<tr><td>Amy Klobuchar</td><td>DEM</td><td class="votes">0.56</td><td class="pct">14.0</td></tr>
+<tr><td>Joseph R. Biden Jr.</td><td>DEM</td><td class="votes">0.52</td><td class="pct">13.0</td></tr>
 
 </tbody>
 </table>
 100.0% of precincts reporting<br>
-Lead: <b>Buttigieg +8.2</b><br>
+Lead: <b>Buttigieg +9.5</b><br>
 </div>
 
 <div id="19055-results" class="results">
@@ -7573,16 +7594,16 @@ Lead: <b>Buttigieg +12.0</b><br>
 <td>Votes</td>
 <td>Pct</td>
 </tr>
-<tr><td>Pete Buttigieg</td><td>DEM</td><td class="votes">3</td><td class="pct">30.0</td></tr>
+<tr><td>Pete Buttigieg</td><td>DEM</td><td class="votes">2.88</td><td class="pct">28.8</td></tr>
 <tr><td>Joseph R. Biden Jr.</td><td>DEM</td><td class="votes">2.25</td><td class="pct">22.5</td></tr>
 <tr><td>Bernie Sanders</td><td>DEM</td><td class="votes">2</td><td class="pct">20.0</td></tr>
 <tr><td>Amy Klobuchar</td><td>DEM</td><td class="votes">1.88</td><td class="pct">18.8</td></tr>
-<tr><td>Elizabeth Warren</td><td>DEM</td><td class="votes">0.88</td><td class="pct">8.8</td></tr>
+<tr><td>Elizabeth Warren</td><td>DEM</td><td class="votes">1</td><td class="pct">10.0</td></tr>
 
 </tbody>
 </table>
 100.0% of precincts reporting<br>
-Lead: <b>Buttigieg +7.5</b><br>
+Lead: <b>Buttigieg +6.3</b><br>
 </div>
 
 <div id="19061-results" class="results">
@@ -7595,16 +7616,16 @@ Lead: <b>Buttigieg +7.5</b><br>
 <td>Votes</td>
 <td>Pct</td>
 </tr>
-<tr><td>Pete Buttigieg</td><td>DEM</td><td class="votes">21.6</td><td class="pct">29.9</td></tr>
-<tr><td>Joseph R. Biden Jr.</td><td>DEM</td><td class="votes">16.8</td><td class="pct">23.2</td></tr>
-<tr><td>Bernie Sanders</td><td>DEM</td><td class="votes">16.53</td><td class="pct">22.9</td></tr>
-<tr><td>Elizabeth Warren</td><td>DEM</td><td class="votes">10.93</td><td class="pct">15.1</td></tr>
+<tr><td>Pete Buttigieg</td><td>DEM</td><td class="votes">21.07</td><td class="pct">29.3</td></tr>
+<tr><td>Joseph R. Biden Jr.</td><td>DEM</td><td class="votes">17.07</td><td class="pct">23.7</td></tr>
+<tr><td>Bernie Sanders</td><td>DEM</td><td class="votes">16.53</td><td class="pct">23.0</td></tr>
+<tr><td>Elizabeth Warren</td><td>DEM</td><td class="votes">10.93</td><td class="pct">15.2</td></tr>
 <tr><td>Amy Klobuchar</td><td>DEM</td><td class="votes">6.13</td><td class="pct">8.5</td></tr>
 
 </tbody>
 </table>
 100.0% of precincts reporting<br>
-Lead: <b>Buttigieg +6.6</b><br>
+Lead: <b>Buttigieg +5.6</b><br>
 </div>
 
 <div id="19063-results" class="results">
@@ -7640,8 +7661,8 @@ Lead: <b>Buttigieg +8.5</b><br>
 <td>Votes</td>
 <td>Pct</td>
 </tr>
-<tr><td>Pete Buttigieg</td><td>DEM</td><td class="votes">4.32</td><td class="pct">36.0</td></tr>
-<tr><td>Joseph R. Biden Jr.</td><td>DEM</td><td class="votes">2.64</td><td class="pct">22.0</td></tr>
+<tr><td>Pete Buttigieg</td><td>DEM</td><td class="votes">4.2</td><td class="pct">35.0</td></tr>
+<tr><td>Joseph R. Biden Jr.</td><td>DEM</td><td class="votes">2.76</td><td class="pct">23.0</td></tr>
 <tr><td>Bernie Sanders</td><td>DEM</td><td class="votes">1.8</td><td class="pct">15.0</td></tr>
 <tr><td>Elizabeth Warren</td><td>DEM</td><td class="votes">1.44</td><td class="pct">12.0</td></tr>
 <tr><td>Amy Klobuchar</td><td>DEM</td><td class="votes">1.32</td><td class="pct">11.0</td></tr>
@@ -7651,7 +7672,7 @@ Lead: <b>Buttigieg +8.5</b><br>
 </tbody>
 </table>
 100.0% of precincts reporting<br>
-Lead: <b>Buttigieg +14.0</b><br>
+Lead: <b>Buttigieg +12.0</b><br>
 </div>
 
 <div id="19067-results" class="results">
@@ -7778,17 +7799,17 @@ Lead: <b>Buttigieg +6.7</b><br>
 <td>Votes</td>
 <td>Pct</td>
 </tr>
-<tr><td>Pete Buttigieg</td><td>DEM</td><td class="votes">1.63</td><td class="pct">27.2</td></tr>
+<tr><td>Pete Buttigieg</td><td>DEM</td><td class="votes">1.54</td><td class="pct">25.7</td></tr>
 <tr><td>Amy Klobuchar</td><td>DEM</td><td class="votes">1.54</td><td class="pct">25.7</td></tr>
 <tr><td>Elizabeth Warren</td><td>DEM</td><td class="votes">1.2</td><td class="pct">20.0</td></tr>
 <tr><td>Joseph R. Biden Jr.</td><td>DEM</td><td class="votes">0.69</td><td class="pct">11.5</td></tr>
-<tr><td>Bernie Sanders</td><td>DEM</td><td class="votes">0.51</td><td class="pct">8.5</td></tr>
+<tr><td>Bernie Sanders</td><td>DEM</td><td class="votes">0.6</td><td class="pct">10.0</td></tr>
 <tr><td>Andrew Yang</td><td>DEM</td><td class="votes">0.43</td><td class="pct">7.2</td></tr>
 
 </tbody>
 </table>
 100.0% of precincts reporting<br>
-Lead: <b>Buttigieg +1.5</b><br>
+Lead: <b>Tie</b><br>
 </div>
 
 <div id="19079-results" class="results">
@@ -7845,8 +7866,8 @@ Lead: <b>Buttigieg +10.0</b><br>
 <td>Votes</td>
 <td>Pct</td>
 </tr>
-<tr><td>Pete Buttigieg</td><td>DEM</td><td class="votes">2.74</td><td class="pct">30.4</td></tr>
-<tr><td>Amy Klobuchar</td><td>DEM</td><td class="votes">1.8</td><td class="pct">20.0</td></tr>
+<tr><td>Pete Buttigieg</td><td>DEM</td><td class="votes">2.66</td><td class="pct">29.6</td></tr>
+<tr><td>Amy Klobuchar</td><td>DEM</td><td class="votes">1.87</td><td class="pct">20.8</td></tr>
 <tr><td>Joseph R. Biden Jr.</td><td>DEM</td><td class="votes">1.58</td><td class="pct">17.6</td></tr>
 <tr><td>Elizabeth Warren</td><td>DEM</td><td class="votes">1.51</td><td class="pct">16.8</td></tr>
 <tr><td>Bernie Sanders</td><td>DEM</td><td class="votes">1.37</td><td class="pct">15.2</td></tr>
@@ -7854,7 +7875,7 @@ Lead: <b>Buttigieg +10.0</b><br>
 </tbody>
 </table>
 100.0% of precincts reporting<br>
-Lead: <b>Buttigieg +10.4</b><br>
+Lead: <b>Buttigieg +8.8</b><br>
 </div>
 
 <div id="19085-results" class="results">
@@ -7867,16 +7888,16 @@ Lead: <b>Buttigieg +10.4</b><br>
 <td>Votes</td>
 <td>Pct</td>
 </tr>
-<tr><td>Bernie Sanders</td><td>DEM</td><td class="votes">2.05</td><td class="pct">28.9</td></tr>
+<tr><td>Bernie Sanders</td><td>DEM</td><td class="votes">1.96</td><td class="pct">27.6</td></tr>
 <tr><td>Pete Buttigieg</td><td>DEM</td><td class="votes">1.87</td><td class="pct">26.4</td></tr>
 <tr><td>Joseph R. Biden Jr.</td><td>DEM</td><td class="votes">1.4</td><td class="pct">19.7</td></tr>
 <tr><td>Amy Klobuchar</td><td>DEM</td><td class="votes">0.93</td><td class="pct">13.1</td></tr>
-<tr><td>Elizabeth Warren</td><td>DEM</td><td class="votes">0.84</td><td class="pct">11.8</td></tr>
+<tr><td>Elizabeth Warren</td><td>DEM</td><td class="votes">0.93</td><td class="pct">13.1</td></tr>
 
 </tbody>
 </table>
 100.0% of precincts reporting<br>
-Lead: <b>Sanders +2.5</b><br>
+Lead: <b>Sanders +1.3</b><br>
 </div>
 
 <div id="19087-results" class="results">
@@ -7962,6 +7983,7 @@ Lead: <b>Tie</b><br>
 <tr><td>Joseph R. Biden Jr.</td><td>DEM</td><td class="votes">0.9</td><td class="pct">30.0</td></tr>
 <tr><td>Amy Klobuchar</td><td>DEM</td><td class="votes">0.45</td><td class="pct">15.0</td></tr>
 <tr><td>Bernie Sanders</td><td>DEM</td><td class="votes">0.45</td><td class="pct">15.0</td></tr>
+<tr><td>Elizabeth Warren</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
 
 </tbody>
 </table>
@@ -8025,17 +8047,17 @@ Lead: <b>Buttigieg +5.7</b><br>
 <td>Votes</td>
 <td>Pct</td>
 </tr>
-<tr><td>Pete Buttigieg</td><td>DEM</td><td class="votes">7.71</td><td class="pct">33.5</td></tr>
+<tr><td>Pete Buttigieg</td><td>DEM</td><td class="votes">7.59</td><td class="pct">33.0</td></tr>
 <tr><td>Bernie Sanders</td><td>DEM</td><td class="votes">5.06</td><td class="pct">22.0</td></tr>
 <tr><td>Joseph R. Biden Jr.</td><td>DEM</td><td class="votes">4.6</td><td class="pct">20.0</td></tr>
-<tr><td>Elizabeth Warren</td><td>DEM</td><td class="votes">3.22</td><td class="pct">14.0</td></tr>
+<tr><td>Elizabeth Warren</td><td>DEM</td><td class="votes">3.34</td><td class="pct">14.5</td></tr>
 <tr><td>Amy Klobuchar</td><td>DEM</td><td class="votes">1.5</td><td class="pct">6.5</td></tr>
 <tr><td>Andrew Yang</td><td>DEM</td><td class="votes">0.69</td><td class="pct">3.0</td></tr>
 
 </tbody>
 </table>
 100.0% of precincts reporting<br>
-Lead: <b>Buttigieg +11.5</b><br>
+Lead: <b>Buttigieg +11.0</b><br>
 </div>
 
 <div id="19101-results" class="results">
@@ -8070,8 +8092,8 @@ Lead: <b>Sanders +21.8</b><br>
 <td>Votes</td>
 <td>Pct</td>
 </tr>
-<tr><td>Elizabeth Warren</td><td>DEM</td><td class="votes">53.46</td><td class="pct">33.0</td></tr>
-<tr><td>Bernie Sanders</td><td>DEM</td><td class="votes">52.25</td><td class="pct">32.3</td></tr>
+<tr><td>Elizabeth Warren</td><td>DEM</td><td class="votes">53.06</td><td class="pct">32.8</td></tr>
+<tr><td>Bernie Sanders</td><td>DEM</td><td class="votes">52.65</td><td class="pct">32.5</td></tr>
 <tr><td>Pete Buttigieg</td><td>DEM</td><td class="votes">34.02</td><td class="pct">21.0</td></tr>
 <tr><td>Amy Klobuchar</td><td>DEM</td><td class="votes">17.01</td><td class="pct">10.5</td></tr>
 <tr><td>Joseph R. Biden Jr.</td><td>DEM</td><td class="votes">5.27</td><td class="pct">3.3</td></tr>
@@ -8079,7 +8101,7 @@ Lead: <b>Sanders +21.8</b><br>
 </tbody>
 </table>
 100.0% of precincts reporting<br>
-Lead: <b>Warren +0.7</b><br>
+Lead: <b>Warren +0.3</b><br>
 </div>
 
 <div id="19105-results" class="results">
@@ -8433,17 +8455,17 @@ Lead: <b>Buttigieg +6.3</b><br>
 <td>Votes</td>
 <td>Pct</td>
 </tr>
-<tr><td>Pete Buttigieg</td><td>DEM</td><td class="votes">0.92</td><td class="pct">31.3</td></tr>
-<tr><td>Joseph R. Biden Jr.</td><td>DEM</td><td class="votes">0.55</td><td class="pct">18.7</td></tr>
-<tr><td>Amy Klobuchar</td><td>DEM</td><td class="votes">0.55</td><td class="pct">18.7</td></tr>
-<tr><td>Bernie Sanders</td><td>DEM</td><td class="votes">0.55</td><td class="pct">18.7</td></tr>
-<tr><td>Elizabeth Warren</td><td>DEM</td><td class="votes">0.32</td><td class="pct">10.9</td></tr>
+<tr><td>Pete Buttigieg</td><td>DEM</td><td class="votes">0.92</td><td class="pct">30.8</td></tr>
+<tr><td>Joseph R. Biden Jr.</td><td>DEM</td><td class="votes">0.6</td><td class="pct">20.1</td></tr>
+<tr><td>Amy Klobuchar</td><td>DEM</td><td class="votes">0.55</td><td class="pct">18.4</td></tr>
+<tr><td>Bernie Sanders</td><td>DEM</td><td class="votes">0.55</td><td class="pct">18.4</td></tr>
+<tr><td>Elizabeth Warren</td><td>DEM</td><td class="votes">0.32</td><td class="pct">10.7</td></tr>
 <tr><td>Tom Steyer</td><td>DEM</td><td class="votes">0.05</td><td class="pct">1.7</td></tr>
 
 </tbody>
 </table>
 100.0% of precincts reporting<br>
-Lead: <b>Buttigieg +12.6</b><br>
+Lead: <b>Buttigieg +10.7</b><br>
 </div>
 
 <div id="19137-results" class="results">
@@ -8480,15 +8502,15 @@ Lead: <b>Buttigieg +14.0</b><br>
 <td>Pct</td>
 </tr>
 <tr><td>Bernie Sanders</td><td>DEM</td><td class="votes">8.67</td><td class="pct">34.9</td></tr>
-<tr><td>Pete Buttigieg</td><td>DEM</td><td class="votes">6</td><td class="pct">24.2</td></tr>
-<tr><td>Joseph R. Biden Jr.</td><td>DEM</td><td class="votes">4.33</td><td class="pct">17.4</td></tr>
+<tr><td>Pete Buttigieg</td><td>DEM</td><td class="votes">6.17</td><td class="pct">24.8</td></tr>
+<tr><td>Joseph R. Biden Jr.</td><td>DEM</td><td class="votes">4.17</td><td class="pct">16.8</td></tr>
 <tr><td>Elizabeth Warren</td><td>DEM</td><td class="votes">3.83</td><td class="pct">15.4</td></tr>
 <tr><td>Amy Klobuchar</td><td>DEM</td><td class="votes">1.83</td><td class="pct">7.4</td></tr>
 
 </tbody>
 </table>
 100.0% of precincts reporting<br>
-Lead: <b>Sanders +10.8</b><br>
+Lead: <b>Sanders +10.1</b><br>
 </div>
 
 <div id="19141-results" class="results">
@@ -8525,16 +8547,16 @@ Lead: <b>Biden +1.7</b><br>
 <td>Votes</td>
 <td>Pct</td>
 </tr>
-<tr><td>Pete Buttigieg</td><td>DEM</td><td class="votes">0.9</td><td class="pct">30.0</td></tr>
+<tr><td>Pete Buttigieg</td><td>DEM</td><td class="votes">0.8</td><td class="pct">26.7</td></tr>
 <tr><td>Amy Klobuchar</td><td>DEM</td><td class="votes">0.6</td><td class="pct">20.0</td></tr>
 <tr><td>Elizabeth Warren</td><td>DEM</td><td class="votes">0.6</td><td class="pct">20.0</td></tr>
 <tr><td>Joseph R. Biden Jr.</td><td>DEM</td><td class="votes">0.5</td><td class="pct">16.7</td></tr>
-<tr><td>Bernie Sanders</td><td>DEM</td><td class="votes">0.4</td><td class="pct">13.3</td></tr>
+<tr><td>Bernie Sanders</td><td>DEM</td><td class="votes">0.5</td><td class="pct">16.7</td></tr>
 
 </tbody>
 </table>
 100.0% of precincts reporting<br>
-Lead: <b>Buttigieg +10.0</b><br>
+Lead: <b>Buttigieg +6.7</b><br>
 </div>
 
 <div id="19145-results" class="results">
@@ -8637,16 +8659,16 @@ Lead: <b>Buttigieg +12.0</b><br>
 <td>Votes</td>
 <td>Pct</td>
 </tr>
-<tr><td>Bernie Sanders</td><td>DEM</td><td class="votes">106.88</td><td class="pct">27.3</td></tr>
-<tr><td>Pete Buttigieg</td><td>DEM</td><td class="votes">102.97</td><td class="pct">26.3</td></tr>
-<tr><td>Elizabeth Warren</td><td>DEM</td><td class="votes">82.82</td><td class="pct">21.1</td></tr>
-<tr><td>Joseph R. Biden Jr.</td><td>DEM</td><td class="votes">55.68</td><td class="pct">14.2</td></tr>
-<tr><td>Amy Klobuchar</td><td>DEM</td><td class="votes">41.69</td><td class="pct">10.6</td></tr>
+<tr><td>Bernie Sanders</td><td>DEM</td><td class="votes">107.72</td><td class="pct">27.5</td></tr>
+<tr><td>Pete Buttigieg</td><td>DEM</td><td class="votes">103.25</td><td class="pct">26.4</td></tr>
+<tr><td>Elizabeth Warren</td><td>DEM</td><td class="votes">82.26</td><td class="pct">21.0</td></tr>
+<tr><td>Joseph R. Biden Jr.</td><td>DEM</td><td class="votes">55.4</td><td class="pct">14.1</td></tr>
+<tr><td>Amy Klobuchar</td><td>DEM</td><td class="votes">41.41</td><td class="pct">10.6</td></tr>
 
 </tbody>
 </table>
 100.0% of precincts reporting<br>
-Lead: <b>Sanders +1.0</b><br>
+Lead: <b>Sanders +1.1</b><br>
 </div>
 
 <div id="19155-results" class="results">
@@ -8913,6 +8935,7 @@ Lead: <b>Sanders +6.2</b><br>
 <tr><td>Bernie Sanders</td><td>DEM</td><td class="votes">0.7</td><td class="pct">23.3</td></tr>
 <tr><td>Elizabeth Warren</td><td>DEM</td><td class="votes">0.6</td><td class="pct">20.0</td></tr>
 <tr><td>Joseph R. Biden Jr.</td><td>DEM</td><td class="votes">0.5</td><td class="pct">16.7</td></tr>
+<tr><td>Amy Klobuchar</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
 
 </tbody>
 </table>
@@ -8930,16 +8953,17 @@ Lead: <b>Buttigieg +16.7</b><br>
 <td>Votes</td>
 <td>Pct</td>
 </tr>
-<tr><td>Pete Buttigieg</td><td>DEM</td><td class="votes">5.67</td><td class="pct">31.5</td></tr>
+<tr><td>Pete Buttigieg</td><td>DEM</td><td class="votes">5.58</td><td class="pct">31.0</td></tr>
 <tr><td>Bernie Sanders</td><td>DEM</td><td class="votes">5.31</td><td class="pct">29.5</td></tr>
 <tr><td>Joseph R. Biden Jr.</td><td>DEM</td><td class="votes">3.96</td><td class="pct">22.0</td></tr>
-<tr><td>Elizabeth Warren</td><td>DEM</td><td class="votes">2.7</td><td class="pct">15.0</td></tr>
+<tr><td>Elizabeth Warren</td><td>DEM</td><td class="votes">2.79</td><td class="pct">15.5</td></tr>
 <tr><td>Andrew Yang</td><td>DEM</td><td class="votes">0.27</td><td class="pct">1.5</td></tr>
+<tr><td>Amy Klobuchar</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
 
 </tbody>
 </table>
 100.0% of precincts reporting<br>
-Lead: <b>Buttigieg +2.0</b><br>
+Lead: <b>Buttigieg +1.5</b><br>
 </div>
 
 <div id="19181-results" class="results">
@@ -8952,16 +8976,16 @@ Lead: <b>Buttigieg +2.0</b><br>
 <td>Votes</td>
 <td>Pct</td>
 </tr>
-<tr><td>Pete Buttigieg</td><td>DEM</td><td class="votes">12.13</td><td class="pct">34.7</td></tr>
+<tr><td>Pete Buttigieg</td><td>DEM</td><td class="votes">11.9</td><td class="pct">34.0</td></tr>
 <tr><td>Elizabeth Warren</td><td>DEM</td><td class="votes">7.23</td><td class="pct">20.7</td></tr>
-<tr><td>Bernie Sanders</td><td>DEM</td><td class="votes">5.83</td><td class="pct">16.7</td></tr>
+<tr><td>Bernie Sanders</td><td>DEM</td><td class="votes">6.07</td><td class="pct">17.3</td></tr>
 <tr><td>Joseph R. Biden Jr.</td><td>DEM</td><td class="votes">5.13</td><td class="pct">14.7</td></tr>
 <tr><td>Amy Klobuchar</td><td>DEM</td><td class="votes">4.67</td><td class="pct">13.3</td></tr>
 
 </tbody>
 </table>
 100.0% of precincts reporting<br>
-Lead: <b>Buttigieg +14.0</b><br>
+Lead: <b>Buttigieg +13.3</b><br>
 </div>
 
 <div id="19183-results" class="results">
@@ -9018,9 +9042,9 @@ Lead: <b>Klobuchar +12.6</b><br>
 <td>Votes</td>
 <td>Pct</td>
 </tr>
-<tr><td>Pete Buttigieg</td><td>DEM</td><td class="votes">8</td><td class="pct">39.8</td></tr>
+<tr><td>Pete Buttigieg</td><td>DEM</td><td class="votes">8.08</td><td class="pct">40.2</td></tr>
 <tr><td>Joseph R. Biden Jr.</td><td>DEM</td><td class="votes">4.67</td><td class="pct">23.3</td></tr>
-<tr><td>Bernie Sanders</td><td>DEM</td><td class="votes">4.25</td><td class="pct">21.2</td></tr>
+<tr><td>Bernie Sanders</td><td>DEM</td><td class="votes">4.17</td><td class="pct">20.8</td></tr>
 <tr><td>Elizabeth Warren</td><td>DEM</td><td class="votes">1.5</td><td class="pct">7.5</td></tr>
 <tr><td>Amy Klobuchar</td><td>DEM</td><td class="votes">1.25</td><td class="pct">6.2</td></tr>
 <tr><td>Tom Steyer</td><td>DEM</td><td class="votes">0.33</td><td class="pct">1.6</td></tr>
@@ -9028,7 +9052,7 @@ Lead: <b>Klobuchar +12.6</b><br>
 </tbody>
 </table>
 100.0% of precincts reporting<br>
-Lead: <b>Buttigieg +16.6</b><br>
+Lead: <b>Buttigieg +17.0</b><br>
 </div>
 
 <div id="19189-results" class="results">
@@ -9041,17 +9065,17 @@ Lead: <b>Buttigieg +16.6</b><br>
 <td>Votes</td>
 <td>Pct</td>
 </tr>
-<tr><td>Pete Buttigieg</td><td>DEM</td><td class="votes">2.1</td><td class="pct">35.9</td></tr>
+<tr><td>Pete Buttigieg</td><td>DEM</td><td class="votes">1.95</td><td class="pct">33.3</td></tr>
 <tr><td>Elizabeth Warren</td><td>DEM</td><td class="votes">1.05</td><td class="pct">17.9</td></tr>
+<tr><td>Amy Klobuchar</td><td>DEM</td><td class="votes">0.9</td><td class="pct">15.4</td></tr>
 <tr><td>Bernie Sanders</td><td>DEM</td><td class="votes">0.9</td><td class="pct">15.4</td></tr>
-<tr><td>Amy Klobuchar</td><td>DEM</td><td class="votes">0.75</td><td class="pct">12.8</td></tr>
 <tr><td>Joseph R. Biden Jr.</td><td>DEM</td><td class="votes">0.6</td><td class="pct">10.3</td></tr>
 <tr><td>Andrew Yang</td><td>DEM</td><td class="votes">0.45</td><td class="pct">7.7</td></tr>
 
 </tbody>
 </table>
 100.0% of precincts reporting<br>
-Lead: <b>Buttigieg +17.9</b><br>
+Lead: <b>Buttigieg +15.4</b><br>
 </div>
 
 <div id="19191-results" class="results">
@@ -9404,6 +9428,380 @@ Lead: <b>Sanders +7.2</b><br>
 </table>
 100.0% of precincts reporting<br>
 Lead: <b>Sanders +2.6</b><br>
+</div>
+
+<div id="32510-results" class="results">
+<b class="name">Carson City</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Joseph R. Biden Jr.</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Pete Buttigieg</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Amy Klobuchar</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Bernie Sanders</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Elizabeth Warren</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Tie</b><br>
+</div>
+
+<div id="32001-results" class="results">
+<b class="name">Churchill</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Joseph R. Biden Jr.</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Pete Buttigieg</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Amy Klobuchar</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Bernie Sanders</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Elizabeth Warren</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Tie</b><br>
+</div>
+
+<div id="32003-results" class="results">
+<b class="name">Clark</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Joseph R. Biden Jr.</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Pete Buttigieg</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Amy Klobuchar</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Bernie Sanders</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Elizabeth Warren</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Tie</b><br>
+</div>
+
+<div id="32005-results" class="results">
+<b class="name">Douglas</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Joseph R. Biden Jr.</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Pete Buttigieg</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Amy Klobuchar</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Bernie Sanders</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Elizabeth Warren</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Tie</b><br>
+</div>
+
+<div id="32007-results" class="results">
+<b class="name">Elko</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Joseph R. Biden Jr.</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Pete Buttigieg</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Amy Klobuchar</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Bernie Sanders</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Elizabeth Warren</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Tie</b><br>
+</div>
+
+<div id="32009-results" class="results">
+<b class="name">Esmeralda</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Joseph R. Biden Jr.</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Pete Buttigieg</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Amy Klobuchar</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Bernie Sanders</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Elizabeth Warren</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Tie</b><br>
+</div>
+
+<div id="32011-results" class="results">
+<b class="name">Eureka</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Joseph R. Biden Jr.</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Pete Buttigieg</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Amy Klobuchar</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Bernie Sanders</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Elizabeth Warren</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Tie</b><br>
+</div>
+
+<div id="32013-results" class="results">
+<b class="name">Humboldt</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Joseph R. Biden Jr.</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Pete Buttigieg</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Amy Klobuchar</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Bernie Sanders</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Elizabeth Warren</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Tie</b><br>
+</div>
+
+<div id="32015-results" class="results">
+<b class="name">Lander</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Joseph R. Biden Jr.</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Pete Buttigieg</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Amy Klobuchar</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Bernie Sanders</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Elizabeth Warren</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Tie</b><br>
+</div>
+
+<div id="32017-results" class="results">
+<b class="name">Lincoln</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Joseph R. Biden Jr.</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Pete Buttigieg</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Amy Klobuchar</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Bernie Sanders</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Elizabeth Warren</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Tie</b><br>
+</div>
+
+<div id="32019-results" class="results">
+<b class="name">Lyon</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Joseph R. Biden Jr.</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Pete Buttigieg</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Amy Klobuchar</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Bernie Sanders</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Elizabeth Warren</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Tie</b><br>
+</div>
+
+<div id="32021-results" class="results">
+<b class="name">Mineral</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Joseph R. Biden Jr.</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Pete Buttigieg</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Amy Klobuchar</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Bernie Sanders</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Elizabeth Warren</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Tie</b><br>
+</div>
+
+<div id="32023-results" class="results">
+<b class="name">Nye</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Joseph R. Biden Jr.</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Pete Buttigieg</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Amy Klobuchar</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Bernie Sanders</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Elizabeth Warren</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Tie</b><br>
+</div>
+
+<div id="32027-results" class="results">
+<b class="name">Pershing</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Joseph R. Biden Jr.</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Pete Buttigieg</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Amy Klobuchar</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Bernie Sanders</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Elizabeth Warren</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Tie</b><br>
+</div>
+
+<div id="32029-results" class="results">
+<b class="name">Storey</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Joseph R. Biden Jr.</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Pete Buttigieg</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Amy Klobuchar</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Bernie Sanders</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Elizabeth Warren</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Tie</b><br>
+</div>
+
+<div id="32031-results" class="results">
+<b class="name">Washoe</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Joseph R. Biden Jr.</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Pete Buttigieg</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Amy Klobuchar</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Bernie Sanders</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Elizabeth Warren</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Tie</b><br>
+</div>
+
+<div id="32033-results" class="results">
+<b class="name">White Pine</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Joseph R. Biden Jr.</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Pete Buttigieg</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Amy Klobuchar</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Bernie Sanders</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Elizabeth Warren</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Tie</b><br>
 </div>
 
 </div>
