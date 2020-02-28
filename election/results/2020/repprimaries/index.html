@@ -6429,10 +6429,10 @@
     </style>
   </defs>
 
-  <div style="width:24px; height:20px; left: 100px; top: 850px; background-color: #FF0000; position: absolute;">&nbsp;</div>
-  <div style="width:0px; height:20px; left: 124px; top: 850px; background-color: #FF6060; position: absolute;">&nbsp;</div>
+  <div style="width:55px; height:20px; left: 100px; top: 850px; background-color: #FF0000; position: absolute;">&nbsp;</div>
+  <div style="width:0px; height:20px; left: 155px; top: 850px; background-color: #FF6060; position: absolute;">&nbsp;</div>
   <div style="width:960px; height:20px; left: 100px; top: 850px; position: absolute; text-align: center; font-size: 18;">|<br><span style="font-size: 12;"></span></div>
-  <div style="height:20px; left: 134px; top: 850px; color: #FF0000; background-color: lightgray; position: absolute;"><span class="delegates">61</span> Trump</div>
+  <div style="height:20px; left: 165px; top: 850px; color: #FF0000; background-color: lightgray; position: absolute;"><span class="delegates">144</span> Trump</div>
 
 
   <div style="width:1px; height:20px; left: 100px; top: 880px; background-color: #FF00FF; position: absolute;">&nbsp;</div>
@@ -6547,7 +6547,7 @@
   function setColor(id, color) {
     document.getElementById(id).style.fill = color;
   }
-  var stateColors = {"IA": "#FF0000", "NH": "#FF0000"};
+  var stateColors = {"IA": "#FF0000", "NH": "#FF0000", "HI": "#FF0000", "KS": "#FF0000", "NV": "#FF0000"};
   function colorAll() {
     for (var state in stateColors) {
       setColor(state, stateColors[state]);
@@ -6620,7 +6620,7 @@ Pre-election estimate: <b>N/A</b>
 <td>Pct</td>
 <td>Del</td>
 </tr>
-<tr><td style="color: #fff" bgcolor="#FF0000">Donald J. Trump* ✔</td><td>REP</td><td class="votes">129,696</td><td class="pct">85.6</td><td class="votes">22</td></tr>
+<tr><td style="color: #fff" bgcolor="#FF0000">Donald J. Trump* ✔</td><td>REP</td><td class="votes">129,754</td><td class="pct">85.6</td><td class="votes">22</td></tr>
 <tr><td>Bill Weld</td><td>REP</td><td class="votes">13,787</td><td class="pct">9.1</td><td class="votes">0</td></tr>
 <tr><td>Total Write-ins</td><td>REP</td><td class="votes">4,207</td><td class="pct">2.8</td><td class="votes">0</td></tr>
 
@@ -6633,38 +6633,104 @@ Model: <b>N/A</b><br>
 Pre-election estimate: <b>N/A</b>
 </div>
 
+<div id="HI-results" class="results">
+<b class="name">Hawaii </b> Caucuses cancelled, Dec 11<br>
+<table class="resultstable">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+<td>Del</td>
+</tr>
+<tr><td style="color: #fff" bgcolor="#FF0000">Donald J. Trump ✔</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td><td class="votes">19</td></tr>
+
+</tbody>
+</table>
+100.0% of precincts reporting<br>
+Status: <b>Called for Trump (R)</b><br>
+Lead: <b>Trump +100.0</b><br>
+Model: <b>N/A</b><br>
+Pre-election estimate: <b>N/A</b>
+</div>
+
+<div id="KS-results" class="results">
+<b class="name">Kansas </b> Convention, Feb 01<br>
+<table class="resultstable">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+<td>Del</td>
+</tr>
+<tr><td style="color: #fff" bgcolor="#FF0000">Donald J. Trump ✔</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td><td class="votes">39</td></tr>
+
+</tbody>
+</table>
+100.0% of precincts reporting<br>
+Status: <b>Called for Trump (R)</b><br>
+Lead: <b>Trump +100.0</b><br>
+Model: <b>N/A</b><br>
+Pre-election estimate: <b>N/A</b>
+</div>
+
+<div id="NV-results" class="results">
+<b class="name">Nevada </b> Central committee, Feb 22<br>
+<table class="resultstable">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+<td>Del</td>
+</tr>
+<tr><td style="color: #fff" bgcolor="#FF0000">Donald J. Trump ✔</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td><td class="votes">25</td></tr>
+
+</tbody>
+</table>
+100.0% of precincts reporting<br>
+Status: <b>Called for Trump (R)</b><br>
+Lead: <b>Trump +100.0</b><br>
+Model: <b>N/A</b><br>
+Pre-election estimate: <b>N/A</b>
+</div>
+
   <div id="OR-results" class="results">
     <b class="name">Oregon</b><br>
     No election
   </div>
 
-  <div id="MS-results" class="results">
-    <b class="name">Mississippi</b><br>
+  <div id="MD-results" class="results">
+    <b class="name">Maryland</b><br>
     No election
   </div>
 
-  <div id="GA-results" class="results">
-    <b class="name">Georgia</b><br>
+  <div id="MT-results" class="results">
+    <b class="name">Montana</b><br>
     No election
   </div>
 
-  <div id="ME-results" class="results">
-    <b class="name">Maine</b><br>
+  <div id="MO-results" class="results">
+    <b class="name">Missouri</b><br>
     No election
   </div>
 
-  <div id="DE-results" class="results">
-    <b class="name">Delaware</b><br>
+  <div id="PA-results" class="results">
+    <b class="name">Pennsylvania</b><br>
     No election
   </div>
 
-  <div id="FL-results" class="results">
-    <b class="name">Florida</b><br>
+  <div id="AK-results" class="results">
+    <b class="name">Alaska</b><br>
     No election
   </div>
 
-  <div id="LA-results" class="results">
-    <b class="name">Louisiana</b><br>
+  <div id="TN-results" class="results">
+    <b class="name">Tennessee</b><br>
     No election
   </div>
 
@@ -6673,18 +6739,78 @@ Pre-election estimate: <b>N/A</b>
     No election
   </div>
 
+  <div id="VT-results" class="results">
+    <b class="name">Vermont</b><br>
+    No election
+  </div>
+
+  <div id="MA-results" class="results">
+    <b class="name">Massachusetts</b><br>
+    No election
+  </div>
+
+  <div id="IL-results" class="results">
+    <b class="name">Illinois</b><br>
+    No election
+  </div>
+
+  <div id="ND-results" class="results">
+    <b class="name">North Dakota</b><br>
+    No election
+  </div>
+
+  <div id="NE-results" class="results">
+    <b class="name">Nebraska</b><br>
+    No election
+  </div>
+
   <div id="NY-results" class="results">
     <b class="name">New York</b><br>
     No election
   </div>
 
-  <div id="WI-results" class="results">
-    <b class="name">Wisconsin</b><br>
+  <div id="AZ-results" class="results">
+    <b class="name">Arizona</b><br>
     No election
   </div>
 
-  <div id="CO-results" class="results">
-    <b class="name">Colorado</b><br>
+  <div id="UT-results" class="results">
+    <b class="name">Utah</b><br>
+    No election
+  </div>
+
+  <div id="WY-results" class="results">
+    <b class="name">Wyoming</b><br>
+    No election
+  </div>
+
+  <div id="NJ-results" class="results">
+    <b class="name">New Jersey</b><br>
+    No election
+  </div>
+
+  <div id="WA-results" class="results">
+    <b class="name">Washington</b><br>
+    No election
+  </div>
+
+  <div id="NM-results" class="results">
+    <b class="name">New Mexico</b><br>
+    No election
+  </div>
+
+  <div id="MS-results" class="results">
+    <b class="name">Mississippi</b><br>
+    No election
+  </div>
+
+  <div id="OH-results" class="results">
+    <b class="name">Ohio</b><br>
+    No election
+  </div>
+
+  <div id="VA-results" class="results">
+    <b class="name">Virginia</b><br>
     No election
   </div>
 
@@ -6693,8 +6819,28 @@ Pre-election estimate: <b>N/A</b>
     No election
   </div>
 
-  <div id="WA-results" class="results">
-    <b class="name">Washington</b><br>
+  <div id="LA-results" class="results">
+    <b class="name">Louisiana</b><br>
+    No election
+  </div>
+
+  <div id="SD-results" class="results">
+    <b class="name">South Dakota</b><br>
+    No election
+  </div>
+
+  <div id="GA-results" class="results">
+    <b class="name">Georgia</b><br>
+    No election
+  </div>
+
+  <div id="OK-results" class="results">
+    <b class="name">Oklahoma</b><br>
+    No election
+  </div>
+
+  <div id="CA-results" class="results">
+    <b class="name">California</b><br>
     No election
   </div>
 
@@ -6708,158 +6854,18 @@ Pre-election estimate: <b>N/A</b>
     No election
   </div>
 
-  <div id="MA-results" class="results">
-    <b class="name">Massachusetts</b><br>
-    No election
-  </div>
-
-  <div id="OH-results" class="results">
-    <b class="name">Ohio</b><br>
-    No election
-  </div>
-
-  <div id="PA-results" class="results">
-    <b class="name">Pennsylvania</b><br>
-    No election
-  </div>
-
-  <div id="NJ-results" class="results">
-    <b class="name">New Jersey</b><br>
-    No election
-  </div>
-
-  <div id="IN-results" class="results">
-    <b class="name">Indiana</b><br>
-    No election
-  </div>
-
   <div id="WV-results" class="results">
     <b class="name">West Virginia</b><br>
     No election
   </div>
 
-  <div id="AL-results" class="results">
-    <b class="name">Alabama</b><br>
+  <div id="WI-results" class="results">
+    <b class="name">Wisconsin</b><br>
     No election
   </div>
 
-  <div id="ND-results" class="results">
-    <b class="name">North Dakota</b><br>
-    No election
-  </div>
-
-  <div id="VT-results" class="results">
-    <b class="name">Vermont</b><br>
-    No election
-  </div>
-
-  <div id="DC-results" class="results">
-    <b class="name">District of Columbia</b><br>
-    No election
-  </div>
-
-  <div id="MN-results" class="results">
-    <b class="name">Minnesota</b><br>
-    No election
-  </div>
-
-  <div id="SD-results" class="results">
-    <b class="name">South Dakota</b><br>
-    No election
-  </div>
-
-  <div id="NE-results" class="results">
-    <b class="name">Nebraska</b><br>
-    No election
-  </div>
-
-  <div id="OK-results" class="results">
-    <b class="name">Oklahoma</b><br>
-    No election
-  </div>
-
-  <div id="TN-results" class="results">
-    <b class="name">Tennessee</b><br>
-    No election
-  </div>
-
-  <div id="KS-results" class="results">
-    <b class="name">Kansas</b><br>
-    No election
-  </div>
-
-  <div id="NV-results" class="results">
-    <b class="name">Nevada</b><br>
-    No election
-  </div>
-
-  <div id="WY-results" class="results">
-    <b class="name">Wyoming</b><br>
-    No election
-  </div>
-
-  <div id="MD-results" class="results">
-    <b class="name">Maryland</b><br>
-    No election
-  </div>
-
-  <div id="NM-results" class="results">
-    <b class="name">New Mexico</b><br>
-    No election
-  </div>
-
-  <div id="VA-results" class="results">
-    <b class="name">Virginia</b><br>
-    No election
-  </div>
-
-  <div id="UT-results" class="results">
-    <b class="name">Utah</b><br>
-    No election
-  </div>
-
-  <div id="AK-results" class="results">
-    <b class="name">Alaska</b><br>
-    No election
-  </div>
-
-  <div id="CA-results" class="results">
-    <b class="name">California</b><br>
-    No election
-  </div>
-
-  <div id="CT-results" class="results">
-    <b class="name">Connecticut</b><br>
-    No election
-  </div>
-
-  <div id="TX-results" class="results">
-    <b class="name">Texas</b><br>
-    No election
-  </div>
-
-  <div id="AZ-results" class="results">
-    <b class="name">Arizona</b><br>
-    No election
-  </div>
-
-  <div id="KY-results" class="results">
-    <b class="name">Kentucky</b><br>
-    No election
-  </div>
-
-  <div id="HI-results" class="results">
-    <b class="name">Hawaii</b><br>
-    No election
-  </div>
-
-  <div id="MO-results" class="results">
-    <b class="name">Missouri</b><br>
-    No election
-  </div>
-
-  <div id="RI-results" class="results">
-    <b class="name">Rhode Island</b><br>
+  <div id="DE-results" class="results">
+    <b class="name">Delaware</b><br>
     No election
   </div>
 
@@ -6868,13 +6874,58 @@ Pre-election estimate: <b>N/A</b>
     No election
   </div>
 
-  <div id="MT-results" class="results">
-    <b class="name">Montana</b><br>
+  <div id="RI-results" class="results">
+    <b class="name">Rhode Island</b><br>
     No election
   </div>
 
-  <div id="IL-results" class="results">
-    <b class="name">Illinois</b><br>
+  <div id="KY-results" class="results">
+    <b class="name">Kentucky</b><br>
+    No election
+  </div>
+
+  <div id="MN-results" class="results">
+    <b class="name">Minnesota</b><br>
+    No election
+  </div>
+
+  <div id="AL-results" class="results">
+    <b class="name">Alabama</b><br>
+    No election
+  </div>
+
+  <div id="TX-results" class="results">
+    <b class="name">Texas</b><br>
+    No election
+  </div>
+
+  <div id="CT-results" class="results">
+    <b class="name">Connecticut</b><br>
+    No election
+  </div>
+
+  <div id="IN-results" class="results">
+    <b class="name">Indiana</b><br>
+    No election
+  </div>
+
+  <div id="ME-results" class="results">
+    <b class="name">Maine</b><br>
+    No election
+  </div>
+
+  <div id="FL-results" class="results">
+    <b class="name">Florida</b><br>
+    No election
+  </div>
+
+  <div id="CO-results" class="results">
+    <b class="name">Colorado</b><br>
+    No election
+  </div>
+
+  <div id="DC-results" class="results">
+    <b class="name">District of Columbia</b><br>
     No election
   </div>
 
@@ -6889,6 +6940,7 @@ Pre-election estimate: <b>N/A</b>
 <td>Pct</td>
 </tr>
 <tr><td>Donald J. Trump</td><td>REP</td><td class="votes">110</td><td class="pct">99.1</td></tr>
+<tr><td>Bill Weld</td><td>REP</td><td class="votes">1</td><td class="pct">0.9</td></tr>
 
 </tbody>
 </table>
@@ -6927,6 +6979,7 @@ Lead: <b>Trump +79.7</b><br>
 <td>Pct</td>
 </tr>
 <tr><td>Donald J. Trump</td><td>REP</td><td class="votes">157</td><td class="pct">99.4</td></tr>
+<tr><td>Bill Weld</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
 
 </tbody>
 </table>
@@ -6945,6 +6998,7 @@ Lead: <b>Trump +98.7</b><br>
 <td>Pct</td>
 </tr>
 <tr><td>Donald J. Trump</td><td>REP</td><td class="votes">233</td><td class="pct">99.6</td></tr>
+<tr><td>Bill Weld</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
 
 </tbody>
 </table>
@@ -7021,6 +7075,7 @@ Lead: <b>Trump +95.3</b><br>
 <td>Pct</td>
 </tr>
 <tr><td>Donald J. Trump</td><td>REP</td><td class="votes">357</td><td class="pct">98.3</td></tr>
+<tr><td>Bill Weld</td><td>REP</td><td class="votes">3</td><td class="pct">0.8</td></tr>
 
 </tbody>
 </table>
@@ -7059,6 +7114,7 @@ Lead: <b>Trump +88.5</b><br>
 </tr>
 <tr><td>Donald J. Trump</td><td>REP</td><td class="votes">181</td><td class="pct">98.9</td></tr>
 <tr><td>Joe Walsh</td><td>REP</td><td class="votes">2</td><td class="pct">1.1</td></tr>
+<tr><td>Bill Weld</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
 
 </tbody>
 </table>
@@ -7077,6 +7133,7 @@ Lead: <b>Trump +97.8</b><br>
 <td>Pct</td>
 </tr>
 <tr><td>Donald J. Trump</td><td>REP</td><td class="votes">143</td><td class="pct">100.0</td></tr>
+<tr><td>Bill Weld</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
 
 </tbody>
 </table>
@@ -7114,6 +7171,7 @@ Lead: <b>Trump +93.3</b><br>
 <td>Pct</td>
 </tr>
 <tr><td>Donald J. Trump</td><td>REP</td><td class="votes">105</td><td class="pct">100.0</td></tr>
+<tr><td>Bill Weld</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
 
 </tbody>
 </table>
@@ -7132,6 +7190,7 @@ Lead: <b>Trump +100.0</b><br>
 <td>Pct</td>
 </tr>
 <tr><td>Donald J. Trump</td><td>REP</td><td class="votes">180</td><td class="pct">99.4</td></tr>
+<tr><td>Bill Weld</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
 
 </tbody>
 </table>
@@ -7151,6 +7210,7 @@ Lead: <b>Trump +98.9</b><br>
 </tr>
 <tr><td>Donald J. Trump</td><td>REP</td><td class="votes">207</td><td class="pct">98.1</td></tr>
 <tr><td>Joe Walsh</td><td>REP</td><td class="votes">3</td><td class="pct">1.4</td></tr>
+<tr><td>Bill Weld</td><td>REP</td><td class="votes">1</td><td class="pct">0.5</td></tr>
 
 </tbody>
 </table>
@@ -7169,6 +7229,7 @@ Lead: <b>Trump +96.7</b><br>
 <td>Pct</td>
 </tr>
 <tr><td>Donald J. Trump</td><td>REP</td><td class="votes">262</td><td class="pct">99.2</td></tr>
+<tr><td>Bill Weld</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
 
 </tbody>
 </table>
@@ -7187,6 +7248,7 @@ Lead: <b>Trump +98.5</b><br>
 <td>Pct</td>
 </tr>
 <tr><td>Donald J. Trump</td><td>REP</td><td class="votes">337</td><td class="pct">99.1</td></tr>
+<tr><td>Bill Weld</td><td>REP</td><td class="votes">1</td><td class="pct">0.3</td></tr>
 
 </tbody>
 </table>
@@ -7206,6 +7268,7 @@ Lead: <b>Trump +98.5</b><br>
 </tr>
 <tr><td>Donald J. Trump</td><td>REP</td><td class="votes">153</td><td class="pct">96.8</td></tr>
 <tr><td>Joe Walsh</td><td>REP</td><td class="votes">5</td><td class="pct">3.2</td></tr>
+<tr><td>Bill Weld</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
 
 </tbody>
 </table>
@@ -7225,6 +7288,7 @@ Lead: <b>Trump +93.7</b><br>
 </tr>
 <tr><td>Donald J. Trump</td><td>REP</td><td class="votes">131</td><td class="pct">97.0</td></tr>
 <tr><td>Joe Walsh</td><td>REP</td><td class="votes">3</td><td class="pct">2.2</td></tr>
+<tr><td>Bill Weld</td><td>REP</td><td class="votes">1</td><td class="pct">0.7</td></tr>
 
 </tbody>
 </table>
@@ -7243,6 +7307,7 @@ Lead: <b>Trump +94.8</b><br>
 <td>Pct</td>
 </tr>
 <tr><td>Donald J. Trump</td><td>REP</td><td class="votes">131</td><td class="pct">98.5</td></tr>
+<tr><td>Bill Weld</td><td>REP</td><td class="votes">1</td><td class="pct">0.8</td></tr>
 
 </tbody>
 </table>
@@ -7261,6 +7326,7 @@ Lead: <b>Trump +97.7</b><br>
 <td>Pct</td>
 </tr>
 <tr><td>Donald J. Trump</td><td>REP</td><td class="votes">164</td><td class="pct">99.4</td></tr>
+<tr><td>Bill Weld</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
 
 </tbody>
 </table>
@@ -7299,6 +7365,7 @@ Lead: <b>Trump +95.9</b><br>
 <td>Pct</td>
 </tr>
 <tr><td>Donald J. Trump</td><td>REP</td><td class="votes">515</td><td class="pct">99.2</td></tr>
+<tr><td>Bill Weld</td><td>REP</td><td class="votes">3</td><td class="pct">0.6</td></tr>
 
 </tbody>
 </table>
@@ -7317,6 +7384,7 @@ Lead: <b>Trump +98.7</b><br>
 <td>Pct</td>
 </tr>
 <tr><td>Donald J. Trump</td><td>REP</td><td class="votes">142</td><td class="pct">99.3</td></tr>
+<tr><td>Bill Weld</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
 
 </tbody>
 </table>
@@ -7354,6 +7422,7 @@ Lead: <b>Trump +95.2</b><br>
 <td>Pct</td>
 </tr>
 <tr><td>Donald J. Trump</td><td>REP</td><td class="votes">151</td><td class="pct">99.3</td></tr>
+<tr><td>Bill Weld</td><td>REP</td><td class="votes">1</td><td class="pct">0.7</td></tr>
 
 </tbody>
 </table>
@@ -7372,6 +7441,7 @@ Lead: <b>Trump +98.7</b><br>
 <td>Pct</td>
 </tr>
 <tr><td>Donald J. Trump</td><td>REP</td><td class="votes">107</td><td class="pct">99.1</td></tr>
+<tr><td>Bill Weld</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
 
 </tbody>
 </table>
@@ -7410,6 +7480,7 @@ Lead: <b>Trump +95.9</b><br>
 <td>Pct</td>
 </tr>
 <tr><td>Donald J. Trump</td><td>REP</td><td class="votes">522</td><td class="pct">99.4</td></tr>
+<tr><td>Bill Weld</td><td>REP</td><td class="votes">3</td><td class="pct">0.6</td></tr>
 
 </tbody>
 </table>
@@ -7428,6 +7499,7 @@ Lead: <b>Trump +98.9</b><br>
 <td>Pct</td>
 </tr>
 <tr><td>Donald J. Trump</td><td>REP</td><td class="votes">282</td><td class="pct">99.3</td></tr>
+<tr><td>Bill Weld</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
 
 </tbody>
 </table>
@@ -7466,6 +7538,7 @@ Lead: <b>Trump +96.2</b><br>
 <td>Pct</td>
 </tr>
 <tr><td>Donald J. Trump</td><td>REP</td><td class="votes">82</td><td class="pct">100.0</td></tr>
+<tr><td>Bill Weld</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
 
 </tbody>
 </table>
@@ -7505,6 +7578,7 @@ Lead: <b>Trump +84.1</b><br>
 </tr>
 <tr><td>Donald J. Trump</td><td>REP</td><td class="votes">109</td><td class="pct">97.3</td></tr>
 <tr><td>Joe Walsh</td><td>REP</td><td class="votes">2</td><td class="pct">1.8</td></tr>
+<tr><td>Bill Weld</td><td>REP</td><td class="votes">1</td><td class="pct">0.9</td></tr>
 
 </tbody>
 </table>
@@ -7523,6 +7597,7 @@ Lead: <b>Trump +95.5</b><br>
 <td>Pct</td>
 </tr>
 <tr><td>Donald J. Trump</td><td>REP</td><td class="votes">157</td><td class="pct">100.0</td></tr>
+<tr><td>Bill Weld</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
 
 </tbody>
 </table>
@@ -7542,6 +7617,7 @@ Lead: <b>Trump +100.0</b><br>
 </tr>
 <tr><td>Donald J. Trump</td><td>REP</td><td class="votes">105</td><td class="pct">98.1</td></tr>
 <tr><td>Joe Walsh</td><td>REP</td><td class="votes">2</td><td class="pct">1.9</td></tr>
+<tr><td>Bill Weld</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
 
 </tbody>
 </table>
@@ -7560,6 +7636,7 @@ Lead: <b>Trump +96.3</b><br>
 <td>Pct</td>
 </tr>
 <tr><td>Donald J. Trump</td><td>REP</td><td class="votes">132</td><td class="pct">99.2</td></tr>
+<tr><td>Bill Weld</td><td>REP</td><td class="votes">1</td><td class="pct">0.8</td></tr>
 
 </tbody>
 </table>
@@ -7578,6 +7655,7 @@ Lead: <b>Trump +98.5</b><br>
 <td>Pct</td>
 </tr>
 <tr><td>Donald J. Trump</td><td>REP</td><td class="votes">168</td><td class="pct">98.2</td></tr>
+<tr><td>Bill Weld</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
 
 </tbody>
 </table>
@@ -7596,6 +7674,7 @@ Lead: <b>Trump +97.1</b><br>
 <td>Pct</td>
 </tr>
 <tr><td>Donald J. Trump</td><td>REP</td><td class="votes">153</td><td class="pct">98.7</td></tr>
+<tr><td>Bill Weld</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
 
 </tbody>
 </table>
@@ -7633,6 +7712,7 @@ Lead: <b>Trump +92.0</b><br>
 <td>Pct</td>
 </tr>
 <tr><td>Donald J. Trump</td><td>REP</td><td class="votes">166</td><td class="pct">99.4</td></tr>
+<tr><td>Bill Weld</td><td>REP</td><td class="votes">1</td><td class="pct">0.6</td></tr>
 
 </tbody>
 </table>
@@ -7670,6 +7750,7 @@ Lead: <b>Trump +97.0</b><br>
 <td>Pct</td>
 </tr>
 <tr><td>Donald J. Trump</td><td>REP</td><td class="votes">288</td><td class="pct">99.0</td></tr>
+<tr><td>Bill Weld</td><td>REP</td><td class="votes">1</td><td class="pct">0.3</td></tr>
 
 </tbody>
 </table>
@@ -7707,6 +7788,7 @@ Lead: <b>Trump +91.1</b><br>
 <td>Pct</td>
 </tr>
 <tr><td>Donald J. Trump</td><td>REP</td><td class="votes">118</td><td class="pct">99.2</td></tr>
+<tr><td>Bill Weld</td><td>REP</td><td class="votes">1</td><td class="pct">0.8</td></tr>
 
 </tbody>
 </table>
@@ -7744,6 +7826,7 @@ Lead: <b>Trump +96.1</b><br>
 <td>Pct</td>
 </tr>
 <tr><td>Donald J. Trump</td><td>REP</td><td class="votes">133</td><td class="pct">98.5</td></tr>
+<tr><td>Bill Weld</td><td>REP</td><td class="votes">1</td><td class="pct">0.7</td></tr>
 
 </tbody>
 </table>
@@ -7781,6 +7864,7 @@ Lead: <b>Trump +96.3</b><br>
 <td>Pct</td>
 </tr>
 <tr><td>Donald J. Trump</td><td>REP</td><td class="votes">204</td><td class="pct">99.5</td></tr>
+<tr><td>Bill Weld</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
 
 </tbody>
 </table>
@@ -7800,6 +7884,7 @@ Lead: <b>Trump +99.0</b><br>
 </tr>
 <tr><td>Donald J. Trump</td><td>REP</td><td class="votes">500</td><td class="pct">97.8</td></tr>
 <tr><td>Joe Walsh</td><td>REP</td><td class="votes">7</td><td class="pct">1.4</td></tr>
+<tr><td>Bill Weld</td><td>REP</td><td class="votes">3</td><td class="pct">0.6</td></tr>
 
 </tbody>
 </table>
@@ -7818,6 +7903,7 @@ Lead: <b>Trump +96.5</b><br>
 <td>Pct</td>
 </tr>
 <tr><td>Donald J. Trump</td><td>REP</td><td class="votes">176</td><td class="pct">98.9</td></tr>
+<tr><td>Bill Weld</td><td>REP</td><td class="votes">1</td><td class="pct">0.6</td></tr>
 
 </tbody>
 </table>
@@ -7875,6 +7961,7 @@ Lead: <b>Trump +98.0</b><br>
 <td>Pct</td>
 </tr>
 <tr><td>Donald J. Trump</td><td>REP</td><td class="votes">169</td><td class="pct">98.8</td></tr>
+<tr><td>Bill Weld</td><td>REP</td><td class="votes">1</td><td class="pct">0.6</td></tr>
 
 </tbody>
 </table>
@@ -7893,6 +7980,7 @@ Lead: <b>Trump +98.2</b><br>
 <td>Pct</td>
 </tr>
 <tr><td>Donald J. Trump</td><td>REP</td><td class="votes">165</td><td class="pct">98.2</td></tr>
+<tr><td>Bill Weld</td><td>REP</td><td class="votes">1</td><td class="pct">0.6</td></tr>
 
 </tbody>
 </table>
@@ -7911,6 +7999,7 @@ Lead: <b>Trump +97.6</b><br>
 <td>Pct</td>
 </tr>
 <tr><td>Donald J. Trump</td><td>REP</td><td class="votes">378</td><td class="pct">99.0</td></tr>
+<tr><td>Bill Weld</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
 
 </tbody>
 </table>
@@ -7948,6 +8037,7 @@ Lead: <b>Trump +92.9</b><br>
 <td>Pct</td>
 </tr>
 <tr><td>Donald J. Trump</td><td>REP</td><td class="votes">141</td><td class="pct">98.6</td></tr>
+<tr><td>Bill Weld</td><td>REP</td><td class="votes">1</td><td class="pct">0.7</td></tr>
 
 </tbody>
 </table>
@@ -7966,6 +8056,7 @@ Lead: <b>Trump +97.9</b><br>
 <td>Pct</td>
 </tr>
 <tr><td>Donald J. Trump</td><td>REP</td><td class="votes">191</td><td class="pct">99.5</td></tr>
+<tr><td>Bill Weld</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
 
 </tbody>
 </table>
@@ -7984,6 +8075,7 @@ Lead: <b>Trump +99.0</b><br>
 <td>Pct</td>
 </tr>
 <tr><td>Donald J. Trump</td><td>REP</td><td class="votes">162</td><td class="pct">100.0</td></tr>
+<tr><td>Bill Weld</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
 
 </tbody>
 </table>
@@ -8003,6 +8095,7 @@ Lead: <b>Trump +100.0</b><br>
 </tr>
 <tr><td>Donald J. Trump</td><td>REP</td><td class="votes">275</td><td class="pct">96.8</td></tr>
 <tr><td>Joe Walsh</td><td>REP</td><td class="votes">7</td><td class="pct">2.5</td></tr>
+<tr><td>Bill Weld</td><td>REP</td><td class="votes">2</td><td class="pct">0.7</td></tr>
 
 </tbody>
 </table>
@@ -8021,6 +8114,7 @@ Lead: <b>Trump +94.4</b><br>
 <td>Pct</td>
 </tr>
 <tr><td>Donald J. Trump</td><td>REP</td><td class="votes">369</td><td class="pct">99.2</td></tr>
+<tr><td>Bill Weld</td><td>REP</td><td class="votes">2</td><td class="pct">0.5</td></tr>
 
 </tbody>
 </table>
@@ -8059,6 +8153,7 @@ Lead: <b>Trump +95.6</b><br>
 <td>Pct</td>
 </tr>
 <tr><td>Donald J. Trump</td><td>REP</td><td class="votes">418</td><td class="pct">99.3</td></tr>
+<tr><td>Bill Weld</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
 
 </tbody>
 </table>
@@ -8078,6 +8173,7 @@ Lead: <b>Trump +98.6</b><br>
 </tr>
 <tr><td>Donald J. Trump</td><td>REP</td><td class="votes">237</td><td class="pct">97.5</td></tr>
 <tr><td>Joe Walsh</td><td>REP</td><td class="votes">4</td><td class="pct">1.6</td></tr>
+<tr><td>Bill Weld</td><td>REP</td><td class="votes">2</td><td class="pct">0.8</td></tr>
 
 </tbody>
 </table>
@@ -8097,6 +8193,7 @@ Lead: <b>Trump +95.9</b><br>
 </tr>
 <tr><td>Donald J. Trump</td><td>REP</td><td class="votes">78</td><td class="pct">98.7</td></tr>
 <tr><td>Joe Walsh</td><td>REP</td><td class="votes">1</td><td class="pct">1.3</td></tr>
+<tr><td>Bill Weld</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
 
 </tbody>
 </table>
@@ -8115,6 +8212,7 @@ Lead: <b>Trump +97.5</b><br>
 <td>Pct</td>
 </tr>
 <tr><td>Donald J. Trump</td><td>REP</td><td class="votes">69</td><td class="pct">94.5</td></tr>
+<tr><td>Bill Weld</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
 
 </tbody>
 </table>
@@ -8133,6 +8231,7 @@ Lead: <b>Trump +89.0</b><br>
 <td>Pct</td>
 </tr>
 <tr><td>Donald J. Trump</td><td>REP</td><td class="votes">139</td><td class="pct">100.0</td></tr>
+<tr><td>Bill Weld</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
 
 </tbody>
 </table>
@@ -8151,6 +8250,7 @@ Lead: <b>Trump +100.0</b><br>
 <td>Pct</td>
 </tr>
 <tr><td>Donald J. Trump</td><td>REP</td><td class="votes">75</td><td class="pct">100.0</td></tr>
+<tr><td>Bill Weld</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
 
 </tbody>
 </table>
@@ -8228,6 +8328,7 @@ Lead: <b>Trump +96.2</b><br>
 <td>Pct</td>
 </tr>
 <tr><td>Donald J. Trump</td><td>REP</td><td class="votes">179</td><td class="pct">99.4</td></tr>
+<tr><td>Bill Weld</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
 
 </tbody>
 </table>
@@ -8265,6 +8366,7 @@ Lead: <b>Trump +98.0</b><br>
 <td>Pct</td>
 </tr>
 <tr><td>Donald J. Trump</td><td>REP</td><td class="votes">363</td><td class="pct">99.7</td></tr>
+<tr><td>Bill Weld</td><td>REP</td><td class="votes">1</td><td class="pct">0.3</td></tr>
 
 </tbody>
 </table>
@@ -8283,6 +8385,7 @@ Lead: <b>Trump +99.5</b><br>
 <td>Pct</td>
 </tr>
 <tr><td>Donald J. Trump</td><td>REP</td><td class="votes">120</td><td class="pct">100.0</td></tr>
+<tr><td>Bill Weld</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
 
 </tbody>
 </table>
@@ -8321,6 +8424,7 @@ Lead: <b>Trump +94.0</b><br>
 <td>Pct</td>
 </tr>
 <tr><td>Donald J. Trump</td><td>REP</td><td class="votes">772</td><td class="pct">99.2</td></tr>
+<tr><td>Bill Weld</td><td>REP</td><td class="votes">2</td><td class="pct">0.3</td></tr>
 
 </tbody>
 </table>
@@ -8359,6 +8463,7 @@ Lead: <b>Trump +93.5</b><br>
 <td>Pct</td>
 </tr>
 <tr><td>Donald J. Trump</td><td>REP</td><td class="votes">106</td><td class="pct">99.1</td></tr>
+<tr><td>Bill Weld</td><td>REP</td><td class="votes">1</td><td class="pct">0.9</td></tr>
 
 </tbody>
 </table>
@@ -8416,6 +8521,7 @@ Lead: <b>Trump +91.7</b><br>
 <td>Pct</td>
 </tr>
 <tr><td>Donald J. Trump</td><td>REP</td><td class="votes">149</td><td class="pct">100.0</td></tr>
+<tr><td>Bill Weld</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
 
 </tbody>
 </table>
@@ -8475,6 +8581,7 @@ Lead: <b>Trump +91.3</b><br>
 </tr>
 <tr><td>Donald J. Trump</td><td>REP</td><td class="votes">207</td><td class="pct">98.6</td></tr>
 <tr><td>Joe Walsh</td><td>REP</td><td class="votes">3</td><td class="pct">1.4</td></tr>
+<tr><td>Bill Weld</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
 
 </tbody>
 </table>
@@ -8493,6 +8600,7 @@ Lead: <b>Trump +97.1</b><br>
 <td>Pct</td>
 </tr>
 <tr><td>Donald J. Trump</td><td>REP</td><td class="votes">57</td><td class="pct">100.0</td></tr>
+<tr><td>Bill Weld</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
 
 </tbody>
 </table>
@@ -8511,6 +8619,7 @@ Lead: <b>Trump +100.0</b><br>
 <td>Pct</td>
 </tr>
 <tr><td>Donald J. Trump</td><td>REP</td><td class="votes">144</td><td class="pct">98.6</td></tr>
+<tr><td>Bill Weld</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
 
 </tbody>
 </table>
@@ -8529,6 +8638,7 @@ Lead: <b>Trump +97.9</b><br>
 <td>Pct</td>
 </tr>
 <tr><td>Donald J. Trump</td><td>REP</td><td class="votes">130</td><td class="pct">98.5</td></tr>
+<tr><td>Bill Weld</td><td>REP</td><td class="votes">1</td><td class="pct">0.8</td></tr>
 
 </tbody>
 </table>
@@ -8547,6 +8657,7 @@ Lead: <b>Trump +97.7</b><br>
 <td>Pct</td>
 </tr>
 <tr><td>Donald J. Trump</td><td>REP</td><td class="votes">331</td><td class="pct">99.4</td></tr>
+<tr><td>Bill Weld</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
 
 </tbody>
 </table>
@@ -8566,6 +8677,7 @@ Lead: <b>Trump +98.8</b><br>
 </tr>
 <tr><td>Donald J. Trump</td><td>REP</td><td class="votes">737</td><td class="pct">98.0</td></tr>
 <tr><td>Joe Walsh</td><td>REP</td><td class="votes">8</td><td class="pct">1.1</td></tr>
+<tr><td>Bill Weld</td><td>REP</td><td class="votes">4</td><td class="pct">0.5</td></tr>
 
 </tbody>
 </table>
@@ -8584,6 +8696,7 @@ Lead: <b>Trump +96.9</b><br>
 <td>Pct</td>
 </tr>
 <tr><td>Donald J. Trump</td><td>REP</td><td class="votes">315</td><td class="pct">99.1</td></tr>
+<tr><td>Bill Weld</td><td>REP</td><td class="votes">2</td><td class="pct">0.6</td></tr>
 
 </tbody>
 </table>
@@ -8602,6 +8715,7 @@ Lead: <b>Trump +98.4</b><br>
 <td>Pct</td>
 </tr>
 <tr><td>Donald J. Trump</td><td>REP</td><td class="votes">143</td><td class="pct">98.6</td></tr>
+<tr><td>Bill Weld</td><td>REP</td><td class="votes">1</td><td class="pct">0.7</td></tr>
 
 </tbody>
 </table>
@@ -8639,6 +8753,7 @@ Lead: <b>Trump +93.9</b><br>
 <td>Pct</td>
 </tr>
 <tr><td>Donald J. Trump</td><td>REP</td><td class="votes">158</td><td class="pct">99.4</td></tr>
+<tr><td>Bill Weld</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
 
 </tbody>
 </table>
@@ -8677,6 +8792,7 @@ Lead: <b>Trump +90.4</b><br>
 <td>Pct</td>
 </tr>
 <tr><td>Donald J. Trump</td><td>REP</td><td class="votes">915</td><td class="pct">98.7</td></tr>
+<tr><td>Bill Weld</td><td>REP</td><td class="votes">4</td><td class="pct">0.4</td></tr>
 
 </tbody>
 </table>
@@ -8695,6 +8811,7 @@ Lead: <b>Trump +98.2</b><br>
 <td>Pct</td>
 </tr>
 <tr><td>Donald J. Trump</td><td>REP</td><td class="votes">74</td><td class="pct">100.0</td></tr>
+<tr><td>Bill Weld</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
 
 </tbody>
 </table>
@@ -8714,6 +8831,7 @@ Lead: <b>Trump +100.0</b><br>
 </tr>
 <tr><td>Donald J. Trump</td><td>REP</td><td class="votes">121</td><td class="pct">96.8</td></tr>
 <tr><td>Joe Walsh</td><td>REP</td><td class="votes">2</td><td class="pct">1.6</td></tr>
+<tr><td>Bill Weld</td><td>REP</td><td class="votes">1</td><td class="pct">0.8</td></tr>
 
 </tbody>
 </table>
@@ -8811,7 +8929,7 @@ Lead: <b>Trump +80.2</b><br>
 <td>Votes</td>
 <td>Pct</td>
 </tr>
-<tr><td>Donald J. Trump</td><td>REP</td><td class="votes">6,860</td><td class="pct">82.9</td></tr>
+<tr><td>Donald J. Trump</td><td>REP</td><td class="votes">6,918</td><td class="pct">83.0</td></tr>
 <tr><td>Bill Weld</td><td>REP</td><td class="votes">738</td><td class="pct">8.9</td></tr>
 <tr><td>Total Write-ins</td><td>REP</td><td class="votes">321</td><td class="pct">3.9</td></tr>
 <tr><td>William Murphy</td><td>REP</td><td class="votes">86</td><td class="pct">1.0</td></tr>
@@ -8819,7 +8937,7 @@ Lead: <b>Trump +80.2</b><br>
 </tbody>
 </table>
 100.0% of precincts reporting<br>
-Lead: <b>Trump +74.0</b><br>
+Lead: <b>Trump +74.1</b><br>
 </div>
 
 <div id="33011-results" class="results">
