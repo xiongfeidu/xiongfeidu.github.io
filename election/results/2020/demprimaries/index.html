@@ -6571,7 +6571,7 @@
   function setColor(id, color) {
     document.getElementById(id).style.fill = color;
   }
-  var stateColors = {"IA": "#FFFF90", "NH": "#007F00", "NV": "#007F00", "SC": "#0000FF", "VT": "#0000FF", "VA": "#0000FF", "NC": "#FFFFFF", "AL": "#FFFFFF", "ME": "#FFFFFF", "MA": "#FFFFFF", "OK": "#FFFFFF", "TN": "#FFFFFF", "TX": "#FFFFFF", "AR": "#FFFFFF", "CO": "#FFFFFF", "MN": "#FFFFFF", "UT": "#FFFFFF", "CA": "#FFFFFF"};
+  var stateColors = {"IA": "#FFFF90", "NH": "#007F00", "NV": "#007F00", "SC": "#0000FF", "VT": "#007F00", "VA": "#0000FF", "NC": "#FFFFFF", "AL": "#FFFFFF", "ME": "#FFFFFF", "MA": "#FFFFFF", "OK": "#FFFFFF", "TN": "#FFFFFF", "TX": "#FFFFFF", "AR": "#FFFFFF", "CO": "#FFFFFF", "MN": "#FFFFFF", "UT": "#FFFFFF", "CA": "#FFFFFF"};
   function colorAll() {
     for (var state in stateColors) {
       setColor(state, stateColors[state]);
@@ -6734,7 +6734,7 @@ Pre-election estimate: <b>Likely Biden</b>
 <td>Pct</td>
 <td>Del</td>
 </tr>
-<tr><td>Bernie Sanders</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td><td class="votes">8</td></tr>
+<tr><td style="color: #fff" bgcolor="#007F00">Bernie Sanders ✔</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td><td class="votes">8</td></tr>
 <tr><td>Joseph R. Biden Jr.</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td><td class="votes">0</td></tr>
 <tr><td>Elizabeth Warren</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td><td class="votes">0</td></tr>
 <tr><td>Michael R. Bloomberg</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td><td class="votes">0</td></tr>
@@ -6744,7 +6744,7 @@ Pre-election estimate: <b>Likely Biden</b>
 </tbody>
 </table>
 0.0% of precincts reporting<br>
-Status: <b>Not called</b><br>
+Status: <b>Called for Sanders (D)</b><br>
 Lead: <b>Tie</b><br>
 Model: <b>N/A</b><br>
 Pre-election estimate: <b>Safe Sanders</b>
@@ -7101,13 +7101,38 @@ Model: <b>N/A</b><br>
 Pre-election estimate: <b>Likely Sanders</b>
 </div>
 
-  <div id="IN-results" class="results">
-    <b class="name">Indiana</b><br>
-    Election to be held on Tuesday, May 5, 2020
+  <div id="ND-results" class="results">
+    <b class="name">North Dakota</b><br>
+    Election to be held on Tuesday, March 10, 2020
   </div>
 
-  <div id="SD-results" class="results">
-    <b class="name">South Dakota</b><br>
+  <div id="WY-results" class="results">
+    <b class="name">Wyoming</b><br>
+    Election to be held on Saturday, April 04, 2020
+  </div>
+
+  <div id="MS-results" class="results">
+    <b class="name">Mississippi</b><br>
+    Election to be held on Tuesday, March 10, 2020
+  </div>
+
+  <div id="ID-results" class="results">
+    <b class="name">Idaho</b><br>
+    Election to be held on Tuesday, March 10, 2020
+  </div>
+
+  <div id="NY-results" class="results">
+    <b class="name">New York</b><br>
+    Election to be held on Tuesday, April 28, 2020
+  </div>
+
+  <div id="FL-results" class="results">
+    <b class="name">Florida</b><br>
+    Election to be held on Tuesday, March 17, 2020
+  </div>
+
+  <div id="NJ-results" class="results">
+    <b class="name">New Jersey</b><br>
     Election to be held on Tuesday, June 02, 2020
   </div>
 
@@ -7116,14 +7141,29 @@ Pre-election estimate: <b>Likely Sanders</b>
     Election to be held on Tuesday, April 28, 2020
   </div>
 
-  <div id="WI-results" class="results">
-    <b class="name">Wisconsin</b><br>
-    Election to be held on Tuesday, April 07, 2020
+  <div id="PA-results" class="results">
+    <b class="name">Pennsylvania</b><br>
+    Election to be held on Tuesday, April 28, 2020
   </div>
 
-  <div id="KS-results" class="results">
-    <b class="name">Kansas</b><br>
-    Election to be held on Saturday, May 02, 2020
+  <div id="MO-results" class="results">
+    <b class="name">Missouri</b><br>
+    Election to be held on Tuesday, March 10, 2020
+  </div>
+
+  <div id="MT-results" class="results">
+    <b class="name">Montana</b><br>
+    Election to be held on Tuesday, June 02, 2020
+  </div>
+
+  <div id="NE-results" class="results">
+    <b class="name">Nebraska</b><br>
+    Election to be held on Tuesday, May 12, 2020
+  </div>
+
+  <div id="NM-results" class="results">
+    <b class="name">New Mexico</b><br>
+    Election to be held on Tuesday, June 02, 2020
   </div>
 
   <div id="HI-results" class="results">
@@ -7136,49 +7176,29 @@ Pre-election estimate: <b>Likely Sanders</b>
     Election to be held on Tuesday, March 17, 2020
   </div>
 
-  <div id="ID-results" class="results">
-    <b class="name">Idaho</b><br>
-    Election to be held on Tuesday, March 10, 2020
-  </div>
-
-  <div id="WY-results" class="results">
-    <b class="name">Wyoming</b><br>
-    Election to be held on Saturday, April 04, 2020
-  </div>
-
-  <div id="NY-results" class="results">
-    <b class="name">New York</b><br>
+  <div id="MD-results" class="results">
+    <b class="name">Maryland</b><br>
     Election to be held on Tuesday, April 28, 2020
   </div>
 
-  <div id="DC-results" class="results">
-    <b class="name">District of Columbia</b><br>
-    Election to be held on Tuesday, June 02, 2020
+  <div id="OR-results" class="results">
+    <b class="name">Oregon</b><br>
+    Election to be held on Tuesday, May 19, 2020
   </div>
 
-  <div id="MI-results" class="results">
-    <b class="name">Michigan</b><br>
-    Election to be held on Tuesday, March 10, 2020
-  </div>
-
-  <div id="PA-results" class="results">
-    <b class="name">Pennsylvania</b><br>
-    Election to be held on Tuesday, April 28, 2020
-  </div>
-
-  <div id="GA-results" class="results">
-    <b class="name">Georgia</b><br>
-    Election to be held on Tuesday, March 24, 2020
-  </div>
-
-  <div id="AZ-results" class="results">
-    <b class="name">Arizona</b><br>
-    Election to be held on Tuesday, March 17, 2020
+  <div id="WI-results" class="results">
+    <b class="name">Wisconsin</b><br>
+    Election to be held on Tuesday, April 07, 2020
   </div>
 
   <div id="WA-results" class="results">
     <b class="name">Washington</b><br>
     Election to be held on Tuesday, March 10, 2020
+  </div>
+
+  <div id="DC-results" class="results">
+    <b class="name">District of Columbia</b><br>
+    Election to be held on Tuesday, June 02, 2020
   </div>
 
   <div id="RI-results" class="results">
@@ -7191,19 +7211,34 @@ Pre-election estimate: <b>Likely Sanders</b>
     Election to be held on Saturday, April 04, 2020
   </div>
 
-  <div id="MT-results" class="results">
-    <b class="name">Montana</b><br>
-    Election to be held on Tuesday, June 02, 2020
+  <div id="AK-results" class="results">
+    <b class="name">Alaska</b><br>
+    Election to be held on Saturday, April 04, 2020
   </div>
 
-  <div id="OR-results" class="results">
-    <b class="name">Oregon</b><br>
+  <div id="IN-results" class="results">
+    <b class="name">Indiana</b><br>
+    Election to be held on Tuesday, May 5, 2020
+  </div>
+
+  <div id="KY-results" class="results">
+    <b class="name">Kentucky</b><br>
     Election to be held on Tuesday, May 19, 2020
   </div>
 
-  <div id="MD-results" class="results">
-    <b class="name">Maryland</b><br>
-    Election to be held on Tuesday, April 28, 2020
+  <div id="WV-results" class="results">
+    <b class="name">West Virginia</b><br>
+    Election to be held on Tuesday, May 12, 2020
+  </div>
+
+  <div id="MI-results" class="results">
+    <b class="name">Michigan</b><br>
+    Election to be held on Tuesday, March 10, 2020
+  </div>
+
+  <div id="AZ-results" class="results">
+    <b class="name">Arizona</b><br>
+    Election to be held on Tuesday, March 17, 2020
   </div>
 
   <div id="OH-results" class="results">
@@ -7216,54 +7251,19 @@ Pre-election estimate: <b>Likely Sanders</b>
     Election to be held on Tuesday, April 28, 2020
   </div>
 
-  <div id="ND-results" class="results">
-    <b class="name">North Dakota</b><br>
-    Election to be held on Tuesday, March 10, 2020
+  <div id="GA-results" class="results">
+    <b class="name">Georgia</b><br>
+    Election to be held on Tuesday, March 24, 2020
   </div>
 
-  <div id="AK-results" class="results">
-    <b class="name">Alaska</b><br>
-    Election to be held on Saturday, April 04, 2020
+  <div id="KS-results" class="results">
+    <b class="name">Kansas</b><br>
+    Election to be held on Saturday, May 02, 2020
   </div>
 
-  <div id="NJ-results" class="results">
-    <b class="name">New Jersey</b><br>
+  <div id="SD-results" class="results">
+    <b class="name">South Dakota</b><br>
     Election to be held on Tuesday, June 02, 2020
-  </div>
-
-  <div id="WV-results" class="results">
-    <b class="name">West Virginia</b><br>
-    Election to be held on Tuesday, May 12, 2020
-  </div>
-
-  <div id="MS-results" class="results">
-    <b class="name">Mississippi</b><br>
-    Election to be held on Tuesday, March 10, 2020
-  </div>
-
-  <div id="FL-results" class="results">
-    <b class="name">Florida</b><br>
-    Election to be held on Tuesday, March 17, 2020
-  </div>
-
-  <div id="MO-results" class="results">
-    <b class="name">Missouri</b><br>
-    Election to be held on Tuesday, March 10, 2020
-  </div>
-
-  <div id="NM-results" class="results">
-    <b class="name">New Mexico</b><br>
-    Election to be held on Tuesday, June 02, 2020
-  </div>
-
-  <div id="NE-results" class="results">
-    <b class="name">Nebraska</b><br>
-    Election to be held on Tuesday, May 12, 2020
-  </div>
-
-  <div id="KY-results" class="results">
-    <b class="name">Kentucky</b><br>
-    Election to be held on Tuesday, May 19, 2020
   </div>
 
 <div id="19001-results" class="results">
@@ -11353,11 +11353,11 @@ Lead: <b>Biden +18.9</b><br>
 <td>Votes</td>
 <td>Pct</td>
 </tr>
+<tr><td>Bernie Sanders</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
 <tr><td>Joseph R. Biden Jr.</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
 <tr><td>Michael Bloomberg</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
 <tr><td>Pete Buttigieg</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
 <tr><td>Amy Klobuchar</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
-<tr><td>Bernie Sanders</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
 <tr><td>Elizabeth Warren</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
 
 </tbody>
@@ -11376,11 +11376,11 @@ Lead: <b>Tie</b><br>
 <td>Votes</td>
 <td>Pct</td>
 </tr>
+<tr><td>Bernie Sanders</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
 <tr><td>Joseph R. Biden Jr.</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
 <tr><td>Michael Bloomberg</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
 <tr><td>Pete Buttigieg</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
 <tr><td>Amy Klobuchar</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
-<tr><td>Bernie Sanders</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
 <tr><td>Elizabeth Warren</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
 
 </tbody>
@@ -11399,11 +11399,11 @@ Lead: <b>Tie</b><br>
 <td>Votes</td>
 <td>Pct</td>
 </tr>
+<tr><td>Bernie Sanders</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
 <tr><td>Joseph R. Biden Jr.</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
 <tr><td>Michael Bloomberg</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
 <tr><td>Pete Buttigieg</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
 <tr><td>Amy Klobuchar</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
-<tr><td>Bernie Sanders</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
 <tr><td>Elizabeth Warren</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
 
 </tbody>
@@ -11422,11 +11422,11 @@ Lead: <b>Tie</b><br>
 <td>Votes</td>
 <td>Pct</td>
 </tr>
+<tr><td>Bernie Sanders</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
 <tr><td>Joseph R. Biden Jr.</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
 <tr><td>Michael Bloomberg</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
 <tr><td>Pete Buttigieg</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
 <tr><td>Amy Klobuchar</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
-<tr><td>Bernie Sanders</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
 <tr><td>Elizabeth Warren</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
 
 </tbody>
@@ -11445,11 +11445,11 @@ Lead: <b>Tie</b><br>
 <td>Votes</td>
 <td>Pct</td>
 </tr>
+<tr><td>Bernie Sanders</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
 <tr><td>Joseph R. Biden Jr.</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
 <tr><td>Michael Bloomberg</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
 <tr><td>Pete Buttigieg</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
 <tr><td>Amy Klobuchar</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
-<tr><td>Bernie Sanders</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
 <tr><td>Elizabeth Warren</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
 
 </tbody>
@@ -11468,11 +11468,11 @@ Lead: <b>Tie</b><br>
 <td>Votes</td>
 <td>Pct</td>
 </tr>
+<tr><td>Bernie Sanders</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
 <tr><td>Joseph R. Biden Jr.</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
 <tr><td>Michael Bloomberg</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
 <tr><td>Pete Buttigieg</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
 <tr><td>Amy Klobuchar</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
-<tr><td>Bernie Sanders</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
 <tr><td>Elizabeth Warren</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
 
 </tbody>
@@ -11491,11 +11491,11 @@ Lead: <b>Tie</b><br>
 <td>Votes</td>
 <td>Pct</td>
 </tr>
+<tr><td>Bernie Sanders</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
 <tr><td>Joseph R. Biden Jr.</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
 <tr><td>Michael Bloomberg</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
 <tr><td>Pete Buttigieg</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
 <tr><td>Amy Klobuchar</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
-<tr><td>Bernie Sanders</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
 <tr><td>Elizabeth Warren</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
 
 </tbody>
@@ -11514,11 +11514,11 @@ Lead: <b>Tie</b><br>
 <td>Votes</td>
 <td>Pct</td>
 </tr>
+<tr><td>Bernie Sanders</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
 <tr><td>Joseph R. Biden Jr.</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
 <tr><td>Michael Bloomberg</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
 <tr><td>Pete Buttigieg</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
 <tr><td>Amy Klobuchar</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
-<tr><td>Bernie Sanders</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
 <tr><td>Elizabeth Warren</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
 
 </tbody>
@@ -11537,11 +11537,11 @@ Lead: <b>Tie</b><br>
 <td>Votes</td>
 <td>Pct</td>
 </tr>
+<tr><td>Bernie Sanders</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
 <tr><td>Joseph R. Biden Jr.</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
 <tr><td>Michael Bloomberg</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
 <tr><td>Pete Buttigieg</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
 <tr><td>Amy Klobuchar</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
-<tr><td>Bernie Sanders</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
 <tr><td>Elizabeth Warren</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
 
 </tbody>
@@ -11560,11 +11560,11 @@ Lead: <b>Tie</b><br>
 <td>Votes</td>
 <td>Pct</td>
 </tr>
+<tr><td>Bernie Sanders</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
 <tr><td>Joseph R. Biden Jr.</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
 <tr><td>Michael Bloomberg</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
 <tr><td>Pete Buttigieg</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
 <tr><td>Amy Klobuchar</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
-<tr><td>Bernie Sanders</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
 <tr><td>Elizabeth Warren</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
 
 </tbody>
@@ -11583,11 +11583,11 @@ Lead: <b>Tie</b><br>
 <td>Votes</td>
 <td>Pct</td>
 </tr>
+<tr><td>Bernie Sanders</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
 <tr><td>Joseph R. Biden Jr.</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
 <tr><td>Michael Bloomberg</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
 <tr><td>Pete Buttigieg</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
 <tr><td>Amy Klobuchar</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
-<tr><td>Bernie Sanders</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
 <tr><td>Elizabeth Warren</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
 
 </tbody>
@@ -11606,11 +11606,11 @@ Lead: <b>Tie</b><br>
 <td>Votes</td>
 <td>Pct</td>
 </tr>
+<tr><td>Bernie Sanders</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
 <tr><td>Joseph R. Biden Jr.</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
 <tr><td>Michael Bloomberg</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
 <tr><td>Pete Buttigieg</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
 <tr><td>Amy Klobuchar</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
-<tr><td>Bernie Sanders</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
 <tr><td>Elizabeth Warren</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
 
 </tbody>
@@ -11629,11 +11629,11 @@ Lead: <b>Tie</b><br>
 <td>Votes</td>
 <td>Pct</td>
 </tr>
+<tr><td>Bernie Sanders</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
 <tr><td>Joseph R. Biden Jr.</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
 <tr><td>Michael Bloomberg</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
 <tr><td>Pete Buttigieg</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
 <tr><td>Amy Klobuchar</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
-<tr><td>Bernie Sanders</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
 <tr><td>Elizabeth Warren</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
 
 </tbody>
@@ -11652,11 +11652,11 @@ Lead: <b>Tie</b><br>
 <td>Votes</td>
 <td>Pct</td>
 </tr>
+<tr><td>Bernie Sanders</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
 <tr><td>Joseph R. Biden Jr.</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
 <tr><td>Michael Bloomberg</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
 <tr><td>Pete Buttigieg</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
 <tr><td>Amy Klobuchar</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
-<tr><td>Bernie Sanders</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
 <tr><td>Elizabeth Warren</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
 
 </tbody>
