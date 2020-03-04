@@ -6429,16 +6429,16 @@
     </style>
   </defs>
 
-  <div style="width:15px; height:20px; left: 100px; top: 850px; background-color: #007F00; position: absolute;">&nbsp;</div>
-  <div style="width:0px; height:20px; left: 115px; top: 850px; background-color: #60BF60; position: absolute;">&nbsp;</div>
+  <div style="width:18px; height:20px; left: 100px; top: 850px; background-color: #0000FF; position: absolute;">&nbsp;</div>
+  <div style="width:0px; height:20px; left: 118px; top: 850px; background-color: #6060FF; position: absolute;">&nbsp;</div>
   <div style="width:960px; height:20px; left: 100px; top: 850px; position: absolute; text-align: center; font-size: 18;">|<br><span style="font-size: 12;"></span></div>
-  <div style="height:20px; left: 125px; top: 850px; color: #007F00; background-color: lightgray; position: absolute;"><span class="delegates">60</span> Sanders</div>
+  <div style="height:20px; left: 128px; top: 850px; color: #0000FF; background-color: lightgray; position: absolute;"><span class="delegates">69</span> Biden</div>
 
 
-  <div style="width:14px; height:20px; left: 100px; top: 880px; background-color: #0000FF; position: absolute;">&nbsp;</div>
-  <div style="width:0px; height:20px; left: 114px; top: 880px; background-color: #6060FF; position: absolute;">&nbsp;</div>
+  <div style="width:15px; height:20px; left: 100px; top: 880px; background-color: #007F00; position: absolute;">&nbsp;</div>
+  <div style="width:0px; height:20px; left: 115px; top: 880px; background-color: #60BF60; position: absolute;">&nbsp;</div>
   <div style="width:960px; height:20px; left: 100px; top: 880px; position: absolute; text-align: center; font-size: 18;">|<br><span style="font-size: 12;"></span></div>
-  <div style="height:20px; left: 124px; top: 880px; color: #0000FF; background-color: lightgray; position: absolute;"><span class="delegates">53</span> Biden</div>
+  <div style="height:20px; left: 125px; top: 880px; color: #007F00; background-color: lightgray; position: absolute;"><span class="delegates">60</span> Sanders</div>
 
 
   <div style="width:7px; height:20px; left: 100px; top: 910px; background-color: #FFFF00; position: absolute;">&nbsp;</div>
@@ -6571,7 +6571,7 @@
   function setColor(id, color) {
     document.getElementById(id).style.fill = color;
   }
-  var stateColors = {"IA": "#FFFF90", "NH": "#007F00", "NV": "#007F00", "SC": "#0000FF", "VT": "#0000FF", "VA": "#FFFFFF", "NC": "#FFFFFF", "AL": "#FFFFFF", "ME": "#FFFFFF", "MA": "#FFFFFF", "OK": "#FFFFFF", "TN": "#FFFFFF", "TX": "#FFFFFF", "AR": "#FFFFFF", "CO": "#FFFFFF", "MN": "#FFFFFF", "UT": "#FFFFFF", "CA": "#FFFFFF"};
+  var stateColors = {"IA": "#FFFF90", "NH": "#007F00", "NV": "#007F00", "SC": "#0000FF", "VT": "#0000FF", "VA": "#0000FF", "NC": "#FFFFFF", "AL": "#FFFFFF", "ME": "#FFFFFF", "MA": "#FFFFFF", "OK": "#FFFFFF", "TN": "#FFFFFF", "TX": "#FFFFFF", "AR": "#FFFFFF", "CO": "#FFFFFF", "MN": "#FFFFFF", "UT": "#FFFFFF", "CA": "#FFFFFF"};
   function colorAll() {
     for (var state in stateColors) {
       setColor(state, stateColors[state]);
@@ -6761,8 +6761,8 @@ Pre-election estimate: <b>Safe Sanders</b>
 <td>Pct</td>
 <td>Del</td>
 </tr>
+<tr><td style="color: #fff" bgcolor="#0000FF">Joseph R. Biden Jr. ✔</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td><td class="votes">16</td></tr>
 <tr><td>Bernie Sanders</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td><td class="votes">0</td></tr>
-<tr><td>Joseph R. Biden Jr.</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td><td class="votes">0</td></tr>
 <tr><td>Elizabeth Warren</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td><td class="votes">0</td></tr>
 <tr><td>Michael R. Bloomberg</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td><td class="votes">0</td></tr>
 <tr><td>Amy Klobuchar</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td><td class="votes">0</td></tr>
@@ -6771,7 +6771,7 @@ Pre-election estimate: <b>Safe Sanders</b>
 </tbody>
 </table>
 0.0% of precincts reporting<br>
-Status: <b>Not called</b><br>
+Status: <b>Called for Biden (D)</b><br>
 Lead: <b>Tie</b><br>
 Model: <b>N/A</b><br>
 Pre-election estimate: <b>Leans Biden</b>
@@ -7101,24 +7101,69 @@ Model: <b>N/A</b><br>
 Pre-election estimate: <b>Likely Sanders</b>
 </div>
 
+  <div id="WA-results" class="results">
+    <b class="name">Washington</b><br>
+    Election to be held on Tuesday, March 10, 2020
+  </div>
+
+  <div id="NE-results" class="results">
+    <b class="name">Nebraska</b><br>
+    Election to be held on Tuesday, May 12, 2020
+  </div>
+
+  <div id="ND-results" class="results">
+    <b class="name">North Dakota</b><br>
+    Election to be held on Tuesday, March 10, 2020
+  </div>
+
   <div id="DE-results" class="results">
     <b class="name">Delaware</b><br>
     Election to be held on Tuesday, April 28, 2020
   </div>
 
-  <div id="HI-results" class="results">
-    <b class="name">Hawaii</b><br>
+  <div id="WI-results" class="results">
+    <b class="name">Wisconsin</b><br>
+    Election to be held on Tuesday, April 07, 2020
+  </div>
+
+  <div id="MS-results" class="results">
+    <b class="name">Mississippi</b><br>
+    Election to be held on Tuesday, March 10, 2020
+  </div>
+
+  <div id="OR-results" class="results">
+    <b class="name">Oregon</b><br>
+    Election to be held on Tuesday, May 19, 2020
+  </div>
+
+  <div id="SD-results" class="results">
+    <b class="name">South Dakota</b><br>
+    Election to be held on Tuesday, June 02, 2020
+  </div>
+
+  <div id="ID-results" class="results">
+    <b class="name">Idaho</b><br>
+    Election to be held on Tuesday, March 10, 2020
+  </div>
+
+  <div id="NM-results" class="results">
+    <b class="name">New Mexico</b><br>
+    Election to be held on Tuesday, June 02, 2020
+  </div>
+
+  <div id="LA-results" class="results">
+    <b class="name">Louisiana</b><br>
     Election to be held on Saturday, April 04, 2020
   </div>
 
-  <div id="NY-results" class="results">
-    <b class="name">New York</b><br>
-    Election to be held on Tuesday, April 28, 2020
+  <div id="OH-results" class="results">
+    <b class="name">Ohio</b><br>
+    Election to be held on Tuesday, March 17, 2020
   </div>
 
-  <div id="DC-results" class="results">
-    <b class="name">District of Columbia</b><br>
-    Election to be held on Tuesday, June 02, 2020
+  <div id="WV-results" class="results">
+    <b class="name">West Virginia</b><br>
+    Election to be held on Tuesday, May 12, 2020
   </div>
 
   <div id="NJ-results" class="results">
@@ -7126,19 +7171,34 @@ Pre-election estimate: <b>Likely Sanders</b>
     Election to be held on Tuesday, June 02, 2020
   </div>
 
-  <div id="GA-results" class="results">
-    <b class="name">Georgia</b><br>
-    Election to be held on Tuesday, March 24, 2020
+  <div id="DC-results" class="results">
+    <b class="name">District of Columbia</b><br>
+    Election to be held on Tuesday, June 02, 2020
+  </div>
+
+  <div id="IL-results" class="results">
+    <b class="name">Illinois</b><br>
+    Election to be held on Tuesday, March 17, 2020
+  </div>
+
+  <div id="AK-results" class="results">
+    <b class="name">Alaska</b><br>
+    Election to be held on Saturday, April 04, 2020
+  </div>
+
+  <div id="CT-results" class="results">
+    <b class="name">Connecticut</b><br>
+    Election to be held on Tuesday, April 28, 2020
+  </div>
+
+  <div id="PA-results" class="results">
+    <b class="name">Pennsylvania</b><br>
+    Election to be held on Tuesday, April 28, 2020
   </div>
 
   <div id="WY-results" class="results">
     <b class="name">Wyoming</b><br>
     Election to be held on Saturday, April 04, 2020
-  </div>
-
-  <div id="OR-results" class="results">
-    <b class="name">Oregon</b><br>
-    Election to be held on Tuesday, May 19, 2020
   </div>
 
   <div id="AZ-results" class="results">
@@ -7151,33 +7211,13 @@ Pre-election estimate: <b>Likely Sanders</b>
     Election to be held on Saturday, May 02, 2020
   </div>
 
-  <div id="IL-results" class="results">
-    <b class="name">Illinois</b><br>
-    Election to be held on Tuesday, March 17, 2020
+  <div id="IN-results" class="results">
+    <b class="name">Indiana</b><br>
+    Election to be held on Tuesday, May 5, 2020
   </div>
 
-  <div id="MO-results" class="results">
-    <b class="name">Missouri</b><br>
-    Election to be held on Tuesday, March 10, 2020
-  </div>
-
-  <div id="MI-results" class="results">
-    <b class="name">Michigan</b><br>
-    Election to be held on Tuesday, March 10, 2020
-  </div>
-
-  <div id="ND-results" class="results">
-    <b class="name">North Dakota</b><br>
-    Election to be held on Tuesday, March 10, 2020
-  </div>
-
-  <div id="NE-results" class="results">
-    <b class="name">Nebraska</b><br>
-    Election to be held on Tuesday, May 12, 2020
-  </div>
-
-  <div id="AK-results" class="results">
-    <b class="name">Alaska</b><br>
+  <div id="HI-results" class="results">
+    <b class="name">Hawaii</b><br>
     Election to be held on Saturday, April 04, 2020
   </div>
 
@@ -7186,29 +7226,14 @@ Pre-election estimate: <b>Likely Sanders</b>
     Election to be held on Tuesday, April 28, 2020
   </div>
 
-  <div id="LA-results" class="results">
-    <b class="name">Louisiana</b><br>
-    Election to be held on Saturday, April 04, 2020
-  </div>
-
-  <div id="SD-results" class="results">
-    <b class="name">South Dakota</b><br>
-    Election to be held on Tuesday, June 02, 2020
-  </div>
-
-  <div id="FL-results" class="results">
-    <b class="name">Florida</b><br>
-    Election to be held on Tuesday, March 17, 2020
-  </div>
-
-  <div id="MS-results" class="results">
-    <b class="name">Mississippi</b><br>
+  <div id="MI-results" class="results">
+    <b class="name">Michigan</b><br>
     Election to be held on Tuesday, March 10, 2020
   </div>
 
-  <div id="OH-results" class="results">
-    <b class="name">Ohio</b><br>
-    Election to be held on Tuesday, March 17, 2020
+  <div id="NY-results" class="results">
+    <b class="name">New York</b><br>
+    Election to be held on Tuesday, April 28, 2020
   </div>
 
   <div id="RI-results" class="results">
@@ -7216,28 +7241,8 @@ Pre-election estimate: <b>Likely Sanders</b>
     Election to be held on Tuesday, April 28, 2020
   </div>
 
-  <div id="WV-results" class="results">
-    <b class="name">West Virginia</b><br>
-    Election to be held on Tuesday, May 12, 2020
-  </div>
-
-  <div id="PA-results" class="results">
-    <b class="name">Pennsylvania</b><br>
-    Election to be held on Tuesday, April 28, 2020
-  </div>
-
-  <div id="WA-results" class="results">
-    <b class="name">Washington</b><br>
-    Election to be held on Tuesday, March 10, 2020
-  </div>
-
-  <div id="WI-results" class="results">
-    <b class="name">Wisconsin</b><br>
-    Election to be held on Tuesday, April 07, 2020
-  </div>
-
-  <div id="NM-results" class="results">
-    <b class="name">New Mexico</b><br>
+  <div id="MT-results" class="results">
+    <b class="name">Montana</b><br>
     Election to be held on Tuesday, June 02, 2020
   </div>
 
@@ -7246,24 +7251,19 @@ Pre-election estimate: <b>Likely Sanders</b>
     Election to be held on Tuesday, May 19, 2020
   </div>
 
-  <div id="CT-results" class="results">
-    <b class="name">Connecticut</b><br>
-    Election to be held on Tuesday, April 28, 2020
+  <div id="GA-results" class="results">
+    <b class="name">Georgia</b><br>
+    Election to be held on Tuesday, March 24, 2020
   </div>
 
-  <div id="IN-results" class="results">
-    <b class="name">Indiana</b><br>
-    Election to be held on Tuesday, May 5, 2020
+  <div id="FL-results" class="results">
+    <b class="name">Florida</b><br>
+    Election to be held on Tuesday, March 17, 2020
   </div>
 
-  <div id="ID-results" class="results">
-    <b class="name">Idaho</b><br>
+  <div id="MO-results" class="results">
+    <b class="name">Missouri</b><br>
     Election to be held on Tuesday, March 10, 2020
-  </div>
-
-  <div id="MT-results" class="results">
-    <b class="name">Montana</b><br>
-    Election to be held on Tuesday, June 02, 2020
   </div>
 
 <div id="19001-results" class="results">
