@@ -12,14 +12,16 @@
 }
 
 .description {
-  position: absolute;
+  position: relative; //absolute;
   width: 640px;
+  margin-top: 0px;
+  margin-bottom: 20px;
 }
 
 .dropdown {
   position: absolute;
-  left: 900px;
-  top: 100px;
+  left: 908px;
+  top: 80px;
   min-width: 160px;
 }
 
@@ -71,6 +73,11 @@
   display: block;
 }
 
+.map {
+  visibility: hidden;
+  position: relative;
+}
+
 .button {
   visibility: hidden;
   background-color: white;
@@ -79,11 +86,10 @@
   border: 1px solid gray;
   border-radius: 10px;
   padding: 10px 10px;
-  position: absolute;
+  position: relative;
   font-size: 12;
   line-height: 180%;
   cursor: pointer;
-  left: 100px;
 }
 
 .button:hover {
@@ -91,7 +97,7 @@
 }
 
 .margin-button {
-  left: 1000px;
+  left: 900px;
   width: 180px;
 }
 
@@ -118,6 +124,7 @@ td {
   top: 0px;
   font-size: 12;
   line-height: 180%;
+  display: inline-block;
   z-index: 1;
 }
 
@@ -152,4 +159,8 @@ td {
 
 .delegates {
   font-size: 16;
+}
+
+.no-height {
+  height: 0px;
 }
