@@ -10,7 +10,9 @@
 <h1>2020 Republican Presidential Primaries Election Results</h1>
 <hr />
 <!--<h3>| Home | </h3>-->
-<p class="description">Incumbent GOP President Donald J. Trump of New York is expected to win easily without significant opposition from his own party.</p>
+<div class="description">
+<p>Incumbent GOP President Donald J. Trump of New York is expected to win easily without significant opposition from his own party.</p>
+</div>
 <div class="dropdown">
   <div class="dropbtn">Choose Election<span style="float:right;">▼</span></div>
   <div class="dropdown-content">
@@ -30,6 +32,7 @@
     <a href="../../2014/governors">2014 Governors</a>
     <a href="../../2012/president">2012 President</a>
     <a href="../../2012/senate">2012 Senate</a>
+    <a href="../../2012/repprimaries">2012 Republican Primaries</a>
     <a href="../../2010/senate">2010 Senate</a>
     <a href="../../2010/governors">2010 Governors</a>
     <a href="../../2008/president">2008 President</a>
@@ -39,25 +42,9 @@
 </div> 
 
 
-<div id="results-score" style="margin-bottom: 10px;">
-  <defs>
-    <style type="text/css">
-    #board {
-      visibility: visible;
-      color: black;
-      text-align: left;
-      border: 0px solid gray;
-      border-radius: 0px;
-      position: relative; //absolute;
-      //left: 100px;
-      //top: 150px;
-      font-size: 24;
-      line-height: 180%;
-    }
-    </style>
-  </defs>
+<div id="results-score">
 <h3>Delegate Count</h3>
-  <div style="/*height: 30px;*/margin-bottom: 8px;">
+  <div class="primary-candidate">
     <div class="no-height">
       <div style="width:555px; height:20px; background-color: #FF0000; position: relative;">&nbsp;</div>
     </div>
@@ -68,12 +55,12 @@
       <div style="height:20px; left: 565px; color: #FF0000; background-color: lightgray; position: relative; z-index: 1; display: inline-block;"><span class="delegates">1472</span> Trump <span class="delegates">✔</span></div>
     </div>
     <div>
-      <div style="width:960px; /*height:20px;*/ position: relative; text-align: center; font-size: 18;">|<br><span style="font-size: 12;"></span></div>
+      <div style="width:960px; position: relative; text-align: center; font-size: 18;">|<br><span style="font-size: 12;"></span></div>
     </div>
   </div>
 
 
-  <div style="/*height: 30px;*/margin-bottom: 8px;">
+  <div class="primary-candidate">
     <div class="no-height">
       <div style="width:1px; height:20px; background-color: #FF00FF; position: relative;">&nbsp;</div>
     </div>
@@ -84,7 +71,7 @@
       <div style="height:20px; left: 11px; color: black; background-color: lightgray; position: relative; z-index: 1; display: inline-block;"><span class="delegates">1</span> Weld</div>
     </div>
     <div>
-      <div style="width:960px; /*height:20px;*/ position: relative; text-align: center; font-size: 18;">|<br><span style="font-size: 12;">1276 to win</span></div>
+      <div style="width:960px; position: relative; text-align: center; font-size: 18;">|<br><span style="font-size: 12;">1276 to win</span></div>
     </div>
   </div>
 <h3>Results Map</h3>
@@ -7287,22 +7274,22 @@ Pre-election estimate: <b>N/A</b>
 </div>
 
 
-<div id="buttons" class="no-height" style="display: inline-block;">
+<div id="buttons" class="no-height">
   <div id="back-button" class="button" onclick="zoomCounties('0 0 990 627'); show('national-map'); hide('counties-map'); hideAllResults(); hide('back-button')">
     << Back to all states
   </div>
 </div>
 <div id="performance-buttons" class="no-height">
-  <div id="results-button" class="button margin-button" style="top: 500px;" onclick="colorCounties(current_fips, actual);">
+  <div id="results-button" class="button margin-button" style="top: 507px;" onclick="colorCounties(current_fips, actual);">
     See actual margins
   </div>
-  <div id="margins-button" class="button margin-button" style="top: 505px;" onclick="colorCounties(current_fips, margins);">
+  <div id="margins-button" class="button margin-button" style="top: 514px;" onclick="colorCounties(current_fips, margins);">
     See performance margins
   </div>
 </div>
-<div id="spaceholder" style="height: 600px;">
+<div id="spaceholder">
 </div>
-<div id="footer" style="position: relative; width: 640px;">
+<div id="footer">
 <p>Results from the <a href="https://www.nytimes.com/interactive/2020/02/11/us/elections/results-new-hampshire-republican-primary.html">New York Times</a> and the <a href="https://www.washingtonpost.com/elections/election-results/super-tuesday/">Washington Post</a>.</p>
 <p><b><a title="Elections" href="../../../"><< Back to Elections Home</a></b></p>
 <p>&nbsp;</p>
@@ -7401,7 +7388,7 @@ Pre-election estimate: <b>N/A</b>
     }
   }
   function setColor(id, color) {
-    document.getElementById(id).style.fill = color;
+    document.getElementById(id).style.fill = color;    
   }
   var stateColors = {"IA": "#FF0000", "NH": "#FF0000", "VT": "#FF0000", "NC": "#FF0000", "AL": "#FF0000", "MA": "#FF0000", "OK": "#FF0000", "TN": "#FF0000", "TX": "#FF0000", "AR": "#FF0000", "CO": "#FF0000", "UT": "#FF0000", "CA": "#FF0000", "MI": "#FF0000", "MS": "#FF0000", "MO": "#FF0000", "ID": "#FF0000", "FL": "#FF0000", "IL": "#FF0000", "ME": "#FF0000", "MN": "#FF0000", "WA": "#FF0000", "HI": "#FF0000", "KS": "#FF0000", "NV": "#FF0000", "NY": "#FF0000", "ND": "#FF0000", "GU": "#FF0000", "MP": "#FF0000", "AS": "#FF0000"};
   function colorAll() {

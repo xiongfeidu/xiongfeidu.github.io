@@ -12,7 +12,7 @@
 }
 
 .description {
-  position: relative; //absolute;
+  position: relative;
   width: 640px;
   margin-top: 0px;
   margin-bottom: 20px;
@@ -163,4 +163,36 @@ td {
 
 .no-height {
   height: 0px;
+}
+
+.primary-candidate {
+  margin-bottom: 8px;
+}
+
+#footer {
+  position: relative;
+  width: 640px;
+}
+
+#spaceholder {
+  height: 600px;
+}
+
+#board {
+  visibility: visible;
+  color: black;
+  text-align: left;
+  border: 0px solid gray;
+  border-radius: 0px;
+  position: relative;
+  font-size: 24;
+  line-height: 180%;
+}
+
+#results-score {
+  margin-bottom: 10px;
+}
+
+#buttons {
+  display: inline-block;
 }
