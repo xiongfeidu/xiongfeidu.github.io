@@ -6745,10 +6745,10 @@ Pre-election estimate: <b>N/A</b>
 <td>Pct</td>
 <td>Del</td>
 </tr>
-<tr><td style="color: #fff" bgcolor="#FF0000">Donald J. Trump* ✔</td><td>REP</td><td class="votes">2,253,366</td><td class="pct">91.9</td><td class="votes">172</td></tr>
-<tr><td>Bill Weld</td><td>REP</td><td class="votes">66,305</td><td class="pct">2.7</td><td class="votes">0</td></tr>
-<tr><td>Joe Walsh</td><td>REP</td><td class="votes">64,077</td><td class="pct">2.6</td><td class="votes">0</td></tr>
-<tr><td>Roque De La Fuente</td><td>REP</td><td class="votes">32,368</td><td class="pct">1.3</td><td class="votes">0</td></tr>
+<tr><td style="color: #fff" bgcolor="#FF0000">Donald J. Trump* ✔</td><td>REP</td><td class="votes">2,254,782</td><td class="pct">91.9</td><td class="votes">172</td></tr>
+<tr><td>Bill Weld</td><td>REP</td><td class="votes">66,317</td><td class="pct">2.7</td><td class="votes">0</td></tr>
+<tr><td>Joe Walsh</td><td>REP</td><td class="votes">64,102</td><td class="pct">2.6</td><td class="votes">0</td></tr>
+<tr><td>Roque De La Fuente</td><td>REP</td><td class="votes">32,379</td><td class="pct">1.3</td><td class="votes">0</td></tr>
 
 </tbody>
 </table>
@@ -6914,7 +6914,7 @@ Pre-election estimate: <b>N/A</b>
 
 </tbody>
 </table>
-97.8% of precincts reporting<br>
+98.7% of precincts reporting<br>
 Status: <b>Called for Trump (R)</b><br>
 Lead: <b>Trump +100.0</b><br>
 Model: <b>N/A</b><br>
@@ -7275,7 +7275,7 @@ Pre-election estimate: <b>N/A</b>
 
 
 <div id="buttons" class="no-height">
-  <div id="back-button" class="button" onclick="zoomCounties('0 0 990 627'); show('national-map'); hide('counties-map'); hideAllResults(); hide('back-button')">
+  <div id="back-button" class="button" onclick="zoomOut();">
     << Back to all states
   </div>
 </div>
@@ -7309,7 +7309,7 @@ Pre-election estimate: <b>N/A</b>
       var nationalView = document.getElementById('national-map').style.visibility;
       if (anchor) {
         resultsStyle.position = 'relative';
-        resultsStyle.left = 800; //900;
+        resultsStyle.left = 800;
         resultsStyle.top = 0;
       } else if (id.startsWith('c') || nationalView === "visible") {
         resultsStyle.position = 'absolute';
@@ -7322,14 +7322,19 @@ Pre-election estimate: <b>N/A</b>
     if (element.className.baseVal == 'county') {
       var big_state_fips = ["02","41","06","16","32","49","04","30","35","48","27","26","17","12"];
       if (big_state_fips.includes(current_fips)) {
-        element.style.strokeWidth = "0.8px";   
+        element.style.strokeWidth = "0.5px"; // 0.8
       } else {
-        element.style.strokeWidth = "0.5px";      
+        element.style.strokeWidth = "0.3px"; // 0.5
       }
+      element.parentNode.appendChild(element); // bring to front
     }
   }
   function zoomCounties(box) {
     document.getElementById('counties-svg').setAttribute('viewBox', box);
+  }
+  function zoomHouse(box) {
+    document.getElementById('house-svg').setAttribute('viewBox', box);
+    show('back-button');
   }
   function showCountiesState(box, state, fips) {
     var model_states = [];
@@ -7389,6 +7394,17 @@ Pre-election estimate: <b>N/A</b>
   }
   function setColor(id, color) {
     document.getElementById(id).style.fill = color;    
+  }
+  function zoomOut() {
+    if (document.getElementById('house-svg')) {
+      zoomHouse("60 0 1181.7317 720.55206");
+    } else {
+      zoomCounties('0 0 990 627');
+      show('national-map');
+      hide('counties-map');
+      hideAllResults();
+    }
+    hide('back-button');
   }
   var stateColors = {"IA": "#FF0000", "NH": "#FF0000", "VT": "#FF0000", "NC": "#FF0000", "AL": "#FF0000", "MA": "#FF0000", "OK": "#FF0000", "TN": "#FF0000", "TX": "#FF0000", "AR": "#FF0000", "CO": "#FF0000", "UT": "#FF0000", "CA": "#FF0000", "MI": "#FF0000", "MS": "#FF0000", "MO": "#FF0000", "ID": "#FF0000", "FL": "#FF0000", "IL": "#FF0000", "ME": "#FF0000", "MN": "#FF0000", "WA": "#FF0000", "HI": "#FF0000", "KS": "#FF0000", "NV": "#FF0000", "NY": "#FF0000", "ND": "#FF0000", "GU": "#FF0000", "MP": "#FF0000", "AS": "#FF0000"};
   function colorAll() {
@@ -25144,8 +25160,8 @@ Lead: <b>Trump +94.2</b><br>
 <td>Votes</td>
 <td>Pct</td>
 </tr>
-<tr><td>Donald J. Trump</td><td>REP</td><td class="votes">170,262</td><td class="pct">95.0</td></tr>
-<tr><td>Joe Walsh</td><td>REP</td><td class="votes">3,179</td><td class="pct">1.8</td></tr>
+<tr><td>Donald J. Trump</td><td>REP</td><td class="votes">170,606</td><td class="pct">95.0</td></tr>
+<tr><td>Joe Walsh</td><td>REP</td><td class="votes">3,183</td><td class="pct">1.8</td></tr>
 <tr><td>Bill Weld</td><td>REP</td><td class="votes">2,579</td><td class="pct">1.4</td></tr>
 
 </tbody>
@@ -25267,9 +25283,9 @@ Lead: <b>Trump +72.7</b><br>
 <td>Votes</td>
 <td>Pct</td>
 </tr>
-<tr><td>Donald J. Trump</td><td>REP</td><td class="votes">45,694</td><td class="pct">93.8</td></tr>
-<tr><td>Joe Walsh</td><td>REP</td><td class="votes">1,145</td><td class="pct">2.4</td></tr>
-<tr><td>Bill Weld</td><td>REP</td><td class="votes">824</td><td class="pct">1.7</td></tr>
+<tr><td>Donald J. Trump</td><td>REP</td><td class="votes">46,762</td><td class="pct">93.9</td></tr>
+<tr><td>Joe Walsh</td><td>REP</td><td class="votes">1,166</td><td class="pct">2.3</td></tr>
+<tr><td>Bill Weld</td><td>REP</td><td class="votes">836</td><td class="pct">1.7</td></tr>
 
 </tbody>
 </table>
@@ -25652,7 +25668,7 @@ Lead: <b>Trump +88.4</b><br>
 <td>Votes</td>
 <td>Pct</td>
 </tr>
-<tr><td>Donald J. Trump</td><td>REP</td><td class="votes">7,739</td><td class="pct">96.5</td></tr>
+<tr><td>Donald J. Trump</td><td>REP</td><td class="votes">7,743</td><td class="pct">96.5</td></tr>
 <tr><td>Bill Weld</td><td>REP</td><td class="votes">101</td><td class="pct">1.3</td></tr>
 <tr><td>Joe Walsh</td><td>REP</td><td class="votes">97</td><td class="pct">1.2</td></tr>
 
@@ -34917,7 +34933,7 @@ Lead: <b>Trump +100.0</b><br>
 
 </tbody>
 </table>
-92.6% of precincts reporting<br>
+97.1% of precincts reporting<br>
 Lead: <b>Trump +100.0</b><br>
 </div>
 
@@ -35007,7 +35023,7 @@ Lead: <b>Trump +100.0</b><br>
 
 </tbody>
 </table>
-94.4% of precincts reporting<br>
+100.0% of precincts reporting<br>
 Lead: <b>Trump +100.0</b><br>
 </div>
 
@@ -35079,7 +35095,7 @@ Lead: <b>Trump +100.0</b><br>
 
 </tbody>
 </table>
-95.0% of precincts reporting<br>
+100.0% of precincts reporting<br>
 Lead: <b>Trump +100.0</b><br>
 </div>
 
