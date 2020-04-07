@@ -13,33 +13,18 @@
 <div class="description">
 <p>In 2018, incumbent Democrats struggled to hold off strong GOP challengers in key GOP-dominated states, allowing the Republicans to gain a net of two seats in the US Senate and cementing the GOP majority.</p>
 </div>
-<div class="dropdown">
-  <div class="dropbtn">Choose Election<span style="float:right;">▼</span></div>
-  <div class="dropdown-content">
-    <a href="../../2020/demprimaries">2020 Democratic Primaries</a>
-    <a href="../../2020/repprimaries">2020 Republican Primaries</a>
-    <a href="../../2019/governors">2019 Governors</a>
-    <a href="../../2018/senate">2018 Senate</a>
-    <a href="../../2018/governors">2018 Governors</a>
-    <a href="../../2017/governors">2017 Governors</a>
-    <a href="../../2017/senate">2017 Senate</a>
-    <a href="../../2016/president">2016 President</a>
-    <a href="../../2016/senate">2016 Senate</a>
-    <a href="../../2016/governors">2016 Governors</a>
-    <a href="../../2016/demprimaries">2016 Democratic Primaries</a>
-    <a href="../../2016/repprimaries">2016 Republican Primaries</a>
-    <a href="../../2014/senate">2014 Senate</a>
-    <a href="../../2014/governors">2014 Governors</a>
-    <a href="../../2012/president">2012 President</a>
-    <a href="../../2012/senate">2012 Senate</a>
-    <a href="../../2012/repprimaries">2012 Republican Primaries</a>
-    <a href="../../2010/senate">2010 Senate</a>
-    <a href="../../2010/governors">2010 Governors</a>
-    <a href="../../2008/president">2008 President</a>
-    <a href="../../2004/president">2004 President</a>
-    <a href="../../2000/president">2000 President</a>
+<div class="dropdown dropdown-year dropdown-elem-year">
+  <div class="dropbtn">2018<span style="float:right;">▼</span></div>
+  <div class="dropdown-content dropdown-elem-year">
+    <a href="../../2020/demprimaries">2020</a>    <a href="../../2019/governors">2019</a>    <a href="../../2018/senate">2018</a>    <a href="../../2017/senate">2017</a>    <a href="../../2016/senate">2016</a>    <a href="../../2014/senate">2014</a>    <a href="../../2012/senate">2012</a>    <a href="../../2010/senate">2010</a>    <a href="../../2008/president">2008</a>    <a href="../../2006/house">2006</a>    <a href="../../2004/president">2004</a>    <a href="../../2002/house">2002</a>    <a href="../../2000/president">2000</a>
   </div>
-</div> 
+</div>
+<div class="dropdown dropdown-election dropdown-elem-election">
+  <div class="dropbtn">Senate<span style="float:right;">▼</span></div>
+  <div class="dropdown-content dropdown-elem-election">
+    <a href="../../2018/senate"> Senate</a>    <a href="../../2018/house"> House</a>    <a href="../../2018/governors"> Governors</a>
+  </div>
+</div>
 
 
 <div id="results-score">
@@ -190,7 +175,7 @@
      * path[id*='c35'] {fill:#34A853}
      *
      */
-    .counties {fill: darkgray; stroke:darkgray; stroke-width:0.2px; stroke-opacity: 0.5;} 
+    .counties path {fill: darkgray; stroke:darkgray; stroke-width:0.2px; stroke-opacity: 1;} 
     .counties path:hover {stroke:black; stroke-opacity: 1;} 
     #borders {fill:none;stroke:black;stroke-width:0.3px;} 
    </style>
@@ -7682,7 +7667,7 @@ Pre-election estimate: <b>Safe R</b>
 
 
 <div id="buttons" class="no-height">
-  <div id="back-button" class="button" onclick="zoomCounties('0 0 990 627'); show('national-map'); hide('counties-map'); hideAllResults(); hide('back-button')">
+  <div id="back-button" class="button" onclick="zoomOut();">
     << Back to all states
   </div>
 </div>
@@ -7709,6 +7694,7 @@ Pre-election estimate: <b>Safe R</b>
 </div>
 <script type="text/javascript">
   var current_fips = "00";
+  var big_state_fips = ["02","41","06","16","32","49","04","30","35","48","27","26","17","12"];
   function displayResults(id, resultsId, anchor) {
     var e = window.event;
     if (document.getElementById(resultsId)) {
@@ -7716,7 +7702,7 @@ Pre-election estimate: <b>Safe R</b>
       var nationalView = document.getElementById('national-map').style.visibility;
       if (anchor) {
         resultsStyle.position = 'relative';
-        resultsStyle.left = 800; //900;
+        resultsStyle.left = 800;
         resultsStyle.top = 0;
       } else if (id.startsWith('c') || nationalView === "visible") {
         resultsStyle.position = 'absolute';
@@ -7726,17 +7712,69 @@ Pre-election estimate: <b>Safe R</b>
       show(resultsId);
     }
     var element = document.getElementById(id);
-    if (element.className.baseVal == 'county') {
-      var big_state_fips = ["02","41","06","16","32","49","04","30","35","48","27","26","17","12"];
+    if (element.className.baseVal === 'county') {
       if (big_state_fips.includes(current_fips)) {
-        element.style.strokeWidth = "0.8px";   
+        element.style.strokeWidth = "0.5px"; // 0.8
       } else {
-        element.style.strokeWidth = "0.5px";      
+        element.style.strokeWidth = "0.3px"; // 0.5
       }
+      bringToFront(element);
+      element.style.stroke = 'black'; // hover + front does not work on firefox
+    } else if (element.className.baseVal === 'district') {
+      bringToFront(element);
+      //element.style.strokeWidth = "0.5px";
+      //element.style.stroke = 'black'; // hover + front does not work on firefox
     }
   }
   function zoomCounties(box) {
     document.getElementById('counties-svg').setAttribute('viewBox', box);
+  }
+  function zoomHouse(fips, box, metro) {
+    document.getElementById('house-svg').setAttribute('viewBox', box);
+    var districts = document.getElementsByClassName('district');
+    for (var i = 0; i < districts.length; i++) {
+      if (metro) {
+        if (fips === '36' || fips === '34') { // NY/NJ
+          districts[i].style.strokeWidth = "0.1px";
+        } else {
+          districts[i].style.strokeWidth = "0.15px";
+        }
+      } else if (big_state_fips.includes(fips)) {
+        districts[i].style.strokeWidth = "0.5px";
+      } else {
+        districts[i].style.strokeWidth = "0.3px";
+      }
+    }
+    var borders = document.getElementsByClassName('borders');
+    for (var i = 0; i < borders.length; i++) {
+      if (metro) {
+        borders[i].style.strokeWidth = "0.5px";
+      } else {
+        borders[i].style.strokeWidth = "1px";
+      }
+    }
+    show('back-button');
+  }
+  function zoomOut() {
+    if (document.getElementById('house-svg')) {
+      //document.getElementById('house-svg').setAttribute('viewBox', "60 0 1181.7317 720.55206");
+      document.getElementById('house-svg').removeAttribute('viewBox');
+      var districts = document.getElementsByClassName('district');
+      for (var i = 0; i < districts.length; i++) {
+        districts[i].style.removeProperty('stroke-width');
+        districts[i].style.removeProperty('stroke');
+      }
+      var borders = document.getElementsByClassName('borders');
+      for (var i = 0; i < borders.length; i++) {
+        borders[i].style.removeProperty('stroke-width');
+      }
+    } else {
+      zoomCounties('0 0 990 627');
+      show('national-map');
+      hide('counties-map');
+      hideAllResults();
+    }
+    hide('back-button');
   }
   function showCountiesState(box, state, fips) {
     var model_states = ["FL","IN","MI","MN","MN2","MO","MS","MS2","MT","ND","OH","PA","TN","TX","VA","WI","WV"];
@@ -7763,7 +7801,12 @@ Pre-election estimate: <b>Safe R</b>
     hide(resultsId);
     var element = document.getElementById(id);
     if (element.className.baseVal == 'county') {
-      element.style.strokeWidth = "0.2px";
+      element.style.removeProperty('stroke-width');
+      element.style.removeProperty('stroke'); // hover + front does not work on firefox
+    } else if (element.className.baseVal == 'district') {
+      bringToFront(document.getElementsByClassName('borders')[0]);
+      //element.style.removeProperty('stroke-width');
+      //element.style.removeProperty('stroke'); // hover + front does not work on firefox
     }
   }
   function hideAllResults() {
@@ -7792,6 +7835,11 @@ Pre-election estimate: <b>Safe R</b>
     if (document.getElementById(id)) {
       var resultsStyle = document.getElementById(id).style;
       resultsStyle.visibility = "visible";    
+    }
+  }
+  function bringToFront(element) {
+    if (element.nextElementSibling) {
+      element.parentNode.appendChild(element);
     }
   }
   function setColor(id, color) {

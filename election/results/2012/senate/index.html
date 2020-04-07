@@ -13,33 +13,18 @@
 <div class="description">
 <p>Following President Obama's re-election victory, down-ballot Democratic Senate candidates rode into victories in key swing states and in several red states. Aiding the Democrats were several deeply flawed Tea Party-aligned GOP candidates who made some unfortunate comments in critical races.</p>
 </div>
-<div class="dropdown">
-  <div class="dropbtn">Choose Election<span style="float:right;">▼</span></div>
-  <div class="dropdown-content">
-    <a href="../../2020/demprimaries">2020 Democratic Primaries</a>
-    <a href="../../2020/repprimaries">2020 Republican Primaries</a>
-    <a href="../../2019/governors">2019 Governors</a>
-    <a href="../../2018/senate">2018 Senate</a>
-    <a href="../../2018/governors">2018 Governors</a>
-    <a href="../../2017/governors">2017 Governors</a>
-    <a href="../../2017/senate">2017 Senate</a>
-    <a href="../../2016/president">2016 President</a>
-    <a href="../../2016/senate">2016 Senate</a>
-    <a href="../../2016/governors">2016 Governors</a>
-    <a href="../../2016/demprimaries">2016 Democratic Primaries</a>
-    <a href="../../2016/repprimaries">2016 Republican Primaries</a>
-    <a href="../../2014/senate">2014 Senate</a>
-    <a href="../../2014/governors">2014 Governors</a>
-    <a href="../../2012/president">2012 President</a>
-    <a href="../../2012/senate">2012 Senate</a>
-    <a href="../../2012/repprimaries">2012 Republican Primaries</a>
-    <a href="../../2010/senate">2010 Senate</a>
-    <a href="../../2010/governors">2010 Governors</a>
-    <a href="../../2008/president">2008 President</a>
-    <a href="../../2004/president">2004 President</a>
-    <a href="../../2000/president">2000 President</a>
+<div class="dropdown dropdown-year dropdown-elem-year">
+  <div class="dropbtn">2012<span style="float:right;">▼</span></div>
+  <div class="dropdown-content dropdown-elem-year">
+    <a href="../../2020/demprimaries">2020</a>    <a href="../../2019/governors">2019</a>    <a href="../../2018/senate">2018</a>    <a href="../../2017/senate">2017</a>    <a href="../../2016/senate">2016</a>    <a href="../../2014/senate">2014</a>    <a href="../../2012/senate">2012</a>    <a href="../../2010/senate">2010</a>    <a href="../../2008/president">2008</a>    <a href="../../2006/house">2006</a>    <a href="../../2004/president">2004</a>    <a href="../../2002/house">2002</a>    <a href="../../2000/president">2000</a>
   </div>
-</div> 
+</div>
+<div class="dropdown dropdown-election dropdown-elem-election">
+  <div class="dropbtn">Senate<span style="float:right;">▼</span></div>
+  <div class="dropdown-content dropdown-elem-election">
+    <a href="../../2012/president"> President</a>    <a href="../../2012/senate"> Senate</a>    <a href="../../2012/house"> House</a>    <a href="../../2012/governors"> Governors</a>    <a href="../../2012/repprimaries"> Republican Primaries</a>
+  </div>
+</div>
 
 
 <div id="results-score">
@@ -188,7 +173,7 @@
      * path[id*='c35'] {fill:#34A853}
      *
      */
-    .counties {fill: darkgray; stroke:darkgray; stroke-width:0.2px; stroke-opacity: 0.5;} 
+    .counties path {fill: darkgray; stroke:darkgray; stroke-width:0.2px; stroke-opacity: 1;} 
     .counties path:hover {stroke:black; stroke-opacity: 1;} 
     #borders {fill:none;stroke:black;stroke-width:0.3px;} 
    </style>
@@ -7300,7 +7285,7 @@ Pre-election estimate: <b>N/A</b>
 
 
 <div id="buttons" class="no-height">
-  <div id="back-button" class="button" onclick="zoomCounties('0 0 990 627'); show('national-map'); hide('counties-map'); hideAllResults(); hide('back-button')">
+  <div id="back-button" class="button" onclick="zoomOut();">
     << Back to all states
   </div>
 </div>
@@ -7327,6 +7312,7 @@ Pre-election estimate: <b>N/A</b>
 </div>
 <script type="text/javascript">
   var current_fips = "00";
+  var big_state_fips = ["02","41","06","16","32","49","04","30","35","48","27","26","17","12"];
   function displayResults(id, resultsId, anchor) {
     var e = window.event;
     if (document.getElementById(resultsId)) {
@@ -7334,7 +7320,7 @@ Pre-election estimate: <b>N/A</b>
       var nationalView = document.getElementById('national-map').style.visibility;
       if (anchor) {
         resultsStyle.position = 'relative';
-        resultsStyle.left = 800; //900;
+        resultsStyle.left = 800;
         resultsStyle.top = 0;
       } else if (id.startsWith('c') || nationalView === "visible") {
         resultsStyle.position = 'absolute';
@@ -7344,17 +7330,69 @@ Pre-election estimate: <b>N/A</b>
       show(resultsId);
     }
     var element = document.getElementById(id);
-    if (element.className.baseVal == 'county') {
-      var big_state_fips = ["02","41","06","16","32","49","04","30","35","48","27","26","17","12"];
+    if (element.className.baseVal === 'county') {
       if (big_state_fips.includes(current_fips)) {
-        element.style.strokeWidth = "0.8px";   
+        element.style.strokeWidth = "0.5px"; // 0.8
       } else {
-        element.style.strokeWidth = "0.5px";      
+        element.style.strokeWidth = "0.3px"; // 0.5
       }
+      bringToFront(element);
+      element.style.stroke = 'black'; // hover + front does not work on firefox
+    } else if (element.className.baseVal === 'district') {
+      bringToFront(element);
+      //element.style.strokeWidth = "0.5px";
+      //element.style.stroke = 'black'; // hover + front does not work on firefox
     }
   }
   function zoomCounties(box) {
     document.getElementById('counties-svg').setAttribute('viewBox', box);
+  }
+  function zoomHouse(fips, box, metro) {
+    document.getElementById('house-svg').setAttribute('viewBox', box);
+    var districts = document.getElementsByClassName('district');
+    for (var i = 0; i < districts.length; i++) {
+      if (metro) {
+        if (fips === '36' || fips === '34') { // NY/NJ
+          districts[i].style.strokeWidth = "0.1px";
+        } else {
+          districts[i].style.strokeWidth = "0.15px";
+        }
+      } else if (big_state_fips.includes(fips)) {
+        districts[i].style.strokeWidth = "0.5px";
+      } else {
+        districts[i].style.strokeWidth = "0.3px";
+      }
+    }
+    var borders = document.getElementsByClassName('borders');
+    for (var i = 0; i < borders.length; i++) {
+      if (metro) {
+        borders[i].style.strokeWidth = "0.5px";
+      } else {
+        borders[i].style.strokeWidth = "1px";
+      }
+    }
+    show('back-button');
+  }
+  function zoomOut() {
+    if (document.getElementById('house-svg')) {
+      //document.getElementById('house-svg').setAttribute('viewBox', "60 0 1181.7317 720.55206");
+      document.getElementById('house-svg').removeAttribute('viewBox');
+      var districts = document.getElementsByClassName('district');
+      for (var i = 0; i < districts.length; i++) {
+        districts[i].style.removeProperty('stroke-width');
+        districts[i].style.removeProperty('stroke');
+      }
+      var borders = document.getElementsByClassName('borders');
+      for (var i = 0; i < borders.length; i++) {
+        borders[i].style.removeProperty('stroke-width');
+      }
+    } else {
+      zoomCounties('0 0 990 627');
+      show('national-map');
+      hide('counties-map');
+      hideAllResults();
+    }
+    hide('back-button');
   }
   function showCountiesState(box, state, fips) {
     var model_states = ["FL","IN","MI","MN","MO","MS","MT","ND","OH","PA","TN","TX","VA","WI","WV"];
@@ -7381,7 +7419,12 @@ Pre-election estimate: <b>N/A</b>
     hide(resultsId);
     var element = document.getElementById(id);
     if (element.className.baseVal == 'county') {
-      element.style.strokeWidth = "0.2px";
+      element.style.removeProperty('stroke-width');
+      element.style.removeProperty('stroke'); // hover + front does not work on firefox
+    } else if (element.className.baseVal == 'district') {
+      bringToFront(document.getElementsByClassName('borders')[0]);
+      //element.style.removeProperty('stroke-width');
+      //element.style.removeProperty('stroke'); // hover + front does not work on firefox
     }
   }
   function hideAllResults() {
@@ -7410,6 +7453,11 @@ Pre-election estimate: <b>N/A</b>
     if (document.getElementById(id)) {
       var resultsStyle = document.getElementById(id).style;
       resultsStyle.visibility = "visible";    
+    }
+  }
+  function bringToFront(element) {
+    if (element.nextElementSibling) {
+      element.parentNode.appendChild(element);
     }
   }
   function setColor(id, color) {
@@ -27052,7 +27100,7 @@ Lead: <b>Gillibrand +8.6</b><br>
 <td>Pct</td>
 </tr>
 <tr><td>Josh Mandel</td><td>REP</td><td class="votes">6,248</td><td class="pct">58.6</td></tr>
-<tr><td>Scott P. Brown</td><td>DEM</td><td class="votes">3,818</td><td class="pct">35.8</td></tr>
+<tr><td>Sherrod Brown</td><td>DEM</td><td class="votes">3,818</td><td class="pct">35.8</td></tr>
 <tr><td>Scott A. Rupert</td><td>IND</td><td class="votes">588</td><td class="pct">5.5</td></tr>
 
 </tbody>
@@ -27072,7 +27120,7 @@ Lead: <b>Mandel +22.8</b><br>
 <td>Pct</td>
 </tr>
 <tr><td>Josh Mandel</td><td>REP</td><td class="votes">28,037</td><td class="pct">60.8</td></tr>
-<tr><td>Scott P. Brown</td><td>DEM</td><td class="votes">16,569</td><td class="pct">36.0</td></tr>
+<tr><td>Sherrod Brown</td><td>DEM</td><td class="votes">16,569</td><td class="pct">36.0</td></tr>
 <tr><td>Scott A. Rupert</td><td>IND</td><td class="votes">1,474</td><td class="pct">3.2</td></tr>
 
 </tbody>
@@ -27092,7 +27140,7 @@ Lead: <b>Mandel +24.9</b><br>
 <td>Pct</td>
 </tr>
 <tr><td>Josh Mandel</td><td>REP</td><td class="votes">13,964</td><td class="pct">59.7</td></tr>
-<tr><td>Scott P. Brown</td><td>DEM</td><td class="votes">7,853</td><td class="pct">33.6</td></tr>
+<tr><td>Sherrod Brown</td><td>DEM</td><td class="votes">7,853</td><td class="pct">33.6</td></tr>
 <tr><td>Scott A. Rupert</td><td>IND</td><td class="votes">1,558</td><td class="pct">6.7</td></tr>
 
 </tbody>
@@ -27111,7 +27159,7 @@ Lead: <b>Mandel +26.1</b><br>
 <td>Votes</td>
 <td>Pct</td>
 </tr>
-<tr><td>Scott P. Brown</td><td>DEM</td><td class="votes">21,275</td><td class="pct">51.4</td></tr>
+<tr><td>Sherrod Brown</td><td>DEM</td><td class="votes">21,275</td><td class="pct">51.4</td></tr>
 <tr><td>Josh Mandel</td><td>REP</td><td class="votes">17,338</td><td class="pct">41.9</td></tr>
 <tr><td>Scott A. Rupert</td><td>IND</td><td class="votes">2,739</td><td class="pct">6.6</td></tr>
 
@@ -27131,7 +27179,7 @@ Lead: <b>Brown +9.5</b><br>
 <td>Votes</td>
 <td>Pct</td>
 </tr>
-<tr><td>Scott P. Brown</td><td>DEM</td><td class="votes">16,752</td><td class="pct">65.6</td></tr>
+<tr><td>Sherrod Brown</td><td>DEM</td><td class="votes">16,752</td><td class="pct">65.6</td></tr>
 <tr><td>Josh Mandel</td><td>REP</td><td class="votes">7,663</td><td class="pct">30.0</td></tr>
 <tr><td>Scott A. Rupert</td><td>IND</td><td class="votes">1,108</td><td class="pct">4.3</td></tr>
 
@@ -27152,7 +27200,7 @@ Lead: <b>Brown +35.6</b><br>
 <td>Pct</td>
 </tr>
 <tr><td>Josh Mandel</td><td>REP</td><td class="votes">16,108</td><td class="pct">72.2</td></tr>
-<tr><td>Scott P. Brown</td><td>DEM</td><td class="votes">5,289</td><td class="pct">23.7</td></tr>
+<tr><td>Sherrod Brown</td><td>DEM</td><td class="votes">5,289</td><td class="pct">23.7</td></tr>
 <tr><td>Scott A. Rupert</td><td>IND</td><td class="votes">907</td><td class="pct">4.1</td></tr>
 
 </tbody>
@@ -27171,7 +27219,7 @@ Lead: <b>Mandel +48.5</b><br>
 <td>Votes</td>
 <td>Pct</td>
 </tr>
-<tr><td>Scott P. Brown</td><td>DEM</td><td class="votes">14,712</td><td class="pct">48.9</td></tr>
+<tr><td>Sherrod Brown</td><td>DEM</td><td class="votes">14,712</td><td class="pct">48.9</td></tr>
 <tr><td>Josh Mandel</td><td>REP</td><td class="votes">14,064</td><td class="pct">46.7</td></tr>
 <tr><td>Scott A. Rupert</td><td>IND</td><td class="votes">1,338</td><td class="pct">4.4</td></tr>
 
@@ -27192,7 +27240,7 @@ Lead: <b>Brown +2.2</b><br>
 <td>Pct</td>
 </tr>
 <tr><td>Josh Mandel</td><td>REP</td><td class="votes">10,259</td><td class="pct">58.0</td></tr>
-<tr><td>Scott P. Brown</td><td>DEM</td><td class="votes">6,461</td><td class="pct">36.5</td></tr>
+<tr><td>Sherrod Brown</td><td>DEM</td><td class="votes">6,461</td><td class="pct">36.5</td></tr>
 <tr><td>Scott A. Rupert</td><td>IND</td><td class="votes">960</td><td class="pct">5.4</td></tr>
 
 </tbody>
@@ -27212,7 +27260,7 @@ Lead: <b>Mandel +21.5</b><br>
 <td>Pct</td>
 </tr>
 <tr><td>Josh Mandel</td><td>REP</td><td class="votes">94,486</td><td class="pct">58.7</td></tr>
-<tr><td>Scott P. Brown</td><td>DEM</td><td class="votes">59,186</td><td class="pct">36.8</td></tr>
+<tr><td>Sherrod Brown</td><td>DEM</td><td class="votes">59,186</td><td class="pct">36.8</td></tr>
 <tr><td>Scott A. Rupert</td><td>IND</td><td class="votes">7,221</td><td class="pct">4.5</td></tr>
 
 </tbody>
@@ -27232,7 +27280,7 @@ Lead: <b>Mandel +21.9</b><br>
 <td>Pct</td>
 </tr>
 <tr><td>Josh Mandel</td><td>REP</td><td class="votes">6,605</td><td class="pct">52.2</td></tr>
-<tr><td>Scott P. Brown</td><td>DEM</td><td class="votes">5,036</td><td class="pct">39.8</td></tr>
+<tr><td>Sherrod Brown</td><td>DEM</td><td class="votes">5,036</td><td class="pct">39.8</td></tr>
 <tr><td>Scott A. Rupert</td><td>IND</td><td class="votes">1,011</td><td class="pct">8.0</td></tr>
 
 </tbody>
@@ -27252,7 +27300,7 @@ Lead: <b>Mandel +12.4</b><br>
 <td>Pct</td>
 </tr>
 <tr><td>Josh Mandel</td><td>REP</td><td class="votes">11,009</td><td class="pct">57.1</td></tr>
-<tr><td>Scott P. Brown</td><td>DEM</td><td class="votes">7,078</td><td class="pct">36.7</td></tr>
+<tr><td>Sherrod Brown</td><td>DEM</td><td class="votes">7,078</td><td class="pct">36.7</td></tr>
 <tr><td>Scott A. Rupert</td><td>IND</td><td class="votes">1,185</td><td class="pct">6.1</td></tr>
 
 </tbody>
@@ -27271,7 +27319,7 @@ Lead: <b>Mandel +20.4</b><br>
 <td>Votes</td>
 <td>Pct</td>
 </tr>
-<tr><td>Scott P. Brown</td><td>DEM</td><td class="votes">29,501</td><td class="pct">47.7</td></tr>
+<tr><td>Sherrod Brown</td><td>DEM</td><td class="votes">29,501</td><td class="pct">47.7</td></tr>
 <tr><td>Josh Mandel</td><td>REP</td><td class="votes">29,478</td><td class="pct">47.7</td></tr>
 <tr><td>Scott A. Rupert</td><td>IND</td><td class="votes">2,849</td><td class="pct">4.6</td></tr>
 
@@ -27292,7 +27340,7 @@ Lead: <b>Brown +0.0</b><br>
 <td>Pct</td>
 </tr>
 <tr><td>Josh Mandel</td><td>REP</td><td class="votes">56,688</td><td class="pct">62.9</td></tr>
-<tr><td>Scott P. Brown</td><td>DEM</td><td class="votes">28,875</td><td class="pct">32.0</td></tr>
+<tr><td>Sherrod Brown</td><td>DEM</td><td class="votes">28,875</td><td class="pct">32.0</td></tr>
 <tr><td>Scott A. Rupert</td><td>IND</td><td class="votes">4,628</td><td class="pct">5.1</td></tr>
 
 </tbody>
@@ -27312,7 +27360,7 @@ Lead: <b>Mandel +30.8</b><br>
 <td>Pct</td>
 </tr>
 <tr><td>Josh Mandel</td><td>REP</td><td class="votes">10,959</td><td class="pct">62.9</td></tr>
-<tr><td>Scott P. Brown</td><td>DEM</td><td class="votes">5,498</td><td class="pct">31.6</td></tr>
+<tr><td>Sherrod Brown</td><td>DEM</td><td class="votes">5,498</td><td class="pct">31.6</td></tr>
 <tr><td>Scott A. Rupert</td><td>IND</td><td class="votes">966</td><td class="pct">5.5</td></tr>
 
 </tbody>
@@ -27332,7 +27380,7 @@ Lead: <b>Mandel +31.3</b><br>
 <td>Pct</td>
 </tr>
 <tr><td>Josh Mandel</td><td>REP</td><td class="votes">21,481</td><td class="pct">48.2</td></tr>
-<tr><td>Scott P. Brown</td><td>DEM</td><td class="votes">19,929</td><td class="pct">44.8</td></tr>
+<tr><td>Sherrod Brown</td><td>DEM</td><td class="votes">19,929</td><td class="pct">44.8</td></tr>
 <tr><td>Scott A. Rupert</td><td>IND</td><td class="votes">3,120</td><td class="pct">7.0</td></tr>
 
 </tbody>
@@ -27352,7 +27400,7 @@ Lead: <b>Mandel +3.5</b><br>
 <td>Pct</td>
 </tr>
 <tr><td>Josh Mandel</td><td>REP</td><td class="votes">7,953</td><td class="pct">51.6</td></tr>
-<tr><td>Scott P. Brown</td><td>DEM</td><td class="votes">6,381</td><td class="pct">41.4</td></tr>
+<tr><td>Sherrod Brown</td><td>DEM</td><td class="votes">6,381</td><td class="pct">41.4</td></tr>
 <tr><td>Scott A. Rupert</td><td>IND</td><td class="votes">1,070</td><td class="pct">6.9</td></tr>
 
 </tbody>
@@ -27372,7 +27420,7 @@ Lead: <b>Mandel +10.2</b><br>
 <td>Pct</td>
 </tr>
 <tr><td>Josh Mandel</td><td>REP</td><td class="votes">10,876</td><td class="pct">57.3</td></tr>
-<tr><td>Scott P. Brown</td><td>DEM</td><td class="votes">6,965</td><td class="pct">36.7</td></tr>
+<tr><td>Sherrod Brown</td><td>DEM</td><td class="votes">6,965</td><td class="pct">36.7</td></tr>
 <tr><td>Scott A. Rupert</td><td>IND</td><td class="votes">1,138</td><td class="pct">6.0</td></tr>
 
 </tbody>
@@ -27391,7 +27439,7 @@ Lead: <b>Mandel +20.6</b><br>
 <td>Votes</td>
 <td>Pct</td>
 </tr>
-<tr><td>Scott P. Brown</td><td>DEM</td><td class="votes">404,532</td><td class="pct">69.1</td></tr>
+<tr><td>Sherrod Brown</td><td>DEM</td><td class="votes">404,532</td><td class="pct">69.1</td></tr>
 <tr><td>Josh Mandel</td><td>REP</td><td class="votes">161,455</td><td class="pct">27.6</td></tr>
 <tr><td>Scott A. Rupert</td><td>IND</td><td class="votes">19,569</td><td class="pct">3.3</td></tr>
 
@@ -27412,7 +27460,7 @@ Lead: <b>Brown +41.5</b><br>
 <td>Pct</td>
 </tr>
 <tr><td>Josh Mandel</td><td>REP</td><td class="votes">16,842</td><td class="pct">68.7</td></tr>
-<tr><td>Scott P. Brown</td><td>DEM</td><td class="votes">6,473</td><td class="pct">26.4</td></tr>
+<tr><td>Sherrod Brown</td><td>DEM</td><td class="votes">6,473</td><td class="pct">26.4</td></tr>
 <tr><td>Scott A. Rupert</td><td>IND</td><td class="votes">1,218</td><td class="pct">5.0</td></tr>
 
 </tbody>
@@ -27432,7 +27480,7 @@ Lead: <b>Mandel +42.3</b><br>
 <td>Pct</td>
 </tr>
 <tr><td>Josh Mandel</td><td>REP</td><td class="votes">9,346</td><td class="pct">53.7</td></tr>
-<tr><td>Scott P. Brown</td><td>DEM</td><td class="votes">7,063</td><td class="pct">40.6</td></tr>
+<tr><td>Sherrod Brown</td><td>DEM</td><td class="votes">7,063</td><td class="pct">40.6</td></tr>
 <tr><td>Scott A. Rupert</td><td>IND</td><td class="votes">1,008</td><td class="pct">5.8</td></tr>
 
 </tbody>
@@ -27452,7 +27500,7 @@ Lead: <b>Mandel +13.1</b><br>
 <td>Pct</td>
 </tr>
 <tr><td>Josh Mandel</td><td>REP</td><td class="votes">54,172</td><td class="pct">57.4</td></tr>
-<tr><td>Scott P. Brown</td><td>DEM</td><td class="votes">36,362</td><td class="pct">38.5</td></tr>
+<tr><td>Sherrod Brown</td><td>DEM</td><td class="votes">36,362</td><td class="pct">38.5</td></tr>
 <tr><td>Scott A. Rupert</td><td>IND</td><td class="votes">3,875</td><td class="pct">4.1</td></tr>
 
 </tbody>
@@ -27471,7 +27519,7 @@ Lead: <b>Mandel +18.9</b><br>
 <td>Votes</td>
 <td>Pct</td>
 </tr>
-<tr><td>Scott P. Brown</td><td>DEM</td><td class="votes">20,301</td><td class="pct">53.8</td></tr>
+<tr><td>Sherrod Brown</td><td>DEM</td><td class="votes">20,301</td><td class="pct">53.8</td></tr>
 <tr><td>Josh Mandel</td><td>REP</td><td class="votes">15,350</td><td class="pct">40.6</td></tr>
 <tr><td>Scott A. Rupert</td><td>IND</td><td class="votes">2,118</td><td class="pct">5.6</td></tr>
 
@@ -27492,7 +27540,7 @@ Lead: <b>Brown +13.1</b><br>
 <td>Pct</td>
 </tr>
 <tr><td>Josh Mandel</td><td>REP</td><td class="votes">37,298</td><td class="pct">54.0</td></tr>
-<tr><td>Scott P. Brown</td><td>DEM</td><td class="votes">28,152</td><td class="pct">40.8</td></tr>
+<tr><td>Sherrod Brown</td><td>DEM</td><td class="votes">28,152</td><td class="pct">40.8</td></tr>
 <tr><td>Scott A. Rupert</td><td>IND</td><td class="votes">3,592</td><td class="pct">5.2</td></tr>
 
 </tbody>
@@ -27512,7 +27560,7 @@ Lead: <b>Mandel +13.2</b><br>
 <td>Pct</td>
 </tr>
 <tr><td>Josh Mandel</td><td>REP</td><td class="votes">5,958</td><td class="pct">57.7</td></tr>
-<tr><td>Scott P. Brown</td><td>DEM</td><td class="votes">3,855</td><td class="pct">37.3</td></tr>
+<tr><td>Sherrod Brown</td><td>DEM</td><td class="votes">3,855</td><td class="pct">37.3</td></tr>
 <tr><td>Scott A. Rupert</td><td>IND</td><td class="votes">521</td><td class="pct">5.0</td></tr>
 
 </tbody>
@@ -27531,7 +27579,7 @@ Lead: <b>Mandel +20.4</b><br>
 <td>Votes</td>
 <td>Pct</td>
 </tr>
-<tr><td>Scott P. Brown</td><td>DEM</td><td class="votes">320,258</td><td class="pct">60.1</td></tr>
+<tr><td>Sherrod Brown</td><td>DEM</td><td class="votes">320,258</td><td class="pct">60.1</td></tr>
 <tr><td>Josh Mandel</td><td>REP</td><td class="votes">191,580</td><td class="pct">36.0</td></tr>
 <tr><td>Scott A. Rupert</td><td>IND</td><td class="votes">20,864</td><td class="pct">3.9</td></tr>
 
@@ -27552,7 +27600,7 @@ Lead: <b>Brown +24.2</b><br>
 <td>Pct</td>
 </tr>
 <tr><td>Josh Mandel</td><td>REP</td><td class="votes">11,052</td><td class="pct">54.1</td></tr>
-<tr><td>Scott P. Brown</td><td>DEM</td><td class="votes">8,275</td><td class="pct">40.5</td></tr>
+<tr><td>Sherrod Brown</td><td>DEM</td><td class="votes">8,275</td><td class="pct">40.5</td></tr>
 <tr><td>Scott A. Rupert</td><td>IND</td><td class="votes">1,102</td><td class="pct">5.4</td></tr>
 
 </tbody>
@@ -27572,7 +27620,7 @@ Lead: <b>Mandel +13.6</b><br>
 <td>Pct</td>
 </tr>
 <tr><td>Josh Mandel</td><td>REP</td><td class="votes">5,162</td><td class="pct">55.3</td></tr>
-<tr><td>Scott P. Brown</td><td>DEM</td><td class="votes">3,784</td><td class="pct">40.5</td></tr>
+<tr><td>Sherrod Brown</td><td>DEM</td><td class="votes">3,784</td><td class="pct">40.5</td></tr>
 <tr><td>Scott A. Rupert</td><td>IND</td><td class="votes">391</td><td class="pct">4.2</td></tr>
 
 </tbody>
@@ -27592,7 +27640,7 @@ Lead: <b>Mandel +14.8</b><br>
 <td>Pct</td>
 </tr>
 <tr><td>Josh Mandel</td><td>REP</td><td class="votes">27,090</td><td class="pct">55.0</td></tr>
-<tr><td>Scott P. Brown</td><td>DEM</td><td class="votes">19,924</td><td class="pct">40.5</td></tr>
+<tr><td>Sherrod Brown</td><td>DEM</td><td class="votes">19,924</td><td class="pct">40.5</td></tr>
 <tr><td>Scott A. Rupert</td><td>IND</td><td class="votes">2,217</td><td class="pct">4.5</td></tr>
 
 </tbody>
@@ -27612,7 +27660,7 @@ Lead: <b>Mandel +14.6</b><br>
 <td>Pct</td>
 </tr>
 <tr><td>Josh Mandel</td><td>REP</td><td class="votes">45,852</td><td class="pct">57.3</td></tr>
-<tr><td>Scott P. Brown</td><td>DEM</td><td class="votes">31,136</td><td class="pct">38.9</td></tr>
+<tr><td>Sherrod Brown</td><td>DEM</td><td class="votes">31,136</td><td class="pct">38.9</td></tr>
 <tr><td>Scott A. Rupert</td><td>IND</td><td class="votes">3,037</td><td class="pct">3.8</td></tr>
 
 </tbody>
@@ -27632,7 +27680,7 @@ Lead: <b>Mandel +18.4</b><br>
 <td>Pct</td>
 </tr>
 <tr><td>Josh Mandel</td><td>REP</td><td class="votes">8,319</td><td class="pct">52.2</td></tr>
-<tr><td>Scott P. Brown</td><td>DEM</td><td class="votes">6,693</td><td class="pct">42.0</td></tr>
+<tr><td>Sherrod Brown</td><td>DEM</td><td class="votes">6,693</td><td class="pct">42.0</td></tr>
 <tr><td>Scott A. Rupert</td><td>IND</td><td class="votes">939</td><td class="pct">5.9</td></tr>
 
 </tbody>
@@ -27651,7 +27699,7 @@ Lead: <b>Mandel +10.2</b><br>
 <td>Votes</td>
 <td>Pct</td>
 </tr>
-<tr><td>Scott P. Brown</td><td>DEM</td><td class="votes">208,611</td><td class="pct">52.9</td></tr>
+<tr><td>Sherrod Brown</td><td>DEM</td><td class="votes">208,611</td><td class="pct">52.9</td></tr>
 <tr><td>Josh Mandel</td><td>REP</td><td class="votes">171,718</td><td class="pct">43.6</td></tr>
 <tr><td>Scott A. Rupert</td><td>IND</td><td class="votes">13,811</td><td class="pct">3.5</td></tr>
 
@@ -27672,7 +27720,7 @@ Lead: <b>Brown +9.4</b><br>
 <td>Pct</td>
 </tr>
 <tr><td>Josh Mandel</td><td>REP</td><td class="votes">21,143</td><td class="pct">61.3</td></tr>
-<tr><td>Scott P. Brown</td><td>DEM</td><td class="votes">11,587</td><td class="pct">33.6</td></tr>
+<tr><td>Sherrod Brown</td><td>DEM</td><td class="votes">11,587</td><td class="pct">33.6</td></tr>
 <tr><td>Scott A. Rupert</td><td>IND</td><td class="votes">1,734</td><td class="pct">5.0</td></tr>
 
 </tbody>
@@ -27692,7 +27740,7 @@ Lead: <b>Mandel +27.7</b><br>
 <td>Pct</td>
 </tr>
 <tr><td>Josh Mandel</td><td>REP</td><td class="votes">6,973</td><td class="pct">58.2</td></tr>
-<tr><td>Scott P. Brown</td><td>DEM</td><td class="votes">4,315</td><td class="pct">36.0</td></tr>
+<tr><td>Sherrod Brown</td><td>DEM</td><td class="votes">4,315</td><td class="pct">36.0</td></tr>
 <tr><td>Scott A. Rupert</td><td>IND</td><td class="votes">686</td><td class="pct">5.7</td></tr>
 
 </tbody>
@@ -27712,7 +27760,7 @@ Lead: <b>Mandel +22.2</b><br>
 <td>Pct</td>
 </tr>
 <tr><td>Josh Mandel</td><td>REP</td><td class="votes">3,431</td><td class="pct">49.5</td></tr>
-<tr><td>Scott P. Brown</td><td>DEM</td><td class="votes">3,120</td><td class="pct">45.0</td></tr>
+<tr><td>Sherrod Brown</td><td>DEM</td><td class="votes">3,120</td><td class="pct">45.0</td></tr>
 <tr><td>Scott A. Rupert</td><td>IND</td><td class="votes">376</td><td class="pct">5.4</td></tr>
 
 </tbody>
@@ -27732,7 +27780,7 @@ Lead: <b>Mandel +4.5</b><br>
 <td>Pct</td>
 </tr>
 <tr><td>Josh Mandel</td><td>REP</td><td class="votes">7,591</td><td class="pct">55.3</td></tr>
-<tr><td>Scott P. Brown</td><td>DEM</td><td class="votes">5,321</td><td class="pct">38.8</td></tr>
+<tr><td>Sherrod Brown</td><td>DEM</td><td class="votes">5,321</td><td class="pct">38.8</td></tr>
 <tr><td>Scott A. Rupert</td><td>IND</td><td class="votes">810</td><td class="pct">5.9</td></tr>
 
 </tbody>
@@ -27752,7 +27800,7 @@ Lead: <b>Mandel +16.5</b><br>
 <td>Pct</td>
 </tr>
 <tr><td>Josh Mandel</td><td>REP</td><td class="votes">10,315</td><td class="pct">60.8</td></tr>
-<tr><td>Scott P. Brown</td><td>DEM</td><td class="votes">5,732</td><td class="pct">33.8</td></tr>
+<tr><td>Sherrod Brown</td><td>DEM</td><td class="votes">5,732</td><td class="pct">33.8</td></tr>
 <tr><td>Scott A. Rupert</td><td>IND</td><td class="votes">916</td><td class="pct">5.4</td></tr>
 
 </tbody>
@@ -27772,7 +27820,7 @@ Lead: <b>Mandel +27.0</b><br>
 <td>Pct</td>
 </tr>
 <tr><td>Josh Mandel</td><td>REP</td><td class="votes">5,932</td><td class="pct">48.2</td></tr>
-<tr><td>Scott P. Brown</td><td>DEM</td><td class="votes">5,600</td><td class="pct">45.5</td></tr>
+<tr><td>Sherrod Brown</td><td>DEM</td><td class="votes">5,600</td><td class="pct">45.5</td></tr>
 <tr><td>Scott A. Rupert</td><td>IND</td><td class="votes">780</td><td class="pct">6.3</td></tr>
 
 </tbody>
@@ -27792,7 +27840,7 @@ Lead: <b>Mandel +2.7</b><br>
 <td>Pct</td>
 </tr>
 <tr><td>Josh Mandel</td><td>REP</td><td class="votes">8,115</td><td class="pct">72.3</td></tr>
-<tr><td>Scott P. Brown</td><td>DEM</td><td class="votes">2,478</td><td class="pct">22.1</td></tr>
+<tr><td>Sherrod Brown</td><td>DEM</td><td class="votes">2,478</td><td class="pct">22.1</td></tr>
 <tr><td>Scott A. Rupert</td><td>IND</td><td class="votes">624</td><td class="pct">5.6</td></tr>
 
 </tbody>
@@ -27812,7 +27860,7 @@ Lead: <b>Mandel +50.3</b><br>
 <td>Pct</td>
 </tr>
 <tr><td>Josh Mandel</td><td>REP</td><td class="votes">12,199</td><td class="pct">51.4</td></tr>
-<tr><td>Scott P. Brown</td><td>DEM</td><td class="votes">9,825</td><td class="pct">41.4</td></tr>
+<tr><td>Sherrod Brown</td><td>DEM</td><td class="votes">9,825</td><td class="pct">41.4</td></tr>
 <tr><td>Scott A. Rupert</td><td>IND</td><td class="votes">1,690</td><td class="pct">7.1</td></tr>
 
 </tbody>
@@ -27832,7 +27880,7 @@ Lead: <b>Mandel +10.0</b><br>
 <td>Pct</td>
 </tr>
 <tr><td>Josh Mandel</td><td>REP</td><td class="votes">7,042</td><td class="pct">55.3</td></tr>
-<tr><td>Scott P. Brown</td><td>DEM</td><td class="votes">5,066</td><td class="pct">39.8</td></tr>
+<tr><td>Sherrod Brown</td><td>DEM</td><td class="votes">5,066</td><td class="pct">39.8</td></tr>
 <tr><td>Scott A. Rupert</td><td>IND</td><td class="votes">631</td><td class="pct">5.0</td></tr>
 
 </tbody>
@@ -27851,7 +27899,7 @@ Lead: <b>Mandel +15.5</b><br>
 <td>Votes</td>
 <td>Pct</td>
 </tr>
-<tr><td>Scott P. Brown</td><td>DEM</td><td class="votes">15,648</td><td class="pct">49.5</td></tr>
+<tr><td>Sherrod Brown</td><td>DEM</td><td class="votes">15,648</td><td class="pct">49.5</td></tr>
 <tr><td>Josh Mandel</td><td>REP</td><td class="votes">14,493</td><td class="pct">45.8</td></tr>
 <tr><td>Scott A. Rupert</td><td>IND</td><td class="votes">1,471</td><td class="pct">4.7</td></tr>
 
@@ -27872,7 +27920,7 @@ Lead: <b>Brown +3.7</b><br>
 <td>Pct</td>
 </tr>
 <tr><td>Josh Mandel</td><td>REP</td><td class="votes">15,870</td><td class="pct">58.1</td></tr>
-<tr><td>Scott P. Brown</td><td>DEM</td><td class="votes">9,909</td><td class="pct">36.3</td></tr>
+<tr><td>Sherrod Brown</td><td>DEM</td><td class="votes">9,909</td><td class="pct">36.3</td></tr>
 <tr><td>Scott A. Rupert</td><td>IND</td><td class="votes">1,522</td><td class="pct">5.6</td></tr>
 
 </tbody>
@@ -27891,7 +27939,7 @@ Lead: <b>Mandel +21.8</b><br>
 <td>Votes</td>
 <td>Pct</td>
 </tr>
-<tr><td>Scott P. Brown</td><td>DEM</td><td class="votes">52,896</td><td class="pct">48.0</td></tr>
+<tr><td>Sherrod Brown</td><td>DEM</td><td class="votes">52,896</td><td class="pct">48.0</td></tr>
 <tr><td>Josh Mandel</td><td>REP</td><td class="votes">51,335</td><td class="pct">46.6</td></tr>
 <tr><td>Scott A. Rupert</td><td>IND</td><td class="votes">5,898</td><td class="pct">5.4</td></tr>
 
@@ -27912,7 +27960,7 @@ Lead: <b>Brown +1.4</b><br>
 <td>Pct</td>
 </tr>
 <tr><td>Josh Mandel</td><td>REP</td><td class="votes">12,172</td><td class="pct">50.6</td></tr>
-<tr><td>Scott P. Brown</td><td>DEM</td><td class="votes">10,817</td><td class="pct">45.0</td></tr>
+<tr><td>Sherrod Brown</td><td>DEM</td><td class="votes">10,817</td><td class="pct">45.0</td></tr>
 <tr><td>Scott A. Rupert</td><td>IND</td><td class="votes">1,052</td><td class="pct">4.4</td></tr>
 
 </tbody>
@@ -27932,7 +27980,7 @@ Lead: <b>Mandel +5.6</b><br>
 <td>Pct</td>
 </tr>
 <tr><td>Josh Mandel</td><td>REP</td><td class="votes">40,847</td><td class="pct">53.5</td></tr>
-<tr><td>Scott P. Brown</td><td>DEM</td><td class="votes">31,355</td><td class="pct">41.1</td></tr>
+<tr><td>Sherrod Brown</td><td>DEM</td><td class="votes">31,355</td><td class="pct">41.1</td></tr>
 <tr><td>Scott A. Rupert</td><td>IND</td><td class="votes">4,161</td><td class="pct">5.4</td></tr>
 
 </tbody>
@@ -27952,7 +28000,7 @@ Lead: <b>Mandel +12.4</b><br>
 <td>Pct</td>
 </tr>
 <tr><td>Josh Mandel</td><td>REP</td><td class="votes">12,972</td><td class="pct">63.5</td></tr>
-<tr><td>Scott P. Brown</td><td>DEM</td><td class="votes">6,272</td><td class="pct">30.7</td></tr>
+<tr><td>Sherrod Brown</td><td>DEM</td><td class="votes">6,272</td><td class="pct">30.7</td></tr>
 <tr><td>Scott A. Rupert</td><td>IND</td><td class="votes">1,195</td><td class="pct">5.8</td></tr>
 
 </tbody>
@@ -27971,7 +28019,7 @@ Lead: <b>Mandel +32.8</b><br>
 <td>Votes</td>
 <td>Pct</td>
 </tr>
-<tr><td>Scott P. Brown</td><td>DEM</td><td class="votes">77,844</td><td class="pct">57.2</td></tr>
+<tr><td>Sherrod Brown</td><td>DEM</td><td class="votes">77,844</td><td class="pct">57.2</td></tr>
 <tr><td>Josh Mandel</td><td>REP</td><td class="votes">52,062</td><td class="pct">38.3</td></tr>
 <tr><td>Scott A. Rupert</td><td>IND</td><td class="votes">6,191</td><td class="pct">4.5</td></tr>
 
@@ -27991,7 +28039,7 @@ Lead: <b>Brown +18.9</b><br>
 <td>Votes</td>
 <td>Pct</td>
 </tr>
-<tr><td>Scott P. Brown</td><td>DEM</td><td class="votes">125,220</td><td class="pct">63.7</td></tr>
+<tr><td>Sherrod Brown</td><td>DEM</td><td class="votes">125,220</td><td class="pct">63.7</td></tr>
 <tr><td>Josh Mandel</td><td>REP</td><td class="votes">63,278</td><td class="pct">32.2</td></tr>
 <tr><td>Scott A. Rupert</td><td>IND</td><td class="votes">8,074</td><td class="pct">4.1</td></tr>
 
@@ -28012,7 +28060,7 @@ Lead: <b>Brown +31.5</b><br>
 <td>Pct</td>
 </tr>
 <tr><td>Josh Mandel</td><td>REP</td><td class="votes">9,253</td><td class="pct">55.6</td></tr>
-<tr><td>Scott P. Brown</td><td>DEM</td><td class="votes">6,412</td><td class="pct">38.5</td></tr>
+<tr><td>Sherrod Brown</td><td>DEM</td><td class="votes">6,412</td><td class="pct">38.5</td></tr>
 <tr><td>Scott A. Rupert</td><td>IND</td><td class="votes">986</td><td class="pct">5.9</td></tr>
 
 </tbody>
@@ -28031,7 +28079,7 @@ Lead: <b>Mandel +17.1</b><br>
 <td>Votes</td>
 <td>Pct</td>
 </tr>
-<tr><td>Scott P. Brown</td><td>DEM</td><td class="votes">73,716</td><td class="pct">66.1</td></tr>
+<tr><td>Sherrod Brown</td><td>DEM</td><td class="votes">73,716</td><td class="pct">66.1</td></tr>
 <tr><td>Josh Mandel</td><td>REP</td><td class="votes">32,767</td><td class="pct">29.4</td></tr>
 <tr><td>Scott A. Rupert</td><td>IND</td><td class="votes">4,964</td><td class="pct">4.5</td></tr>
 
@@ -28052,7 +28100,7 @@ Lead: <b>Brown +36.7</b><br>
 <td>Pct</td>
 </tr>
 <tr><td>Josh Mandel</td><td>REP</td><td class="votes">13,299</td><td class="pct">50.9</td></tr>
-<tr><td>Scott P. Brown</td><td>DEM</td><td class="votes">10,912</td><td class="pct">41.8</td></tr>
+<tr><td>Sherrod Brown</td><td>DEM</td><td class="votes">10,912</td><td class="pct">41.8</td></tr>
 <tr><td>Scott A. Rupert</td><td>IND</td><td class="votes">1,906</td><td class="pct">7.3</td></tr>
 
 </tbody>
@@ -28072,7 +28120,7 @@ Lead: <b>Mandel +9.1</b><br>
 <td>Pct</td>
 </tr>
 <tr><td>Josh Mandel</td><td>REP</td><td class="votes">44,305</td><td class="pct">50.9</td></tr>
-<tr><td>Scott P. Brown</td><td>DEM</td><td class="votes">38,219</td><td class="pct">44.0</td></tr>
+<tr><td>Sherrod Brown</td><td>DEM</td><td class="votes">38,219</td><td class="pct">44.0</td></tr>
 <tr><td>Scott A. Rupert</td><td>IND</td><td class="votes">4,436</td><td class="pct">5.1</td></tr>
 
 </tbody>
@@ -28092,7 +28140,7 @@ Lead: <b>Mandel +7.0</b><br>
 <td>Pct</td>
 </tr>
 <tr><td>Josh Mandel</td><td>REP</td><td class="votes">5,065</td><td class="pct">52.4</td></tr>
-<tr><td>Scott P. Brown</td><td>DEM</td><td class="votes">4,028</td><td class="pct">41.7</td></tr>
+<tr><td>Sherrod Brown</td><td>DEM</td><td class="votes">4,028</td><td class="pct">41.7</td></tr>
 <tr><td>Scott A. Rupert</td><td>IND</td><td class="votes">570</td><td class="pct">5.9</td></tr>
 
 </tbody>
@@ -28112,7 +28160,7 @@ Lead: <b>Mandel +10.7</b><br>
 <td>Pct</td>
 </tr>
 <tr><td>Josh Mandel</td><td>REP</td><td class="votes">15,399</td><td class="pct">73.9</td></tr>
-<tr><td>Scott P. Brown</td><td>DEM</td><td class="votes">4,623</td><td class="pct">22.2</td></tr>
+<tr><td>Sherrod Brown</td><td>DEM</td><td class="votes">4,623</td><td class="pct">22.2</td></tr>
 <tr><td>Scott A. Rupert</td><td>IND</td><td class="votes">829</td><td class="pct">4.0</td></tr>
 
 </tbody>
@@ -28132,7 +28180,7 @@ Lead: <b>Mandel +51.7</b><br>
 <td>Pct</td>
 </tr>
 <tr><td>Josh Mandel</td><td>REP</td><td class="votes">31,957</td><td class="pct">64.7</td></tr>
-<tr><td>Scott P. Brown</td><td>DEM</td><td class="votes">15,391</td><td class="pct">31.1</td></tr>
+<tr><td>Sherrod Brown</td><td>DEM</td><td class="votes">15,391</td><td class="pct">31.1</td></tr>
 <tr><td>Scott A. Rupert</td><td>IND</td><td class="votes">2,071</td><td class="pct">4.2</td></tr>
 
 </tbody>
@@ -28151,7 +28199,7 @@ Lead: <b>Mandel +33.5</b><br>
 <td>Votes</td>
 <td>Pct</td>
 </tr>
-<tr><td>Scott P. Brown</td><td>DEM</td><td class="votes">3,262</td><td class="pct">49.1</td></tr>
+<tr><td>Sherrod Brown</td><td>DEM</td><td class="votes">3,262</td><td class="pct">49.1</td></tr>
 <tr><td>Josh Mandel</td><td>REP</td><td class="votes">3,098</td><td class="pct">46.6</td></tr>
 <tr><td>Scott A. Rupert</td><td>IND</td><td class="votes">289</td><td class="pct">4.3</td></tr>
 
@@ -28171,7 +28219,7 @@ Lead: <b>Brown +2.5</b><br>
 <td>Votes</td>
 <td>Pct</td>
 </tr>
-<tr><td>Scott P. Brown</td><td>DEM</td><td class="votes">127,813</td><td class="pct">51.2</td></tr>
+<tr><td>Sherrod Brown</td><td>DEM</td><td class="votes">127,813</td><td class="pct">51.2</td></tr>
 <tr><td>Josh Mandel</td><td>REP</td><td class="votes">112,792</td><td class="pct">45.2</td></tr>
 <tr><td>Scott A. Rupert</td><td>IND</td><td class="votes">9,106</td><td class="pct">3.6</td></tr>
 
@@ -28192,7 +28240,7 @@ Lead: <b>Brown +6.0</b><br>
 <td>Pct</td>
 </tr>
 <tr><td>Josh Mandel</td><td>REP</td><td class="votes">3,019</td><td class="pct">50.8</td></tr>
-<tr><td>Scott P. Brown</td><td>DEM</td><td class="votes">2,591</td><td class="pct">43.6</td></tr>
+<tr><td>Sherrod Brown</td><td>DEM</td><td class="votes">2,591</td><td class="pct">43.6</td></tr>
 <tr><td>Scott A. Rupert</td><td>IND</td><td class="votes">331</td><td class="pct">5.6</td></tr>
 
 </tbody>
@@ -28212,7 +28260,7 @@ Lead: <b>Mandel +7.2</b><br>
 <td>Pct</td>
 </tr>
 <tr><td>Josh Mandel</td><td>REP</td><td class="votes">9,203</td><td class="pct">58.7</td></tr>
-<tr><td>Scott P. Brown</td><td>DEM</td><td class="votes">5,400</td><td class="pct">34.4</td></tr>
+<tr><td>Sherrod Brown</td><td>DEM</td><td class="votes">5,400</td><td class="pct">34.4</td></tr>
 <tr><td>Scott A. Rupert</td><td>IND</td><td class="votes">1,073</td><td class="pct">6.8</td></tr>
 
 </tbody>
@@ -28232,7 +28280,7 @@ Lead: <b>Mandel +24.3</b><br>
 <td>Pct</td>
 </tr>
 <tr><td>Josh Mandel</td><td>REP</td><td class="votes">18,287</td><td class="pct">51.5</td></tr>
-<tr><td>Scott P. Brown</td><td>DEM</td><td class="votes">15,056</td><td class="pct">42.4</td></tr>
+<tr><td>Sherrod Brown</td><td>DEM</td><td class="votes">15,056</td><td class="pct">42.4</td></tr>
 <tr><td>Scott A. Rupert</td><td>IND</td><td class="votes">2,190</td><td class="pct">6.2</td></tr>
 
 </tbody>
@@ -28252,7 +28300,7 @@ Lead: <b>Mandel +9.1</b><br>
 <td>Pct</td>
 </tr>
 <tr><td>Josh Mandel</td><td>REP</td><td class="votes">3,252</td><td class="pct">57.2</td></tr>
-<tr><td>Scott P. Brown</td><td>DEM</td><td class="votes">2,084</td><td class="pct">36.7</td></tr>
+<tr><td>Sherrod Brown</td><td>DEM</td><td class="votes">2,084</td><td class="pct">36.7</td></tr>
 <tr><td>Scott A. Rupert</td><td>IND</td><td class="votes">350</td><td class="pct">6.2</td></tr>
 
 </tbody>
@@ -28271,7 +28319,7 @@ Lead: <b>Mandel +20.5</b><br>
 <td>Votes</td>
 <td>Pct</td>
 </tr>
-<tr><td>Scott P. Brown</td><td>DEM</td><td class="votes">11,019</td><td class="pct">50.6</td></tr>
+<tr><td>Sherrod Brown</td><td>DEM</td><td class="votes">11,019</td><td class="pct">50.6</td></tr>
 <tr><td>Josh Mandel</td><td>REP</td><td class="votes">9,657</td><td class="pct">44.4</td></tr>
 <tr><td>Scott A. Rupert</td><td>IND</td><td class="votes">1,096</td><td class="pct">5.0</td></tr>
 
@@ -28292,7 +28340,7 @@ Lead: <b>Brown +6.3</b><br>
 <td>Pct</td>
 </tr>
 <tr><td>Josh Mandel</td><td>REP</td><td class="votes">5,042</td><td class="pct">57.7</td></tr>
-<tr><td>Scott P. Brown</td><td>DEM</td><td class="votes">3,186</td><td class="pct">36.4</td></tr>
+<tr><td>Sherrod Brown</td><td>DEM</td><td class="votes">3,186</td><td class="pct">36.4</td></tr>
 <tr><td>Scott A. Rupert</td><td>IND</td><td class="votes">516</td><td class="pct">5.9</td></tr>
 
 </tbody>
@@ -28312,7 +28360,7 @@ Lead: <b>Mandel +21.2</b><br>
 <td>Pct</td>
 </tr>
 <tr><td>Josh Mandel</td><td>REP</td><td class="votes">7,100</td><td class="pct">48.7</td></tr>
-<tr><td>Scott P. Brown</td><td>DEM</td><td class="votes">6,582</td><td class="pct">45.2</td></tr>
+<tr><td>Sherrod Brown</td><td>DEM</td><td class="votes">6,582</td><td class="pct">45.2</td></tr>
 <tr><td>Scott A. Rupert</td><td>IND</td><td class="votes">883</td><td class="pct">6.1</td></tr>
 
 </tbody>
@@ -28332,7 +28380,7 @@ Lead: <b>Mandel +3.6</b><br>
 <td>Pct</td>
 </tr>
 <tr><td>Josh Mandel</td><td>REP</td><td class="votes">12,852</td><td class="pct">55.4</td></tr>
-<tr><td>Scott P. Brown</td><td>DEM</td><td class="votes">9,049</td><td class="pct">39.0</td></tr>
+<tr><td>Sherrod Brown</td><td>DEM</td><td class="votes">9,049</td><td class="pct">39.0</td></tr>
 <tr><td>Scott A. Rupert</td><td>IND</td><td class="votes">1,301</td><td class="pct">5.6</td></tr>
 
 </tbody>
@@ -28351,7 +28399,7 @@ Lead: <b>Mandel +16.4</b><br>
 <td>Votes</td>
 <td>Pct</td>
 </tr>
-<tr><td>Scott P. Brown</td><td>DEM</td><td class="votes">5,562</td><td class="pct">50.1</td></tr>
+<tr><td>Sherrod Brown</td><td>DEM</td><td class="votes">5,562</td><td class="pct">50.1</td></tr>
 <tr><td>Josh Mandel</td><td>REP</td><td class="votes">4,986</td><td class="pct">44.9</td></tr>
 <tr><td>Scott A. Rupert</td><td>IND</td><td class="votes">548</td><td class="pct">4.9</td></tr>
 
@@ -28371,7 +28419,7 @@ Lead: <b>Brown +5.2</b><br>
 <td>Votes</td>
 <td>Pct</td>
 </tr>
-<tr><td>Scott P. Brown</td><td>DEM</td><td class="votes">35,992</td><td class="pct">49.9</td></tr>
+<tr><td>Sherrod Brown</td><td>DEM</td><td class="votes">35,992</td><td class="pct">49.9</td></tr>
 <tr><td>Josh Mandel</td><td>REP</td><td class="votes">31,778</td><td class="pct">44.1</td></tr>
 <tr><td>Scott A. Rupert</td><td>IND</td><td class="votes">4,351</td><td class="pct">6.0</td></tr>
 
@@ -28392,7 +28440,7 @@ Lead: <b>Brown +5.8</b><br>
 <td>Pct</td>
 </tr>
 <tr><td>Josh Mandel</td><td>REP</td><td class="votes">12,504</td><td class="pct">64.4</td></tr>
-<tr><td>Scott P. Brown</td><td>DEM</td><td class="votes">5,869</td><td class="pct">30.2</td></tr>
+<tr><td>Sherrod Brown</td><td>DEM</td><td class="votes">5,869</td><td class="pct">30.2</td></tr>
 <tr><td>Scott A. Rupert</td><td>IND</td><td class="votes">1,047</td><td class="pct">5.4</td></tr>
 
 </tbody>
@@ -28412,7 +28460,7 @@ Lead: <b>Mandel +34.2</b><br>
 <td>Pct</td>
 </tr>
 <tr><td>Josh Mandel</td><td>REP</td><td class="votes">12,743</td><td class="pct">70.9</td></tr>
-<tr><td>Scott P. Brown</td><td>DEM</td><td class="votes">4,510</td><td class="pct">25.1</td></tr>
+<tr><td>Sherrod Brown</td><td>DEM</td><td class="votes">4,510</td><td class="pct">25.1</td></tr>
 <tr><td>Scott A. Rupert</td><td>IND</td><td class="votes">711</td><td class="pct">4.0</td></tr>
 
 </tbody>
@@ -28432,7 +28480,7 @@ Lead: <b>Mandel +45.8</b><br>
 <td>Pct</td>
 </tr>
 <tr><td>Josh Mandel</td><td>REP</td><td class="votes">29,945</td><td class="pct">54.0</td></tr>
-<tr><td>Scott P. Brown</td><td>DEM</td><td class="votes">22,872</td><td class="pct">41.2</td></tr>
+<tr><td>Sherrod Brown</td><td>DEM</td><td class="votes">22,872</td><td class="pct">41.2</td></tr>
 <tr><td>Scott A. Rupert</td><td>IND</td><td class="votes">2,647</td><td class="pct">4.8</td></tr>
 
 </tbody>
@@ -28452,7 +28500,7 @@ Lead: <b>Mandel +12.8</b><br>
 <td>Pct</td>
 </tr>
 <tr><td>Josh Mandel</td><td>REP</td><td class="votes">13,692</td><td class="pct">47.5</td></tr>
-<tr><td>Scott P. Brown</td><td>DEM</td><td class="votes">13,572</td><td class="pct">47.1</td></tr>
+<tr><td>Sherrod Brown</td><td>DEM</td><td class="votes">13,572</td><td class="pct">47.1</td></tr>
 <tr><td>Scott A. Rupert</td><td>IND</td><td class="votes">1,548</td><td class="pct">5.4</td></tr>
 
 </tbody>
@@ -28471,7 +28519,7 @@ Lead: <b>Mandel +0.4</b><br>
 <td>Votes</td>
 <td>Pct</td>
 </tr>
-<tr><td>Scott P. Brown</td><td>DEM</td><td class="votes">13,179</td><td class="pct">47.3</td></tr>
+<tr><td>Sherrod Brown</td><td>DEM</td><td class="votes">13,179</td><td class="pct">47.3</td></tr>
 <tr><td>Josh Mandel</td><td>REP</td><td class="votes">12,987</td><td class="pct">46.6</td></tr>
 <tr><td>Scott A. Rupert</td><td>IND</td><td class="votes">1,720</td><td class="pct">6.2</td></tr>
 
@@ -28491,7 +28539,7 @@ Lead: <b>Brown +0.7</b><br>
 <td>Votes</td>
 <td>Pct</td>
 </tr>
-<tr><td>Scott P. Brown</td><td>DEM</td><td class="votes">14,548</td><td class="pct">51.3</td></tr>
+<tr><td>Sherrod Brown</td><td>DEM</td><td class="votes">14,548</td><td class="pct">51.3</td></tr>
 <tr><td>Josh Mandel</td><td>REP</td><td class="votes">12,546</td><td class="pct">44.2</td></tr>
 <tr><td>Scott A. Rupert</td><td>IND</td><td class="votes">1,276</td><td class="pct">4.5</td></tr>
 
@@ -28512,7 +28560,7 @@ Lead: <b>Brown +7.1</b><br>
 <td>Pct</td>
 </tr>
 <tr><td>Josh Mandel</td><td>REP</td><td class="votes">12,557</td><td class="pct">51.4</td></tr>
-<tr><td>Scott P. Brown</td><td>DEM</td><td class="votes">10,200</td><td class="pct">41.8</td></tr>
+<tr><td>Sherrod Brown</td><td>DEM</td><td class="votes">10,200</td><td class="pct">41.8</td></tr>
 <tr><td>Scott A. Rupert</td><td>IND</td><td class="votes">1,666</td><td class="pct">6.8</td></tr>
 
 </tbody>
@@ -28532,7 +28580,7 @@ Lead: <b>Mandel +9.7</b><br>
 <td>Pct</td>
 </tr>
 <tr><td>Josh Mandel</td><td>REP</td><td class="votes">15,660</td><td class="pct">69.5</td></tr>
-<tr><td>Scott P. Brown</td><td>DEM</td><td class="votes">5,823</td><td class="pct">25.8</td></tr>
+<tr><td>Sherrod Brown</td><td>DEM</td><td class="votes">5,823</td><td class="pct">25.8</td></tr>
 <tr><td>Scott A. Rupert</td><td>IND</td><td class="votes">1,062</td><td class="pct">4.7</td></tr>
 
 </tbody>
@@ -28551,7 +28599,7 @@ Lead: <b>Mandel +43.6</b><br>
 <td>Votes</td>
 <td>Pct</td>
 </tr>
-<tr><td>Scott P. Brown</td><td>DEM</td><td class="votes">84,782</td><td class="pct">49.1</td></tr>
+<tr><td>Sherrod Brown</td><td>DEM</td><td class="votes">84,782</td><td class="pct">49.1</td></tr>
 <tr><td>Josh Mandel</td><td>REP</td><td class="votes">77,145</td><td class="pct">44.7</td></tr>
 <tr><td>Scott A. Rupert</td><td>IND</td><td class="votes">10,619</td><td class="pct">6.2</td></tr>
 
@@ -28571,7 +28619,7 @@ Lead: <b>Brown +4.4</b><br>
 <td>Votes</td>
 <td>Pct</td>
 </tr>
-<tr><td>Scott P. Brown</td><td>DEM</td><td class="votes">145,691</td><td class="pct">57.3</td></tr>
+<tr><td>Sherrod Brown</td><td>DEM</td><td class="votes">145,691</td><td class="pct">57.3</td></tr>
 <tr><td>Josh Mandel</td><td>REP</td><td class="votes">96,373</td><td class="pct">37.9</td></tr>
 <tr><td>Scott A. Rupert</td><td>IND</td><td class="votes">12,152</td><td class="pct">4.8</td></tr>
 
@@ -28591,7 +28639,7 @@ Lead: <b>Brown +19.4</b><br>
 <td>Votes</td>
 <td>Pct</td>
 </tr>
-<tr><td>Scott P. Brown</td><td>DEM</td><td class="votes">60,279</td><td class="pct">62.3</td></tr>
+<tr><td>Sherrod Brown</td><td>DEM</td><td class="votes">60,279</td><td class="pct">62.3</td></tr>
 <tr><td>Josh Mandel</td><td>REP</td><td class="votes">31,423</td><td class="pct">32.5</td></tr>
 <tr><td>Scott A. Rupert</td><td>IND</td><td class="votes">5,045</td><td class="pct">5.2</td></tr>
 
@@ -28612,7 +28660,7 @@ Lead: <b>Brown +29.8</b><br>
 <td>Pct</td>
 </tr>
 <tr><td>Josh Mandel</td><td>REP</td><td class="votes">19,193</td><td class="pct">49.4</td></tr>
-<tr><td>Scott P. Brown</td><td>DEM</td><td class="votes">17,168</td><td class="pct">44.2</td></tr>
+<tr><td>Sherrod Brown</td><td>DEM</td><td class="votes">17,168</td><td class="pct">44.2</td></tr>
 <tr><td>Scott A. Rupert</td><td>IND</td><td class="votes">2,486</td><td class="pct">6.4</td></tr>
 
 </tbody>
@@ -28632,7 +28680,7 @@ Lead: <b>Mandel +5.2</b><br>
 <td>Pct</td>
 </tr>
 <tr><td>Josh Mandel</td><td>REP</td><td class="votes">15,175</td><td class="pct">62.0</td></tr>
-<tr><td>Scott P. Brown</td><td>DEM</td><td class="votes">7,967</td><td class="pct">32.6</td></tr>
+<tr><td>Sherrod Brown</td><td>DEM</td><td class="votes">7,967</td><td class="pct">32.6</td></tr>
 <tr><td>Scott A. Rupert</td><td>IND</td><td class="votes">1,329</td><td class="pct">5.4</td></tr>
 
 </tbody>
@@ -28652,7 +28700,7 @@ Lead: <b>Mandel +29.5</b><br>
 <td>Pct</td>
 </tr>
 <tr><td>Josh Mandel</td><td>REP</td><td class="votes">9,257</td><td class="pct">69.3</td></tr>
-<tr><td>Scott P. Brown</td><td>DEM</td><td class="votes">3,536</td><td class="pct">26.5</td></tr>
+<tr><td>Sherrod Brown</td><td>DEM</td><td class="votes">3,536</td><td class="pct">26.5</td></tr>
 <tr><td>Scott A. Rupert</td><td>IND</td><td class="votes">569</td><td class="pct">4.3</td></tr>
 
 </tbody>
@@ -28672,7 +28720,7 @@ Lead: <b>Mandel +42.8</b><br>
 <td>Pct</td>
 </tr>
 <tr><td>Josh Mandel</td><td>REP</td><td class="votes">2,629</td><td class="pct">49.7</td></tr>
-<tr><td>Scott P. Brown</td><td>DEM</td><td class="votes">2,369</td><td class="pct">44.8</td></tr>
+<tr><td>Sherrod Brown</td><td>DEM</td><td class="votes">2,369</td><td class="pct">44.8</td></tr>
 <tr><td>Scott A. Rupert</td><td>IND</td><td class="votes">294</td><td class="pct">5.6</td></tr>
 
 </tbody>
@@ -28692,7 +28740,7 @@ Lead: <b>Mandel +4.9</b><br>
 <td>Pct</td>
 </tr>
 <tr><td>Josh Mandel</td><td>REP</td><td class="votes">68,949</td><td class="pct">64.9</td></tr>
-<tr><td>Scott P. Brown</td><td>DEM</td><td class="votes">32,871</td><td class="pct">31.0</td></tr>
+<tr><td>Sherrod Brown</td><td>DEM</td><td class="votes">32,871</td><td class="pct">31.0</td></tr>
 <tr><td>Scott A. Rupert</td><td>IND</td><td class="votes">4,384</td><td class="pct">4.1</td></tr>
 
 </tbody>
@@ -28712,7 +28760,7 @@ Lead: <b>Mandel +34.0</b><br>
 <td>Pct</td>
 </tr>
 <tr><td>Josh Mandel</td><td>REP</td><td class="votes">15,562</td><td class="pct">55.3</td></tr>
-<tr><td>Scott P. Brown</td><td>DEM</td><td class="votes">11,183</td><td class="pct">39.7</td></tr>
+<tr><td>Sherrod Brown</td><td>DEM</td><td class="votes">11,183</td><td class="pct">39.7</td></tr>
 <tr><td>Scott A. Rupert</td><td>IND</td><td class="votes">1,393</td><td class="pct">5.0</td></tr>
 
 </tbody>
@@ -28732,7 +28780,7 @@ Lead: <b>Mandel +15.6</b><br>
 <td>Pct</td>
 </tr>
 <tr><td>Josh Mandel</td><td>REP</td><td class="votes">27,369</td><td class="pct">56.5</td></tr>
-<tr><td>Scott P. Brown</td><td>DEM</td><td class="votes">18,296</td><td class="pct">37.7</td></tr>
+<tr><td>Sherrod Brown</td><td>DEM</td><td class="votes">18,296</td><td class="pct">37.7</td></tr>
 <tr><td>Scott A. Rupert</td><td>IND</td><td class="votes">2,805</td><td class="pct">5.8</td></tr>
 
 </tbody>
@@ -28752,7 +28800,7 @@ Lead: <b>Mandel +18.7</b><br>
 <td>Pct</td>
 </tr>
 <tr><td>Josh Mandel</td><td>REP</td><td class="votes">9,111</td><td class="pct">54.5</td></tr>
-<tr><td>Scott P. Brown</td><td>DEM</td><td class="votes">6,464</td><td class="pct">38.7</td></tr>
+<tr><td>Sherrod Brown</td><td>DEM</td><td class="votes">6,464</td><td class="pct">38.7</td></tr>
 <tr><td>Scott A. Rupert</td><td>IND</td><td class="votes">1,139</td><td class="pct">6.8</td></tr>
 
 </tbody>
@@ -28771,7 +28819,7 @@ Lead: <b>Mandel +15.8</b><br>
 <td>Votes</td>
 <td>Pct</td>
 </tr>
-<tr><td>Scott P. Brown</td><td>DEM</td><td class="votes">30,620</td><td class="pct">50.5</td></tr>
+<tr><td>Sherrod Brown</td><td>DEM</td><td class="votes">30,620</td><td class="pct">50.5</td></tr>
 <tr><td>Josh Mandel</td><td>REP</td><td class="votes">27,190</td><td class="pct">44.8</td></tr>
 <tr><td>Scott A. Rupert</td><td>IND</td><td class="votes">2,878</td><td class="pct">4.7</td></tr>
 
@@ -28792,7 +28840,7 @@ Lead: <b>Brown +5.7</b><br>
 <td>Pct</td>
 </tr>
 <tr><td>Josh Mandel</td><td>REP</td><td class="votes">5,929</td><td class="pct">58.5</td></tr>
-<tr><td>Scott P. Brown</td><td>DEM</td><td class="votes">3,603</td><td class="pct">35.6</td></tr>
+<tr><td>Sherrod Brown</td><td>DEM</td><td class="votes">3,603</td><td class="pct">35.6</td></tr>
 <tr><td>Scott A. Rupert</td><td>IND</td><td class="votes">603</td><td class="pct">5.9</td></tr>
 
 </tbody>

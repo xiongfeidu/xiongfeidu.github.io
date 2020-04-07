@@ -13,33 +13,18 @@
 <div class="description">
 <p>Riding the coattails of Trump's strong performance in the Midwest, the GOP holds key Senate seats in Pennsylvania and Wisconsin, allowing the Republicans to hold the majority.</p>
 </div>
-<div class="dropdown">
-  <div class="dropbtn">Choose Election<span style="float:right;">▼</span></div>
-  <div class="dropdown-content">
-    <a href="../../2020/demprimaries">2020 Democratic Primaries</a>
-    <a href="../../2020/repprimaries">2020 Republican Primaries</a>
-    <a href="../../2019/governors">2019 Governors</a>
-    <a href="../../2018/senate">2018 Senate</a>
-    <a href="../../2018/governors">2018 Governors</a>
-    <a href="../../2017/governors">2017 Governors</a>
-    <a href="../../2017/senate">2017 Senate</a>
-    <a href="../../2016/president">2016 President</a>
-    <a href="../../2016/senate">2016 Senate</a>
-    <a href="../../2016/governors">2016 Governors</a>
-    <a href="../../2016/demprimaries">2016 Democratic Primaries</a>
-    <a href="../../2016/repprimaries">2016 Republican Primaries</a>
-    <a href="../../2014/senate">2014 Senate</a>
-    <a href="../../2014/governors">2014 Governors</a>
-    <a href="../../2012/president">2012 President</a>
-    <a href="../../2012/senate">2012 Senate</a>
-    <a href="../../2012/repprimaries">2012 Republican Primaries</a>
-    <a href="../../2010/senate">2010 Senate</a>
-    <a href="../../2010/governors">2010 Governors</a>
-    <a href="../../2008/president">2008 President</a>
-    <a href="../../2004/president">2004 President</a>
-    <a href="../../2000/president">2000 President</a>
+<div class="dropdown dropdown-year dropdown-elem-year">
+  <div class="dropbtn">2016<span style="float:right;">▼</span></div>
+  <div class="dropdown-content dropdown-elem-year">
+    <a href="../../2020/demprimaries">2020</a>    <a href="../../2019/governors">2019</a>    <a href="../../2018/senate">2018</a>    <a href="../../2017/senate">2017</a>    <a href="../../2016/senate">2016</a>    <a href="../../2014/senate">2014</a>    <a href="../../2012/senate">2012</a>    <a href="../../2010/senate">2010</a>    <a href="../../2008/president">2008</a>    <a href="../../2006/house">2006</a>    <a href="../../2004/president">2004</a>    <a href="../../2002/house">2002</a>    <a href="../../2000/president">2000</a>
   </div>
-</div> 
+</div>
+<div class="dropdown dropdown-election dropdown-elem-election">
+  <div class="dropbtn">Senate<span style="float:right;">▼</span></div>
+  <div class="dropdown-content dropdown-elem-election">
+    <a href="../../2016/president"> President</a>    <a href="../../2016/senate"> Senate</a>    <a href="../../2016/house"> House</a>    <a href="../../2016/governors"> Governors</a>    <a href="../../2016/demprimaries"> Democratic Primaries</a>    <a href="../../2016/repprimaries"> Republican Primaries</a>
+  </div>
+</div>
 
 
 <div id="results-score">
@@ -188,7 +173,7 @@
      * path[id*='c35'] {fill:#34A853}
      *
      */
-    .counties {fill: darkgray; stroke:darkgray; stroke-width:0.2px; stroke-opacity: 0.5;} 
+    .counties path {fill: darkgray; stroke:darkgray; stroke-width:0.2px; stroke-opacity: 1;} 
     .counties path:hover {stroke:black; stroke-opacity: 1;} 
     #borders {fill:none;stroke:black;stroke-width:0.3px;} 
    </style>
@@ -7330,7 +7315,7 @@ Pre-election estimate: <b>Likely D</b>
 
 
 <div id="buttons" class="no-height">
-  <div id="back-button" class="button" onclick="zoomCounties('0 0 990 627'); show('national-map'); hide('counties-map'); hideAllResults(); hide('back-button')">
+  <div id="back-button" class="button" onclick="zoomOut();">
     << Back to all states
   </div>
 </div>
@@ -7357,6 +7342,7 @@ Pre-election estimate: <b>Likely D</b>
 </div>
 <script type="text/javascript">
   var current_fips = "00";
+  var big_state_fips = ["02","41","06","16","32","49","04","30","35","48","27","26","17","12"];
   function displayResults(id, resultsId, anchor) {
     var e = window.event;
     if (document.getElementById(resultsId)) {
@@ -7364,7 +7350,7 @@ Pre-election estimate: <b>Likely D</b>
       var nationalView = document.getElementById('national-map').style.visibility;
       if (anchor) {
         resultsStyle.position = 'relative';
-        resultsStyle.left = 800; //900;
+        resultsStyle.left = 800;
         resultsStyle.top = 0;
       } else if (id.startsWith('c') || nationalView === "visible") {
         resultsStyle.position = 'absolute';
@@ -7374,17 +7360,69 @@ Pre-election estimate: <b>Likely D</b>
       show(resultsId);
     }
     var element = document.getElementById(id);
-    if (element.className.baseVal == 'county') {
-      var big_state_fips = ["02","41","06","16","32","49","04","30","35","48","27","26","17","12"];
+    if (element.className.baseVal === 'county') {
       if (big_state_fips.includes(current_fips)) {
-        element.style.strokeWidth = "0.8px";   
+        element.style.strokeWidth = "0.5px"; // 0.8
       } else {
-        element.style.strokeWidth = "0.5px";      
+        element.style.strokeWidth = "0.3px"; // 0.5
       }
+      bringToFront(element);
+      element.style.stroke = 'black'; // hover + front does not work on firefox
+    } else if (element.className.baseVal === 'district') {
+      bringToFront(element);
+      //element.style.strokeWidth = "0.5px";
+      //element.style.stroke = 'black'; // hover + front does not work on firefox
     }
   }
   function zoomCounties(box) {
     document.getElementById('counties-svg').setAttribute('viewBox', box);
+  }
+  function zoomHouse(fips, box, metro) {
+    document.getElementById('house-svg').setAttribute('viewBox', box);
+    var districts = document.getElementsByClassName('district');
+    for (var i = 0; i < districts.length; i++) {
+      if (metro) {
+        if (fips === '36' || fips === '34') { // NY/NJ
+          districts[i].style.strokeWidth = "0.1px";
+        } else {
+          districts[i].style.strokeWidth = "0.15px";
+        }
+      } else if (big_state_fips.includes(fips)) {
+        districts[i].style.strokeWidth = "0.5px";
+      } else {
+        districts[i].style.strokeWidth = "0.3px";
+      }
+    }
+    var borders = document.getElementsByClassName('borders');
+    for (var i = 0; i < borders.length; i++) {
+      if (metro) {
+        borders[i].style.strokeWidth = "0.5px";
+      } else {
+        borders[i].style.strokeWidth = "1px";
+      }
+    }
+    show('back-button');
+  }
+  function zoomOut() {
+    if (document.getElementById('house-svg')) {
+      //document.getElementById('house-svg').setAttribute('viewBox', "60 0 1181.7317 720.55206");
+      document.getElementById('house-svg').removeAttribute('viewBox');
+      var districts = document.getElementsByClassName('district');
+      for (var i = 0; i < districts.length; i++) {
+        districts[i].style.removeProperty('stroke-width');
+        districts[i].style.removeProperty('stroke');
+      }
+      var borders = document.getElementsByClassName('borders');
+      for (var i = 0; i < borders.length; i++) {
+        borders[i].style.removeProperty('stroke-width');
+      }
+    } else {
+      zoomCounties('0 0 990 627');
+      show('national-map');
+      hide('counties-map');
+      hideAllResults();
+    }
+    hide('back-button');
   }
   function showCountiesState(box, state, fips) {
     var model_states = ["AL","CO","FL","GA","IA","IN","KS","KY","LA","MO","NC","ND","OH","PA","WI"];
@@ -7411,7 +7449,12 @@ Pre-election estimate: <b>Likely D</b>
     hide(resultsId);
     var element = document.getElementById(id);
     if (element.className.baseVal == 'county') {
-      element.style.strokeWidth = "0.2px";
+      element.style.removeProperty('stroke-width');
+      element.style.removeProperty('stroke'); // hover + front does not work on firefox
+    } else if (element.className.baseVal == 'district') {
+      bringToFront(document.getElementsByClassName('borders')[0]);
+      //element.style.removeProperty('stroke-width');
+      //element.style.removeProperty('stroke'); // hover + front does not work on firefox
     }
   }
   function hideAllResults() {
@@ -7440,6 +7483,11 @@ Pre-election estimate: <b>Likely D</b>
     if (document.getElementById(id)) {
       var resultsStyle = document.getElementById(id).style;
       resultsStyle.visibility = "visible";    
+    }
+  }
+  function bringToFront(element) {
+    if (element.nextElementSibling) {
+      element.parentNode.appendChild(element);
     }
   }
   function setColor(id, color) {
@@ -43878,7 +43926,7 @@ Lead: <b>Scott +26.1</b><br>
 <td>Pct</td>
 </tr>
 <tr><td>John Thune</td><td>REP</td><td class="votes">1,073</td><td class="pct">75.8</td></tr>
-<tr><td>Jarrod Williams</td><td>DEM</td><td class="votes">343</td><td class="pct">24.2</td></tr>
+<tr><td>Jay Williams</td><td>DEM</td><td class="votes">343</td><td class="pct">24.2</td></tr>
 
 </tbody>
 </table>
@@ -43897,7 +43945,7 @@ Lead: <b>Thune +51.6</b><br>
 <td>Pct</td>
 </tr>
 <tr><td>John Thune</td><td>REP</td><td class="votes">5,049</td><td class="pct">73.6</td></tr>
-<tr><td>Jarrod Williams</td><td>DEM</td><td class="votes">1,809</td><td class="pct">26.4</td></tr>
+<tr><td>Jay Williams</td><td>DEM</td><td class="votes">1,809</td><td class="pct">26.4</td></tr>
 
 </tbody>
 </table>
@@ -43916,7 +43964,7 @@ Lead: <b>Thune +47.2</b><br>
 <td>Pct</td>
 </tr>
 <tr><td>John Thune</td><td>REP</td><td class="votes">758</td><td class="pct">66.5</td></tr>
-<tr><td>Jarrod Williams</td><td>DEM</td><td class="votes">382</td><td class="pct">33.5</td></tr>
+<tr><td>Jay Williams</td><td>DEM</td><td class="votes">382</td><td class="pct">33.5</td></tr>
 
 </tbody>
 </table>
@@ -43935,7 +43983,7 @@ Lead: <b>Thune +33.0</b><br>
 <td>Pct</td>
 </tr>
 <tr><td>John Thune</td><td>REP</td><td class="votes">2,253</td><td class="pct">74.5</td></tr>
-<tr><td>Jarrod Williams</td><td>DEM</td><td class="votes">770</td><td class="pct">25.5</td></tr>
+<tr><td>Jay Williams</td><td>DEM</td><td class="votes">770</td><td class="pct">25.5</td></tr>
 
 </tbody>
 </table>
@@ -43954,7 +44002,7 @@ Lead: <b>Thune +49.1</b><br>
 <td>Pct</td>
 </tr>
 <tr><td>John Thune</td><td>REP</td><td class="votes">8,817</td><td class="pct">69.1</td></tr>
-<tr><td>Jarrod Williams</td><td>DEM</td><td class="votes">3,947</td><td class="pct">30.9</td></tr>
+<tr><td>Jay Williams</td><td>DEM</td><td class="votes">3,947</td><td class="pct">30.9</td></tr>
 
 </tbody>
 </table>
@@ -43973,7 +44021,7 @@ Lead: <b>Thune +38.2</b><br>
 <td>Pct</td>
 </tr>
 <tr><td>John Thune</td><td>REP</td><td class="votes">11,371</td><td class="pct">70.3</td></tr>
-<tr><td>Jarrod Williams</td><td>DEM</td><td class="votes">4,793</td><td class="pct">29.7</td></tr>
+<tr><td>Jay Williams</td><td>DEM</td><td class="votes">4,793</td><td class="pct">29.7</td></tr>
 
 </tbody>
 </table>
@@ -43992,7 +44040,7 @@ Lead: <b>Thune +40.7</b><br>
 <td>Pct</td>
 </tr>
 <tr><td>John Thune</td><td>REP</td><td class="votes">1,746</td><td class="pct">75.9</td></tr>
-<tr><td>Jarrod Williams</td><td>DEM</td><td class="votes">554</td><td class="pct">24.1</td></tr>
+<tr><td>Jay Williams</td><td>DEM</td><td class="votes">554</td><td class="pct">24.1</td></tr>
 
 </tbody>
 </table>
@@ -44010,7 +44058,7 @@ Lead: <b>Thune +51.8</b><br>
 <td>Votes</td>
 <td>Pct</td>
 </tr>
-<tr><td>Jarrod Williams</td><td>DEM</td><td class="votes">257</td><td class="pct">52.6</td></tr>
+<tr><td>Jay Williams</td><td>DEM</td><td class="votes">257</td><td class="pct">52.6</td></tr>
 <tr><td>John Thune</td><td>REP</td><td class="votes">232</td><td class="pct">47.4</td></tr>
 
 </tbody>
@@ -44030,7 +44078,7 @@ Lead: <b>Williams +5.1</b><br>
 <td>Pct</td>
 </tr>
 <tr><td>John Thune</td><td>REP</td><td class="votes">3,546</td><td class="pct">82.4</td></tr>
-<tr><td>Jarrod Williams</td><td>DEM</td><td class="votes">758</td><td class="pct">17.6</td></tr>
+<tr><td>Jay Williams</td><td>DEM</td><td class="votes">758</td><td class="pct">17.6</td></tr>
 
 </tbody>
 </table>
@@ -44049,7 +44097,7 @@ Lead: <b>Thune +64.8</b><br>
 <td>Pct</td>
 </tr>
 <tr><td>John Thune</td><td>REP</td><td class="votes">740</td><td class="pct">89.5</td></tr>
-<tr><td>Jarrod Williams</td><td>DEM</td><td class="votes">87</td><td class="pct">10.5</td></tr>
+<tr><td>Jay Williams</td><td>DEM</td><td class="votes">87</td><td class="pct">10.5</td></tr>
 
 </tbody>
 </table>
@@ -44068,7 +44116,7 @@ Lead: <b>Thune +79.0</b><br>
 <td>Pct</td>
 </tr>
 <tr><td>John Thune</td><td>REP</td><td class="votes">2,484</td><td class="pct">72.5</td></tr>
-<tr><td>Jarrod Williams</td><td>DEM</td><td class="votes">941</td><td class="pct">27.5</td></tr>
+<tr><td>Jay Williams</td><td>DEM</td><td class="votes">941</td><td class="pct">27.5</td></tr>
 
 </tbody>
 </table>
@@ -44087,7 +44135,7 @@ Lead: <b>Thune +45.1</b><br>
 <td>Pct</td>
 </tr>
 <tr><td>John Thune</td><td>REP</td><td class="votes">1,269</td><td class="pct">75.7</td></tr>
-<tr><td>Jarrod Williams</td><td>DEM</td><td class="votes">408</td><td class="pct">24.3</td></tr>
+<tr><td>Jay Williams</td><td>DEM</td><td class="votes">408</td><td class="pct">24.3</td></tr>
 
 </tbody>
 </table>
@@ -44106,7 +44154,7 @@ Lead: <b>Thune +51.3</b><br>
 <td>Pct</td>
 </tr>
 <tr><td>John Thune</td><td>REP</td><td class="votes">2,923</td><td class="pct">57.5</td></tr>
-<tr><td>Jarrod Williams</td><td>DEM</td><td class="votes">2,161</td><td class="pct">42.5</td></tr>
+<tr><td>Jay Williams</td><td>DEM</td><td class="votes">2,161</td><td class="pct">42.5</td></tr>
 
 </tbody>
 </table>
@@ -44125,7 +44173,7 @@ Lead: <b>Thune +15.0</b><br>
 <td>Pct</td>
 </tr>
 <tr><td>John Thune</td><td>REP</td><td class="votes">8,740</td><td class="pct">74.4</td></tr>
-<tr><td>Jarrod Williams</td><td>DEM</td><td class="votes">3,003</td><td class="pct">25.6</td></tr>
+<tr><td>Jay Williams</td><td>DEM</td><td class="votes">3,003</td><td class="pct">25.6</td></tr>
 
 </tbody>
 </table>
@@ -44144,7 +44192,7 @@ Lead: <b>Thune +48.9</b><br>
 <td>Pct</td>
 </tr>
 <tr><td>John Thune</td><td>REP</td><td class="votes">680</td><td class="pct">58.9</td></tr>
-<tr><td>Jarrod Williams</td><td>DEM</td><td class="votes">474</td><td class="pct">41.1</td></tr>
+<tr><td>Jay Williams</td><td>DEM</td><td class="votes">474</td><td class="pct">41.1</td></tr>
 
 </tbody>
 </table>
@@ -44163,7 +44211,7 @@ Lead: <b>Thune +17.9</b><br>
 <td>Pct</td>
 </tr>
 <tr><td>John Thune</td><td>REP</td><td class="votes">3,530</td><td class="pct">75.0</td></tr>
-<tr><td>Jarrod Williams</td><td>DEM</td><td class="votes">1,177</td><td class="pct">25.0</td></tr>
+<tr><td>Jay Williams</td><td>DEM</td><td class="votes">1,177</td><td class="pct">25.0</td></tr>
 
 </tbody>
 </table>
@@ -44182,7 +44230,7 @@ Lead: <b>Thune +50.0</b><br>
 <td>Pct</td>
 </tr>
 <tr><td>John Thune</td><td>REP</td><td class="votes">6,017</td><td class="pct">75.1</td></tr>
-<tr><td>Jarrod Williams</td><td>DEM</td><td class="votes">1,990</td><td class="pct">24.9</td></tr>
+<tr><td>Jay Williams</td><td>DEM</td><td class="votes">1,990</td><td class="pct">24.9</td></tr>
 
 </tbody>
 </table>
@@ -44201,7 +44249,7 @@ Lead: <b>Thune +50.3</b><br>
 <td>Pct</td>
 </tr>
 <tr><td>John Thune</td><td>REP</td><td class="votes">1,815</td><td class="pct">65.4</td></tr>
-<tr><td>Jarrod Williams</td><td>DEM</td><td class="votes">962</td><td class="pct">34.6</td></tr>
+<tr><td>Jay Williams</td><td>DEM</td><td class="votes">962</td><td class="pct">34.6</td></tr>
 
 </tbody>
 </table>
@@ -44220,7 +44268,7 @@ Lead: <b>Thune +30.7</b><br>
 <td>Pct</td>
 </tr>
 <tr><td>John Thune</td><td>REP</td><td class="votes">1,563</td><td class="pct">74.5</td></tr>
-<tr><td>Jarrod Williams</td><td>DEM</td><td class="votes">534</td><td class="pct">25.5</td></tr>
+<tr><td>Jay Williams</td><td>DEM</td><td class="votes">534</td><td class="pct">25.5</td></tr>
 
 </tbody>
 </table>
@@ -44239,7 +44287,7 @@ Lead: <b>Thune +49.1</b><br>
 <td>Pct</td>
 </tr>
 <tr><td>John Thune</td><td>REP</td><td class="votes">862</td><td class="pct">50.9</td></tr>
-<tr><td>Jarrod Williams</td><td>DEM</td><td class="votes">833</td><td class="pct">49.1</td></tr>
+<tr><td>Jay Williams</td><td>DEM</td><td class="votes">833</td><td class="pct">49.1</td></tr>
 
 </tbody>
 </table>
@@ -44258,7 +44306,7 @@ Lead: <b>Thune +1.7</b><br>
 <td>Pct</td>
 </tr>
 <tr><td>John Thune</td><td>REP</td><td class="votes">1,377</td><td class="pct">85.8</td></tr>
-<tr><td>Jarrod Williams</td><td>DEM</td><td class="votes">228</td><td class="pct">14.2</td></tr>
+<tr><td>Jay Williams</td><td>DEM</td><td class="votes">228</td><td class="pct">14.2</td></tr>
 
 </tbody>
 </table>
@@ -44277,7 +44325,7 @@ Lead: <b>Thune +71.6</b><br>
 <td>Pct</td>
 </tr>
 <tr><td>John Thune</td><td>REP</td><td class="votes">1,517</td><td class="pct">79.3</td></tr>
-<tr><td>Jarrod Williams</td><td>DEM</td><td class="votes">396</td><td class="pct">20.7</td></tr>
+<tr><td>Jay Williams</td><td>DEM</td><td class="votes">396</td><td class="pct">20.7</td></tr>
 
 </tbody>
 </table>
@@ -44296,7 +44344,7 @@ Lead: <b>Thune +58.6</b><br>
 <td>Pct</td>
 </tr>
 <tr><td>John Thune</td><td>REP</td><td class="votes">2,671</td><td class="pct">75.5</td></tr>
-<tr><td>Jarrod Williams</td><td>DEM</td><td class="votes">868</td><td class="pct">24.5</td></tr>
+<tr><td>Jay Williams</td><td>DEM</td><td class="votes">868</td><td class="pct">24.5</td></tr>
 
 </tbody>
 </table>
@@ -44315,7 +44363,7 @@ Lead: <b>Thune +50.9</b><br>
 <td>Pct</td>
 </tr>
 <tr><td>John Thune</td><td>REP</td><td class="votes">925</td><td class="pct">81.8</td></tr>
-<tr><td>Jarrod Williams</td><td>DEM</td><td class="votes">206</td><td class="pct">18.2</td></tr>
+<tr><td>Jay Williams</td><td>DEM</td><td class="votes">206</td><td class="pct">18.2</td></tr>
 
 </tbody>
 </table>
@@ -44334,7 +44382,7 @@ Lead: <b>Thune +63.6</b><br>
 <td>Pct</td>
 </tr>
 <tr><td>John Thune</td><td>REP</td><td class="votes">2,705</td><td class="pct">75.2</td></tr>
-<tr><td>Jarrod Williams</td><td>DEM</td><td class="votes">890</td><td class="pct">24.8</td></tr>
+<tr><td>Jay Williams</td><td>DEM</td><td class="votes">890</td><td class="pct">24.8</td></tr>
 
 </tbody>
 </table>
@@ -44353,7 +44401,7 @@ Lead: <b>Thune +50.5</b><br>
 <td>Pct</td>
 </tr>
 <tr><td>John Thune</td><td>REP</td><td class="votes">1,671</td><td class="pct">79.7</td></tr>
-<tr><td>Jarrod Williams</td><td>DEM</td><td class="votes">426</td><td class="pct">20.3</td></tr>
+<tr><td>Jay Williams</td><td>DEM</td><td class="votes">426</td><td class="pct">20.3</td></tr>
 
 </tbody>
 </table>
@@ -44372,7 +44420,7 @@ Lead: <b>Thune +59.4</b><br>
 <td>Pct</td>
 </tr>
 <tr><td>John Thune</td><td>REP</td><td class="votes">956</td><td class="pct">91.9</td></tr>
-<tr><td>Jarrod Williams</td><td>DEM</td><td class="votes">84</td><td class="pct">8.1</td></tr>
+<tr><td>Jay Williams</td><td>DEM</td><td class="votes">84</td><td class="pct">8.1</td></tr>
 
 </tbody>
 </table>
@@ -44391,7 +44439,7 @@ Lead: <b>Thune +83.8</b><br>
 <td>Pct</td>
 </tr>
 <tr><td>John Thune</td><td>REP</td><td class="votes">2,253</td><td class="pct">80.8</td></tr>
-<tr><td>Jarrod Williams</td><td>DEM</td><td class="votes">536</td><td class="pct">19.2</td></tr>
+<tr><td>Jay Williams</td><td>DEM</td><td class="votes">536</td><td class="pct">19.2</td></tr>
 
 </tbody>
 </table>
@@ -44410,7 +44458,7 @@ Lead: <b>Thune +61.6</b><br>
 <td>Pct</td>
 </tr>
 <tr><td>John Thune</td><td>REP</td><td class="votes">1,517</td><td class="pct">81.9</td></tr>
-<tr><td>Jarrod Williams</td><td>DEM</td><td class="votes">335</td><td class="pct">18.1</td></tr>
+<tr><td>Jay Williams</td><td>DEM</td><td class="votes">335</td><td class="pct">18.1</td></tr>
 
 </tbody>
 </table>
@@ -44429,7 +44477,7 @@ Lead: <b>Thune +63.8</b><br>
 <td>Pct</td>
 </tr>
 <tr><td>John Thune</td><td>REP</td><td class="votes">1,512</td><td class="pct">77.0</td></tr>
-<tr><td>Jarrod Williams</td><td>DEM</td><td class="votes">451</td><td class="pct">23.0</td></tr>
+<tr><td>Jay Williams</td><td>DEM</td><td class="votes">451</td><td class="pct">23.0</td></tr>
 
 </tbody>
 </table>
@@ -44448,7 +44496,7 @@ Lead: <b>Thune +54.0</b><br>
 <td>Pct</td>
 </tr>
 <tr><td>John Thune</td><td>REP</td><td class="votes">684</td><td class="pct">90.2</td></tr>
-<tr><td>Jarrod Williams</td><td>DEM</td><td class="votes">74</td><td class="pct">9.8</td></tr>
+<tr><td>Jay Williams</td><td>DEM</td><td class="votes">74</td><td class="pct">9.8</td></tr>
 
 </tbody>
 </table>
@@ -44467,7 +44515,7 @@ Lead: <b>Thune +80.5</b><br>
 <td>Pct</td>
 </tr>
 <tr><td>John Thune</td><td>REP</td><td class="votes">6,339</td><td class="pct">77.0</td></tr>
-<tr><td>Jarrod Williams</td><td>DEM</td><td class="votes">1,891</td><td class="pct">23.0</td></tr>
+<tr><td>Jay Williams</td><td>DEM</td><td class="votes">1,891</td><td class="pct">23.0</td></tr>
 
 </tbody>
 </table>
@@ -44486,7 +44534,7 @@ Lead: <b>Thune +54.0</b><br>
 <td>Pct</td>
 </tr>
 <tr><td>John Thune</td><td>REP</td><td class="votes">2,779</td><td class="pct">82.0</td></tr>
-<tr><td>Jarrod Williams</td><td>DEM</td><td class="votes">609</td><td class="pct">18.0</td></tr>
+<tr><td>Jay Williams</td><td>DEM</td><td class="votes">609</td><td class="pct">18.0</td></tr>
 
 </tbody>
 </table>
@@ -44505,7 +44553,7 @@ Lead: <b>Thune +64.0</b><br>
 <td>Pct</td>
 </tr>
 <tr><td>John Thune</td><td>REP</td><td class="votes">567</td><td class="pct">82.1</td></tr>
-<tr><td>Jarrod Williams</td><td>DEM</td><td class="votes">124</td><td class="pct">17.9</td></tr>
+<tr><td>Jay Williams</td><td>DEM</td><td class="votes">124</td><td class="pct">17.9</td></tr>
 
 </tbody>
 </table>
@@ -44524,7 +44572,7 @@ Lead: <b>Thune +64.1</b><br>
 <td>Pct</td>
 </tr>
 <tr><td>John Thune</td><td>REP</td><td class="votes">771</td><td class="pct">71.4</td></tr>
-<tr><td>Jarrod Williams</td><td>DEM</td><td class="votes">309</td><td class="pct">28.6</td></tr>
+<tr><td>Jay Williams</td><td>DEM</td><td class="votes">309</td><td class="pct">28.6</td></tr>
 
 </tbody>
 </table>
@@ -44543,7 +44591,7 @@ Lead: <b>Thune +42.8</b><br>
 <td>Pct</td>
 </tr>
 <tr><td>John Thune</td><td>REP</td><td class="votes">720</td><td class="pct">73.4</td></tr>
-<tr><td>Jarrod Williams</td><td>DEM</td><td class="votes">261</td><td class="pct">26.6</td></tr>
+<tr><td>Jay Williams</td><td>DEM</td><td class="votes">261</td><td class="pct">26.6</td></tr>
 
 </tbody>
 </table>
@@ -44562,7 +44610,7 @@ Lead: <b>Thune +46.8</b><br>
 <td>Pct</td>
 </tr>
 <tr><td>John Thune</td><td>REP</td><td class="votes">494</td><td class="pct">88.1</td></tr>
-<tr><td>Jarrod Williams</td><td>DEM</td><td class="votes">67</td><td class="pct">11.9</td></tr>
+<tr><td>Jay Williams</td><td>DEM</td><td class="votes">67</td><td class="pct">11.9</td></tr>
 
 </tbody>
 </table>
@@ -44581,7 +44629,7 @@ Lead: <b>Thune +76.1</b><br>
 <td>Pct</td>
 </tr>
 <tr><td>John Thune</td><td>REP</td><td class="votes">1,899</td><td class="pct">73.8</td></tr>
-<tr><td>Jarrod Williams</td><td>DEM</td><td class="votes">674</td><td class="pct">26.2</td></tr>
+<tr><td>Jay Williams</td><td>DEM</td><td class="votes">674</td><td class="pct">26.2</td></tr>
 
 </tbody>
 </table>
@@ -44600,7 +44648,7 @@ Lead: <b>Thune +47.6</b><br>
 <td>Pct</td>
 </tr>
 <tr><td>John Thune</td><td>REP</td><td class="votes">4,677</td><td class="pct">69.7</td></tr>
-<tr><td>Jarrod Williams</td><td>DEM</td><td class="votes">2,031</td><td class="pct">30.3</td></tr>
+<tr><td>Jay Williams</td><td>DEM</td><td class="votes">2,031</td><td class="pct">30.3</td></tr>
 
 </tbody>
 </table>
@@ -44619,7 +44667,7 @@ Lead: <b>Thune +39.4</b><br>
 <td>Pct</td>
 </tr>
 <tr><td>John Thune</td><td>REP</td><td class="votes">8,566</td><td class="pct">72.4</td></tr>
-<tr><td>Jarrod Williams</td><td>DEM</td><td class="votes">3,267</td><td class="pct">27.6</td></tr>
+<tr><td>Jay Williams</td><td>DEM</td><td class="votes">3,267</td><td class="pct">27.6</td></tr>
 
 </tbody>
 </table>
@@ -44638,7 +44686,7 @@ Lead: <b>Thune +44.8</b><br>
 <td>Pct</td>
 </tr>
 <tr><td>John Thune</td><td>REP</td><td class="votes">19,264</td><td class="pct">76.1</td></tr>
-<tr><td>Jarrod Williams</td><td>DEM</td><td class="votes">6,043</td><td class="pct">23.9</td></tr>
+<tr><td>Jay Williams</td><td>DEM</td><td class="votes">6,043</td><td class="pct">23.9</td></tr>
 
 </tbody>
 </table>
@@ -44657,7 +44705,7 @@ Lead: <b>Thune +52.2</b><br>
 <td>Pct</td>
 </tr>
 <tr><td>John Thune</td><td>REP</td><td class="votes">1,051</td><td class="pct">73.5</td></tr>
-<tr><td>Jarrod Williams</td><td>DEM</td><td class="votes">378</td><td class="pct">26.5</td></tr>
+<tr><td>Jay Williams</td><td>DEM</td><td class="votes">378</td><td class="pct">26.5</td></tr>
 
 </tbody>
 </table>
@@ -44676,7 +44724,7 @@ Lead: <b>Thune +47.1</b><br>
 <td>Pct</td>
 </tr>
 <tr><td>John Thune</td><td>REP</td><td class="votes">2,021</td><td class="pct">77.1</td></tr>
-<tr><td>Jarrod Williams</td><td>DEM</td><td class="votes">599</td><td class="pct">22.9</td></tr>
+<tr><td>Jay Williams</td><td>DEM</td><td class="votes">599</td><td class="pct">22.9</td></tr>
 
 </tbody>
 </table>
@@ -44695,7 +44743,7 @@ Lead: <b>Thune +54.3</b><br>
 <td>Pct</td>
 </tr>
 <tr><td>John Thune</td><td>REP</td><td class="votes">1,009</td><td class="pct">85.9</td></tr>
-<tr><td>Jarrod Williams</td><td>DEM</td><td class="votes">165</td><td class="pct">14.1</td></tr>
+<tr><td>Jay Williams</td><td>DEM</td><td class="votes">165</td><td class="pct">14.1</td></tr>
 
 </tbody>
 </table>
@@ -44714,7 +44762,7 @@ Lead: <b>Thune +71.9</b><br>
 <td>Pct</td>
 </tr>
 <tr><td>John Thune</td><td>REP</td><td class="votes">1,341</td><td class="pct">68.1</td></tr>
-<tr><td>Jarrod Williams</td><td>DEM</td><td class="votes">629</td><td class="pct">31.9</td></tr>
+<tr><td>Jay Williams</td><td>DEM</td><td class="votes">629</td><td class="pct">31.9</td></tr>
 
 </tbody>
 </table>
@@ -44733,7 +44781,7 @@ Lead: <b>Thune +36.1</b><br>
 <td>Pct</td>
 </tr>
 <tr><td>John Thune</td><td>REP</td><td class="votes">9,198</td><td class="pct">79.7</td></tr>
-<tr><td>Jarrod Williams</td><td>DEM</td><td class="votes">2,348</td><td class="pct">20.3</td></tr>
+<tr><td>Jay Williams</td><td>DEM</td><td class="votes">2,348</td><td class="pct">20.3</td></tr>
 
 </tbody>
 </table>
@@ -44752,7 +44800,7 @@ Lead: <b>Thune +59.3</b><br>
 <td>Pct</td>
 </tr>
 <tr><td>John Thune</td><td>REP</td><td class="votes">464</td><td class="pct">67.4</td></tr>
-<tr><td>Jarrod Williams</td><td>DEM</td><td class="votes">224</td><td class="pct">32.6</td></tr>
+<tr><td>Jay Williams</td><td>DEM</td><td class="votes">224</td><td class="pct">32.6</td></tr>
 
 </tbody>
 </table>
@@ -44771,7 +44819,7 @@ Lead: <b>Thune +34.9</b><br>
 <td>Pct</td>
 </tr>
 <tr><td>John Thune</td><td>REP</td><td class="votes">807</td><td class="pct">74.0</td></tr>
-<tr><td>Jarrod Williams</td><td>DEM</td><td class="votes">284</td><td class="pct">26.0</td></tr>
+<tr><td>Jay Williams</td><td>DEM</td><td class="votes">284</td><td class="pct">26.0</td></tr>
 
 </tbody>
 </table>
@@ -44790,7 +44838,7 @@ Lead: <b>Thune +47.9</b><br>
 <td>Pct</td>
 </tr>
 <tr><td>John Thune</td><td>REP</td><td class="votes">52,494</td><td class="pct">67.4</td></tr>
-<tr><td>Jarrod Williams</td><td>DEM</td><td class="votes">25,359</td><td class="pct">32.6</td></tr>
+<tr><td>Jay Williams</td><td>DEM</td><td class="votes">25,359</td><td class="pct">32.6</td></tr>
 
 </tbody>
 </table>
@@ -44809,7 +44857,7 @@ Lead: <b>Thune +34.9</b><br>
 <td>Pct</td>
 </tr>
 <tr><td>John Thune</td><td>REP</td><td class="votes">1,983</td><td class="pct">67.2</td></tr>
-<tr><td>Jarrod Williams</td><td>DEM</td><td class="votes">970</td><td class="pct">32.8</td></tr>
+<tr><td>Jay Williams</td><td>DEM</td><td class="votes">970</td><td class="pct">32.8</td></tr>
 
 </tbody>
 </table>
@@ -44827,7 +44875,7 @@ Lead: <b>Thune +34.3</b><br>
 <td>Votes</td>
 <td>Pct</td>
 </tr>
-<tr><td>Jarrod Williams</td><td>DEM</td><td class="votes">2,217</td><td class="pct">77.2</td></tr>
+<tr><td>Jay Williams</td><td>DEM</td><td class="votes">2,217</td><td class="pct">77.2</td></tr>
 <tr><td>John Thune</td><td>REP</td><td class="votes">655</td><td class="pct">22.8</td></tr>
 
 </tbody>
@@ -44847,7 +44895,7 @@ Lead: <b>Williams +54.4</b><br>
 <td>Pct</td>
 </tr>
 <tr><td>John Thune</td><td>REP</td><td class="votes">33,967</td><td class="pct">72.0</td></tr>
-<tr><td>Jarrod Williams</td><td>DEM</td><td class="votes">13,207</td><td class="pct">28.0</td></tr>
+<tr><td>Jay Williams</td><td>DEM</td><td class="votes">13,207</td><td class="pct">28.0</td></tr>
 
 </tbody>
 </table>
@@ -44866,7 +44914,7 @@ Lead: <b>Thune +44.0</b><br>
 <td>Pct</td>
 </tr>
 <tr><td>John Thune</td><td>REP</td><td class="votes">1,374</td><td class="pct">85.6</td></tr>
-<tr><td>Jarrod Williams</td><td>DEM</td><td class="votes">231</td><td class="pct">14.4</td></tr>
+<tr><td>Jay Williams</td><td>DEM</td><td class="votes">231</td><td class="pct">14.4</td></tr>
 
 </tbody>
 </table>
@@ -44885,7 +44933,7 @@ Lead: <b>Thune +71.2</b><br>
 <td>Pct</td>
 </tr>
 <tr><td>John Thune</td><td>REP</td><td class="votes">1,087</td><td class="pct">81.1</td></tr>
-<tr><td>Jarrod Williams</td><td>DEM</td><td class="votes">253</td><td class="pct">18.9</td></tr>
+<tr><td>Jay Williams</td><td>DEM</td><td class="votes">253</td><td class="pct">18.9</td></tr>
 
 </tbody>
 </table>
@@ -44904,7 +44952,7 @@ Lead: <b>Thune +62.2</b><br>
 <td>Pct</td>
 </tr>
 <tr><td>John Thune</td><td>REP</td><td class="votes">2,550</td><td class="pct">65.0</td></tr>
-<tr><td>Jarrod Williams</td><td>DEM</td><td class="votes">1,376</td><td class="pct">35.0</td></tr>
+<tr><td>Jay Williams</td><td>DEM</td><td class="votes">1,376</td><td class="pct">35.0</td></tr>
 
 </tbody>
 </table>
@@ -44923,7 +44971,7 @@ Lead: <b>Thune +29.9</b><br>
 <td>Pct</td>
 </tr>
 <tr><td>John Thune</td><td>REP</td><td class="votes">889</td><td class="pct">78.5</td></tr>
-<tr><td>Jarrod Williams</td><td>DEM</td><td class="votes">244</td><td class="pct">21.5</td></tr>
+<tr><td>Jay Williams</td><td>DEM</td><td class="votes">244</td><td class="pct">21.5</td></tr>
 
 </tbody>
 </table>
@@ -44942,7 +44990,7 @@ Lead: <b>Thune +56.9</b><br>
 <td>Pct</td>
 </tr>
 <tr><td>John Thune</td><td>REP</td><td class="votes">2,177</td><td class="pct">72.7</td></tr>
-<tr><td>Jarrod Williams</td><td>DEM</td><td class="votes">816</td><td class="pct">27.3</td></tr>
+<tr><td>Jay Williams</td><td>DEM</td><td class="votes">816</td><td class="pct">27.3</td></tr>
 
 </tbody>
 </table>
@@ -44961,7 +45009,7 @@ Lead: <b>Thune +45.5</b><br>
 <td>Pct</td>
 </tr>
 <tr><td>John Thune</td><td>REP</td><td class="votes">1,254</td><td class="pct">80.5</td></tr>
-<tr><td>Jarrod Williams</td><td>DEM</td><td class="votes">303</td><td class="pct">19.5</td></tr>
+<tr><td>Jay Williams</td><td>DEM</td><td class="votes">303</td><td class="pct">19.5</td></tr>
 
 </tbody>
 </table>
@@ -44980,7 +45028,7 @@ Lead: <b>Thune +61.1</b><br>
 <td>Pct</td>
 </tr>
 <tr><td>John Thune</td><td>REP</td><td class="votes">718</td><td class="pct">84.1</td></tr>
-<tr><td>Jarrod Williams</td><td>DEM</td><td class="votes">136</td><td class="pct">15.9</td></tr>
+<tr><td>Jay Williams</td><td>DEM</td><td class="votes">136</td><td class="pct">15.9</td></tr>
 
 </tbody>
 </table>
@@ -44998,7 +45046,7 @@ Lead: <b>Thune +68.1</b><br>
 <td>Votes</td>
 <td>Pct</td>
 </tr>
-<tr><td>Jarrod Williams</td><td>DEM</td><td class="votes">1,376</td><td class="pct">65.5</td></tr>
+<tr><td>Jay Williams</td><td>DEM</td><td class="votes">1,376</td><td class="pct">65.5</td></tr>
 <tr><td>John Thune</td><td>REP</td><td class="votes">724</td><td class="pct">34.5</td></tr>
 
 </tbody>
@@ -45018,7 +45066,7 @@ Lead: <b>Williams +31.0</b><br>
 <td>Pct</td>
 </tr>
 <tr><td>John Thune</td><td>REP</td><td class="votes">2,134</td><td class="pct">81.3</td></tr>
-<tr><td>Jarrod Williams</td><td>DEM</td><td class="votes">492</td><td class="pct">18.7</td></tr>
+<tr><td>Jay Williams</td><td>DEM</td><td class="votes">492</td><td class="pct">18.7</td></tr>
 
 </tbody>
 </table>
@@ -45037,7 +45085,7 @@ Lead: <b>Thune +62.5</b><br>
 <td>Pct</td>
 </tr>
 <tr><td>John Thune</td><td>REP</td><td class="votes">3,289</td><td class="pct">79.1</td></tr>
-<tr><td>Jarrod Williams</td><td>DEM</td><td class="votes">871</td><td class="pct">20.9</td></tr>
+<tr><td>Jay Williams</td><td>DEM</td><td class="votes">871</td><td class="pct">20.9</td></tr>
 
 </tbody>
 </table>
@@ -45056,7 +45104,7 @@ Lead: <b>Thune +58.1</b><br>
 <td>Pct</td>
 </tr>
 <tr><td>John Thune</td><td>REP</td><td class="votes">6,060</td><td class="pct">77.2</td></tr>
-<tr><td>Jarrod Williams</td><td>DEM</td><td class="votes">1,793</td><td class="pct">22.8</td></tr>
+<tr><td>Jay Williams</td><td>DEM</td><td class="votes">1,793</td><td class="pct">22.8</td></tr>
 
 </tbody>
 </table>
@@ -45075,7 +45123,7 @@ Lead: <b>Thune +54.3</b><br>
 <td>Pct</td>
 </tr>
 <tr><td>John Thune</td><td>REP</td><td class="votes">1,975</td><td class="pct">80.4</td></tr>
-<tr><td>Jarrod Williams</td><td>DEM</td><td class="votes">482</td><td class="pct">19.6</td></tr>
+<tr><td>Jay Williams</td><td>DEM</td><td class="votes">482</td><td class="pct">19.6</td></tr>
 
 </tbody>
 </table>
@@ -45094,7 +45142,7 @@ Lead: <b>Thune +60.8</b><br>
 <td>Pct</td>
 </tr>
 <tr><td>John Thune</td><td>REP</td><td class="votes">6,542</td><td class="pct">67.9</td></tr>
-<tr><td>Jarrod Williams</td><td>DEM</td><td class="votes">3,089</td><td class="pct">32.1</td></tr>
+<tr><td>Jay Williams</td><td>DEM</td><td class="votes">3,089</td><td class="pct">32.1</td></tr>
 
 </tbody>
 </table>
@@ -45113,7 +45161,7 @@ Lead: <b>Thune +35.9</b><br>
 <td>Pct</td>
 </tr>
 <tr><td>John Thune</td><td>REP</td><td class="votes">421</td><td class="pct">55.0</td></tr>
-<tr><td>Jarrod Williams</td><td>DEM</td><td class="votes">345</td><td class="pct">45.0</td></tr>
+<tr><td>Jay Williams</td><td>DEM</td><td class="votes">345</td><td class="pct">45.0</td></tr>
 
 </tbody>
 </table>
