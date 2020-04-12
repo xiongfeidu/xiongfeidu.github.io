@@ -16,7 +16,7 @@
 <div class="dropdown dropdown-year dropdown-elem-year">
   <div class="dropbtn">2014<span style="float:right;">▼</span></div>
   <div class="dropdown-content dropdown-elem-year">
-    <a href="../../2020/demprimaries">2020</a>    <a href="../../2019/governors">2019</a>    <a href="../../2018/governors">2018</a>    <a href="../../2017/governors">2017</a>    <a href="../../2016/governors">2016</a>    <a href="../../2014/governors">2014</a>    <a href="../../2012/governors">2012</a>    <a href="../../2010/governors">2010</a>    <a href="../../2008/president">2008</a>    <a href="../../2006/house">2006</a>    <a href="../../2004/president">2004</a>    <a href="../../2002/house">2002</a>    <a href="../../2000/president">2000</a>
+    <a href="../../2020/demprimaries">2020</a>    <a href="../../2019/governors">2019</a>    <a href="../../2018/governors">2018</a>    <a href="../../2017/governors">2017</a>    <a href="../../2016/governors">2016</a>    <a href="../../2014/governors">2014</a>    <a href="../../2012/governors">2012</a>    <a href="../../2010/governors">2010</a>    <a href="../../2008/president">2008</a>    <a href="../../2006/senate">2006</a>    <a href="../../2004/president">2004</a>    <a href="../../2002/senate">2002</a>    <a href="../../2000/president">2000</a>
   </div>
 </div>
 <div class="dropdown dropdown-election dropdown-elem-election">
@@ -7400,6 +7400,11 @@ Pre-election estimate: <b>N/A</b>
         element.style.strokeWidth = "0.3px"; // 0.5
       }
       bringToFront(element);
+      if (id === 'c51015') { // Augusta, VA
+        bringToFront(document.getElementById('c51820')); // Waynesboro, VA
+      } else if (id === 'c51165') { // Rockingham, VA
+        bringToFront(document.getElementById('c51660')); // Harrisonburg, VA
+      }
       element.style.stroke = 'black'; // hover + front does not work on firefox
     } else if (element.className.baseVal === 'district') {
       bringToFront(element);
