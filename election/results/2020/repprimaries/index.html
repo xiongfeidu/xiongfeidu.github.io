@@ -44,13 +44,13 @@
 <h3>Delegate Count</h3>
   <div class="primary-candidate">
     <div class="no-height">
-      <div style="width:814px; height:20px; background-color: #FF0000; position: relative;">&nbsp;</div>
+      <div style="width:822px; height:20px; background-color: #FF0000; position: relative;">&nbsp;</div>
     </div>
     <div class="no-height">
-      <div style="width:0px; height:20px; left: 814px; background-color: #FF6060; position: relative;">&nbsp;</div>
+      <div style="width:0px; height:20px; left: 822px; background-color: #FF6060; position: relative;">&nbsp;</div>
     </div>
     <div class="no-height">
-      <div style="height:20px; left: 824px; color: #FF0000; background-color: lightgray; position: relative; z-index: 1; display: inline-block;"><span class="delegates">2160</span> Trump <span class="delegates">✔</span></div>
+      <div style="height:20px; left: 832px; color: #FF0000; background-color: lightgray; position: relative; z-index: 1; display: inline-block;"><span class="delegates">2183</span> Trump <span class="delegates">✔</span></div>
     </div>
     <div>
       <div style="width:960px; position: relative; text-align: center; font-size: 18;">|<br><span style="font-size: 12;"></span></div>
@@ -7250,7 +7250,7 @@ Pre-election estimate: <b>N/A</b>
 <td>Pct</td>
 <td>Del</td>
 </tr>
-<tr><td style="color: #fff" bgcolor="#FF0000">Donald J. Trump* ✔</td><td>REP</td><td class="votes">880,855</td><td class="pct">100.0</td><td class="votes">76</td></tr>
+<tr><td style="color: #fff" bgcolor="#FF0000">Donald J. Trump* ✔</td><td>REP</td><td class="votes">881,975</td><td class="pct">100.0</td><td class="votes">76</td></tr>
 
 </tbody>
 </table>
@@ -7525,6 +7525,28 @@ Lead: <b>Trump +100.0</b><br>
 Pre-election estimate: <b>N/A</b>
 </div>
 
+<div id="PR-results" class="results">
+<b class="name">Puerto Rico </b> Caucuses, Jun 05<br>
+<table class="resultstable">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+<td>Del</td>
+</tr>
+<tr><td style="color: #fff" bgcolor="#FF0000">Donald J. Trump* ✔</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td><td class="votes">23</td></tr>
+
+</tbody>
+</table>
+100.0% of precincts reporting<br>
+Status: <b>Called for Trump (R)</b><br>
+Lead: <b>Trump +100.0</b><br>
+
+Pre-election estimate: <b>N/A</b>
+</div>
+
   <div id="CT-results" class="results">
     <b class="name">Connecticut</b><br>
     No election
@@ -7547,11 +7569,6 @@ Pre-election estimate: <b>N/A</b>
 
   <div id="NJ-results" class="results">
     <b class="name">New Jersey</b><br>
-    No election
-  </div>
-
-  <div id="PR-results" class="results">
-    <b class="name">Puerto Rico</b><br>
     No election
   </div>
 
@@ -7757,7 +7774,7 @@ Pre-election estimate: <b>N/A</b>
   function setColor(id, color) {
     document.getElementById(id).style.fill = color;    
   }
-  var stateColors = {"IA": "#FF0000", "NH": "#FF0000", "VT": "#FF0000", "NC": "#FF0000", "AL": "#FF0000", "MA": "#FF0000", "OK": "#FF0000", "TN": "#FF0000", "TX": "#FF0000", "AR": "#FF0000", "CO": "#FF0000", "UT": "#FF0000", "CA": "#FF0000", "MI": "#FF0000", "MS": "#FF0000", "MO": "#FF0000", "ID": "#FF0000", "FL": "#FF0000", "IL": "#FF0000", "NE": "#FF0000", "IN": "#FF0000", "MD": "#FF0000", "MT": "#FF0000", "NM": "#FF0000", "PA": "#FF0000", "RI": "#FF0000", "WV": "#FF0000", "ME": "#FF0000", "MN": "#FF0000", "WA": "#FF0000", "WI": "#FF0000", "OH": "#FF0000", "OR": "#FF0000", "SD": "#FF0000", "GA": "#FF0000", "SC": "#FF0000", "HI": "#FF0000", "KS": "#FF0000", "NV": "#FF0000", "NY": "#FF0000", "ND": "#FF0000", "GU": "#FF0000", "MP": "#FF0000", "AS": "#FF0000", "AK": "#FF0000", "AZ": "#FF0000", "DC": "#FF0000"};
+  var stateColors = {"IA": "#FF0000", "NH": "#FF0000", "VT": "#FF0000", "NC": "#FF0000", "AL": "#FF0000", "MA": "#FF0000", "OK": "#FF0000", "TN": "#FF0000", "TX": "#FF0000", "AR": "#FF0000", "CO": "#FF0000", "UT": "#FF0000", "CA": "#FF0000", "MI": "#FF0000", "MS": "#FF0000", "MO": "#FF0000", "ID": "#FF0000", "FL": "#FF0000", "IL": "#FF0000", "NE": "#FF0000", "IN": "#FF0000", "MD": "#FF0000", "MT": "#FF0000", "NM": "#FF0000", "PA": "#FF0000", "RI": "#FF0000", "WV": "#FF0000", "ME": "#FF0000", "MN": "#FF0000", "WA": "#FF0000", "WI": "#FF0000", "OH": "#FF0000", "OR": "#FF0000", "SD": "#FF0000", "GA": "#FF0000", "SC": "#FF0000", "HI": "#FF0000", "KS": "#FF0000", "NV": "#FF0000", "NY": "#FF0000", "ND": "#FF0000", "GU": "#FF0000", "MP": "#FF0000", "AS": "#FF0000", "AK": "#FF0000", "AZ": "#FF0000", "DC": "#FF0000", "PR": "#FF0000"};
   function colorAll() {
     for (var state in stateColors) {
       setColor(state, stateColors[state]);
@@ -52019,7 +52036,7 @@ Lead: <b>Trump +100.0</b><br>
 <td>Votes</td>
 <td>Pct</td>
 </tr>
-<tr><td>Donald J. Trump</td><td>REP</td><td class="votes">8,579</td><td class="pct">100.0</td></tr>
+<tr><td>Donald J. Trump</td><td>REP</td><td class="votes">9,696</td><td class="pct">100.0</td></tr>
 
 </tbody>
 </table>
@@ -53693,7 +53710,7 @@ Lead: <b>Trump +100.0</b><br>
 <td>Votes</td>
 <td>Pct</td>
 </tr>
-<tr><td>Donald J. Trump</td><td>REP</td><td class="votes">4,961</td><td class="pct">100.0</td></tr>
+<tr><td>Donald J. Trump</td><td>REP</td><td class="votes">4,964</td><td class="pct">100.0</td></tr>
 
 </tbody>
 </table>
@@ -54057,7 +54074,7 @@ Lead: <b>Trump +100.0</b><br>
 
 </tbody>
 </table>
-71.4% of precincts reporting<br>
+85.7% of precincts reporting<br>
 Lead: <b>Trump +100.0</b><br>
 </div>
 
