@@ -7,6 +7,7 @@
 <h1>Revisiting 2016: How well would my probabilistic model have performed?</h1>
 <hr />
 <p>24 July 2019</p>
+<p><i>Updated 4 July 2020 to correct a bug in the nationwide electoral college simulation.</i></p>
 <p>People frequently ask me whether I predicted Trump winning the 2016 election, and I tell them <a title="2016 President" href="../">no, that my model gave Clinton a very comfortable victory</a>. But then I mention that the same model predicted all 50 states in 2012.</p>
 <p>Then I explain to them about how after 2016, I completely redesigned my model and how it incorporates uncertainties, etc., etc. So then the natural question to ask is, well, then how would it have done on the 2016 election?</p>
 <p>Good question.</p>
@@ -222,17 +223,18 @@
 </tr>
 <tr>
 <td><span style="color: #0000ff;">Hillary Clinton</span></td>
-<td><span style="color: #0000ff;">73.7%</span></td>
+<td><span style="color: #0000ff;">65.6%</span></td>
 </tr>
 <tr>
 <td><span style="color: #ff0000;">Donald Trump</span></td>
-<td><span style="color: #ff0000;">25.8%</span></td>
+<td><span style="color: #ff0000;">33.7%</span></td>
 </tr>
 </tbody>
 </table>
-<p>The remaining 0.5% is the possiblity of a 269-269 tie.</p>
-<p>The median result was Clinton winning 320-218.</p>
-<p>So these results now look a lot closer to FiveThirtyEight's election forecast, which gave Clinton a 71.4% chance of winning. Nonetheless, the 2018-OLS model performed slightly worse.</p>
+<p>The remaining 0.7% is the possiblity of a 269-269 tie.</p>
+<p>The median result was Clinton winning 292-246.</p>
+<p>The most likely result was Clinton winning 348-190, which is quite similar to what my old model predicted.</p>
+<p>So these results now look a lot closer to FiveThirtyEight's election forecast, which gave Clinton a 71.4% chance of winning.</p>
 <p>To compare this forecast with FiveThirtyEight and RealClearPolitics, I computed the total loss for each of the outcomes across these 15 states. Here, loss was defined as negative log-likelihood (NLL) for the probabilistic models and sum of squared errors (SSE) for the margins. For those who don't have a background in statistical modeling, remember that smaller loss is better.</p>
 <table style="font-size: 12; text-align: center;" width="640">
 <tbody>
