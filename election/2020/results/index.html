@@ -1,0 +1,79 @@
+<head>
+<title>2020 Election Results Analysis</title>
+</head>
+<body style="background-color:lightgray; font-family:verdana;">
+<div style="word-wrap: break-word; width: 640px; margin-left: 100px; margin-top: 0px;">
+<font size = "2">
+<h1>2020 Election Results Analysis</h1>
+<hr />
+<h3> | <a title="President" href="../president/">President</a> | <a title="Senate" href="../senate/">Senate</a> | <a title="Governors" href="../governors/">Governors</a> | Results | </h3>
+<h2>Reported Results Interactive</h2>
+<h3>2020 President Results (link coming soon)</h3>
+<h3>2020 Senate Results (link coming soon)</h3>
+<h3>2020 Governors Results (link coming soon)</h3>
+<h3>2020 House Results (link coming soon)</h3>
+<!--
+<h3><a title="2020 President" href="../../results/2020/president">2020 President Results</a></h3>
+<h3><a title="2020 Senate" href="../../results/2020/senate">2020 Senate Results</a></h3>
+<h3><a title="2020 Governors" href="../../results/2020/governors">2020 Governors Results</a></h3>
+<h3><a title="2020 House" href="../../results/2020/house">2020 House Results</a></h3>
+-->
+<h2>Results Live Stream (November 3 at 6:00 PM EST)</h2>
+<p>Live forecasts of the 2020 final election outcome with commentary begins at 18:00 EST on November 3, 2020, on Twitch. Until then, enjoy the pre-election forecasts!</p>
+<html>
+  <body>
+    <!-- Add a placeholder for the Twitch embed -->
+    <div id="twitch-embed"></div>
+
+    <!-- Load the Twitch embed script -->
+    <script src="https://embed.twitch.tv/embed/v1.js"></script>
+
+    <!-- Create a Twitch.Embed object that will render within the "twitch-embed" root element. -->
+    <script type="text/javascript">
+      new Twitch.Embed("twitch-embed", {
+        width: 1180,
+        height: 480,
+        channel: "xiongfeidu"
+      });
+    </script>
+  </body>
+</html>
+<p>In the model, light represents 'likely', moderate represents 'high probability', and dark represents 'called'. All times EST.</p>
+<p>The election analysis uses the following terminology:</p>
+<ul>
+<li><strong>Likely</strong> means that based on exit polls, pre-election polling data, and initial reports, it is <i>very likely</i> that a candidate will win the race.</li>
+<li><strong>High probability</strong> means that based on our model, it is <i>almost certain</i> that a candidate will win the election, or that a candidate will win unless there's an extremely unlikely shift in the results being reported and that absentee and preliminary ballots shift the election outcome.</li>
+<li><strong>Called</strong> means that a major news organization, such as the Associated Press, has <i>called</i> the election for a candidate.</li>
+</ul>
+<p>In the color scheme, light represents 'likely', moderate represents 'high probability', and dark represents 'called'.</p>
+<h2>Live Model Methodology</h2>
+<p>In terms of methodology, this model essentially guesses the final results of the election based on the geographic distribution of results that are reporting so far and the historical partisan lean of that region. Because it analyzes historical partisan lean, it only works on elections for which there are only two major candidates: one Democrat and one Republican. The model is fundamentally biased for historical results, so there's a reasonable margin of error of about a point or so. The margin of error is typically higher when:</p>
+<ul>
+  <li>The pattern of voter turnout is substantially different from historical trends.</li>
+  <li>A realigning election occurs.</li>
+  <li>During special elections and off-year elections, when voter turnout tends to be abnormal.</li>
+  <li>There is a lot of early vote reported that is not representative of the whole.</li>
+  <li>There are still many mail-in, absentee, or preliminary ballots not counted.</li>
+</ul>
+<p>An example of a substantially different turnout pattern that causes the model to be off is the Texas Senate election in 2018, when Beto O'Rourke's candidacy caused a surge in Democratic turnout, while Texas also reported a lot of early vote that favored O'Rourke.</p>
+<p>This models are currently being run for statewide elections in all states with the exception of Alaska. The following map shows how accurately we anticipate the models to perform:</p>
+<p><img src="models.png" alt="" width="640" border="3" /></p>
+<ul>
+  <li>States in <i>green</i> are the states that we expect the models to perform up to expectations. However, the models can be susceptible to outstanding absentee or preliminary ballots that are not reported until the very end.</li>
+  <li>States in <i>light green</i> are the states that we expect the models to somewhat well or mostly well. These states tend to be:
+  <ul>
+    <li>Small states with very few jurisdictions, which makes it hard to analyze, such as Delaware.</li>
+    <li>States with a lot of early vote, which tends to throw off early reports, such as Florida, Georgia, Nevada, North Carolina, and Texas.</li>
+    <li>States with a high percentage of votes in concentrated in very few jurisdictions, such as Illinois and New York.</li>
+    <li>States with substantial vote by mail, which can take time for votes to arrive, such as Colorado, Oregon, and Washington.</li>
+  </ul>
+  <li>States in <i>yellow</i> are the states that we expect the models to be the most susceptible to inaccuracy. These states have substantial vote by mail and take days to weeks for votes to be received and counted, and the late-reporting votes tend to sway election results decisively.</li>
+  <li>The state in <i>red</i> is Alaska, for which there is not a model.</li>
+</ul>
+<p><b>Addendum about mail-in voting</b>. Of course, this year is 2020, and the coronavirus pandemic is upending everything, even how accurate the models will be on election night. This year, a large number of absentee ballots are expected, and polls suggest that absentee ballots will tend to favor Democratic candidates. Hence, if a pattern arises where the in-person votes are reported first, and mail-in votes are reported later, then we could have a situation where the Republicans have an early lead in the results reported. This is not something that we can easily detect and correct for with a model, because we do not know which votes being reported are mail-in or in-person, and we do not have historical data to estimate how much of that mail-in vote will be Democratic. My models are good for breaking down the results geographically, but not for mail-in or early voting. Something similar happened in Arizona in 2018, when my models were unable to detect a surge in late mail-in ballots for the Democrats based on geography alone. However, given the urban-rural split we are seeing between Democrats and Republicans, we may be able to forecast the final outcome a bit better than the raw vote count, but it will not be foolproof. Hence, we are expecting that the models perform a bit more poorly than we would otherwise during a typical election cycle.</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</font>
+</div>
+</body>
