@@ -68,7 +68,7 @@
     <table class="scoreboard-table">
     <tbody>
     <tr>
-    <td style="color: #00f; font-weight: bold;"><span style="color: #00f; font-size: 24;">289</span> Biden/Harris <span class="checkmark" style="font-size: 24;">✔</span></td>
+    <td style="color: #00f; font-weight: bold;"><span style="color: #00f; font-size: 24;">290</span> Biden/Harris <span class="checkmark" style="font-size: 24;">✔</span></td>
     <td style="color: #f00; font-weight: bold; text-align: right;"><span class="checkmark" style="font-size: 24;"></span> Trump/Pence <span style="color: #f00; font-size: 24;">163</span></td>
     </tr>
     </tbody>
@@ -81,19 +81,19 @@
     <div style="width:218px; height:20px; background-color: #00008B; position: relative; color: white; text-align: center; z-index: 1;">183</div>
   </div>
   <div class="no-height">
-    <div style="width:39px; height:20px; left: 218px; background-color: #0000FF; position: relative; color: white; text-align: center; z-index: 1;">33</div>
+    <div style="width:70px; height:20px; left: 218px; background-color: #0000FF; position: relative; color: white; text-align: center; z-index: 1;">59</div>
   </div>
   <div class="no-height">
-    <div style="width:87px; height:20px; left: 257px; background-color: #6060FF; position: relative; color: white; text-align: center; z-index: 1;">73</div>
+    <div style="width:57px; height:20px; left: 288px; background-color: #6060FF; position: relative; color: white; text-align: center; z-index: 1;">48</div>
   </div>
   <div class="no-height">
     <div style="width:45px; height:20px; left: 446px; background-color: #FF6060; position: relative; color: white; text-align: center; z-index: 1;">38</div>
   </div>
   <div class="no-height">
-    <div style="width:26px; height:20px; left: 491px; background-color: #FF0000; position: relative; color: white; text-align: center; z-index: 1;">22</div>
+    <div style="width:30px; height:20px; left: 491px; background-color: #FF0000; position: relative; color: white; text-align: center; z-index: 1;">25</div>
   </div>
   <div class="no-height">
-    <div style="width:123px; height:20px; left: 517px; background-color: #8B0000; position: relative; color: white; text-align: center; z-index: 1;">103</div>
+    <div style="width:119px; height:20px; left: 521px; background-color: #8B0000; position: relative; color: white; text-align: center; z-index: 1;">100</div>
   </div>
   <div>
     <div style="width:640px; position: relative; text-align: center; font-size: 20;">|<br><span style="font-size: 12;">270 to win</span></div>
@@ -109,10 +109,10 @@
     #FL, #GA, #IA, #NC, #OH {fill: #FFFFFF;}
 
     /* Leans D */
-    #AZ, #MI, #MN, #NV, #PA, #WI {fill: #6060FF;}
+    #AZ, #NV, #PA, #WI {fill: #6060FF;}
 
     /* Likely D */
-    #CO, #ME, #NH, #NM, #VA {fill: #0000FF;}
+    #CO, #ME, #MI, #MN, #NH, #NM, #VA {fill: #0000FF;}
 
     /* Safe D */
     #CA, #CT, #DC, #DE, #HI, #IL, #MA, #MD, #NJ, #NY, #OR, #RI, #VT, #WA {fill: #00008B;}
@@ -121,10 +121,10 @@
     #TX {fill: #FF6060;}
 
     /* Likely R */
-    #AK, #MO, #SC {fill: #FF0000;}
+    #AK, #MO, #MT, #SC {fill: #FF0000;}
 
     /* Safe R */
-    #AL, #AR, #ID, #IN, #KS, #KY, #LA, #MS, #MT, #ND, #NE, #OK, #SD, #TN, #UT, #WV, #WY {fill: #8B0000;}
+    #AL, #AR, #ID, #IN, #KS, #KY, #LA, #MS, #ND, #NE, #OK, #SD, #TN, #UT, #WV, #WY {fill: #8B0000;}
 
     </style>
   </defs>
@@ -182,7 +182,7 @@
     <g id="DC" onmouseenter="show('DC-popup');" onmousemove="show('DC-popup');" onmouseleave="hide('DC-popup');"><path id="DC1" d="M801.8 253.8l-1.1-1.6-1-.8 1.1-1.6 2.2 1.5z"/><circle id="DC2" stroke="lightgray" stroke-width="1.0" cx="801.3" cy="251.8" r="5" opacity="1"/> <!-- Set opacity to "0" to hide DC circle --></g>
   </g>
 </svg>
-<p>Note that Maine and Nebraska award electoral votes both for the statewide winner and for the winner in each of its congressional districts. Maine's two statewide electoral votes are rated as Leans Democratic, while Maine's 1st congressional district is rated as Safe Democratic and Maine's 2nd congressional district is rated as Tossup. In Nebraska, the two statewide electoral votes and Nebraska's 1st and 3rd district are rated as Safe Republican, while Nebraska's 2nd congressional district is rated as Tossup.</p>
+<p>Note that Maine and Nebraska award electoral votes both for the statewide winner and for the winner in each of its congressional districts. Maine's two statewide electoral votes are rated as Likely Democratic, while Maine's 1st congressional district is rated as Safe Democratic and Maine's 2nd congressional district is rated as Tossup. In Nebraska, the two statewide electoral votes and Nebraska's 1st and 3rd district are rated as Safe Republican, while Nebraska's 2nd congressional district is rated as Leans Democratic.</p>
 <h2>Simulation</h2>
 <p>These estimates above only show the expected outcome in every state. However, we can put these state-by-state estimates together into an overall simulation of the Electoral College to see what the possible outcomes are. The numbers used in this simulation are from the results of the 2018-OLS model. Here are the results:</p>
 <table style="font-size: 12; text-align: center;">
@@ -193,17 +193,17 @@
 </tr>
 <tr>
 <td><span style="color: #0000ff;">Joe Biden</span></td>
-<td><span style="color: #0000ff;"><b>90.7%</b></span></td>
+<td><span style="color: #0000ff;"><b>94.3%</b></span></td>
 </tr>
 <tr>
 <td><span style="color: #ff0000;">Donald Trump</span></td>
-<td><span style="color: #ff0000;"><b>8.6%</b></span></td>
+<td><span style="color: #ff0000;"><b>5.2%</b></span></td>
 </tr>
 </tbody>
 </table>
-<p>The remaining 0.7% is the possiblity of a 269-269 tie.</p>
-<p>The median result is <span style="color: #0000ff;">Biden</span> winning 304-234.</p>
-<p>The most likely result is <span style="color: #0000ff;">Biden</span> winning 279-259.</p>
+<p>The remaining 0.5% is the possiblity of a 269-269 tie.</p>
+<p>The median result is <span style="color: #0000ff;">Biden</span> winning 311-227.</p>
+<p>The most likely result is <span style="color: #0000ff;">Biden</span> winning 375-163.</p>
 <h3>History</h3>
 <p>This table shows the results of the simulation over time. Note that the simulation currently being reported is the GOP-optimistic simulation, for the reason previously noted that early undecided voters tend to be Republican-leaning in recent years. As we get closer to Election Day, the simulation result will start shifting to the neutral result.</p>
 <table style="font-size: 12; text-align: center; column-gap: 40px;">
@@ -317,11 +317,28 @@
 <td><span style="color: #0000ff; text-align: right;">90.7%</span></td>
 <td><span style="color: #ff0000; text-align: right;">8.5%</span></td>
 <td><span style="color: #0000ff; text-align: right;">289</span></td>
-<td><span style="color: #ff0000; text-align: right;">179</span></td>
+<td><span style="color: #ff0000; text-align: right;">163</span></td>
 <td><span style="color: #0000ff; text-align: right;">311</span></td>
 <td><span style="color: #ff0000; text-align: right;">227</span></td>
 <td><span style="color: #0000ff; text-align: right;">335</span></td>
 <td><span style="color: #ff0000; text-align: right;">203</span></td>
+</tr>
+<tr>
+<td><i>10/25</i></td>
+<td colspan="10"><span style="text-align: center;"><i>Note: The model was switched from the GOP-optimistic model to the neutral model on 10/25.</i></span></td>
+</tr>
+<tr>
+<td>10/25</td>
+<td><span style="color: #0000ff; text-align: right;">94.3%</span></td>
+<td><span style="color: #ff0000; text-align: right;">5.2%</span></td>
+<td><span style="color: #0000ff; text-align: right;">88.6%</span></td>
+<td><span style="color: #ff0000; text-align: right;">10.4%</span></td>
+<td><span style="color: #0000ff; text-align: right;">290</span></td>
+<td><span style="color: #ff0000; text-align: right;">163</span></td>
+<td><span style="color: #0000ff; text-align: right;">342</span></td>
+<td><span style="color: #ff0000; text-align: right;">196</span></td>
+<td><span style="color: #0000ff; text-align: right;">375</span></td>
+<td><span style="color: #ff0000; text-align: right;">163</span></td>
 </tr>
 </tbody>
 </table>
@@ -332,8 +349,8 @@
 <p><b>Georgia (Tossup)</b>. Georgia is a Deep South state that last voted for a Democrat at the presidential level when Bill Clinton carried it in 1992. However, Georgia has a large African-American electorate, and the vote from the growing Atlanta suburbs has shifted from away from its traditional Republican lean to a more Democratic lean in the age of Trump. President Obama never carried Georgia despite record African-American turnout in 2008 and 2012 due to strong Republican performance in the Atlanta suburbs and rural areas. In 2018, then-State House Minority Leader Stacey Abrams (D) held now-Gov. Brian Kemp (R) to just a 1.4 point victory by turning out African-American voters in large numbers and capitalizing on trends in favor of the Democrats in the Atlanta suburbs. This year, former Vice President Biden is hoping to push this trend a little further to eke out a victory in Georgia. President Trump must win Georgia's 16 electoral votes to win the election.</p>
 <p><b>Iowa (Tossup)</b>. Iowa is a traditional battleground state that had voted with the winner of the national popular vote since 1992, but that streak broke when former Secretary of State Hillary Rodham Clinton lost Iowa by 9.4 points due to her extremely poor underperformance among rural voters, especially in the Midwest. Iowa saw a realignment after the 2012 election, when the Democrats started to veer towards more socially liberal issues popular in coastal metropolitan areas that alienate voters in the heartland. This realignment has put Iowa solidly to the right of the national vote, despite its margin historically tracking within 3 points of the national popular vote margin from 1992 to 2012. However, the Democrats see hope in the state after they won the generic House vote by 4 points in the 2018 midterms, though much of that can be explained by controversies surrounding the Republican incumbent in the fourth district. However, Iowa is expected to continue to vote more Republican than the nation, though Biden has a shot at winning if he can somewhat replicate President Obama's performance in Iowa in 2008 and 2012.</p>
 <p><b>Maine (Likely Biden)</b>. Similar to Iowa, the failure of the Democratic Party to appeal to rural voters drastically shifted Maine more Republican in 2016, which allowed President Trump to win one electoral vote in Maine's second congressional district. However, Biden is not expected to perform as poorly as Clinton among rural voters in Maine, which makes it likely that he will be able to carry the state. However, the single electoral vote in the second district remains contested.</p>
-<p><b>Michigan (Leans Biden)</b>. For a long time in modern political history, no Republican had won Michigan since George Bush's 1988 landslide victory. That was until President Donald Trump pulled off a surprise and flipped the state in 2016 by winning over rural voters and white working class households. This time around, Michigan is the "blue wall" state the most likely to flip back to the Democratic column, especially considering that Trump only won by 0.2 points in 2016. To have a shot at winning Michigan, Trump would have to win his large margins again in rural and working class areas while also holding off suburbs and traditional GOP strongholds from trending Democratic. Hence, it's unlikely that Trump will be able to pull off an upset again in 2020, giving Biden an edge in Michigan. Michigan is considered a must-win state for Biden to be able to get to 270 electoral votes.</p>
-<p><b>Minnesota (Leans Biden)</b>. Minnesota has voted Democratic in every presidential election since 1976, even during the Republican landslides of the 1980s. However, due to her poor showing among rural Midwestern voters, Hillary Clinton won the state by only 1.5 points in 2016, and Minnesota surprisingly voted more Republican than the national popular vote. The Republicans have noticed Democratic vulnerabilities in Minnesota, and both Mitt Romney in 2012 and Donald Trump in 2016 made last-minute attempts to swing the state. However, Minnesota has remained in th Democratic column. Joe Biden must win in Minnesota to have a realistic chance of getting to 270 electoral votes.</p>
+<p><b>Michigan (Likely Biden)</b>. For a long time in modern political history, no Republican had won Michigan since George Bush's 1988 landslide victory. That was until President Donald Trump pulled off a surprise and flipped the state in 2016 by winning over rural voters and white working class households. This time around, Michigan is the "blue wall" state the most likely to flip back to the Democratic column, especially considering that Trump only won by 0.2 points in 2016. To have a shot at winning Michigan, Trump would have to win his large margins again in rural and working class areas while also holding off suburbs and traditional GOP strongholds from trending Democratic. Hence, it's unlikely that Trump will be able to pull off an upset again in 2020, giving Biden an edge in Michigan. Michigan is considered a must-win state for Biden to be able to get to 270 electoral votes.</p>
+<p><b>Minnesota (Likely Biden)</b>. Minnesota has voted Democratic in every presidential election since 1976, even during the Republican landslides of the 1980s. However, due to her poor showing among rural Midwestern voters, Hillary Clinton won the state by only 1.5 points in 2016, and Minnesota surprisingly voted more Republican than the national popular vote. The Republicans have noticed Democratic vulnerabilities in Minnesota, and both Mitt Romney in 2012 and Donald Trump in 2016 made last-minute attempts to swing the state. However, Minnesota has remained in th Democratic column. Joe Biden must win in Minnesota to have a realistic chance of getting to 270 electoral votes.</p>
 <p><b>Nevada (Leans Biden)</b>. Like Colorado and New Mexico, Nevada is one of the states out in the West that has grown more reliably Democratic due to demographic changes in the state, particularly a growing Latino population. Although Biden is expected to win in Nevada, it has historically been a close state with poor polling, so it may be possible for Trump to somehow pull an upset in Nevada if Democrats don't turn out their voters. This is particularly important to note, because the coronavirus pandemic is likely to hamper the Democratic turnout machine in Clark County. Like Arizona, Nevada is a state where most of the vote comes from one populous county, and it would be difficult for the models to detect a winner on election night if there's a delay in counting of mail-in ballots.</p>
 <p><b>New Hampshire (Likely Biden)</b>. New Hampshire is one of those small states that could make a difference if the election is close. If Al Gore carried New Hampshire in 2000, he would have won the election without carrying Florida, and Hillary Clinton only won New Hampshire by 0.4 points, or less than 3000 votes, in 2016. However, New Hampshire has not voted for a Republican at the presidential level since George W. Bush in 2000, and in a national environment favorable to Democrats, Biden is favored to win over Trump.</p>
 <p><b>North Carolina (Tossup)</b>. North Carolina is a state with a very large urban-rural divide, with the Triangle and Charlotte favoring Democrats, and most of the rest of the state favoring Republicans. In 2008, Barack Obama won North Carolina in a national environment favorable to Democrats during the Great Recession by winning over the Triangle and Charlotte and turning out African-American voters in the northeastern part of the state. More recently, Trump won by 3.7 points in 2016 by getting large margins among white rural voters, despite performing poorly in urban areas. However, 2008 is the only year since 1980 that a Democrat has won North Carolina. In order for Joe Biden to flip the state, he would have to make some inroads among rural voters in the state while also keeping up with Clinton and Obama's margins in urban areas.</p>
@@ -378,7 +395,7 @@
 <tr><td>2018-M</td><td style="text-align: center;">--</td><td style="text-align: center;">--</td></tr>
 <tr><td>2020-NN-M</td><td style="text-align: center;">--</td><td style="text-align: center;">--</td></tr>
 <tr><td>2020-NN-P</td><td style="text-align: center;">--</td><td style="text-align: center;">--</td></tr>
-<tr><td>2020-LINREG</td><td style="text-align: center;">Trump +11.7</td><td style="text-align: center;">--</td></tr>
+<tr><td>2020-LINREG</td><td style="text-align: center;">Trump +11.4</td><td style="text-align: center;">--</td></tr>
 </tbody>
 </table>
 Rating: <b>Likely Trump</b>
@@ -395,7 +412,7 @@ Rating: <b>Likely Trump</b>
 <tr><td>2018-M</td><td style="text-align: center;">--</td><td style="text-align: center;">--</td></tr>
 <tr><td>2020-NN-M</td><td style="text-align: center;">--</td><td style="text-align: center;">--</td></tr>
 <tr><td>2020-NN-P</td><td style="text-align: center;">--</td><td style="text-align: center;">--</td></tr>
-<tr><td>2020-LINREG</td><td style="text-align: center;">Trump +17.5</td><td style="text-align: center;">--</td></tr>
+<tr><td>2020-LINREG</td><td style="text-align: center;">Trump +17.3</td><td style="text-align: center;">--</td></tr>
 </tbody>
 </table>
 Rating: <b>Safe Trump</b>
@@ -412,7 +429,7 @@ Rating: <b>Safe Trump</b>
 <tr><td>2018-M</td><td style="text-align: center;">--</td><td style="text-align: center;">--</td></tr>
 <tr><td>2020-NN-M</td><td style="text-align: center;">--</td><td style="text-align: center;">--</td></tr>
 <tr><td>2020-NN-P</td><td style="text-align: center;">--</td><td style="text-align: center;">--</td></tr>
-<tr><td>2020-LINREG</td><td style="text-align: center;">Trump +16.6</td><td style="text-align: center;">--</td></tr>
+<tr><td>2020-LINREG</td><td style="text-align: center;">Trump +17.1</td><td style="text-align: center;">--</td></tr>
 </tbody>
 </table>
 Rating: <b>Safe Trump</b>
@@ -423,13 +440,13 @@ Rating: <b>Safe Trump</b>
 <table class="results-table">
 <tbody>
 <tr style="font-weight: bold; text-align: center;"><td style="text-align: left;">Model</td><td>Spread</td><td>Probability</td></tr>
-<tr><td>2018-OLS</td><td style="text-align: center;">--</td><td style="text-align: center;">Biden 82.8%</td></tr>
+<tr><td>2018-OLS</td><td style="text-align: center;">--</td><td style="text-align: center;">Biden 76.3%</td></tr>
 <tr><td>2018-LAD</td><td style="text-align: center;">--</td><td style="text-align: center;">--</td></tr>
-<tr><td>2012</td><td style="text-align: center;">Biden +4.4</td><td style="text-align: center;">--</td></tr>
+<tr><td>2012</td><td style="text-align: center;">Biden +2.8</td><td style="text-align: center;">--</td></tr>
 <tr><td>2018-M</td><td style="text-align: center;">Biden +4</td><td style="text-align: center;">--</td></tr>
-<tr><td>2020-NN-M</td><td style="text-align: center;">Biden +4.0</td><td style="text-align: center;">Biden 78.4%</td></tr>
-<tr><td>2020-NN-P</td><td style="text-align: center;">--</td><td style="text-align: center;">Biden 87.7%</td></tr>
-<tr><td>2020-LINREG</td><td style="text-align: center;">Trump +4.4</td><td style="text-align: center;">--</td></tr>
+<tr><td>2020-NN-M</td><td style="text-align: center;">Biden +2.9</td><td style="text-align: center;">Biden 72.9%</td></tr>
+<tr><td>2020-NN-P</td><td style="text-align: center;">--</td><td style="text-align: center;">Biden 84.9%</td></tr>
+<tr><td>2020-LINREG</td><td style="text-align: center;">Trump +4.1</td><td style="text-align: center;">--</td></tr>
 </tbody>
 </table>
 Rating: <b>Leans Biden</b>
@@ -457,11 +474,11 @@ Rating: <b>Safe Biden</b>
 <table class="results-table">
 <tbody>
 <tr style="font-weight: bold; text-align: center;"><td style="text-align: left;">Model</td><td>Spread</td><td>Probability</td></tr>
-<tr><td>2018-OLS</td><td style="text-align: center;">--</td><td style="text-align: center;">Biden 99.0%</td></tr>
+<tr><td>2018-OLS</td><td style="text-align: center;">--</td><td style="text-align: center;">Biden 95.8%</td></tr>
 <tr><td>2018-LAD</td><td style="text-align: center;">--</td><td style="text-align: center;">--</td></tr>
-<tr><td>2012</td><td style="text-align: center;">Biden +12.3</td><td style="text-align: center;">--</td></tr>
-<tr><td>2018-M</td><td style="text-align: center;">Biden +14</td><td style="text-align: center;">--</td></tr>
-<tr><td>2020-NN-M</td><td style="text-align: center;">Biden +12.2</td><td style="text-align: center;">Biden 94.9%</td></tr>
+<tr><td>2012</td><td style="text-align: center;">Biden +11.6</td><td style="text-align: center;">--</td></tr>
+<tr><td>2018-M</td><td style="text-align: center;">Biden +13</td><td style="text-align: center;">--</td></tr>
+<tr><td>2020-NN-M</td><td style="text-align: center;">Biden +11.8</td><td style="text-align: center;">Biden 95.0%</td></tr>
 <tr><td>2020-NN-P</td><td style="text-align: center;">--</td><td style="text-align: center;">Biden 99.6%</td></tr>
 <tr><td>2020-LINREG</td><td style="text-align: center;">Biden +9.3</td><td style="text-align: center;">--</td></tr>
 </tbody>
@@ -480,7 +497,7 @@ Rating: <b>Likely Biden</b>
 <tr><td>2018-M</td><td style="text-align: center;">--</td><td style="text-align: center;">--</td></tr>
 <tr><td>2020-NN-M</td><td style="text-align: center;">--</td><td style="text-align: center;">--</td></tr>
 <tr><td>2020-NN-P</td><td style="text-align: center;">--</td><td style="text-align: center;">--</td></tr>
-<tr><td>2020-LINREG</td><td style="text-align: center;">Biden +20.8</td><td style="text-align: center;">--</td></tr>
+<tr><td>2020-LINREG</td><td style="text-align: center;">Biden +20.1</td><td style="text-align: center;">--</td></tr>
 </tbody>
 </table>
 Rating: <b>Safe Biden</b>
@@ -497,7 +514,7 @@ Rating: <b>Safe Biden</b>
 <tr><td>2018-M</td><td style="text-align: center;">--</td><td style="text-align: center;">--</td></tr>
 <tr><td>2020-NN-M</td><td style="text-align: center;">--</td><td style="text-align: center;">--</td></tr>
 <tr><td>2020-NN-P</td><td style="text-align: center;">--</td><td style="text-align: center;">--</td></tr>
-<tr><td>2020-LINREG</td><td style="text-align: center;">Biden +90.9</td><td style="text-align: center;">--</td></tr>
+<tr><td>2020-LINREG</td><td style="text-align: center;">Biden +91.5</td><td style="text-align: center;">--</td></tr>
 </tbody>
 </table>
 Rating: <b>Safe Biden</b>
@@ -514,7 +531,7 @@ Rating: <b>Safe Biden</b>
 <tr><td>2018-M</td><td style="text-align: center;">--</td><td style="text-align: center;">--</td></tr>
 <tr><td>2020-NN-M</td><td style="text-align: center;">--</td><td style="text-align: center;">--</td></tr>
 <tr><td>2020-NN-P</td><td style="text-align: center;">--</td><td style="text-align: center;">--</td></tr>
-<tr><td>2020-LINREG</td><td style="text-align: center;">Biden +20.2</td><td style="text-align: center;">--</td></tr>
+<tr><td>2020-LINREG</td><td style="text-align: center;">Biden +19.5</td><td style="text-align: center;">--</td></tr>
 </tbody>
 </table>
 Rating: <b>Safe Biden</b>
@@ -525,13 +542,13 @@ Rating: <b>Safe Biden</b>
 <table class="results-table">
 <tbody>
 <tr style="font-weight: bold; text-align: center;"><td style="text-align: left;">Model</td><td>Spread</td><td>Probability</td></tr>
-<tr><td>2018-OLS</td><td style="text-align: center;">--</td><td style="text-align: center;">Biden 50.4%</td></tr>
+<tr><td>2018-OLS</td><td style="text-align: center;">--</td><td style="text-align: center;">Biden 73.5%</td></tr>
 <tr><td>2018-LAD</td><td style="text-align: center;">--</td><td style="text-align: center;">--</td></tr>
-<tr><td>2012</td><td style="text-align: center;">Biden +2.5</td><td style="text-align: center;">--</td></tr>
-<tr><td>2018-M</td><td style="text-align: center;">Biden +4</td><td style="text-align: center;">--</td></tr>
-<tr><td>2020-NN-M</td><td style="text-align: center;">Biden +2.0</td><td style="text-align: center;">Biden 66.9%</td></tr>
-<tr><td>2020-NN-P</td><td style="text-align: center;">--</td><td style="text-align: center;">Biden 81.0%</td></tr>
-<tr><td>2020-LINREG</td><td style="text-align: center;">Biden +6.8</td><td style="text-align: center;">--</td></tr>
+<tr><td>2012</td><td style="text-align: center;">Biden +1.8</td><td style="text-align: center;">--</td></tr>
+<tr><td>2018-M</td><td style="text-align: center;">Biden +2</td><td style="text-align: center;">--</td></tr>
+<tr><td>2020-NN-M</td><td style="text-align: center;">Biden +1.4</td><td style="text-align: center;">Biden 62.5%</td></tr>
+<tr><td>2020-NN-P</td><td style="text-align: center;">--</td><td style="text-align: center;">Biden 71.9%</td></tr>
+<tr><td>2020-LINREG</td><td style="text-align: center;">Biden +5.2</td><td style="text-align: center;">--</td></tr>
 </tbody>
 </table>
 Rating: <b>Tossup</b>
@@ -542,13 +559,13 @@ Rating: <b>Tossup</b>
 <table class="results-table">
 <tbody>
 <tr style="font-weight: bold; text-align: center;"><td style="text-align: left;">Model</td><td>Spread</td><td>Probability</td></tr>
-<tr><td>2018-OLS</td><td style="text-align: center;">--</td><td style="text-align: center;">Trump 78.1%</td></tr>
+<tr><td>2018-OLS</td><td style="text-align: center;">--</td><td style="text-align: center;">Trump 56.3%</td></tr>
 <tr><td>2018-LAD</td><td style="text-align: center;">--</td><td style="text-align: center;">--</td></tr>
-<tr><td>2012</td><td style="text-align: center;">Trump +0.2</td><td style="text-align: center;">--</td></tr>
-<tr><td>2018-M</td><td style="text-align: center;">Biden +2</td><td style="text-align: center;">--</td></tr>
-<tr><td>2020-NN-M</td><td style="text-align: center;">Biden +0.2</td><td style="text-align: center;">Biden 51.4%</td></tr>
-<tr><td>2020-NN-P</td><td style="text-align: center;">--</td><td style="text-align: center;">Biden 59.0%</td></tr>
-<tr><td>2020-LINREG</td><td style="text-align: center;">Trump +0.2</td><td style="text-align: center;">--</td></tr>
+<tr><td>2012</td><td style="text-align: center;">Trump +0.7</td><td style="text-align: center;">--</td></tr>
+<tr><td>2018-M</td><td style="text-align: center;">Tie</td><td style="text-align: center;">--</td></tr>
+<tr><td>2020-NN-M</td><td style="text-align: center;">Trump +0.4</td><td style="text-align: center;">Trump 54.0%</td></tr>
+<tr><td>2020-NN-P</td><td style="text-align: center;">--</td><td style="text-align: center;">Biden 54.3%</td></tr>
+<tr><td>2020-LINREG</td><td style="text-align: center;">Trump +0.3</td><td style="text-align: center;">--</td></tr>
 </tbody>
 </table>
 Rating: <b>Tossup</b>
@@ -565,7 +582,7 @@ Rating: <b>Tossup</b>
 <tr><td>2018-M</td><td style="text-align: center;">--</td><td style="text-align: center;">--</td></tr>
 <tr><td>2020-NN-M</td><td style="text-align: center;">--</td><td style="text-align: center;">--</td></tr>
 <tr><td>2020-NN-P</td><td style="text-align: center;">--</td><td style="text-align: center;">--</td></tr>
-<tr><td>2020-LINREG</td><td style="text-align: center;">Biden +36.0</td><td style="text-align: center;">--</td></tr>
+<tr><td>2020-LINREG</td><td style="text-align: center;">Biden +35.3</td><td style="text-align: center;">--</td></tr>
 </tbody>
 </table>
 Rating: <b>Safe Biden</b>
@@ -576,13 +593,13 @@ Rating: <b>Safe Biden</b>
 <table class="results-table">
 <tbody>
 <tr style="font-weight: bold; text-align: center;"><td style="text-align: left;">Model</td><td>Spread</td><td>Probability</td></tr>
-<tr><td>2018-OLS</td><td style="text-align: center;">--</td><td style="text-align: center;">Trump 72.3%</td></tr>
+<tr><td>2018-OLS</td><td style="text-align: center;">--</td><td style="text-align: center;">Biden 64.0%</td></tr>
 <tr><td>2018-LAD</td><td style="text-align: center;">--</td><td style="text-align: center;">--</td></tr>
-<tr><td>2012</td><td style="text-align: center;">Biden +0.7</td><td style="text-align: center;">--</td></tr>
-<tr><td>2018-M</td><td style="text-align: center;">Tie</td><td style="text-align: center;">--</td></tr>
-<tr><td>2020-NN-M</td><td style="text-align: center;">Biden +0.4</td><td style="text-align: center;">Biden 53.5%</td></tr>
-<tr><td>2020-NN-P</td><td style="text-align: center;">--</td><td style="text-align: center;">Biden 60.5%</td></tr>
-<tr><td>2020-LINREG</td><td style="text-align: center;">Biden +4.1</td><td style="text-align: center;">--</td></tr>
+<tr><td>2012</td><td style="text-align: center;">Biden +1.5</td><td style="text-align: center;">--</td></tr>
+<tr><td>2018-M</td><td style="text-align: center;">Biden +2</td><td style="text-align: center;">--</td></tr>
+<tr><td>2020-NN-M</td><td style="text-align: center;">Biden +1.0</td><td style="text-align: center;">Biden 58.7%</td></tr>
+<tr><td>2020-NN-P</td><td style="text-align: center;">--</td><td style="text-align: center;">Biden 61.5%</td></tr>
+<tr><td>2020-LINREG</td><td style="text-align: center;">Biden +3.1</td><td style="text-align: center;">--</td></tr>
 </tbody>
 </table>
 Rating: <b>Tossup</b>
@@ -599,7 +616,7 @@ Rating: <b>Tossup</b>
 <tr><td>2018-M</td><td style="text-align: center;">--</td><td style="text-align: center;">--</td></tr>
 <tr><td>2020-NN-M</td><td style="text-align: center;">--</td><td style="text-align: center;">--</td></tr>
 <tr><td>2020-NN-P</td><td style="text-align: center;">--</td><td style="text-align: center;">--</td></tr>
-<tr><td>2020-LINREG</td><td style="text-align: center;">Trump +25.6</td><td style="text-align: center;">--</td></tr>
+<tr><td>2020-LINREG</td><td style="text-align: center;">Trump +25.5</td><td style="text-align: center;">--</td></tr>
 </tbody>
 </table>
 Rating: <b>Safe Trump</b>
@@ -616,7 +633,7 @@ Rating: <b>Safe Trump</b>
 <tr><td>2018-M</td><td style="text-align: center;">--</td><td style="text-align: center;">--</td></tr>
 <tr><td>2020-NN-M</td><td style="text-align: center;">--</td><td style="text-align: center;">--</td></tr>
 <tr><td>2020-NN-P</td><td style="text-align: center;">--</td><td style="text-align: center;">--</td></tr>
-<tr><td>2020-LINREG</td><td style="text-align: center;">Biden +23.2</td><td style="text-align: center;">--</td></tr>
+<tr><td>2020-LINREG</td><td style="text-align: center;">Biden +23.1</td><td style="text-align: center;">--</td></tr>
 </tbody>
 </table>
 Rating: <b>Safe Biden</b>
@@ -633,7 +650,7 @@ Rating: <b>Safe Biden</b>
 <tr><td>2018-M</td><td style="text-align: center;">--</td><td style="text-align: center;">--</td></tr>
 <tr><td>2020-NN-M</td><td style="text-align: center;">--</td><td style="text-align: center;">--</td></tr>
 <tr><td>2020-NN-P</td><td style="text-align: center;">--</td><td style="text-align: center;">--</td></tr>
-<tr><td>2020-LINREG</td><td style="text-align: center;">Trump +8.1</td><td style="text-align: center;">--</td></tr>
+<tr><td>2020-LINREG</td><td style="text-align: center;">Trump +9.1</td><td style="text-align: center;">--</td></tr>
 </tbody>
 </table>
 Rating: <b>Safe Trump</b>
@@ -650,7 +667,7 @@ Rating: <b>Safe Trump</b>
 <tr><td>2018-M</td><td style="text-align: center;">--</td><td style="text-align: center;">--</td></tr>
 <tr><td>2020-NN-M</td><td style="text-align: center;">--</td><td style="text-align: center;">--</td></tr>
 <tr><td>2020-NN-P</td><td style="text-align: center;">--</td><td style="text-align: center;">--</td></tr>
-<tr><td>2020-LINREG</td><td style="text-align: center;">Trump +13.9</td><td style="text-align: center;">--</td></tr>
+<tr><td>2020-LINREG</td><td style="text-align: center;">Trump +14.5</td><td style="text-align: center;">--</td></tr>
 </tbody>
 </table>
 Rating: <b>Safe Trump</b>
@@ -667,7 +684,7 @@ Rating: <b>Safe Trump</b>
 <tr><td>2018-M</td><td style="text-align: center;">--</td><td style="text-align: center;">--</td></tr>
 <tr><td>2020-NN-M</td><td style="text-align: center;">--</td><td style="text-align: center;">--</td></tr>
 <tr><td>2020-NN-P</td><td style="text-align: center;">--</td><td style="text-align: center;">--</td></tr>
-<tr><td>2020-LINREG</td><td style="text-align: center;">Trump +17.1</td><td style="text-align: center;">--</td></tr>
+<tr><td>2020-LINREG</td><td style="text-align: center;">Trump +19.3</td><td style="text-align: center;">--</td></tr>
 </tbody>
 </table>
 Rating: <b>Safe Trump</b>
@@ -701,7 +718,7 @@ Rating: <b>Safe Trump</b>
 <tr><td>2018-M</td><td style="text-align: center;">--</td><td style="text-align: center;">--</td></tr>
 <tr><td>2020-NN-M</td><td style="text-align: center;">--</td><td style="text-align: center;">--</td></tr>
 <tr><td>2020-NN-P</td><td style="text-align: center;">--</td><td style="text-align: center;">--</td></tr>
-<tr><td>2020-LINREG</td><td style="text-align: center;">Biden +30.9</td><td style="text-align: center;">--</td></tr>
+<tr><td>2020-LINREG</td><td style="text-align: center;">Biden +30.2</td><td style="text-align: center;">--</td></tr>
 </tbody>
 </table>
 Rating: <b>Safe Biden</b>
@@ -729,16 +746,31 @@ Rating: <b>Safe Biden</b>
 <table class="results-table">
 <tbody>
 <tr style="font-weight: bold; text-align: center;"><td style="text-align: left;">Model</td><td>Spread</td><td>Probability</td></tr>
-<tr><td>2018-OLS</td><td style="text-align: center;">--</td><td style="text-align: center;">Biden 94.3%</td></tr>
+<tr><td>2018-OLS</td><td style="text-align: center;">--</td><td style="text-align: center;">Biden 97.2%</td></tr>
 <tr><td>2018-LAD</td><td style="text-align: center;">--</td><td style="text-align: center;">--</td></tr>
 <tr><td>2012</td><td style="text-align: center;">Biden +13.5</td><td style="text-align: center;">--</td></tr>
 <tr><td>2018-M</td><td style="text-align: center;">Biden +15</td><td style="text-align: center;">--</td></tr>
 <tr><td>2020-NN-M</td><td style="text-align: center;">Biden +12.7</td><td style="text-align: center;">Biden 95.8%</td></tr>
-<tr><td>2020-NN-P</td><td style="text-align: center;">--</td><td style="text-align: center;">Biden 99.6%</td></tr>
-<tr><td>2020-LINREG</td><td style="text-align: center;">Biden +13.6</td><td style="text-align: center;">--</td></tr>
+<tr><td>2020-NN-P</td><td style="text-align: center;">--</td><td style="text-align: center;">Biden 99.7%</td></tr>
+<tr><td>2020-LINREG</td><td style="text-align: center;">Biden +12.5</td><td style="text-align: center;">--</td></tr>
 </tbody>
 </table>
 Rating: <b>Likely Biden</b>
+<br><b style="font-size: 14;">Maine District 2</b><br>
+<table class="results-table">
+<tbody>
+<tr style="font-weight: bold; text-align: center;"><td style="text-align: left;">Model</td><td>Spread</td><td>Probability</td></tr>
+<tr><td>2018-OLS</td><td style="text-align: center;">--</td><td style="text-align: center;">Biden 67.7%</td></tr>
+<tr><td>2018-LAD</td><td style="text-align: center;">--</td><td style="text-align: center;">--</td></tr>
+<tr><td>2012</td><td style="text-align: center;">Biden +2.5</td><td style="text-align: center;">--</td></tr>
+<tr><td>2018-M</td><td style="text-align: center;">Biden +2</td><td style="text-align: center;">--</td></tr>
+<tr><td>2020-NN-M</td><td style="text-align: center;">Biden +0.6</td><td style="text-align: center;">Biden 55.1%</td></tr>
+<tr><td>2020-NN-P</td><td style="text-align: center;">--</td><td style="text-align: center;">Biden 81.2%</td></tr>
+<tr><td>2020-LINREG</td><td style="text-align: center;">Biden +4.7</td><td style="text-align: center;">--</td></tr>
+</tbody>
+</table>
+Rating: <b>Tossup</b>
+
 </div>
 
 <div id="MI-popup" class="popup">
@@ -746,16 +778,16 @@ Rating: <b>Likely Biden</b>
 <table class="results-table">
 <tbody>
 <tr style="font-weight: bold; text-align: center;"><td style="text-align: left;">Model</td><td>Spread</td><td>Probability</td></tr>
-<tr><td>2018-OLS</td><td style="text-align: center;">--</td><td style="text-align: center;">Biden 90.1%</td></tr>
+<tr><td>2018-OLS</td><td style="text-align: center;">--</td><td style="text-align: center;">Biden 96.4%</td></tr>
 <tr><td>2018-LAD</td><td style="text-align: center;">--</td><td style="text-align: center;">--</td></tr>
-<tr><td>2012</td><td style="text-align: center;">Biden +8.7</td><td style="text-align: center;">--</td></tr>
+<tr><td>2012</td><td style="text-align: center;">Biden +9.0</td><td style="text-align: center;">--</td></tr>
 <tr><td>2018-M</td><td style="text-align: center;">Biden +8</td><td style="text-align: center;">--</td></tr>
-<tr><td>2020-NN-M</td><td style="text-align: center;">Biden +8.0</td><td style="text-align: center;">Biden 90.4%</td></tr>
-<tr><td>2020-NN-P</td><td style="text-align: center;">--</td><td style="text-align: center;">Biden 96.0%</td></tr>
-<tr><td>2020-LINREG</td><td style="text-align: center;">Biden +11.0</td><td style="text-align: center;">--</td></tr>
+<tr><td>2020-NN-M</td><td style="text-align: center;">Biden +8.5</td><td style="text-align: center;">Biden 91.2%</td></tr>
+<tr><td>2020-NN-P</td><td style="text-align: center;">--</td><td style="text-align: center;">Biden 97.5%</td></tr>
+<tr><td>2020-LINREG</td><td style="text-align: center;">Biden +9.3</td><td style="text-align: center;">--</td></tr>
 </tbody>
 </table>
-Rating: <b>Leans Biden</b>
+Rating: <b>Likely Biden</b>
 </div>
 
 <div id="MN-popup" class="popup">
@@ -763,16 +795,16 @@ Rating: <b>Leans Biden</b>
 <table class="results-table">
 <tbody>
 <tr style="font-weight: bold; text-align: center;"><td style="text-align: left;">Model</td><td>Spread</td><td>Probability</td></tr>
-<tr><td>2018-OLS</td><td style="text-align: center;">--</td><td style="text-align: center;">Biden 79.8%</td></tr>
+<tr><td>2018-OLS</td><td style="text-align: center;">--</td><td style="text-align: center;">Biden 90.7%</td></tr>
 <tr><td>2018-LAD</td><td style="text-align: center;">--</td><td style="text-align: center;">--</td></tr>
-<tr><td>2012</td><td style="text-align: center;">Biden +8.7</td><td style="text-align: center;">--</td></tr>
-<tr><td>2018-M</td><td style="text-align: center;">Biden +8</td><td style="text-align: center;">--</td></tr>
-<tr><td>2020-NN-M</td><td style="text-align: center;">Biden +8.1</td><td style="text-align: center;">Biden 90.7%</td></tr>
-<tr><td>2020-NN-P</td><td style="text-align: center;">--</td><td style="text-align: center;">Biden 97.5%</td></tr>
-<tr><td>2020-LINREG</td><td style="text-align: center;">Biden +8.7</td><td style="text-align: center;">--</td></tr>
+<tr><td>2012</td><td style="text-align: center;">Biden +8.4</td><td style="text-align: center;">--</td></tr>
+<tr><td>2018-M</td><td style="text-align: center;">Biden +10</td><td style="text-align: center;">--</td></tr>
+<tr><td>2020-NN-M</td><td style="text-align: center;">Biden +8.1</td><td style="text-align: center;">Biden 90.8%</td></tr>
+<tr><td>2020-NN-P</td><td style="text-align: center;">--</td><td style="text-align: center;">Biden 97.7%</td></tr>
+<tr><td>2020-LINREG</td><td style="text-align: center;">Biden +7.7</td><td style="text-align: center;">--</td></tr>
 </tbody>
 </table>
-Rating: <b>Leans Biden</b>
+Rating: <b>Likely Biden</b>
 </div>
 
 <div id="MO-popup" class="popup">
@@ -786,7 +818,7 @@ Rating: <b>Leans Biden</b>
 <tr><td>2018-M</td><td style="text-align: center;">--</td><td style="text-align: center;">--</td></tr>
 <tr><td>2020-NN-M</td><td style="text-align: center;">--</td><td style="text-align: center;">--</td></tr>
 <tr><td>2020-NN-P</td><td style="text-align: center;">--</td><td style="text-align: center;">--</td></tr>
-<tr><td>2020-LINREG</td><td style="text-align: center;">Trump +4.9</td><td style="text-align: center;">--</td></tr>
+<tr><td>2020-LINREG</td><td style="text-align: center;">Trump +6.6</td><td style="text-align: center;">--</td></tr>
 </tbody>
 </table>
 Rating: <b>Likely Trump</b>
@@ -803,7 +835,7 @@ Rating: <b>Likely Trump</b>
 <tr><td>2018-M</td><td style="text-align: center;">--</td><td style="text-align: center;">--</td></tr>
 <tr><td>2020-NN-M</td><td style="text-align: center;">--</td><td style="text-align: center;">--</td></tr>
 <tr><td>2020-NN-P</td><td style="text-align: center;">--</td><td style="text-align: center;">--</td></tr>
-<tr><td>2020-LINREG</td><td style="text-align: center;">Trump +12.4</td><td style="text-align: center;">--</td></tr>
+<tr><td>2020-LINREG</td><td style="text-align: center;">Trump +13.5</td><td style="text-align: center;">--</td></tr>
 </tbody>
 </table>
 Rating: <b>Safe Trump</b>
@@ -820,10 +852,10 @@ Rating: <b>Safe Trump</b>
 <tr><td>2018-M</td><td style="text-align: center;">--</td><td style="text-align: center;">--</td></tr>
 <tr><td>2020-NN-M</td><td style="text-align: center;">--</td><td style="text-align: center;">--</td></tr>
 <tr><td>2020-NN-P</td><td style="text-align: center;">--</td><td style="text-align: center;">--</td></tr>
-<tr><td>2020-LINREG</td><td style="text-align: center;">Trump +10.9</td><td style="text-align: center;">--</td></tr>
+<tr><td>2020-LINREG</td><td style="text-align: center;">Trump +11.8</td><td style="text-align: center;">--</td></tr>
 </tbody>
 </table>
-Rating: <b>Safe Trump</b>
+Rating: <b>Likely Trump</b>
 </div>
 
 <div id="NC-popup" class="popup">
@@ -831,12 +863,12 @@ Rating: <b>Safe Trump</b>
 <table class="results-table">
 <tbody>
 <tr style="font-weight: bold; text-align: center;"><td style="text-align: left;">Model</td><td>Spread</td><td>Probability</td></tr>
-<tr><td>2018-OLS</td><td style="text-align: center;">--</td><td style="text-align: center;">Biden 56.5%</td></tr>
+<tr><td>2018-OLS</td><td style="text-align: center;">--</td><td style="text-align: center;">Biden 74.5%</td></tr>
 <tr><td>2018-LAD</td><td style="text-align: center;">--</td><td style="text-align: center;">--</td></tr>
-<tr><td>2012</td><td style="text-align: center;">Biden +2.6</td><td style="text-align: center;">--</td></tr>
-<tr><td>2018-M</td><td style="text-align: center;">Biden +3</td><td style="text-align: center;">--</td></tr>
+<tr><td>2012</td><td style="text-align: center;">Biden +2.4</td><td style="text-align: center;">--</td></tr>
+<tr><td>2018-M</td><td style="text-align: center;">Biden +1</td><td style="text-align: center;">--</td></tr>
 <tr><td>2020-NN-M</td><td style="text-align: center;">Biden +2.3</td><td style="text-align: center;">Biden 69.0%</td></tr>
-<tr><td>2020-NN-P</td><td style="text-align: center;">--</td><td style="text-align: center;">Biden 70.3%</td></tr>
+<tr><td>2020-NN-P</td><td style="text-align: center;">--</td><td style="text-align: center;">Biden 76.1%</td></tr>
 <tr><td>2020-LINREG</td><td style="text-align: center;">Biden +1.6</td><td style="text-align: center;">--</td></tr>
 </tbody>
 </table>
@@ -854,7 +886,7 @@ Rating: <b>Tossup</b>
 <tr><td>2018-M</td><td style="text-align: center;">--</td><td style="text-align: center;">--</td></tr>
 <tr><td>2020-NN-M</td><td style="text-align: center;">--</td><td style="text-align: center;">--</td></tr>
 <tr><td>2020-NN-P</td><td style="text-align: center;">--</td><td style="text-align: center;">--</td></tr>
-<tr><td>2020-LINREG</td><td style="text-align: center;">Trump +19.6</td><td style="text-align: center;">--</td></tr>
+<tr><td>2020-LINREG</td><td style="text-align: center;">Trump +20.8</td><td style="text-align: center;">--</td></tr>
 </tbody>
 </table>
 Rating: <b>Safe Trump</b>
@@ -871,10 +903,25 @@ Rating: <b>Safe Trump</b>
 <tr><td>2018-M</td><td style="text-align: center;">--</td><td style="text-align: center;">--</td></tr>
 <tr><td>2020-NN-M</td><td style="text-align: center;">--</td><td style="text-align: center;">--</td></tr>
 <tr><td>2020-NN-P</td><td style="text-align: center;">--</td><td style="text-align: center;">--</td></tr>
-<tr><td>2020-LINREG</td><td style="text-align: center;">Trump +17.2</td><td style="text-align: center;">--</td></tr>
+<tr><td>2020-LINREG</td><td style="text-align: center;">Trump +17.3</td><td style="text-align: center;">--</td></tr>
 </tbody>
 </table>
 Rating: <b>Safe Trump</b>
+<br><b style="font-size: 14;">Nebraska District 2</b><br>
+<table class="results-table">
+<tbody>
+<tr style="font-weight: bold; text-align: center;"><td style="text-align: left;">Model</td><td>Spread</td><td>Probability</td></tr>
+<tr><td>2018-OLS</td><td style="text-align: center;">--</td><td style="text-align: center;">Biden 90.8%</td></tr>
+<tr><td>2018-LAD</td><td style="text-align: center;">--</td><td style="text-align: center;">--</td></tr>
+<tr><td>2012</td><td style="text-align: center;">Biden +7.3</td><td style="text-align: center;">--</td></tr>
+<tr><td>2018-M</td><td style="text-align: center;">Biden +7</td><td style="text-align: center;">--</td></tr>
+<tr><td>2020-NN-M</td><td style="text-align: center;">Biden +7.3</td><td style="text-align: center;">Biden 87.9%</td></tr>
+<tr><td>2020-NN-P</td><td style="text-align: center;">--</td><td style="text-align: center;">Biden 96.4%</td></tr>
+<tr><td>2020-LINREG</td><td style="text-align: center;">Trump +1.6</td><td style="text-align: center;">--</td></tr>
+</tbody>
+</table>
+Rating: <b>Leans Biden</b>
+
 </div>
 
 <div id="NH-popup" class="popup">
@@ -882,13 +929,13 @@ Rating: <b>Safe Trump</b>
 <table class="results-table">
 <tbody>
 <tr style="font-weight: bold; text-align: center;"><td style="text-align: left;">Model</td><td>Spread</td><td>Probability</td></tr>
-<tr><td>2018-OLS</td><td style="text-align: center;">--</td><td style="text-align: center;">Biden 91.3%</td></tr>
+<tr><td>2018-OLS</td><td style="text-align: center;">--</td><td style="text-align: center;">Biden 95.6%</td></tr>
 <tr><td>2018-LAD</td><td style="text-align: center;">--</td><td style="text-align: center;">--</td></tr>
 <tr><td>2012</td><td style="text-align: center;">Biden +9.9</td><td style="text-align: center;">--</td></tr>
 <tr><td>2018-M</td><td style="text-align: center;">Biden +11</td><td style="text-align: center;">--</td></tr>
 <tr><td>2020-NN-M</td><td style="text-align: center;">Biden +9.0</td><td style="text-align: center;">Biden 91.4%</td></tr>
 <tr><td>2020-NN-P</td><td style="text-align: center;">--</td><td style="text-align: center;">Biden 99.2%</td></tr>
-<tr><td>2020-LINREG</td><td style="text-align: center;">Biden +7.3</td><td style="text-align: center;">--</td></tr>
+<tr><td>2020-LINREG</td><td style="text-align: center;">Biden +6.9</td><td style="text-align: center;">--</td></tr>
 </tbody>
 </table>
 Rating: <b>Likely Biden</b>
@@ -922,7 +969,7 @@ Rating: <b>Safe Biden</b>
 <tr><td>2018-M</td><td style="text-align: center;">--</td><td style="text-align: center;">--</td></tr>
 <tr><td>2020-NN-M</td><td style="text-align: center;">--</td><td style="text-align: center;">--</td></tr>
 <tr><td>2020-NN-P</td><td style="text-align: center;">--</td><td style="text-align: center;">--</td></tr>
-<tr><td>2020-LINREG</td><td style="text-align: center;">Biden +13.9</td><td style="text-align: center;">--</td></tr>
+<tr><td>2020-LINREG</td><td style="text-align: center;">Biden +13.6</td><td style="text-align: center;">--</td></tr>
 </tbody>
 </table>
 Rating: <b>Likely Biden</b>
@@ -933,13 +980,13 @@ Rating: <b>Likely Biden</b>
 <table class="results-table">
 <tbody>
 <tr style="font-weight: bold; text-align: center;"><td style="text-align: left;">Model</td><td>Spread</td><td>Probability</td></tr>
-<tr><td>2018-OLS</td><td style="text-align: center;">--</td><td style="text-align: center;">Biden 67.9%</td></tr>
+<tr><td>2018-OLS</td><td style="text-align: center;">--</td><td style="text-align: center;">Biden 84.4%</td></tr>
 <tr><td>2018-LAD</td><td style="text-align: center;">--</td><td style="text-align: center;">--</td></tr>
-<tr><td>2012</td><td style="text-align: center;">Biden +5.7</td><td style="text-align: center;">--</td></tr>
+<tr><td>2012</td><td style="text-align: center;">Biden +5.9</td><td style="text-align: center;">--</td></tr>
 <tr><td>2018-M</td><td style="text-align: center;">Biden +6</td><td style="text-align: center;">--</td></tr>
-<tr><td>2020-NN-M</td><td style="text-align: center;">Biden +4.7</td><td style="text-align: center;">Biden 81.0%</td></tr>
-<tr><td>2020-NN-P</td><td style="text-align: center;">--</td><td style="text-align: center;">Biden 92.9%</td></tr>
-<tr><td>2020-LINREG</td><td style="text-align: center;">Biden +9.5</td><td style="text-align: center;">--</td></tr>
+<tr><td>2020-NN-M</td><td style="text-align: center;">Biden +5.3</td><td style="text-align: center;">Biden 83.4%</td></tr>
+<tr><td>2020-NN-P</td><td style="text-align: center;">--</td><td style="text-align: center;">Biden 94.7%</td></tr>
+<tr><td>2020-LINREG</td><td style="text-align: center;">Biden +9.0</td><td style="text-align: center;">--</td></tr>
 </tbody>
 </table>
 Rating: <b>Leans Biden</b>
@@ -956,7 +1003,7 @@ Rating: <b>Leans Biden</b>
 <tr><td>2018-M</td><td style="text-align: center;">--</td><td style="text-align: center;">--</td></tr>
 <tr><td>2020-NN-M</td><td style="text-align: center;">--</td><td style="text-align: center;">--</td></tr>
 <tr><td>2020-NN-P</td><td style="text-align: center;">--</td><td style="text-align: center;">--</td></tr>
-<tr><td>2020-LINREG</td><td style="text-align: center;">Biden +27.8</td><td style="text-align: center;">--</td></tr>
+<tr><td>2020-LINREG</td><td style="text-align: center;">Biden +27.3</td><td style="text-align: center;">--</td></tr>
 </tbody>
 </table>
 Rating: <b>Safe Biden</b>
@@ -967,13 +1014,13 @@ Rating: <b>Safe Biden</b>
 <table class="results-table">
 <tbody>
 <tr style="font-weight: bold; text-align: center;"><td style="text-align: left;">Model</td><td>Spread</td><td>Probability</td></tr>
-<tr><td>2018-OLS</td><td style="text-align: center;">--</td><td style="text-align: center;">Trump 78.9%</td></tr>
+<tr><td>2018-OLS</td><td style="text-align: center;">--</td><td style="text-align: center;">Trump 59.2%</td></tr>
 <tr><td>2018-LAD</td><td style="text-align: center;">--</td><td style="text-align: center;">--</td></tr>
-<tr><td>2012</td><td style="text-align: center;">Trump +0.1</td><td style="text-align: center;">--</td></tr>
-<tr><td>2018-M</td><td style="text-align: center;">Tie</td><td style="text-align: center;">--</td></tr>
-<tr><td>2020-NN-M</td><td style="text-align: center;">Trump +0.1</td><td style="text-align: center;">Trump 50.9%</td></tr>
-<tr><td>2020-NN-P</td><td style="text-align: center;">--</td><td style="text-align: center;">Biden 60.7%</td></tr>
-<tr><td>2020-LINREG</td><td style="text-align: center;">Biden +1.7</td><td style="text-align: center;">--</td></tr>
+<tr><td>2012</td><td style="text-align: center;">Trump +0.7</td><td style="text-align: center;">--</td></tr>
+<tr><td>2018-M</td><td style="text-align: center;">Trump +1</td><td style="text-align: center;">--</td></tr>
+<tr><td>2020-NN-M</td><td style="text-align: center;">Trump +1.4</td><td style="text-align: center;">Trump 62.2%</td></tr>
+<tr><td>2020-NN-P</td><td style="text-align: center;">--</td><td style="text-align: center;">Trump 65.0%</td></tr>
+<tr><td>2020-LINREG</td><td style="text-align: center;">Biden +0.6</td><td style="text-align: center;">--</td></tr>
 </tbody>
 </table>
 Rating: <b>Tossup</b>
@@ -990,7 +1037,7 @@ Rating: <b>Tossup</b>
 <tr><td>2018-M</td><td style="text-align: center;">--</td><td style="text-align: center;">--</td></tr>
 <tr><td>2020-NN-M</td><td style="text-align: center;">--</td><td style="text-align: center;">--</td></tr>
 <tr><td>2020-NN-P</td><td style="text-align: center;">--</td><td style="text-align: center;">--</td></tr>
-<tr><td>2020-LINREG</td><td style="text-align: center;">Trump +29.2</td><td style="text-align: center;">--</td></tr>
+<tr><td>2020-LINREG</td><td style="text-align: center;">Trump +29.9</td><td style="text-align: center;">--</td></tr>
 </tbody>
 </table>
 Rating: <b>Safe Trump</b>
@@ -1007,7 +1054,7 @@ Rating: <b>Safe Trump</b>
 <tr><td>2018-M</td><td style="text-align: center;">--</td><td style="text-align: center;">--</td></tr>
 <tr><td>2020-NN-M</td><td style="text-align: center;">--</td><td style="text-align: center;">--</td></tr>
 <tr><td>2020-NN-P</td><td style="text-align: center;">--</td><td style="text-align: center;">--</td></tr>
-<tr><td>2020-LINREG</td><td style="text-align: center;">Biden +16.6</td><td style="text-align: center;">--</td></tr>
+<tr><td>2020-LINREG</td><td style="text-align: center;">Biden +16.5</td><td style="text-align: center;">--</td></tr>
 </tbody>
 </table>
 Rating: <b>Safe Biden</b>
@@ -1018,13 +1065,13 @@ Rating: <b>Safe Biden</b>
 <table class="results-table">
 <tbody>
 <tr style="font-weight: bold; text-align: center;"><td style="text-align: left;">Model</td><td>Spread</td><td>Probability</td></tr>
-<tr><td>2018-OLS</td><td style="text-align: center;">--</td><td style="text-align: center;">Biden 90.7%</td></tr>
+<tr><td>2018-OLS</td><td style="text-align: center;">--</td><td style="text-align: center;">Biden 93.2%</td></tr>
 <tr><td>2018-LAD</td><td style="text-align: center;">--</td><td style="text-align: center;">--</td></tr>
-<tr><td>2012</td><td style="text-align: center;">Biden +8.0</td><td style="text-align: center;">--</td></tr>
-<tr><td>2018-M</td><td style="text-align: center;">Biden +9</td><td style="text-align: center;">--</td></tr>
-<tr><td>2020-NN-M</td><td style="text-align: center;">Biden +7.1</td><td style="text-align: center;">Biden 88.2%</td></tr>
-<tr><td>2020-NN-P</td><td style="text-align: center;">--</td><td style="text-align: center;">Biden 97.3%</td></tr>
-<tr><td>2020-LINREG</td><td style="text-align: center;">Biden +5.4</td><td style="text-align: center;">--</td></tr>
+<tr><td>2012</td><td style="text-align: center;">Biden +6.2</td><td style="text-align: center;">--</td></tr>
+<tr><td>2018-M</td><td style="text-align: center;">Biden +5</td><td style="text-align: center;">--</td></tr>
+<tr><td>2020-NN-M</td><td style="text-align: center;">Biden +5.5</td><td style="text-align: center;">Biden 84.1%</td></tr>
+<tr><td>2020-NN-P</td><td style="text-align: center;">--</td><td style="text-align: center;">Biden 92.6%</td></tr>
+<tr><td>2020-LINREG</td><td style="text-align: center;">Biden +5.6</td><td style="text-align: center;">--</td></tr>
 </tbody>
 </table>
 Rating: <b>Leans Biden</b>
@@ -1041,7 +1088,7 @@ Rating: <b>Leans Biden</b>
 <tr><td>2018-M</td><td style="text-align: center;">--</td><td style="text-align: center;">--</td></tr>
 <tr><td>2020-NN-M</td><td style="text-align: center;">--</td><td style="text-align: center;">--</td></tr>
 <tr><td>2020-NN-P</td><td style="text-align: center;">--</td><td style="text-align: center;">--</td></tr>
-<tr><td>2020-LINREG</td><td style="text-align: center;">Biden +27.3</td><td style="text-align: center;">--</td></tr>
+<tr><td>2020-LINREG</td><td style="text-align: center;">Biden +25.9</td><td style="text-align: center;">--</td></tr>
 </tbody>
 </table>
 Rating: <b>Safe Biden</b>
@@ -1058,7 +1105,7 @@ Rating: <b>Safe Biden</b>
 <tr><td>2018-M</td><td style="text-align: center;">--</td><td style="text-align: center;">--</td></tr>
 <tr><td>2020-NN-M</td><td style="text-align: center;">--</td><td style="text-align: center;">--</td></tr>
 <tr><td>2020-NN-P</td><td style="text-align: center;">--</td><td style="text-align: center;">--</td></tr>
-<tr><td>2020-LINREG</td><td style="text-align: center;">Trump +8.8</td><td style="text-align: center;">--</td></tr>
+<tr><td>2020-LINREG</td><td style="text-align: center;">Trump +9.4</td><td style="text-align: center;">--</td></tr>
 </tbody>
 </table>
 Rating: <b>Likely Trump</b>
@@ -1075,7 +1122,7 @@ Rating: <b>Likely Trump</b>
 <tr><td>2018-M</td><td style="text-align: center;">--</td><td style="text-align: center;">--</td></tr>
 <tr><td>2020-NN-M</td><td style="text-align: center;">--</td><td style="text-align: center;">--</td></tr>
 <tr><td>2020-NN-P</td><td style="text-align: center;">--</td><td style="text-align: center;">--</td></tr>
-<tr><td>2020-LINREG</td><td style="text-align: center;">Trump +16.8</td><td style="text-align: center;">--</td></tr>
+<tr><td>2020-LINREG</td><td style="text-align: center;">Trump +18.1</td><td style="text-align: center;">--</td></tr>
 </tbody>
 </table>
 Rating: <b>Safe Trump</b>
@@ -1092,7 +1139,7 @@ Rating: <b>Safe Trump</b>
 <tr><td>2018-M</td><td style="text-align: center;">--</td><td style="text-align: center;">--</td></tr>
 <tr><td>2020-NN-M</td><td style="text-align: center;">--</td><td style="text-align: center;">--</td></tr>
 <tr><td>2020-NN-P</td><td style="text-align: center;">--</td><td style="text-align: center;">--</td></tr>
-<tr><td>2020-LINREG</td><td style="text-align: center;">Trump +13.4</td><td style="text-align: center;">--</td></tr>
+<tr><td>2020-LINREG</td><td style="text-align: center;">Trump +14.8</td><td style="text-align: center;">--</td></tr>
 </tbody>
 </table>
 Rating: <b>Safe Trump</b>
@@ -1103,13 +1150,13 @@ Rating: <b>Safe Trump</b>
 <table class="results-table">
 <tbody>
 <tr style="font-weight: bold; text-align: center;"><td style="text-align: left;">Model</td><td>Spread</td><td>Probability</td></tr>
-<tr><td>2018-OLS</td><td style="text-align: center;">--</td><td style="text-align: center;">Trump 99.5%</td></tr>
+<tr><td>2018-OLS</td><td style="text-align: center;">--</td><td style="text-align: center;">Trump 75.2%</td></tr>
 <tr><td>2018-LAD</td><td style="text-align: center;">--</td><td style="text-align: center;">--</td></tr>
-<tr><td>2012</td><td style="text-align: center;">Trump +4.1</td><td style="text-align: center;">--</td></tr>
-<tr><td>2018-M</td><td style="text-align: center;">Trump +4</td><td style="text-align: center;">--</td></tr>
-<tr><td>2020-NN-M</td><td style="text-align: center;">Trump +3.9</td><td style="text-align: center;">Trump 78.5%</td></tr>
-<tr><td>2020-NN-P</td><td style="text-align: center;">--</td><td style="text-align: center;">Trump 89.2%</td></tr>
-<tr><td>2020-LINREG</td><td style="text-align: center;">Trump +6.8</td><td style="text-align: center;">--</td></tr>
+<tr><td>2012</td><td style="text-align: center;">Trump +2.9</td><td style="text-align: center;">--</td></tr>
+<tr><td>2018-M</td><td style="text-align: center;">Trump +2</td><td style="text-align: center;">--</td></tr>
+<tr><td>2020-NN-M</td><td style="text-align: center;">Trump +2.7</td><td style="text-align: center;">Trump 71.8%</td></tr>
+<tr><td>2020-NN-P</td><td style="text-align: center;">--</td><td style="text-align: center;">Trump 69.3%</td></tr>
+<tr><td>2020-LINREG</td><td style="text-align: center;">Trump +7.4</td><td style="text-align: center;">--</td></tr>
 </tbody>
 </table>
 Rating: <b>Leans Trump</b>
@@ -1137,12 +1184,12 @@ Rating: <b>Safe Trump</b>
 <table class="results-table">
 <tbody>
 <tr style="font-weight: bold; text-align: center;"><td style="text-align: left;">Model</td><td>Spread</td><td>Probability</td></tr>
-<tr><td>2018-OLS</td><td style="text-align: center;">--</td><td style="text-align: center;">Biden 95.0%</td></tr>
+<tr><td>2018-OLS</td><td style="text-align: center;">--</td><td style="text-align: center;">Biden 98.6%</td></tr>
 <tr><td>2018-LAD</td><td style="text-align: center;">--</td><td style="text-align: center;">--</td></tr>
-<tr><td>2012</td><td style="text-align: center;">Biden +11.8</td><td style="text-align: center;">--</td></tr>
+<tr><td>2012</td><td style="text-align: center;">Biden +11.5</td><td style="text-align: center;">--</td></tr>
 <tr><td>2018-M</td><td style="text-align: center;">Biden +12</td><td style="text-align: center;">--</td></tr>
-<tr><td>2020-NN-M</td><td style="text-align: center;">Biden +11.2</td><td style="text-align: center;">Biden 94.0%</td></tr>
-<tr><td>2020-NN-P</td><td style="text-align: center;">--</td><td style="text-align: center;">Biden 99.7%</td></tr>
+<tr><td>2020-NN-M</td><td style="text-align: center;">Biden +10.6</td><td style="text-align: center;">Biden 93.6%</td></tr>
+<tr><td>2020-NN-P</td><td style="text-align: center;">--</td><td style="text-align: center;">Biden 99.5%</td></tr>
 <tr><td>2020-LINREG</td><td style="text-align: center;">Biden +9.0</td><td style="text-align: center;">--</td></tr>
 </tbody>
 </table>
@@ -1160,7 +1207,7 @@ Rating: <b>Likely Biden</b>
 <tr><td>2018-M</td><td style="text-align: center;">--</td><td style="text-align: center;">--</td></tr>
 <tr><td>2020-NN-M</td><td style="text-align: center;">--</td><td style="text-align: center;">--</td></tr>
 <tr><td>2020-NN-P</td><td style="text-align: center;">--</td><td style="text-align: center;">--</td></tr>
-<tr><td>2020-LINREG</td><td style="text-align: center;">Biden +32.5</td><td style="text-align: center;">--</td></tr>
+<tr><td>2020-LINREG</td><td style="text-align: center;">Biden +31.8</td><td style="text-align: center;">--</td></tr>
 </tbody>
 </table>
 Rating: <b>Safe Biden</b>
@@ -1177,7 +1224,7 @@ Rating: <b>Safe Biden</b>
 <tr><td>2018-M</td><td style="text-align: center;">--</td><td style="text-align: center;">--</td></tr>
 <tr><td>2020-NN-M</td><td style="text-align: center;">--</td><td style="text-align: center;">--</td></tr>
 <tr><td>2020-NN-P</td><td style="text-align: center;">--</td><td style="text-align: center;">--</td></tr>
-<tr><td>2020-LINREG</td><td style="text-align: center;">Biden +20.9</td><td style="text-align: center;">--</td></tr>
+<tr><td>2020-LINREG</td><td style="text-align: center;">Biden +21.0</td><td style="text-align: center;">--</td></tr>
 </tbody>
 </table>
 Rating: <b>Safe Biden</b>
@@ -1188,13 +1235,13 @@ Rating: <b>Safe Biden</b>
 <table class="results-table">
 <tbody>
 <tr style="font-weight: bold; text-align: center;"><td style="text-align: left;">Model</td><td>Spread</td><td>Probability</td></tr>
-<tr><td>2018-OLS</td><td style="text-align: center;">--</td><td style="text-align: center;">Biden 84.7%</td></tr>
+<tr><td>2018-OLS</td><td style="text-align: center;">--</td><td style="text-align: center;">Biden 88.0%</td></tr>
 <tr><td>2018-LAD</td><td style="text-align: center;">--</td><td style="text-align: center;">--</td></tr>
-<tr><td>2012</td><td style="text-align: center;">Biden +6.9</td><td style="text-align: center;">--</td></tr>
-<tr><td>2018-M</td><td style="text-align: center;">Biden +5</td><td style="text-align: center;">--</td></tr>
-<tr><td>2020-NN-M</td><td style="text-align: center;">Biden +6.2</td><td style="text-align: center;">Biden 86.3%</td></tr>
-<tr><td>2020-NN-P</td><td style="text-align: center;">--</td><td style="text-align: center;">Biden 95.2%</td></tr>
-<tr><td>2020-LINREG</td><td style="text-align: center;">Biden +8.9</td><td style="text-align: center;">--</td></tr>
+<tr><td>2012</td><td style="text-align: center;">Biden +6.5</td><td style="text-align: center;">--</td></tr>
+<tr><td>2018-M</td><td style="text-align: center;">Biden +7</td><td style="text-align: center;">--</td></tr>
+<tr><td>2020-NN-M</td><td style="text-align: center;">Biden +6.1</td><td style="text-align: center;">Biden 86.0%</td></tr>
+<tr><td>2020-NN-P</td><td style="text-align: center;">--</td><td style="text-align: center;">Biden 95.6%</td></tr>
+<tr><td>2020-LINREG</td><td style="text-align: center;">Biden +8.1</td><td style="text-align: center;">--</td></tr>
 </tbody>
 </table>
 Rating: <b>Leans Biden</b>
@@ -1211,7 +1258,7 @@ Rating: <b>Leans Biden</b>
 <tr><td>2018-M</td><td style="text-align: center;">--</td><td style="text-align: center;">--</td></tr>
 <tr><td>2020-NN-M</td><td style="text-align: center;">--</td><td style="text-align: center;">--</td></tr>
 <tr><td>2020-NN-P</td><td style="text-align: center;">--</td><td style="text-align: center;">--</td></tr>
-<tr><td>2020-LINREG</td><td style="text-align: center;">Trump +17.1</td><td style="text-align: center;">--</td></tr>
+<tr><td>2020-LINREG</td><td style="text-align: center;">Trump +19.3</td><td style="text-align: center;">--</td></tr>
 </tbody>
 </table>
 Rating: <b>Safe Trump</b>
@@ -1228,7 +1275,7 @@ Rating: <b>Safe Trump</b>
 <tr><td>2018-M</td><td style="text-align: center;">--</td><td style="text-align: center;">--</td></tr>
 <tr><td>2020-NN-M</td><td style="text-align: center;">--</td><td style="text-align: center;">--</td></tr>
 <tr><td>2020-NN-P</td><td style="text-align: center;">--</td><td style="text-align: center;">--</td></tr>
-<tr><td>2020-LINREG</td><td style="text-align: center;">Trump +37.2</td><td style="text-align: center;">--</td></tr>
+<tr><td>2020-LINREG</td><td style="text-align: center;">Trump +38.2</td><td style="text-align: center;">--</td></tr>
 </tbody>
 </table>
 Rating: <b>Safe Trump</b>
