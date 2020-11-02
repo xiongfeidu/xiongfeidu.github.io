@@ -119,8 +119,12 @@
   width: 960px;
 }
 
-td {
+.resultstable td {
   padding: 0px 5px 0px 5px;
+}
+
+.modelstable td {
+  padding: 0px 2px 0px 5px;
 }
 
 .results {
@@ -147,6 +151,12 @@ td {
   line-height: 150%;
 }
 
+.modelstable {
+  font-size: 12;
+  text-align: left;
+  padding: 0 10px 2px 0;
+}
+
 .name {
   font-size: 16;
 }
@@ -158,6 +168,10 @@ td {
 .pct {
   text-align: right;
   font-weight: bold;
+}
+
+.modelstable .pct {
+  padding: 0px 0px 0px 0px;
 }
 
 .cheaderrow {

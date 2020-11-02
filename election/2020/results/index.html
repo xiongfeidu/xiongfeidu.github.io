@@ -8,18 +8,19 @@
 <hr />
 <h3> | <a title="President" href="../president/">President</a> | <a title="Senate" href="../senate/">Senate</a> | <a title="Governors" href="../governors/">Governors</a> | Results | </h3>
 <p>I'll be running a live model of the final outcome in each statewide race based on partial vote counts as they come in. Doing so on this year's election could be very interesting given the nature of high volume mail-in voting during the pandemic. I am hoping that the models can give us better insight on election night as to what the reporting results say about the final outcome than the raw vote counts can, and I'm publishing the model results both via the interactive web app below and on my Twitch stream.</p>
-<p>The nature of this model is similar to the New York Times Election Needle. However, my approach is a bit different. Instead of having a single model with a confidence interval of the final outcome, I try the spaghetti model approach, similar to how a hurricane forecast works. Four models will be running, each using separate assumptions and looking at the data in a different way, and one is not fundamentally more correct than another. Each model has its strengths and weaknesses, but eventually, they should converge as more votes come in. When there are sufficient samples across different political geographies of a state and the models converge, then we can become more confident of the final outcome.</p>
+<p>What each model does is that it looks at the votes being reporting alongside the political geography in each state to provide its best estimate of the final outcome. The nature of this model is similar to the New York Times Election Needle. However, my approach is a bit different. Instead of having a single model with a confidence interval of the final outcome, I try the spaghetti model approach, similar to how a hurricane forecast works. Four models will be running, each using separate assumptions and looking at the data in a different way, and one is not fundamentally more correct than another. I strongly caution against reading too much into what the models are guessing until different parts of the state are reporting Each model has its strengths and weaknesses, but eventually, they should converge and stabilize as more votes come in. When there are sufficient samples across different political geographies of a state and the models converge, then we can become more confident of the final outcome.</p>
 <h2>Reported Results Interactive</h2>
+<!--
 <h3>2020 President Results (link coming soon)</h3>
 <h3>2020 Senate Results (link coming soon)</h3>
 <h3>2020 Governors Results (link coming soon)</h3>
 <h3>2020 House Results (link coming soon)</h3>
-<!--
+-->
 <h3><a title="2020 President" href="../../results/2020/president">2020 President Results</a></h3>
 <h3><a title="2020 Senate" href="../../results/2020/senate">2020 Senate Results</a></h3>
 <h3><a title="2020 Governors" href="../../results/2020/governors">2020 Governors Results</a></h3>
 <h3><a title="2020 House" href="../../results/2020/house">2020 House Results</a></h3>
--->
+
 <h2>Results Live Stream (November 3 at 6:00 PM EST)</h2>
 <p>Live forecasts of the 2020 final election outcome with commentary begins at 18:00 EST on November 3, 2020, on Twitch. Until then, enjoy the pre-election forecasts!</p>
 <html>
@@ -48,6 +49,9 @@
 <li><strong>Called</strong> means that a major news organization, such as the Associated Press, has <i>called</i> the election for a candidate.</li>
 </ul>
 <p>In the color scheme, light represents 'likely', moderate represents 'high probability', and dark represents 'called'.</p>
+<p>For reference, this map shows the pre-election ratings in the Electoral College.</p>
+<p><img src="2020president.png" alt="" width="640" height="480" border="3" /></p>
+<p>&nbsp;</p>
 <h2>Live Model Methodology</h2>
 <p>In terms of methodology, this model essentially guesses the final results of the election based on the geographic distribution of results that are reporting so far and the historical partisan lean of that region. Because it analyzes historical partisan lean, it only works on elections for which there are only two major candidates: one Democrat and one Republican. The model is fundamentally biased for historical results, so there's a reasonable margin of error of about a point or so. The margin of error is typically higher when:</p>
 <ul>
@@ -72,7 +76,15 @@
   <li>States in <i>yellow</i> are the states that we expect the models to be the most susceptible to inaccuracy. These states have substantial vote by mail and take days to weeks for votes to be received and counted, and the late-reporting votes tend to sway election results decisively.</li>
   <li>The state in <i>red</i> is Alaska, for which there is not a model.</li>
 </ul>
-<p><b>Addendum about mail-in voting</b>. Of course, this year is 2020, and the coronavirus pandemic is upending everything, even how accurate the models will be on election night. This year, a large number of absentee ballots are expected, and polls suggest that absentee ballots will tend to favor Democratic candidates. Hence, if a pattern arises where the in-person votes are reported first, and mail-in votes are reported later, then we could have a situation where the Republicans have an early lead in the results reported. This is not something that we can easily detect and correct for with a model, because we do not know which votes being reported are mail-in or in-person, and we do not have historical data to estimate how much of that mail-in vote will be Democratic. My models are good for breaking down the results geographically, but not for mail-in or early voting. Something similar happened in Arizona in 2018, when my models were unable to detect a surge in late mail-in ballots for the Democrats based on geography alone. However, given the urban-rural split we are seeing between Democrats and Republicans, we may be able to forecast the final outcome a bit better than the raw vote count, but it will not be foolproof. Hence, we are expecting that the models perform a bit more poorly than we would otherwise during a typical election cycle.</p>
+<p>This year, I'm running four models:</p>
+<ul>
+  <li>The type 1 models look at what votes have been counted.</li>
+  <li>The type 2 models look at what votes remain outstanding.</li>
+  <li>The type A models analyze what precincts are reporting.</li>
+  <li>The type B models analyze what votes are reporting.</li>
+</ul>
+<p>These models all walk a balance between variance and bias, according to the <a href="https://en.wikipedia.org/wiki/Bias-variance_tradeoff">bias-variance tradeoff</a> that governs statistical modeling. These models are designed so that when one model suffers from high variance but has low bias, another suffers from high bias but has low variance, so looking at all of the models together will mitigate the problems present in one model alone. Both type A and B models are guaranteed to converge once all votes have been counted, but type 1 and 2 models are not. In fact, only type 2 models are guaranteed to converge to the final outcome. Additionally, type 2 models are seeded with an initial bias to stabilize the model during initial reports. That bias is devised from pre-election polls with an underestimate the expected winner, which means that most battleground races are seeded with a bias of 0.</p>
+<p><b>Addendum about mail-in voting</b>. Of course, this year is 2020, and the coronavirus pandemic is upending everything, even how accurate the models will be on election night. This year, a large number of absentee ballots are expected, and polls suggest that absentee ballots will tend to favor Democratic candidates. Hence, if a pattern arises where the in-person votes are reported first, and mail-in votes are reported later, then we could have a situation where the Republicans have an early lead in the results reported. This is not something that we can easily detect and correct for with a model, because we do not know which votes being reported are mail-in or in-person, and we do not have historical data to estimate how much of that mail-in vote will be Democratic. My models are good for breaking down the results geographically, but not for mail-in or early voting. Something similar happened in Arizona in 2018, when my models were unable to detect a surge in late mail-in ballots for the Democrats based on geography alone. However, given the urban-rural split we are seeing between Democrats and Republicans, we may be able to forecast the final outcome a bit better than the raw vote count, but it will not be foolproof. Hence, I am expecting that the models perform a bit more poorly than we would otherwise during a typical election cycle. That being said, I do expect that the models will be a better indication of the final outcome than the raw vote count.</p>
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 <p>&nbsp;</p>

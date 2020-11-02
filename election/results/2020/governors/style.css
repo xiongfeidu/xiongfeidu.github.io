@@ -1,0 +1,224 @@
+.webpage {
+  background-color:lightgray;
+  font-family:verdana;
+}
+
+.bodytext {
+  word-wrap: break-word;
+  width: 640px;
+  margin-left: 100px;
+  margin-top: 0px;
+  font-size: 13;
+}
+
+.description {
+  position: relative;
+  width: 640px;
+  margin-top: 0px;
+  margin-bottom: 20px;
+}
+
+.dropdown {
+  position: absolute;
+  top: 80px;
+}
+
+.dropdown-election {
+  left: 908px;
+}
+
+.dropdown-year {
+  left: 820px;
+}
+
+.dropdown-elem-election {
+  min-width: 160px;
+}
+
+.dropdown-elem-year {
+  min-width: 80px;  
+}
+
+.dropbtn {
+  background-color: white;
+  color: black;
+  text-align: left;
+  border: 1px solid gray;
+  border-radius: 10px;
+  padding: 10px 10px;
+  line-height: 180%;
+  cursor: pointer;
+}
+
+.dropdown .dropbtn {
+  color: black;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: gray;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  z-index: 2;
+}
+
+.dropdown-content a {
+  background-color: white;
+  color: black;
+  text-align: left;
+  border: 0px solid gray;
+  border-radius: 0px;
+  padding: 10px 10px;
+  line-height: 100%;
+  float: none;
+  display: block;
+  text-decoration: none;
+}
+
+.dropdown-content a:hover {
+  background-color: gray;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.map {
+  visibility: hidden;
+  position: relative;
+}
+
+.button {
+  visibility: hidden;
+  background-color: white;
+  color: black;
+  text-align: left;
+  border: 1px solid gray;
+  border-radius: 10px;
+  padding: 10px 10px;
+  position: relative;
+  font-size: 12;
+  line-height: 180%;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: gray;
+}
+
+.margin-button {
+  left: 900px;
+  width: 180px;
+}
+
+.scoreboard-table {
+  font-size: 24;
+  text-align: left;
+  width: 960px;
+}
+
+.resultstable td {
+  padding: 0px 5px 0px 5px;
+}
+
+.modelstable td {
+  padding: 0px 2px 0px 5px;
+}
+
+.results {
+  visibility: hidden;
+  background-color: white;
+  color: black;
+  text-align: left;
+  border: 1px solid gray;
+  border-radius: 10px;
+  padding: 10px 10px;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  font-size: 12;
+  line-height: 180%;
+  display: inline-block;
+  z-index: 1;
+}
+
+.resultstable {
+  font-size: 12;
+  text-align: left;
+  padding: 0 10px 0 0;
+  line-height: 150%;
+}
+
+.modelstable {
+  font-size: 12;
+  text-align: left;
+  padding: 0 10px 2px 0;
+}
+
+.name {
+  font-size: 16;
+}
+
+.votes {
+  text-align: right;
+}
+
+.pct {
+  text-align: right;
+  font-weight: bold;
+}
+
+.modelstable .pct {
+  padding: 0px 0px 0px 0px;
+}
+
+.cheaderrow {
+  font-weight: bold;
+  color: gray;
+}
+
+.checkmark {
+  font-size: 36;
+}
+
+.delegates {
+  font-size: 16;
+}
+
+.no-height {
+  height: 0px;
+}
+
+.primary-candidate {
+  margin-bottom: 8px;
+}
+
+#footer {
+  position: relative;
+  width: 640px;
+}
+
+#spaceholder {
+  height: 600px;
+}
+
+#board {
+  visibility: visible;
+  color: black;
+  text-align: left;
+  border: 0px solid gray;
+  border-radius: 0px;
+  position: relative;
+  font-size: 24;
+  line-height: 180%;
+}
+
+#results-score {
+  margin-bottom: 10px;
+}
+
+#buttons {
+  display: inline-block;
+}
