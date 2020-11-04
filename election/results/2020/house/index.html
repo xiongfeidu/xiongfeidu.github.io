@@ -50,7 +50,7 @@
     <table class="scoreboard-table">
     <tbody>
     <tr>
-    <td style="color: #00f; font-weight: bold;"><span style="color: #00f; font-size: 36;">156</span> Democrats</td>
+    <td style="color: #00f; font-weight: bold;"><span style="color: #00f; font-size: 36;">165</span> Democrats</td>
     <td style="color: #f00; font-weight: bold; text-align: right;">Republicans <span style="color: #f00; font-size: 36">160</span></td>
     </tr>
     </tbody>
@@ -60,7 +60,7 @@
     <div style="width:960px; height:20px; background-color: #fff; position: relative;">&nbsp;</div>
   </div>
   <div class="no-height">
-    <div style="width:344px; height:20px; background-color: #00f; position: relative;">&nbsp;</div>
+    <div style="width:364px; height:20px; background-color: #00f; position: relative;">&nbsp;</div>
   </div>
   <div class="no-height">
     <div style="width:353px; height:20px; left: 607px; background-color: #f00; position: relative;">&nbsp;</div>
@@ -723,7 +723,7 @@
   function setColor(id, color) {
     document.getElementById(id).style.fill = color;    
   }
-  var stateColors = {"IN-01": "#0000FF", "IN-02": "#FF0000", "IN-03": "#FF0000", "IN-04": "#FF0000", "IN-05": "#FF9090", "IN-06": "#FF0000", "IN-07": "#0000FF", "IN-08": "#FF0000", "IN-09": "#FF0000", "KY-01": "#FF0000", "KY-02": "#FF0000", "KY-03": "#0000FF", "KY-04": "#FF0000", "KY-05": "#FF0000", "KY-06": "#FF0000", "FL-01": "#FF0000", "FL-02": "#FF0000", "FL-03": "#FF0000", "FL-04": "#FF0000", "FL-05": "#0000FF", "FL-06": "#FF0000", "FL-07": "#0000FF", "FL-08": "#FF0000", "FL-09": "#0000FF", "FL-10": "#0000FF", "FL-11": "#FF0000", "FL-12": "#FF0000", "FL-13": "#0000FF", "FL-14": "#0000FF", "FL-15": "#FF0000", "FL-16": "#FF0000", "FL-17": "#FF0000", "FL-18": "#FF0000", "FL-19": "#FF0000", "FL-20": "#0000FF", "FL-21": "#0000FF", "FL-22": "#0000FF", "FL-23": "#0000FF", "FL-24": "#0000FF", "FL-25": "#FF0000", "FL-26": "#FF0000", "FL-27": "#FF0000", "GA-01": "#FF0000", "GA-02": "#0000FF", "GA-03": "#FF0000", "GA-04": "#0000FF", "GA-05": "#0000FF", "GA-06": "#9090FF", "GA-07": "#9090FF", "GA-08": "#FF0000", "GA-09": "#FF0000", "GA-10": "#FF0000", "GA-11": "#FF0000", "GA-12": "#FF0000", "GA-13": "#0000FF", "GA-14": "#FF0000", "NH-01": "#0000FF", "NH-02": "#0000FF", "SC-01": "#FF9090", "SC-02": "#FF0000", "SC-03": "#FF0000", "SC-04": "#FF0000", "SC-05": "#FF0000", "SC-06": "#0000FF", "SC-07": "#FF0000", "VA-01": "#FF0000", "VA-02": "#9090FF", "VA-03": "#0000FF", "VA-04": "#9090FF", "VA-05": "#FF9090", "VA-06": "#FF0000", "VA-07": "#FF9090", "VA-08": "#0000FF", "VA-09": "#FF0000", "VA-10": "#0000FF", "VA-11": "#0000FF", "VT-AL": "#0000FF", "NC-01": "#0000FF", "NC-02": "#0000FF", "NC-03": "#FF0000", "NC-04": "#0000FF", "NC-05": "#FF0000", "NC-06": "#0000FF", "NC-07": "#FF0000", "NC-08": "#FF0000", "NC-09": "#FF0000", "NC-10": "#FF0000", "NC-11": "#FF0000", "NC-12": "#0000FF", "NC-13": "#FF0000", "OH-01": "#FF0000", "OH-02": "#FF0000", "OH-03": "#0000FF", "OH-04": "#FF0000", "OH-05": "#FF0000", "OH-06": "#FF0000", "OH-07": "#FF0000", "OH-08": "#FF0000", "OH-09": "#0000FF", "OH-10": "#FF0000", "OH-11": "#0000FF", "OH-12": "#FF0000", "OH-13": "#0000FF", "OH-14": "#FF0000", "OH-15": "#FF0000", "OH-16": "#FF0000", "WV-01": "#FF0000", "WV-02": "#FF0000", "WV-03": "#FF0000", "AL-01": "#FF0000", "AL-02": "#FF0000", "AL-03": "#FF0000", "AL-04": "#FF0000", "AL-05": "#FF0000", "AL-06": "#FF0000", "AL-07": "#0000FF", "CT-01": "#0000FF", "CT-02": "#9090FF", "CT-03": "#9090FF", "CT-04": "#0000FF", "CT-05": "#9090FF", "DE-AL": "#0000FF", "IL-01": "#0000FF", "IL-02": "#0000FF", "IL-03": "#0000FF", "IL-04": "#0000FF", "IL-05": "#0000FF", "IL-06": "#9090FF", "IL-07": "#0000FF", "IL-08": "#0000FF", "IL-09": "#0000FF", "IL-10": "#9090FF", "IL-11": "#0000FF", "IL-12": "#FF0000", "IL-13": "#FF0000", "IL-14": "#FF9090", "IL-15": "#FF0000", "IL-16": "#FF0000", "IL-17": "#FF9090", "IL-18": "#FF0000", "KS-01": "#FF0000", "KS-02": "#FF0000", "KS-03": "#0000FF", "KS-04": "#FF0000", "MA-01": "#0000FF", "MA-02": "#0000FF", "MA-03": "#0000FF", "MA-04": "#0000FF", "MA-05": "#0000FF", "MA-06": "#0000FF", "MA-07": "#0000FF", "MA-08": "#0000FF", "MA-09": "#0000FF", "MD-01": "#FF0000", "MD-02": "#0000FF", "MD-03": "#0000FF", "MD-04": "#0000FF", "MD-05": "#0000FF", "MD-06": "#0000FF", "MD-07": "#0000FF", "MD-08": "#0000FF", "ME-01": "#9090FF", "ME-02": "#9090FF", "MI-01": "#FF9090", "MI-02": "#FF9090", "MI-03": "#FF9090", "MI-04": "#FF9090", "MI-05": "#9090FF", "MI-06": "#FF9090", "MI-07": "#FF9090", "MI-08": "#FF9090", "MI-09": "#9090FF", "MI-10": "#FF9090", "MI-11": "#FF9090", "MI-12": "#9090FF", "MI-13": "#9090FF", "MI-14": "#9090FF", "MO-01": "#0000FF", "MO-02": "#FF0000", "MO-03": "#FF0000", "MO-04": "#FF0000", "MO-05": "#0000FF", "MO-06": "#FF0000", "MO-07": "#FF0000", "MO-08": "#FF0000", "MS-01": "#FF0000", "MS-02": "#0000FF", "MS-03": "#FF0000", "MS-04": "#FF0000", "ND-AL": "#FF0000", "NJ-01": "#0000FF", "NJ-02": "#FF9090", "NJ-03": "#0000FF", "NJ-04": "#FF0000", "NJ-05": "#0000FF", "NJ-06": "#0000FF", "NJ-07": "#0000FF", "NJ-08": "#0000FF", "NJ-09": "#0000FF", "NJ-10": "#0000FF", "NJ-11": "#0000FF", "NJ-12": "#0000FF", "OK-01": "#FF0000", "OK-02": "#FF0000", "OK-03": "#FF0000", "OK-04": "#FF0000", "OK-05": "#FF9090", "PA-01": "#FF9090", "PA-02": "#0000FF", "PA-03": "#0000FF", "PA-04": "#0000FF", "PA-05": "#0000FF", "PA-06": "#9090FF", "PA-07": "#FF9090", "PA-08": "#FF9090", "PA-09": "#FF0000", "PA-10": "#FF9090", "PA-11": "#FF0000", "PA-12": "#FF0000", "PA-13": "#FF0000", "PA-14": "#FF0000", "PA-15": "#FF0000", "PA-16": "#FF9090", "PA-17": "#FF9090", "PA-18": "#0000FF", "RI-01": "#0000FF", "RI-02": "#0000FF", "TN-01": "#FF0000", "TN-02": "#FF0000", "TN-03": "#FF0000", "TN-04": "#FF0000", "TN-05": "#0000FF", "TN-06": "#FF0000", "TN-07": "#FF0000", "TN-08": "#FF0000", "TN-09": "#0000FF", "TX-01": "#FF0000", "TX-02": "#FF0000", "TX-03": "#FF0000", "TX-04": "#FF0000", "TX-05": "#FF0000", "TX-06": "#FF9090", "TX-07": "#0000FF", "TX-08": "#FF0000", "TX-09": "#0000FF", "TX-10": "#FF0000", "TX-11": "#FF0000", "TX-12": "#FF0000", "TX-13": "#FF0000", "TX-14": "#FF0000", "TX-15": "#0000FF", "TX-16": "#0000FF", "TX-17": "#FF0000", "TX-18": "#0000FF", "TX-19": "#FF0000", "TX-20": "#0000FF", "TX-21": "#FF9090", "TX-22": "#FF0000", "TX-23": "#FF9090", "TX-24": "#FF9090", "TX-25": "#FF0000", "TX-26": "#FF0000", "TX-27": "#FF0000", "TX-28": "#0000FF", "TX-29": "#0000FF", "TX-30": "#0000FF", "TX-31": "#FF0000", "TX-32": "#0000FF", "TX-33": "#0000FF", "TX-34": "#0000FF", "TX-35": "#0000FF", "TX-36": "#FF0000", "AR-01": "#FF0000", "AR-02": "#FF0000", "AR-03": "#FF0000", "AR-04": "#FF0000", "AZ-01": "#9090FF", "AZ-02": "#0000FF", "AZ-03": "#0000FF", "AZ-04": "#FF0000", "AZ-05": "#FF0000", "AZ-06": "#9090FF", "AZ-07": "#0000FF", "AZ-08": "#FF0000", "AZ-09": "#0000FF", "CO-01": "#0000FF", "CO-02": "#0000FF", "CO-03": "#FF9090", "CO-04": "#FF0000", "CO-05": "#FF0000", "CO-06": "#0000FF", "CO-07": "#0000FF", "LA-01": "#FF0000", "LA-02": "#0000FF", "LA-03": "#FF0000", "LA-04": "#FF0000", "LA-05": "#FF9090", "LA-06": "#FF0000", "MN-01": "#FF9090", "MN-02": "#FF9090", "MN-03": "#0000FF", "MN-04": "#0000FF", "MN-05": "#0000FF", "MN-06": "#FF0000", "MN-07": "#FF9090", "MN-08": "#FF0000", "NE-01": "#FF0000", "NE-02": "#FF9090", "NE-03": "#FF0000", "NM-01": "#0000FF", "NM-02": "#FF9090", "NM-03": "#0000FF", "NY-01": "#FF9090", "NY-02": "#FF9090", "NY-03": "#FF9090", "NY-04": "#9090FF", "NY-05": "#0000FF", "NY-06": "#0000FF", "NY-07": "#0000FF", "NY-08": "#0000FF", "NY-09": "#0000FF", "NY-10": "#0000FF", "NY-11": "#FF9090", "NY-12": "#0000FF", "NY-13": "#0000FF", "NY-14": "#0000FF", "NY-15": "#0000FF", "NY-16": "#0000FF", "NY-17": "#9090FF", "NY-18": "#9090FF", "NY-19": "#9090FF", "NY-20": "#0000FF", "NY-21": "#FF0000", "NY-22": "#FF9090", "NY-23": "#FF0000", "NY-24": "#FF9090", "NY-25": "#9090FF", "NY-26": "#0000FF", "NY-27": "#FF9090", "SD-AL": "#FF0000", "WI-01": "#FF0000", "WI-02": "#0000FF", "WI-03": "#9090FF", "WI-04": "#0000FF", "WI-05": "#FF0000", "WI-06": "#FF0000", "WI-07": "#FF0000", "WI-08": "#FF0000", "WY-AL": "#FF0000", "IA-01": "#FF9090", "IA-02": "#FF9090", "IA-03": "#9090FF", "IA-04": "#FF0000", "ID-01": "#FF0000", "ID-02": "#FF0000", "MT-AL": "#FF9090", "NV-01": "#0000FF", "NV-02": "#FF9090", "NV-03": "#FFFFFF", "NV-04": "#FF9090", "UT-01": "#FF0000", "UT-02": "#FF0000", "UT-03": "#FF9090", "UT-04": "#9090FF", "CA-01": "#FF9090", "CA-02": "#0000FF", "CA-03": "#0000FF", "CA-04": "#FF9090", "CA-05": "#0000FF", "CA-06": "#9090FF", "CA-07": "#9090FF", "CA-08": "#9090FF", "CA-09": "#9090FF", "CA-10": "#9090FF", "CA-11": "#0000FF", "CA-12": "#0000FF", "CA-13": "#0000FF", "CA-14": "#0000FF", "CA-15": "#9090FF", "CA-16": "#9090FF", "CA-17": "#9090FF", "CA-18": "#9090FF", "CA-19": "#0000FF", "CA-20": "#0000FF", "CA-21": "#FF9090", "CA-22": "#FF9090", "CA-23": "#FF9090", "CA-24": "#0000FF", "CA-25": "#9090FF", "CA-26": "#0000FF", "CA-27": "#9090FF", "CA-28": "#9090FF", "CA-29": "#9090FF", "CA-30": "#9090FF", "CA-31": "#9090FF", "CA-32": "#9090FF", "CA-33": "#9090FF", "CA-34": "#9090FF", "CA-35": "#9090FF", "CA-36": "#9090FF", "CA-37": "#9090FF", "CA-38": "#9090FF", "CA-39": "#9090FF", "CA-40": "#0000FF", "CA-41": "#9090FF", "CA-42": "#FF9090", "CA-43": "#0000FF", "CA-44": "#9090FF", "CA-45": "#0000FF", "CA-46": "#0000FF", "CA-47": "#9090FF", "CA-48": "#9090FF", "CA-49": "#9090FF", "CA-50": "#9090FF", "CA-51": "#0000FF", "CA-52": "#9090FF", "CA-53": "#0000FF", "OR-01": "#0000FF", "OR-02": "#FF0000", "OR-03": "#0000FF", "OR-04": "#0000FF", "OR-05": "#0000FF", "WA-01": "#0000FF", "WA-02": "#0000FF", "WA-03": "#FF9090", "WA-04": "#FF9090", "WA-05": "#FF9090", "WA-06": "#0000FF", "WA-07": "#0000FF", "WA-08": "#9090FF", "WA-09": "#0000FF", "WA-10": "#9090FF", "HI-01": "#FFFFFF", "HI-02": "#FFFFFF", "AK-AL": "#FFFFFF"};
+  var stateColors = {"IN-01": "#0000FF", "IN-02": "#FF0000", "IN-03": "#FF0000", "IN-04": "#FF0000", "IN-05": "#FF9090", "IN-06": "#FF0000", "IN-07": "#0000FF", "IN-08": "#FF0000", "IN-09": "#FF0000", "KY-01": "#FF0000", "KY-02": "#FF0000", "KY-03": "#0000FF", "KY-04": "#FF0000", "KY-05": "#FF0000", "KY-06": "#FF0000", "FL-01": "#FF0000", "FL-02": "#FF0000", "FL-03": "#FF0000", "FL-04": "#FF0000", "FL-05": "#0000FF", "FL-06": "#FF0000", "FL-07": "#0000FF", "FL-08": "#FF0000", "FL-09": "#0000FF", "FL-10": "#0000FF", "FL-11": "#FF0000", "FL-12": "#FF0000", "FL-13": "#0000FF", "FL-14": "#0000FF", "FL-15": "#FF0000", "FL-16": "#FF0000", "FL-17": "#FF0000", "FL-18": "#FF0000", "FL-19": "#FF0000", "FL-20": "#0000FF", "FL-21": "#0000FF", "FL-22": "#0000FF", "FL-23": "#0000FF", "FL-24": "#0000FF", "FL-25": "#FF0000", "FL-26": "#FF0000", "FL-27": "#FF0000", "GA-01": "#FF0000", "GA-02": "#0000FF", "GA-03": "#FF0000", "GA-04": "#0000FF", "GA-05": "#0000FF", "GA-06": "#9090FF", "GA-07": "#9090FF", "GA-08": "#FF0000", "GA-09": "#FF0000", "GA-10": "#FF0000", "GA-11": "#FF0000", "GA-12": "#FF0000", "GA-13": "#0000FF", "GA-14": "#FF0000", "NH-01": "#0000FF", "NH-02": "#0000FF", "SC-01": "#FF9090", "SC-02": "#FF0000", "SC-03": "#FF0000", "SC-04": "#FF0000", "SC-05": "#FF0000", "SC-06": "#0000FF", "SC-07": "#FF0000", "VA-01": "#FF0000", "VA-02": "#9090FF", "VA-03": "#0000FF", "VA-04": "#9090FF", "VA-05": "#FF9090", "VA-06": "#FF0000", "VA-07": "#FF9090", "VA-08": "#0000FF", "VA-09": "#FF0000", "VA-10": "#0000FF", "VA-11": "#0000FF", "VT-AL": "#0000FF", "NC-01": "#0000FF", "NC-02": "#0000FF", "NC-03": "#FF0000", "NC-04": "#0000FF", "NC-05": "#FF0000", "NC-06": "#0000FF", "NC-07": "#FF0000", "NC-08": "#FF0000", "NC-09": "#FF0000", "NC-10": "#FF0000", "NC-11": "#FF0000", "NC-12": "#0000FF", "NC-13": "#FF0000", "OH-01": "#FF0000", "OH-02": "#FF0000", "OH-03": "#0000FF", "OH-04": "#FF0000", "OH-05": "#FF0000", "OH-06": "#FF0000", "OH-07": "#FF0000", "OH-08": "#FF0000", "OH-09": "#0000FF", "OH-10": "#FF0000", "OH-11": "#0000FF", "OH-12": "#FF0000", "OH-13": "#0000FF", "OH-14": "#FF0000", "OH-15": "#FF0000", "OH-16": "#FF0000", "WV-01": "#FF0000", "WV-02": "#FF0000", "WV-03": "#FF0000", "AL-01": "#FF0000", "AL-02": "#FF0000", "AL-03": "#FF0000", "AL-04": "#FF0000", "AL-05": "#FF0000", "AL-06": "#FF0000", "AL-07": "#0000FF", "CT-01": "#0000FF", "CT-02": "#9090FF", "CT-03": "#9090FF", "CT-04": "#0000FF", "CT-05": "#9090FF", "DE-AL": "#0000FF", "IL-01": "#0000FF", "IL-02": "#0000FF", "IL-03": "#0000FF", "IL-04": "#0000FF", "IL-05": "#0000FF", "IL-06": "#9090FF", "IL-07": "#0000FF", "IL-08": "#0000FF", "IL-09": "#0000FF", "IL-10": "#9090FF", "IL-11": "#0000FF", "IL-12": "#FF0000", "IL-13": "#FF0000", "IL-14": "#FF9090", "IL-15": "#FF0000", "IL-16": "#FF0000", "IL-17": "#FF9090", "IL-18": "#FF0000", "KS-01": "#FF0000", "KS-02": "#FF0000", "KS-03": "#0000FF", "KS-04": "#FF0000", "MA-01": "#0000FF", "MA-02": "#0000FF", "MA-03": "#0000FF", "MA-04": "#0000FF", "MA-05": "#0000FF", "MA-06": "#0000FF", "MA-07": "#0000FF", "MA-08": "#0000FF", "MA-09": "#0000FF", "MD-01": "#FF0000", "MD-02": "#0000FF", "MD-03": "#0000FF", "MD-04": "#0000FF", "MD-05": "#0000FF", "MD-06": "#0000FF", "MD-07": "#0000FF", "MD-08": "#0000FF", "ME-01": "#0000FF", "ME-02": "#9090FF", "MI-01": "#FF9090", "MI-02": "#FF9090", "MI-03": "#FF9090", "MI-04": "#FF9090", "MI-05": "#9090FF", "MI-06": "#FF9090", "MI-07": "#FF9090", "MI-08": "#FF9090", "MI-09": "#9090FF", "MI-10": "#FF9090", "MI-11": "#FF9090", "MI-12": "#9090FF", "MI-13": "#9090FF", "MI-14": "#9090FF", "MO-01": "#0000FF", "MO-02": "#FF0000", "MO-03": "#FF0000", "MO-04": "#FF0000", "MO-05": "#0000FF", "MO-06": "#FF0000", "MO-07": "#FF0000", "MO-08": "#FF0000", "MS-01": "#FF0000", "MS-02": "#0000FF", "MS-03": "#FF0000", "MS-04": "#FF0000", "ND-AL": "#FF0000", "NJ-01": "#0000FF", "NJ-02": "#FF9090", "NJ-03": "#0000FF", "NJ-04": "#FF0000", "NJ-05": "#0000FF", "NJ-06": "#0000FF", "NJ-07": "#0000FF", "NJ-08": "#0000FF", "NJ-09": "#0000FF", "NJ-10": "#0000FF", "NJ-11": "#0000FF", "NJ-12": "#0000FF", "OK-01": "#FF0000", "OK-02": "#FF0000", "OK-03": "#FF0000", "OK-04": "#FF0000", "OK-05": "#FF9090", "PA-01": "#FF9090", "PA-02": "#0000FF", "PA-03": "#0000FF", "PA-04": "#0000FF", "PA-05": "#0000FF", "PA-06": "#9090FF", "PA-07": "#FF9090", "PA-08": "#FF9090", "PA-09": "#FF0000", "PA-10": "#FF9090", "PA-11": "#FF0000", "PA-12": "#FF0000", "PA-13": "#FF0000", "PA-14": "#FF0000", "PA-15": "#FF0000", "PA-16": "#FF9090", "PA-17": "#FF9090", "PA-18": "#0000FF", "RI-01": "#0000FF", "RI-02": "#0000FF", "TN-01": "#FF0000", "TN-02": "#FF0000", "TN-03": "#FF0000", "TN-04": "#FF0000", "TN-05": "#0000FF", "TN-06": "#FF0000", "TN-07": "#FF0000", "TN-08": "#FF0000", "TN-09": "#0000FF", "TX-01": "#FF0000", "TX-02": "#FF0000", "TX-03": "#FF0000", "TX-04": "#FF0000", "TX-05": "#FF0000", "TX-06": "#FF9090", "TX-07": "#0000FF", "TX-08": "#FF0000", "TX-09": "#0000FF", "TX-10": "#FF0000", "TX-11": "#FF0000", "TX-12": "#FF0000", "TX-13": "#FF0000", "TX-14": "#FF0000", "TX-15": "#0000FF", "TX-16": "#0000FF", "TX-17": "#FF0000", "TX-18": "#0000FF", "TX-19": "#FF0000", "TX-20": "#0000FF", "TX-21": "#FF9090", "TX-22": "#FF0000", "TX-23": "#FF9090", "TX-24": "#FF9090", "TX-25": "#FF0000", "TX-26": "#FF0000", "TX-27": "#FF0000", "TX-28": "#0000FF", "TX-29": "#0000FF", "TX-30": "#0000FF", "TX-31": "#FF0000", "TX-32": "#0000FF", "TX-33": "#0000FF", "TX-34": "#0000FF", "TX-35": "#0000FF", "TX-36": "#FF0000", "AR-01": "#FF0000", "AR-02": "#FF0000", "AR-03": "#FF0000", "AR-04": "#FF0000", "AZ-01": "#9090FF", "AZ-02": "#0000FF", "AZ-03": "#0000FF", "AZ-04": "#FF0000", "AZ-05": "#FF0000", "AZ-06": "#9090FF", "AZ-07": "#0000FF", "AZ-08": "#FF0000", "AZ-09": "#0000FF", "CO-01": "#0000FF", "CO-02": "#0000FF", "CO-03": "#FF9090", "CO-04": "#FF0000", "CO-05": "#FF0000", "CO-06": "#0000FF", "CO-07": "#0000FF", "LA-01": "#FF0000", "LA-02": "#0000FF", "LA-03": "#FF0000", "LA-04": "#FF0000", "LA-05": "#FF9090", "LA-06": "#FF0000", "MN-01": "#FF9090", "MN-02": "#FF9090", "MN-03": "#0000FF", "MN-04": "#0000FF", "MN-05": "#0000FF", "MN-06": "#FF0000", "MN-07": "#FF9090", "MN-08": "#FF0000", "NE-01": "#FF0000", "NE-02": "#FF9090", "NE-03": "#FF0000", "NM-01": "#0000FF", "NM-02": "#FF9090", "NM-03": "#0000FF", "NY-01": "#FF9090", "NY-02": "#FF9090", "NY-03": "#FF9090", "NY-04": "#9090FF", "NY-05": "#0000FF", "NY-06": "#0000FF", "NY-07": "#0000FF", "NY-08": "#0000FF", "NY-09": "#0000FF", "NY-10": "#0000FF", "NY-11": "#FF9090", "NY-12": "#0000FF", "NY-13": "#0000FF", "NY-14": "#0000FF", "NY-15": "#0000FF", "NY-16": "#0000FF", "NY-17": "#9090FF", "NY-18": "#9090FF", "NY-19": "#9090FF", "NY-20": "#0000FF", "NY-21": "#FF0000", "NY-22": "#FF9090", "NY-23": "#FF0000", "NY-24": "#FF9090", "NY-25": "#9090FF", "NY-26": "#0000FF", "NY-27": "#FF9090", "SD-AL": "#FF0000", "WI-01": "#FF0000", "WI-02": "#0000FF", "WI-03": "#9090FF", "WI-04": "#0000FF", "WI-05": "#FF0000", "WI-06": "#FF0000", "WI-07": "#FF0000", "WI-08": "#FF0000", "WY-AL": "#FF0000", "IA-01": "#FF9090", "IA-02": "#FF9090", "IA-03": "#9090FF", "IA-04": "#FF0000", "ID-01": "#FF0000", "ID-02": "#FF0000", "MT-AL": "#FF9090", "NV-01": "#0000FF", "NV-02": "#FF9090", "NV-03": "#9090FF", "NV-04": "#9090FF", "UT-01": "#FF0000", "UT-02": "#FF0000", "UT-03": "#FF9090", "UT-04": "#9090FF", "CA-01": "#FF9090", "CA-02": "#0000FF", "CA-03": "#0000FF", "CA-04": "#FF9090", "CA-05": "#0000FF", "CA-06": "#9090FF", "CA-07": "#9090FF", "CA-08": "#9090FF", "CA-09": "#9090FF", "CA-10": "#9090FF", "CA-11": "#0000FF", "CA-12": "#0000FF", "CA-13": "#0000FF", "CA-14": "#0000FF", "CA-15": "#9090FF", "CA-16": "#9090FF", "CA-17": "#9090FF", "CA-18": "#9090FF", "CA-19": "#0000FF", "CA-20": "#0000FF", "CA-21": "#FF9090", "CA-22": "#FF9090", "CA-23": "#FF9090", "CA-24": "#0000FF", "CA-25": "#9090FF", "CA-26": "#0000FF", "CA-27": "#0000FF", "CA-28": "#0000FF", "CA-29": "#9090FF", "CA-30": "#0000FF", "CA-31": "#9090FF", "CA-32": "#0000FF", "CA-33": "#0000FF", "CA-34": "#9090FF", "CA-35": "#9090FF", "CA-36": "#9090FF", "CA-37": "#0000FF", "CA-38": "#9090FF", "CA-39": "#9090FF", "CA-40": "#0000FF", "CA-41": "#9090FF", "CA-42": "#FF9090", "CA-43": "#0000FF", "CA-44": "#9090FF", "CA-45": "#0000FF", "CA-46": "#0000FF", "CA-47": "#0000FF", "CA-48": "#9090FF", "CA-49": "#9090FF", "CA-50": "#9090FF", "CA-51": "#0000FF", "CA-52": "#0000FF", "CA-53": "#0000FF", "OR-01": "#0000FF", "OR-02": "#FF0000", "OR-03": "#0000FF", "OR-04": "#0000FF", "OR-05": "#0000FF", "WA-01": "#0000FF", "WA-02": "#0000FF", "WA-03": "#FF9090", "WA-04": "#FF9090", "WA-05": "#FF9090", "WA-06": "#0000FF", "WA-07": "#0000FF", "WA-08": "#9090FF", "WA-09": "#0000FF", "WA-10": "#9090FF", "HI-01": "#FFFFFF", "HI-02": "#FFFFFF", "AK-AL": "#FFFFFF"};
   function colorAll() {
     for (var state in stateColors) {
       setColor(state, stateColors[state]);
@@ -926,15 +926,15 @@ Pre-election estimate: <b>N/A</b>
 <td>Pct</td>
 
 </tr>
-<tr><td style="color: #fff" bgcolor="#FF0000">Larry Bucshon* ✔</td><td>REP</td><td class="votes">170,215</td><td class="pct">70.2</td></tr>
-<tr><td>Thomasina Marsili</td><td>DEM</td><td class="votes">64,020</td><td class="pct">26.4</td></tr>
-<tr><td>James Rodenberger</td><td>LIB</td><td class="votes">8,127</td><td class="pct">3.4</td></tr>
+<tr><td style="color: #fff" bgcolor="#FF0000">Larry Bucshon* ✔</td><td>REP</td><td class="votes">176,982</td><td class="pct">69.2</td></tr>
+<tr><td>Thomasina Marsili</td><td>DEM</td><td class="votes">70,457</td><td class="pct">27.5</td></tr>
+<tr><td>James Rodenberger</td><td>LIB</td><td class="votes">8,497</td><td class="pct">3.3</td></tr>
 
 </tbody>
 </table>
 87.5% of precincts reporting<br>
 Status: <b>Called for Bucshon (R)</b><br>
-Lead: <b>Bucshon +43.8</b><br>
+Lead: <b>Bucshon +41.6</b><br>
 
 Pre-election estimate: <b>N/A</b>
 </div>
@@ -1504,9 +1504,9 @@ Pre-election estimate: <b>N/A</b>
 <td>Pct</td>
 
 </tr>
-<tr><td style="color: #fff" bgcolor="#FF0000">Brian Mast* ✔</td><td>REP</td><td class="votes">251,747</td><td class="pct">56.4</td></tr>
-<tr><td>Pam Keith</td><td>DEM</td><td class="votes">185,179</td><td class="pct">41.5</td></tr>
-<tr><td>K.W. Miller</td><td>NO-</td><td class="votes">9,658</td><td class="pct">2.2</td></tr>
+<tr><td style="color: #fff" bgcolor="#FF0000">Brian Mast* ✔</td><td>REP</td><td class="votes">251,824</td><td class="pct">56.4</td></tr>
+<tr><td>Pam Keith</td><td>DEM</td><td class="votes">185,195</td><td class="pct">41.5</td></tr>
+<tr><td>K.W. Miller</td><td>NO-</td><td class="votes">9,665</td><td class="pct">2.2</td></tr>
 
 </tbody>
 </table>
@@ -1574,8 +1574,8 @@ Pre-election estimate: <b>N/A</b>
 <td>Pct</td>
 
 </tr>
-<tr><td style="color: #fff" bgcolor="#0000FF">Lois Frankel* ✔</td><td>DEM</td><td class="votes">232,811</td><td class="pct">59.0</td></tr>
-<tr><td>Laura Loomer</td><td>REP</td><td class="votes">154,546</td><td class="pct">39.1</td></tr>
+<tr><td style="color: #fff" bgcolor="#0000FF">Lois Frankel* ✔</td><td>DEM</td><td class="votes">233,069</td><td class="pct">59.0</td></tr>
+<tr><td>Laura Loomer</td><td>REP</td><td class="votes">154,666</td><td class="pct">39.1</td></tr>
 
 </tbody>
 </table>
@@ -1597,14 +1597,14 @@ Pre-election estimate: <b>N/A</b>
 <td>Pct</td>
 
 </tr>
-<tr><td style="color: #fff" bgcolor="#0000FF">Ted Deutch* ✔</td><td>DEM</td><td class="votes">234,542</td><td class="pct">58.6</td></tr>
-<tr><td>James Pruden</td><td>REP</td><td class="votes">165,375</td><td class="pct">41.4</td></tr>
+<tr><td style="color: #fff" bgcolor="#0000FF">Ted Deutch* ✔</td><td>DEM</td><td class="votes">234,698</td><td class="pct">58.6</td></tr>
+<tr><td>James Pruden</td><td>REP</td><td class="votes">165,745</td><td class="pct">41.4</td></tr>
 
 </tbody>
 </table>
 96.8% of precincts reporting<br>
 Status: <b>Called for Deutch (D)</b><br>
-Lead: <b>Deutch +17.3</b><br>
+Lead: <b>Deutch +17.2</b><br>
 
 Pre-election estimate: <b>N/A</b>
 </div>
@@ -1804,14 +1804,14 @@ Pre-election estimate: <b>N/A</b>
 <td>Pct</td>
 
 </tr>
-<tr><td style="color: #fff" bgcolor="#0000FF">Hank Johnson* ✔</td><td>DEM</td><td class="votes">187,539</td><td class="pct">75.7</td></tr>
-<tr><td>Johsie Ezammudeen</td><td>REP</td><td class="votes">60,067</td><td class="pct">24.3</td></tr>
+<tr><td style="color: #fff" bgcolor="#0000FF">Hank Johnson* ✔</td><td>DEM</td><td class="votes">254,410</td><td class="pct">79.4</td></tr>
+<tr><td>Johsie Ezammudeen</td><td>REP</td><td class="votes">66,196</td><td class="pct">20.6</td></tr>
 
 </tbody>
 </table>
-60.7% of precincts reporting<br>
+82.2% of precincts reporting<br>
 Status: <b>Called for Johnson (D)</b><br>
-Lead: <b>Johnson +51.5</b><br>
+Lead: <b>Johnson +58.7</b><br>
 
 Pre-election estimate: <b>N/A</b>
 </div>
@@ -1827,14 +1827,14 @@ Pre-election estimate: <b>N/A</b>
 <td>Pct</td>
 
 </tr>
-<tr><td style="color: #fff" bgcolor="#0000FF">Nikema Williams ✔</td><td>DEM</td><td class="votes">204,591</td><td class="pct">84.2</td></tr>
-<tr><td>Angela Stanton-King</td><td>REP</td><td class="votes">38,497</td><td class="pct">15.8</td></tr>
+<tr><td style="color: #fff" bgcolor="#0000FF">Nikema Williams ✔</td><td>DEM</td><td class="votes">243,055</td><td class="pct">84.8</td></tr>
+<tr><td>Angela Stanton-King</td><td>REP</td><td class="votes">43,526</td><td class="pct">15.2</td></tr>
 
 </tbody>
 </table>
 76.3% of precincts reporting<br>
 Status: <b>Called for Williams (D)</b><br>
-Lead: <b>Williams +68.3</b><br>
+Lead: <b>Williams +69.6</b><br>
 
 Pre-election estimate: <b>N/A</b>
 </div>
@@ -1850,14 +1850,14 @@ Pre-election estimate: <b>N/A</b>
 <td>Pct</td>
 
 </tr>
-<tr><td>Lucy McBath*</td><td>DEM</td><td class="votes">143,881</td><td class="pct">53.8</td></tr>
-<tr><td>Karen Handel</td><td>REP</td><td class="votes">123,534</td><td class="pct">46.2</td></tr>
+<tr><td>Lucy McBath*</td><td>DEM</td><td class="votes">170,519</td><td class="pct">54.9</td></tr>
+<tr><td>Karen Handel</td><td>REP</td><td class="votes">140,037</td><td class="pct">45.1</td></tr>
 
 </tbody>
 </table>
 81.3% of precincts reporting<br>
 Status: <b>Not called</b><br>
-Lead: <b>McBath +7.6</b><br>
+Lead: <b>McBath +9.8</b><br>
 
 Pre-election estimate: <b>N/A</b>
 </div>
@@ -1942,14 +1942,14 @@ Pre-election estimate: <b>N/A</b>
 <td>Pct</td>
 
 </tr>
-<tr><td style="color: #fff" bgcolor="#FF0000">Jody Hice* ✔</td><td>REP</td><td class="votes">230,655</td><td class="pct">62.5</td></tr>
-<tr><td>Tabitha Johnson-Green</td><td>DEM</td><td class="votes">138,046</td><td class="pct">37.4</td></tr>
+<tr><td style="color: #fff" bgcolor="#FF0000">Jody Hice* ✔</td><td>REP</td><td class="votes">230,787</td><td class="pct">62.5</td></tr>
+<tr><td>Tabitha Johnson-Green</td><td>DEM</td><td class="votes">138,561</td><td class="pct">37.5</td></tr>
 
 </tbody>
 </table>
-92.0% of precincts reporting<br>
+92.5% of precincts reporting<br>
 Status: <b>Called for Hice (R)</b><br>
-Lead: <b>Hice +25.1</b><br>
+Lead: <b>Hice +25.0</b><br>
 
 Pre-election estimate: <b>N/A</b>
 </div>
@@ -2057,15 +2057,15 @@ Pre-election estimate: <b>N/A</b>
 <td>Pct</td>
 
 </tr>
-<tr><td style="color: #fff" bgcolor="#0000FF">Chris Pappas* ✔</td><td>DEM</td><td class="votes">110,515</td><td class="pct">52.0</td></tr>
-<tr><td>Matt Mowers</td><td>REP</td><td class="votes">97,053</td><td class="pct">45.7</td></tr>
-<tr><td>Zachary Dumont</td><td>LIB</td><td class="votes">4,850</td><td class="pct">2.3</td></tr>
+<tr><td style="color: #fff" bgcolor="#0000FF">Chris Pappas* ✔</td><td>DEM</td><td class="votes">113,100</td><td class="pct">52.2</td></tr>
+<tr><td>Matt Mowers</td><td>REP</td><td class="votes">98,825</td><td class="pct">45.6</td></tr>
+<tr><td>Zachary Dumont</td><td>LIB</td><td class="votes">4,895</td><td class="pct">2.3</td></tr>
 
 </tbody>
 </table>
-55.8% of precincts reporting<br>
+56.6% of precincts reporting<br>
 Status: <b>Called for Pappas (D)</b><br>
-Lead: <b>Pappas +6.3</b><br>
+Lead: <b>Pappas +6.6</b><br>
 
 Pre-election estimate: <b>N/A</b>
 </div>
@@ -2081,15 +2081,15 @@ Pre-election estimate: <b>N/A</b>
 <td>Pct</td>
 
 </tr>
-<tr><td style="color: #fff" bgcolor="#0000FF">Ann McLane Kuster* ✔</td><td>DEM</td><td class="votes">112,054</td><td class="pct">54.9</td></tr>
-<tr><td>Steven Negron</td><td>REP</td><td class="votes">86,924</td><td class="pct">42.6</td></tr>
-<tr><td>Andrew Olding</td><td>LIB</td><td class="votes">5,040</td><td class="pct">2.5</td></tr>
+<tr><td style="color: #fff" bgcolor="#0000FF">Ann McLane Kuster* ✔</td><td>DEM</td><td class="votes">114,787</td><td class="pct">54.7</td></tr>
+<tr><td>Steven Negron</td><td>REP</td><td class="votes">89,905</td><td class="pct">42.8</td></tr>
+<tr><td>Andrew Olding</td><td>LIB</td><td class="votes">5,175</td><td class="pct">2.5</td></tr>
 
 </tbody>
 </table>
-47.9% of precincts reporting<br>
+50.0% of precincts reporting<br>
 Status: <b>Called for McLane Kuster (D)</b><br>
-Lead: <b>McLane Kuster +12.3</b><br>
+Lead: <b>McLane Kuster +11.9</b><br>
 
 Pre-election estimate: <b>N/A</b>
 </div>
@@ -2105,14 +2105,14 @@ Pre-election estimate: <b>N/A</b>
 <td>Pct</td>
 
 </tr>
-<tr><td>Nancy Mace</td><td>REP</td><td class="votes">186,126</td><td class="pct">52.4</td></tr>
-<tr><td>Joe Cunningham*</td><td>DEM</td><td class="votes">169,019</td><td class="pct">47.6</td></tr>
+<tr><td>Nancy Mace</td><td>REP</td><td class="votes">195,395</td><td class="pct">52.2</td></tr>
+<tr><td>Joe Cunningham*</td><td>DEM</td><td class="votes">178,622</td><td class="pct">47.8</td></tr>
 
 </tbody>
 </table>
-86.2% of precincts reporting<br>
+90.4% of precincts reporting<br>
 Status: <b>Not called</b><br>
-Lead: <b>Mace +4.8</b><br>
+Lead: <b>Mace +4.5</b><br>
 
 Pre-election estimate: <b>N/A</b>
 </div>
@@ -2220,14 +2220,14 @@ Pre-election estimate: <b>N/A</b>
 <td>Pct</td>
 
 </tr>
-<tr><td style="color: #fff" bgcolor="#0000FF">Jim Clyburn* ✔</td><td>DEM</td><td class="votes">109,928</td><td class="pct">60.3</td></tr>
-<tr><td>John McCollum</td><td>REP</td><td class="votes">70,726</td><td class="pct">38.8</td></tr>
+<tr><td style="color: #fff" bgcolor="#0000FF">Jim Clyburn* ✔</td><td>DEM</td><td class="votes">112,533</td><td class="pct">60.5</td></tr>
+<tr><td>John McCollum</td><td>REP</td><td class="votes">71,700</td><td class="pct">38.5</td></tr>
 
 </tbody>
 </table>
-64.2% of precincts reporting<br>
+65.3% of precincts reporting<br>
 Status: <b>Called for Clyburn (D)</b><br>
-Lead: <b>Clyburn +21.5</b><br>
+Lead: <b>Clyburn +21.9</b><br>
 
 Pre-election estimate: <b>N/A</b>
 </div>
@@ -2519,15 +2519,15 @@ Pre-election estimate: <b>N/A</b>
 <td>Pct</td>
 
 </tr>
-<tr><td style="color: #fff" bgcolor="#0000FF">Peter Welch* ✔</td><td>DEM</td><td class="votes">233,093</td><td class="pct">67.5</td></tr>
-<tr><td>Miriam Berry</td><td>REP</td><td class="votes">92,342</td><td class="pct">26.7</td></tr>
-<tr><td>Peter Becker</td><td>IND</td><td class="votes">7,879</td><td class="pct">2.3</td></tr>
+<tr><td style="color: #fff" bgcolor="#0000FF">Peter Welch* ✔</td><td>DEM</td><td class="votes">235,979</td><td class="pct">67.4</td></tr>
+<tr><td>Miriam Berry</td><td>REP</td><td class="votes">94,291</td><td class="pct">26.9</td></tr>
+<tr><td>Peter Becker</td><td>IND</td><td class="votes">7,946</td><td class="pct">2.3</td></tr>
 
 </tbody>
 </table>
-94.9% of precincts reporting<br>
+95.3% of precincts reporting<br>
 Status: <b>Called for Welch (D)</b><br>
-Lead: <b>Welch +40.8</b><br>
+Lead: <b>Welch +40.5</b><br>
 
 Pre-election estimate: <b>N/A</b>
 </div>
@@ -2775,14 +2775,14 @@ Pre-election estimate: <b>N/A</b>
 <td>Pct</td>
 
 </tr>
-<tr><td style="color: #fff" bgcolor="#FF0000">Madison Cawthorn ✔</td><td>REP</td><td class="votes">183,875</td><td class="pct">63.6</td></tr>
-<tr><td>Moe Davis</td><td>DEM</td><td class="votes">97,162</td><td class="pct">33.6</td></tr>
+<tr><td style="color: #fff" bgcolor="#FF0000">Madison Cawthorn ✔</td><td>REP</td><td class="votes">243,898</td><td class="pct">54.5</td></tr>
+<tr><td>Moe Davis</td><td>DEM</td><td class="votes">189,516</td><td class="pct">42.4</td></tr>
 
 </tbody>
 </table>
-67.3% of precincts reporting<br>
+92.1% of precincts reporting<br>
 Status: <b>Called for Cawthorn (R)</b><br>
-Lead: <b>Cawthorn +30.0</b><br>
+Lead: <b>Cawthorn +12.2</b><br>
 
 Pre-election estimate: <b>N/A</b>
 </div>
@@ -3239,14 +3239,14 @@ Pre-election estimate: <b>N/A</b>
 <td>Pct</td>
 
 </tr>
-<tr><td style="color: #fff" bgcolor="#FF0000">Alex Mooney* ✔</td><td>REP</td><td class="votes">168,001</td><td class="pct">63.1</td></tr>
-<tr><td>Cathy Kunkel</td><td>DEM</td><td class="votes">98,379</td><td class="pct">36.9</td></tr>
+<tr><td style="color: #fff" bgcolor="#FF0000">Alex Mooney* ✔</td><td>REP</td><td class="votes">168,856</td><td class="pct">63.1</td></tr>
+<tr><td>Cathy Kunkel</td><td>DEM</td><td class="votes">98,666</td><td class="pct">36.9</td></tr>
 
 </tbody>
 </table>
-94.6% of precincts reporting<br>
+95.4% of precincts reporting<br>
 Status: <b>Called for Mooney (R)</b><br>
-Lead: <b>Mooney +26.1</b><br>
+Lead: <b>Mooney +26.2</b><br>
 
 Pre-election estimate: <b>N/A</b>
 </div>
@@ -3285,14 +3285,14 @@ Pre-election estimate: <b>N/A</b>
 <td>Pct</td>
 
 </tr>
-<tr><td style="color: #fff" bgcolor="#FF0000">Jerry Carl ✔</td><td>REP</td><td class="votes">192,780</td><td class="pct">67.2</td></tr>
-<tr><td>James Averhart</td><td>DEM</td><td class="votes">94,213</td><td class="pct">32.8</td></tr>
+<tr><td style="color: #fff" bgcolor="#FF0000">Jerry Carl ✔</td><td>REP</td><td class="votes">197,797</td><td class="pct">68.6</td></tr>
+<tr><td>James Averhart</td><td>DEM</td><td class="votes">90,590</td><td class="pct">31.4</td></tr>
 
 </tbody>
 </table>
-86.5% of precincts reporting<br>
+87.0% of precincts reporting<br>
 Status: <b>Called for Carl (R)</b><br>
-Lead: <b>Carl +34.3</b><br>
+Lead: <b>Carl +37.2</b><br>
 
 Pre-election estimate: <b>N/A</b>
 </div>
@@ -3308,14 +3308,14 @@ Pre-election estimate: <b>N/A</b>
 <td>Pct</td>
 
 </tr>
-<tr><td style="color: #fff" bgcolor="#FF0000">Barry Moore ✔</td><td>REP</td><td class="votes">181,380</td><td class="pct">64.1</td></tr>
-<tr><td>Phyllis Harvey-Hall</td><td>DEM</td><td class="votes">101,307</td><td class="pct">35.8</td></tr>
+<tr><td style="color: #fff" bgcolor="#FF0000">Barry Moore ✔</td><td>REP</td><td class="votes">197,029</td><td class="pct">65.3</td></tr>
+<tr><td>Phyllis Harvey-Hall</td><td>DEM</td><td class="votes">104,592</td><td class="pct">34.7</td></tr>
 
 </tbody>
 </table>
-81.8% of precincts reporting<br>
+94.2% of precincts reporting<br>
 Status: <b>Called for Moore (R)</b><br>
-Lead: <b>Moore +28.3</b><br>
+Lead: <b>Moore +30.6</b><br>
 
 Pre-election estimate: <b>N/A</b>
 </div>
@@ -3331,14 +3331,14 @@ Pre-election estimate: <b>N/A</b>
 <td>Pct</td>
 
 </tr>
-<tr><td style="color: #fff" bgcolor="#FF0000">Mike Rogers* ✔</td><td>REP</td><td class="votes">139,078</td><td class="pct">71.5</td></tr>
-<tr><td>Adia Winfrey</td><td>DEM</td><td class="votes">55,470</td><td class="pct">28.5</td></tr>
+<tr><td style="color: #fff" bgcolor="#FF0000">Mike Rogers* ✔</td><td>REP</td><td class="votes">148,971</td><td class="pct">70.7</td></tr>
+<tr><td>Adia Winfrey</td><td>DEM</td><td class="votes">61,839</td><td class="pct">29.3</td></tr>
 
 </tbody>
 </table>
-63.5% of precincts reporting<br>
+71.2% of precincts reporting<br>
 Status: <b>Called for Rogers (R)</b><br>
-Lead: <b>Rogers +43.0</b><br>
+Lead: <b>Rogers +41.3</b><br>
 
 Pre-election estimate: <b>N/A</b>
 </div>
@@ -3998,14 +3998,14 @@ Pre-election estimate: <b>N/A</b>
 <td>Pct</td>
 
 </tr>
-<tr><td style="color: #fff" bgcolor="#FF0000">Tracey Mann ✔</td><td>REP</td><td class="votes">153,754</td><td class="pct">72.1</td></tr>
-<tr><td>Kali Barnett</td><td>DEM</td><td class="votes">59,610</td><td class="pct">27.9</td></tr>
+<tr><td style="color: #fff" bgcolor="#FF0000">Tracey Mann ✔</td><td>REP</td><td class="votes">156,970</td><td class="pct">71.9</td></tr>
+<tr><td>Kali Barnett</td><td>DEM</td><td class="votes">61,323</td><td class="pct">28.1</td></tr>
 
 </tbody>
 </table>
-63.0% of precincts reporting<br>
+64.4% of precincts reporting<br>
 Status: <b>Called for Mann (R)</b><br>
-Lead: <b>Mann +44.1</b><br>
+Lead: <b>Mann +43.8</b><br>
 
 Pre-election estimate: <b>N/A</b>
 </div>
@@ -4092,14 +4092,14 @@ Pre-election estimate: <b>N/A</b>
 <td>Pct</td>
 
 </tr>
-<tr><td style="color: #fff" bgcolor="#0000FF">Richard Neal* ✔</td><td>DEM</td><td class="votes">166,335</td><td class="pct">95.8</td></tr>
-<tr><td>Write-ins</td><td>WRI</td><td class="votes">7,300</td><td class="pct">4.2</td></tr>
+<tr><td style="color: #fff" bgcolor="#0000FF">Richard Neal* ✔</td><td>DEM</td><td class="votes">170,133</td><td class="pct">95.9</td></tr>
+<tr><td>Write-ins</td><td>WRI</td><td class="votes">7,353</td><td class="pct">4.1</td></tr>
 
 </tbody>
 </table>
-51.1% of precincts reporting<br>
+52.2% of precincts reporting<br>
 Status: <b>Called for Neal (D)</b><br>
-Lead: <b>Neal +91.6</b><br>
+Lead: <b>Neal +91.7</b><br>
 
 Pre-election estimate: <b>N/A</b>
 </div>
@@ -4138,14 +4138,14 @@ Pre-election estimate: <b>N/A</b>
 <td>Pct</td>
 
 </tr>
-<tr><td style="color: #fff" bgcolor="#0000FF">Lori Trahan* ✔</td><td>DEM</td><td class="votes">156,210</td><td class="pct">96.8</td></tr>
-<tr><td>Write-ins</td><td>WRI</td><td class="votes">5,172</td><td class="pct">3.2</td></tr>
+<tr><td style="color: #fff" bgcolor="#0000FF">Lori Trahan* ✔</td><td>DEM</td><td class="votes">173,928</td><td class="pct">96.7</td></tr>
+<tr><td>Write-ins</td><td>WRI</td><td class="votes">5,986</td><td class="pct">3.3</td></tr>
 
 </tbody>
 </table>
-51.1% of precincts reporting<br>
+55.9% of precincts reporting<br>
 Status: <b>Called for Trahan (D)</b><br>
-Lead: <b>Trahan +93.6</b><br>
+Lead: <b>Trahan +93.3</b><br>
 
 Pre-election estimate: <b>N/A</b>
 </div>
@@ -4184,14 +4184,14 @@ Pre-election estimate: <b>N/A</b>
 <td>Pct</td>
 
 </tr>
-<tr><td style="color: #fff" bgcolor="#0000FF">Katherine Clark* ✔</td><td>DEM</td><td class="votes">195,797</td><td class="pct">74.4</td></tr>
-<tr><td>Caroline Colarusso</td><td>REP</td><td class="votes">67,129</td><td class="pct">25.5</td></tr>
+<tr><td style="color: #fff" bgcolor="#0000FF">Katherine Clark* ✔</td><td>DEM</td><td class="votes">199,780</td><td class="pct">74.6</td></tr>
+<tr><td>Caroline Colarusso</td><td>REP</td><td class="votes">67,585</td><td class="pct">25.2</td></tr>
 
 </tbody>
 </table>
-60.5% of precincts reporting<br>
+61.7% of precincts reporting<br>
 Status: <b>Called for Clark (D)</b><br>
-Lead: <b>Clark +48.9</b><br>
+Lead: <b>Clark +49.4</b><br>
 
 Pre-election estimate: <b>N/A</b>
 </div>
@@ -4230,14 +4230,14 @@ Pre-election estimate: <b>N/A</b>
 <td>Pct</td>
 
 </tr>
-<tr><td style="color: #fff" bgcolor="#0000FF">Ayanna Pressley* ✔</td><td>DEM</td><td class="votes">50,371</td><td class="pct">85.9</td></tr>
-<tr><td>Roy Owens</td><td>IND</td><td class="votes">7,778</td><td class="pct">13.3</td></tr>
+<tr><td style="color: #fff" bgcolor="#0000FF">Ayanna Pressley* ✔</td><td>DEM</td><td class="votes">104,593</td><td class="pct">86.9</td></tr>
+<tr><td>Roy Owens</td><td>IND</td><td class="votes">14,808</td><td class="pct">12.3</td></tr>
 
 </tbody>
 </table>
-19.7% of precincts reporting<br>
+36.7% of precincts reporting<br>
 Status: <b>Called for Pressley (D)</b><br>
-Lead: <b>Pressley +72.6</b><br>
+Lead: <b>Pressley +74.6</b><br>
 
 Pre-election estimate: <b>N/A</b>
 </div>
@@ -4253,14 +4253,14 @@ Pre-election estimate: <b>N/A</b>
 <td>Pct</td>
 
 </tr>
-<tr><td style="color: #fff" bgcolor="#0000FF">Stephen Lynch* ✔</td><td>DEM</td><td class="votes">105,689</td><td class="pct">79.9</td></tr>
-<tr><td>Jonathan Lott</td><td>IND</td><td class="votes">25,786</td><td class="pct">19.5</td></tr>
+<tr><td style="color: #fff" bgcolor="#0000FF">Stephen Lynch* ✔</td><td>DEM</td><td class="votes">113,938</td><td class="pct">79.6</td></tr>
+<tr><td>Jonathan Lott</td><td>IND</td><td class="votes">28,432</td><td class="pct">19.9</td></tr>
 
 </tbody>
 </table>
-31.0% of precincts reporting<br>
+33.3% of precincts reporting<br>
 Status: <b>Called for Lynch (D)</b><br>
-Lead: <b>Lynch +60.4</b><br>
+Lead: <b>Lynch +59.7</b><br>
 
 Pre-election estimate: <b>N/A</b>
 </div>
@@ -4276,15 +4276,15 @@ Pre-election estimate: <b>N/A</b>
 <td>Pct</td>
 
 </tr>
-<tr><td style="color: #fff" bgcolor="#0000FF">Bill Keating* ✔</td><td>DEM</td><td class="votes">133,759</td><td class="pct">61.8</td></tr>
-<tr><td>Helen Brady</td><td>REP</td><td class="votes">77,790</td><td class="pct">35.9</td></tr>
-<tr><td>Michael Manley</td><td>IND</td><td class="votes">4,774</td><td class="pct">2.2</td></tr>
+<tr><td style="color: #fff" bgcolor="#0000FF">Bill Keating* ✔</td><td>DEM</td><td class="votes">137,249</td><td class="pct">61.9</td></tr>
+<tr><td>Helen Brady</td><td>REP</td><td class="votes">79,619</td><td class="pct">35.9</td></tr>
+<tr><td>Michael Manley</td><td>IND</td><td class="votes">4,855</td><td class="pct">2.2</td></tr>
 
 </tbody>
 </table>
-43.2% of precincts reporting<br>
+44.1% of precincts reporting<br>
 Status: <b>Called for Keating (D)</b><br>
-Lead: <b>Keating +25.9</b><br>
+Lead: <b>Keating +26.0</b><br>
 
 Pre-election estimate: <b>N/A</b>
 </div>
@@ -4484,13 +4484,13 @@ Pre-election estimate: <b>N/A</b>
 <td>Pct</td>
 
 </tr>
-<tr><td>Chellie Pingree*</td><td>DEM</td><td class="votes">136,184</td><td class="pct">60.5</td></tr>
+<tr><td style="color: #fff" bgcolor="#0000FF">Chellie Pingree* ✔</td><td>DEM</td><td class="votes">136,184</td><td class="pct">60.5</td></tr>
 <tr><td>Jay Allen</td><td>REP</td><td class="votes">88,200</td><td class="pct">39.2</td></tr>
 
 </tbody>
 </table>
 50.3% of precincts reporting<br>
-Status: <b>Not called</b><br>
+Status: <b>Called for Pingree (D)</b><br>
 Lead: <b>Pingree +21.3</b><br>
 
 Pre-election estimate: <b>N/A</b>
@@ -4507,14 +4507,14 @@ Pre-election estimate: <b>N/A</b>
 <td>Pct</td>
 
 </tr>
-<tr><td>Jared Golden*</td><td>DEM</td><td class="votes">111,716</td><td class="pct">53.4</td></tr>
-<tr><td>Dale Crafts</td><td>REP</td><td class="votes">96,528</td><td class="pct">46.2</td></tr>
+<tr><td>Jared Golden*</td><td>DEM</td><td class="votes">112,749</td><td class="pct">53.4</td></tr>
+<tr><td>Dale Crafts</td><td>REP</td><td class="votes">97,661</td><td class="pct">46.2</td></tr>
 
 </tbody>
 </table>
-40.1% of precincts reporting<br>
+40.3% of precincts reporting<br>
 Status: <b>Not called</b><br>
-Lead: <b>Golden +7.3</b><br>
+Lead: <b>Golden +7.1</b><br>
 
 Pre-election estimate: <b>N/A</b>
 </div>
@@ -4530,12 +4530,12 @@ Pre-election estimate: <b>N/A</b>
 <td>Pct</td>
 
 </tr>
-<tr><td>Jack Bergman*</td><td>REP</td><td class="votes">162,082</td><td class="pct">63.8</td></tr>
-<tr><td>Dana Ferguson</td><td>DEM</td><td class="votes">88,181</td><td class="pct">34.7</td></tr>
+<tr><td>Jack Bergman*</td><td>REP</td><td class="votes">163,456</td><td class="pct">63.8</td></tr>
+<tr><td>Dana Ferguson</td><td>DEM</td><td class="votes">89,010</td><td class="pct">34.7</td></tr>
 
 </tbody>
 </table>
-66.0% of precincts reporting<br>
+66.3% of precincts reporting<br>
 Status: <b>Not called</b><br>
 Lead: <b>Bergman +29.1</b><br>
 
@@ -4599,14 +4599,14 @@ Pre-election estimate: <b>N/A</b>
 <td>Pct</td>
 
 </tr>
-<tr><td>John Moolenaar*</td><td>REP</td><td class="votes">131,707</td><td class="pct">68.6</td></tr>
-<tr><td>Jerry Hilliard</td><td>DEM</td><td class="votes">55,162</td><td class="pct">28.7</td></tr>
+<tr><td>John Moolenaar*</td><td>REP</td><td class="votes">136,274</td><td class="pct">68.5</td></tr>
+<tr><td>Jerry Hilliard</td><td>DEM</td><td class="votes">57,544</td><td class="pct">28.9</td></tr>
 
 </tbody>
 </table>
-61.3% of precincts reporting<br>
+62.1% of precincts reporting<br>
 Status: <b>Not called</b><br>
-Lead: <b>Moolenaar +39.9</b><br>
+Lead: <b>Moolenaar +39.5</b><br>
 
 Pre-election estimate: <b>N/A</b>
 </div>
@@ -4646,15 +4646,15 @@ Pre-election estimate: <b>N/A</b>
 <td>Pct</td>
 
 </tr>
-<tr><td>Fred Upton*</td><td>REP</td><td class="votes">98,975</td><td class="pct">61.0</td></tr>
-<tr><td>Jon Hoadley</td><td>DEM</td><td class="votes">56,002</td><td class="pct">34.5</td></tr>
-<tr><td>Jeff DePoy</td><td>LIB</td><td class="votes">5,062</td><td class="pct">3.1</td></tr>
+<tr><td>Fred Upton*</td><td>REP</td><td class="votes">101,421</td><td class="pct">60.5</td></tr>
+<tr><td>Jon Hoadley</td><td>DEM</td><td class="votes">58,831</td><td class="pct">35.1</td></tr>
+<tr><td>Jeff DePoy</td><td>LIB</td><td class="votes">5,138</td><td class="pct">3.1</td></tr>
 
 </tbody>
 </table>
 61.3% of precincts reporting<br>
 Status: <b>Not called</b><br>
-Lead: <b>Upton +26.5</b><br>
+Lead: <b>Upton +25.4</b><br>
 
 Pre-election estimate: <b>N/A</b>
 </div>
@@ -4693,12 +4693,12 @@ Pre-election estimate: <b>N/A</b>
 <td>Pct</td>
 
 </tr>
-<tr><td>Paul Junge</td><td>REP</td><td class="votes">165,121</td><td class="pct">51.6</td></tr>
-<tr><td>Elissa Slotkin*</td><td>DEM</td><td class="votes">148,660</td><td class="pct">46.5</td></tr>
+<tr><td>Paul Junge</td><td>REP</td><td class="votes">165,950</td><td class="pct">51.6</td></tr>
+<tr><td>Elissa Slotkin*</td><td>DEM</td><td class="votes">149,626</td><td class="pct">46.5</td></tr>
 
 </tbody>
 </table>
-84.8% of precincts reporting<br>
+85.1% of precincts reporting<br>
 Status: <b>Not called</b><br>
 Lead: <b>Junge +5.1</b><br>
 
@@ -4716,16 +4716,16 @@ Pre-election estimate: <b>N/A</b>
 <td>Pct</td>
 
 </tr>
-<tr><td>Andy Levin*</td><td>DEM</td><td class="votes">109,826</td><td class="pct">51.4</td></tr>
-<tr><td>Charles Langworthy</td><td>REP</td><td class="votes">93,660</td><td class="pct">43.9</td></tr>
-<tr><td>Andrea Kirby</td><td>WOR</td><td class="votes">5,438</td><td class="pct">2.5</td></tr>
-<tr><td>Mike Saliba</td><td>LIB</td><td class="votes">4,589</td><td class="pct">2.1</td></tr>
+<tr><td>Andy Levin*</td><td>DEM</td><td class="votes">111,246</td><td class="pct">51.6</td></tr>
+<tr><td>Charles Langworthy</td><td>REP</td><td class="votes">94,036</td><td class="pct">43.7</td></tr>
+<tr><td>Andrea Kirby</td><td>WOR</td><td class="votes">5,483</td><td class="pct">2.5</td></tr>
+<tr><td>Mike Saliba</td><td>LIB</td><td class="votes">4,625</td><td class="pct">2.1</td></tr>
 
 </tbody>
 </table>
-49.1% of precincts reporting<br>
+49.5% of precincts reporting<br>
 Status: <b>Not called</b><br>
-Lead: <b>Levin +7.6</b><br>
+Lead: <b>Levin +8.0</b><br>
 
 Pre-election estimate: <b>N/A</b>
 </div>
@@ -4764,15 +4764,15 @@ Pre-election estimate: <b>N/A</b>
 <td>Pct</td>
 
 </tr>
-<tr><td>Eric Esshaki</td><td>REP</td><td class="votes">148,375</td><td class="pct">53.5</td></tr>
-<tr><td>Haley Stevens*</td><td>DEM</td><td class="votes">122,866</td><td class="pct">44.3</td></tr>
-<tr><td>Leonard Schwartz</td><td>LIB</td><td class="votes">6,087</td><td class="pct">2.2</td></tr>
+<tr><td>Eric Esshaki</td><td>REP</td><td class="votes">149,801</td><td class="pct">53.3</td></tr>
+<tr><td>Haley Stevens*</td><td>DEM</td><td class="votes">124,914</td><td class="pct">44.5</td></tr>
+<tr><td>Leonard Schwartz</td><td>LIB</td><td class="votes">6,138</td><td class="pct">2.2</td></tr>
 
 </tbody>
 </table>
-40.9% of precincts reporting<br>
+41.5% of precincts reporting<br>
 Status: <b>Not called</b><br>
-Lead: <b>Esshaki +9.2</b><br>
+Lead: <b>Esshaki +8.9</b><br>
 
 Pre-election estimate: <b>N/A</b>
 </div>
@@ -4836,14 +4836,14 @@ Pre-election estimate: <b>N/A</b>
 <td>Pct</td>
 
 </tr>
-<tr><td>Brenda Lawrence*</td><td>DEM</td><td class="votes">131,632</td><td class="pct">76.1</td></tr>
-<tr><td>Robert Vance Patrick</td><td>REP</td><td class="votes">36,654</td><td class="pct">21.2</td></tr>
+<tr><td>Brenda Lawrence*</td><td>DEM</td><td class="votes">133,764</td><td class="pct">75.9</td></tr>
+<tr><td>Robert Vance Patrick</td><td>REP</td><td class="votes">37,697</td><td class="pct">21.4</td></tr>
 
 </tbody>
 </table>
-81.3% of precincts reporting<br>
+81.9% of precincts reporting<br>
 Status: <b>Not called</b><br>
-Lead: <b>Lawrence +54.9</b><br>
+Lead: <b>Lawrence +54.5</b><br>
 
 Pre-election estimate: <b>N/A</b>
 </div>
@@ -4883,15 +4883,15 @@ Pre-election estimate: <b>N/A</b>
 <td>Pct</td>
 
 </tr>
-<tr><td style="color: #fff" bgcolor="#FF0000">Ann Wagner* ✔</td><td>REP</td><td class="votes">218,479</td><td class="pct">52.2</td></tr>
-<tr><td>Jill Schupp</td><td>DEM</td><td class="votes">188,720</td><td class="pct">45.1</td></tr>
-<tr><td>Martin Schulte</td><td>LIB</td><td class="votes">11,011</td><td class="pct">2.6</td></tr>
+<tr><td style="color: #fff" bgcolor="#FF0000">Ann Wagner* ✔</td><td>REP</td><td class="votes">230,617</td><td class="pct">52.0</td></tr>
+<tr><td>Jill Schupp</td><td>DEM</td><td class="votes">201,520</td><td class="pct">45.4</td></tr>
+<tr><td>Martin Schulte</td><td>LIB</td><td class="votes">11,558</td><td class="pct">2.6</td></tr>
 
 </tbody>
 </table>
-93.4% of precincts reporting<br>
+95.0% of precincts reporting<br>
 Status: <b>Called for Wagner (R)</b><br>
-Lead: <b>Wagner +7.1</b><br>
+Lead: <b>Wagner +6.6</b><br>
 
 Pre-election estimate: <b>N/A</b>
 </div>
@@ -4907,15 +4907,15 @@ Pre-election estimate: <b>N/A</b>
 <td>Pct</td>
 
 </tr>
-<tr><td style="color: #fff" bgcolor="#FF0000">Blaine Luetkemeyer* ✔</td><td>REP</td><td class="votes">260,202</td><td class="pct">71.4</td></tr>
-<tr><td>Megan Rezabek</td><td>DEM</td><td class="votes">96,203</td><td class="pct">26.4</td></tr>
-<tr><td>Leonard Steinman</td><td>LIB</td><td class="votes">7,838</td><td class="pct">2.2</td></tr>
+<tr><td style="color: #fff" bgcolor="#FF0000">Blaine Luetkemeyer* ✔</td><td>REP</td><td class="votes">282,424</td><td class="pct">69.4</td></tr>
+<tr><td>Megan Rezabek</td><td>DEM</td><td class="votes">116,109</td><td class="pct">28.5</td></tr>
+<tr><td>Leonard Steinman</td><td>LIB</td><td class="votes">8,328</td><td class="pct">2.0</td></tr>
 
 </tbody>
 </table>
-89.3% of precincts reporting<br>
+96.6% of precincts reporting<br>
 Status: <b>Called for Luetkemeyer (R)</b><br>
-Lead: <b>Luetkemeyer +45.0</b><br>
+Lead: <b>Luetkemeyer +40.9</b><br>
 
 Pre-election estimate: <b>N/A</b>
 </div>
@@ -5050,14 +5050,14 @@ Pre-election estimate: <b>N/A</b>
 <td>Pct</td>
 
 </tr>
-<tr><td style="color: #fff" bgcolor="#FF0000">Trent Kelly* ✔</td><td>REP</td><td class="votes">183,799</td><td class="pct">69.8</td></tr>
-<tr><td>Antonia Eliason</td><td>DEM</td><td class="votes">79,159</td><td class="pct">30.1</td></tr>
+<tr><td style="color: #fff" bgcolor="#FF0000">Trent Kelly* ✔</td><td>REP</td><td class="votes">184,746</td><td class="pct">69.9</td></tr>
+<tr><td>Antonia Eliason</td><td>DEM</td><td class="votes">79,341</td><td class="pct">30.0</td></tr>
 
 </tbody>
 </table>
 90.0% of precincts reporting<br>
 Status: <b>Called for Kelly (R)</b><br>
-Lead: <b>Kelly +39.8</b><br>
+Lead: <b>Kelly +39.9</b><br>
 
 Pre-election estimate: <b>N/A</b>
 </div>
@@ -5538,14 +5538,14 @@ Pre-election estimate: <b>N/A</b>
 <td>Pct</td>
 
 </tr>
-<tr><td>Stephanie Bice</td><td>REP</td><td class="votes">157,765</td><td class="pct">52.1</td></tr>
-<tr><td>Kendra Horn*</td><td>DEM</td><td class="votes">145,008</td><td class="pct">47.9</td></tr>
+<tr><td>Stephanie Bice</td><td>REP</td><td class="votes">158,044</td><td class="pct">52.1</td></tr>
+<tr><td>Kendra Horn*</td><td>DEM</td><td class="votes">145,541</td><td class="pct">47.9</td></tr>
 
 </tbody>
 </table>
 94.9% of precincts reporting<br>
 Status: <b>Not called</b><br>
-Lead: <b>Bice +4.2</b><br>
+Lead: <b>Bice +4.1</b><br>
 
 Pre-election estimate: <b>N/A</b>
 </div>
@@ -6254,14 +6254,14 @@ Pre-election estimate: <b>N/A</b>
 <td>Pct</td>
 
 </tr>
-<tr><td style="color: #fff" bgcolor="#FF0000">Dan Crenshaw* ✔</td><td>REP</td><td class="votes">177,981</td><td class="pct">55.5</td></tr>
-<tr><td>Sima Ladjevardian</td><td>DEM</td><td class="votes">138,330</td><td class="pct">43.1</td></tr>
+<tr><td style="color: #fff" bgcolor="#FF0000">Dan Crenshaw* ✔</td><td>REP</td><td class="votes">192,590</td><td class="pct">56.1</td></tr>
+<tr><td>Sima Ladjevardian</td><td>DEM</td><td class="votes">145,322</td><td class="pct">42.3</td></tr>
 
 </tbody>
 </table>
-88.0% of precincts reporting<br>
+94.4% of precincts reporting<br>
 Status: <b>Called for Crenshaw (R)</b><br>
-Lead: <b>Crenshaw +12.4</b><br>
+Lead: <b>Crenshaw +13.8</b><br>
 
 Pre-election estimate: <b>N/A</b>
 </div>
@@ -6372,14 +6372,14 @@ Pre-election estimate: <b>N/A</b>
 <td>Pct</td>
 
 </tr>
-<tr><td style="color: #fff" bgcolor="#0000FF">Lizzie Fletcher* ✔</td><td>DEM</td><td class="votes">146,429</td><td class="pct">51.1</td></tr>
-<tr><td>Wesley Hunt</td><td>REP</td><td class="votes">135,733</td><td class="pct">47.3</td></tr>
+<tr><td style="color: #fff" bgcolor="#0000FF">Lizzie Fletcher* ✔</td><td>DEM</td><td class="votes">155,291</td><td class="pct">50.8</td></tr>
+<tr><td>Wesley Hunt</td><td>REP</td><td class="votes">145,219</td><td class="pct">47.5</td></tr>
 
 </tbody>
 </table>
-85.0% of precincts reporting<br>
+90.5% of precincts reporting<br>
 Status: <b>Called for Fletcher (D)</b><br>
-Lead: <b>Fletcher +3.7</b><br>
+Lead: <b>Fletcher +3.3</b><br>
 
 Pre-election estimate: <b>N/A</b>
 </div>
@@ -6395,15 +6395,15 @@ Pre-election estimate: <b>N/A</b>
 <td>Pct</td>
 
 </tr>
-<tr><td style="color: #fff" bgcolor="#FF0000">Kevin Brady* ✔</td><td>REP</td><td class="votes">261,849</td><td class="pct">72.5</td></tr>
-<tr><td>Elizabeth Hernandez</td><td>DEM</td><td class="votes">91,929</td><td class="pct">25.5</td></tr>
-<tr><td>Chris Duncan</td><td>LIB</td><td class="votes">7,174</td><td class="pct">2.0</td></tr>
+<tr><td style="color: #fff" bgcolor="#FF0000">Kevin Brady* ✔</td><td>REP</td><td class="votes">264,218</td><td class="pct">72.4</td></tr>
+<tr><td>Elizabeth Hernandez</td><td>DEM</td><td class="votes">93,144</td><td class="pct">25.5</td></tr>
+<tr><td>Chris Duncan</td><td>LIB</td><td class="votes">7,340</td><td class="pct">2.0</td></tr>
 
 </tbody>
 </table>
-84.8% of precincts reporting<br>
+85.2% of precincts reporting<br>
 Status: <b>Called for Brady (R)</b><br>
-Lead: <b>Brady +47.1</b><br>
+Lead: <b>Brady +46.9</b><br>
 
 Pre-election estimate: <b>N/A</b>
 </div>
@@ -6443,15 +6443,15 @@ Pre-election estimate: <b>N/A</b>
 <td>Pct</td>
 
 </tr>
-<tr><td style="color: #fff" bgcolor="#FF0000">Michael McCaul* ✔</td><td>REP</td><td class="votes">207,072</td><td class="pct">52.2</td></tr>
-<tr><td>Mike Siegel</td><td>DEM</td><td class="votes">181,334</td><td class="pct">45.7</td></tr>
-<tr><td>Roy Eriksen</td><td>LIB</td><td class="votes">8,350</td><td class="pct">2.1</td></tr>
+<tr><td style="color: #fff" bgcolor="#FF0000">Michael McCaul* ✔</td><td>REP</td><td class="votes">213,975</td><td class="pct">52.5</td></tr>
+<tr><td>Mike Siegel</td><td>DEM</td><td class="votes">185,064</td><td class="pct">45.4</td></tr>
+<tr><td>Roy Eriksen</td><td>LIB</td><td class="votes">8,798</td><td class="pct">2.2</td></tr>
 
 </tbody>
 </table>
-94.4% of precincts reporting<br>
+95.2% of precincts reporting<br>
 Status: <b>Called for McCaul (R)</b><br>
-Lead: <b>McCaul +6.5</b><br>
+Lead: <b>McCaul +7.1</b><br>
 
 Pre-election estimate: <b>N/A</b>
 </div>
@@ -6632,14 +6632,14 @@ Pre-election estimate: <b>N/A</b>
 <td>Pct</td>
 
 </tr>
-<tr><td style="color: #fff" bgcolor="#0000FF">Sheila Jackson Lee* ✔</td><td>DEM</td><td class="votes">163,175</td><td class="pct">73.9</td></tr>
-<tr><td>Wendell Champion</td><td>REP</td><td class="votes">50,800</td><td class="pct">23.0</td></tr>
+<tr><td style="color: #fff" bgcolor="#0000FF">Sheila Jackson Lee* ✔</td><td>DEM</td><td class="votes">175,799</td><td class="pct">73.5</td></tr>
+<tr><td>Wendell Champion</td><td>REP</td><td class="votes">55,942</td><td class="pct">23.4</td></tr>
 
 </tbody>
 </table>
-83.0% of precincts reporting<br>
+90.6% of precincts reporting<br>
 Status: <b>Called for Jackson Lee (D)</b><br>
-Lead: <b>Jackson Lee +50.9</b><br>
+Lead: <b>Jackson Lee +50.1</b><br>
 
 Pre-election estimate: <b>N/A</b>
 </div>
@@ -6893,14 +6893,14 @@ Pre-election estimate: <b>N/A</b>
 <td>Pct</td>
 
 </tr>
-<tr><td style="color: #fff" bgcolor="#0000FF">Sylvia Garcia* ✔</td><td>DEM</td><td class="votes">93,784</td><td class="pct">71.6</td></tr>
-<tr><td>Jaimy Blanco</td><td>REP</td><td class="votes">35,455</td><td class="pct">27.1</td></tr>
+<tr><td style="color: #fff" bgcolor="#0000FF">Sylvia Garcia* ✔</td><td>DEM</td><td class="votes">107,716</td><td class="pct">71.3</td></tr>
+<tr><td>Jaimy Blanco</td><td>REP</td><td class="votes">41,239</td><td class="pct">27.3</td></tr>
 
 </tbody>
 </table>
-76.0% of precincts reporting<br>
+87.5% of precincts reporting<br>
 Status: <b>Called for Garcia (D)</b><br>
-Lead: <b>Garcia +44.5</b><br>
+Lead: <b>Garcia +44.0</b><br>
 
 Pre-election estimate: <b>N/A</b>
 </div>
@@ -7081,11 +7081,11 @@ Pre-election estimate: <b>N/A</b>
 <td>Pct</td>
 
 </tr>
-<tr><td style="color: #fff" bgcolor="#FF0000">Rick Crawford* ✔</td><td>REP</td><td class="votes">222,244</td><td class="pct">100.0</td></tr>
+<tr><td style="color: #fff" bgcolor="#FF0000">Rick Crawford* ✔</td><td>REP</td><td class="votes">232,382</td><td class="pct">100.0</td></tr>
 
 </tbody>
 </table>
-91.9% of precincts reporting<br>
+93.8% of precincts reporting<br>
 Status: <b>Called for Crawford (R)</b><br>
 Lead: <b>Crawford +100.0</b><br>
 
@@ -7220,14 +7220,14 @@ Pre-election estimate: <b>N/A</b>
 <td>Pct</td>
 
 </tr>
-<tr><td style="color: #fff" bgcolor="#0000FF">Raul Grijalva* ✔</td><td>DEM</td><td class="votes">135,542</td><td class="pct">66.3</td></tr>
-<tr><td>Daniel Wood</td><td>REP</td><td class="votes">68,987</td><td class="pct">33.7</td></tr>
+<tr><td style="color: #fff" bgcolor="#0000FF">Raul Grijalva* ✔</td><td>DEM</td><td class="votes">136,306</td><td class="pct">66.2</td></tr>
+<tr><td>Daniel Wood</td><td>REP</td><td class="votes">69,717</td><td class="pct">33.8</td></tr>
 
 </tbody>
 </table>
-80.7% of precincts reporting<br>
+82.1% of precincts reporting<br>
 Status: <b>Called for Grijalva (D)</b><br>
-Lead: <b>Grijalva +32.5</b><br>
+Lead: <b>Grijalva +32.3</b><br>
 
 Pre-election estimate: <b>N/A</b>
 </div>
@@ -7381,12 +7381,12 @@ Pre-election estimate: <b>N/A</b>
 <td>Pct</td>
 
 </tr>
-<tr><td style="color: #fff" bgcolor="#0000FF">Diana DeGette* ✔</td><td>DEM</td><td class="votes">261,738</td><td class="pct">75.3</td></tr>
-<tr><td>Shane Bolling</td><td>REP</td><td class="votes">77,916</td><td class="pct">22.4</td></tr>
+<tr><td style="color: #fff" bgcolor="#0000FF">Diana DeGette* ✔</td><td>DEM</td><td class="votes">264,943</td><td class="pct">75.3</td></tr>
+<tr><td>Shane Bolling</td><td>REP</td><td class="votes">78,974</td><td class="pct">22.4</td></tr>
 
 </tbody>
 </table>
-72.9% of precincts reporting<br>
+73.8% of precincts reporting<br>
 Status: <b>Called for DeGette (D)</b><br>
 Lead: <b>DeGette +52.9</b><br>
 
@@ -7868,13 +7868,13 @@ Pre-election estimate: <b>N/A</b>
 <td>Pct</td>
 
 </tr>
-<tr><td style="color: #fff" bgcolor="#FF0000">Pete Stauber* ✔</td><td>REP</td><td class="votes">178,515</td><td class="pct">55.5</td></tr>
-<tr><td>Quinn Nystrom</td><td>DEM</td><td class="votes">125,169</td><td class="pct">38.9</td></tr>
-<tr><td>Judith Schwartzbacker</td><td>GRP</td><td class="votes">17,845</td><td class="pct">5.5</td></tr>
+<tr><td style="color: #fff" bgcolor="#FF0000">Pete Stauber* ✔</td><td>REP</td><td class="votes">178,915</td><td class="pct">55.5</td></tr>
+<tr><td>Quinn Nystrom</td><td>DEM</td><td class="votes">125,304</td><td class="pct">38.9</td></tr>
+<tr><td>Judith Schwartzbacker</td><td>GRP</td><td class="votes">17,880</td><td class="pct">5.6</td></tr>
 
 </tbody>
 </table>
-72.5% of precincts reporting<br>
+72.7% of precincts reporting<br>
 Status: <b>Called for Stauber (R)</b><br>
 Lead: <b>Stauber +16.6</b><br>
 
@@ -7940,15 +7940,15 @@ Pre-election estimate: <b>N/A</b>
 <td>Pct</td>
 
 </tr>
-<tr><td style="color: #fff" bgcolor="#FF0000">Adrian Smith* ✔</td><td>REP</td><td class="votes">186,564</td><td class="pct">78.8</td></tr>
-<tr><td>Mark Elworth</td><td>DEM</td><td class="votes">41,299</td><td class="pct">17.5</td></tr>
-<tr><td>Dustin Hobbs</td><td>LIB</td><td class="votes">8,781</td><td class="pct">3.7</td></tr>
+<tr><td style="color: #fff" bgcolor="#FF0000">Adrian Smith* ✔</td><td>REP</td><td class="votes">192,152</td><td class="pct">78.5</td></tr>
+<tr><td>Mark Elworth</td><td>DEM</td><td class="votes">43,395</td><td class="pct">17.7</td></tr>
+<tr><td>Dustin Hobbs</td><td>LIB</td><td class="votes">9,096</td><td class="pct">3.7</td></tr>
 
 </tbody>
 </table>
-74.5% of precincts reporting<br>
+76.8% of precincts reporting<br>
 Status: <b>Called for Smith (R)</b><br>
-Lead: <b>Smith +61.4</b><br>
+Lead: <b>Smith +60.8</b><br>
 
 Pre-election estimate: <b>N/A</b>
 </div>
@@ -8377,14 +8377,14 @@ Pre-election estimate: <b>N/A</b>
 <td>Pct</td>
 
 </tr>
-<tr><td style="color: #fff" bgcolor="#0000FF">Jamaal Bowman ✔</td><td>DEM</td><td class="votes">150,741</td><td class="pct">83.9</td></tr>
-<tr><td>Patrick McManus</td><td>CON</td><td class="votes">28,821</td><td class="pct">16.1</td></tr>
+<tr><td style="color: #fff" bgcolor="#0000FF">Jamaal Bowman ✔</td><td>DEM</td><td class="votes">160,289</td><td class="pct">83.0</td></tr>
+<tr><td>Patrick McManus</td><td>CON</td><td class="votes">32,831</td><td class="pct">17.0</td></tr>
 
 </tbody>
 </table>
-58.3% of precincts reporting<br>
+62.6% of precincts reporting<br>
 Status: <b>Called for Bowman (D)</b><br>
-Lead: <b>Bowman +67.9</b><br>
+Lead: <b>Bowman +66.0</b><br>
 
 Pre-election estimate: <b>N/A</b>
 </div>
@@ -8657,8 +8657,8 @@ Pre-election estimate: <b>N/A</b>
 <td>Pct</td>
 
 </tr>
-<tr><td style="color: #fff" bgcolor="#FF0000">Dusty Johnson* ✔</td><td>REP</td><td class="votes">279,700</td><td class="pct">82.3</td></tr>
-<tr><td>Randy Luallin</td><td>LIB</td><td class="votes">59,988</td><td class="pct">17.7</td></tr>
+<tr><td style="color: #fff" bgcolor="#FF0000">Dusty Johnson* ✔</td><td>REP</td><td class="votes">281,141</td><td class="pct">82.4</td></tr>
+<tr><td>Randy Luallin</td><td>LIB</td><td class="votes">60,252</td><td class="pct">17.6</td></tr>
 
 </tbody>
 </table>
@@ -8726,14 +8726,14 @@ Pre-election estimate: <b>N/A</b>
 <td>Pct</td>
 
 </tr>
-<tr><td>Ron Kind*</td><td>DEM</td><td class="votes">153,245</td><td class="pct">52.0</td></tr>
-<tr><td>Derrick Van Orden</td><td>REP</td><td class="votes">141,472</td><td class="pct">48.0</td></tr>
+<tr><td>Ron Kind*</td><td>DEM</td><td class="votes">155,495</td><td class="pct">52.0</td></tr>
+<tr><td>Derrick Van Orden</td><td>REP</td><td class="votes">143,349</td><td class="pct">48.0</td></tr>
 
 </tbody>
 </table>
-69.6% of precincts reporting<br>
+70.9% of precincts reporting<br>
 Status: <b>Not called</b><br>
-Lead: <b>Kind +4.0</b><br>
+Lead: <b>Kind +4.1</b><br>
 
 Pre-election estimate: <b>N/A</b>
 </div>
@@ -8773,14 +8773,14 @@ Pre-election estimate: <b>N/A</b>
 <td>Pct</td>
 
 </tr>
-<tr><td style="color: #fff" bgcolor="#FF0000">Scott Fitzgerald ✔</td><td>REP</td><td class="votes">219,873</td><td class="pct">64.6</td></tr>
-<tr><td>Tom Palzewicz</td><td>DEM</td><td class="votes">120,334</td><td class="pct">35.4</td></tr>
+<tr><td style="color: #fff" bgcolor="#FF0000">Scott Fitzgerald ✔</td><td>REP</td><td class="votes">221,326</td><td class="pct">64.5</td></tr>
+<tr><td>Tom Palzewicz</td><td>DEM</td><td class="votes">121,567</td><td class="pct">35.5</td></tr>
 
 </tbody>
 </table>
 83.1% of precincts reporting<br>
 Status: <b>Called for Fitzgerald (R)</b><br>
-Lead: <b>Fitzgerald +29.3</b><br>
+Lead: <b>Fitzgerald +29.1</b><br>
 
 Pre-election estimate: <b>N/A</b>
 </div>
@@ -8819,12 +8819,12 @@ Pre-election estimate: <b>N/A</b>
 <td>Pct</td>
 
 </tr>
-<tr><td style="color: #fff" bgcolor="#FF0000">Tom Tiffany* ✔</td><td>REP</td><td class="votes">190,657</td><td class="pct">61.9</td></tr>
-<tr><td>Tricia Zunker</td><td>DEM</td><td class="votes">117,403</td><td class="pct">38.1</td></tr>
+<tr><td style="color: #fff" bgcolor="#FF0000">Tom Tiffany* ✔</td><td>REP</td><td class="votes">191,444</td><td class="pct">61.9</td></tr>
+<tr><td>Tricia Zunker</td><td>DEM</td><td class="votes">117,910</td><td class="pct">38.1</td></tr>
 
 </tbody>
 </table>
-77.0% of precincts reporting<br>
+77.6% of precincts reporting<br>
 Status: <b>Called for Tiffany (R)</b><br>
 Lead: <b>Tiffany +23.8</b><br>
 
@@ -9030,12 +9030,12 @@ Pre-election estimate: <b>N/A</b>
 <td>Pct</td>
 
 </tr>
-<tr><td>Matt Rosendale</td><td>REP</td><td class="votes">180,008</td><td class="pct">52.3</td></tr>
-<tr><td>Kathleen Williams</td><td>DEM</td><td class="votes">164,490</td><td class="pct">47.7</td></tr>
+<tr><td>Matt Rosendale</td><td>REP</td><td class="votes">181,090</td><td class="pct">52.3</td></tr>
+<tr><td>Kathleen Williams</td><td>DEM</td><td class="votes">165,373</td><td class="pct">47.7</td></tr>
 
 </tbody>
 </table>
-48.7% of precincts reporting<br>
+49.5% of precincts reporting<br>
 Status: <b>Not called</b><br>
 Lead: <b>Rosendale +4.5</b><br>
 
@@ -9053,14 +9053,15 @@ Pre-election estimate: <b>N/A</b>
 <td>Pct</td>
 
 </tr>
-<tr><td style="color: #fff" bgcolor="#0000FF">Dina Titus* ✔</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
-<tr><td>Joyce Bentley</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td style="color: #fff" bgcolor="#0000FF">Dina Titus* ✔</td><td>DEM</td><td class="votes">98,262</td><td class="pct">62.3</td></tr>
+<tr><td>Joyce Bentley</td><td>REP</td><td class="votes">53,011</td><td class="pct">33.6</td></tr>
+<tr><td>Kamau Bakari</td><td>IND</td><td class="votes">3,658</td><td class="pct">2.3</td></tr>
 
 </tbody>
 </table>
-0.0% of precincts reporting<br>
+64.4% of precincts reporting<br>
 Status: <b>Called for Titus (D)</b><br>
-Lead: <b>Tie</b><br>
+Lead: <b>Titus +28.7</b><br>
 
 Pre-election estimate: <b>N/A</b>
 </div>
@@ -9100,14 +9101,16 @@ Pre-election estimate: <b>N/A</b>
 <td>Pct</td>
 
 </tr>
-<tr><td>Susie Lee*</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
-<tr><td>Dan Rodimer</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Susie Lee*</td><td>DEM</td><td class="votes">157,991</td><td class="pct">49.9</td></tr>
+<tr><td>Dan Rodimer</td><td>REP</td><td class="votes">143,562</td><td class="pct">45.3</td></tr>
+<tr><td>Steve Brown</td><td>LIB</td><td class="votes">7,906</td><td class="pct">2.5</td></tr>
+<tr><td>Ed Bridges</td><td>IND</td><td class="votes">7,273</td><td class="pct">2.3</td></tr>
 
 </tbody>
 </table>
-0.0% of precincts reporting<br>
+78.5% of precincts reporting<br>
 Status: <b>Not called</b><br>
-Lead: <b>Tie</b><br>
+Lead: <b>Lee +4.6</b><br>
 
 Pre-election estimate: <b>N/A</b>
 </div>
@@ -9123,14 +9126,14 @@ Pre-election estimate: <b>N/A</b>
 <td>Pct</td>
 
 </tr>
-<tr><td>Jim Marchant</td><td>REP</td><td class="votes">7,778</td><td class="pct">72.6</td></tr>
-<tr><td>Steven Horsford*</td><td>DEM</td><td class="votes">2,615</td><td class="pct">24.4</td></tr>
+<tr><td>Steven Horsford*</td><td>DEM</td><td class="votes">121,019</td><td class="pct">53.0</td></tr>
+<tr><td>Jim Marchant</td><td>REP</td><td class="votes">101,217</td><td class="pct">44.3</td></tr>
 
 </tbody>
 </table>
-6.4% of precincts reporting<br>
+66.1% of precincts reporting<br>
 Status: <b>Not called</b><br>
-Lead: <b>Marchant +48.2</b><br>
+Lead: <b>Horsford +8.7</b><br>
 
 Pre-election estimate: <b>N/A</b>
 </div>
@@ -9246,7 +9249,7 @@ Pre-election estimate: <b>N/A</b>
 
 </tbody>
 </table>
-64.9% of precincts reporting<br>
+65.2% of precincts reporting<br>
 Status: <b>Not called</b><br>
 Lead: <b>LaMalfa +5.4</b><br>
 
@@ -9333,14 +9336,14 @@ Pre-election estimate: <b>N/A</b>
 <td>Pct</td>
 
 </tr>
-<tr><td style="color: #fff" bgcolor="#0000FF">Mike Thompson* ✔</td><td>DEM</td><td class="votes">180,363</td><td class="pct">80.0</td></tr>
-<tr><td>Scott Giblin</td><td>REP</td><td class="votes">45,145</td><td class="pct">20.0</td></tr>
+<tr><td style="color: #fff" bgcolor="#0000FF">Mike Thompson* ✔</td><td>DEM</td><td class="votes">181,221</td><td class="pct">79.9</td></tr>
+<tr><td>Scott Giblin</td><td>REP</td><td class="votes">45,584</td><td class="pct">20.1</td></tr>
 
 </tbody>
 </table>
-64.8% of precincts reporting<br>
+65.2% of precincts reporting<br>
 Status: <b>Called for Thompson (D)</b><br>
-Lead: <b>Thompson +60.0</b><br>
+Lead: <b>Thompson +59.8</b><br>
 
 Pre-election estimate: <b>N/A</b>
 </div>
@@ -9425,14 +9428,14 @@ Pre-election estimate: <b>N/A</b>
 <td>Pct</td>
 
 </tr>
-<tr><td>Jerry McNerney*</td><td>DEM</td><td class="votes">88,308</td><td class="pct">64.0</td></tr>
-<tr><td>Tony Amador</td><td>REP</td><td class="votes">49,715</td><td class="pct">36.0</td></tr>
+<tr><td>Jerry McNerney*</td><td>DEM</td><td class="votes">89,922</td><td class="pct">63.5</td></tr>
+<tr><td>Tony Amador</td><td>REP</td><td class="votes">51,755</td><td class="pct">36.5</td></tr>
 
 </tbody>
 </table>
-51.4% of precincts reporting<br>
+53.4% of precincts reporting<br>
 Status: <b>Not called</b><br>
-Lead: <b>McNerney +28.0</b><br>
+Lead: <b>McNerney +26.9</b><br>
 
 Pre-election estimate: <b>N/A</b>
 </div>
@@ -9471,14 +9474,14 @@ Pre-election estimate: <b>N/A</b>
 <td>Pct</td>
 
 </tr>
-<tr><td style="color: #fff" bgcolor="#0000FF">Mark DeSaulnier* ✔</td><td>DEM</td><td class="votes">159,792</td><td class="pct">77.6</td></tr>
-<tr><td>Nisha Sharma</td><td>REP</td><td class="votes">45,993</td><td class="pct">22.4</td></tr>
+<tr><td style="color: #fff" bgcolor="#0000FF">Mark DeSaulnier* ✔</td><td>DEM</td><td class="votes">169,135</td><td class="pct">76.2</td></tr>
+<tr><td>Nisha Sharma</td><td>REP</td><td class="votes">52,712</td><td class="pct">23.8</td></tr>
 
 </tbody>
 </table>
-57.7% of precincts reporting<br>
+62.2% of precincts reporting<br>
 Status: <b>Called for DeSaulnier (D)</b><br>
-Lead: <b>DeSaulnier +55.3</b><br>
+Lead: <b>DeSaulnier +52.5</b><br>
 
 Pre-election estimate: <b>N/A</b>
 </div>
@@ -9517,14 +9520,14 @@ Pre-election estimate: <b>N/A</b>
 <td>Pct</td>
 
 </tr>
-<tr><td style="color: #fff" bgcolor="#0000FF">Barbara Lee* ✔</td><td>DEM</td><td class="votes">145,167</td><td class="pct">91.2</td></tr>
-<tr><td>Nikka Piterman</td><td>REP</td><td class="votes">13,951</td><td class="pct">8.8</td></tr>
+<tr><td style="color: #fff" bgcolor="#0000FF">Barbara Lee* ✔</td><td>DEM</td><td class="votes">154,263</td><td class="pct">91.2</td></tr>
+<tr><td>Nikka Piterman</td><td>REP</td><td class="votes">14,963</td><td class="pct">8.8</td></tr>
 
 </tbody>
 </table>
-41.8% of precincts reporting<br>
+44.4% of precincts reporting<br>
 Status: <b>Called for Lee (D)</b><br>
-Lead: <b>Lee +82.5</b><br>
+Lead: <b>Lee +82.3</b><br>
 
 Pre-election estimate: <b>N/A</b>
 </div>
@@ -9563,14 +9566,14 @@ Pre-election estimate: <b>N/A</b>
 <td>Pct</td>
 
 </tr>
-<tr><td>Eric Swalwell*</td><td>DEM</td><td class="votes">107,647</td><td class="pct">73.8</td></tr>
-<tr><td>Alison Hayden</td><td>REP</td><td class="votes">38,210</td><td class="pct">26.2</td></tr>
+<tr><td>Eric Swalwell*</td><td>DEM</td><td class="votes">113,677</td><td class="pct">73.2</td></tr>
+<tr><td>Alison Hayden</td><td>REP</td><td class="votes">41,607</td><td class="pct">26.8</td></tr>
 
 </tbody>
 </table>
-46.9% of precincts reporting<br>
+50.2% of precincts reporting<br>
 Status: <b>Not called</b><br>
-Lead: <b>Swalwell +47.6</b><br>
+Lead: <b>Swalwell +46.4</b><br>
 
 Pre-election estimate: <b>N/A</b>
 </div>
@@ -9586,14 +9589,14 @@ Pre-election estimate: <b>N/A</b>
 <td>Pct</td>
 
 </tr>
-<tr><td>Jim Costa*</td><td>DEM</td><td class="votes">92,296</td><td class="pct">60.7</td></tr>
-<tr><td>Kevin Cookingham</td><td>REP</td><td class="votes">59,677</td><td class="pct">39.3</td></tr>
+<tr><td>Jim Costa*</td><td>DEM</td><td class="votes">93,399</td><td class="pct">61.0</td></tr>
+<tr><td>Kevin Cookingham</td><td>REP</td><td class="votes">59,756</td><td class="pct">39.0</td></tr>
 
 </tbody>
 </table>
-77.1% of precincts reporting<br>
+77.3% of precincts reporting<br>
 Status: <b>Not called</b><br>
-Lead: <b>Costa +21.5</b><br>
+Lead: <b>Costa +22.0</b><br>
 
 Pre-election estimate: <b>N/A</b>
 </div>
@@ -9609,12 +9612,12 @@ Pre-election estimate: <b>N/A</b>
 <td>Pct</td>
 
 </tr>
-<tr><td>Ro Khanna*</td><td>DEM</td><td class="votes">115,573</td><td class="pct">75.8</td></tr>
-<tr><td>Ritesh Tandon</td><td>REP</td><td class="votes">36,974</td><td class="pct">24.2</td></tr>
+<tr><td>Ro Khanna*</td><td>DEM</td><td class="votes">116,511</td><td class="pct">75.8</td></tr>
+<tr><td>Ritesh Tandon</td><td>REP</td><td class="votes">37,261</td><td class="pct">24.2</td></tr>
 
 </tbody>
 </table>
-53.8% of precincts reporting<br>
+54.3% of precincts reporting<br>
 Status: <b>Not called</b><br>
 Lead: <b>Khanna +51.5</b><br>
 
@@ -9637,7 +9640,7 @@ Pre-election estimate: <b>N/A</b>
 
 </tbody>
 </table>
-56.0% of precincts reporting<br>
+56.3% of precincts reporting<br>
 Status: <b>Not called</b><br>
 Lead: <b>Eshoo +33.4</b><br>
 
@@ -9701,8 +9704,8 @@ Pre-election estimate: <b>N/A</b>
 <td>Pct</td>
 
 </tr>
-<tr><td>David Valadao</td><td>REP</td><td class="votes">54,256</td><td class="pct">51.0</td></tr>
-<tr><td>TJ Cox*</td><td>DEM</td><td class="votes">52,051</td><td class="pct">49.0</td></tr>
+<tr><td>David Valadao</td><td>REP</td><td class="votes">54,534</td><td class="pct">51.1</td></tr>
+<tr><td>TJ Cox*</td><td>DEM</td><td class="votes">52,257</td><td class="pct">48.9</td></tr>
 
 </tbody>
 </table>
@@ -9724,14 +9727,14 @@ Pre-election estimate: <b>N/A</b>
 <td>Pct</td>
 
 </tr>
-<tr><td>Devin Nunes*</td><td>REP</td><td class="votes">109,183</td><td class="pct">52.1</td></tr>
-<tr><td>Phil Arballo</td><td>DEM</td><td class="votes">100,509</td><td class="pct">47.9</td></tr>
+<tr><td>Devin Nunes*</td><td>REP</td><td class="votes">115,529</td><td class="pct">52.4</td></tr>
+<tr><td>Phil Arballo</td><td>DEM</td><td class="votes">104,847</td><td class="pct">47.6</td></tr>
 
 </tbody>
 </table>
 71.8% of precincts reporting<br>
 Status: <b>Not called</b><br>
-Lead: <b>Nunes +4.1</b><br>
+Lead: <b>Nunes +4.8</b><br>
 
 Pre-election estimate: <b>N/A</b>
 </div>
@@ -9747,14 +9750,14 @@ Pre-election estimate: <b>N/A</b>
 <td>Pct</td>
 
 </tr>
-<tr><td>Kevin McCarthy*</td><td>REP</td><td class="votes">75,316</td><td class="pct">54.3</td></tr>
-<tr><td>Kim Mangone</td><td>DEM</td><td class="votes">63,483</td><td class="pct">45.7</td></tr>
+<tr><td>Kevin McCarthy*</td><td>REP</td><td class="votes">76,838</td><td class="pct">54.4</td></tr>
+<tr><td>Kim Mangone</td><td>DEM</td><td class="votes">64,453</td><td class="pct">45.6</td></tr>
 
 </tbody>
 </table>
 47.5% of precincts reporting<br>
 Status: <b>Not called</b><br>
-Lead: <b>McCarthy +8.5</b><br>
+Lead: <b>McCarthy +8.8</b><br>
 
 Pre-election estimate: <b>N/A</b>
 </div>
@@ -9839,13 +9842,13 @@ Pre-election estimate: <b>N/A</b>
 <td>Pct</td>
 
 </tr>
-<tr><td>Judy Chu*</td><td>DEM</td><td class="votes">162,598</td><td class="pct">72.2</td></tr>
+<tr><td style="color: #fff" bgcolor="#0000FF">Judy Chu* ✔</td><td>DEM</td><td class="votes">162,598</td><td class="pct">72.2</td></tr>
 <tr><td>Johnny Nalbandian</td><td>REP</td><td class="votes">62,487</td><td class="pct">27.8</td></tr>
 
 </tbody>
 </table>
 71.8% of precincts reporting<br>
-Status: <b>Not called</b><br>
+Status: <b>Called for Chu (D)</b><br>
 Lead: <b>Chu +44.5</b><br>
 
 Pre-election estimate: <b>N/A</b>
@@ -9862,13 +9865,13 @@ Pre-election estimate: <b>N/A</b>
 <td>Pct</td>
 
 </tr>
-<tr><td>Adam Schiff*</td><td>DEM</td><td class="votes">185,670</td><td class="pct">75.7</td></tr>
+<tr><td style="color: #fff" bgcolor="#0000FF">Adam Schiff* ✔</td><td>DEM</td><td class="votes">185,670</td><td class="pct">75.7</td></tr>
 <tr><td>Eric Early</td><td>REP</td><td class="votes">59,689</td><td class="pct">24.3</td></tr>
 
 </tbody>
 </table>
 74.1% of precincts reporting<br>
-Status: <b>Not called</b><br>
+Status: <b>Called for Schiff (D)</b><br>
 Lead: <b>Schiff +51.3</b><br>
 
 Pre-election estimate: <b>N/A</b>
@@ -9908,13 +9911,13 @@ Pre-election estimate: <b>N/A</b>
 <td>Pct</td>
 
 </tr>
-<tr><td>Brad Sherman*</td><td>DEM</td><td class="votes">182,633</td><td class="pct">72.1</td></tr>
+<tr><td style="color: #fff" bgcolor="#0000FF">Brad Sherman* ✔</td><td>DEM</td><td class="votes">182,633</td><td class="pct">72.1</td></tr>
 <tr><td>Mark Reed</td><td>REP</td><td class="votes">70,507</td><td class="pct">27.9</td></tr>
 
 </tbody>
 </table>
 73.3% of precincts reporting<br>
-Status: <b>Not called</b><br>
+Status: <b>Called for Sherman (D)</b><br>
 Lead: <b>Sherman +44.3</b><br>
 
 Pre-election estimate: <b>N/A</b>
@@ -9954,13 +9957,13 @@ Pre-election estimate: <b>N/A</b>
 <td>Pct</td>
 
 </tr>
-<tr><td>Grace Napolitano*</td><td>DEM</td><td class="votes">112,032</td><td class="pct">67.2</td></tr>
+<tr><td style="color: #fff" bgcolor="#0000FF">Grace Napolitano* ✔</td><td>DEM</td><td class="votes">112,032</td><td class="pct">67.2</td></tr>
 <tr><td>Joshua Scott</td><td>REP</td><td class="votes">54,585</td><td class="pct">32.8</td></tr>
 
 </tbody>
 </table>
 66.1% of precincts reporting<br>
-Status: <b>Not called</b><br>
+Status: <b>Called for Napolitano (D)</b><br>
 Lead: <b>Napolitano +34.5</b><br>
 
 Pre-election estimate: <b>N/A</b>
@@ -9977,13 +9980,13 @@ Pre-election estimate: <b>N/A</b>
 <td>Pct</td>
 
 </tr>
-<tr><td>Ted Lieu*</td><td>DEM</td><td class="votes">204,482</td><td class="pct">70.5</td></tr>
+<tr><td style="color: #fff" bgcolor="#0000FF">Ted Lieu* ✔</td><td>DEM</td><td class="votes">204,482</td><td class="pct">70.5</td></tr>
 <tr><td>James Bradley</td><td>REP</td><td class="votes">85,577</td><td class="pct">29.5</td></tr>
 
 </tbody>
 </table>
 72.0% of precincts reporting<br>
-Status: <b>Not called</b><br>
+Status: <b>Called for Lieu (D)</b><br>
 Lead: <b>Lieu +41.0</b><br>
 
 Pre-election estimate: <b>N/A</b>
@@ -10069,13 +10072,13 @@ Pre-election estimate: <b>N/A</b>
 <td>Pct</td>
 
 </tr>
-<tr><td>Karen Bass*</td><td>DEM</td><td class="votes">184,485</td><td class="pct">87.4</td></tr>
+<tr><td style="color: #fff" bgcolor="#0000FF">Karen Bass* ✔</td><td>DEM</td><td class="votes">184,485</td><td class="pct">87.4</td></tr>
 <tr><td>Errol Webber</td><td>REP</td><td class="votes">26,505</td><td class="pct">12.6</td></tr>
 
 </tbody>
 </table>
 66.7% of precincts reporting<br>
-Status: <b>Not called</b><br>
+Status: <b>Called for Bass (D)</b><br>
 Lead: <b>Bass +74.9</b><br>
 
 Pre-election estimate: <b>N/A</b>
@@ -10092,14 +10095,14 @@ Pre-election estimate: <b>N/A</b>
 <td>Pct</td>
 
 </tr>
-<tr><td>Linda Sanchez*</td><td>DEM</td><td class="votes">122,604</td><td class="pct">74.9</td></tr>
-<tr><td>Michael Tolar</td><td>DEM</td><td class="votes">41,081</td><td class="pct">25.1</td></tr>
+<tr><td>Linda Sanchez*</td><td>DEM</td><td class="votes">123,191</td><td class="pct">74.8</td></tr>
+<tr><td>Michael Tolar</td><td>DEM</td><td class="votes">41,421</td><td class="pct">25.2</td></tr>
 
 </tbody>
 </table>
-62.2% of precincts reporting<br>
+62.7% of precincts reporting<br>
 Status: <b>Not called</b><br>
-Lead: <b>Sanchez +49.8</b><br>
+Lead: <b>Sanchez +49.7</b><br>
 
 Pre-election estimate: <b>N/A</b>
 </div>
@@ -10115,14 +10118,14 @@ Pre-election estimate: <b>N/A</b>
 <td>Pct</td>
 
 </tr>
-<tr><td>Gil Cisneros*</td><td>DEM</td><td class="votes">119,259</td><td class="pct">53.6</td></tr>
-<tr><td>Young Kim</td><td>REP</td><td class="votes">103,154</td><td class="pct">46.4</td></tr>
+<tr><td>Gil Cisneros*</td><td>DEM</td><td class="votes">124,032</td><td class="pct">51.3</td></tr>
+<tr><td>Young Kim</td><td>REP</td><td class="votes">117,883</td><td class="pct">48.7</td></tr>
 
 </tbody>
 </table>
-68.0% of precincts reporting<br>
+73.7% of precincts reporting<br>
 Status: <b>Not called</b><br>
-Lead: <b>Cisneros +7.2</b><br>
+Lead: <b>Cisneros +2.5</b><br>
 
 Pre-election estimate: <b>N/A</b>
 </div>
@@ -10166,7 +10169,7 @@ Pre-election estimate: <b>N/A</b>
 
 </tbody>
 </table>
-40.4% of precincts reporting<br>
+40.8% of precincts reporting<br>
 Status: <b>Not called</b><br>
 Lead: <b>Takano +31.0</b><br>
 
@@ -10253,14 +10256,14 @@ Pre-election estimate: <b>N/A</b>
 <td>Pct</td>
 
 </tr>
-<tr><td style="color: #fff" bgcolor="#0000FF">Katie Porter* ✔</td><td>DEM</td><td class="votes">182,095</td><td class="pct">57.5</td></tr>
-<tr><td>Greg Raths</td><td>REP</td><td class="votes">134,652</td><td class="pct">42.5</td></tr>
+<tr><td style="color: #fff" bgcolor="#0000FF">Katie Porter* ✔</td><td>DEM</td><td class="votes">183,427</td><td class="pct">57.1</td></tr>
+<tr><td>Greg Raths</td><td>REP</td><td class="votes">137,718</td><td class="pct">42.9</td></tr>
 
 </tbody>
 </table>
-85.2% of precincts reporting<br>
+86.4% of precincts reporting<br>
 Status: <b>Called for Porter (D)</b><br>
-Lead: <b>Porter +15.0</b><br>
+Lead: <b>Porter +14.2</b><br>
 
 Pre-election estimate: <b>N/A</b>
 </div>
@@ -10276,14 +10279,14 @@ Pre-election estimate: <b>N/A</b>
 <td>Pct</td>
 
 </tr>
-<tr><td style="color: #fff" bgcolor="#0000FF">Lou Correa* ✔</td><td>DEM</td><td class="votes">108,355</td><td class="pct">70.9</td></tr>
-<tr><td>James Waters</td><td>REP</td><td class="votes">44,535</td><td class="pct">29.1</td></tr>
+<tr><td style="color: #fff" bgcolor="#0000FF">Lou Correa* ✔</td><td>DEM</td><td class="votes">116,093</td><td class="pct">69.3</td></tr>
+<tr><td>James Waters</td><td>REP</td><td class="votes">51,511</td><td class="pct">30.7</td></tr>
 
 </tbody>
 </table>
-74.1% of precincts reporting<br>
+81.0% of precincts reporting<br>
 Status: <b>Called for Correa (D)</b><br>
-Lead: <b>Correa +41.7</b><br>
+Lead: <b>Correa +38.5</b><br>
 
 Pre-election estimate: <b>N/A</b>
 </div>
@@ -10299,14 +10302,14 @@ Pre-election estimate: <b>N/A</b>
 <td>Pct</td>
 
 </tr>
-<tr><td>Alan Lowenthal*</td><td>DEM</td><td class="votes">139,105</td><td class="pct">66.9</td></tr>
-<tr><td>John Briscoe</td><td>REP</td><td class="votes">68,759</td><td class="pct">33.1</td></tr>
+<tr><td style="color: #fff" bgcolor="#0000FF">Alan Lowenthal* ✔</td><td>DEM</td><td class="votes">145,433</td><td class="pct">63.7</td></tr>
+<tr><td>John Briscoe</td><td>REP</td><td class="votes">83,008</td><td class="pct">36.3</td></tr>
 
 </tbody>
 </table>
-70.9% of precincts reporting<br>
-Status: <b>Not called</b><br>
-Lead: <b>Lowenthal +33.8</b><br>
+79.6% of precincts reporting<br>
+Status: <b>Called for Lowenthal (D)</b><br>
+Lead: <b>Lowenthal +27.3</b><br>
 
 Pre-election estimate: <b>N/A</b>
 </div>
@@ -10322,14 +10325,14 @@ Pre-election estimate: <b>N/A</b>
 <td>Pct</td>
 
 </tr>
-<tr><td>Harley Rouda*</td><td>DEM</td><td class="votes">153,795</td><td class="pct">53.8</td></tr>
-<tr><td>Michelle Steel</td><td>REP</td><td class="votes">132,239</td><td class="pct">46.2</td></tr>
+<tr><td>Harley Rouda*</td><td>DEM</td><td class="votes">157,977</td><td class="pct">52.5</td></tr>
+<tr><td>Michelle Steel</td><td>REP</td><td class="votes">142,861</td><td class="pct">47.5</td></tr>
 
 </tbody>
 </table>
-79.0% of precincts reporting<br>
+83.1% of precincts reporting<br>
 Status: <b>Not called</b><br>
-Lead: <b>Rouda +7.5</b><br>
+Lead: <b>Rouda +5.0</b><br>
 
 Pre-election estimate: <b>N/A</b>
 </div>
@@ -10345,14 +10348,14 @@ Pre-election estimate: <b>N/A</b>
 <td>Pct</td>
 
 </tr>
-<tr><td>Mike Levin*</td><td>DEM</td><td class="votes">159,479</td><td class="pct">58.5</td></tr>
-<tr><td>Brian Maryott</td><td>REP</td><td class="votes">113,329</td><td class="pct">41.5</td></tr>
+<tr><td>Mike Levin*</td><td>DEM</td><td class="votes">162,624</td><td class="pct">56.7</td></tr>
+<tr><td>Brian Maryott</td><td>REP</td><td class="votes">124,315</td><td class="pct">43.3</td></tr>
 
 </tbody>
 </table>
-75.3% of precincts reporting<br>
+80.4% of precincts reporting<br>
 Status: <b>Not called</b><br>
-Lead: <b>Levin +16.9</b><br>
+Lead: <b>Levin +13.4</b><br>
 
 Pre-election estimate: <b>N/A</b>
 </div>
@@ -10414,13 +10417,13 @@ Pre-election estimate: <b>N/A</b>
 <td>Pct</td>
 
 </tr>
-<tr><td>Scott Peters*</td><td>DEM</td><td class="votes">191,538</td><td class="pct">65.2</td></tr>
+<tr><td style="color: #fff" bgcolor="#0000FF">Scott Peters* ✔</td><td>DEM</td><td class="votes">191,538</td><td class="pct">65.2</td></tr>
 <tr><td>Jim DeBello</td><td>REP</td><td class="votes">102,246</td><td class="pct">34.8</td></tr>
 
 </tbody>
 </table>
 78.4% of precincts reporting<br>
-Status: <b>Not called</b><br>
+Status: <b>Called for Peters (D)</b><br>
 Lead: <b>Peters +30.4</b><br>
 
 Pre-election estimate: <b>N/A</b>
@@ -10460,14 +10463,14 @@ Pre-election estimate: <b>N/A</b>
 <td>Pct</td>
 
 </tr>
-<tr><td style="color: #fff" bgcolor="#0000FF">Suzanne Bonamici* ✔</td><td>DEM</td><td class="votes">252,708</td><td class="pct">66.2</td></tr>
-<tr><td>Christopher Christensen</td><td>REP</td><td class="votes">128,871</td><td class="pct">33.8</td></tr>
+<tr><td style="color: #fff" bgcolor="#0000FF">Suzanne Bonamici* ✔</td><td>DEM</td><td class="votes">254,077</td><td class="pct">65.9</td></tr>
+<tr><td>Christopher Christensen</td><td>REP</td><td class="votes">131,186</td><td class="pct">34.1</td></tr>
 
 </tbody>
 </table>
-87.6% of precincts reporting<br>
+88.4% of precincts reporting<br>
 Status: <b>Called for Bonamici (D)</b><br>
-Lead: <b>Bonamici +32.5</b><br>
+Lead: <b>Bonamici +31.9</b><br>
 
 Pre-election estimate: <b>N/A</b>
 </div>
@@ -10483,15 +10486,15 @@ Pre-election estimate: <b>N/A</b>
 <td>Pct</td>
 
 </tr>
-<tr><td style="color: #fff" bgcolor="#FF0000">Cliff Bentz ✔</td><td>REP</td><td class="votes">244,996</td><td class="pct">59.5</td></tr>
-<tr><td>Alex Spenser</td><td>DEM</td><td class="votes">155,298</td><td class="pct">37.7</td></tr>
-<tr><td>Robert Werch</td><td>LIB</td><td class="votes">11,477</td><td class="pct">2.8</td></tr>
+<tr><td style="color: #fff" bgcolor="#FF0000">Cliff Bentz ✔</td><td>REP</td><td class="votes">248,306</td><td class="pct">59.5</td></tr>
+<tr><td>Alex Spenser</td><td>DEM</td><td class="votes">157,081</td><td class="pct">37.6</td></tr>
+<tr><td>Robert Werch</td><td>LIB</td><td class="votes">11,939</td><td class="pct">2.9</td></tr>
 
 </tbody>
 </table>
-91.2% of precincts reporting<br>
+92.0% of precincts reporting<br>
 Status: <b>Called for Bentz (R)</b><br>
-Lead: <b>Bentz +21.8</b><br>
+Lead: <b>Bentz +21.9</b><br>
 
 Pre-election estimate: <b>N/A</b>
 </div>
@@ -10530,9 +10533,9 @@ Pre-election estimate: <b>N/A</b>
 <td>Pct</td>
 
 </tr>
-<tr><td style="color: #fff" bgcolor="#0000FF">Peter DeFazio* ✔</td><td>DEM</td><td class="votes">227,246</td><td class="pct">52.7</td></tr>
-<tr><td>Alek Skarlatos</td><td>REP</td><td class="votes">195,100</td><td class="pct">45.3</td></tr>
-<tr><td>Daniel Hoffay</td><td>PAC</td><td class="votes">8,770</td><td class="pct">2.0</td></tr>
+<tr><td style="color: #fff" bgcolor="#0000FF">Peter DeFazio* ✔</td><td>DEM</td><td class="votes">228,140</td><td class="pct">52.7</td></tr>
+<tr><td>Alek Skarlatos</td><td>REP</td><td class="votes">195,837</td><td class="pct">45.2</td></tr>
+<tr><td>Daniel Hoffay</td><td>PAC</td><td class="votes">8,860</td><td class="pct">2.0</td></tr>
 
 </tbody>
 </table>
@@ -10554,15 +10557,15 @@ Pre-election estimate: <b>N/A</b>
 <td>Pct</td>
 
 </tr>
-<tr><td style="color: #fff" bgcolor="#0000FF">Kurt Schrader* ✔</td><td>DEM</td><td class="votes">186,309</td><td class="pct">55.1</td></tr>
-<tr><td>Amy Ryan Courser</td><td>REP</td><td class="votes">143,954</td><td class="pct">42.6</td></tr>
-<tr><td>Matthew Rix</td><td>LIB</td><td class="votes">7,927</td><td class="pct">2.3</td></tr>
+<tr><td style="color: #fff" bgcolor="#0000FF">Kurt Schrader* ✔</td><td>DEM</td><td class="votes">186,724</td><td class="pct">55.0</td></tr>
+<tr><td>Amy Ryan Courser</td><td>REP</td><td class="votes">144,565</td><td class="pct">42.6</td></tr>
+<tr><td>Matthew Rix</td><td>LIB</td><td class="votes">7,996</td><td class="pct">2.4</td></tr>
 
 </tbody>
 </table>
 82.3% of precincts reporting<br>
 Status: <b>Called for Schrader (D)</b><br>
-Lead: <b>Schrader +12.5</b><br>
+Lead: <b>Schrader +12.4</b><br>
 
 Pre-election estimate: <b>N/A</b>
 </div>
