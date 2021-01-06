@@ -50,7 +50,7 @@
     <table class="scoreboard-table">
     <tbody>
     <tr>
-    <td style="color: #00f; font-weight: bold;"><span style="color: #00f; font-size: 36;">49</span> Democrats</td>
+    <td style="color: #00f; font-weight: bold;"><span style="color: #00f; font-size: 36;">50</span> Democrats</td>
     <td style="color: #f00; font-weight: bold; text-align: right;">Republicans <span style="color: #f00; font-size: 36">50</span></td>
     </tr>
     </tbody>
@@ -60,7 +60,7 @@
     <div style="width:960px; height:20px; background-color: #fff; position: relative;">&nbsp;</div>
   </div>
   <div class="no-height">
-    <div style="width:470px; height:20px; background-color: #00f; position: relative;">&nbsp;</div>
+    <div style="width:480px; height:20px; background-color: #00f; position: relative;">&nbsp;</div>
   </div>
   <div class="no-height">
     <div style="width:480px; height:20px; left: 480px; background-color: #f00; position: relative;">&nbsp;</div>
@@ -6929,13 +6929,13 @@ Pre-election estimate: <b>Safe D</b>
 <td>Pct</td>
 
 </tr>
-<tr><td>Jon Ossoff</td><td>DEM</td><td class="votes">2,214,178</td><td class="pct">50.2</td></tr>
-<tr><td>David Perdue*</td><td>REP</td><td class="votes">2,195,755</td><td class="pct">49.8</td></tr>
+<tr><td style="color: #fff" bgcolor="#0000FF">Jon Ossoff ✔</td><td>DEM</td><td class="votes">2,222,133</td><td class="pct">50.3</td></tr>
+<tr><td>David Perdue*</td><td>REP</td><td class="votes">2,197,274</td><td class="pct">49.7</td></tr>
 </tbody>
 </table>
 100.0% of precincts reporting<br>
-Status: <b>Not called</b><br>
-Lead: <b>Ossoff +0.4</b><br>
+Status: <b>Called for Ossoff (D) - FLIP</b><br>
+Lead: <b>Ossoff +0.6</b><br>
 <table class="modelstable"">
 <tbody>
 <tr class="cheaderrow">
@@ -6943,11 +6943,11 @@ Lead: <b>Ossoff +0.4</b><br>
 <td colspan="2">Estimate</td>
 </tr>
 <tr><td>Model 1</td><td><b>Ossoff</b></td><td class="pct">+0.3</td></tr>
-<tr><td>Model 2A</td><td><b>Ossoff</b></td><td class="pct">+0.4</td></tr>
+<tr><td>Model 2A</td><td><b>Ossoff</b></td><td class="pct">+0.6</td></tr>
 <tr><td>Model 2B</td><td><b>Ossoff</b></td><td class="pct">+0.8</td></tr>
 </tbody>
 </table>
-98.8% of estimated vote reporting<br>
+99.0% of estimated vote reporting<br>
 Pre-election estimate: <b>Leans R</b>
 </div>
 <div id="GA2-results" class="results">
@@ -6961,25 +6961,25 @@ Pre-election estimate: <b>Leans R</b>
 <td>Pct</td>
 
 </tr>
-<tr><td style="color: #fff" bgcolor="#0000FF">Raphael Warnock ✔</td><td>DEM</td><td class="votes">2,232,804</td><td class="pct">50.6</td></tr>
-<tr><td>Kelly Loeffler*</td><td>REP</td><td class="votes">2,177,226</td><td class="pct">49.4</td></tr>
+<tr><td style="color: #fff" bgcolor="#0000FF">Raphael Warnock ✔</td><td>DEM</td><td class="votes">2,240,837</td><td class="pct">50.7</td></tr>
+<tr><td>Kelly Loeffler*</td><td>REP</td><td class="votes">2,178,658</td><td class="pct">49.3</td></tr>
 </tbody>
 </table>
 100.0% of precincts reporting<br>
 Status: <b>Called for Warnock (D) - FLIP</b><br>
-Lead: <b>Warnock +1.3</b><br>
+Lead: <b>Warnock +1.4</b><br>
 <table class="modelstable"">
 <tbody>
 <tr class="cheaderrow">
 <td>Model</td>
 <td colspan="2">Estimate</td>
 </tr>
-<tr><td>Model 1</td><td><b>Warnock</b></td><td class="pct">+1.1</td></tr>
-<tr><td>Model 2A</td><td><b>Warnock</b></td><td class="pct">+1.3</td></tr>
-<tr><td>Model 2B</td><td><b>Warnock</b></td><td class="pct">+1.6</td></tr>
+<tr><td>Model 1</td><td><b>Warnock</b></td><td class="pct">+1.2</td></tr>
+<tr><td>Model 2A</td><td><b>Warnock</b></td><td class="pct">+1.4</td></tr>
+<tr><td>Model 2B</td><td><b>Warnock</b></td><td class="pct">+1.7</td></tr>
 </tbody>
 </table>
-98.8% of estimated vote reporting<br>
+99.0% of estimated vote reporting<br>
 Pre-election estimate: <b>Leans R</b>
 </div>
 <div id="ID-results" class="results">
@@ -8121,7 +8121,7 @@ Pre-election estimate: <b>Safe R</b>
   function setColor(id, color) {
     document.getElementById(id).style.fill = color;    
   }
-  var stateColors = {"AL": "#FF0000", "AK": "#FF0000", "AZ": "#0000FF", "AR": "#FF0000", "CO": "#0000FF", "DE": "#0000FF", "GA": "#9090FF", "GA2": "#0000FF", "ID": "#FF0000", "IL": "#0000FF", "IA": "#FF0000", "KS": "#FF0000", "KY": "#FF0000", "LA": "#FF0000", "ME": "#FF0000", "MA": "#0000FF", "MI": "#0000FF", "MN": "#0000FF", "MS": "#FF0000", "MT": "#FF0000", "NE": "#FF0000", "NH": "#0000FF", "NJ": "#0000FF", "NM": "#0000FF", "NC": "#FF0000", "OK": "#FF0000", "OR": "#0000FF", "RI": "#0000FF", "SC": "#FF0000", "SD": "#FF0000", "TN": "#FF0000", "TX": "#FF0000", "VA": "#0000FF", "WY": "#FF0000", "WV": "#FF0000"};
+  var stateColors = {"AL": "#FF0000", "AK": "#FF0000", "AZ": "#0000FF", "AR": "#FF0000", "CO": "#0000FF", "DE": "#0000FF", "GA": "#0000FF", "GA2": "#0000FF", "ID": "#FF0000", "IL": "#0000FF", "IA": "#FF0000", "KS": "#FF0000", "KY": "#FF0000", "LA": "#FF0000", "ME": "#FF0000", "MA": "#0000FF", "MI": "#0000FF", "MN": "#0000FF", "MS": "#FF0000", "MT": "#FF0000", "NE": "#FF0000", "NH": "#0000FF", "NJ": "#0000FF", "NM": "#0000FF", "NC": "#FF0000", "OK": "#FF0000", "OR": "#0000FF", "RI": "#0000FF", "SC": "#FF0000", "SD": "#FF0000", "TN": "#FF0000", "TX": "#FF0000", "VA": "#0000FF", "WY": "#FF0000", "WV": "#FF0000"};
   function colorAll() {
     for (var state in stateColors) {
       setColor(state, stateColors[state]);
@@ -12708,12 +12708,12 @@ Lead: <b>Perdue +69.0</b><br>
 <td>Votes</td>
 <td>Pct</td>
 </tr>
-<tr><td>Jon Ossoff</td><td>DEM</td><td class="votes">273,292</td><td class="pct">83.3</td></tr>
-<tr><td>David Perdue</td><td>REP</td><td class="votes">54,831</td><td class="pct">16.7</td></tr>
+<tr><td>Jon Ossoff</td><td>DEM</td><td class="votes">280,818</td><td class="pct">83.4</td></tr>
+<tr><td>David Perdue</td><td>REP</td><td class="votes">55,977</td><td class="pct">16.6</td></tr>
 </tbody>
 </table>
 100.0% of precincts reporting<br>
-Lead: <b>Ossoff +66.6</b><br>
+Lead: <b>Ossoff +66.8</b><br>
 </div>
 <div id="13087-results" class="results">
 <b class="name">Decatur</b><br>
@@ -12963,12 +12963,12 @@ Lead: <b>Perdue +40.6</b><br>
 <td>Votes</td>
 <td>Pct</td>
 </tr>
-<tr><td>David Perdue</td><td>REP</td><td class="votes">77,795</td><td class="pct">68.1</td></tr>
-<tr><td>Jon Ossoff</td><td>DEM</td><td class="votes">36,419</td><td class="pct">31.9</td></tr>
+<tr><td>David Perdue</td><td>REP</td><td class="votes">78,168</td><td class="pct">68.0</td></tr>
+<tr><td>Jon Ossoff</td><td>DEM</td><td class="votes">36,848</td><td class="pct">32.0</td></tr>
 </tbody>
 </table>
 100.0% of precincts reporting<br>
-Lead: <b>Perdue +36.2</b><br>
+Lead: <b>Perdue +35.9</b><br>
 </div>
 <div id="13119-results" class="results">
 <b class="name">Franklin</b><br>
@@ -15411,12 +15411,12 @@ Lead: <b>Loeffler +68.4</b><br>
 <td>Votes</td>
 <td>Pct</td>
 </tr>
-<tr><td>Raphael Warnock</td><td>DEM</td><td class="votes">275,338</td><td class="pct">83.9</td></tr>
-<tr><td>Kelly Loeffler</td><td>REP</td><td class="votes">52,849</td><td class="pct">16.1</td></tr>
+<tr><td>Raphael Warnock</td><td>DEM</td><td class="votes">282,934</td><td class="pct">84.0</td></tr>
+<tr><td>Kelly Loeffler</td><td>REP</td><td class="votes">53,917</td><td class="pct">16.0</td></tr>
 </tbody>
 </table>
 100.0% of precincts reporting<br>
-Lead: <b>Warnock +67.8</b><br>
+Lead: <b>Warnock +68.0</b><br>
 </div>
 <div id="13d087-results" class="results">
 <b class="name">Decatur</b><br>
@@ -15666,12 +15666,12 @@ Lead: <b>Loeffler +39.7</b><br>
 <td>Votes</td>
 <td>Pct</td>
 </tr>
-<tr><td>Kelly Loeffler</td><td>REP</td><td class="votes">76,990</td><td class="pct">67.4</td></tr>
-<tr><td>Raphael Warnock</td><td>DEM</td><td class="votes">37,165</td><td class="pct">32.6</td></tr>
+<tr><td>Kelly Loeffler</td><td>REP</td><td class="votes">77,354</td><td class="pct">67.3</td></tr>
+<tr><td>Raphael Warnock</td><td>DEM</td><td class="votes">37,602</td><td class="pct">32.7</td></tr>
 </tbody>
 </table>
 100.0% of precincts reporting<br>
-Lead: <b>Loeffler +34.9</b><br>
+Lead: <b>Loeffler +34.6</b><br>
 </div>
 <div id="13d119-results" class="results">
 <b class="name">Franklin</b><br>
