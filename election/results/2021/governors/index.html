@@ -50,7 +50,7 @@
     <table class="scoreboard-table">
     <tbody>
     <tr>
-    <td style="color: #00f; font-weight: bold;"><span style="color: #00f; font-size: 36;">22</span> Democrats</td>
+    <td style="color: #00f; font-weight: bold;"><span style="color: #00f; font-size: 36;">23</span> Democrats</td>
     <td style="color: #f00; font-weight: bold; text-align: right;">Republicans <span style="color: #f00; font-size: 36">27</span></td>
     </tr>
     </tbody>
@@ -60,7 +60,7 @@
     <div style="width:960px; height:20px; background-color: #fff; position: relative;">&nbsp;</div>
   </div>
   <div class="no-height">
-    <div style="width:422px; height:20px; background-color: #00f; position: relative;">&nbsp;</div>
+    <div style="width:442px; height:20px; background-color: #00f; position: relative;">&nbsp;</div>
   </div>
   <div class="no-height">
     <div style="width:518px; height:20px; left: 442px; background-color: #f00; position: relative;">&nbsp;</div>
@@ -6441,28 +6441,27 @@
 <td>Pct</td>
 
 </tr>
-<tr><td>Gavin Newsom*</td><td>DEM</td><td class="votes">5,268,241</td><td class="pct">67.0</td></tr>
-<tr><td>Recall</td><td>REP</td><td class="votes">2,592,813</td><td class="pct">33.0</td></tr>
+<tr><td style="color: #fff" bgcolor="#0000FF">Gavin Newsom* ✔</td><td>DEM</td><td class="votes">5,345,327</td><td class="pct">67.3</td></tr>
+<tr><td>Recall</td><td>REP</td><td class="votes">2,595,547</td><td class="pct">32.7</td></tr>
 </tbody>
 </table>
-56.8% of precincts reporting<br>
-Status: <b>Likely Newsom (D) <span style="color: #0000FF">⬛</span></b><br>
-Lead: <b>Newsom +34.0</b><br>
+57.7% of precincts reporting<br>
+Status: <b>Called for Newsom (D)</b><br>
+Lead: <b>Newsom +34.6</b><br>
 <table class="modelstable"">
 <tbody>
 <tr class="cheaderrow">
 <td>Model</td>
 <td colspan="2">Estimate</td>
 </tr>
-<tr><td>Model 1A</td><td><b>Newsom</b></td><td class="pct">+33.3</td></tr>
-<tr><td>Model 1B</td><td><b>Newsom</b></td><td class="pct">+33.4</td></tr>
-<tr><td>Model 2A</td><td><b>Newsom</b></td><td class="pct">+23.0</td></tr>
-<tr><td>Model 2B</td><td><b>Newsom</b></td><td class="pct">+25.0</td></tr>
-<tr><td>Model 1C</td><td><b>Newsom</b></td><td class="pct">+31.3</td></tr>
-<tr><td>Model 2C</td><td><b>Newsom</b></td><td class="pct">+20.7</td></tr>
+<tr><td>Model 1</td><td><b>Newsom</b></td><td class="pct">+34.3</td></tr>
+<tr><td>Model 2A</td><td><b>Newsom</b></td><td class="pct">+23.8</td></tr>
+<tr><td>Model 2B</td><td><b>Newsom</b></td><td class="pct">+25.8</td></tr>
+<tr><td>Model 1C</td><td><b>Newsom</b></td><td class="pct">+31.5</td></tr>
+<tr><td>Model 2C</td><td><b>Newsom</b></td><td class="pct">+21.6</td></tr>
 </tbody>
 </table>
-64.4% of estimated vote reporting<br>
+65.5% of estimated vote reporting<br>
 Pre-election estimate: <b>Likely D</b>
 </div>
 
@@ -6902,15 +6901,15 @@ Pre-election estimate: <b>Likely D</b>
   function setColor(id, color) {
     document.getElementById(id).style.fill = color;    
   }
-  var stateColors = {"CA": "#9090FF"};
+  var stateColors = {"CA": "#0000FF"};
   function colorAll() {
     for (var state in stateColors) {
       setColor(state, stateColors[state]);
     }
   }
   colorAll();
-  var actual = {"c06001": "#0000C0", "c06003": "#FFFFFF", "c06005": "#C00000", "c06007": "#FFFFFF", "c06009": "#FF0000", "c06011": "#FFFFFF", "c06013": "#0000C0", "c06015": "#FF0000", "c06017": "#FF3030", "c06019": "#3030FF", "c06021": "#C00000", "c06023": "#0000C0", "c06025": "#0000C0", "c06027": "#3030FF", "c06029": "#FF0000", "c06031": "#C00000", "c06033": "#FFFFFF", "c06035": "#C00000", "c06037": "#0000C0", "c06039": "#FF0000", "c06041": "#0000C0", "c06043": "#FF0000", "c06045": "#0000C0", "c06047": "#6060FF", "c06049": "#C00000", "c06051": "#FFFFFF", "c06053": "#0000C0", "c06055": "#0000C0", "c06057": "#0000FF", "c06059": "#0000FF", "c06061": "#6060FF", "c06063": "#C00000", "c06065": "#3030FF", "c06067": "#0000C0", "c06069": "#0000C0", "c06071": "#0000FF", "c06073": "#0000C0", "c06075": "#0000C0", "c06077": "#0000FF", "c06079": "#0000C0", "c06081": "#0000C0", "c06083": "#0000C0", "c06085": "#0000C0", "c06087": "#FFFFFF", "c06089": "#C00000", "c06091": "#FFFFFF", "c06093": "#FFFFFF", "c06095": "#C00000", "c06097": "#0000C0", "c06099": "#9090FF", "c06101": "#FF0000", "c06103": "#FFFFFF", "c06105": "#FF3030", "c06107": "#FF0000", "c06109": "#FF0000", "c06111": "#0000C0", "c06113": "#0000C0", "c06115": "#FF0000"};
-  var margins = {"c06001": "#0000C0", "c06003": "#FFFFFF", "c06005": "#0000C0", "c06007": "#FFFFFF", "c06009": "#0000C0", "c06011": "#FFFFFF", "c06013": "#0000C0", "c06015": "#0000C0", "c06017": "#0000C0", "c06019": "#0000C0", "c06021": "#0000C0", "c06023": "#0000C0", "c06025": "#0000C0", "c06027": "#0000C0", "c06029": "#0000C0", "c06031": "#0000C0", "c06033": "#FFFFFF", "c06035": "#0000FF", "c06037": "#0000C0", "c06039": "#0000C0", "c06041": "#0000C0", "c06043": "#0000C0", "c06045": "#0000C0", "c06047": "#0000C0", "c06049": "#0000C0", "c06051": "#FFFFFF", "c06053": "#0000C0", "c06055": "#0000C0", "c06057": "#0000C0", "c06059": "#0000C0", "c06061": "#0000C0", "c06063": "#0000C0", "c06065": "#0000C0", "c06067": "#0000C0", "c06069": "#0000C0", "c06071": "#0000C0", "c06073": "#0000C0", "c06075": "#0000C0", "c06077": "#0000C0", "c06079": "#0000C0", "c06081": "#0000C0", "c06083": "#0000C0", "c06085": "#0000C0", "c06087": "#FFFFFF", "c06089": "#0000C0", "c06091": "#FFFFFF", "c06093": "#FFFFFF", "c06095": "#C00000", "c06097": "#0000C0", "c06099": "#0000C0", "c06101": "#0000C0", "c06103": "#FFFFFF", "c06105": "#0000C0", "c06107": "#0000C0", "c06109": "#0000C0", "c06111": "#0000C0", "c06113": "#0000C0", "c06115": "#0000C0"};
+  var actual = {"c06001": "#0000C0", "c06003": "#FFFFFF", "c06005": "#C00000", "c06007": "#FF6060", "c06009": "#FF0000", "c06011": "#C00000", "c06013": "#0000C0", "c06015": "#FF0000", "c06017": "#FF3030", "c06019": "#3030FF", "c06021": "#C00000", "c06023": "#0000C0", "c06025": "#0000C0", "c06027": "#3030FF", "c06029": "#FF0000", "c06031": "#C00000", "c06033": "#0000C0", "c06035": "#C00000", "c06037": "#0000C0", "c06039": "#FF0000", "c06041": "#0000C0", "c06043": "#FF0000", "c06045": "#0000C0", "c06047": "#6060FF", "c06049": "#C00000", "c06051": "#FFFFFF", "c06053": "#0000C0", "c06055": "#0000C0", "c06057": "#0000FF", "c06059": "#0000FF", "c06061": "#6060FF", "c06063": "#C00000", "c06065": "#3030FF", "c06067": "#0000C0", "c06069": "#0000C0", "c06071": "#0000FF", "c06073": "#0000C0", "c06075": "#0000C0", "c06077": "#0000FF", "c06079": "#0000C0", "c06081": "#0000C0", "c06083": "#0000C0", "c06085": "#0000C0", "c06087": "#FFFFFF", "c06089": "#C00000", "c06091": "#C00000", "c06093": "#FFFFFF", "c06095": "#0000C0", "c06097": "#0000C0", "c06099": "#9090FF", "c06101": "#FF0000", "c06103": "#C00000", "c06105": "#FF3030", "c06107": "#FF0000", "c06109": "#FF0000", "c06111": "#0000C0", "c06113": "#0000C0", "c06115": "#FF0000"};
+  var margins = {"c06001": "#0000C0", "c06003": "#FFFFFF", "c06005": "#0000C0", "c06007": "#0000C0", "c06009": "#0000C0", "c06011": "#0000C0", "c06013": "#0000C0", "c06015": "#0000C0", "c06017": "#0000C0", "c06019": "#0000C0", "c06021": "#0000C0", "c06023": "#0000C0", "c06025": "#0000C0", "c06027": "#0000C0", "c06029": "#0000C0", "c06031": "#0000C0", "c06033": "#0000C0", "c06035": "#0000FF", "c06037": "#0000C0", "c06039": "#0000C0", "c06041": "#0000C0", "c06043": "#0000C0", "c06045": "#0000C0", "c06047": "#0000C0", "c06049": "#0000C0", "c06051": "#FFFFFF", "c06053": "#0000C0", "c06055": "#0000C0", "c06057": "#0000C0", "c06059": "#0000C0", "c06061": "#0000C0", "c06063": "#0000C0", "c06065": "#0000C0", "c06067": "#0000C0", "c06069": "#0000C0", "c06071": "#0000C0", "c06073": "#0000C0", "c06075": "#0000C0", "c06077": "#0000C0", "c06079": "#0000C0", "c06081": "#0000C0", "c06083": "#0000C0", "c06085": "#0000C0", "c06087": "#FFFFFF", "c06089": "#0000C0", "c06091": "#0000C0", "c06093": "#FFFFFF", "c06095": "#0000C0", "c06097": "#0000C0", "c06099": "#0000C0", "c06101": "#0000C0", "c06103": "#0000C0", "c06105": "#0000C0", "c06107": "#0000C0", "c06109": "#0000C0", "c06111": "#0000C0", "c06113": "#0000C0", "c06115": "#0000C0"};
   function colorCounties(fips, colors) {
     if (!fips && fips !== "") {
       fips = current_fips;
@@ -6990,12 +6989,12 @@ Lead: <b>Recall +26.2</b><br>
 <td>Votes</td>
 <td>Pct</td>
 </tr>
-<tr><td>Gavin Newsom</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
-<tr><td>Recall</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Recall</td><td>REP</td><td class="votes">32,195</td><td class="pct">51.5</td></tr>
+<tr><td>Gavin Newsom</td><td>DEM</td><td class="votes">30,348</td><td class="pct">48.5</td></tr>
 </tbody>
 </table>
-0.0% of precincts reporting<br>
-Lead: <b>Tie</b><br>
+78.8% of precincts reporting<br>
+Lead: <b>Recall +3.0</b><br>
 </div>
 <div id="06009-results" class="results">
 <b class="name">Calaveras</b><br>
@@ -7024,12 +7023,12 @@ Lead: <b>Recall +18.7</b><br>
 <td>Votes</td>
 <td>Pct</td>
 </tr>
-<tr><td>Gavin Newsom</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
-<tr><td>Recall</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Recall</td><td>REP</td><td class="votes">2,124</td><td class="pct">60.7</td></tr>
+<tr><td>Gavin Newsom</td><td>DEM</td><td class="votes">1,373</td><td class="pct">39.3</td></tr>
 </tbody>
 </table>
-0.0% of precincts reporting<br>
-Lead: <b>Tie</b><br>
+50.0% of precincts reporting<br>
+Lead: <b>Recall +21.5</b><br>
 </div>
 <div id="06013-results" class="results">
 <b class="name">Contra Costa</b><br>
@@ -7096,7 +7095,7 @@ Lead: <b>Recall +5.3</b><br>
 <tr><td>Recall</td><td>REP</td><td class="votes">71,820</td><td class="pct">46.4</td></tr>
 </tbody>
 </table>
-59.1% of precincts reporting<br>
+58.8% of precincts reporting<br>
 Lead: <b>Newsom +7.2</b><br>
 </div>
 <div id="06021-results" class="results">
@@ -7211,12 +7210,12 @@ Lead: <b>Recall +20.5</b><br>
 <td>Votes</td>
 <td>Pct</td>
 </tr>
-<tr><td>Gavin Newsom</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
-<tr><td>Recall</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Gavin Newsom</td><td>DEM</td><td class="votes">4,313</td><td class="pct">63.5</td></tr>
+<tr><td>Recall</td><td>REP</td><td class="votes">2,482</td><td class="pct">36.5</td></tr>
 </tbody>
 </table>
-0.0% of precincts reporting<br>
-Lead: <b>Tie</b><br>
+27.1% of precincts reporting<br>
+Lead: <b>Newsom +26.9</b><br>
 </div>
 <div id="06035-results" class="results">
 <b class="name">Lassen</b><br>
@@ -7704,12 +7703,12 @@ Lead: <b>Recall +20.7</b><br>
 <td>Votes</td>
 <td>Pct</td>
 </tr>
-<tr><td>Gavin Newsom</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
-<tr><td>Recall</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Recall</td><td>REP</td><td class="votes">903</td><td class="pct">61.9</td></tr>
+<tr><td>Gavin Newsom</td><td>DEM</td><td class="votes">555</td><td class="pct">38.1</td></tr>
 </tbody>
 </table>
-0.0% of precincts reporting<br>
-Lead: <b>Tie</b><br>
+78.3% of precincts reporting<br>
+Lead: <b>Recall +23.9</b><br>
 </div>
 <div id="06093-results" class="results">
 <b class="name">Siskiyou</b><br>
@@ -7738,12 +7737,12 @@ Lead: <b>Tie</b><br>
 <td>Votes</td>
 <td>Pct</td>
 </tr>
-<tr><td>Recall</td><td>REP</td><td class="votes">68,440</td><td class="pct">69.7</td></tr>
-<tr><td>Gavin Newsom</td><td>DEM</td><td class="votes">29,726</td><td class="pct">30.3</td></tr>
+<tr><td>Gavin Newsom</td><td>DEM</td><td class="votes">68,440</td><td class="pct">69.7</td></tr>
+<tr><td>Recall</td><td>REP</td><td class="votes">29,726</td><td class="pct">30.3</td></tr>
 </tbody>
 </table>
 63.6% of precincts reporting<br>
-Lead: <b>Recall +39.4</b><br>
+Lead: <b>Newsom +39.4</b><br>
 </div>
 <div id="06097-results" class="results">
 <b class="name">Sonoma</b><br>
@@ -7806,12 +7805,12 @@ Lead: <b>Recall +18.4</b><br>
 <td>Votes</td>
 <td>Pct</td>
 </tr>
-<tr><td>Gavin Newsom</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
-<tr><td>Recall</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Recall</td><td>REP</td><td class="votes">3,744</td><td class="pct">67.7</td></tr>
+<tr><td>Gavin Newsom</td><td>DEM</td><td class="votes">1,783</td><td class="pct">32.3</td></tr>
 </tbody>
 </table>
-0.0% of precincts reporting<br>
-Lead: <b>Tie</b><br>
+18.2% of precincts reporting<br>
+Lead: <b>Recall +35.5</b><br>
 </div>
 <div id="06105-results" class="results">
 <b class="name">Trinity</b><br>
