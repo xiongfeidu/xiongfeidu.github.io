@@ -6441,24 +6441,28 @@
 <td>Pct</td>
 
 </tr>
-<tr><td>Gavin Newsom*</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
-<tr><td>Recall</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Gavin Newsom*</td><td>DEM</td><td class="votes">5,073,920</td><td class="pct">68.1</td></tr>
+<tr><td>Recall</td><td>REP</td><td class="votes">2,380,887</td><td class="pct">31.9</td></tr>
 </tbody>
 </table>
-0.0% of precincts reporting<br>
-Status: <b>Not called</b><br>
-Lead: <b>Tie</b><br>
+53.7% of precincts reporting<br>
+Status: <b>Likely Newsom (D) <span style="color: #0000FF">⬛</span></b><br>
+Lead: <b>Newsom +36.1</b><br>
 <table class="modelstable"">
 <tbody>
 <tr class="cheaderrow">
 <td>Model</td>
 <td colspan="2">Estimate</td>
 </tr>
-<tr><td>Model 1</td><td><b>Tie</b></td><td class="pct"></td></tr>
-<tr><td>Model 2</td><td><b>Newsom</b></td><td class="pct">+10.0</td></tr>
+<tr><td>Model 1A</td><td><b>Newsom</b></td><td class="pct">+33.5</td></tr>
+<tr><td>Model 1B</td><td><b>Newsom</b></td><td class="pct">+33.6</td></tr>
+<tr><td>Model 2A</td><td><b>Newsom</b></td><td class="pct">+22.4</td></tr>
+<tr><td>Model 2B</td><td><b>Newsom</b></td><td class="pct">+24.3</td></tr>
+<tr><td>Model 1C</td><td><b>Newsom</b></td><td class="pct">+30.7</td></tr>
+<tr><td>Model 2C</td><td><b>Newsom</b></td><td class="pct">+20.2</td></tr>
 </tbody>
 </table>
-0.0% of estimated vote reporting<br>
+61.1% of estimated vote reporting<br>
 Pre-election estimate: <b>Likely D</b>
 </div>
 
@@ -6898,15 +6902,15 @@ Pre-election estimate: <b>Likely D</b>
   function setColor(id, color) {
     document.getElementById(id).style.fill = color;    
   }
-  var stateColors = {"CA": "#FFFFFF"};
+  var stateColors = {"CA": "#9090FF"};
   function colorAll() {
     for (var state in stateColors) {
       setColor(state, stateColors[state]);
     }
   }
   colorAll();
-  var actual = {"c06001": "#FFFFFF", "c06003": "#FFFFFF", "c06005": "#FFFFFF", "c06007": "#FFFFFF", "c06009": "#FFFFFF", "c06011": "#FFFFFF", "c06013": "#FFFFFF", "c06015": "#FFFFFF", "c06017": "#FFFFFF", "c06019": "#FFFFFF", "c06021": "#FFFFFF", "c06023": "#FFFFFF", "c06025": "#FFFFFF", "c06027": "#FFFFFF", "c06029": "#FFFFFF", "c06031": "#FFFFFF", "c06033": "#FFFFFF", "c06035": "#FFFFFF", "c06037": "#FFFFFF", "c06039": "#FFFFFF", "c06041": "#FFFFFF", "c06043": "#FFFFFF", "c06045": "#FFFFFF", "c06047": "#FFFFFF", "c06049": "#FFFFFF", "c06051": "#FFFFFF", "c06053": "#FFFFFF", "c06055": "#FFFFFF", "c06057": "#FFFFFF", "c06059": "#FFFFFF", "c06061": "#FFFFFF", "c06063": "#FFFFFF", "c06065": "#FFFFFF", "c06067": "#FFFFFF", "c06069": "#FFFFFF", "c06071": "#FFFFFF", "c06073": "#FFFFFF", "c06075": "#FFFFFF", "c06077": "#FFFFFF", "c06079": "#FFFFFF", "c06081": "#FFFFFF", "c06083": "#FFFFFF", "c06085": "#FFFFFF", "c06087": "#FFFFFF", "c06089": "#FFFFFF", "c06091": "#FFFFFF", "c06093": "#FFFFFF", "c06095": "#FFFFFF", "c06097": "#FFFFFF", "c06099": "#FFFFFF", "c06101": "#FFFFFF", "c06103": "#FFFFFF", "c06105": "#FFFFFF", "c06107": "#FFFFFF", "c06109": "#FFFFFF", "c06111": "#FFFFFF", "c06113": "#FFFFFF", "c06115": "#FFFFFF"};
-  var margins = {"c06001": "#FFFFFF", "c06003": "#FFFFFF", "c06005": "#FFFFFF", "c06007": "#FFFFFF", "c06009": "#FFFFFF", "c06011": "#FFFFFF", "c06013": "#FFFFFF", "c06015": "#FFFFFF", "c06017": "#FFFFFF", "c06019": "#FFFFFF", "c06021": "#FFFFFF", "c06023": "#FFFFFF", "c06025": "#FFFFFF", "c06027": "#FFFFFF", "c06029": "#FFFFFF", "c06031": "#FFFFFF", "c06033": "#FFFFFF", "c06035": "#FFFFFF", "c06037": "#FFFFFF", "c06039": "#FFFFFF", "c06041": "#FFFFFF", "c06043": "#FFFFFF", "c06045": "#FFFFFF", "c06047": "#FFFFFF", "c06049": "#FFFFFF", "c06051": "#FFFFFF", "c06053": "#FFFFFF", "c06055": "#FFFFFF", "c06057": "#FFFFFF", "c06059": "#FFFFFF", "c06061": "#FFFFFF", "c06063": "#FFFFFF", "c06065": "#FFFFFF", "c06067": "#FFFFFF", "c06069": "#FFFFFF", "c06071": "#FFFFFF", "c06073": "#FFFFFF", "c06075": "#FFFFFF", "c06077": "#FFFFFF", "c06079": "#FFFFFF", "c06081": "#FFFFFF", "c06083": "#FFFFFF", "c06085": "#FFFFFF", "c06087": "#FFFFFF", "c06089": "#FFFFFF", "c06091": "#FFFFFF", "c06093": "#FFFFFF", "c06095": "#FFFFFF", "c06097": "#FFFFFF", "c06099": "#FFFFFF", "c06101": "#FFFFFF", "c06103": "#FFFFFF", "c06105": "#FFFFFF", "c06107": "#FFFFFF", "c06109": "#FFFFFF", "c06111": "#FFFFFF", "c06113": "#FFFFFF", "c06115": "#FFFFFF"};
+  var actual = {"c06001": "#0000C0", "c06003": "#FFFFFF", "c06005": "#FFFFFF", "c06007": "#FFFFFF", "c06009": "#FFFFFF", "c06011": "#FFFFFF", "c06013": "#0000C0", "c06015": "#FFFFFF", "c06017": "#FFFFFF", "c06019": "#3030FF", "c06021": "#C00000", "c06023": "#FFFFFF", "c06025": "#0000C0", "c06027": "#FFFFFF", "c06029": "#FFFFFF", "c06031": "#C00000", "c06033": "#FFFFFF", "c06035": "#C00000", "c06037": "#0000C0", "c06039": "#FF0000", "c06041": "#0000C0", "c06043": "#FF0000", "c06045": "#0000C0", "c06047": "#6060FF", "c06049": "#C00000", "c06051": "#FFFFFF", "c06053": "#0000C0", "c06055": "#0000C0", "c06057": "#0000FF", "c06059": "#0000FF", "c06061": "#6060FF", "c06063": "#C00000", "c06065": "#3030FF", "c06067": "#0000C0", "c06069": "#0000C0", "c06071": "#0000FF", "c06073": "#0000C0", "c06075": "#0000C0", "c06077": "#0000FF", "c06079": "#0000C0", "c06081": "#0000C0", "c06083": "#0000C0", "c06085": "#0000C0", "c06087": "#FFFFFF", "c06089": "#C00000", "c06091": "#FFFFFF", "c06093": "#FFFFFF", "c06095": "#C00000", "c06097": "#0000C0", "c06099": "#FFFFFF", "c06101": "#FF0000", "c06103": "#FFFFFF", "c06105": "#FF3030", "c06107": "#FFFFFF", "c06109": "#FF0000", "c06111": "#0000C0", "c06113": "#0000C0", "c06115": "#FFFFFF"};
+  var margins = {"c06001": "#0000C0", "c06003": "#FFFFFF", "c06005": "#FFFFFF", "c06007": "#FFFFFF", "c06009": "#FFFFFF", "c06011": "#FFFFFF", "c06013": "#0000C0", "c06015": "#FFFFFF", "c06017": "#FFFFFF", "c06019": "#0000C0", "c06021": "#0000C0", "c06023": "#FFFFFF", "c06025": "#0000C0", "c06027": "#FFFFFF", "c06029": "#FFFFFF", "c06031": "#0000C0", "c06033": "#FFFFFF", "c06035": "#0000FF", "c06037": "#0000C0", "c06039": "#0000C0", "c06041": "#0000C0", "c06043": "#0000C0", "c06045": "#0000C0", "c06047": "#0000C0", "c06049": "#0000C0", "c06051": "#FFFFFF", "c06053": "#0000C0", "c06055": "#0000C0", "c06057": "#0000C0", "c06059": "#0000C0", "c06061": "#0000C0", "c06063": "#0000C0", "c06065": "#0000C0", "c06067": "#0000C0", "c06069": "#0000C0", "c06071": "#0000C0", "c06073": "#0000C0", "c06075": "#0000C0", "c06077": "#0000C0", "c06079": "#0000C0", "c06081": "#0000C0", "c06083": "#0000C0", "c06085": "#0000C0", "c06087": "#FFFFFF", "c06089": "#0000C0", "c06091": "#FFFFFF", "c06093": "#FFFFFF", "c06095": "#C00000", "c06097": "#0000C0", "c06099": "#FFFFFF", "c06101": "#0000C0", "c06103": "#FFFFFF", "c06105": "#0000C0", "c06107": "#FFFFFF", "c06109": "#0000C0", "c06111": "#0000C0", "c06113": "#0000C0", "c06115": "#FFFFFF"};
   function colorCounties(fips, colors) {
     if (!fips && fips !== "") {
       fips = current_fips;
@@ -6935,12 +6939,12 @@ Pre-election estimate: <b>Likely D</b>
 <td>Votes</td>
 <td>Pct</td>
 </tr>
-<tr><td>Gavin Newsom</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
-<tr><td>Recall</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Gavin Newsom</td><td>DEM</td><td class="votes">272,067</td><td class="pct">84.7</td></tr>
+<tr><td>Recall</td><td>REP</td><td class="votes">49,257</td><td class="pct">15.3</td></tr>
 </tbody>
 </table>
-0.0% of precincts reporting<br>
-Lead: <b>Tie</b><br>
+53.0% of precincts reporting<br>
+Lead: <b>Newsom +69.3</b><br>
 </div>
 <div id="06003-results" class="results">
 <b class="name">Alpine</b><br>
@@ -7037,12 +7041,12 @@ Lead: <b>Tie</b><br>
 <td>Votes</td>
 <td>Pct</td>
 </tr>
-<tr><td>Gavin Newsom</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
-<tr><td>Recall</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Gavin Newsom</td><td>DEM</td><td class="votes">210,726</td><td class="pct">76.0</td></tr>
+<tr><td>Recall</td><td>REP</td><td class="votes">66,509</td><td class="pct">24.0</td></tr>
 </tbody>
 </table>
-0.0% of precincts reporting<br>
-Lead: <b>Tie</b><br>
+52.4% of precincts reporting<br>
+Lead: <b>Newsom +52.0</b><br>
 </div>
 <div id="06015-results" class="results">
 <b class="name">Del Norte</b><br>
@@ -7088,12 +7092,12 @@ Lead: <b>Tie</b><br>
 <td>Votes</td>
 <td>Pct</td>
 </tr>
-<tr><td>Gavin Newsom</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
-<tr><td>Recall</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Gavin Newsom</td><td>DEM</td><td class="votes">83,007</td><td class="pct">53.6</td></tr>
+<tr><td>Recall</td><td>REP</td><td class="votes">71,820</td><td class="pct">46.4</td></tr>
 </tbody>
 </table>
-0.0% of precincts reporting<br>
-Lead: <b>Tie</b><br>
+59.1% of precincts reporting<br>
+Lead: <b>Newsom +7.2</b><br>
 </div>
 <div id="06021-results" class="results">
 <b class="name">Glenn</b><br>
@@ -7105,12 +7109,12 @@ Lead: <b>Tie</b><br>
 <td>Votes</td>
 <td>Pct</td>
 </tr>
-<tr><td>Gavin Newsom</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
-<tr><td>Recall</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Recall</td><td>REP</td><td class="votes">4,100</td><td class="pct">68.4</td></tr>
+<tr><td>Gavin Newsom</td><td>DEM</td><td class="votes">1,898</td><td class="pct">31.6</td></tr>
 </tbody>
 </table>
-0.0% of precincts reporting<br>
-Lead: <b>Tie</b><br>
+70.6% of precincts reporting<br>
+Lead: <b>Recall +36.7</b><br>
 </div>
 <div id="06023-results" class="results">
 <b class="name">Humboldt</b><br>
@@ -7139,12 +7143,12 @@ Lead: <b>Tie</b><br>
 <td>Votes</td>
 <td>Pct</td>
 </tr>
-<tr><td>Gavin Newsom</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
-<tr><td>Recall</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Gavin Newsom</td><td>DEM</td><td class="votes">8,552</td><td class="pct">64.1</td></tr>
+<tr><td>Recall</td><td>REP</td><td class="votes">4,798</td><td class="pct">35.9</td></tr>
 </tbody>
 </table>
-0.0% of precincts reporting<br>
-Lead: <b>Tie</b><br>
+35.6% of precincts reporting<br>
+Lead: <b>Newsom +28.1</b><br>
 </div>
 <div id="06027-results" class="results">
 <b class="name">Inyo</b><br>
@@ -7190,12 +7194,12 @@ Lead: <b>Tie</b><br>
 <td>Votes</td>
 <td>Pct</td>
 </tr>
-<tr><td>Gavin Newsom</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
-<tr><td>Recall</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Recall</td><td>REP</td><td class="votes">11,562</td><td class="pct">60.3</td></tr>
+<tr><td>Gavin Newsom</td><td>DEM</td><td class="votes">7,621</td><td class="pct">39.7</td></tr>
 </tbody>
 </table>
-0.0% of precincts reporting<br>
-Lead: <b>Tie</b><br>
+56.7% of precincts reporting<br>
+Lead: <b>Recall +20.5</b><br>
 </div>
 <div id="06033-results" class="results">
 <b class="name">Lake</b><br>
@@ -7224,12 +7228,12 @@ Lead: <b>Tie</b><br>
 <td>Votes</td>
 <td>Pct</td>
 </tr>
-<tr><td>Gavin Newsom</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
-<tr><td>Recall</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Recall</td><td>REP</td><td class="votes">5,573</td><td class="pct">81.7</td></tr>
+<tr><td>Gavin Newsom</td><td>DEM</td><td class="votes">1,251</td><td class="pct">18.3</td></tr>
 </tbody>
 </table>
-0.0% of precincts reporting<br>
-Lead: <b>Tie</b><br>
+59.6% of precincts reporting<br>
+Lead: <b>Recall +63.3</b><br>
 </div>
 <div id="06037-results" class="results">
 <b class="name">Los Angeles</b><br>
@@ -7241,12 +7245,12 @@ Lead: <b>Tie</b><br>
 <td>Votes</td>
 <td>Pct</td>
 </tr>
-<tr><td>Gavin Newsom</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
-<tr><td>Recall</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Gavin Newsom</td><td>DEM</td><td class="votes">1,414,354</td><td class="pct">76.3</td></tr>
+<tr><td>Recall</td><td>REP</td><td class="votes">438,810</td><td class="pct">23.7</td></tr>
 </tbody>
 </table>
-0.0% of precincts reporting<br>
-Lead: <b>Tie</b><br>
+58.7% of precincts reporting<br>
+Lead: <b>Newsom +52.6</b><br>
 </div>
 <div id="06039-results" class="results">
 <b class="name">Madera</b><br>
@@ -7258,12 +7262,12 @@ Lead: <b>Tie</b><br>
 <td>Votes</td>
 <td>Pct</td>
 </tr>
-<tr><td>Gavin Newsom</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
-<tr><td>Recall</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Recall</td><td>REP</td><td class="votes">15,904</td><td class="pct">56.7</td></tr>
+<tr><td>Gavin Newsom</td><td>DEM</td><td class="votes">12,124</td><td class="pct">43.3</td></tr>
 </tbody>
 </table>
-0.0% of precincts reporting<br>
-Lead: <b>Tie</b><br>
+62.5% of precincts reporting<br>
+Lead: <b>Recall +13.5</b><br>
 </div>
 <div id="06041-results" class="results">
 <b class="name">Marin</b><br>
@@ -7275,12 +7279,12 @@ Lead: <b>Tie</b><br>
 <td>Votes</td>
 <td>Pct</td>
 </tr>
-<tr><td>Gavin Newsom</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
-<tr><td>Recall</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Gavin Newsom</td><td>DEM</td><td class="votes">78,866</td><td class="pct">84.9</td></tr>
+<tr><td>Recall</td><td>REP</td><td class="votes">14,029</td><td class="pct">15.1</td></tr>
 </tbody>
 </table>
-0.0% of precincts reporting<br>
-Lead: <b>Tie</b><br>
+73.1% of precincts reporting<br>
+Lead: <b>Newsom +69.8</b><br>
 </div>
 <div id="06043-results" class="results">
 <b class="name">Mariposa</b><br>
@@ -7292,12 +7296,12 @@ Lead: <b>Tie</b><br>
 <td>Votes</td>
 <td>Pct</td>
 </tr>
-<tr><td>Gavin Newsom</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
-<tr><td>Recall</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Recall</td><td>REP</td><td class="votes">4,209</td><td class="pct">58.7</td></tr>
+<tr><td>Gavin Newsom</td><td>DEM</td><td class="votes">2,957</td><td class="pct">41.3</td></tr>
 </tbody>
 </table>
-0.0% of precincts reporting<br>
-Lead: <b>Tie</b><br>
+72.0% of precincts reporting<br>
+Lead: <b>Recall +17.5</b><br>
 </div>
 <div id="06045-results" class="results">
 <b class="name">Mendocino</b><br>
@@ -7309,12 +7313,12 @@ Lead: <b>Tie</b><br>
 <td>Votes</td>
 <td>Pct</td>
 </tr>
-<tr><td>Gavin Newsom</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
-<tr><td>Recall</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Gavin Newsom</td><td>DEM</td><td class="votes">12,905</td><td class="pct">70.0</td></tr>
+<tr><td>Recall</td><td>REP</td><td class="votes">5,542</td><td class="pct">30.0</td></tr>
 </tbody>
 </table>
-0.0% of precincts reporting<br>
-Lead: <b>Tie</b><br>
+50.8% of precincts reporting<br>
+Lead: <b>Newsom +39.9</b><br>
 </div>
 <div id="06047-results" class="results">
 <b class="name">Merced</b><br>
@@ -7326,12 +7330,12 @@ Lead: <b>Tie</b><br>
 <td>Votes</td>
 <td>Pct</td>
 </tr>
-<tr><td>Gavin Newsom</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
-<tr><td>Recall</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Gavin Newsom</td><td>DEM</td><td class="votes">16,969</td><td class="pct">52.2</td></tr>
+<tr><td>Recall</td><td>REP</td><td class="votes">15,561</td><td class="pct">47.8</td></tr>
 </tbody>
 </table>
-0.0% of precincts reporting<br>
-Lead: <b>Tie</b><br>
+61.7% of precincts reporting<br>
+Lead: <b>Newsom +4.3</b><br>
 </div>
 <div id="06049-results" class="results">
 <b class="name">Modoc</b><br>
@@ -7343,12 +7347,12 @@ Lead: <b>Tie</b><br>
 <td>Votes</td>
 <td>Pct</td>
 </tr>
-<tr><td>Gavin Newsom</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
-<tr><td>Recall</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Recall</td><td>REP</td><td class="votes">1,895</td><td class="pct">75.3</td></tr>
+<tr><td>Gavin Newsom</td><td>DEM</td><td class="votes">623</td><td class="pct">24.7</td></tr>
 </tbody>
 </table>
-0.0% of precincts reporting<br>
-Lead: <b>Tie</b><br>
+71.4% of precincts reporting<br>
+Lead: <b>Recall +50.5</b><br>
 </div>
 <div id="06051-results" class="results">
 <b class="name">Mono</b><br>
@@ -7377,12 +7381,12 @@ Lead: <b>Tie</b><br>
 <td>Votes</td>
 <td>Pct</td>
 </tr>
-<tr><td>Gavin Newsom</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
-<tr><td>Recall</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Gavin Newsom</td><td>DEM</td><td class="votes">59,090</td><td class="pct">71.7</td></tr>
+<tr><td>Recall</td><td>REP</td><td class="votes">23,373</td><td class="pct">28.3</td></tr>
 </tbody>
 </table>
-0.0% of precincts reporting<br>
-Lead: <b>Tie</b><br>
+66.5% of precincts reporting<br>
+Lead: <b>Newsom +43.3</b><br>
 </div>
 <div id="06055-results" class="results">
 <b class="name">Napa</b><br>
@@ -7394,12 +7398,12 @@ Lead: <b>Tie</b><br>
 <td>Votes</td>
 <td>Pct</td>
 </tr>
-<tr><td>Gavin Newsom</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
-<tr><td>Recall</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Gavin Newsom</td><td>DEM</td><td class="votes">26,011</td><td class="pct">71.6</td></tr>
+<tr><td>Recall</td><td>REP</td><td class="votes">10,308</td><td class="pct">28.4</td></tr>
 </tbody>
 </table>
-0.0% of precincts reporting<br>
-Lead: <b>Tie</b><br>
+62.3% of precincts reporting<br>
+Lead: <b>Newsom +43.2</b><br>
 </div>
 <div id="06057-results" class="results">
 <b class="name">Nevada</b><br>
@@ -7411,12 +7415,12 @@ Lead: <b>Tie</b><br>
 <td>Votes</td>
 <td>Pct</td>
 </tr>
-<tr><td>Gavin Newsom</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
-<tr><td>Recall</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Gavin Newsom</td><td>DEM</td><td class="votes">23,080</td><td class="pct">59.4</td></tr>
+<tr><td>Recall</td><td>REP</td><td class="votes">15,780</td><td class="pct">40.6</td></tr>
 </tbody>
 </table>
-0.0% of precincts reporting<br>
-Lead: <b>Tie</b><br>
+71.4% of precincts reporting<br>
+Lead: <b>Newsom +18.8</b><br>
 </div>
 <div id="06059-results" class="results">
 <b class="name">Orange</b><br>
@@ -7428,12 +7432,12 @@ Lead: <b>Tie</b><br>
 <td>Votes</td>
 <td>Pct</td>
 </tr>
-<tr><td>Gavin Newsom</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
-<tr><td>Recall</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Gavin Newsom</td><td>DEM</td><td class="votes">419,587</td><td class="pct">58.3</td></tr>
+<tr><td>Recall</td><td>REP</td><td class="votes">299,711</td><td class="pct">41.7</td></tr>
 </tbody>
 </table>
-0.0% of precincts reporting<br>
-Lead: <b>Tie</b><br>
+60.8% of precincts reporting<br>
+Lead: <b>Newsom +16.7</b><br>
 </div>
 <div id="06061-results" class="results">
 <b class="name">Placer</b><br>
@@ -7445,12 +7449,12 @@ Lead: <b>Tie</b><br>
 <td>Votes</td>
 <td>Pct</td>
 </tr>
-<tr><td>Gavin Newsom</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
-<tr><td>Recall</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Gavin Newsom</td><td>DEM</td><td class="votes">55,029</td><td class="pct">51.6</td></tr>
+<tr><td>Recall</td><td>REP</td><td class="votes">51,618</td><td class="pct">48.4</td></tr>
 </tbody>
 </table>
-0.0% of precincts reporting<br>
-Lead: <b>Tie</b><br>
+57.0% of precincts reporting<br>
+Lead: <b>Newsom +3.2</b><br>
 </div>
 <div id="06063-results" class="results">
 <b class="name">Plumas</b><br>
@@ -7462,12 +7466,12 @@ Lead: <b>Tie</b><br>
 <td>Votes</td>
 <td>Pct</td>
 </tr>
-<tr><td>Gavin Newsom</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
-<tr><td>Recall</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Recall</td><td>REP</td><td class="votes">5,106</td><td class="pct">62.9</td></tr>
+<tr><td>Gavin Newsom</td><td>DEM</td><td class="votes">3,008</td><td class="pct">37.1</td></tr>
 </tbody>
 </table>
-0.0% of precincts reporting<br>
-Lead: <b>Tie</b><br>
+86.2% of precincts reporting<br>
+Lead: <b>Recall +25.9</b><br>
 </div>
 <div id="06065-results" class="results">
 <b class="name">Riverside</b><br>
@@ -7479,12 +7483,12 @@ Lead: <b>Tie</b><br>
 <td>Votes</td>
 <td>Pct</td>
 </tr>
-<tr><td>Gavin Newsom</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
-<tr><td>Recall</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Gavin Newsom</td><td>DEM</td><td class="votes">254,374</td><td class="pct">54.4</td></tr>
+<tr><td>Recall</td><td>REP</td><td class="votes">212,967</td><td class="pct">45.6</td></tr>
 </tbody>
 </table>
-0.0% of precincts reporting<br>
-Lead: <b>Tie</b><br>
+57.4% of precincts reporting<br>
+Lead: <b>Newsom +8.9</b><br>
 </div>
 <div id="06067-results" class="results">
 <b class="name">Sacramento</b><br>
@@ -7496,12 +7500,12 @@ Lead: <b>Tie</b><br>
 <td>Votes</td>
 <td>Pct</td>
 </tr>
-<tr><td>Gavin Newsom</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
-<tr><td>Recall</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Gavin Newsom</td><td>DEM</td><td class="votes">191,699</td><td class="pct">65.9</td></tr>
+<tr><td>Recall</td><td>REP</td><td class="votes">99,115</td><td class="pct">34.1</td></tr>
 </tbody>
 </table>
-0.0% of precincts reporting<br>
-Lead: <b>Tie</b><br>
+52.2% of precincts reporting<br>
+Lead: <b>Newsom +31.8</b><br>
 </div>
 <div id="06069-results" class="results">
 <b class="name">San Benito</b><br>
@@ -7513,12 +7517,12 @@ Lead: <b>Tie</b><br>
 <td>Votes</td>
 <td>Pct</td>
 </tr>
-<tr><td>Gavin Newsom</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
-<tr><td>Recall</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Gavin Newsom</td><td>DEM</td><td class="votes">8,978</td><td class="pct">61.3</td></tr>
+<tr><td>Recall</td><td>REP</td><td class="votes">5,678</td><td class="pct">38.7</td></tr>
 </tbody>
 </table>
-0.0% of precincts reporting<br>
-Lead: <b>Tie</b><br>
+66.7% of precincts reporting<br>
+Lead: <b>Newsom +22.5</b><br>
 </div>
 <div id="06071-results" class="results">
 <b class="name">San Bernardino</b><br>
@@ -7530,12 +7534,12 @@ Lead: <b>Tie</b><br>
 <td>Votes</td>
 <td>Pct</td>
 </tr>
-<tr><td>Gavin Newsom</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
-<tr><td>Recall</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Gavin Newsom</td><td>DEM</td><td class="votes">180,308</td><td class="pct">57.9</td></tr>
+<tr><td>Recall</td><td>REP</td><td class="votes">131,349</td><td class="pct">42.1</td></tr>
 </tbody>
 </table>
-0.0% of precincts reporting<br>
-Lead: <b>Tie</b><br>
+49.2% of precincts reporting<br>
+Lead: <b>Newsom +15.7</b><br>
 </div>
 <div id="06073-results" class="results">
 <b class="name">San Diego</b><br>
@@ -7547,12 +7551,12 @@ Lead: <b>Tie</b><br>
 <td>Votes</td>
 <td>Pct</td>
 </tr>
-<tr><td>Gavin Newsom</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
-<tr><td>Recall</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Gavin Newsom</td><td>DEM</td><td class="votes">491,347</td><td class="pct">60.6</td></tr>
+<tr><td>Recall</td><td>REP</td><td class="votes">319,033</td><td class="pct">39.4</td></tr>
 </tbody>
 </table>
-0.0% of precincts reporting<br>
-Lead: <b>Tie</b><br>
+65.2% of precincts reporting<br>
+Lead: <b>Newsom +21.3</b><br>
 </div>
 <div id="06075-results" class="results">
 <b class="name">San Francisco</b><br>
@@ -7564,12 +7568,12 @@ Lead: <b>Tie</b><br>
 <td>Votes</td>
 <td>Pct</td>
 </tr>
-<tr><td>Gavin Newsom</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
-<tr><td>Recall</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Gavin Newsom</td><td>DEM</td><td class="votes">215,521</td><td class="pct">87.8</td></tr>
+<tr><td>Recall</td><td>REP</td><td class="votes">30,011</td><td class="pct">12.2</td></tr>
 </tbody>
 </table>
-0.0% of precincts reporting<br>
-Lead: <b>Tie</b><br>
+69.9% of precincts reporting<br>
+Lead: <b>Newsom +75.6</b><br>
 </div>
 <div id="06077-results" class="results">
 <b class="name">San Joaquin</b><br>
@@ -7581,12 +7585,12 @@ Lead: <b>Tie</b><br>
 <td>Votes</td>
 <td>Pct</td>
 </tr>
-<tr><td>Gavin Newsom</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
-<tr><td>Recall</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Gavin Newsom</td><td>DEM</td><td class="votes">64,816</td><td class="pct">57.9</td></tr>
+<tr><td>Recall</td><td>REP</td><td class="votes">47,140</td><td class="pct">42.1</td></tr>
 </tbody>
 </table>
-0.0% of precincts reporting<br>
-Lead: <b>Tie</b><br>
+46.1% of precincts reporting<br>
+Lead: <b>Newsom +15.8</b><br>
 </div>
 <div id="06079-results" class="results">
 <b class="name">San Luis Obispo</b><br>
@@ -7598,12 +7602,12 @@ Lead: <b>Tie</b><br>
 <td>Votes</td>
 <td>Pct</td>
 </tr>
-<tr><td>Gavin Newsom</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
-<tr><td>Recall</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Gavin Newsom</td><td>DEM</td><td class="votes">31,932</td><td class="pct">60.8</td></tr>
+<tr><td>Recall</td><td>REP</td><td class="votes">20,606</td><td class="pct">39.2</td></tr>
 </tbody>
 </table>
-0.0% of precincts reporting<br>
-Lead: <b>Tie</b><br>
+41.9% of precincts reporting<br>
+Lead: <b>Newsom +21.6</b><br>
 </div>
 <div id="06081-results" class="results">
 <b class="name">San Mateo</b><br>
@@ -7615,12 +7619,12 @@ Lead: <b>Tie</b><br>
 <td>Votes</td>
 <td>Pct</td>
 </tr>
-<tr><td>Gavin Newsom</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
-<tr><td>Recall</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Gavin Newsom</td><td>DEM</td><td class="votes">168,578</td><td class="pct">80.9</td></tr>
+<tr><td>Recall</td><td>REP</td><td class="votes">39,857</td><td class="pct">19.1</td></tr>
 </tbody>
 </table>
-0.0% of precincts reporting<br>
-Lead: <b>Tie</b><br>
+68.3% of precincts reporting<br>
+Lead: <b>Newsom +61.8</b><br>
 </div>
 <div id="06083-results" class="results">
 <b class="name">Santa Barbara</b><br>
@@ -7632,12 +7636,12 @@ Lead: <b>Tie</b><br>
 <td>Votes</td>
 <td>Pct</td>
 </tr>
-<tr><td>Gavin Newsom</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
-<tr><td>Recall</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Gavin Newsom</td><td>DEM</td><td class="votes">65,904</td><td class="pct">67.6</td></tr>
+<tr><td>Recall</td><td>REP</td><td class="votes">31,643</td><td class="pct">32.4</td></tr>
 </tbody>
 </table>
-0.0% of precincts reporting<br>
-Lead: <b>Tie</b><br>
+63.5% of precincts reporting<br>
+Lead: <b>Newsom +35.1</b><br>
 </div>
 <div id="06085-results" class="results">
 <b class="name">Santa Clara</b><br>
@@ -7649,12 +7653,12 @@ Lead: <b>Tie</b><br>
 <td>Votes</td>
 <td>Pct</td>
 </tr>
-<tr><td>Gavin Newsom</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
-<tr><td>Recall</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Gavin Newsom</td><td>DEM</td><td class="votes">349,724</td><td class="pct">78.1</td></tr>
+<tr><td>Recall</td><td>REP</td><td class="votes">98,157</td><td class="pct">21.9</td></tr>
 </tbody>
 </table>
-0.0% of precincts reporting<br>
-Lead: <b>Tie</b><br>
+69.2% of precincts reporting<br>
+Lead: <b>Newsom +56.2</b><br>
 </div>
 <div id="06087-results" class="results">
 <b class="name">Santa Cruz</b><br>
@@ -7683,12 +7687,12 @@ Lead: <b>Tie</b><br>
 <td>Votes</td>
 <td>Pct</td>
 </tr>
-<tr><td>Gavin Newsom</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
-<tr><td>Recall</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Recall</td><td>REP</td><td class="votes">22,194</td><td class="pct">60.3</td></tr>
+<tr><td>Gavin Newsom</td><td>DEM</td><td class="votes">14,585</td><td class="pct">39.7</td></tr>
 </tbody>
 </table>
-0.0% of precincts reporting<br>
-Lead: <b>Tie</b><br>
+55.1% of precincts reporting<br>
+Lead: <b>Recall +20.7</b><br>
 </div>
 <div id="06091-results" class="results">
 <b class="name">Sierra</b><br>
@@ -7734,12 +7738,12 @@ Lead: <b>Tie</b><br>
 <td>Votes</td>
 <td>Pct</td>
 </tr>
-<tr><td>Gavin Newsom</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
-<tr><td>Recall</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Recall</td><td>REP</td><td class="votes">68,440</td><td class="pct">69.7</td></tr>
+<tr><td>Gavin Newsom</td><td>DEM</td><td class="votes">29,726</td><td class="pct">30.3</td></tr>
 </tbody>
 </table>
-0.0% of precincts reporting<br>
-Lead: <b>Tie</b><br>
+63.6% of precincts reporting<br>
+Lead: <b>Recall +39.4</b><br>
 </div>
 <div id="06097-results" class="results">
 <b class="name">Sonoma</b><br>
@@ -7751,12 +7755,12 @@ Lead: <b>Tie</b><br>
 <td>Votes</td>
 <td>Pct</td>
 </tr>
-<tr><td>Gavin Newsom</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
-<tr><td>Recall</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Gavin Newsom</td><td>DEM</td><td class="votes">111,874</td><td class="pct">78.4</td></tr>
+<tr><td>Recall</td><td>REP</td><td class="votes">30,846</td><td class="pct">21.6</td></tr>
 </tbody>
 </table>
-0.0% of precincts reporting<br>
-Lead: <b>Tie</b><br>
+63.6% of precincts reporting<br>
+Lead: <b>Newsom +56.8</b><br>
 </div>
 <div id="06099-results" class="results">
 <b class="name">Stanislaus</b><br>
@@ -7785,12 +7789,12 @@ Lead: <b>Tie</b><br>
 <td>Votes</td>
 <td>Pct</td>
 </tr>
-<tr><td>Gavin Newsom</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
-<tr><td>Recall</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Recall</td><td>REP</td><td class="votes">6,445</td><td class="pct">56.5</td></tr>
+<tr><td>Gavin Newsom</td><td>DEM</td><td class="votes">4,959</td><td class="pct">43.5</td></tr>
 </tbody>
 </table>
-0.0% of precincts reporting<br>
-Lead: <b>Tie</b><br>
+34.5% of precincts reporting<br>
+Lead: <b>Recall +13.0</b><br>
 </div>
 <div id="06103-results" class="results">
 <b class="name">Tehama</b><br>
@@ -7819,12 +7823,12 @@ Lead: <b>Tie</b><br>
 <td>Votes</td>
 <td>Pct</td>
 </tr>
-<tr><td>Gavin Newsom</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
-<tr><td>Recall</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Recall</td><td>REP</td><td class="votes">2,079</td><td class="pct">54.3</td></tr>
+<tr><td>Gavin Newsom</td><td>DEM</td><td class="votes">1,747</td><td class="pct">45.7</td></tr>
 </tbody>
 </table>
-0.0% of precincts reporting<br>
-Lead: <b>Tie</b><br>
+84.0% of precincts reporting<br>
+Lead: <b>Recall +8.7</b><br>
 </div>
 <div id="06107-results" class="results">
 <b class="name">Tulare</b><br>
@@ -7853,12 +7857,12 @@ Lead: <b>Tie</b><br>
 <td>Votes</td>
 <td>Pct</td>
 </tr>
-<tr><td>Gavin Newsom</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
-<tr><td>Recall</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Recall</td><td>REP</td><td class="votes">12,877</td><td class="pct">59.1</td></tr>
+<tr><td>Gavin Newsom</td><td>DEM</td><td class="votes">8,896</td><td class="pct">40.9</td></tr>
 </tbody>
 </table>
-0.0% of precincts reporting<br>
-Lead: <b>Tie</b><br>
+78.0% of precincts reporting<br>
+Lead: <b>Recall +18.3</b><br>
 </div>
 <div id="06111-results" class="results">
 <b class="name">Ventura</b><br>
@@ -7870,12 +7874,12 @@ Lead: <b>Tie</b><br>
 <td>Votes</td>
 <td>Pct</td>
 </tr>
-<tr><td>Gavin Newsom</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
-<tr><td>Recall</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Gavin Newsom</td><td>DEM</td><td class="votes">133,407</td><td class="pct">64.4</td></tr>
+<tr><td>Recall</td><td>REP</td><td class="votes">73,618</td><td class="pct">35.6</td></tr>
 </tbody>
 </table>
-0.0% of precincts reporting<br>
-Lead: <b>Tie</b><br>
+65.6% of precincts reporting<br>
+Lead: <b>Newsom +28.9</b><br>
 </div>
 <div id="06113-results" class="results">
 <b class="name">Yolo</b><br>
@@ -7887,12 +7891,12 @@ Lead: <b>Tie</b><br>
 <td>Votes</td>
 <td>Pct</td>
 </tr>
-<tr><td>Gavin Newsom</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
-<tr><td>Recall</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Gavin Newsom</td><td>DEM</td><td class="votes">35,820</td><td class="pct">72.8</td></tr>
+<tr><td>Recall</td><td>REP</td><td class="votes">13,367</td><td class="pct">27.2</td></tr>
 </tbody>
 </table>
-0.0% of precincts reporting<br>
-Lead: <b>Tie</b><br>
+56.2% of precincts reporting<br>
+Lead: <b>Newsom +45.6</b><br>
 </div>
 <div id="06115-results" class="results">
 <b class="name">Yuba</b><br>
