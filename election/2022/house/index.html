@@ -1,0 +1,515 @@
+<html>
+<head>
+<title>2022 Forecast - House</title>
+</head>
+<body style="background-color:lightgray; font-family:verdana;">
+<div style="word-wrap: break-word; width: 640px; margin-left: 100px; margin-top: 0px;">
+<font size = "2">
+<h1>2022 House Forecast</h1>
+<hr />
+<h3>| <a title="Senate" href="../senate/">Senate</a> | <a title="Governors" href="../governors/">Governors</a> | House | <a title="Results" href="../results/">Results</a> |</h3>
+<p>This year is the first time I have experimented with a House model. This model is fundamentally different from the statewide models used elsewhere, as House races are not polled individually. Instead, the model takes into account some basics, such as generic ballot polls, partisan lean of a district based on previous presidential election results, and the electoral performance history of candidates running.</p>
+<p>Currently, it is still early in the race and polling remains uncertain, and it is likely that current generic ballot estimates significantly overestimate the Democrats' chances of holding their slim House majority. Overall, it is expected that the GOP will regain the majority by a comfortable margin this year.</p>
+<h2>Top Level</h2>
+<table style="font-size: 12; text-align: center;" width="280">
+<tbody>
+<tr style="font-weight: bold;">
+<td>Party</td>
+<td>Probability</td>
+<td>Expected</td>
+<td>Rated</td>
+</tr>
+<tr>
+<td><span style="color: #ff0000;">Republicans</span></td>
+<td><span style="color: #ff0000;"><strong>63.8%</strong></span></td>
+<td><span style="color: #ff0000;"><strong>230.9</strong></span></td>
+<td><span style="color: #ff0000;"><strong>229</strong></span></td>
+</tr>
+<tr>
+<td><span style="color: #0000ff;">Democrats</span></td>
+<td><span style="color: #0000ff;"><strong>36.2%</strong></span></td>
+<td><span style="color: #0000ff;"><strong>204.1</strong></span></td>
+<td><span style="color: #0000ff;"><strong>206</strong></span></td>
+</tr>
+</tbody>
+</table>
+<p>Popular vote: <span style="color: #ff0000;"><strong>Republicans +1.0</strong></span></p>
+<p>&nbsp;</p>
+<h2>History</h2>
+<table style="font-size: 12; text-align: center;" width="450">
+<tbody>
+<tr style="font-weight: bold">
+<td style="padding: 0 6px;" rowspan="2">Date</td>
+<td style="padding: 0 6px;" rowspan="2">Popular<br>Vote</td>
+<td style="padding: 0 6px;" colspan="2">Probability</td>
+<td style="padding: 0 6px;" colspan="2">Expected</td>
+<td style="padding: 0 6px;" colspan="2">Rated</td>
+</tr>
+<tr style="font-weight: bold">
+<td style="padding: 0 5px;"><span style="color: #0000ff;">DEM</span></td>
+<td style="padding: 0 5px;"><span style="color: #ff0000;">GOP</span></td>
+<td style="padding: 0 5px;"><span style="color: #0000ff;">DEM</span></td>
+<td style="padding: 0 5px;"><span style="color: #ff0000;">GOP</span></td>
+<td style="padding: 0 5px;"><span style="color: #0000ff;">DEM</span></td>
+<td style="padding: 0 5px;"><span style="color: #ff0000;">GOP</span></td>
+</tr>
+<tr>
+<td>09/26</td>
+<td><span style="color: #ff0000;"><strong>R +1.0</strong></span></td>
+<td><span style="color: #0000ff;"><strong>36.2%</strong></span></td>
+<td><span style="color: #ff0000;"><strong>63.8%</strong></span></td>
+<td><span style="color: #0000ff;"><strong>204.1</strong></span></td>
+<td><span style="color: #ff0000;"><strong>230.9</strong></span></td>
+<td><span style="color: #0000ff;"><strong>206</strong></span></td>
+<td><span style="color: #ff0000;"><strong>229</strong></span></td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
+<h2>District-by-district breakdown</h2>
+<p><img src="map.png" alt="" width="640" height="480" border="3" /></p>
+<p>&nbsp;</p>
+<table style="height: px; font-size: 12; text-align: center;" width="300">
+<tbody>
+<tr><td><strong>District</strong></td><td><strong>Margin</strong></td><td><strong>Probability</strong></td><td><strong>Rating</strong></td></tr>
+<tr><td>AK-AL</td><td>R +15.3</td><td>93.9% R</td><td><span style="color: #ff0000;">Likely R</span></td></tr>
+<tr><td>AL-01</td><td>--</td><td>100% R</td><td><span style="color: #ff0000;">Safe R</span></td></tr>
+<tr><td>AL-02</td><td>R +34.4</td><td>99.8% R</td><td><span style="color: #ff0000;">Safe R</span></td></tr>
+<tr><td>AL-03</td><td>R +39.1</td><td>>99.9% R</td><td><span style="color: #ff0000;">Safe R</span></td></tr>
+<tr><td>AL-04</td><td>R +66.3</td><td>>99.9% R</td><td><span style="color: #ff0000;">Safe R</span></td></tr>
+<tr><td>AL-05</td><td>R +31.9</td><td>99.6% R</td><td><span style="color: #ff0000;">Safe R</span></td></tr>
+<tr><td>AL-06</td><td>--</td><td>100% R</td><td><span style="color: #ff0000;">Safe R</span></td></tr>
+<tr><td>AL-07</td><td>D +26.2</td><td>98.6% D</td><td><span style="color: #0000ff;">Safe D</span></td></tr>
+<tr><td>AR-01</td><td>R +50.5</td><td>>99.9% R</td><td><span style="color: #ff0000;">Safe R</span></td></tr>
+<tr><td>AR-02</td><td>R +19.1</td><td>96.8% R</td><td><span style="color: #ff0000;">Likely R</span></td></tr>
+<tr><td>AR-03</td><td>R +31.4</td><td>99.5% R</td><td><span style="color: #ff0000;">Safe R</span></td></tr>
+<tr><td>AR-04</td><td>R +43.6</td><td>>99.9% R</td><td><span style="color: #ff0000;">Safe R</span></td></tr>
+<tr><td>AZ-01</td><td>R +8.1</td><td>78.2% R</td><td><span style="color: #ff0000;">Leans R</span></td></tr>
+<tr><td>AZ-02</td><td>R +12.5</td><td>89.8% R</td><td><span style="color: #ff0000;">Likely R</span></td></tr>
+<tr><td>AZ-03</td><td>D +46.3</td><td>>99.9% D</td><td><span style="color: #0000ff;">Safe D</span></td></tr>
+<tr><td>AZ-04</td><td>D +4.2</td><td>68.8% D</td><td><span style="color: #0000ff;">Leans D</span></td></tr>
+<tr><td>AZ-05</td><td>R +23.3</td><td>98.3% R</td><td><span style="color: #ff0000;">Safe R</span></td></tr>
+<tr><td>AZ-06</td><td>R +5.5</td><td>71.7% R</td><td><span style="color: #ff0000;">Leans R</span></td></tr>
+<tr><td>AZ-07</td><td>D +23.0</td><td>96.2% D</td><td><span style="color: #0000ff;">Likely D</span></td></tr>
+<tr><td>AZ-08</td><td>--</td><td>100% R</td><td><span style="color: #ff0000;">Safe R</span></td></tr>
+<tr><td>AZ-09</td><td>--</td><td>100% R</td><td><span style="color: #ff0000;">Safe R</span></td></tr>
+<tr><td>CA-01</td><td>R +23.0</td><td>98.0% R</td><td><span style="color: #ff0000;">Safe R</span></td></tr>
+<tr><td>CA-02</td><td>D +43.4</td><td>99.8% D</td><td><span style="color: #0000ff;">Safe D</span></td></tr>
+<tr><td>CA-03</td><td>R +7.4</td><td>78.1% R</td><td><span style="color: #ff0000;">Leans R</span></td></tr>
+<tr><td>CA-04</td><td>D +33.5</td><td>99.6% D</td><td><span style="color: #0000ff;">Safe D</span></td></tr>
+<tr><td>CA-05</td><td>R +17.5</td><td>95.8% R</td><td><span style="color: #ff0000;">Likely R</span></td></tr>
+<tr><td>CA-06</td><td>D +10.6</td><td>84.2% D</td><td><span style="color: #0000ff;">Likely D</span></td></tr>
+<tr><td>CA-07</td><td>D +33.2</td><td>99.6% D</td><td><span style="color: #0000ff;">Safe D</span></td></tr>
+<tr><td>CA-08</td><td>D +45.9</td><td>99.9% D</td><td><span style="color: #0000ff;">Safe D</span></td></tr>
+<tr><td>CA-09</td><td>D +3.7</td><td>65.4% D</td><td><span style="color: #0000ff;">Leans D</span></td></tr>
+<tr><td>CA-10</td><td>--</td><td>100% D</td><td><span style="color: #0000ff;">Safe D</span></td></tr>
+<tr><td>CA-11</td><td>D +62.4</td><td>>99.9% D</td><td><span style="color: #0000ff;">Safe D</span></td></tr>
+<tr><td>CA-12</td><td>D +73.2</td><td>>99.9% D</td><td><span style="color: #0000ff;">Safe D</span></td></tr>
+<tr><td>CA-13</td><td>D +5.4</td><td>73.2% D</td><td><span style="color: #0000ff;">Leans D</span></td></tr>
+<tr><td>CA-14</td><td>D +37.2</td><td>99.5% D</td><td><span style="color: #0000ff;">Safe D</span></td></tr>
+<tr><td>CA-15</td><td>--</td><td>100% D</td><td><span style="color: #0000ff;">Safe D</span></td></tr>
+<tr><td>CA-16</td><td>--</td><td>100% D</td><td><span style="color: #0000ff;">Safe D</span></td></tr>
+<tr><td>CA-17</td><td>D +38.2</td><td>99.6% D</td><td><span style="color: #0000ff;">Safe D</span></td></tr>
+<tr><td>CA-18</td><td>D +33.3</td><td>98.9% D</td><td><span style="color: #0000ff;">Safe D</span></td></tr>
+<tr><td>CA-19</td><td>D +36.6</td><td>99.8% D</td><td><span style="color: #0000ff;">Safe D</span></td></tr>
+<tr><td>CA-20</td><td>R +35.3</td><td>99.7% R</td><td><span style="color: #ff0000;">Safe R</span></td></tr>
+<tr><td>CA-21</td><td>D +6.3</td><td>70.1% D</td><td><span style="color: #0000ff;">Leans D</span></td></tr>
+<tr><td>CA-22</td><td>R +11.6</td><td>79.4% R</td><td><span style="color: #ff0000;">Leans R</span></td></tr>
+<tr><td>CA-23</td><td>R +15.2</td><td>93.8% R</td><td><span style="color: #ff0000;">Likely R</span></td></tr>
+<tr><td>CA-24</td><td>D +18.9</td><td>93.2% D</td><td><span style="color: #0000ff;">Likely D</span></td></tr>
+<tr><td>CA-25</td><td>D +11.6</td><td>89.8% D</td><td><span style="color: #0000ff;">Likely D</span></td></tr>
+<tr><td>CA-26</td><td>D +12.1</td><td>87.2% D</td><td><span style="color: #0000ff;">Likely D</span></td></tr>
+<tr><td>CA-27</td><td>D +0.1</td><td>51.8% D</td><td><span style="color: #0000ff;">Leans D</span></td></tr>
+<tr><td>CA-28</td><td>D +30.0</td><td>99.4% D</td><td><span style="color: #0000ff;">Safe D</span></td></tr>
+<tr><td>CA-29</td><td>--</td><td>100% D</td><td><span style="color: #0000ff;">Safe D</span></td></tr>
+<tr><td>CA-30</td><td>--</td><td>100% D</td><td><span style="color: #0000ff;">Safe D</span></td></tr>
+<tr><td>CA-31</td><td>D +21.7</td><td>95.7% D</td><td><span style="color: #0000ff;">Likely D</span></td></tr>
+<tr><td>CA-32</td><td>D +33.2</td><td>99.3% D</td><td><span style="color: #0000ff;">Safe D</span></td></tr>
+<tr><td>CA-33</td><td>D +14.6</td><td>88.0% D</td><td><span style="color: #0000ff;">Likely D</span></td></tr>
+<tr><td>CA-34</td><td>--</td><td>100% D</td><td><span style="color: #0000ff;">Safe D</span></td></tr>
+<tr><td>CA-35</td><td>D +22.1</td><td>97.5% D</td><td><span style="color: #0000ff;">Likely D</span></td></tr>
+<tr><td>CA-36</td><td>D +33.7</td><td>99.0% D</td><td><span style="color: #0000ff;">Safe D</span></td></tr>
+<tr><td>CA-37</td><td>--</td><td>100% D</td><td><span style="color: #0000ff;">Safe D</span></td></tr>
+<tr><td>CA-38</td><td>D +20.7</td><td>94.9% D</td><td><span style="color: #0000ff;">Likely D</span></td></tr>
+<tr><td>CA-39</td><td>D +18.7</td><td>94.8% D</td><td><span style="color: #0000ff;">Likely D</span></td></tr>
+<tr><td>CA-40</td><td>R +11.2</td><td>84.6% R</td><td><span style="color: #ff0000;">Likely R</span></td></tr>
+<tr><td>CA-41</td><td>R +10.5</td><td>84.5% R</td><td><span style="color: #ff0000;">Likely R</span></td></tr>
+<tr><td>CA-42</td><td>D +35.8</td><td>99.3% D</td><td><span style="color: #0000ff;">Safe D</span></td></tr>
+<tr><td>CA-43</td><td>D +51.2</td><td>99.9% D</td><td><span style="color: #0000ff;">Safe D</span></td></tr>
+<tr><td>CA-44</td><td>D +41.5</td><td>99.8% D</td><td><span style="color: #0000ff;">Safe D</span></td></tr>
+<tr><td>CA-45</td><td>R +1.7</td><td>54.8% R</td><td><span style="color: #ff0000;">Leans R</span></td></tr>
+<tr><td>CA-46</td><td>D +28.6</td><td>99.5% D</td><td><span style="color: #0000ff;">Safe D</span></td></tr>
+<tr><td>CA-47</td><td>R +0.8</td><td>50.4% R</td><td><span style="color: #ff0000;">Leans R</span></td></tr>
+<tr><td>CA-48</td><td>R +17.1</td><td>95.4% R</td><td><span style="color: #ff0000;">Likely R</span></td></tr>
+<tr><td>CA-49</td><td>D +3.7</td><td>66.1% D</td><td><span style="color: #0000ff;">Leans D</span></td></tr>
+<tr><td>CA-50</td><td>D +26.7</td><td>98.5% D</td><td><span style="color: #0000ff;">Safe D</span></td></tr>
+<tr><td>CA-51</td><td>D +21.7</td><td>97.5% D</td><td><span style="color: #0000ff;">Likely D</span></td></tr>
+<tr><td>CA-52</td><td>D +25.1</td><td>96.3% D</td><td><span style="color: #0000ff;">Likely D</span></td></tr>
+<tr><td>CO-01</td><td>D +53.3</td><td>>99.9% D</td><td><span style="color: #0000ff;">Safe D</span></td></tr>
+<tr><td>CO-02</td><td>D +33.0</td><td>99.3% D</td><td><span style="color: #0000ff;">Safe D</span></td></tr>
+<tr><td>CO-03</td><td>R +13.3</td><td>91.4% R</td><td><span style="color: #ff0000;">Likely R</span></td></tr>
+<tr><td>CO-04</td><td>R +25.9</td><td>98.9% R</td><td><span style="color: #ff0000;">Safe R</span></td></tr>
+<tr><td>CO-05</td><td>R +15.5</td><td>94.1% R</td><td><span style="color: #ff0000;">Likely R</span></td></tr>
+<tr><td>CO-06</td><td>D +16.3</td><td>92.9% D</td><td><span style="color: #0000ff;">Likely D</span></td></tr>
+<tr><td>CO-07</td><td>D +8.9</td><td>83.0% D</td><td><span style="color: #0000ff;">Likely D</span></td></tr>
+<tr><td>CO-08</td><td>R +1.5</td><td>54.4% R</td><td><span style="color: #ff0000;">Leans R</span></td></tr>
+<tr><td>CT-01</td><td>D +22.1</td><td>97.5% D</td><td><span style="color: #0000ff;">Likely D</span></td></tr>
+<tr><td>CT-02</td><td>D +17.1</td><td>96.1% D</td><td><span style="color: #0000ff;">Likely D</span></td></tr>
+<tr><td>CT-03</td><td>D +18.2</td><td>97.2% D</td><td><span style="color: #0000ff;">Likely D</span></td></tr>
+<tr><td>CT-04</td><td>D +22.3</td><td>96.1% D</td><td><span style="color: #0000ff;">Likely D</span></td></tr>
+<tr><td>CT-05</td><td>D +6.0</td><td>75.5% D</td><td><span style="color: #0000ff;">Leans D</span></td></tr>
+<tr><td>DE-AL</td><td>D +16.4</td><td>96.0% D</td><td><span style="color: #0000ff;">Likely D</span></td></tr>
+<tr><td>FL-01</td><td>R +37.4</td><td>99.9% R</td><td><span style="color: #ff0000;">Safe R</span></td></tr>
+<tr><td>FL-02</td><td>R +17.0</td><td>95.4% R</td><td><span style="color: #ff0000;">Likely R</span></td></tr>
+<tr><td>FL-03</td><td>R +19.1</td><td>96.8% R</td><td><span style="color: #ff0000;">Likely R</span></td></tr>
+<tr><td>FL-04</td><td>R +12.1</td><td>89.5% R</td><td><span style="color: #ff0000;">Likely R</span></td></tr>
+<tr><td>FL-05</td><td>--</td><td>100% R</td><td><span style="color: #ff0000;">Safe R</span></td></tr>
+<tr><td>FL-06</td><td>--</td><td>100% R</td><td><span style="color: #ff0000;">Safe R</span></td></tr>
+<tr><td>FL-07</td><td>R +10.9</td><td>87.4% R</td><td><span style="color: #ff0000;">Likely R</span></td></tr>
+<tr><td>FL-08</td><td>R +25.7</td><td>98.7% R</td><td><span style="color: #ff0000;">Safe R</span></td></tr>
+<tr><td>FL-09</td><td>D +10.2</td><td>84.1% D</td><td><span style="color: #0000ff;">Likely D</span></td></tr>
+<tr><td>FL-10</td><td>D +25.7</td><td>98.5% D</td><td><span style="color: #0000ff;">Safe D</span></td></tr>
+<tr><td>FL-11</td><td>R +18.0</td><td>95.7% R</td><td><span style="color: #ff0000;">Likely R</span></td></tr>
+<tr><td>FL-12</td><td>R +36.3</td><td>99.8% R</td><td><span style="color: #ff0000;">Safe R</span></td></tr>
+<tr><td>FL-13</td><td>R +11.0</td><td>86.8% R</td><td><span style="color: #ff0000;">Likely R</span></td></tr>
+<tr><td>FL-14</td><td>D +17.1</td><td>96.5% D</td><td><span style="color: #0000ff;">Likely D</span></td></tr>
+<tr><td>FL-15</td><td>R +9.1</td><td>83.0% R</td><td><span style="color: #ff0000;">Likely R</span></td></tr>
+<tr><td>FL-16</td><td>R +16.3</td><td>94.1% R</td><td><span style="color: #ff0000;">Likely R</span></td></tr>
+<tr><td>FL-17</td><td>R +22.6</td><td>98.1% R</td><td><span style="color: #ff0000;">Safe R</span></td></tr>
+<tr><td>FL-18</td><td>--</td><td>100% R</td><td><span style="color: #ff0000;">Safe R</span></td></tr>
+<tr><td>FL-19</td><td>R +26.4</td><td>99.1% R</td><td><span style="color: #ff0000;">Safe R</span></td></tr>
+<tr><td>FL-20</td><td>D +45.5</td><td>99.9% D</td><td><span style="color: #0000ff;">Safe D</span></td></tr>
+<tr><td>FL-21</td><td>R +17.4</td><td>94.8% R</td><td><span style="color: #ff0000;">Likely R</span></td></tr>
+<tr><td>FL-22</td><td>D +14.5</td><td>94.2% D</td><td><span style="color: #0000ff;">Likely D</span></td></tr>
+<tr><td>FL-23</td><td>D +7.7</td><td>80.1% D</td><td><span style="color: #0000ff;">Likely D</span></td></tr>
+<tr><td>FL-24</td><td>D +44.5</td><td>99.9% D</td><td><span style="color: #0000ff;">Safe D</span></td></tr>
+<tr><td>FL-25</td><td>D +14.7</td><td>93.4% D</td><td><span style="color: #0000ff;">Likely D</span></td></tr>
+<tr><td>FL-26</td><td>R +36.6</td><td>99.7% R</td><td><span style="color: #ff0000;">Safe R</span></td></tr>
+<tr><td>FL-27</td><td>R +18.0</td><td>93.2% R</td><td><span style="color: #ff0000;">Likely R</span></td></tr>
+<tr><td>FL-28</td><td>R +10.6</td><td>85.8% R</td><td><span style="color: #ff0000;">Likely R</span></td></tr>
+<tr><td>GA-01</td><td>R +19.8</td><td>97.1% R</td><td><span style="color: #ff0000;">Likely R</span></td></tr>
+<tr><td>GA-02</td><td>D +9.6</td><td>86.2% D</td><td><span style="color: #0000ff;">Likely D</span></td></tr>
+<tr><td>GA-03</td><td>R +36.7</td><td>99.9% R</td><td><span style="color: #ff0000;">Safe R</span></td></tr>
+<tr><td>GA-04</td><td>D +49.7</td><td>>99.9% D</td><td><span style="color: #0000ff;">Safe D</span></td></tr>
+<tr><td>GA-05</td><td>D +58.1</td><td>>99.9% D</td><td><span style="color: #0000ff;">Safe D</span></td></tr>
+<tr><td>GA-06</td><td>R +20.8</td><td>97.6% R</td><td><span style="color: #ff0000;">Likely R</span></td></tr>
+<tr><td>GA-07</td><td>D +18.4</td><td>94.7% D</td><td><span style="color: #0000ff;">Likely D</span></td></tr>
+<tr><td>GA-08</td><td>R +33.4</td><td>99.7% R</td><td><span style="color: #ff0000;">Safe R</span></td></tr>
+<tr><td>GA-09</td><td>R +43.2</td><td>>99.9% R</td><td><span style="color: #ff0000;">Safe R</span></td></tr>
+<tr><td>GA-10</td><td>R +31.2</td><td>99.5% R</td><td><span style="color: #ff0000;">Safe R</span></td></tr>
+<tr><td>GA-11</td><td>R +22.6</td><td>98.0% R</td><td><span style="color: #ff0000;">Likely R</span></td></tr>
+<tr><td>GA-12</td><td>R +18.2</td><td>95.5% R</td><td><span style="color: #ff0000;">Likely R</span></td></tr>
+<tr><td>GA-13</td><td>D +53.7</td><td>>99.9% D</td><td><span style="color: #0000ff;">Safe D</span></td></tr>
+<tr><td>GA-14</td><td>R +42.1</td><td>>99.9% R</td><td><span style="color: #ff0000;">Safe R</span></td></tr>
+<tr><td>HI-01</td><td>D +29.3</td><td>99.6% D</td><td><span style="color: #0000ff;">Safe D</span></td></tr>
+<tr><td>HI-02</td><td>D +25.6</td><td>98.9% D</td><td><span style="color: #0000ff;">Safe D</span></td></tr>
+<tr><td>IA-01</td><td>R +6.8</td><td>75.4% R</td><td><span style="color: #ff0000;">Leans R</span></td></tr>
+<tr><td>IA-02</td><td>R +9.1</td><td>83.0% R</td><td><span style="color: #ff0000;">Likely R</span></td></tr>
+<tr><td>IA-03</td><td>R +6.4</td><td>74.6% R</td><td><span style="color: #ff0000;">Leans R</span></td></tr>
+<tr><td>IA-04</td><td>R +29.6</td><td>99.3% R</td><td><span style="color: #ff0000;">Safe R</span></td></tr>
+<tr><td>ID-01</td><td>R +42.9</td><td>>99.9% R</td><td><span style="color: #ff0000;">Safe R</span></td></tr>
+<tr><td>ID-02</td><td>R +29.1</td><td>99.4% R</td><td><span style="color: #ff0000;">Safe R</span></td></tr>
+<tr><td>IL-01</td><td>D +36.0</td><td>99.6% D</td><td><span style="color: #0000ff;">Safe D</span></td></tr>
+<tr><td>IL-02</td><td>D +32.3</td><td>99.2% D</td><td><span style="color: #0000ff;">Safe D</span></td></tr>
+<tr><td>IL-03</td><td>D +35.0</td><td>99.5% D</td><td><span style="color: #0000ff;">Safe D</span></td></tr>
+<tr><td>IL-04</td><td>D +38.7</td><td>99.7% D</td><td><span style="color: #0000ff;">Safe D</span></td></tr>
+<tr><td>IL-05</td><td>D +33.6</td><td>99.4% D</td><td><span style="color: #0000ff;">Safe D</span></td></tr>
+<tr><td>IL-06</td><td>D +0.4</td><td>53.9% D</td><td><span style="color: #0000ff;">Leans D</span></td></tr>
+<tr><td>IL-07</td><td>--</td><td>100% D</td><td><span style="color: #0000ff;">Safe D</span></td></tr>
+<tr><td>IL-08</td><td>D +12.2</td><td>91.0% D</td><td><span style="color: #0000ff;">Likely D</span></td></tr>
+<tr><td>IL-09</td><td>D +33.1</td><td>99.2% D</td><td><span style="color: #0000ff;">Safe D</span></td></tr>
+<tr><td>IL-10</td><td>D +18.1</td><td>94.2% D</td><td><span style="color: #0000ff;">Likely D</span></td></tr>
+<tr><td>IL-11</td><td>D +8.6</td><td>81.1% D</td><td><span style="color: #0000ff;">Likely D</span></td></tr>
+<tr><td>IL-12</td><td>R +46.8</td><td>>99.9% R</td><td><span style="color: #ff0000;">Safe R</span></td></tr>
+<tr><td>IL-13</td><td>D +5.8</td><td>74.2% D</td><td><span style="color: #0000ff;">Leans D</span></td></tr>
+<tr><td>IL-14</td><td>D +7.5</td><td>80.5% D</td><td><span style="color: #0000ff;">Likely D</span></td></tr>
+<tr><td>IL-15</td><td>R +43.2</td><td>>99.9% R</td><td><span style="color: #ff0000;">Safe R</span></td></tr>
+<tr><td>IL-16</td><td>R +32.9</td><td>99.5% R</td><td><span style="color: #ff0000;">Safe R</span></td></tr>
+<tr><td>IL-17</td><td>D +7.1</td><td>79.4% D</td><td><span style="color: #0000ff;">Leans D</span></td></tr>
+<tr><td>IN-01</td><td>D +8.8</td><td>84.1% D</td><td><span style="color: #0000ff;">Likely D</span></td></tr>
+<tr><td>IN-02</td><td>R +27.6</td><td>99.2% R</td><td><span style="color: #ff0000;">Safe R</span></td></tr>
+<tr><td>IN-03</td><td>R +35.0</td><td>99.8% R</td><td><span style="color: #ff0000;">Safe R</span></td></tr>
+<tr><td>IN-04</td><td>R +34.1</td><td>99.8% R</td><td><span style="color: #ff0000;">Safe R</span></td></tr>
+<tr><td>IN-05</td><td>R +20.7</td><td>97.5% R</td><td><span style="color: #ff0000;">Likely R</span></td></tr>
+<tr><td>IN-06</td><td>R +35.9</td><td>99.8% R</td><td><span style="color: #ff0000;">Safe R</span></td></tr>
+<tr><td>IN-07</td><td>D +36.2</td><td>99.6% D</td><td><span style="color: #0000ff;">Safe D</span></td></tr>
+<tr><td>IN-08</td><td>R +38.1</td><td>99.9% R</td><td><span style="color: #ff0000;">Safe R</span></td></tr>
+<tr><td>IN-09</td><td>R +32.3</td><td>99.7% R</td><td><span style="color: #ff0000;">Safe R</span></td></tr>
+<tr><td>KS-01</td><td>R +34.2</td><td>99.7% R</td><td><span style="color: #ff0000;">Safe R</span></td></tr>
+<tr><td>KS-02</td><td>R +20.8</td><td>97.4% R</td><td><span style="color: #ff0000;">Likely R</span></td></tr>
+<tr><td>KS-03</td><td>R +0.5</td><td>50.7% R</td><td><span style="color: #ff0000;">Leans R</span></td></tr>
+<tr><td>KS-04</td><td>R +26.1</td><td>98.9% R</td><td><span style="color: #ff0000;">Safe R</span></td></tr>
+<tr><td>KY-01</td><td>R +46.0</td><td>>99.9% R</td><td><span style="color: #ff0000;">Safe R</span></td></tr>
+<tr><td>KY-02</td><td>R +41.9</td><td>>99.9% R</td><td><span style="color: #ff0000;">Safe R</span></td></tr>
+<tr><td>KY-03</td><td>D +16.9</td><td>95.0% D</td><td><span style="color: #0000ff;">Likely D</span></td></tr>
+<tr><td>KY-04</td><td>R +37.0</td><td>99.8% R</td><td><span style="color: #ff0000;">Safe R</span></td></tr>
+<tr><td>KY-05</td><td>R +64.3</td><td>>99.9% R</td><td><span style="color: #ff0000;">Safe R</span></td></tr>
+<tr><td>KY-06</td><td>R +14.7</td><td>91.5% R</td><td><span style="color: #ff0000;">Likely R</span></td></tr>
+<tr><td>LA-01</td><td>R +53.2</td><td>>99.9% R</td><td><span style="color: #ff0000;">Safe R</span></td></tr>
+<tr><td>LA-02</td><td>D +45.8</td><td>99.9% D</td><td><span style="color: #0000ff;">Safe D</span></td></tr>
+<tr><td>LA-03</td><td>R +44.7</td><td>>99.9% R</td><td><span style="color: #ff0000;">Safe R</span></td></tr>
+<tr><td>LA-04</td><td>--</td><td>100% R</td><td><span style="color: #ff0000;">Safe R</span></td></tr>
+<tr><td>LA-05</td><td>R +34.5</td><td>99.8% R</td><td><span style="color: #ff0000;">Safe R</span></td></tr>
+<tr><td>LA-06</td><td>--</td><td>100% R</td><td><span style="color: #ff0000;">Safe R</span></td></tr>
+<tr><td>MA-01</td><td>D +16.2</td><td>94.4% D</td><td><span style="color: #0000ff;">Likely D</span></td></tr>
+<tr><td>MA-02</td><td>D +29.1</td><td>99.5% D</td><td><span style="color: #0000ff;">Safe D</span></td></tr>
+<tr><td>MA-03</td><td>D +21.3</td><td>97.2% D</td><td><span style="color: #0000ff;">Likely D</span></td></tr>
+<tr><td>MA-04</td><td>--</td><td>100% D</td><td><span style="color: #0000ff;">Safe D</span></td></tr>
+<tr><td>MA-05</td><td>D +44.3</td><td>99.9% D</td><td><span style="color: #0000ff;">Safe D</span></td></tr>
+<tr><td>MA-06</td><td>D +26.6</td><td>99.4% D</td><td><span style="color: #0000ff;">Safe D</span></td></tr>
+<tr><td>MA-07</td><td>D +64.3</td><td>>99.9% D</td><td><span style="color: #0000ff;">Safe D</span></td></tr>
+<tr><td>MA-08</td><td>D +29.3</td><td>99.0% D</td><td><span style="color: #0000ff;">Safe D</span></td></tr>
+<tr><td>MA-09</td><td>D +13.7</td><td>92.5% D</td><td><span style="color: #0000ff;">Likely D</span></td></tr>
+<tr><td>MD-01</td><td>R +19.5</td><td>97.0% R</td><td><span style="color: #ff0000;">Likely R</span></td></tr>
+<tr><td>MD-02</td><td>D +15.2</td><td>93.5% D</td><td><span style="color: #0000ff;">Likely D</span></td></tr>
+<tr><td>MD-03</td><td>D +21.6</td><td>98.2% D</td><td><span style="color: #0000ff;">Safe D</span></td></tr>
+<tr><td>MD-04</td><td>D +72.2</td><td>>99.9% D</td><td><span style="color: #0000ff;">Safe D</span></td></tr>
+<tr><td>MD-05</td><td>D +31.3</td><td>99.4% D</td><td><span style="color: #0000ff;">Safe D</span></td></tr>
+<tr><td>MD-06</td><td>D +3.2</td><td>64.9% D</td><td><span style="color: #0000ff;">Leans D</span></td></tr>
+<tr><td>MD-07</td><td>D +50.3</td><td>99.9% D</td><td><span style="color: #0000ff;">Safe D</span></td></tr>
+<tr><td>MD-08</td><td>D +53.6</td><td>>99.9% D</td><td><span style="color: #0000ff;">Safe D</span></td></tr>
+<tr><td>ME-01</td><td>D +19.9</td><td>97.8% D</td><td><span style="color: #0000ff;">Likely D</span></td></tr>
+<tr><td>ME-02</td><td>R +10.5</td><td>85.9% R</td><td><span style="color: #ff0000;">Likely R</span></td></tr>
+<tr><td>MI-01</td><td>R +24.2</td><td>98.5% R</td><td><span style="color: #ff0000;">Safe R</span></td></tr>
+<tr><td>MI-02</td><td>R +35.9</td><td>99.8% R</td><td><span style="color: #ff0000;">Safe R</span></td></tr>
+<tr><td>MI-03</td><td>D +1.8</td><td>59.1% D</td><td><span style="color: #0000ff;">Leans D</span></td></tr>
+<tr><td>MI-04</td><td>R +9.9</td><td>84.9% R</td><td><span style="color: #ff0000;">Likely R</span></td></tr>
+<tr><td>MI-05</td><td>R +28.2</td><td>99.2% R</td><td><span style="color: #ff0000;">Safe R</span></td></tr>
+<tr><td>MI-06</td><td>D +24.2</td><td>99.0% D</td><td><span style="color: #0000ff;">Safe D</span></td></tr>
+<tr><td>MI-07</td><td>R +3.3</td><td>63.3% R</td><td><span style="color: #ff0000;">Leans R</span></td></tr>
+<tr><td>MI-08</td><td>D +0.9</td><td>54.9% D</td><td><span style="color: #0000ff;">Leans D</span></td></tr>
+<tr><td>MI-09</td><td>R +34.8</td><td>99.8% R</td><td><span style="color: #ff0000;">Safe R</span></td></tr>
+<tr><td>MI-10</td><td>R +6.5</td><td>75.2% R</td><td><span style="color: #ff0000;">Leans R</span></td></tr>
+<tr><td>MI-11</td><td>D +16.9</td><td>96.3% D</td><td><span style="color: #0000ff;">Likely D</span></td></tr>
+<tr><td>MI-12</td><td>D +42.6</td><td>99.8% D</td><td><span style="color: #0000ff;">Safe D</span></td></tr>
+<tr><td>MI-13</td><td>D +42.8</td><td>99.8% D</td><td><span style="color: #0000ff;">Safe D</span></td></tr>
+<tr><td>MN-01</td><td>R +14.5</td><td>93.0% R</td><td><span style="color: #ff0000;">Likely R</span></td></tr>
+<tr><td>MN-02</td><td>D +0.2</td><td>52.7% D</td><td><span style="color: #0000ff;">Leans D</span></td></tr>
+<tr><td>MN-03</td><td>D +13.2</td><td>88.9% D</td><td><span style="color: #0000ff;">Likely D</span></td></tr>
+<tr><td>MN-04</td><td>D +30.7</td><td>99.1% D</td><td><span style="color: #0000ff;">Safe D</span></td></tr>
+<tr><td>MN-05</td><td>D +53.3</td><td>>99.9% D</td><td><span style="color: #0000ff;">Safe D</span></td></tr>
+<tr><td>MN-06</td><td>R +23.9</td><td>98.6% R</td><td><span style="color: #ff0000;">Safe R</span></td></tr>
+<tr><td>MN-07</td><td>R +33.8</td><td>99.1% R</td><td><span style="color: #ff0000;">Safe R</span></td></tr>
+<tr><td>MN-08</td><td>R +15.4</td><td>93.2% R</td><td><span style="color: #ff0000;">Likely R</span></td></tr>
+<tr><td>MO-01</td><td>D +50.8</td><td>>99.9% D</td><td><span style="color: #0000ff;">Safe D</span></td></tr>
+<tr><td>MO-02</td><td>R +13.2</td><td>91.3% R</td><td><span style="color: #ff0000;">Likely R</span></td></tr>
+<tr><td>MO-03</td><td>R +30.9</td><td>99.6% R</td><td><span style="color: #ff0000;">Safe R</span></td></tr>
+<tr><td>MO-04</td><td>R +44.2</td><td>>99.9% R</td><td><span style="color: #ff0000;">Safe R</span></td></tr>
+<tr><td>MO-05</td><td>D +22.9</td><td>98.6% D</td><td><span style="color: #0000ff;">Safe D</span></td></tr>
+<tr><td>MO-06</td><td>R +45.1</td><td>>99.9% R</td><td><span style="color: #ff0000;">Safe R</span></td></tr>
+<tr><td>MO-07</td><td>R +46.0</td><td>>99.9% R</td><td><span style="color: #ff0000;">Safe R</span></td></tr>
+<tr><td>MO-08</td><td>R +55.9</td><td>>99.9% R</td><td><span style="color: #ff0000;">Safe R</span></td></tr>
+<tr><td>MS-01</td><td>R +39.7</td><td>>99.9% R</td><td><span style="color: #ff0000;">Safe R</span></td></tr>
+<tr><td>MS-02</td><td>D +22.9</td><td>98.6% D</td><td><span style="color: #0000ff;">Safe D</span></td></tr>
+<tr><td>MS-03</td><td>R +32.5</td><td>99.6% R</td><td><span style="color: #ff0000;">Safe R</span></td></tr>
+<tr><td>MS-04</td><td>R +42.7</td><td>>99.9% R</td><td><span style="color: #ff0000;">Safe R</span></td></tr>
+<tr><td>MT-01</td><td>R +12.3</td><td>89.9% R</td><td><span style="color: #ff0000;">Likely R</span></td></tr>
+<tr><td>MT-02</td><td>R +30.4</td><td>99.3% R</td><td><span style="color: #ff0000;">Safe R</span></td></tr>
+<tr><td>NC-01</td><td>D +2.5</td><td>62.3% D</td><td><span style="color: #0000ff;">Leans D</span></td></tr>
+<tr><td>NC-02</td><td>D +22.6</td><td>97.6% D</td><td><span style="color: #0000ff;">Likely D</span></td></tr>
+<tr><td>NC-03</td><td>R +31.0</td><td>99.6% R</td><td><span style="color: #ff0000;">Safe R</span></td></tr>
+<tr><td>NC-04</td><td>D +29.0</td><td>99.0% D</td><td><span style="color: #0000ff;">Safe D</span></td></tr>
+<tr><td>NC-05</td><td>R +27.3</td><td>99.2% R</td><td><span style="color: #ff0000;">Safe R</span></td></tr>
+<tr><td>NC-06</td><td>D +4.9</td><td>70.0% D</td><td><span style="color: #0000ff;">Leans D</span></td></tr>
+<tr><td>NC-07</td><td>R +18.5</td><td>96.5% R</td><td><span style="color: #ff0000;">Likely R</span></td></tr>
+<tr><td>NC-08</td><td>R +39.1</td><td>>99.9% R</td><td><span style="color: #ff0000;">Safe R</span></td></tr>
+<tr><td>NC-09</td><td>R +14.1</td><td>92.4% R</td><td><span style="color: #ff0000;">Likely R</span></td></tr>
+<tr><td>NC-10</td><td>R +44.3</td><td>>99.9% R</td><td><span style="color: #ff0000;">Safe R</span></td></tr>
+<tr><td>NC-11</td><td>R +15.5</td><td>94.1% R</td><td><span style="color: #ff0000;">Likely R</span></td></tr>
+<tr><td>NC-12</td><td>D +24.1</td><td>98.1% D</td><td><span style="color: #0000ff;">Safe D</span></td></tr>
+<tr><td>NC-13</td><td>R +4.0</td><td>65.7% R</td><td><span style="color: #ff0000;">Leans R</span></td></tr>
+<tr><td>NC-14</td><td>D +11.0</td><td>87.6% D</td><td><span style="color: #0000ff;">Likely D</span></td></tr>
+<tr><td>ND-AL</td><td>--</td><td>100% R</td><td><span style="color: #ff0000;">Safe R</span></td></tr>
+<tr><td>NE-01</td><td>R +16.2</td><td>94.8% R</td><td><span style="color: #ff0000;">Likely R</span></td></tr>
+<tr><td>NE-02</td><td>R +4.5</td><td>64.7% R</td><td><span style="color: #ff0000;">Leans R</span></td></tr>
+<tr><td>NE-03</td><td>R +58.2</td><td>>99.9% R</td><td><span style="color: #ff0000;">Safe R</span></td></tr>
+<tr><td>NH-01</td><td>D +3.0</td><td>64.6% D</td><td><span style="color: #0000ff;">Leans D</span></td></tr>
+<tr><td>NH-02</td><td>D +6.5</td><td>77.6% D</td><td><span style="color: #0000ff;">Leans D</span></td></tr>
+<tr><td>NJ-01</td><td>D +19.1</td><td>96.5% D</td><td><span style="color: #0000ff;">Likely D</span></td></tr>
+<tr><td>NJ-02</td><td>R +8.9</td><td>80.7% R</td><td><span style="color: #ff0000;">Likely R</span></td></tr>
+<tr><td>NJ-03</td><td>D +9.3</td><td>84.7% D</td><td><span style="color: #0000ff;">Likely D</span></td></tr>
+<tr><td>NJ-04</td><td>R +29.0</td><td>99.4% R</td><td><span style="color: #ff0000;">Safe R</span></td></tr>
+<tr><td>NJ-05</td><td>D +10.7</td><td>88.6% D</td><td><span style="color: #0000ff;">Likely D</span></td></tr>
+<tr><td>NJ-06</td><td>D +18.6</td><td>97.4% D</td><td><span style="color: #0000ff;">Likely D</span></td></tr>
+<tr><td>NJ-07</td><td>R +5.3</td><td>69.2% R</td><td><span style="color: #ff0000;">Leans R</span></td></tr>
+<tr><td>NJ-08</td><td>D +38.2</td><td>99.7% D</td><td><span style="color: #0000ff;">Safe D</span></td></tr>
+<tr><td>NJ-09</td><td>D +19.1</td><td>97.7% D</td><td><span style="color: #0000ff;">Likely D</span></td></tr>
+<tr><td>NJ-10</td><td>D +55.8</td><td>>99.9% D</td><td><span style="color: #0000ff;">Safe D</span></td></tr>
+<tr><td>NJ-11</td><td>D +16.6</td><td>96.2% D</td><td><span style="color: #0000ff;">Likely D</span></td></tr>
+<tr><td>NJ-12</td><td>D +27.3</td><td>98.5% D</td><td><span style="color: #0000ff;">Safe D</span></td></tr>
+<tr><td>NM-01</td><td>D +9.1</td><td>83.5% D</td><td><span style="color: #0000ff;">Likely D</span></td></tr>
+<tr><td>NM-02</td><td>D +4.1</td><td>68.9% D</td><td><span style="color: #0000ff;">Leans D</span></td></tr>
+<tr><td>NM-03</td><td>D +6.1</td><td>75.7% D</td><td><span style="color: #0000ff;">Leans D</span></td></tr>
+<tr><td>NV-01</td><td>D +2.7</td><td>63.1% D</td><td><span style="color: #0000ff;">Leans D</span></td></tr>
+<tr><td>NV-02</td><td>R +21.4</td><td>96.9% R</td><td><span style="color: #ff0000;">Likely R</span></td></tr>
+<tr><td>NV-03</td><td>D +3.8</td><td>67.5% D</td><td><span style="color: #0000ff;">Leans D</span></td></tr>
+<tr><td>NV-04</td><td>D +0.0</td><td>52.5% D</td><td><span style="color: #0000ff;">Leans D</span></td></tr>
+<tr><td>NY-01</td><td>R +5.4</td><td>71.4% R</td><td><span style="color: #ff0000;">Leans R</span></td></tr>
+<tr><td>NY-02</td><td>R +7.7</td><td>78.9% R</td><td><span style="color: #ff0000;">Leans R</span></td></tr>
+<tr><td>NY-03</td><td>D +5.0</td><td>72.6% D</td><td><span style="color: #0000ff;">Leans D</span></td></tr>
+<tr><td>NY-04</td><td>D +9.2</td><td>83.8% D</td><td><span style="color: #0000ff;">Likely D</span></td></tr>
+<tr><td>NY-05</td><td>D +53.5</td><td>>99.9% D</td><td><span style="color: #0000ff;">Safe D</span></td></tr>
+<tr><td>NY-06</td><td>D +31.2</td><td>99.7% D</td><td><span style="color: #0000ff;">Safe D</span></td></tr>
+<tr><td>NY-07</td><td>D +58.0</td><td>>99.9% D</td><td><span style="color: #0000ff;">Safe D</span></td></tr>
+<tr><td>NY-08</td><td>D +48.0</td><td>>99.9% D</td><td><span style="color: #0000ff;">Safe D</span></td></tr>
+<tr><td>NY-09</td><td>--</td><td>100% D</td><td><span style="color: #0000ff;">Safe D</span></td></tr>
+<tr><td>NY-10</td><td>D +63.1</td><td>>99.9% D</td><td><span style="color: #0000ff;">Safe D</span></td></tr>
+<tr><td>NY-11</td><td>R +10.9</td><td>84.2% R</td><td><span style="color: #ff0000;">Likely R</span></td></tr>
+<tr><td>NY-12</td><td>D +62.5</td><td>>99.9% D</td><td><span style="color: #0000ff;">Safe D</span></td></tr>
+<tr><td>NY-13</td><td>D +67.0</td><td>>99.9% D</td><td><span style="color: #0000ff;">Safe D</span></td></tr>
+<tr><td>NY-14</td><td>D +49.3</td><td>>99.9% D</td><td><span style="color: #0000ff;">Safe D</span></td></tr>
+<tr><td>NY-15</td><td>D +64.4</td><td>>99.9% D</td><td><span style="color: #0000ff;">Safe D</span></td></tr>
+<tr><td>NY-16</td><td>D +37.1</td><td>99.6% D</td><td><span style="color: #0000ff;">Safe D</span></td></tr>
+<tr><td>NY-17</td><td>D +8.8</td><td>84.4% D</td><td><span style="color: #0000ff;">Likely D</span></td></tr>
+<tr><td>NY-18</td><td>D +2.7</td><td>62.9% D</td><td><span style="color: #0000ff;">Leans D</span></td></tr>
+<tr><td>NY-19</td><td>R +1.5</td><td>54.4% R</td><td><span style="color: #ff0000;">Leans R</span></td></tr>
+<tr><td>NY-20</td><td>D +18.1</td><td>97.2% D</td><td><span style="color: #0000ff;">Likely D</span></td></tr>
+<tr><td>NY-21</td><td>R +20.4</td><td>96.8% R</td><td><span style="color: #ff0000;">Likely R</span></td></tr>
+<tr><td>NY-22</td><td>D +1.7</td><td>58.9% D</td><td><span style="color: #0000ff;">Leans D</span></td></tr>
+<tr><td>NY-23</td><td>R +22.3</td><td>98.1% R</td><td><span style="color: #ff0000;">Safe R</span></td></tr>
+<tr><td>NY-24</td><td>R +19.6</td><td>94.2% R</td><td><span style="color: #ff0000;">Likely R</span></td></tr>
+<tr><td>NY-25</td><td>D +11.7</td><td>86.2% D</td><td><span style="color: #0000ff;">Likely D</span></td></tr>
+<tr><td>NY-26</td><td>D +29.7</td><td>99.6% D</td><td><span style="color: #0000ff;">Safe D</span></td></tr>
+<tr><td>OH-01</td><td>R +0.7</td><td>50.3% R</td><td><span style="color: #ff0000;">Leans R</span></td></tr>
+<tr><td>OH-02</td><td>R +52.4</td><td>>99.9% R</td><td><span style="color: #ff0000;">Safe R</span></td></tr>
+<tr><td>OH-03</td><td>D +38.2</td><td>99.7% D</td><td><span style="color: #0000ff;">Safe D</span></td></tr>
+<tr><td>OH-04</td><td>R +41.6</td><td>>99.9% R</td><td><span style="color: #ff0000;">Safe R</span></td></tr>
+<tr><td>OH-05</td><td>R +35.3</td><td>99.8% R</td><td><span style="color: #ff0000;">Safe R</span></td></tr>
+<tr><td>OH-06</td><td>R +34.4</td><td>99.8% R</td><td><span style="color: #ff0000;">Safe R</span></td></tr>
+<tr><td>OH-07</td><td>R +14.5</td><td>93.0% R</td><td><span style="color: #ff0000;">Likely R</span></td></tr>
+<tr><td>OH-08</td><td>R +29.0</td><td>99.4% R</td><td><span style="color: #ff0000;">Safe R</span></td></tr>
+<tr><td>OH-09</td><td>R +6.4</td><td>73.9% R</td><td><span style="color: #ff0000;">Leans R</span></td></tr>
+<tr><td>OH-10</td><td>R +16.0</td><td>92.4% R</td><td><span style="color: #ff0000;">Likely R</span></td></tr>
+<tr><td>OH-11</td><td>D +50.4</td><td>>99.9% D</td><td><span style="color: #0000ff;">Safe D</span></td></tr>
+<tr><td>OH-12</td><td>R +35.5</td><td>99.8% R</td><td><span style="color: #ff0000;">Safe R</span></td></tr>
+<tr><td>OH-13</td><td>R +3.1</td><td>61.5% R</td><td><span style="color: #ff0000;">Leans R</span></td></tr>
+<tr><td>OH-14</td><td>R +22.4</td><td>97.9% R</td><td><span style="color: #ff0000;">Likely R</span></td></tr>
+<tr><td>OH-15</td><td>R +12.2</td><td>89.7% R</td><td><span style="color: #ff0000;">Likely R</span></td></tr>
+<tr><td>OK-01</td><td>R +25.3</td><td>98.6% R</td><td><span style="color: #ff0000;">Safe R</span></td></tr>
+<tr><td>OK-02</td><td>R +57.8</td><td>>99.9% R</td><td><span style="color: #ff0000;">Safe R</span></td></tr>
+<tr><td>OK-03</td><td>R +47.9</td><td>>99.9% R</td><td><span style="color: #ff0000;">Safe R</span></td></tr>
+<tr><td>OK-04</td><td>R +35.5</td><td>99.8% R</td><td><span style="color: #ff0000;">Safe R</span></td></tr>
+<tr><td>OK-05</td><td>R +22.7</td><td>98.0% R</td><td><span style="color: #ff0000;">Safe R</span></td></tr>
+<tr><td>OR-01</td><td>D +33.9</td><td>99.5% D</td><td><span style="color: #0000ff;">Safe D</span></td></tr>
+<tr><td>OR-02</td><td>R +32.7</td><td>99.6% R</td><td><span style="color: #ff0000;">Safe R</span></td></tr>
+<tr><td>OR-03</td><td>D +40.0</td><td>99.7% D</td><td><span style="color: #0000ff;">Safe D</span></td></tr>
+<tr><td>OR-04</td><td>D +8.9</td><td>84.3% D</td><td><span style="color: #0000ff;">Likely D</span></td></tr>
+<tr><td>OR-05</td><td>D +0.6</td><td>54.5% D</td><td><span style="color: #0000ff;">Leans D</span></td></tr>
+<tr><td>OR-06</td><td>D +7.7</td><td>80.1% D</td><td><span style="color: #0000ff;">Likely D</span></td></tr>
+<tr><td>PA-01</td><td>R +8.8</td><td>78.5% R</td><td><span style="color: #ff0000;">Leans R</span></td></tr>
+<tr><td>PA-02</td><td>D +37.8</td><td>99.7% D</td><td><span style="color: #0000ff;">Safe D</span></td></tr>
+<tr><td>PA-03</td><td>--</td><td>100% D</td><td><span style="color: #0000ff;">Safe D</span></td></tr>
+<tr><td>PA-04</td><td>D +14.2</td><td>93.0% D</td><td><span style="color: #0000ff;">Likely D</span></td></tr>
+<tr><td>PA-05</td><td>D +24.5</td><td>97.6% D</td><td><span style="color: #0000ff;">Likely D</span></td></tr>
+<tr><td>PA-06</td><td>D +10.6</td><td>87.7% D</td><td><span style="color: #0000ff;">Likely D</span></td></tr>
+<tr><td>PA-07</td><td>R +4.5</td><td>68.0% R</td><td><span style="color: #ff0000;">Leans R</span></td></tr>
+<tr><td>PA-08</td><td>R +5.2</td><td>70.4% R</td><td><span style="color: #ff0000;">Leans R</span></td></tr>
+<tr><td>PA-09</td><td>R +39.1</td><td>99.8% R</td><td><span style="color: #ff0000;">Safe R</span></td></tr>
+<tr><td>PA-10</td><td>R +9.7</td><td>84.5% R</td><td><span style="color: #ff0000;">Likely R</span></td></tr>
+<tr><td>PA-11</td><td>R +25.9</td><td>98.9% R</td><td><span style="color: #ff0000;">Safe R</span></td></tr>
+<tr><td>PA-12</td><td>D +19.8</td><td>98.0% D</td><td><span style="color: #0000ff;">Likely D</span></td></tr>
+<tr><td>PA-13</td><td>--</td><td>100% R</td><td><span style="color: #ff0000;">Safe R</span></td></tr>
+<tr><td>PA-14</td><td>--</td><td>100% R</td><td><span style="color: #ff0000;">Safe R</span></td></tr>
+<tr><td>PA-15</td><td>R +41.4</td><td>>99.9% R</td><td><span style="color: #ff0000;">Safe R</span></td></tr>
+<tr><td>PA-16</td><td>R +23.3</td><td>97.1% R</td><td><span style="color: #ff0000;">Likely R</span></td></tr>
+<tr><td>PA-17</td><td>D +0.1</td><td>51.2% D</td><td><span style="color: #0000ff;">Leans D</span></td></tr>
+<tr><td>RI-01</td><td>D +24.0</td><td>98.4% D</td><td><span style="color: #0000ff;">Safe D</span></td></tr>
+<tr><td>RI-02</td><td>D +8.2</td><td>81.5% D</td><td><span style="color: #0000ff;">Likely D</span></td></tr>
+<tr><td>SC-01</td><td>R +12.3</td><td>87.7% R</td><td><span style="color: #ff0000;">Likely R</span></td></tr>
+<tr><td>SC-02</td><td>R +16.9</td><td>95.2% R</td><td><span style="color: #ff0000;">Likely R</span></td></tr>
+<tr><td>SC-03</td><td>--</td><td>100% R</td><td><span style="color: #ff0000;">Safe R</span></td></tr>
+<tr><td>SC-04</td><td>--</td><td>100% R</td><td><span style="color: #ff0000;">Safe R</span></td></tr>
+<tr><td>SC-05</td><td>R +24.7</td><td>98.7% R</td><td><span style="color: #ff0000;">Safe R</span></td></tr>
+<tr><td>SC-06</td><td>D +25.7</td><td>98.4% D</td><td><span style="color: #0000ff;">Safe D</span></td></tr>
+<tr><td>SC-07</td><td>R +23.7</td><td>98.5% R</td><td><span style="color: #ff0000;">Safe R</span></td></tr>
+<tr><td>SD-AL</td><td>--</td><td>100% R</td><td><span style="color: #ff0000;">Safe R</span></td></tr>
+<tr><td>TN-01</td><td>R +57.8</td><td>>99.9% R</td><td><span style="color: #ff0000;">Safe R</span></td></tr>
+<tr><td>TN-02</td><td>R +35.6</td><td>99.8% R</td><td><span style="color: #ff0000;">Safe R</span></td></tr>
+<tr><td>TN-03</td><td>R +37.3</td><td>99.9% R</td><td><span style="color: #ff0000;">Safe R</span></td></tr>
+<tr><td>TN-04</td><td>R +41.0</td><td>99.9% R</td><td><span style="color: #ff0000;">Safe R</span></td></tr>
+<tr><td>TN-05</td><td>R +16.5</td><td>95.0% R</td><td><span style="color: #ff0000;">Likely R</span></td></tr>
+<tr><td>TN-06</td><td>R +33.7</td><td>99.7% R</td><td><span style="color: #ff0000;">Safe R</span></td></tr>
+<tr><td>TN-07</td><td>R +21.0</td><td>97.7% R</td><td><span style="color: #ff0000;">Likely R</span></td></tr>
+<tr><td>TN-08</td><td>R +45.4</td><td>>99.9% R</td><td><span style="color: #ff0000;">Safe R</span></td></tr>
+<tr><td>TN-09</td><td>D +40.0</td><td>99.7% D</td><td><span style="color: #0000ff;">Safe D</span></td></tr>
+<tr><td>TX-01</td><td>R +50.3</td><td>>99.9% R</td><td><span style="color: #ff0000;">Safe R</span></td></tr>
+<tr><td>TX-02</td><td>R +29.5</td><td>99.5% R</td><td><span style="color: #ff0000;">Safe R</span></td></tr>
+<tr><td>TX-03</td><td>R +19.6</td><td>97.0% R</td><td><span style="color: #ff0000;">Likely R</span></td></tr>
+<tr><td>TX-04</td><td>R +31.3</td><td>99.6% R</td><td><span style="color: #ff0000;">Safe R</span></td></tr>
+<tr><td>TX-05</td><td>R +28.5</td><td>99.4% R</td><td><span style="color: #ff0000;">Safe R</span></td></tr>
+<tr><td>TX-06</td><td>--</td><td>100% R</td><td><span style="color: #ff0000;">Safe R</span></td></tr>
+<tr><td>TX-07</td><td>D +24.0</td><td>98.1% D</td><td><span style="color: #0000ff;">Safe D</span></td></tr>
+<tr><td>TX-08</td><td>R +32.0</td><td>99.6% R</td><td><span style="color: #ff0000;">Safe R</span></td></tr>
+<tr><td>TX-09</td><td>D +47.6</td><td>>99.9% D</td><td><span style="color: #0000ff;">Safe D</span></td></tr>
+<tr><td>TX-10</td><td>R +24.4</td><td>98.7% R</td><td><span style="color: #ff0000;">Safe R</span></td></tr>
+<tr><td>TX-11</td><td>--</td><td>100% R</td><td><span style="color: #ff0000;">Safe R</span></td></tr>
+<tr><td>TX-12</td><td>R +26.1</td><td>98.8% R</td><td><span style="color: #ff0000;">Safe R</span></td></tr>
+<tr><td>TX-13</td><td>R +50.0</td><td>>99.9% R</td><td><span style="color: #ff0000;">Safe R</span></td></tr>
+<tr><td>TX-14</td><td>R +36.0</td><td>99.8% R</td><td><span style="color: #ff0000;">Safe R</span></td></tr>
+<tr><td>TX-15</td><td>R +7.5</td><td>78.5% R</td><td><span style="color: #ff0000;">Leans R</span></td></tr>
+<tr><td>TX-16</td><td>D +27.4</td><td>98.3% D</td><td><span style="color: #0000ff;">Safe D</span></td></tr>
+<tr><td>TX-17</td><td>R +28.2</td><td>99.4% R</td><td><span style="color: #ff0000;">Safe R</span></td></tr>
+<tr><td>TX-18</td><td>D +38.2</td><td>99.5% D</td><td><span style="color: #0000ff;">Safe D</span></td></tr>
+<tr><td>TX-19</td><td>--</td><td>100% R</td><td><span style="color: #ff0000;">Safe R</span></td></tr>
+<tr><td>TX-20</td><td>D +29.0</td><td>99.3% D</td><td><span style="color: #0000ff;">Safe D</span></td></tr>
+<tr><td>TX-21</td><td>R +24.5</td><td>98.6% R</td><td><span style="color: #ff0000;">Safe R</span></td></tr>
+<tr><td>TX-22</td><td>R +22.6</td><td>98.1% R</td><td><span style="color: #ff0000;">Safe R</span></td></tr>
+<tr><td>TX-23</td><td>R +13.0</td><td>91.0% R</td><td><span style="color: #ff0000;">Likely R</span></td></tr>
+<tr><td>TX-24</td><td>R +18.8</td><td>96.5% R</td><td><span style="color: #ff0000;">Likely R</span></td></tr>
+<tr><td>TX-25</td><td>--</td><td>100% R</td><td><span style="color: #ff0000;">Safe R</span></td></tr>
+<tr><td>TX-26</td><td>--</td><td>100% R</td><td><span style="color: #ff0000;">Safe R</span></td></tr>
+<tr><td>TX-27</td><td>R +30.2</td><td>99.4% R</td><td><span style="color: #ff0000;">Safe R</span></td></tr>
+<tr><td>TX-28</td><td>D +11.4</td><td>89.4% D</td><td><span style="color: #0000ff;">Likely D</span></td></tr>
+<tr><td>TX-29</td><td>D +30.2</td><td>99.1% D</td><td><span style="color: #0000ff;">Safe D</span></td></tr>
+<tr><td>TX-30</td><td>D +49.6</td><td>>99.9% D</td><td><span style="color: #0000ff;">Safe D</span></td></tr>
+<tr><td>TX-31</td><td>--</td><td>100% R</td><td><span style="color: #ff0000;">Safe R</span></td></tr>
+<tr><td>TX-32</td><td>D +26.3</td><td>98.4% D</td><td><span style="color: #0000ff;">Safe D</span></td></tr>
+<tr><td>TX-33</td><td>D +42.5</td><td>99.8% D</td><td><span style="color: #0000ff;">Safe D</span></td></tr>
+<tr><td>TX-34</td><td>D +8.8</td><td>81.7% D</td><td><span style="color: #0000ff;">Likely D</span></td></tr>
+<tr><td>TX-35</td><td>D +38.6</td><td>99.7% D</td><td><span style="color: #0000ff;">Safe D</span></td></tr>
+<tr><td>TX-36</td><td>R +38.2</td><td>99.9% R</td><td><span style="color: #ff0000;">Safe R</span></td></tr>
+<tr><td>TX-37</td><td>D +46.7</td><td>>99.9% D</td><td><span style="color: #0000ff;">Safe D</span></td></tr>
+<tr><td>TX-38</td><td>R +24.8</td><td>98.8% R</td><td><span style="color: #ff0000;">Safe R</span></td></tr>
+<tr><td>UT-01</td><td>R +26.6</td><td>99.0% R</td><td><span style="color: #ff0000;">Safe R</span></td></tr>
+<tr><td>UT-02</td><td>R +26.5</td><td>98.6% R</td><td><span style="color: #ff0000;">Safe R</span></td></tr>
+<tr><td>UT-03</td><td>R +35.9</td><td>99.6% R</td><td><span style="color: #ff0000;">Safe R</span></td></tr>
+<tr><td>UT-04</td><td>R +28.0</td><td>98.6% R</td><td><span style="color: #ff0000;">Safe R</span></td></tr>
+<tr><td>VA-01</td><td>R +14.2</td><td>91.7% R</td><td><span style="color: #ff0000;">Likely R</span></td></tr>
+<tr><td>VA-02</td><td>R +4.4</td><td>66.7% R</td><td><span style="color: #ff0000;">Leans R</span></td></tr>
+<tr><td>VA-03</td><td>D +33.0</td><td>99.5% D</td><td><span style="color: #0000ff;">Safe D</span></td></tr>
+<tr><td>VA-04</td><td>D +29.6</td><td>99.0% D</td><td><span style="color: #0000ff;">Safe D</span></td></tr>
+<tr><td>VA-05</td><td>R +12.2</td><td>88.2% R</td><td><span style="color: #ff0000;">Likely R</span></td></tr>
+<tr><td>VA-06</td><td>R +27.5</td><td>99.3% R</td><td><span style="color: #ff0000;">Safe R</span></td></tr>
+<tr><td>VA-07</td><td>D +2.6</td><td>62.5% D</td><td><span style="color: #0000ff;">Leans D</span></td></tr>
+<tr><td>VA-08</td><td>D +45.8</td><td>99.8% D</td><td><span style="color: #0000ff;">Safe D</span></td></tr>
+<tr><td>VA-09</td><td>R +45.2</td><td>>99.9% R</td><td><span style="color: #ff0000;">Safe R</span></td></tr>
+<tr><td>VA-10</td><td>D +10.4</td><td>84.1% D</td><td><span style="color: #0000ff;">Likely D</span></td></tr>
+<tr><td>VA-11</td><td>D +34.1</td><td>99.4% D</td><td><span style="color: #0000ff;">Safe D</span></td></tr>
+<tr><td>VT-AL</td><td>D +29.4</td><td>99.0% D</td><td><span style="color: #0000ff;">Safe D</span></td></tr>
+<tr><td>WA-01</td><td>D +22.7</td><td>97.0% D</td><td><span style="color: #0000ff;">Likely D</span></td></tr>
+<tr><td>WA-02</td><td>D +17.6</td><td>95.8% D</td><td><span style="color: #0000ff;">Likely D</span></td></tr>
+<tr><td>WA-03</td><td>R +9.7</td><td>84.6% R</td><td><span style="color: #ff0000;">Likely R</span></td></tr>
+<tr><td>WA-04</td><td>R +26.3</td><td>98.6% R</td><td><span style="color: #ff0000;">Safe R</span></td></tr>
+<tr><td>WA-05</td><td>R +16.4</td><td>94.7% R</td><td><span style="color: #ff0000;">Likely R</span></td></tr>
+<tr><td>WA-06</td><td>D +14.9</td><td>94.7% D</td><td><span style="color: #0000ff;">Likely D</span></td></tr>
+<tr><td>WA-07</td><td>D +63.3</td><td>>99.9% D</td><td><span style="color: #0000ff;">Safe D</span></td></tr>
+<tr><td>WA-08</td><td>R +3.0</td><td>59.4% R</td><td><span style="color: #ff0000;">Leans R</span></td></tr>
+<tr><td>WA-09</td><td>D +38.6</td><td>99.7% D</td><td><span style="color: #0000ff;">Safe D</span></td></tr>
+<tr><td>WA-10</td><td>D +12.3</td><td>89.8% D</td><td><span style="color: #0000ff;">Likely D</span></td></tr>
+<tr><td>WI-01</td><td>R +12.0</td><td>87.3% R</td><td><span style="color: #ff0000;">Likely R</span></td></tr>
+<tr><td>WI-02</td><td>D +35.6</td><td>99.6% D</td><td><span style="color: #0000ff;">Safe D</span></td></tr>
+<tr><td>WI-03</td><td>R +7.8</td><td>77.3% R</td><td><span style="color: #ff0000;">Leans R</span></td></tr>
+<tr><td>WI-04</td><td>D +44.0</td><td>99.8% D</td><td><span style="color: #0000ff;">Safe D</span></td></tr>
+<tr><td>WI-05</td><td>R +29.2</td><td>99.4% R</td><td><span style="color: #ff0000;">Safe R</span></td></tr>
+<tr><td>WI-06</td><td>--</td><td>100% R</td><td><span style="color: #ff0000;">Safe R</span></td></tr>
+<tr><td>WI-07</td><td>R +25.0</td><td>98.8% R</td><td><span style="color: #ff0000;">Safe R</span></td></tr>
+<tr><td>WI-08</td><td>--</td><td>100% R</td><td><span style="color: #ff0000;">Safe R</span></td></tr>
+<tr><td>WV-01</td><td>R +38.8</td><td>99.2% R</td><td><span style="color: #ff0000;">Safe R</span></td></tr>
+<tr><td>WV-02</td><td>R +37.2</td><td>99.4% R</td><td><span style="color: #ff0000;">Safe R</span></td></tr>
+<tr><td>WY-AL</td><td>R +47.6</td><td>>99.9% R</td><td><span style="color: #ff0000;">Safe R</span></td></tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
+</div>
+</body>
+</html>
