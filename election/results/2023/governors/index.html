@@ -6443,18 +6443,81 @@
 <td>Pct</td>
 
 </tr>
-<tr><td style="color: #fff" bgcolor="#FF0000">Jeff Landry ✔</td><td>REP</td><td class="votes">547,828</td><td class="pct">51.6</td></tr>
-<tr><td>Shawn Wilson</td><td>DEM</td><td class="votes">275,527</td><td class="pct">25.9</td></tr>
-<tr><td>Stephen Waguespack</td><td>REP</td><td class="votes">62,280</td><td class="pct">5.9</td></tr>
-<tr><td>John Schroder</td><td>REP</td><td class="votes">56,656</td><td class="pct">5.3</td></tr>
-<tr><td>Hunter Lundy</td><td>IND</td><td class="votes">52,167</td><td class="pct">4.9</td></tr>
-<tr><td>Daniel Cole</td><td>DEM</td><td class="votes">27,663</td><td class="pct">2.6</td></tr>
+<tr><td style="color: #fff" bgcolor="#FF0000">Jeff Landry ✔</td><td>REP</td><td class="votes">547,827</td><td class="pct">51.6</td></tr>
+<tr><td>Shawn Wilson</td><td>DEM</td><td class="votes">275,525</td><td class="pct">25.9</td></tr>
+<tr><td>Stephen Waguespack</td><td>REP</td><td class="votes">62,287</td><td class="pct">5.9</td></tr>
+<tr><td>John Schroder</td><td>REP</td><td class="votes">56,654</td><td class="pct">5.3</td></tr>
+<tr><td>Hunter Lundy</td><td>IND</td><td class="votes">52,165</td><td class="pct">4.9</td></tr>
+<tr><td>Daniel Cole</td><td>DEM</td><td class="votes">27,662</td><td class="pct">2.6</td></tr>
 </tbody>
 </table>
 100.0% of precincts reporting<br>
 Status: <b>Called for Landry (R)</b><br>
 Lead: <b>Landry +25.6</b><br>
 Pre-election estimate: <b>Safe R</b>
+</div>
+<div id="KY-results" class="results">
+<b class="name">Kentucky </b><br>
+<table class="resultstable">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+
+</tr>
+<tr><td>Andy Beshear*</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Daniel Cameron</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Status: <b>Not called</b><br>
+Lead: <b>Tie</b><br>
+<table class="modelstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Model</td>
+<td colspan="3">Estimate</td>
+</tr>
+<tr><td>Model 1</td><td><b>Tie</b></td><td class="pct"></td><td class="pct"> </td></tr>
+<tr><td>Model 2</td><td><b>Tie</b></td><td class="pct"></td><td class="pct"> </td></tr>
+</tbody>
+</table>
+0.0% of estimated vote reporting<br>
+Pre-election estimate: <b>Leans D</b>
+</div>
+<div id="MS-results" class="results">
+<b class="name">Mississippi </b><br>
+<table class="resultstable">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+
+</tr>
+<tr><td>Tate Reeves*</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Brandon Presley</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Status: <b>Not called</b><br>
+Lead: <b>Tie</b><br>
+<table class="modelstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Model</td>
+<td colspan="3">Estimate</td>
+</tr>
+<tr><td>Model 1</td><td><b>Tie</b></td><td class="pct"></td><td class="pct"> </td></tr>
+<tr><td>Model 2A</td><td><b>Reeves</b></td><td class="pct">+5.0</td><td class="pct"> </td></tr>
+<tr><td>Model 2B</td><td><b>Reeves</b></td><td class="pct">+5.0</td><td class="pct"> (69.1%)</td></tr>
+</tbody>
+</table>
+0.0% of estimated vote reporting<br>
+Pre-election estimate: <b>Likely R</b>
 </div>
 
   <div id="AK-results" class="results">
@@ -6542,11 +6605,6 @@ Pre-election estimate: <b>Safe R</b>
     No election
   </div>
 
-  <div id="KY-results" class="results">
-    <b class="name">Kentucky</b><br>
-    No election
-  </div>
-
   <div id="MA-results" class="results">
     <b class="name">Massachusetts</b><br>
     No election
@@ -6574,11 +6632,6 @@ Pre-election estimate: <b>Safe R</b>
 
   <div id="MO-results" class="results">
     <b class="name">Missouri</b><br>
-    No election
-  </div>
-
-  <div id="MS-results" class="results">
-    <b class="name">Mississippi</b><br>
     No election
   </div>
 
@@ -6828,7 +6881,7 @@ Pre-election estimate: <b>Safe R</b>
     hide('back-button');
   }
   function showCountiesState(box, state, fips) {
-    var model_states = [];
+    var model_states = ["KY","MS"];
     var early_model_states = [];
     if (model_states.includes(state)) {
       show('results-button');
@@ -6901,15 +6954,15 @@ Pre-election estimate: <b>Safe R</b>
   function setColor(id, color) {
     document.getElementById(id).style.fill = color;    
   }
-  var stateColors = {"LA": "#FF0000"};
+  var stateColors = {"LA": "#FF0000", "KY": "#FFFFFF", "MS": "#FFFFFF"};
   function colorAll() {
     for (var state in stateColors) {
       setColor(state, stateColors[state]);
     }
   }
   colorAll();
-  var actual = {"c22033": "#0000FF", "c22051": "#FF0000", "c22071": "#0000C0", "c22103": "#C00000", "c22055": "#C00000", "c22017": "#FF0000", "c22019": "#C00000", "c22063": "#C00000", "c22079": "#C00000", "c22073": "#C00000", "c22005": "#C00000", "c22105": "#C00000", "c22015": "#C00000", "c22109": "#C00000", "c22057": "#C00000", "c22097": "#C00000", "c22045": "#C00000", "c22113": "#C00000", "c22099": "#C00000", "c22001": "#C00000", "c22089": "#C00000", "c22117": "#C00000", "c22101": "#C00000", "c22047": "#FF3030", "c22095": "#0000FF", "c22087": "#C00000", "c22009": "#C00000", "c22121": "#FF0000", "c22069": "#C00000", "c22115": "#C00000", "c22031": "#C00000", "c22093": "#FF3030", "c22039": "#C00000", "c22053": "#C00000", "c22061": "#C00000", "c22119": "#C00000", "c22077": "#C00000", "c22011": "#C00000", "c22111": "#C00000", "c22085": "#C00000", "c22007": "#C00000", "c22037": "#FF0000", "c22075": "#C00000", "c22067": "#C00000", "c22041": "#C00000", "c22043": "#C00000", "c22083": "#C00000", "c22059": "#C00000", "c22049": "#C00000", "c22127": "#C00000", "c22003": "#C00000", "c22091": "#FF6060", "c22027": "#C00000", "c22029": "#C00000", "c22013": "#C00000", "c22125": "#C00000", "c22025": "#C00000", "c22021": "#C00000", "c22065": "#FF0000", "c22023": "#C00000", "c22123": "#C00000", "c22081": "#C00000", "c22107": "#FF3030", "c22035": "#3030FF"};
-  var margins = {};
+  var actual = {"c22033": "#0000FF", "c22051": "#FF0000", "c22071": "#0000C0", "c22103": "#C00000", "c22055": "#C00000", "c22017": "#FF0000", "c22019": "#C00000", "c22063": "#C00000", "c22079": "#C00000", "c22073": "#C00000", "c22005": "#C00000", "c22105": "#C00000", "c22015": "#C00000", "c22109": "#C00000", "c22057": "#C00000", "c22097": "#C00000", "c22045": "#C00000", "c22113": "#C00000", "c22099": "#C00000", "c22001": "#C00000", "c22089": "#C00000", "c22117": "#C00000", "c22101": "#C00000", "c22047": "#FF3030", "c22095": "#0000FF", "c22087": "#C00000", "c22009": "#C00000", "c22121": "#FF0000", "c22069": "#C00000", "c22115": "#C00000", "c22031": "#C00000", "c22093": "#FF3030", "c22039": "#C00000", "c22053": "#C00000", "c22061": "#C00000", "c22119": "#C00000", "c22077": "#C00000", "c22011": "#C00000", "c22111": "#C00000", "c22085": "#C00000", "c22007": "#C00000", "c22037": "#FF0000", "c22075": "#C00000", "c22067": "#C00000", "c22041": "#C00000", "c22043": "#C00000", "c22083": "#C00000", "c22059": "#C00000", "c22049": "#C00000", "c22127": "#C00000", "c22003": "#C00000", "c22091": "#FF6060", "c22027": "#C00000", "c22029": "#C00000", "c22013": "#C00000", "c22125": "#C00000", "c22025": "#C00000", "c22021": "#C00000", "c22065": "#FF0000", "c22023": "#C00000", "c22123": "#C00000", "c22081": "#C00000", "c22107": "#FF3030", "c22035": "#3030FF", "c21001": "#FFFFFF", "c21003": "#FFFFFF", "c21005": "#FFFFFF", "c21007": "#FFFFFF", "c21009": "#FFFFFF", "c21011": "#FFFFFF", "c21013": "#FFFFFF", "c21015": "#FFFFFF", "c21017": "#FFFFFF", "c21019": "#FFFFFF", "c21021": "#FFFFFF", "c21023": "#FFFFFF", "c21025": "#FFFFFF", "c21027": "#FFFFFF", "c21029": "#FFFFFF", "c21031": "#FFFFFF", "c21033": "#FFFFFF", "c21035": "#FFFFFF", "c21037": "#FFFFFF", "c21039": "#FFFFFF", "c21041": "#FFFFFF", "c21043": "#FFFFFF", "c21045": "#FFFFFF", "c21047": "#FFFFFF", "c21049": "#FFFFFF", "c21051": "#FFFFFF", "c21053": "#FFFFFF", "c21055": "#FFFFFF", "c21057": "#FFFFFF", "c21059": "#FFFFFF", "c21061": "#FFFFFF", "c21063": "#FFFFFF", "c21065": "#FFFFFF", "c21067": "#FFFFFF", "c21069": "#FFFFFF", "c21071": "#FFFFFF", "c21073": "#FFFFFF", "c21075": "#FFFFFF", "c21077": "#FFFFFF", "c21079": "#FFFFFF", "c21081": "#FFFFFF", "c21083": "#FFFFFF", "c21085": "#FFFFFF", "c21087": "#FFFFFF", "c21089": "#FFFFFF", "c21091": "#FFFFFF", "c21093": "#FFFFFF", "c21095": "#FFFFFF", "c21097": "#FFFFFF", "c21099": "#FFFFFF", "c21101": "#FFFFFF", "c21103": "#FFFFFF", "c21105": "#FFFFFF", "c21107": "#FFFFFF", "c21109": "#FFFFFF", "c21111": "#FFFFFF", "c21113": "#FFFFFF", "c21115": "#FFFFFF", "c21117": "#FFFFFF", "c21119": "#FFFFFF", "c21121": "#FFFFFF", "c21123": "#FFFFFF", "c21125": "#FFFFFF", "c21127": "#FFFFFF", "c21129": "#FFFFFF", "c21131": "#FFFFFF", "c21133": "#FFFFFF", "c21135": "#FFFFFF", "c21137": "#FFFFFF", "c21139": "#FFFFFF", "c21141": "#FFFFFF", "c21143": "#FFFFFF", "c21151": "#FFFFFF", "c21153": "#FFFFFF", "c21155": "#FFFFFF", "c21157": "#FFFFFF", "c21159": "#FFFFFF", "c21161": "#FFFFFF", "c21145": "#FFFFFF", "c21147": "#FFFFFF", "c21149": "#FFFFFF", "c21163": "#FFFFFF", "c21165": "#FFFFFF", "c21167": "#FFFFFF", "c21169": "#FFFFFF", "c21171": "#FFFFFF", "c21173": "#FFFFFF", "c21175": "#FFFFFF", "c21177": "#FFFFFF", "c21179": "#FFFFFF", "c21181": "#FFFFFF", "c21183": "#FFFFFF", "c21185": "#FFFFFF", "c21187": "#FFFFFF", "c21189": "#FFFFFF", "c21191": "#FFFFFF", "c21193": "#FFFFFF", "c21195": "#FFFFFF", "c21197": "#FFFFFF", "c21199": "#FFFFFF", "c21201": "#FFFFFF", "c21203": "#FFFFFF", "c21205": "#FFFFFF", "c21207": "#FFFFFF", "c21209": "#FFFFFF", "c21211": "#FFFFFF", "c21213": "#FFFFFF", "c21215": "#FFFFFF", "c21217": "#FFFFFF", "c21219": "#FFFFFF", "c21221": "#FFFFFF", "c21223": "#FFFFFF", "c21225": "#FFFFFF", "c21227": "#FFFFFF", "c21229": "#FFFFFF", "c21231": "#FFFFFF", "c21233": "#FFFFFF", "c21235": "#FFFFFF", "c21237": "#FFFFFF", "c21239": "#FFFFFF", "c28001": "#FFFFFF", "c28003": "#FFFFFF", "c28005": "#FFFFFF", "c28007": "#FFFFFF", "c28009": "#FFFFFF", "c28011": "#FFFFFF", "c28013": "#FFFFFF", "c28015": "#FFFFFF", "c28017": "#FFFFFF", "c28019": "#FFFFFF", "c28021": "#FFFFFF", "c28023": "#FFFFFF", "c28025": "#FFFFFF", "c28027": "#FFFFFF", "c28029": "#FFFFFF", "c28031": "#FFFFFF", "c28033": "#FFFFFF", "c28035": "#FFFFFF", "c28037": "#FFFFFF", "c28039": "#FFFFFF", "c28041": "#FFFFFF", "c28043": "#FFFFFF", "c28045": "#FFFFFF", "c28047": "#FFFFFF", "c28049": "#FFFFFF", "c28051": "#FFFFFF", "c28053": "#FFFFFF", "c28055": "#FFFFFF", "c28057": "#FFFFFF", "c28059": "#FFFFFF", "c28061": "#FFFFFF", "c28065": "#FFFFFF", "c28063": "#FFFFFF", "c28067": "#FFFFFF", "c28069": "#FFFFFF", "c28071": "#FFFFFF", "c28073": "#FFFFFF", "c28075": "#FFFFFF", "c28077": "#FFFFFF", "c28079": "#FFFFFF", "c28081": "#FFFFFF", "c28083": "#FFFFFF", "c28085": "#FFFFFF", "c28087": "#FFFFFF", "c28089": "#FFFFFF", "c28091": "#FFFFFF", "c28093": "#FFFFFF", "c28095": "#FFFFFF", "c28097": "#FFFFFF", "c28099": "#FFFFFF", "c28101": "#FFFFFF", "c28103": "#FFFFFF", "c28105": "#FFFFFF", "c28107": "#FFFFFF", "c28109": "#FFFFFF", "c28111": "#FFFFFF", "c28113": "#FFFFFF", "c28115": "#FFFFFF", "c28117": "#FFFFFF", "c28119": "#FFFFFF", "c28121": "#FFFFFF", "c28123": "#FFFFFF", "c28125": "#FFFFFF", "c28127": "#FFFFFF", "c28129": "#FFFFFF", "c28131": "#FFFFFF", "c28133": "#FFFFFF", "c28135": "#FFFFFF", "c28137": "#FFFFFF", "c28139": "#FFFFFF", "c28141": "#FFFFFF", "c28143": "#FFFFFF", "c28145": "#FFFFFF", "c28147": "#FFFFFF", "c28149": "#FFFFFF", "c28151": "#FFFFFF", "c28153": "#FFFFFF", "c28155": "#FFFFFF", "c28157": "#FFFFFF", "c28159": "#FFFFFF", "c28161": "#FFFFFF", "c28163": "#FFFFFF"};
+  var margins = {"c21001": "#FFFFFF", "c21003": "#FFFFFF", "c21005": "#FFFFFF", "c21007": "#FFFFFF", "c21009": "#FFFFFF", "c21011": "#FFFFFF", "c21013": "#FFFFFF", "c21015": "#FFFFFF", "c21017": "#FFFFFF", "c21019": "#FFFFFF", "c21021": "#FFFFFF", "c21023": "#FFFFFF", "c21025": "#FFFFFF", "c21027": "#FFFFFF", "c21029": "#FFFFFF", "c21031": "#FFFFFF", "c21033": "#FFFFFF", "c21035": "#FFFFFF", "c21037": "#FFFFFF", "c21039": "#FFFFFF", "c21041": "#FFFFFF", "c21043": "#FFFFFF", "c21045": "#FFFFFF", "c21047": "#FFFFFF", "c21049": "#FFFFFF", "c21051": "#FFFFFF", "c21053": "#FFFFFF", "c21055": "#FFFFFF", "c21057": "#FFFFFF", "c21059": "#FFFFFF", "c21061": "#FFFFFF", "c21063": "#FFFFFF", "c21065": "#FFFFFF", "c21067": "#FFFFFF", "c21069": "#FFFFFF", "c21071": "#FFFFFF", "c21073": "#FFFFFF", "c21075": "#FFFFFF", "c21077": "#FFFFFF", "c21079": "#FFFFFF", "c21081": "#FFFFFF", "c21083": "#FFFFFF", "c21085": "#FFFFFF", "c21087": "#FFFFFF", "c21089": "#FFFFFF", "c21091": "#FFFFFF", "c21093": "#FFFFFF", "c21095": "#FFFFFF", "c21097": "#FFFFFF", "c21099": "#FFFFFF", "c21101": "#FFFFFF", "c21103": "#FFFFFF", "c21105": "#FFFFFF", "c21107": "#FFFFFF", "c21109": "#FFFFFF", "c21111": "#FFFFFF", "c21113": "#FFFFFF", "c21115": "#FFFFFF", "c21117": "#FFFFFF", "c21119": "#FFFFFF", "c21121": "#FFFFFF", "c21123": "#FFFFFF", "c21125": "#FFFFFF", "c21127": "#FFFFFF", "c21129": "#FFFFFF", "c21131": "#FFFFFF", "c21133": "#FFFFFF", "c21135": "#FFFFFF", "c21137": "#FFFFFF", "c21139": "#FFFFFF", "c21141": "#FFFFFF", "c21143": "#FFFFFF", "c21151": "#FFFFFF", "c21153": "#FFFFFF", "c21155": "#FFFFFF", "c21157": "#FFFFFF", "c21159": "#FFFFFF", "c21161": "#FFFFFF", "c21145": "#FFFFFF", "c21147": "#FFFFFF", "c21149": "#FFFFFF", "c21163": "#FFFFFF", "c21165": "#FFFFFF", "c21167": "#FFFFFF", "c21169": "#FFFFFF", "c21171": "#FFFFFF", "c21173": "#FFFFFF", "c21175": "#FFFFFF", "c21177": "#FFFFFF", "c21179": "#FFFFFF", "c21181": "#FFFFFF", "c21183": "#FFFFFF", "c21185": "#FFFFFF", "c21187": "#FFFFFF", "c21189": "#FFFFFF", "c21191": "#FFFFFF", "c21193": "#FFFFFF", "c21195": "#FFFFFF", "c21197": "#FFFFFF", "c21199": "#FFFFFF", "c21201": "#FFFFFF", "c21203": "#FFFFFF", "c21205": "#FFFFFF", "c21207": "#FFFFFF", "c21209": "#FFFFFF", "c21211": "#FFFFFF", "c21213": "#FFFFFF", "c21215": "#FFFFFF", "c21217": "#FFFFFF", "c21219": "#FFFFFF", "c21221": "#FFFFFF", "c21223": "#FFFFFF", "c21225": "#FFFFFF", "c21227": "#FFFFFF", "c21229": "#FFFFFF", "c21231": "#FFFFFF", "c21233": "#FFFFFF", "c21235": "#FFFFFF", "c21237": "#FFFFFF", "c21239": "#FFFFFF", "c28001": "#FFFFFF", "c28003": "#FFFFFF", "c28005": "#FFFFFF", "c28007": "#FFFFFF", "c28009": "#FFFFFF", "c28011": "#FFFFFF", "c28013": "#FFFFFF", "c28015": "#FFFFFF", "c28017": "#FFFFFF", "c28019": "#FFFFFF", "c28021": "#FFFFFF", "c28023": "#FFFFFF", "c28025": "#FFFFFF", "c28027": "#FFFFFF", "c28029": "#FFFFFF", "c28031": "#FFFFFF", "c28033": "#FFFFFF", "c28035": "#FFFFFF", "c28037": "#FFFFFF", "c28039": "#FFFFFF", "c28041": "#FFFFFF", "c28043": "#FFFFFF", "c28045": "#FFFFFF", "c28047": "#FFFFFF", "c28049": "#FFFFFF", "c28051": "#FFFFFF", "c28053": "#FFFFFF", "c28055": "#FFFFFF", "c28057": "#FFFFFF", "c28059": "#FFFFFF", "c28061": "#FFFFFF", "c28065": "#FFFFFF", "c28063": "#FFFFFF", "c28067": "#FFFFFF", "c28069": "#FFFFFF", "c28071": "#FFFFFF", "c28073": "#FFFFFF", "c28075": "#FFFFFF", "c28077": "#FFFFFF", "c28079": "#FFFFFF", "c28081": "#FFFFFF", "c28083": "#FFFFFF", "c28085": "#FFFFFF", "c28087": "#FFFFFF", "c28089": "#FFFFFF", "c28091": "#FFFFFF", "c28093": "#FFFFFF", "c28095": "#FFFFFF", "c28097": "#FFFFFF", "c28099": "#FFFFFF", "c28101": "#FFFFFF", "c28103": "#FFFFFF", "c28105": "#FFFFFF", "c28107": "#FFFFFF", "c28109": "#FFFFFF", "c28111": "#FFFFFF", "c28113": "#FFFFFF", "c28115": "#FFFFFF", "c28117": "#FFFFFF", "c28119": "#FFFFFF", "c28121": "#FFFFFF", "c28123": "#FFFFFF", "c28125": "#FFFFFF", "c28127": "#FFFFFF", "c28129": "#FFFFFF", "c28131": "#FFFFFF", "c28133": "#FFFFFF", "c28135": "#FFFFFF", "c28137": "#FFFFFF", "c28139": "#FFFFFF", "c28141": "#FFFFFF", "c28143": "#FFFFFF", "c28145": "#FFFFFF", "c28147": "#FFFFFF", "c28149": "#FFFFFF", "c28151": "#FFFFFF", "c28153": "#FFFFFF", "c28155": "#FFFFFF", "c28157": "#FFFFFF", "c28159": "#FFFFFF", "c28161": "#FFFFFF", "c28163": "#FFFFFF"};
   var early_margins = {};
   function colorCounties(fips, colors) {
     if (!fips && fips !== "") {
@@ -7146,7 +7199,7 @@ Lead: <b>Landry +35.7</b><br>
 </tr>
 <tr><td>Jeff Landry</td><td>REP</td><td class="votes">14,676</td><td class="pct">49.2</td></tr>
 <tr><td>Shawn Wilson</td><td>DEM</td><td class="votes">7,045</td><td class="pct">23.6</td></tr>
-<tr><td>Stephen Waguespack</td><td>REP</td><td class="votes">3,852</td><td class="pct">12.9</td></tr>
+<tr><td>Stephen Waguespack</td><td>REP</td><td class="votes">3,853</td><td class="pct">12.9</td></tr>
 <tr><td>John Schroder</td><td>REP</td><td class="votes">1,432</td><td class="pct">4.8</td></tr>
 <tr><td>Hunter Lundy</td><td>IND</td><td class="votes">1,393</td><td class="pct">4.7</td></tr>
 </tbody>
@@ -7226,11 +7279,11 @@ Lead: <b>Landry +50.0</b><br>
 <td>Votes</td>
 <td>Pct</td>
 </tr>
-<tr><td>Jeff Landry</td><td>REP</td><td class="votes">14,030</td><td class="pct">66.9</td></tr>
-<tr><td>Shawn Wilson</td><td>DEM</td><td class="votes">2,100</td><td class="pct">10.0</td></tr>
-<tr><td>John Schroder</td><td>REP</td><td class="votes">1,434</td><td class="pct">6.8</td></tr>
-<tr><td>Stephen Waguespack</td><td>REP</td><td class="votes">1,168</td><td class="pct">5.6</td></tr>
-<tr><td>Hunter Lundy</td><td>IND</td><td class="votes">1,097</td><td class="pct">5.2</td></tr>
+<tr><td>Jeff Landry</td><td>REP</td><td class="votes">14,029</td><td class="pct">67.0</td></tr>
+<tr><td>Shawn Wilson</td><td>DEM</td><td class="votes">2,098</td><td class="pct">10.0</td></tr>
+<tr><td>John Schroder</td><td>REP</td><td class="votes">1,432</td><td class="pct">6.8</td></tr>
+<tr><td>Stephen Waguespack</td><td>REP</td><td class="votes">1,174</td><td class="pct">5.6</td></tr>
+<tr><td>Hunter Lundy</td><td>IND</td><td class="votes">1,095</td><td class="pct">5.2</td></tr>
 </tbody>
 </table>
 100.0% of precincts reporting<br>
@@ -8230,6 +8283,3440 @@ Lead: <b>Landry +9.0</b><br>
 </table>
 100.0% of precincts reporting<br>
 Lead: <b>Wilson +7.1</b><br>
+</div>
+<div id="21001-results" class="results">
+<b class="name">Adair</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Andy Beshear</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Daniel Cameron</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Tie</b><br>
+</div>
+<div id="21003-results" class="results">
+<b class="name">Allen</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Andy Beshear</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Daniel Cameron</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Tie</b><br>
+</div>
+<div id="21005-results" class="results">
+<b class="name">Anderson</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Andy Beshear</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Daniel Cameron</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Tie</b><br>
+</div>
+<div id="21007-results" class="results">
+<b class="name">Ballard</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Andy Beshear</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Daniel Cameron</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Tie</b><br>
+</div>
+<div id="21009-results" class="results">
+<b class="name">Barren</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Andy Beshear</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Daniel Cameron</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Tie</b><br>
+</div>
+<div id="21011-results" class="results">
+<b class="name">Bath</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Andy Beshear</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Daniel Cameron</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Tie</b><br>
+</div>
+<div id="21013-results" class="results">
+<b class="name">Bell</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Andy Beshear</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Daniel Cameron</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Tie</b><br>
+</div>
+<div id="21015-results" class="results">
+<b class="name">Boone</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Andy Beshear</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Daniel Cameron</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Tie</b><br>
+</div>
+<div id="21017-results" class="results">
+<b class="name">Bourbon</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Andy Beshear</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Daniel Cameron</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Tie</b><br>
+</div>
+<div id="21019-results" class="results">
+<b class="name">Boyd</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Andy Beshear</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Daniel Cameron</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Tie</b><br>
+</div>
+<div id="21021-results" class="results">
+<b class="name">Boyle</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Andy Beshear</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Daniel Cameron</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Tie</b><br>
+</div>
+<div id="21023-results" class="results">
+<b class="name">Bracken</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Andy Beshear</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Daniel Cameron</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Tie</b><br>
+</div>
+<div id="21025-results" class="results">
+<b class="name">Breathitt</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Andy Beshear</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Daniel Cameron</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Tie</b><br>
+</div>
+<div id="21027-results" class="results">
+<b class="name">Breckinridge</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Andy Beshear</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Daniel Cameron</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Tie</b><br>
+</div>
+<div id="21029-results" class="results">
+<b class="name">Bullitt</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Andy Beshear</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Daniel Cameron</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Tie</b><br>
+</div>
+<div id="21031-results" class="results">
+<b class="name">Butler</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Andy Beshear</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Daniel Cameron</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Tie</b><br>
+</div>
+<div id="21033-results" class="results">
+<b class="name">Caldwell</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Andy Beshear</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Daniel Cameron</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Tie</b><br>
+</div>
+<div id="21035-results" class="results">
+<b class="name">Calloway</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Andy Beshear</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Daniel Cameron</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Tie</b><br>
+</div>
+<div id="21037-results" class="results">
+<b class="name">Campbell</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Andy Beshear</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Daniel Cameron</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Tie</b><br>
+</div>
+<div id="21039-results" class="results">
+<b class="name">Carlisle</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Andy Beshear</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Daniel Cameron</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Tie</b><br>
+</div>
+<div id="21041-results" class="results">
+<b class="name">Carroll</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Andy Beshear</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Daniel Cameron</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Tie</b><br>
+</div>
+<div id="21043-results" class="results">
+<b class="name">Carter</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Andy Beshear</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Daniel Cameron</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Tie</b><br>
+</div>
+<div id="21045-results" class="results">
+<b class="name">Casey</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Andy Beshear</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Daniel Cameron</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Tie</b><br>
+</div>
+<div id="21047-results" class="results">
+<b class="name">Christian</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Andy Beshear</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Daniel Cameron</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Tie</b><br>
+</div>
+<div id="21049-results" class="results">
+<b class="name">Clark</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Andy Beshear</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Daniel Cameron</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Tie</b><br>
+</div>
+<div id="21051-results" class="results">
+<b class="name">Clay</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Andy Beshear</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Daniel Cameron</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Tie</b><br>
+</div>
+<div id="21053-results" class="results">
+<b class="name">Clinton</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Andy Beshear</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Daniel Cameron</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Tie</b><br>
+</div>
+<div id="21055-results" class="results">
+<b class="name">Crittenden</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Andy Beshear</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Daniel Cameron</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Tie</b><br>
+</div>
+<div id="21057-results" class="results">
+<b class="name">Cumberland</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Andy Beshear</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Daniel Cameron</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Tie</b><br>
+</div>
+<div id="21059-results" class="results">
+<b class="name">Daviess</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Andy Beshear</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Daniel Cameron</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Tie</b><br>
+</div>
+<div id="21061-results" class="results">
+<b class="name">Edmonson</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Andy Beshear</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Daniel Cameron</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Tie</b><br>
+</div>
+<div id="21063-results" class="results">
+<b class="name">Elliott</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Andy Beshear</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Daniel Cameron</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Tie</b><br>
+</div>
+<div id="21065-results" class="results">
+<b class="name">Estill</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Andy Beshear</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Daniel Cameron</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Tie</b><br>
+</div>
+<div id="21067-results" class="results">
+<b class="name">Fayette</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Andy Beshear</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Daniel Cameron</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Tie</b><br>
+</div>
+<div id="21069-results" class="results">
+<b class="name">Fleming</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Andy Beshear</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Daniel Cameron</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Tie</b><br>
+</div>
+<div id="21071-results" class="results">
+<b class="name">Floyd</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Andy Beshear</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Daniel Cameron</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Tie</b><br>
+</div>
+<div id="21073-results" class="results">
+<b class="name">Franklin</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Andy Beshear</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Daniel Cameron</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Tie</b><br>
+</div>
+<div id="21075-results" class="results">
+<b class="name">Fulton</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Andy Beshear</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Daniel Cameron</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Tie</b><br>
+</div>
+<div id="21077-results" class="results">
+<b class="name">Gallatin</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Andy Beshear</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Daniel Cameron</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Tie</b><br>
+</div>
+<div id="21079-results" class="results">
+<b class="name">Garrard</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Andy Beshear</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Daniel Cameron</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Tie</b><br>
+</div>
+<div id="21081-results" class="results">
+<b class="name">Grant</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Andy Beshear</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Daniel Cameron</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Tie</b><br>
+</div>
+<div id="21083-results" class="results">
+<b class="name">Graves</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Andy Beshear</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Daniel Cameron</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Tie</b><br>
+</div>
+<div id="21085-results" class="results">
+<b class="name">Grayson</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Andy Beshear</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Daniel Cameron</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Tie</b><br>
+</div>
+<div id="21087-results" class="results">
+<b class="name">Green</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Andy Beshear</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Daniel Cameron</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Tie</b><br>
+</div>
+<div id="21089-results" class="results">
+<b class="name">Greenup</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Andy Beshear</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Daniel Cameron</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Tie</b><br>
+</div>
+<div id="21091-results" class="results">
+<b class="name">Hancock</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Andy Beshear</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Daniel Cameron</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Tie</b><br>
+</div>
+<div id="21093-results" class="results">
+<b class="name">Hardin</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Andy Beshear</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Daniel Cameron</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Tie</b><br>
+</div>
+<div id="21095-results" class="results">
+<b class="name">Harlan</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Andy Beshear</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Daniel Cameron</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Tie</b><br>
+</div>
+<div id="21097-results" class="results">
+<b class="name">Harrison</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Andy Beshear</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Daniel Cameron</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Tie</b><br>
+</div>
+<div id="21099-results" class="results">
+<b class="name">Hart</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Andy Beshear</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Daniel Cameron</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Tie</b><br>
+</div>
+<div id="21101-results" class="results">
+<b class="name">Henderson</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Andy Beshear</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Daniel Cameron</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Tie</b><br>
+</div>
+<div id="21103-results" class="results">
+<b class="name">Henry</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Andy Beshear</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Daniel Cameron</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Tie</b><br>
+</div>
+<div id="21105-results" class="results">
+<b class="name">Hickman</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Andy Beshear</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Daniel Cameron</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Tie</b><br>
+</div>
+<div id="21107-results" class="results">
+<b class="name">Hopkins</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Andy Beshear</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Daniel Cameron</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Tie</b><br>
+</div>
+<div id="21109-results" class="results">
+<b class="name">Jackson</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Andy Beshear</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Daniel Cameron</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Tie</b><br>
+</div>
+<div id="21111-results" class="results">
+<b class="name">Jefferson</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Andy Beshear</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Daniel Cameron</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Tie</b><br>
+</div>
+<div id="21113-results" class="results">
+<b class="name">Jessamine</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Andy Beshear</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Daniel Cameron</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Tie</b><br>
+</div>
+<div id="21115-results" class="results">
+<b class="name">Johnson</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Andy Beshear</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Daniel Cameron</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Tie</b><br>
+</div>
+<div id="21117-results" class="results">
+<b class="name">Kenton</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Andy Beshear</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Daniel Cameron</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Tie</b><br>
+</div>
+<div id="21119-results" class="results">
+<b class="name">Knott</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Andy Beshear</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Daniel Cameron</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Tie</b><br>
+</div>
+<div id="21121-results" class="results">
+<b class="name">Knox</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Andy Beshear</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Daniel Cameron</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Tie</b><br>
+</div>
+<div id="21123-results" class="results">
+<b class="name">LaRue</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Andy Beshear</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Daniel Cameron</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Tie</b><br>
+</div>
+<div id="21125-results" class="results">
+<b class="name">Laurel</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Andy Beshear</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Daniel Cameron</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Tie</b><br>
+</div>
+<div id="21127-results" class="results">
+<b class="name">Lawrence</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Andy Beshear</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Daniel Cameron</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Tie</b><br>
+</div>
+<div id="21129-results" class="results">
+<b class="name">Lee</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Andy Beshear</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Daniel Cameron</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Tie</b><br>
+</div>
+<div id="21131-results" class="results">
+<b class="name">Leslie</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Andy Beshear</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Daniel Cameron</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Tie</b><br>
+</div>
+<div id="21133-results" class="results">
+<b class="name">Letcher</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Andy Beshear</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Daniel Cameron</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Tie</b><br>
+</div>
+<div id="21135-results" class="results">
+<b class="name">Lewis</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Andy Beshear</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Daniel Cameron</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Tie</b><br>
+</div>
+<div id="21137-results" class="results">
+<b class="name">Lincoln</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Andy Beshear</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Daniel Cameron</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Tie</b><br>
+</div>
+<div id="21139-results" class="results">
+<b class="name">Livingston</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Andy Beshear</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Daniel Cameron</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Tie</b><br>
+</div>
+<div id="21141-results" class="results">
+<b class="name">Logan</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Andy Beshear</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Daniel Cameron</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Tie</b><br>
+</div>
+<div id="21143-results" class="results">
+<b class="name">Lyon</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Andy Beshear</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Daniel Cameron</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Tie</b><br>
+</div>
+<div id="21151-results" class="results">
+<b class="name">Madison</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Andy Beshear</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Daniel Cameron</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Tie</b><br>
+</div>
+<div id="21153-results" class="results">
+<b class="name">Magoffin</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Andy Beshear</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Daniel Cameron</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Tie</b><br>
+</div>
+<div id="21155-results" class="results">
+<b class="name">Marion</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Andy Beshear</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Daniel Cameron</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Tie</b><br>
+</div>
+<div id="21157-results" class="results">
+<b class="name">Marshall</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Andy Beshear</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Daniel Cameron</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Tie</b><br>
+</div>
+<div id="21159-results" class="results">
+<b class="name">Martin</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Andy Beshear</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Daniel Cameron</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Tie</b><br>
+</div>
+<div id="21161-results" class="results">
+<b class="name">Mason</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Andy Beshear</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Daniel Cameron</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Tie</b><br>
+</div>
+<div id="21145-results" class="results">
+<b class="name">McCracken</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Andy Beshear</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Daniel Cameron</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Tie</b><br>
+</div>
+<div id="21147-results" class="results">
+<b class="name">McCreary</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Andy Beshear</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Daniel Cameron</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Tie</b><br>
+</div>
+<div id="21149-results" class="results">
+<b class="name">McLean</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Andy Beshear</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Daniel Cameron</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Tie</b><br>
+</div>
+<div id="21163-results" class="results">
+<b class="name">Meade</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Andy Beshear</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Daniel Cameron</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Tie</b><br>
+</div>
+<div id="21165-results" class="results">
+<b class="name">Menifee</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Andy Beshear</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Daniel Cameron</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Tie</b><br>
+</div>
+<div id="21167-results" class="results">
+<b class="name">Mercer</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Andy Beshear</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Daniel Cameron</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Tie</b><br>
+</div>
+<div id="21169-results" class="results">
+<b class="name">Metcalfe</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Andy Beshear</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Daniel Cameron</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Tie</b><br>
+</div>
+<div id="21171-results" class="results">
+<b class="name">Monroe</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Andy Beshear</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Daniel Cameron</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Tie</b><br>
+</div>
+<div id="21173-results" class="results">
+<b class="name">Montgomery</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Andy Beshear</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Daniel Cameron</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Tie</b><br>
+</div>
+<div id="21175-results" class="results">
+<b class="name">Morgan</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Andy Beshear</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Daniel Cameron</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Tie</b><br>
+</div>
+<div id="21177-results" class="results">
+<b class="name">Muhlenberg</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Andy Beshear</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Daniel Cameron</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Tie</b><br>
+</div>
+<div id="21179-results" class="results">
+<b class="name">Nelson</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Andy Beshear</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Daniel Cameron</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Tie</b><br>
+</div>
+<div id="21181-results" class="results">
+<b class="name">Nicholas</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Andy Beshear</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Daniel Cameron</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Tie</b><br>
+</div>
+<div id="21183-results" class="results">
+<b class="name">Ohio</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Andy Beshear</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Daniel Cameron</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Tie</b><br>
+</div>
+<div id="21185-results" class="results">
+<b class="name">Oldham</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Andy Beshear</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Daniel Cameron</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Tie</b><br>
+</div>
+<div id="21187-results" class="results">
+<b class="name">Owen</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Andy Beshear</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Daniel Cameron</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Tie</b><br>
+</div>
+<div id="21189-results" class="results">
+<b class="name">Owsley</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Andy Beshear</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Daniel Cameron</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Tie</b><br>
+</div>
+<div id="21191-results" class="results">
+<b class="name">Pendleton</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Andy Beshear</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Daniel Cameron</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Tie</b><br>
+</div>
+<div id="21193-results" class="results">
+<b class="name">Perry</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Andy Beshear</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Daniel Cameron</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Tie</b><br>
+</div>
+<div id="21195-results" class="results">
+<b class="name">Pike</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Andy Beshear</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Daniel Cameron</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Tie</b><br>
+</div>
+<div id="21197-results" class="results">
+<b class="name">Powell</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Andy Beshear</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Daniel Cameron</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Tie</b><br>
+</div>
+<div id="21199-results" class="results">
+<b class="name">Pulaski</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Andy Beshear</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Daniel Cameron</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Tie</b><br>
+</div>
+<div id="21201-results" class="results">
+<b class="name">Robertson</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Andy Beshear</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Daniel Cameron</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Tie</b><br>
+</div>
+<div id="21203-results" class="results">
+<b class="name">Rockcastle</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Andy Beshear</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Daniel Cameron</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Tie</b><br>
+</div>
+<div id="21205-results" class="results">
+<b class="name">Rowan</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Andy Beshear</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Daniel Cameron</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Tie</b><br>
+</div>
+<div id="21207-results" class="results">
+<b class="name">Russell</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Andy Beshear</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Daniel Cameron</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Tie</b><br>
+</div>
+<div id="21209-results" class="results">
+<b class="name">Scott</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Andy Beshear</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Daniel Cameron</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Tie</b><br>
+</div>
+<div id="21211-results" class="results">
+<b class="name">Shelby</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Andy Beshear</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Daniel Cameron</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Tie</b><br>
+</div>
+<div id="21213-results" class="results">
+<b class="name">Simpson</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Andy Beshear</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Daniel Cameron</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Tie</b><br>
+</div>
+<div id="21215-results" class="results">
+<b class="name">Spencer</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Andy Beshear</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Daniel Cameron</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Tie</b><br>
+</div>
+<div id="21217-results" class="results">
+<b class="name">Taylor</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Andy Beshear</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Daniel Cameron</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Tie</b><br>
+</div>
+<div id="21219-results" class="results">
+<b class="name">Todd</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Andy Beshear</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Daniel Cameron</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Tie</b><br>
+</div>
+<div id="21221-results" class="results">
+<b class="name">Trigg</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Andy Beshear</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Daniel Cameron</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Tie</b><br>
+</div>
+<div id="21223-results" class="results">
+<b class="name">Trimble</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Andy Beshear</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Daniel Cameron</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Tie</b><br>
+</div>
+<div id="21225-results" class="results">
+<b class="name">Union</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Andy Beshear</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Daniel Cameron</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Tie</b><br>
+</div>
+<div id="21227-results" class="results">
+<b class="name">Warren</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Andy Beshear</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Daniel Cameron</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Tie</b><br>
+</div>
+<div id="21229-results" class="results">
+<b class="name">Washington</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Andy Beshear</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Daniel Cameron</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Tie</b><br>
+</div>
+<div id="21231-results" class="results">
+<b class="name">Wayne</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Andy Beshear</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Daniel Cameron</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Tie</b><br>
+</div>
+<div id="21233-results" class="results">
+<b class="name">Webster</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Andy Beshear</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Daniel Cameron</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Tie</b><br>
+</div>
+<div id="21235-results" class="results">
+<b class="name">Whitley</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Andy Beshear</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Daniel Cameron</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Tie</b><br>
+</div>
+<div id="21237-results" class="results">
+<b class="name">Wolfe</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Andy Beshear</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Daniel Cameron</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Tie</b><br>
+</div>
+<div id="21239-results" class="results">
+<b class="name">Woodford</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Andy Beshear</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Daniel Cameron</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Tie</b><br>
+</div>
+<div id="28001-results" class="results">
+<b class="name">Adams</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Tate Reeves</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Brandon Presley</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Tie</b><br>
+</div>
+<div id="28003-results" class="results">
+<b class="name">Alcorn</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Tate Reeves</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Brandon Presley</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Tie</b><br>
+</div>
+<div id="28005-results" class="results">
+<b class="name">Amite</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Tate Reeves</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Brandon Presley</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Tie</b><br>
+</div>
+<div id="28007-results" class="results">
+<b class="name">Attala</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Tate Reeves</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Brandon Presley</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Tie</b><br>
+</div>
+<div id="28009-results" class="results">
+<b class="name">Benton</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Tate Reeves</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Brandon Presley</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Tie</b><br>
+</div>
+<div id="28011-results" class="results">
+<b class="name">Bolivar</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Tate Reeves</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Brandon Presley</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Tie</b><br>
+</div>
+<div id="28013-results" class="results">
+<b class="name">Calhoun</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Tate Reeves</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Brandon Presley</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Tie</b><br>
+</div>
+<div id="28015-results" class="results">
+<b class="name">Carroll</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Tate Reeves</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Brandon Presley</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Tie</b><br>
+</div>
+<div id="28017-results" class="results">
+<b class="name">Chickasaw</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Tate Reeves</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Brandon Presley</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Tie</b><br>
+</div>
+<div id="28019-results" class="results">
+<b class="name">Choctaw</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Tate Reeves</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Brandon Presley</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Tie</b><br>
+</div>
+<div id="28021-results" class="results">
+<b class="name">Claiborne</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Tate Reeves</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Brandon Presley</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Tie</b><br>
+</div>
+<div id="28023-results" class="results">
+<b class="name">Clarke</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Tate Reeves</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Brandon Presley</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Tie</b><br>
+</div>
+<div id="28025-results" class="results">
+<b class="name">Clay</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Tate Reeves</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Brandon Presley</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Tie</b><br>
+</div>
+<div id="28027-results" class="results">
+<b class="name">Coahoma</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Tate Reeves</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Brandon Presley</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Tie</b><br>
+</div>
+<div id="28029-results" class="results">
+<b class="name">Copiah</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Tate Reeves</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Brandon Presley</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Tie</b><br>
+</div>
+<div id="28031-results" class="results">
+<b class="name">Covington</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Tate Reeves</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Brandon Presley</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Tie</b><br>
+</div>
+<div id="28033-results" class="results">
+<b class="name">DeSoto</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Tate Reeves</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Brandon Presley</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Tie</b><br>
+</div>
+<div id="28035-results" class="results">
+<b class="name">Forrest</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Tate Reeves</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Brandon Presley</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Tie</b><br>
+</div>
+<div id="28037-results" class="results">
+<b class="name">Franklin</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Tate Reeves</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Brandon Presley</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Tie</b><br>
+</div>
+<div id="28039-results" class="results">
+<b class="name">George</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Tate Reeves</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Brandon Presley</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Tie</b><br>
+</div>
+<div id="28041-results" class="results">
+<b class="name">Greene</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Tate Reeves</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Brandon Presley</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Tie</b><br>
+</div>
+<div id="28043-results" class="results">
+<b class="name">Grenada</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Tate Reeves</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Brandon Presley</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Tie</b><br>
+</div>
+<div id="28045-results" class="results">
+<b class="name">Hancock</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Tate Reeves</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Brandon Presley</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Tie</b><br>
+</div>
+<div id="28047-results" class="results">
+<b class="name">Harrison</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Tate Reeves</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Brandon Presley</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Tie</b><br>
+</div>
+<div id="28049-results" class="results">
+<b class="name">Hinds</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Tate Reeves</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Brandon Presley</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Tie</b><br>
+</div>
+<div id="28051-results" class="results">
+<b class="name">Holmes</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Tate Reeves</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Brandon Presley</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Tie</b><br>
+</div>
+<div id="28053-results" class="results">
+<b class="name">Humphreys</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Tate Reeves</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Brandon Presley</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Tie</b><br>
+</div>
+<div id="28055-results" class="results">
+<b class="name">Issaquena</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Tate Reeves</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Brandon Presley</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Tie</b><br>
+</div>
+<div id="28057-results" class="results">
+<b class="name">Itawamba</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Tate Reeves</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Brandon Presley</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Tie</b><br>
+</div>
+<div id="28059-results" class="results">
+<b class="name">Jackson</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Tate Reeves</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Brandon Presley</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Tie</b><br>
+</div>
+<div id="28061-results" class="results">
+<b class="name">Jasper</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Tate Reeves</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Brandon Presley</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Tie</b><br>
+</div>
+<div id="28065-results" class="results">
+<b class="name">Jeff Davis</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Tate Reeves</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Brandon Presley</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Tie</b><br>
+</div>
+<div id="28063-results" class="results">
+<b class="name">Jefferson</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Tate Reeves</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Brandon Presley</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Tie</b><br>
+</div>
+<div id="28067-results" class="results">
+<b class="name">Jones</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Tate Reeves</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Brandon Presley</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Tie</b><br>
+</div>
+<div id="28069-results" class="results">
+<b class="name">Kemper</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Tate Reeves</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Brandon Presley</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Tie</b><br>
+</div>
+<div id="28071-results" class="results">
+<b class="name">Lafayette</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Tate Reeves</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Brandon Presley</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Tie</b><br>
+</div>
+<div id="28073-results" class="results">
+<b class="name">Lamar</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Tate Reeves</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Brandon Presley</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Tie</b><br>
+</div>
+<div id="28075-results" class="results">
+<b class="name">Lauderdale</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Tate Reeves</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Brandon Presley</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Tie</b><br>
+</div>
+<div id="28077-results" class="results">
+<b class="name">Lawrence</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Tate Reeves</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Brandon Presley</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Tie</b><br>
+</div>
+<div id="28079-results" class="results">
+<b class="name">Leake</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Tate Reeves</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Brandon Presley</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Tie</b><br>
+</div>
+<div id="28081-results" class="results">
+<b class="name">Lee</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Tate Reeves</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Brandon Presley</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Tie</b><br>
+</div>
+<div id="28083-results" class="results">
+<b class="name">Leflore</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Tate Reeves</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Brandon Presley</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Tie</b><br>
+</div>
+<div id="28085-results" class="results">
+<b class="name">Lincoln</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Tate Reeves</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Brandon Presley</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Tie</b><br>
+</div>
+<div id="28087-results" class="results">
+<b class="name">Lowndes</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Tate Reeves</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Brandon Presley</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Tie</b><br>
+</div>
+<div id="28089-results" class="results">
+<b class="name">Madison</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Tate Reeves</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Brandon Presley</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Tie</b><br>
+</div>
+<div id="28091-results" class="results">
+<b class="name">Marion</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Tate Reeves</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Brandon Presley</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Tie</b><br>
+</div>
+<div id="28093-results" class="results">
+<b class="name">Marshall</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Tate Reeves</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Brandon Presley</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Tie</b><br>
+</div>
+<div id="28095-results" class="results">
+<b class="name">Monroe</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Tate Reeves</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Brandon Presley</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Tie</b><br>
+</div>
+<div id="28097-results" class="results">
+<b class="name">Montgomery</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Tate Reeves</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Brandon Presley</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Tie</b><br>
+</div>
+<div id="28099-results" class="results">
+<b class="name">Neshoba</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Tate Reeves</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Brandon Presley</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Tie</b><br>
+</div>
+<div id="28101-results" class="results">
+<b class="name">Newton</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Tate Reeves</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Brandon Presley</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Tie</b><br>
+</div>
+<div id="28103-results" class="results">
+<b class="name">Noxubee</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Tate Reeves</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Brandon Presley</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Tie</b><br>
+</div>
+<div id="28105-results" class="results">
+<b class="name">Oktibbeha</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Tate Reeves</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Brandon Presley</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Tie</b><br>
+</div>
+<div id="28107-results" class="results">
+<b class="name">Panola</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Tate Reeves</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Brandon Presley</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Tie</b><br>
+</div>
+<div id="28109-results" class="results">
+<b class="name">Pearl River</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Tate Reeves</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Brandon Presley</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Tie</b><br>
+</div>
+<div id="28111-results" class="results">
+<b class="name">Perry</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Tate Reeves</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Brandon Presley</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Tie</b><br>
+</div>
+<div id="28113-results" class="results">
+<b class="name">Pike</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Tate Reeves</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Brandon Presley</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Tie</b><br>
+</div>
+<div id="28115-results" class="results">
+<b class="name">Pontotoc</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Tate Reeves</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Brandon Presley</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Tie</b><br>
+</div>
+<div id="28117-results" class="results">
+<b class="name">Prentiss</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Tate Reeves</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Brandon Presley</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Tie</b><br>
+</div>
+<div id="28119-results" class="results">
+<b class="name">Quitman</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Tate Reeves</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Brandon Presley</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Tie</b><br>
+</div>
+<div id="28121-results" class="results">
+<b class="name">Rankin</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Tate Reeves</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Brandon Presley</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Tie</b><br>
+</div>
+<div id="28123-results" class="results">
+<b class="name">Scott</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Tate Reeves</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Brandon Presley</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Tie</b><br>
+</div>
+<div id="28125-results" class="results">
+<b class="name">Sharkey</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Tate Reeves</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Brandon Presley</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Tie</b><br>
+</div>
+<div id="28127-results" class="results">
+<b class="name">Simpson</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Tate Reeves</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Brandon Presley</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Tie</b><br>
+</div>
+<div id="28129-results" class="results">
+<b class="name">Smith</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Tate Reeves</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Brandon Presley</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Tie</b><br>
+</div>
+<div id="28131-results" class="results">
+<b class="name">Stone</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Tate Reeves</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Brandon Presley</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Tie</b><br>
+</div>
+<div id="28133-results" class="results">
+<b class="name">Sunflower</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Tate Reeves</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Brandon Presley</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Tie</b><br>
+</div>
+<div id="28135-results" class="results">
+<b class="name">Tallahatchie</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Tate Reeves</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Brandon Presley</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Tie</b><br>
+</div>
+<div id="28137-results" class="results">
+<b class="name">Tate</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Tate Reeves</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Brandon Presley</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Tie</b><br>
+</div>
+<div id="28139-results" class="results">
+<b class="name">Tippah</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Tate Reeves</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Brandon Presley</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Tie</b><br>
+</div>
+<div id="28141-results" class="results">
+<b class="name">Tishomingo</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Tate Reeves</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Brandon Presley</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Tie</b><br>
+</div>
+<div id="28143-results" class="results">
+<b class="name">Tunica</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Tate Reeves</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Brandon Presley</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Tie</b><br>
+</div>
+<div id="28145-results" class="results">
+<b class="name">Union</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Tate Reeves</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Brandon Presley</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Tie</b><br>
+</div>
+<div id="28147-results" class="results">
+<b class="name">Walthall</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Tate Reeves</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Brandon Presley</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Tie</b><br>
+</div>
+<div id="28149-results" class="results">
+<b class="name">Warren</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Tate Reeves</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Brandon Presley</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Tie</b><br>
+</div>
+<div id="28151-results" class="results">
+<b class="name">Washington</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Tate Reeves</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Brandon Presley</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Tie</b><br>
+</div>
+<div id="28153-results" class="results">
+<b class="name">Wayne</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Tate Reeves</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Brandon Presley</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Tie</b><br>
+</div>
+<div id="28155-results" class="results">
+<b class="name">Webster</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Tate Reeves</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Brandon Presley</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Tie</b><br>
+</div>
+<div id="28157-results" class="results">
+<b class="name">Wilkinson</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Tate Reeves</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Brandon Presley</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Tie</b><br>
+</div>
+<div id="28159-results" class="results">
+<b class="name">Winston</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Tate Reeves</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Brandon Presley</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Tie</b><br>
+</div>
+<div id="28161-results" class="results">
+<b class="name">Yalobusha</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Tate Reeves</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Brandon Presley</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Tie</b><br>
+</div>
+<div id="28163-results" class="results">
+<b class="name">Yazoo</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Tate Reeves</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Brandon Presley</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Tie</b><br>
 </div>
 </div>
 </div>
