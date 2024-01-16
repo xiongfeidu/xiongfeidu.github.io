@@ -42,13 +42,13 @@
 <h3>Delegate Count</h3>
   <div class="primary-candidate">
     <div class="no-height">
-      <div style="width:1px; height:20px; background-color: #FF00FF; position: relative;">&nbsp;</div>
+      <div style="width:9px; height:20px; background-color: #FF0000; position: relative;">&nbsp;</div>
     </div>
     <div class="no-height">
-      <div style="width:0px; height:20px; left: 1px; background-color: #FF60FF; position: relative;">&nbsp;</div>
+      <div style="width:0px; height:20px; left: 9px; background-color: #FF6060; position: relative;">&nbsp;</div>
     </div>
     <div class="no-height">
-      <div style="height:20px; left: 11px; color: black; background-color: lightgray; position: relative; z-index: 1; display: inline-block;"><span class="delegates">0</span> DeSantis</div>
+      <div style="height:20px; left: 19px; color: #FF0000; background-color: lightgray; position: relative; z-index: 1; display: inline-block;"><span class="delegates">20</span> Trump</div>
     </div>
     <div>
       <div style="width:960px; position: relative; text-align: center; font-size: 18;">|<br><span style="font-size: 12;"></span></div>
@@ -58,13 +58,13 @@
 
   <div class="primary-candidate">
     <div class="no-height">
-      <div style="width:1px; height:20px; background-color: #FFFF00; position: relative;">&nbsp;</div>
+      <div style="width:4px; height:20px; background-color: #FF00FF; position: relative;">&nbsp;</div>
     </div>
     <div class="no-height">
-      <div style="width:0px; height:20px; left: 1px; background-color: #FFFF60; position: relative;">&nbsp;</div>
+      <div style="width:0px; height:20px; left: 4px; background-color: #FF60FF; position: relative;">&nbsp;</div>
     </div>
     <div class="no-height">
-      <div style="height:20px; left: 11px; color: black; background-color: lightgray; position: relative; z-index: 1; display: inline-block;"><span class="delegates">0</span> Haley</div>
+      <div style="height:20px; left: 14px; color: black; background-color: lightgray; position: relative; z-index: 1; display: inline-block;"><span class="delegates">8</span> DeSantis</div>
     </div>
     <div>
       <div style="width:960px; position: relative; text-align: center; font-size: 18;">|<br><span style="font-size: 12;"></span></div>
@@ -74,13 +74,13 @@
 
   <div class="primary-candidate">
     <div class="no-height">
-      <div style="width:1px; height:20px; background-color: #FF0000; position: relative;">&nbsp;</div>
+      <div style="width:4px; height:20px; background-color: #FFFF00; position: relative;">&nbsp;</div>
     </div>
     <div class="no-height">
-      <div style="width:0px; height:20px; left: 1px; background-color: #FF6060; position: relative;">&nbsp;</div>
+      <div style="width:0px; height:20px; left: 4px; background-color: #FFFF60; position: relative;">&nbsp;</div>
     </div>
     <div class="no-height">
-      <div style="height:20px; left: 11px; color: #FF0000; background-color: lightgray; position: relative; z-index: 1; display: inline-block;"><span class="delegates">0</span> Trump</div>
+      <div style="height:20px; left: 14px; color: black; background-color: lightgray; position: relative; z-index: 1; display: inline-block;"><span class="delegates">7</span> Haley</div>
     </div>
     <div>
       <div style="width:960px; position: relative; text-align: center; font-size: 18;">|<br><span style="font-size: 12;">1234 to win</span></div>
@@ -6465,14 +6465,15 @@
 <td>Pct</td>
 <td>Del</td>
 </tr>
-<tr><td>Donald J. Trump</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td><td class="votes">0</td></tr>
-<tr><td>Nikki Haley</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td><td class="votes">0</td></tr>
-<tr><td>Ron DeSantis</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td><td class="votes">0</td></tr>
+<tr><td style="color: #fff" bgcolor="#FF0000">Donald Trump ✔</td><td>REP</td><td class="votes">56,260</td><td class="pct">51.0</td><td class="votes">20</td></tr>
+<tr><td>Ron DeSantis</td><td>REP</td><td class="votes">23,420</td><td class="pct">21.2</td><td class="votes">8</td></tr>
+<tr><td>Nikki Haley</td><td>REP</td><td class="votes">21,085</td><td class="pct">19.1</td><td class="votes">7</td></tr>
+<tr><td>Vivek Ramaswamy</td><td>REP</td><td class="votes">8,449</td><td class="pct">7.7</td><td class="votes">3</td></tr>
 </tbody>
 </table>
-0.0% of precincts reporting<br>
-Status: <b>Not called</b><br>
-Lead: <b>Tie</b><br>
+99.0% of precincts reporting<br>
+Status: <b>Called for Trump (R)</b><br>
+Lead: <b>Trump +29.8</b><br>
 Pre-election estimate: <b>Safe Trump</b>
 </div>
 
@@ -6945,14 +6946,14 @@ Pre-election estimate: <b>Safe Trump</b>
   function setColor(id, color) {
     document.getElementById(id).style.fill = color;    
   }
-  var stateColors = {"IA": "#FFFFFF"};
+  var stateColors = {"IA": "#FF0000"};
   function colorAll() {
     for (var state in stateColors) {
       setColor(state, stateColors[state]);
     }
   }
   colorAll();
-  var actual = {};
+  var actual = {"c19153": "#FF0000", "c19113": "#FF0000", "c19163": "#C00000", "c19049": "#FF0000", "c19103": "#FFFF90", "c19169": "#FF6060", "c19013": "#C00000", "c19155": "#C00000", "c19193": "#C00000", "c19061": "#C00000", "c19181": "#C00000", "c19167": "#FF0000", "c19045": "#C00000", "c19033": "#C00000", "c19125": "#FF0000", "c19099": "#C00000", "c19057": "#C00000", "c19127": "#C00000", "c19149": "#C00000", "c19011": "#C00000", "c19015": "#FF0000", "c19139": "#C00000", "c19187": "#C00000", "c19123": "#C00000", "c19017": "#C00000", "c19183": "#C00000", "c19111": "#C00000", "c19059": "#C00000", "c19191": "#C00000", "c19105": "#C00000", "c19129": "#C00000", "c19121": "#C00000", "c19179": "#C00000", "c19119": "#C00000", "c19083": "#C00000", "c19097": "#C00000", "c19087": "#C00000", "c19043": "#C00000", "c19019": "#C00000", "c19027": "#C00000", "c19041": "#C00000", "c19095": "#C00000", "c19065": "#C00000", "c19085": "#C00000", "c19109": "#C00000", "c19031": "#C00000", "c19029": "#C00000", "c19023": "#C00000", "c19079": "#C00000", "c19171": "#C00000", "c19035": "#C00000", "c19021": "#C00000", "c19075": "#C00000", "c19157": "#C00000", "c19005": "#C00000", "c19055": "#C00000", "c19141": "#C00000", "c19067": "#C00000", "c19007": "#C00000", "c19081": "#C00000", "c19145": "#C00000", "c19165": "#C00000", "c19077": "#C00000", "c19189": "#C00000", "c19091": "#C00000", "c19037": "#C00000", "c19101": "#C00000", "c19069": "#C00000", "c19039": "#C00000", "c19047": "#C00000", "c19197": "#C00000", "c19107": "#C00000", "c19151": "#C00000", "c19073": "#C00000", "c19131": "#C00000", "c19089": "#C00000", "c19175": "#C00000", "c19025": "#C00000", "c19147": "#C00000", "c19117": "#C00000", "c19161": "#C00000", "c19115": "#C00000", "c19137": "#C00000", "c19177": "#C00000", "c19195": "#C00000", "c19063": "#C00000", "c19133": "#C00000", "c19009": "#C00000", "c19051": "#C00000", "c19093": "#C00000", "c19185": "#C00000", "c19053": "#C00000", "c19135": "#C00000", "c19071": "#C00000", "c19001": "#C00000", "c19159": "#C00000", "c19143": "#C00000", "c19003": "#C00000", "c19173": "#C00000"};
   var margins = {};
   var early_margins = {};
   function colorCounties(fips, colors) {
@@ -6973,7 +6974,1919 @@ Pre-election estimate: <b>Safe Trump</b>
   hide('back-button');
 </script>
 <div id="results-counties">
-  </div>
+  <div id="19153-results" class="results">
+<b class="name">Polk</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Donald Trump</td><td>REP</td><td class="votes">6,629</td><td class="pct">38.0</td></tr>
+<tr><td>Ron DeSantis</td><td>REP</td><td class="votes">4,742</td><td class="pct">27.2</td></tr>
+<tr><td>Nikki Haley</td><td>REP</td><td class="votes">4,595</td><td class="pct">26.4</td></tr>
+<tr><td>Vivek Ramaswamy</td><td>REP</td><td class="votes">1,308</td><td class="pct">7.5</td></tr>
+</tbody>
+</table>
+100.0% of precincts reporting<br>
+Lead: <b>Trump +10.8</b><br>
+</div>
+<div id="19113-results" class="results">
+<b class="name">Linn</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Donald Trump</td><td>REP</td><td class="votes">2,992</td><td class="pct">42.7</td></tr>
+<tr><td>Nikki Haley</td><td>REP</td><td class="votes">1,736</td><td class="pct">24.8</td></tr>
+<tr><td>Ron DeSantis</td><td>REP</td><td class="votes">1,651</td><td class="pct">23.6</td></tr>
+<tr><td>Vivek Ramaswamy</td><td>REP</td><td class="votes">565</td><td class="pct">8.1</td></tr>
+</tbody>
+</table>
+100.0% of precincts reporting<br>
+Lead: <b>Trump +17.9</b><br>
+</div>
+<div id="19163-results" class="results">
+<b class="name">Scott</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Donald Trump</td><td>REP</td><td class="votes">2,857</td><td class="pct">49.2</td></tr>
+<tr><td>Nikki Haley</td><td>REP</td><td class="votes">1,411</td><td class="pct">24.3</td></tr>
+<tr><td>Ron DeSantis</td><td>REP</td><td class="votes">1,064</td><td class="pct">18.3</td></tr>
+<tr><td>Vivek Ramaswamy</td><td>REP</td><td class="votes">446</td><td class="pct">7.7</td></tr>
+</tbody>
+</table>
+100.0% of precincts reporting<br>
+Lead: <b>Trump +24.9</b><br>
+</div>
+<div id="19049-results" class="results">
+<b class="name">Dallas</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Donald Trump</td><td>REP</td><td class="votes">1,978</td><td class="pct">39.0</td></tr>
+<tr><td>Nikki Haley</td><td>REP</td><td class="votes">1,351</td><td class="pct">26.6</td></tr>
+<tr><td>Ron DeSantis</td><td>REP</td><td class="votes">1,271</td><td class="pct">25.0</td></tr>
+<tr><td>Vivek Ramaswamy</td><td>REP</td><td class="votes">439</td><td class="pct">8.6</td></tr>
+</tbody>
+</table>
+100.0% of precincts reporting<br>
+Lead: <b>Trump +12.3</b><br>
+</div>
+<div id="19103-results" class="results">
+<b class="name">Johnson</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Nikki Haley</td><td>REP</td><td class="votes">1,271</td><td class="pct">35.5</td></tr>
+<tr><td>Donald Trump</td><td>REP</td><td class="votes">1,270</td><td class="pct">35.5</td></tr>
+<tr><td>Ron DeSantis</td><td>REP</td><td class="votes">755</td><td class="pct">21.1</td></tr>
+<tr><td>Vivek Ramaswamy</td><td>REP</td><td class="votes">256</td><td class="pct">7.2</td></tr>
+</tbody>
+</table>
+100.0% of precincts reporting<br>
+Lead: <b>Haley +0.0</b><br>
+</div>
+<div id="19169-results" class="results">
+<b class="name">Story</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Donald Trump</td><td>REP</td><td class="votes">1,184</td><td class="pct">33.9</td></tr>
+<tr><td>Nikki Haley</td><td>REP</td><td class="votes">1,045</td><td class="pct">30.0</td></tr>
+<tr><td>Ron DeSantis</td><td>REP</td><td class="votes">923</td><td class="pct">26.5</td></tr>
+<tr><td>Vivek Ramaswamy</td><td>REP</td><td class="votes">290</td><td class="pct">8.3</td></tr>
+</tbody>
+</table>
+100.0% of precincts reporting<br>
+Lead: <b>Trump +4.0</b><br>
+</div>
+<div id="19013-results" class="results">
+<b class="name">Black Hawk</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Donald Trump</td><td>REP</td><td class="votes">1,782</td><td class="pct">52.2</td></tr>
+<tr><td>Nikki Haley</td><td>REP</td><td class="votes">750</td><td class="pct">22.0</td></tr>
+<tr><td>Ron DeSantis</td><td>REP</td><td class="votes">547</td><td class="pct">16.0</td></tr>
+<tr><td>Vivek Ramaswamy</td><td>REP</td><td class="votes">308</td><td class="pct">9.0</td></tr>
+</tbody>
+</table>
+100.0% of precincts reporting<br>
+Lead: <b>Trump +30.2</b><br>
+</div>
+<div id="19155-results" class="results">
+<b class="name">Pottawattamie</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Donald Trump</td><td>REP</td><td class="votes">1,770</td><td class="pct">61.0</td></tr>
+<tr><td>Nikki Haley</td><td>REP</td><td class="votes">528</td><td class="pct">18.2</td></tr>
+<tr><td>Ron DeSantis</td><td>REP</td><td class="votes">388</td><td class="pct">13.4</td></tr>
+<tr><td>Vivek Ramaswamy</td><td>REP</td><td class="votes">190</td><td class="pct">6.5</td></tr>
+</tbody>
+</table>
+100.0% of precincts reporting<br>
+Lead: <b>Trump +42.8</b><br>
+</div>
+<div id="19193-results" class="results">
+<b class="name">Woodbury</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Donald Trump</td><td>REP</td><td class="votes">1,565</td><td class="pct">56.6</td></tr>
+<tr><td>Ron DeSantis</td><td>REP</td><td class="votes">595</td><td class="pct">21.5</td></tr>
+<tr><td>Nikki Haley</td><td>REP</td><td class="votes">364</td><td class="pct">13.2</td></tr>
+<tr><td>Vivek Ramaswamy</td><td>REP</td><td class="votes">188</td><td class="pct">6.8</td></tr>
+<tr><td>Ryan Binkley</td><td>REP</td><td class="votes">50</td><td class="pct">1.8</td></tr>
+</tbody>
+</table>
+100.0% of precincts reporting<br>
+Lead: <b>Trump +35.1</b><br>
+</div>
+<div id="19061-results" class="results">
+<b class="name">Dubuque</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Donald Trump</td><td>REP</td><td class="votes">1,244</td><td class="pct">47.7</td></tr>
+<tr><td>Ron DeSantis</td><td>REP</td><td class="votes">609</td><td class="pct">23.4</td></tr>
+<tr><td>Nikki Haley</td><td>REP</td><td class="votes">509</td><td class="pct">19.5</td></tr>
+<tr><td>Vivek Ramaswamy</td><td>REP</td><td class="votes">238</td><td class="pct">9.1</td></tr>
+</tbody>
+</table>
+100.0% of precincts reporting<br>
+Lead: <b>Trump +24.4</b><br>
+</div>
+<div id="19181-results" class="results">
+<b class="name">Warren</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Donald Trump</td><td>REP</td><td class="votes">1,292</td><td class="pct">51.3</td></tr>
+<tr><td>Ron DeSantis</td><td>REP</td><td class="votes">668</td><td class="pct">26.5</td></tr>
+<tr><td>Nikki Haley</td><td>REP</td><td class="votes">382</td><td class="pct">15.2</td></tr>
+<tr><td>Vivek Ramaswamy</td><td>REP</td><td class="votes">162</td><td class="pct">6.4</td></tr>
+</tbody>
+</table>
+100.0% of precincts reporting<br>
+Lead: <b>Trump +24.8</b><br>
+</div>
+<div id="19167-results" class="results">
+<b class="name">Sioux</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Donald Trump</td><td>REP</td><td class="votes">964</td><td class="pct">45.0</td></tr>
+<tr><td>Ron DeSantis</td><td>REP</td><td class="votes">667</td><td class="pct">31.1</td></tr>
+<tr><td>Nikki Haley</td><td>REP</td><td class="votes">334</td><td class="pct">15.6</td></tr>
+<tr><td>Vivek Ramaswamy</td><td>REP</td><td class="votes">132</td><td class="pct">6.2</td></tr>
+<tr><td>Ryan Binkley</td><td>REP</td><td class="votes">29</td><td class="pct">1.4</td></tr>
+</tbody>
+</table>
+100.0% of precincts reporting<br>
+Lead: <b>Trump +13.9</b><br>
+</div>
+<div id="19045-results" class="results">
+<b class="name">Clinton</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Donald Trump</td><td>REP</td><td class="votes">1,139</td><td class="pct">69.8</td></tr>
+<tr><td>Nikki Haley</td><td>REP</td><td class="votes">208</td><td class="pct">12.8</td></tr>
+<tr><td>Ron DeSantis</td><td>REP</td><td class="votes">187</td><td class="pct">11.5</td></tr>
+<tr><td>Vivek Ramaswamy</td><td>REP</td><td class="votes">97</td><td class="pct">5.9</td></tr>
+</tbody>
+</table>
+100.0% of precincts reporting<br>
+Lead: <b>Trump +57.1</b><br>
+</div>
+<div id="19033-results" class="results">
+<b class="name">Cerro Gordo</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Donald Trump</td><td>REP</td><td class="votes">941</td><td class="pct">59.6</td></tr>
+<tr><td>Nikki Haley</td><td>REP</td><td class="votes">281</td><td class="pct">17.8</td></tr>
+<tr><td>Ron DeSantis</td><td>REP</td><td class="votes">235</td><td class="pct">14.9</td></tr>
+<tr><td>Vivek Ramaswamy</td><td>REP</td><td class="votes">97</td><td class="pct">6.1</td></tr>
+<tr><td>Ryan Binkley</td><td>REP</td><td class="votes">17</td><td class="pct">1.1</td></tr>
+</tbody>
+</table>
+100.0% of precincts reporting<br>
+Lead: <b>Trump +41.8</b><br>
+</div>
+<div id="19125-results" class="results">
+<b class="name">Marion</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Donald Trump</td><td>REP</td><td class="votes">700</td><td class="pct">46.1</td></tr>
+<tr><td>Ron DeSantis</td><td>REP</td><td class="votes">440</td><td class="pct">29.0</td></tr>
+<tr><td>Nikki Haley</td><td>REP</td><td class="votes">261</td><td class="pct">17.2</td></tr>
+<tr><td>Vivek Ramaswamy</td><td>REP</td><td class="votes">103</td><td class="pct">6.8</td></tr>
+</tbody>
+</table>
+100.0% of precincts reporting<br>
+Lead: <b>Trump +17.1</b><br>
+</div>
+<div id="19099-results" class="results">
+<b class="name">Jasper</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Donald Trump</td><td>REP</td><td class="votes">751</td><td class="pct">54.6</td></tr>
+<tr><td>Ron DeSantis</td><td>REP</td><td class="votes">314</td><td class="pct">22.8</td></tr>
+<tr><td>Nikki Haley</td><td>REP</td><td class="votes">179</td><td class="pct">13.0</td></tr>
+<tr><td>Vivek Ramaswamy</td><td>REP</td><td class="votes">108</td><td class="pct">7.9</td></tr>
+<tr><td>Ryan Binkley</td><td>REP</td><td class="votes">19</td><td class="pct">1.4</td></tr>
+</tbody>
+</table>
+100.0% of precincts reporting<br>
+Lead: <b>Trump +31.8</b><br>
+</div>
+<div id="19057-results" class="results">
+<b class="name">Des Moines</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Donald Trump</td><td>REP</td><td class="votes">786</td><td class="pct">59.7</td></tr>
+<tr><td>Ron DeSantis</td><td>REP</td><td class="votes">283</td><td class="pct">21.5</td></tr>
+<tr><td>Nikki Haley</td><td>REP</td><td class="votes">156</td><td class="pct">11.8</td></tr>
+<tr><td>Vivek Ramaswamy</td><td>REP</td><td class="votes">88</td><td class="pct">6.7</td></tr>
+</tbody>
+</table>
+100.0% of precincts reporting<br>
+Lead: <b>Trump +38.2</b><br>
+</div>
+<div id="19127-results" class="results">
+<b class="name">Marshall</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Donald Trump</td><td>REP</td><td class="votes">649</td><td class="pct">52.7</td></tr>
+<tr><td>Ron DeSantis</td><td>REP</td><td class="votes">298</td><td class="pct">24.2</td></tr>
+<tr><td>Nikki Haley</td><td>REP</td><td class="votes">179</td><td class="pct">14.5</td></tr>
+<tr><td>Vivek Ramaswamy</td><td>REP</td><td class="votes">87</td><td class="pct">7.1</td></tr>
+<tr><td>Ryan Binkley</td><td>REP</td><td class="votes">14</td><td class="pct">1.1</td></tr>
+</tbody>
+</table>
+100.0% of precincts reporting<br>
+Lead: <b>Trump +28.5</b><br>
+</div>
+<div id="19149-results" class="results">
+<b class="name">Plymouth</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Donald Trump</td><td>REP</td><td class="votes">712</td><td class="pct">64.0</td></tr>
+<tr><td>Ron DeSantis</td><td>REP</td><td class="votes">196</td><td class="pct">17.6</td></tr>
+<tr><td>Nikki Haley</td><td>REP</td><td class="votes">127</td><td class="pct">11.4</td></tr>
+<tr><td>Vivek Ramaswamy</td><td>REP</td><td class="votes">70</td><td class="pct">6.3</td></tr>
+</tbody>
+</table>
+100.0% of precincts reporting<br>
+Lead: <b>Trump +46.4</b><br>
+</div>
+<div id="19011-results" class="results">
+<b class="name">Benton</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Donald Trump</td><td>REP</td><td class="votes">652</td><td class="pct">59.6</td></tr>
+<tr><td>Ron DeSantis</td><td>REP</td><td class="votes">239</td><td class="pct">21.8</td></tr>
+<tr><td>Nikki Haley</td><td>REP</td><td class="votes">105</td><td class="pct">9.6</td></tr>
+<tr><td>Vivek Ramaswamy</td><td>REP</td><td class="votes">94</td><td class="pct">8.6</td></tr>
+</tbody>
+</table>
+100.0% of precincts reporting<br>
+Lead: <b>Trump +37.8</b><br>
+</div>
+<div id="19015-results" class="results">
+<b class="name">Boone</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Donald Trump</td><td>REP</td><td class="votes">505</td><td class="pct">46.5</td></tr>
+<tr><td>Ron DeSantis</td><td>REP</td><td class="votes">301</td><td class="pct">27.7</td></tr>
+<tr><td>Nikki Haley</td><td>REP</td><td class="votes">174</td><td class="pct">16.0</td></tr>
+<tr><td>Vivek Ramaswamy</td><td>REP</td><td class="votes">84</td><td class="pct">7.7</td></tr>
+<tr><td>Ryan Binkley</td><td>REP</td><td class="votes">22</td><td class="pct">2.0</td></tr>
+</tbody>
+</table>
+100.0% of precincts reporting<br>
+Lead: <b>Trump +18.8</b><br>
+</div>
+<div id="19139-results" class="results">
+<b class="name">Muscatine</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Donald Trump</td><td>REP</td><td class="votes">582</td><td class="pct">53.7</td></tr>
+<tr><td>Nikki Haley</td><td>REP</td><td class="votes">219</td><td class="pct">20.2</td></tr>
+<tr><td>Ron DeSantis</td><td>REP</td><td class="votes">196</td><td class="pct">18.1</td></tr>
+<tr><td>Vivek Ramaswamy</td><td>REP</td><td class="votes">84</td><td class="pct">7.8</td></tr>
+</tbody>
+</table>
+100.0% of precincts reporting<br>
+Lead: <b>Trump +33.5</b><br>
+</div>
+<div id="19187-results" class="results">
+<b class="name">Webster</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Donald Trump</td><td>REP</td><td class="votes">652</td><td class="pct">66.5</td></tr>
+<tr><td>Ron DeSantis</td><td>REP</td><td class="votes">158</td><td class="pct">16.1</td></tr>
+<tr><td>Nikki Haley</td><td>REP</td><td class="votes">93</td><td class="pct">9.5</td></tr>
+<tr><td>Vivek Ramaswamy</td><td>REP</td><td class="votes">69</td><td class="pct">7.0</td></tr>
+</tbody>
+</table>
+100.0% of precincts reporting<br>
+Lead: <b>Trump +50.4</b><br>
+</div>
+<div id="19123-results" class="results">
+<b class="name">Mahaska</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Donald Trump</td><td>REP</td><td class="votes">499</td><td class="pct">52.7</td></tr>
+<tr><td>Ron DeSantis</td><td>REP</td><td class="votes">274</td><td class="pct">29.0</td></tr>
+<tr><td>Nikki Haley</td><td>REP</td><td class="votes">89</td><td class="pct">9.4</td></tr>
+<tr><td>Vivek Ramaswamy</td><td>REP</td><td class="votes">69</td><td class="pct">7.3</td></tr>
+<tr><td>Ryan Binkley</td><td>REP</td><td class="votes">11</td><td class="pct">1.2</td></tr>
+</tbody>
+</table>
+100.0% of precincts reporting<br>
+Lead: <b>Trump +23.8</b><br>
+</div>
+<div id="19017-results" class="results">
+<b class="name">Bremer</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Donald Trump</td><td>REP</td><td class="votes">437</td><td class="pct">46.6</td></tr>
+<tr><td>Nikki Haley</td><td>REP</td><td class="votes">217</td><td class="pct">23.1</td></tr>
+<tr><td>Ron DeSantis</td><td>REP</td><td class="votes">174</td><td class="pct">18.6</td></tr>
+<tr><td>Vivek Ramaswamy</td><td>REP</td><td class="votes">105</td><td class="pct">11.2</td></tr>
+</tbody>
+</table>
+100.0% of precincts reporting<br>
+Lead: <b>Trump +23.5</b><br>
+</div>
+<div id="19183-results" class="results">
+<b class="name">Washington</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Donald Trump</td><td>REP</td><td class="votes">496</td><td class="pct">57.3</td></tr>
+<tr><td>Ron DeSantis</td><td>REP</td><td class="votes">193</td><td class="pct">22.3</td></tr>
+<tr><td>Nikki Haley</td><td>REP</td><td class="votes">105</td><td class="pct">12.1</td></tr>
+<tr><td>Vivek Ramaswamy</td><td>REP</td><td class="votes">65</td><td class="pct">7.5</td></tr>
+</tbody>
+</table>
+100.0% of precincts reporting<br>
+Lead: <b>Trump +35.0</b><br>
+</div>
+<div id="19111-results" class="results">
+<b class="name">Lee</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Donald Trump</td><td>REP</td><td class="votes">550</td><td class="pct">65.8</td></tr>
+<tr><td>Ron DeSantis</td><td>REP</td><td class="votes">136</td><td class="pct">16.3</td></tr>
+<tr><td>Nikki Haley</td><td>REP</td><td class="votes">75</td><td class="pct">9.0</td></tr>
+<tr><td>Vivek Ramaswamy</td><td>REP</td><td class="votes">57</td><td class="pct">6.8</td></tr>
+<tr><td>Ryan Binkley</td><td>REP</td><td class="votes">14</td><td class="pct">1.7</td></tr>
+</tbody>
+</table>
+100.0% of precincts reporting<br>
+Lead: <b>Trump +49.5</b><br>
+</div>
+<div id="19059-results" class="results">
+<b class="name">Dickinson</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Donald Trump</td><td>REP</td><td class="votes">429</td><td class="pct">52.0</td></tr>
+<tr><td>Ron DeSantis</td><td>REP</td><td class="votes">173</td><td class="pct">21.0</td></tr>
+<tr><td>Nikki Haley</td><td>REP</td><td class="votes">125</td><td class="pct">15.2</td></tr>
+<tr><td>Vivek Ramaswamy</td><td>REP</td><td class="votes">90</td><td class="pct">10.9</td></tr>
+</tbody>
+</table>
+100.0% of precincts reporting<br>
+Lead: <b>Trump +31.0</b><br>
+</div>
+<div id="19191-results" class="results">
+<b class="name">Winneshiek</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Donald Trump</td><td>REP</td><td class="votes">415</td><td class="pct">53.9</td></tr>
+<tr><td>Nikki Haley</td><td>REP</td><td class="votes">148</td><td class="pct">19.2</td></tr>
+<tr><td>Ron DeSantis</td><td>REP</td><td class="votes">133</td><td class="pct">17.3</td></tr>
+<tr><td>Vivek Ramaswamy</td><td>REP</td><td class="votes">57</td><td class="pct">7.4</td></tr>
+<tr><td>Asa Hutchinson</td><td>REP</td><td class="votes">15</td><td class="pct">1.9</td></tr>
+</tbody>
+</table>
+100.0% of precincts reporting<br>
+Lead: <b>Trump +34.7</b><br>
+</div>
+<div id="19105-results" class="results">
+<b class="name">Jones</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Donald Trump</td><td>REP</td><td class="votes">426</td><td class="pct">55.9</td></tr>
+<tr><td>Ron DeSantis</td><td>REP</td><td class="votes">146</td><td class="pct">19.2</td></tr>
+<tr><td>Nikki Haley</td><td>REP</td><td class="votes">113</td><td class="pct">14.8</td></tr>
+<tr><td>Vivek Ramaswamy</td><td>REP</td><td class="votes">70</td><td class="pct">9.2</td></tr>
+</tbody>
+</table>
+100.0% of precincts reporting<br>
+Lead: <b>Trump +36.7</b><br>
+</div>
+<div id="19129-results" class="results">
+<b class="name">Mills</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Donald Trump</td><td>REP</td><td class="votes">449</td><td class="pct">59.0</td></tr>
+<tr><td>Ron DeSantis</td><td>REP</td><td class="votes">154</td><td class="pct">20.2</td></tr>
+<tr><td>Nikki Haley</td><td>REP</td><td class="votes">126</td><td class="pct">16.6</td></tr>
+<tr><td>Vivek Ramaswamy</td><td>REP</td><td class="votes">30</td><td class="pct">3.9</td></tr>
+</tbody>
+</table>
+100.0% of precincts reporting<br>
+Lead: <b>Trump +38.8</b><br>
+</div>
+<div id="19121-results" class="results">
+<b class="name">Madison</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Donald Trump</td><td>REP</td><td class="votes">430</td><td class="pct">57.1</td></tr>
+<tr><td>Ron DeSantis</td><td>REP</td><td class="votes">149</td><td class="pct">19.8</td></tr>
+<tr><td>Nikki Haley</td><td>REP</td><td class="votes">111</td><td class="pct">14.7</td></tr>
+<tr><td>Vivek Ramaswamy</td><td>REP</td><td class="votes">59</td><td class="pct">7.8</td></tr>
+</tbody>
+</table>
+100.0% of precincts reporting<br>
+Lead: <b>Trump +37.3</b><br>
+</div>
+<div id="19179-results" class="results">
+<b class="name">Wapello</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Donald Trump</td><td>REP</td><td class="votes">538</td><td class="pct">71.6</td></tr>
+<tr><td>Ron DeSantis</td><td>REP</td><td class="votes">94</td><td class="pct">12.5</td></tr>
+<tr><td>Nikki Haley</td><td>REP</td><td class="votes">69</td><td class="pct">9.2</td></tr>
+<tr><td>Vivek Ramaswamy</td><td>REP</td><td class="votes">47</td><td class="pct">6.3</td></tr>
+</tbody>
+</table>
+100.0% of precincts reporting<br>
+Lead: <b>Trump +59.1</b><br>
+</div>
+<div id="19119-results" class="results">
+<b class="name">Lyon</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Donald Trump</td><td>REP</td><td class="votes">427</td><td class="pct">58.7</td></tr>
+<tr><td>Ron DeSantis</td><td>REP</td><td class="votes">205</td><td class="pct">28.2</td></tr>
+<tr><td>Nikki Haley</td><td>REP</td><td class="votes">54</td><td class="pct">7.4</td></tr>
+<tr><td>Vivek Ramaswamy</td><td>REP</td><td class="votes">39</td><td class="pct">5.4</td></tr>
+</tbody>
+</table>
+100.0% of precincts reporting<br>
+Lead: <b>Trump +30.5</b><br>
+</div>
+<div id="19083-results" class="results">
+<b class="name">Hardin</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Donald Trump</td><td>REP</td><td class="votes">368</td><td class="pct">51.0</td></tr>
+<tr><td>Ron DeSantis</td><td>REP</td><td class="votes">169</td><td class="pct">23.4</td></tr>
+<tr><td>Nikki Haley</td><td>REP</td><td class="votes">89</td><td class="pct">12.3</td></tr>
+<tr><td>Vivek Ramaswamy</td><td>REP</td><td class="votes">78</td><td class="pct">10.8</td></tr>
+<tr><td>Ryan Binkley</td><td>REP</td><td class="votes">17</td><td class="pct">2.4</td></tr>
+</tbody>
+</table>
+100.0% of precincts reporting<br>
+Lead: <b>Trump +27.6</b><br>
+</div>
+<div id="19097-results" class="results">
+<b class="name">Jackson</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Donald Trump</td><td>REP</td><td class="votes">498</td><td class="pct">72.0</td></tr>
+<tr><td>Nikki Haley</td><td>REP</td><td class="votes">75</td><td class="pct">10.8</td></tr>
+<tr><td>Ron DeSantis</td><td>REP</td><td class="votes">68</td><td class="pct">9.8</td></tr>
+<tr><td>Vivek Ramaswamy</td><td>REP</td><td class="votes">51</td><td class="pct">7.4</td></tr>
+</tbody>
+</table>
+100.0% of precincts reporting<br>
+Lead: <b>Trump +61.1</b><br>
+</div>
+<div id="19087-results" class="results">
+<b class="name">Henry</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Donald Trump</td><td>REP</td><td class="votes">436</td><td class="pct">64.9</td></tr>
+<tr><td>Ron DeSantis</td><td>REP</td><td class="votes">123</td><td class="pct">18.3</td></tr>
+<tr><td>Nikki Haley</td><td>REP</td><td class="votes">82</td><td class="pct">12.2</td></tr>
+<tr><td>Vivek Ramaswamy</td><td>REP</td><td class="votes">27</td><td class="pct">4.0</td></tr>
+</tbody>
+</table>
+100.0% of precincts reporting<br>
+Lead: <b>Trump +46.6</b><br>
+</div>
+<div id="19043-results" class="results">
+<b class="name">Clayton</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Donald Trump</td><td>REP</td><td class="votes">428</td><td class="pct">63.8</td></tr>
+<tr><td>Ron DeSantis</td><td>REP</td><td class="votes">125</td><td class="pct">18.6</td></tr>
+<tr><td>Nikki Haley</td><td>REP</td><td class="votes">51</td><td class="pct">7.6</td></tr>
+<tr><td>Vivek Ramaswamy</td><td>REP</td><td class="votes">51</td><td class="pct">7.6</td></tr>
+<tr><td>Ryan Binkley</td><td>REP</td><td class="votes">15</td><td class="pct">2.2</td></tr>
+</tbody>
+</table>
+100.0% of precincts reporting<br>
+Lead: <b>Trump +45.2</b><br>
+</div>
+<div id="19019-results" class="results">
+<b class="name">Buchanan</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Donald Trump</td><td>REP</td><td class="votes">423</td><td class="pct">63.3</td></tr>
+<tr><td>Ron DeSantis</td><td>REP</td><td class="votes">103</td><td class="pct">15.4</td></tr>
+<tr><td>Vivek Ramaswamy</td><td>REP</td><td class="votes">70</td><td class="pct">10.5</td></tr>
+<tr><td>Nikki Haley</td><td>REP</td><td class="votes">61</td><td class="pct">9.1</td></tr>
+<tr><td>Ryan Binkley</td><td>REP</td><td class="votes">11</td><td class="pct">1.6</td></tr>
+</tbody>
+</table>
+100.0% of precincts reporting<br>
+Lead: <b>Trump +47.9</b><br>
+</div>
+<div id="19027-results" class="results">
+<b class="name">Carroll</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Donald Trump</td><td>REP</td><td class="votes">355</td><td class="pct">53.3</td></tr>
+<tr><td>Ron DeSantis</td><td>REP</td><td class="votes">136</td><td class="pct">20.4</td></tr>
+<tr><td>Nikki Haley</td><td>REP</td><td class="votes">129</td><td class="pct">19.4</td></tr>
+<tr><td>Vivek Ramaswamy</td><td>REP</td><td class="votes">37</td><td class="pct">5.6</td></tr>
+</tbody>
+</table>
+100.0% of precincts reporting<br>
+Lead: <b>Trump +32.9</b><br>
+</div>
+<div id="19041-results" class="results">
+<b class="name">Clay</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Donald Trump</td><td>REP</td><td class="votes">390</td><td class="pct">59.1</td></tr>
+<tr><td>Ron DeSantis</td><td>REP</td><td class="votes">120</td><td class="pct">18.2</td></tr>
+<tr><td>Nikki Haley</td><td>REP</td><td class="votes">89</td><td class="pct">13.5</td></tr>
+<tr><td>Vivek Ramaswamy</td><td>REP</td><td class="votes">53</td><td class="pct">8.0</td></tr>
+</tbody>
+</table>
+100.0% of precincts reporting<br>
+Lead: <b>Trump +40.9</b><br>
+</div>
+<div id="19095-results" class="results">
+<b class="name">Iowa</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Donald Trump</td><td>REP</td><td class="votes">360</td><td class="pct">55.2</td></tr>
+<tr><td>Ron DeSantis</td><td>REP</td><td class="votes">146</td><td class="pct">22.4</td></tr>
+<tr><td>Nikki Haley</td><td>REP</td><td class="votes">99</td><td class="pct">15.2</td></tr>
+<tr><td>Vivek Ramaswamy</td><td>REP</td><td class="votes">41</td><td class="pct">6.3</td></tr>
+</tbody>
+</table>
+100.0% of precincts reporting<br>
+Lead: <b>Trump +32.8</b><br>
+</div>
+<div id="19065-results" class="results">
+<b class="name">Fayette</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Donald Trump</td><td>REP</td><td class="votes">368</td><td class="pct">56.7</td></tr>
+<tr><td>Nikki Haley</td><td>REP</td><td class="votes">116</td><td class="pct">17.9</td></tr>
+<tr><td>Ron DeSantis</td><td>REP</td><td class="votes">106</td><td class="pct">16.3</td></tr>
+<tr><td>Vivek Ramaswamy</td><td>REP</td><td class="votes">47</td><td class="pct">7.2</td></tr>
+<tr><td>Ryan Binkley</td><td>REP</td><td class="votes">10</td><td class="pct">1.5</td></tr>
+</tbody>
+</table>
+100.0% of precincts reporting<br>
+Lead: <b>Trump +38.8</b><br>
+</div>
+<div id="19085-results" class="results">
+<b class="name">Harrison</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Donald Trump</td><td>REP</td><td class="votes">428</td><td class="pct">66.6</td></tr>
+<tr><td>Ron DeSantis</td><td>REP</td><td class="votes">87</td><td class="pct">13.5</td></tr>
+<tr><td>Nikki Haley</td><td>REP</td><td class="votes">76</td><td class="pct">11.8</td></tr>
+<tr><td>Vivek Ramaswamy</td><td>REP</td><td class="votes">47</td><td class="pct">7.3</td></tr>
+</tbody>
+</table>
+100.0% of precincts reporting<br>
+Lead: <b>Trump +53.0</b><br>
+</div>
+<div id="19109-results" class="results">
+<b class="name">Kossuth</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Donald Trump</td><td>REP</td><td class="votes">430</td><td class="pct">66.9</td></tr>
+<tr><td>Ron DeSantis</td><td>REP</td><td class="votes">102</td><td class="pct">15.9</td></tr>
+<tr><td>Nikki Haley</td><td>REP</td><td class="votes">58</td><td class="pct">9.0</td></tr>
+<tr><td>Vivek Ramaswamy</td><td>REP</td><td class="votes">51</td><td class="pct">7.9</td></tr>
+</tbody>
+</table>
+100.0% of precincts reporting<br>
+Lead: <b>Trump +51.0</b><br>
+</div>
+<div id="19031-results" class="results">
+<b class="name">Cedar</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Donald Trump</td><td>REP</td><td class="votes">378</td><td class="pct">60.2</td></tr>
+<tr><td>Ron DeSantis</td><td>REP</td><td class="votes">98</td><td class="pct">15.6</td></tr>
+<tr><td>Nikki Haley</td><td>REP</td><td class="votes">98</td><td class="pct">15.6</td></tr>
+<tr><td>Vivek Ramaswamy</td><td>REP</td><td class="votes">50</td><td class="pct">8.0</td></tr>
+</tbody>
+</table>
+100.0% of precincts reporting<br>
+Lead: <b>Trump +44.6</b><br>
+</div>
+<div id="19029-results" class="results">
+<b class="name">Cass</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Donald Trump</td><td>REP</td><td class="votes">375</td><td class="pct">61.7</td></tr>
+<tr><td>Ron DeSantis</td><td>REP</td><td class="votes">109</td><td class="pct">17.9</td></tr>
+<tr><td>Nikki Haley</td><td>REP</td><td class="votes">105</td><td class="pct">17.3</td></tr>
+<tr><td>Vivek Ramaswamy</td><td>REP</td><td class="votes">16</td><td class="pct">2.6</td></tr>
+</tbody>
+</table>
+100.0% of precincts reporting<br>
+Lead: <b>Trump +43.8</b><br>
+</div>
+<div id="19023-results" class="results">
+<b class="name">Butler</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Donald Trump</td><td>REP</td><td class="votes">352</td><td class="pct">58.5</td></tr>
+<tr><td>Ron DeSantis</td><td>REP</td><td class="votes">98</td><td class="pct">16.3</td></tr>
+<tr><td>Nikki Haley</td><td>REP</td><td class="votes">78</td><td class="pct">13.0</td></tr>
+<tr><td>Vivek Ramaswamy</td><td>REP</td><td class="votes">62</td><td class="pct">10.3</td></tr>
+<tr><td>Ryan Binkley</td><td>REP</td><td class="votes">11</td><td class="pct">1.8</td></tr>
+</tbody>
+</table>
+100.0% of precincts reporting<br>
+Lead: <b>Trump +42.2</b><br>
+</div>
+<div id="19079-results" class="results">
+<b class="name">Hamilton</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Donald Trump</td><td>REP</td><td class="votes">334</td><td class="pct">56.9</td></tr>
+<tr><td>Ron DeSantis</td><td>REP</td><td class="votes">121</td><td class="pct">20.6</td></tr>
+<tr><td>Nikki Haley</td><td>REP</td><td class="votes">85</td><td class="pct">14.5</td></tr>
+<tr><td>Vivek Ramaswamy</td><td>REP</td><td class="votes">42</td><td class="pct">7.2</td></tr>
+</tbody>
+</table>
+100.0% of precincts reporting<br>
+Lead: <b>Trump +36.3</b><br>
+</div>
+<div id="19171-results" class="results">
+<b class="name">Tama</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Donald Trump</td><td>REP</td><td class="votes">339</td><td class="pct">58.4</td></tr>
+<tr><td>Ron DeSantis</td><td>REP</td><td class="votes">114</td><td class="pct">19.7</td></tr>
+<tr><td>Nikki Haley</td><td>REP</td><td class="votes">69</td><td class="pct">11.9</td></tr>
+<tr><td>Vivek Ramaswamy</td><td>REP</td><td class="votes">53</td><td class="pct">9.1</td></tr>
+</tbody>
+</table>
+100.0% of precincts reporting<br>
+Lead: <b>Trump +38.8</b><br>
+</div>
+<div id="19035-results" class="results">
+<b class="name">Cherokee</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Donald Trump</td><td>REP</td><td class="votes">337</td><td class="pct">58.3</td></tr>
+<tr><td>Ron DeSantis</td><td>REP</td><td class="votes">99</td><td class="pct">17.1</td></tr>
+<tr><td>Nikki Haley</td><td>REP</td><td class="votes">86</td><td class="pct">14.9</td></tr>
+<tr><td>Vivek Ramaswamy</td><td>REP</td><td class="votes">50</td><td class="pct">8.7</td></tr>
+</tbody>
+</table>
+100.0% of precincts reporting<br>
+Lead: <b>Trump +41.2</b><br>
+</div>
+<div id="19021-results" class="results">
+<b class="name">Buena Vista</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Donald Trump</td><td>REP</td><td class="votes">357</td><td class="pct">61.9</td></tr>
+<tr><td>Ron DeSantis</td><td>REP</td><td class="votes">84</td><td class="pct">14.6</td></tr>
+<tr><td>Nikki Haley</td><td>REP</td><td class="votes">84</td><td class="pct">14.6</td></tr>
+<tr><td>Vivek Ramaswamy</td><td>REP</td><td class="votes">44</td><td class="pct">7.6</td></tr>
+</tbody>
+</table>
+100.0% of precincts reporting<br>
+Lead: <b>Trump +47.3</b><br>
+</div>
+<div id="19075-results" class="results">
+<b class="name">Grundy</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Donald Trump</td><td>REP</td><td class="votes">292</td><td class="pct">51.7</td></tr>
+<tr><td>Ron DeSantis</td><td>REP</td><td class="votes">115</td><td class="pct">20.4</td></tr>
+<tr><td>Nikki Haley</td><td>REP</td><td class="votes">85</td><td class="pct">15.0</td></tr>
+<tr><td>Vivek Ramaswamy</td><td>REP</td><td class="votes">67</td><td class="pct">11.9</td></tr>
+</tbody>
+</table>
+100.0% of precincts reporting<br>
+Lead: <b>Trump +31.3</b><br>
+</div>
+<div id="19157-results" class="results">
+<b class="name">Poweshiek</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Donald Trump</td><td>REP</td><td class="votes">293</td><td class="pct">51.9</td></tr>
+<tr><td>Ron DeSantis</td><td>REP</td><td class="votes">132</td><td class="pct">23.4</td></tr>
+<tr><td>Nikki Haley</td><td>REP</td><td class="votes">87</td><td class="pct">15.4</td></tr>
+<tr><td>Vivek Ramaswamy</td><td>REP</td><td class="votes">46</td><td class="pct">8.1</td></tr>
+</tbody>
+</table>
+100.0% of precincts reporting<br>
+Lead: <b>Trump +28.5</b><br>
+</div>
+<div id="19005-results" class="results">
+<b class="name">Allamakee</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Donald Trump</td><td>REP</td><td class="votes">353</td><td class="pct">66.9</td></tr>
+<tr><td>Ron DeSantis</td><td>REP</td><td class="votes">82</td><td class="pct">15.5</td></tr>
+<tr><td>Nikki Haley</td><td>REP</td><td class="votes">56</td><td class="pct">10.6</td></tr>
+<tr><td>Vivek Ramaswamy</td><td>REP</td><td class="votes">24</td><td class="pct">4.5</td></tr>
+<tr><td>Ryan Binkley</td><td>REP</td><td class="votes">13</td><td class="pct">2.5</td></tr>
+</tbody>
+</table>
+100.0% of precincts reporting<br>
+Lead: <b>Trump +51.3</b><br>
+</div>
+<div id="19055-results" class="results">
+<b class="name">Delaware</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Donald Trump</td><td>REP</td><td class="votes">292</td><td class="pct">55.6</td></tr>
+<tr><td>Ron DeSantis</td><td>REP</td><td class="votes">96</td><td class="pct">18.3</td></tr>
+<tr><td>Nikki Haley</td><td>REP</td><td class="votes">85</td><td class="pct">16.2</td></tr>
+<tr><td>Vivek Ramaswamy</td><td>REP</td><td class="votes">47</td><td class="pct">9.0</td></tr>
+</tbody>
+</table>
+100.0% of precincts reporting<br>
+Lead: <b>Trump +37.3</b><br>
+</div>
+<div id="19141-results" class="results">
+<b class="name">O'Brien</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Donald Trump</td><td>REP</td><td class="votes">329</td><td class="pct">62.9</td></tr>
+<tr><td>Ron DeSantis</td><td>REP</td><td class="votes">91</td><td class="pct">17.4</td></tr>
+<tr><td>Nikki Haley</td><td>REP</td><td class="votes">46</td><td class="pct">8.8</td></tr>
+<tr><td>Vivek Ramaswamy</td><td>REP</td><td class="votes">37</td><td class="pct">7.1</td></tr>
+<tr><td>Ryan Binkley</td><td>REP</td><td class="votes">19</td><td class="pct">3.6</td></tr>
+</tbody>
+</table>
+100.0% of precincts reporting<br>
+Lead: <b>Trump +45.5</b><br>
+</div>
+<div id="19067-results" class="results">
+<b class="name">Floyd</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Donald Trump</td><td>REP</td><td class="votes">346</td><td class="pct">66.4</td></tr>
+<tr><td>Ron DeSantis</td><td>REP</td><td class="votes">89</td><td class="pct">17.1</td></tr>
+<tr><td>Nikki Haley</td><td>REP</td><td class="votes">55</td><td class="pct">10.6</td></tr>
+<tr><td>Vivek Ramaswamy</td><td>REP</td><td class="votes">24</td><td class="pct">4.6</td></tr>
+<tr><td>Ryan Binkley</td><td>REP</td><td class="votes">7</td><td class="pct">1.3</td></tr>
+</tbody>
+</table>
+100.0% of precincts reporting<br>
+Lead: <b>Trump +49.3</b><br>
+</div>
+<div id="19007-results" class="results">
+<b class="name">Appanoose</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Donald Trump</td><td>REP</td><td class="votes">373</td><td class="pct">71.9</td></tr>
+<tr><td>Ron DeSantis</td><td>REP</td><td class="votes">62</td><td class="pct">11.9</td></tr>
+<tr><td>Vivek Ramaswamy</td><td>REP</td><td class="votes">44</td><td class="pct">8.5</td></tr>
+<tr><td>Nikki Haley</td><td>REP</td><td class="votes">36</td><td class="pct">6.9</td></tr>
+</tbody>
+</table>
+100.0% of precincts reporting<br>
+Lead: <b>Trump +59.9</b><br>
+</div>
+<div id="19081-results" class="results">
+<b class="name">Hancock</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Donald Trump</td><td>REP</td><td class="votes">337</td><td class="pct">65.4</td></tr>
+<tr><td>Ron DeSantis</td><td>REP</td><td class="votes">91</td><td class="pct">17.7</td></tr>
+<tr><td>Nikki Haley</td><td>REP</td><td class="votes">46</td><td class="pct">8.9</td></tr>
+<tr><td>Vivek Ramaswamy</td><td>REP</td><td class="votes">32</td><td class="pct">6.2</td></tr>
+<tr><td>Ryan Binkley</td><td>REP</td><td class="votes">8</td><td class="pct">1.6</td></tr>
+</tbody>
+</table>
+100.0% of precincts reporting<br>
+Lead: <b>Trump +47.8</b><br>
+</div>
+<div id="19145-results" class="results">
+<b class="name">Page</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Donald Trump</td><td>REP</td><td class="votes">328</td><td class="pct">63.9</td></tr>
+<tr><td>Nikki Haley</td><td>REP</td><td class="votes">80</td><td class="pct">15.6</td></tr>
+<tr><td>Ron DeSantis</td><td>REP</td><td class="votes">79</td><td class="pct">15.4</td></tr>
+<tr><td>Vivek Ramaswamy</td><td>REP</td><td class="votes">20</td><td class="pct">3.9</td></tr>
+<tr><td>Ryan Binkley</td><td>REP</td><td class="votes">6</td><td class="pct">1.2</td></tr>
+</tbody>
+</table>
+100.0% of precincts reporting<br>
+Lead: <b>Trump +48.3</b><br>
+</div>
+<div id="19165-results" class="results">
+<b class="name">Shelby</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Donald Trump</td><td>REP</td><td class="votes">327</td><td class="pct">68.6</td></tr>
+<tr><td>Nikki Haley</td><td>REP</td><td class="votes">56</td><td class="pct">11.7</td></tr>
+<tr><td>Ron DeSantis</td><td>REP</td><td class="votes">48</td><td class="pct">10.1</td></tr>
+<tr><td>Vivek Ramaswamy</td><td>REP</td><td class="votes">37</td><td class="pct">7.8</td></tr>
+<tr><td>Ryan Binkley</td><td>REP</td><td class="votes">9</td><td class="pct">1.9</td></tr>
+</tbody>
+</table>
+100.0% of precincts reporting<br>
+Lead: <b>Trump +56.8</b><br>
+</div>
+<div id="19077-results" class="results">
+<b class="name">Guthrie</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Donald Trump</td><td>REP</td><td class="votes">264</td><td class="pct">55.6</td></tr>
+<tr><td>Nikki Haley</td><td>REP</td><td class="votes">88</td><td class="pct">18.5</td></tr>
+<tr><td>Ron DeSantis</td><td>REP</td><td class="votes">83</td><td class="pct">17.5</td></tr>
+<tr><td>Vivek Ramaswamy</td><td>REP</td><td class="votes">38</td><td class="pct">8.0</td></tr>
+</tbody>
+</table>
+100.0% of precincts reporting<br>
+Lead: <b>Trump +37.1</b><br>
+</div>
+<div id="19189-results" class="results">
+<b class="name">Winnebago</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Donald Trump</td><td>REP</td><td class="votes">256</td><td class="pct">55.3</td></tr>
+<tr><td>Ron DeSantis</td><td>REP</td><td class="votes">107</td><td class="pct">23.1</td></tr>
+<tr><td>Nikki Haley</td><td>REP</td><td class="votes">53</td><td class="pct">11.4</td></tr>
+<tr><td>Vivek Ramaswamy</td><td>REP</td><td class="votes">44</td><td class="pct">9.5</td></tr>
+</tbody>
+</table>
+100.0% of precincts reporting<br>
+Lead: <b>Trump +32.2</b><br>
+</div>
+<div id="19091-results" class="results">
+<b class="name">Humboldt</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Donald Trump</td><td>REP</td><td class="votes">313</td><td class="pct">70.7</td></tr>
+<tr><td>Ron DeSantis</td><td>REP</td><td class="votes">49</td><td class="pct">11.1</td></tr>
+<tr><td>Vivek Ramaswamy</td><td>REP</td><td class="votes">40</td><td class="pct">9.0</td></tr>
+<tr><td>Nikki Haley</td><td>REP</td><td class="votes">39</td><td class="pct">8.8</td></tr>
+</tbody>
+</table>
+100.0% of precincts reporting<br>
+Lead: <b>Trump +59.6</b><br>
+</div>
+<div id="19037-results" class="results">
+<b class="name">Chickasaw</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Donald Trump</td><td>REP</td><td class="votes">253</td><td class="pct">58.4</td></tr>
+<tr><td>Ron DeSantis</td><td>REP</td><td class="votes">75</td><td class="pct">17.3</td></tr>
+<tr><td>Nikki Haley</td><td>REP</td><td class="votes">60</td><td class="pct">13.9</td></tr>
+<tr><td>Vivek Ramaswamy</td><td>REP</td><td class="votes">41</td><td class="pct">9.5</td></tr>
+</tbody>
+</table>
+100.0% of precincts reporting<br>
+Lead: <b>Trump +41.1</b><br>
+</div>
+<div id="19101-results" class="results">
+<b class="name">Jefferson</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Donald Trump</td><td>REP</td><td class="votes">301</td><td class="pct">69.5</td></tr>
+<tr><td>Ron DeSantis</td><td>REP</td><td class="votes">52</td><td class="pct">12.0</td></tr>
+<tr><td>Nikki Haley</td><td>REP</td><td class="votes">40</td><td class="pct">9.2</td></tr>
+<tr><td>Vivek Ramaswamy</td><td>REP</td><td class="votes">37</td><td class="pct">8.5</td></tr>
+</tbody>
+</table>
+100.0% of precincts reporting<br>
+Lead: <b>Trump +57.5</b><br>
+</div>
+<div id="19069-results" class="results">
+<b class="name">Franklin</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Donald Trump</td><td>REP</td><td class="votes">217</td><td class="pct">54.2</td></tr>
+<tr><td>Ron DeSantis</td><td>REP</td><td class="votes">80</td><td class="pct">20.0</td></tr>
+<tr><td>Nikki Haley</td><td>REP</td><td class="votes">61</td><td class="pct">15.2</td></tr>
+<tr><td>Vivek Ramaswamy</td><td>REP</td><td class="votes">31</td><td class="pct">7.8</td></tr>
+<tr><td>Ryan Binkley</td><td>REP</td><td class="votes">11</td><td class="pct">2.8</td></tr>
+</tbody>
+</table>
+100.0% of precincts reporting<br>
+Lead: <b>Trump +34.2</b><br>
+</div>
+<div id="19039-results" class="results">
+<b class="name">Clarke</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Donald Trump</td><td>REP</td><td class="votes">246</td><td class="pct">63.9</td></tr>
+<tr><td>Ron DeSantis</td><td>REP</td><td class="votes">56</td><td class="pct">14.5</td></tr>
+<tr><td>Nikki Haley</td><td>REP</td><td class="votes">50</td><td class="pct">13.0</td></tr>
+<tr><td>Vivek Ramaswamy</td><td>REP</td><td class="votes">22</td><td class="pct">5.7</td></tr>
+<tr><td>Ryan Binkley</td><td>REP</td><td class="votes">10</td><td class="pct">2.6</td></tr>
+</tbody>
+</table>
+100.0% of precincts reporting<br>
+Lead: <b>Trump +49.4</b><br>
+</div>
+<div id="19047-results" class="results">
+<b class="name">Crawford</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Donald Trump</td><td>REP</td><td class="votes">202</td><td class="pct">52.5</td></tr>
+<tr><td>Vivek Ramaswamy</td><td>REP</td><td class="votes">92</td><td class="pct">23.9</td></tr>
+<tr><td>Nikki Haley</td><td>REP</td><td class="votes">48</td><td class="pct">12.5</td></tr>
+<tr><td>Ron DeSantis</td><td>REP</td><td class="votes">37</td><td class="pct">9.6</td></tr>
+<tr><td>Ryan Binkley</td><td>REP</td><td class="votes">6</td><td class="pct">1.6</td></tr>
+</tbody>
+</table>
+100.0% of precincts reporting<br>
+Lead: <b>Trump +28.6</b><br>
+</div>
+<div id="19197-results" class="results">
+<b class="name">Wright</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Donald Trump</td><td>REP</td><td class="votes">212</td><td class="pct">55.2</td></tr>
+<tr><td>Ron DeSantis</td><td>REP</td><td class="votes">88</td><td class="pct">22.9</td></tr>
+<tr><td>Nikki Haley</td><td>REP</td><td class="votes">55</td><td class="pct">14.3</td></tr>
+<tr><td>Vivek Ramaswamy</td><td>REP</td><td class="votes">26</td><td class="pct">6.8</td></tr>
+</tbody>
+</table>
+100.0% of precincts reporting<br>
+Lead: <b>Trump +32.3</b><br>
+</div>
+<div id="19107-results" class="results">
+<b class="name">Keokuk</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Donald Trump</td><td>REP</td><td class="votes">285</td><td class="pct">74.6</td></tr>
+<tr><td>Ron DeSantis</td><td>REP</td><td class="votes">49</td><td class="pct">12.8</td></tr>
+<tr><td>Nikki Haley</td><td>REP</td><td class="votes">29</td><td class="pct">7.6</td></tr>
+<tr><td>Vivek Ramaswamy</td><td>REP</td><td class="votes">17</td><td class="pct">4.5</td></tr>
+</tbody>
+</table>
+100.0% of precincts reporting<br>
+Lead: <b>Trump +61.8</b><br>
+</div>
+<div id="19151-results" class="results">
+<b class="name">Pocahontas</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Donald Trump</td><td>REP</td><td class="votes">255</td><td class="pct">67.1</td></tr>
+<tr><td>Nikki Haley</td><td>REP</td><td class="votes">43</td><td class="pct">11.3</td></tr>
+<tr><td>Vivek Ramaswamy</td><td>REP</td><td class="votes">42</td><td class="pct">11.1</td></tr>
+<tr><td>Ron DeSantis</td><td>REP</td><td class="votes">39</td><td class="pct">10.3</td></tr>
+</tbody>
+</table>
+100.0% of precincts reporting<br>
+Lead: <b>Trump +55.8</b><br>
+</div>
+<div id="19073-results" class="results">
+<b class="name">Greene</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Donald Trump</td><td>REP</td><td class="votes">209</td><td class="pct">56.3</td></tr>
+<tr><td>Ron DeSantis</td><td>REP</td><td class="votes">68</td><td class="pct">18.3</td></tr>
+<tr><td>Nikki Haley</td><td>REP</td><td class="votes">61</td><td class="pct">16.4</td></tr>
+<tr><td>Vivek Ramaswamy</td><td>REP</td><td class="votes">25</td><td class="pct">6.7</td></tr>
+<tr><td>Ryan Binkley</td><td>REP</td><td class="votes">7</td><td class="pct">1.9</td></tr>
+</tbody>
+</table>
+100.0% of precincts reporting<br>
+Lead: <b>Trump +38.0</b><br>
+</div>
+<div id="19131-results" class="results">
+<b class="name">Mitchell</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Donald Trump</td><td>REP</td><td class="votes">178</td><td class="pct">49.9</td></tr>
+<tr><td>Ron DeSantis</td><td>REP</td><td class="votes">73</td><td class="pct">20.4</td></tr>
+<tr><td>Nikki Haley</td><td>REP</td><td class="votes">55</td><td class="pct">15.4</td></tr>
+<tr><td>Vivek Ramaswamy</td><td>REP</td><td class="votes">50</td><td class="pct">14.0</td></tr>
+</tbody>
+</table>
+100.0% of precincts reporting<br>
+Lead: <b>Trump +29.4</b><br>
+</div>
+<div id="19089-results" class="results">
+<b class="name">Howard</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Donald Trump</td><td>REP</td><td class="votes">222</td><td class="pct">63.8</td></tr>
+<tr><td>Nikki Haley</td><td>REP</td><td class="votes">59</td><td class="pct">17.0</td></tr>
+<tr><td>Ron DeSantis</td><td>REP</td><td class="votes">35</td><td class="pct">10.1</td></tr>
+<tr><td>Vivek Ramaswamy</td><td>REP</td><td class="votes">30</td><td class="pct">8.6</td></tr>
+</tbody>
+</table>
+100.0% of precincts reporting<br>
+Lead: <b>Trump +46.8</b><br>
+</div>
+<div id="19175-results" class="results">
+<b class="name">Union</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Donald Trump</td><td>REP</td><td class="votes">201</td><td class="pct">58.8</td></tr>
+<tr><td>Ron DeSantis</td><td>REP</td><td class="votes">79</td><td class="pct">23.1</td></tr>
+<tr><td>Nikki Haley</td><td>REP</td><td class="votes">34</td><td class="pct">9.9</td></tr>
+<tr><td>Vivek Ramaswamy</td><td>REP</td><td class="votes">21</td><td class="pct">6.1</td></tr>
+<tr><td>Ryan Binkley</td><td>REP</td><td class="votes">7</td><td class="pct">2.0</td></tr>
+</tbody>
+</table>
+100.0% of precincts reporting<br>
+Lead: <b>Trump +35.7</b><br>
+</div>
+<div id="19025-results" class="results">
+<b class="name">Calhoun</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Donald Trump</td><td>REP</td><td class="votes">210</td><td class="pct">62.9</td></tr>
+<tr><td>Ron DeSantis</td><td>REP</td><td class="votes">53</td><td class="pct">15.9</td></tr>
+<tr><td>Nikki Haley</td><td>REP</td><td class="votes">40</td><td class="pct">12.0</td></tr>
+<tr><td>Vivek Ramaswamy</td><td>REP</td><td class="votes">26</td><td class="pct">7.8</td></tr>
+<tr><td>Ryan Binkley</td><td>REP</td><td class="votes">4</td><td class="pct">1.2</td></tr>
+</tbody>
+</table>
+100.0% of precincts reporting<br>
+Lead: <b>Trump +47.0</b><br>
+</div>
+<div id="19147-results" class="results">
+<b class="name">Palo Alto</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Donald Trump</td><td>REP</td><td class="votes">188</td><td class="pct">56.6</td></tr>
+<tr><td>Ron DeSantis</td><td>REP</td><td class="votes">71</td><td class="pct">21.4</td></tr>
+<tr><td>Nikki Haley</td><td>REP</td><td class="votes">40</td><td class="pct">12.0</td></tr>
+<tr><td>Vivek Ramaswamy</td><td>REP</td><td class="votes">32</td><td class="pct">9.6</td></tr>
+</tbody>
+</table>
+100.0% of precincts reporting<br>
+Lead: <b>Trump +35.2</b><br>
+</div>
+<div id="19117-results" class="results">
+<b class="name">Lucas</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Donald Trump</td><td>REP</td><td class="votes">218</td><td class="pct">66.5</td></tr>
+<tr><td>Ron DeSantis</td><td>REP</td><td class="votes">47</td><td class="pct">14.3</td></tr>
+<tr><td>Vivek Ramaswamy</td><td>REP</td><td class="votes">38</td><td class="pct">11.6</td></tr>
+<tr><td>Nikki Haley</td><td>REP</td><td class="votes">21</td><td class="pct">6.4</td></tr>
+</tbody>
+</table>
+100.0% of precincts reporting<br>
+Lead: <b>Trump +52.1</b><br>
+</div>
+<div id="19161-results" class="results">
+<b class="name">Sac</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Donald Trump</td><td>REP</td><td class="votes">174</td><td class="pct">54.7</td></tr>
+<tr><td>Ron DeSantis</td><td>REP</td><td class="votes">52</td><td class="pct">16.4</td></tr>
+<tr><td>Nikki Haley</td><td>REP</td><td class="votes">52</td><td class="pct">16.4</td></tr>
+<tr><td>Vivek Ramaswamy</td><td>REP</td><td class="votes">36</td><td class="pct">11.3</td></tr>
+</tbody>
+</table>
+100.0% of precincts reporting<br>
+Lead: <b>Trump +38.4</b><br>
+</div>
+<div id="19115-results" class="results">
+<b class="name">Louisa</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Donald Trump</td><td>REP</td><td class="votes">219</td><td class="pct">70.6</td></tr>
+<tr><td>Ron DeSantis</td><td>REP</td><td class="votes">55</td><td class="pct">17.7</td></tr>
+<tr><td>Nikki Haley</td><td>REP</td><td class="votes">27</td><td class="pct">8.7</td></tr>
+<tr><td>Vivek Ramaswamy</td><td>REP</td><td class="votes">9</td><td class="pct">2.9</td></tr>
+</tbody>
+</table>
+100.0% of precincts reporting<br>
+Lead: <b>Trump +52.9</b><br>
+</div>
+<div id="19137-results" class="results">
+<b class="name">Montgomery</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Donald Trump</td><td>REP</td><td class="votes">177</td><td class="pct">57.3</td></tr>
+<tr><td>Nikki Haley</td><td>REP</td><td class="votes">68</td><td class="pct">22.0</td></tr>
+<tr><td>Ron DeSantis</td><td>REP</td><td class="votes">30</td><td class="pct">9.7</td></tr>
+<tr><td>Vivek Ramaswamy</td><td>REP</td><td class="votes">27</td><td class="pct">8.7</td></tr>
+<tr><td>Ryan Binkley</td><td>REP</td><td class="votes">6</td><td class="pct">1.9</td></tr>
+</tbody>
+</table>
+100.0% of precincts reporting<br>
+Lead: <b>Trump +35.3</b><br>
+</div>
+<div id="19177-results" class="results">
+<b class="name">Van Buren</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Donald Trump</td><td>REP</td><td class="votes">211</td><td class="pct">71.3</td></tr>
+<tr><td>Ron DeSantis</td><td>REP</td><td class="votes">51</td><td class="pct">17.2</td></tr>
+<tr><td>Nikki Haley</td><td>REP</td><td class="votes">18</td><td class="pct">6.1</td></tr>
+<tr><td>Vivek Ramaswamy</td><td>REP</td><td class="votes">16</td><td class="pct">5.4</td></tr>
+</tbody>
+</table>
+100.0% of precincts reporting<br>
+Lead: <b>Trump +54.1</b><br>
+</div>
+<div id="19195-results" class="results">
+<b class="name">Worth</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Donald Trump</td><td>REP</td><td class="votes">194</td><td class="pct">66.9</td></tr>
+<tr><td>Ron DeSantis</td><td>REP</td><td class="votes">35</td><td class="pct">12.1</td></tr>
+<tr><td>Vivek Ramaswamy</td><td>REP</td><td class="votes">30</td><td class="pct">10.3</td></tr>
+<tr><td>Nikki Haley</td><td>REP</td><td class="votes">29</td><td class="pct">10.0</td></tr>
+</tbody>
+</table>
+100.0% of precincts reporting<br>
+Lead: <b>Trump +54.8</b><br>
+</div>
+<div id="19063-results" class="results">
+<b class="name">Emmet</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Donald Trump</td><td>REP</td><td class="votes">195</td><td class="pct">67.9</td></tr>
+<tr><td>Ron DeSantis</td><td>REP</td><td class="votes">42</td><td class="pct">14.6</td></tr>
+<tr><td>Vivek Ramaswamy</td><td>REP</td><td class="votes">27</td><td class="pct">9.4</td></tr>
+<tr><td>Nikki Haley</td><td>REP</td><td class="votes">20</td><td class="pct">7.0</td></tr>
+</tbody>
+</table>
+100.0% of precincts reporting<br>
+Lead: <b>Trump +53.3</b><br>
+</div>
+<div id="19133-results" class="results">
+<b class="name">Monona</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Donald Trump</td><td>REP</td><td class="votes">200</td><td class="pct">69.9</td></tr>
+<tr><td>Ron DeSantis</td><td>REP</td><td class="votes">44</td><td class="pct">15.4</td></tr>
+<tr><td>Nikki Haley</td><td>REP</td><td class="votes">22</td><td class="pct">7.7</td></tr>
+<tr><td>Vivek Ramaswamy</td><td>REP</td><td class="votes">19</td><td class="pct">6.6</td></tr>
+</tbody>
+</table>
+100.0% of precincts reporting<br>
+Lead: <b>Trump +54.5</b><br>
+</div>
+<div id="19009-results" class="results">
+<b class="name">Audubon</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Donald Trump</td><td>REP</td><td class="votes">178</td><td class="pct">64.3</td></tr>
+<tr><td>Ron DeSantis</td><td>REP</td><td class="votes">44</td><td class="pct">15.9</td></tr>
+<tr><td>Nikki Haley</td><td>REP</td><td class="votes">28</td><td class="pct">10.1</td></tr>
+<tr><td>Vivek Ramaswamy</td><td>REP</td><td class="votes">26</td><td class="pct">9.4</td></tr>
+</tbody>
+</table>
+100.0% of precincts reporting<br>
+Lead: <b>Trump +48.4</b><br>
+</div>
+<div id="19051-results" class="results">
+<b class="name">Davis</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Donald Trump</td><td>REP</td><td class="votes">177</td><td class="pct">67.3</td></tr>
+<tr><td>Ron DeSantis</td><td>REP</td><td class="votes">43</td><td class="pct">16.3</td></tr>
+<tr><td>Nikki Haley</td><td>REP</td><td class="votes">28</td><td class="pct">10.6</td></tr>
+<tr><td>Vivek Ramaswamy</td><td>REP</td><td class="votes">12</td><td class="pct">4.6</td></tr>
+</tbody>
+</table>
+100.0% of precincts reporting<br>
+Lead: <b>Trump +51.0</b><br>
+</div>
+<div id="19093-results" class="results">
+<b class="name">Ida</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Donald Trump</td><td>REP</td><td class="votes">132</td><td class="pct">51.2</td></tr>
+<tr><td>Nikki Haley</td><td>REP</td><td class="votes">55</td><td class="pct">21.3</td></tr>
+<tr><td>Ron DeSantis</td><td>REP</td><td class="votes">41</td><td class="pct">15.9</td></tr>
+<tr><td>Vivek Ramaswamy</td><td>REP</td><td class="votes">24</td><td class="pct">9.3</td></tr>
+<tr><td>Ryan Binkley</td><td>REP</td><td class="votes">6</td><td class="pct">2.3</td></tr>
+</tbody>
+</table>
+100.0% of precincts reporting<br>
+Lead: <b>Trump +29.8</b><br>
+</div>
+<div id="19185-results" class="results">
+<b class="name">Wayne</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Donald Trump</td><td>REP</td><td class="votes">171</td><td class="pct">66.3</td></tr>
+<tr><td>Ron DeSantis</td><td>REP</td><td class="votes">53</td><td class="pct">20.5</td></tr>
+<tr><td>Vivek Ramaswamy</td><td>REP</td><td class="votes">17</td><td class="pct">6.6</td></tr>
+<tr><td>Nikki Haley</td><td>REP</td><td class="votes">15</td><td class="pct">5.8</td></tr>
+</tbody>
+</table>
+100.0% of precincts reporting<br>
+Lead: <b>Trump +45.7</b><br>
+</div>
+<div id="19053-results" class="results">
+<b class="name">Decatur</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Donald Trump</td><td>REP</td><td class="votes">153</td><td class="pct">60.7</td></tr>
+<tr><td>Ron DeSantis</td><td>REP</td><td class="votes">48</td><td class="pct">19.0</td></tr>
+<tr><td>Nikki Haley</td><td>REP</td><td class="votes">35</td><td class="pct">13.9</td></tr>
+<tr><td>Vivek Ramaswamy</td><td>REP</td><td class="votes">15</td><td class="pct">6.0</td></tr>
+</tbody>
+</table>
+100.0% of precincts reporting<br>
+Lead: <b>Trump +41.7</b><br>
+</div>
+<div id="19135-results" class="results">
+<b class="name">Monroe</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Donald Trump</td><td>REP</td><td class="votes">162</td><td class="pct">66.7</td></tr>
+<tr><td>Ron DeSantis</td><td>REP</td><td class="votes">36</td><td class="pct">14.8</td></tr>
+<tr><td>Nikki Haley</td><td>REP</td><td class="votes">22</td><td class="pct">9.1</td></tr>
+<tr><td>Vivek Ramaswamy</td><td>REP</td><td class="votes">17</td><td class="pct">7.0</td></tr>
+<tr><td>Ryan Binkley</td><td>REP</td><td class="votes">6</td><td class="pct">2.5</td></tr>
+</tbody>
+</table>
+100.0% of precincts reporting<br>
+Lead: <b>Trump +51.9</b><br>
+</div>
+<div id="19071-results" class="results">
+<b class="name">Fremont</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Donald Trump</td><td>REP</td><td class="votes">164</td><td class="pct">68.3</td></tr>
+<tr><td>Nikki Haley</td><td>REP</td><td class="votes">36</td><td class="pct">15.0</td></tr>
+<tr><td>Ron DeSantis</td><td>REP</td><td class="votes">29</td><td class="pct">12.1</td></tr>
+<tr><td>Vivek Ramaswamy</td><td>REP</td><td class="votes">11</td><td class="pct">4.6</td></tr>
+</tbody>
+</table>
+100.0% of precincts reporting<br>
+Lead: <b>Trump +53.3</b><br>
+</div>
+<div id="19001-results" class="results">
+<b class="name">Adair</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Donald Trump</td><td>REP</td><td class="votes">120</td><td class="pct">50.6</td></tr>
+<tr><td>Ron DeSantis</td><td>REP</td><td class="votes">67</td><td class="pct">28.3</td></tr>
+<tr><td>Vivek Ramaswamy</td><td>REP</td><td class="votes">29</td><td class="pct">12.2</td></tr>
+<tr><td>Nikki Haley</td><td>REP</td><td class="votes">21</td><td class="pct">8.9</td></tr>
+</tbody>
+</table>
+100.0% of precincts reporting<br>
+Lead: <b>Trump +22.4</b><br>
+</div>
+<div id="19159-results" class="results">
+<b class="name">Ringgold</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Donald Trump</td><td>REP</td><td class="votes">131</td><td class="pct">59.3</td></tr>
+<tr><td>Ron DeSantis</td><td>REP</td><td class="votes">65</td><td class="pct">29.4</td></tr>
+<tr><td>Nikki Haley</td><td>REP</td><td class="votes">16</td><td class="pct">7.2</td></tr>
+<tr><td>Vivek Ramaswamy</td><td>REP</td><td class="votes">5</td><td class="pct">2.3</td></tr>
+<tr><td>Ryan Binkley</td><td>REP</td><td class="votes">3</td><td class="pct">1.4</td></tr>
+</tbody>
+</table>
+100.0% of precincts reporting<br>
+Lead: <b>Trump +29.9</b><br>
+</div>
+<div id="19143-results" class="results">
+<b class="name">Osceola</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Donald Trump</td><td>REP</td><td class="votes">121</td><td class="pct">64.4</td></tr>
+<tr><td>Ron DeSantis</td><td>REP</td><td class="votes">30</td><td class="pct">16.0</td></tr>
+<tr><td>Nikki Haley</td><td>REP</td><td class="votes">23</td><td class="pct">12.2</td></tr>
+<tr><td>Vivek Ramaswamy</td><td>REP</td><td class="votes">12</td><td class="pct">6.4</td></tr>
+<tr><td>Ryan Binkley</td><td>REP</td><td class="votes">2</td><td class="pct">1.1</td></tr>
+</tbody>
+</table>
+100.0% of precincts reporting<br>
+Lead: <b>Trump +48.4</b><br>
+</div>
+<div id="19003-results" class="results">
+<b class="name">Adams</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Donald Trump</td><td>REP</td><td class="votes">108</td><td class="pct">58.7</td></tr>
+<tr><td>Ron DeSantis</td><td>REP</td><td class="votes">34</td><td class="pct">18.5</td></tr>
+<tr><td>Nikki Haley</td><td>REP</td><td class="votes">26</td><td class="pct">14.1</td></tr>
+<tr><td>Vivek Ramaswamy</td><td>REP</td><td class="votes">15</td><td class="pct">8.2</td></tr>
+</tbody>
+</table>
+100.0% of precincts reporting<br>
+Lead: <b>Trump +40.2</b><br>
+</div>
+<div id="19173-results" class="results">
+<b class="name">Taylor</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Donald Trump</td><td>REP</td><td class="votes">125</td><td class="pct">69.1</td></tr>
+<tr><td>Ron DeSantis</td><td>REP</td><td class="votes">29</td><td class="pct">16.0</td></tr>
+<tr><td>Nikki Haley</td><td>REP</td><td class="votes">16</td><td class="pct">8.8</td></tr>
+<tr><td>Vivek Ramaswamy</td><td>REP</td><td class="votes">11</td><td class="pct">6.1</td></tr>
+</tbody>
+</table>
+100.0% of precincts reporting<br>
+Lead: <b>Trump +53.0</b><br>
+</div>
+</div>
 </div>
 </body>
 </html>
