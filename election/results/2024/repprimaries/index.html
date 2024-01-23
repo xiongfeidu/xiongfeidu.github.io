@@ -58,13 +58,13 @@
 
   <div class="primary-candidate">
     <div class="no-height">
-      <div style="width:4px; height:20px; background-color: #FF00FF; position: relative;">&nbsp;</div>
+      <div style="width:5px; height:20px; background-color: #FF00FF; position: relative;">&nbsp;</div>
     </div>
     <div class="no-height">
-      <div style="width:0px; height:20px; left: 4px; background-color: #FF60FF; position: relative;">&nbsp;</div>
+      <div style="width:0px; height:20px; left: 5px; background-color: #FF60FF; position: relative;">&nbsp;</div>
     </div>
     <div class="no-height">
-      <div style="height:20px; left: 14px; color: black; background-color: lightgray; position: relative; z-index: 1; display: inline-block;"><span class="delegates">8</span> DeSantis</div>
+      <div style="height:20px; left: 15px; color: black; background-color: lightgray; position: relative; z-index: 1; display: inline-block;"><span class="delegates">9</span> DeSantis</div>
     </div>
     <div>
       <div style="width:960px; position: relative; text-align: center; font-size: 18;">|<br><span style="font-size: 12;"></span></div>
@@ -80,7 +80,7 @@
       <div style="width:0px; height:20px; left: 4px; background-color: #FFFF60; position: relative;">&nbsp;</div>
     </div>
     <div class="no-height">
-      <div style="height:20px; left: 14px; color: black; background-color: lightgray; position: relative; z-index: 1; display: inline-block;"><span class="delegates">7</span> Haley</div>
+      <div style="height:20px; left: 14px; color: black; background-color: lightgray; position: relative; z-index: 1; display: inline-block;"><span class="delegates">8</span> Haley</div>
     </div>
     <div>
       <div style="width:960px; position: relative; text-align: center; font-size: 18;">|<br><span style="font-size: 12;">1234 to win</span></div>
@@ -6466,15 +6466,34 @@
 <td>Del</td>
 </tr>
 <tr><td style="color: #fff" bgcolor="#FF0000">Donald Trump ✔</td><td>REP</td><td class="votes">56,260</td><td class="pct">51.0</td><td class="votes">20</td></tr>
-<tr><td>Ron DeSantis</td><td>REP</td><td class="votes">23,420</td><td class="pct">21.2</td><td class="votes">8</td></tr>
-<tr><td>Nikki Haley</td><td>REP</td><td class="votes">21,085</td><td class="pct">19.1</td><td class="votes">7</td></tr>
+<tr><td>Ron DeSantis</td><td>REP</td><td class="votes">23,420</td><td class="pct">21.2</td><td class="votes">9</td></tr>
+<tr><td>Nikki Haley</td><td>REP</td><td class="votes">21,085</td><td class="pct">19.1</td><td class="votes">8</td></tr>
 <tr><td>Vivek Ramaswamy</td><td>REP</td><td class="votes">8,449</td><td class="pct">7.7</td><td class="votes">3</td></tr>
 </tbody>
 </table>
-99.0% of precincts reporting<br>
+100.0% of precincts reporting<br>
 Status: <b>Called for Trump (R)</b><br>
 Lead: <b>Trump +29.8</b><br>
 Pre-election estimate: <b>Safe Trump</b>
+</div>
+<div id="NH-results" class="results">
+<b class="name">New Hampshire </b> Primary, Jan 23<br>
+<table class="resultstable">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+<td>Del</td>
+</tr>
+<tr><td>Donald J. Trump</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td><td class="votes">0</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Status: <b>Not called</b><br>
+Lead: <b>Tie</b><br>
+Pre-election estimate: <b>Likely Trump</b>
 </div>
 
   <div id="AK-results" class="results">
@@ -6634,11 +6653,6 @@ Pre-election estimate: <b>Safe Trump</b>
 
   <div id="NE-results" class="results">
     <b class="name">Nebraska</b><br>
-    No election
-  </div>
-
-  <div id="NH-results" class="results">
-    <b class="name">New Hampshire</b><br>
     No election
   </div>
 
@@ -6946,7 +6960,7 @@ Pre-election estimate: <b>Safe Trump</b>
   function setColor(id, color) {
     document.getElementById(id).style.fill = color;    
   }
-  var stateColors = {"IA": "#FF0000"};
+  var stateColors = {"IA": "#FF0000", "NH": "#FFFFFF"};
   function colorAll() {
     for (var state in stateColors) {
       setColor(state, stateColors[state]);
