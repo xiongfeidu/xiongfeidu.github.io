@@ -6458,7 +6458,7 @@ Pre-election estimate: <b>N/A</b>
 <td>Pct</td>
 <td>Del</td>
 </tr>
-<tr><td style="color: #fff" bgcolor="#0000FF">Joseph R. Biden Jr.* ✔</td><td>DEM</td><td class="votes">126,350</td><td class="pct">96.2</td><td class="votes">55</td></tr>
+<tr><td style="color: #fff" bgcolor="#0000FF">Joseph R. Biden Jr.* ✔</td><td>DEM</td><td class="votes">126,321</td><td class="pct">96.2</td><td class="votes">55</td></tr>
 <tr><td>Marianne Williamson</td><td>DEM</td><td class="votes">2,726</td><td class="pct">2.1</td><td class="votes">0</td></tr>
 <tr><td>Dean Phillips</td><td>DEM</td><td class="votes">2,239</td><td class="pct">1.7</td><td class="votes">0</td></tr>
 </tbody>
@@ -6466,6 +6466,25 @@ Pre-election estimate: <b>N/A</b>
 100.0% of precincts reporting<br>
 Status: <b>Called for Biden (D)</b><br>
 Lead: <b>Biden +94.1</b><br>
+Pre-election estimate: <b>N/A</b>
+</div>
+<div id="NV-results" class="results">
+<b class="name">Nevada </b> Primary, Feb 06<br>
+<table class="resultstable">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+<td>Del</td>
+</tr>
+<tr><td>Joseph R. Biden Jr.*</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td><td class="votes">0</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Status: <b>Not called</b><br>
+Lead: <b>Tie</b><br>
 Pre-election estimate: <b>N/A</b>
 </div>
 
@@ -6646,11 +6665,6 @@ Pre-election estimate: <b>N/A</b>
 
   <div id="NM-results" class="results">
     <b class="name">New Mexico</b><br>
-    No election
-  </div>
-
-  <div id="NV-results" class="results">
-    <b class="name">Nevada</b><br>
     No election
   </div>
 
@@ -6938,14 +6952,14 @@ Pre-election estimate: <b>N/A</b>
   function setColor(id, color) {
     document.getElementById(id).style.fill = color;    
   }
-  var stateColors = {"NH": "#0000FF", "SC": "#0000FF"};
+  var stateColors = {"NH": "#0000FF", "SC": "#0000FF", "NV": "#FFFFFF"};
   function colorAll() {
     for (var state in stateColors) {
       setColor(state, stateColors[state]);
     }
   }
   colorAll();
-  var actual = {"c33011": "#0000C0", "c33015": "#0000C0", "c33013": "#0000C0", "c33017": "#0000C0", "c33009": "#0000C0", "c33005": "#0000C0", "c33001": "#0000C0", "c33003": "#0000C0", "c33019": "#0000C0", "c33007": "#0000C0", "c45079": "#0000C0", "c45019": "#0000C0", "c45045": "#0000C0", "c45051": "#0000C0", "c45013": "#0000C0", "c45015": "#0000C0", "c45075": "#0000C0", "c45041": "#0000C0", "c45083": "#0000C0", "c45063": "#0000C0", "c45085": "#0000C0", "c45091": "#0000C0", "c45035": "#0000C0", "c45003": "#0000C0", "c45043": "#0000C0", "c45007": "#0000C0", "c45031": "#0000C0", "c45089": "#0000C0", "c45057": "#0000C0", "c45055": "#0000C0", "c45027": "#0000C0", "c45047": "#0000C0", "c45053": "#0000C0", "c45067": "#0000C0", "c45077": "#0000C0", "c45039": "#0000C0", "c45059": "#0000C0", "c45029": "#0000C0", "c45061": "#0000C0", "c45073": "#0000C0", "c45023": "#0000C0", "c45069": "#0000C0", "c45071": "#0000C0", "c45025": "#0000C0", "c45049": "#0000C0", "c45009": "#0000C0", "c45037": "#0000C0", "c45087": "#0000C0", "c45033": "#0000C0", "c45001": "#0000C0", "c45065": "#0000C0", "c45017": "#0000C0", "c45021": "#0000C0", "c45011": "#0000C0", "c45005": "#0000C0", "c45081": "#0000C0"};
+  var actual = {"c33011": "#0000C0", "c33015": "#0000C0", "c33013": "#0000C0", "c33017": "#0000C0", "c33009": "#0000C0", "c33005": "#0000C0", "c33001": "#0000C0", "c33003": "#0000C0", "c33019": "#0000C0", "c33007": "#0000C0", "c45079": "#0000C0", "c45019": "#0000C0", "c45045": "#0000C0", "c45051": "#0000C0", "c45013": "#0000C0", "c45015": "#0000C0", "c45075": "#0000C0", "c45041": "#0000C0", "c45083": "#0000C0", "c45063": "#0000C0", "c45085": "#0000C0", "c45091": "#0000C0", "c45035": "#0000C0", "c45003": "#0000C0", "c45043": "#0000C0", "c45007": "#0000C0", "c45031": "#0000C0", "c45089": "#0000C0", "c45057": "#0000C0", "c45055": "#0000C0", "c45027": "#0000C0", "c45047": "#0000C0", "c45053": "#0000C0", "c45067": "#0000C0", "c45077": "#0000C0", "c45039": "#0000C0", "c45059": "#0000C0", "c45029": "#0000C0", "c45061": "#0000C0", "c45073": "#0000C0", "c45023": "#0000C0", "c45069": "#0000C0", "c45071": "#0000C0", "c45025": "#0000C0", "c45049": "#0000C0", "c45009": "#0000C0", "c45037": "#0000C0", "c45087": "#0000C0", "c45033": "#0000C0", "c45001": "#0000C0", "c45065": "#0000C0", "c45017": "#0000C0", "c45021": "#0000C0", "c45011": "#0000C0", "c45005": "#0000C0", "c45081": "#0000C0", "c32510": "#FFFFFF", "c32001": "#FFFFFF", "c32003": "#FFFFFF", "c32005": "#FFFFFF", "c32007": "#FFFFFF", "c32009": "#FFFFFF", "c32011": "#FFFFFF", "c32013": "#FFFFFF", "c32015": "#FFFFFF", "c32017": "#FFFFFF", "c32019": "#FFFFFF", "c32021": "#FFFFFF", "c32023": "#FFFFFF", "c32027": "#FFFFFF", "c32029": "#FFFFFF", "c32031": "#FFFFFF", "c32033": "#FFFFFF"};
   var margins = {};
   var early_margins = {};
   function colorCounties(fips, colors) {
@@ -8143,12 +8157,12 @@ Lead: <b>Biden +94.7</b><br>
 <td>Votes</td>
 <td>Pct</td>
 </tr>
-<tr><td>Joseph R. Biden Jr.</td><td>DEM</td><td class="votes">379</td><td class="pct">97.4</td></tr>
-<tr><td>Marianne Williamson</td><td>DEM</td><td class="votes">7</td><td class="pct">1.8</td></tr>
+<tr><td>Joseph R. Biden Jr.</td><td>DEM</td><td class="votes">350</td><td class="pct">97.2</td></tr>
+<tr><td>Marianne Williamson</td><td>DEM</td><td class="votes">7</td><td class="pct">1.9</td></tr>
 </tbody>
 </table>
 100.0% of precincts reporting<br>
-Lead: <b>Biden +95.6</b><br>
+Lead: <b>Biden +95.3</b><br>
 </div>
 <div id="45081-results" class="results">
 <b class="name">Saluda</b><br>
@@ -8167,6 +8181,278 @@ Lead: <b>Biden +95.6</b><br>
 </table>
 100.0% of precincts reporting<br>
 Lead: <b>Biden +95.0</b><br>
+</div>
+<div id="32510-results" class="results">
+<b class="name">Carson City</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Joseph R. Biden Jr.</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Tie</b><br>
+</div>
+<div id="32001-results" class="results">
+<b class="name">Churchill</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Joseph R. Biden Jr.</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Tie</b><br>
+</div>
+<div id="32003-results" class="results">
+<b class="name">Clark</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Joseph R. Biden Jr.</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Tie</b><br>
+</div>
+<div id="32005-results" class="results">
+<b class="name">Douglas</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Joseph R. Biden Jr.</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Tie</b><br>
+</div>
+<div id="32007-results" class="results">
+<b class="name">Elko</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Joseph R. Biden Jr.</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Tie</b><br>
+</div>
+<div id="32009-results" class="results">
+<b class="name">Esmeralda</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Joseph R. Biden Jr.</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Tie</b><br>
+</div>
+<div id="32011-results" class="results">
+<b class="name">Eureka</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Joseph R. Biden Jr.</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Tie</b><br>
+</div>
+<div id="32013-results" class="results">
+<b class="name">Humboldt</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Joseph R. Biden Jr.</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Tie</b><br>
+</div>
+<div id="32015-results" class="results">
+<b class="name">Lander</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Joseph R. Biden Jr.</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Tie</b><br>
+</div>
+<div id="32017-results" class="results">
+<b class="name">Lincoln</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Joseph R. Biden Jr.</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Tie</b><br>
+</div>
+<div id="32019-results" class="results">
+<b class="name">Lyon</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Joseph R. Biden Jr.</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Tie</b><br>
+</div>
+<div id="32021-results" class="results">
+<b class="name">Mineral</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Joseph R. Biden Jr.</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Tie</b><br>
+</div>
+<div id="32023-results" class="results">
+<b class="name">Nye</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Joseph R. Biden Jr.</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Tie</b><br>
+</div>
+<div id="32027-results" class="results">
+<b class="name">Pershing</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Joseph R. Biden Jr.</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Tie</b><br>
+</div>
+<div id="32029-results" class="results">
+<b class="name">Storey</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Joseph R. Biden Jr.</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Tie</b><br>
+</div>
+<div id="32031-results" class="results">
+<b class="name">Washoe</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Joseph R. Biden Jr.</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Tie</b><br>
+</div>
+<div id="32033-results" class="results">
+<b class="name">White Pine</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Joseph R. Biden Jr.</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Tie</b><br>
 </div>
 </div>
 </div>
