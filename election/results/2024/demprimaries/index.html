@@ -44,13 +44,13 @@
 <h3>Delegate Count</h3>
   <div class="primary-candidate">
     <div class="no-height">
-      <div style="width:24px; height:20px; background-color: #0000FF; position: relative;">&nbsp;</div>
+      <div style="width:46px; height:20px; background-color: #0000FF; position: relative;">&nbsp;</div>
     </div>
     <div class="no-height">
-      <div style="width:0px; height:20px; left: 24px; background-color: #6060FF; position: relative;">&nbsp;</div>
+      <div style="width:0px; height:20px; left: 46px; background-color: #6060FF; position: relative;">&nbsp;</div>
     </div>
     <div class="no-height">
-      <div style="height:20px; left: 34px; color: #0000FF; background-color: lightgray; position: relative; z-index: 1; display: inline-block;"><span class="delegates">91</span> Biden</div>
+      <div style="height:20px; left: 56px; color: #0000FF; background-color: lightgray; position: relative; z-index: 1; display: inline-block;"><span class="delegates">177</span> Biden</div>
     </div>
     <div>
       <div style="width:960px; position: relative; text-align: center; font-size: 18;">|<br><span style="font-size: 12;">1899 to win</span></div>
@@ -6489,6 +6489,28 @@ Status: <b>Called for Biden (D)</b><br>
 Lead: <b>Biden +83.8</b><br>
 Pre-election estimate: <b>N/A</b>
 </div>
+<div id="MI-results" class="results">
+<b class="name">Michigan </b> Primary, Feb 27<br>
+<table class="resultstable">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+<td>Del</td>
+</tr>
+<tr><td style="color: #fff" bgcolor="#0000FF">Joseph R. Biden Jr.* ✔</td><td>DEM</td><td class="votes">221,867</td><td class="pct">80.0</td><td class="votes">86</td></tr>
+<tr><td>Uncommitted</td><td>DEM</td><td class="votes">39,137</td><td class="pct">14.1</td><td class="votes">0</td></tr>
+<tr><td>Marianne Williamson</td><td>DEM</td><td class="votes">8,314</td><td class="pct">3.0</td><td class="votes">0</td></tr>
+<tr><td>Dean Phillips</td><td>DEM</td><td class="votes">7,850</td><td class="pct">2.8</td><td class="votes">0</td></tr>
+</tbody>
+</table>
+21.6% of precincts reporting<br>
+Status: <b>Called for Biden (D)</b><br>
+Lead: <b>Biden +65.9</b><br>
+Pre-election estimate: <b>N/A</b>
+</div>
 
   <div id="AK-results" class="results">
     <b class="name">Alaska</b><br>
@@ -6612,11 +6634,6 @@ Pre-election estimate: <b>N/A</b>
 
   <div id="ME-results" class="results">
     <b class="name">Maine</b><br>
-    No election
-  </div>
-
-  <div id="MI-results" class="results">
-    <b class="name">Michigan</b><br>
     No election
   </div>
 
@@ -6954,14 +6971,14 @@ Pre-election estimate: <b>N/A</b>
   function setColor(id, color) {
     document.getElementById(id).style.fill = color;    
   }
-  var stateColors = {"NH": "#0000FF", "SC": "#0000FF", "NV": "#0000FF"};
+  var stateColors = {"NH": "#0000FF", "SC": "#0000FF", "NV": "#0000FF", "MI": "#0000FF"};
   function colorAll() {
     for (var state in stateColors) {
       setColor(state, stateColors[state]);
     }
   }
   colorAll();
-  var actual = {"c33011": "#0000C0", "c33015": "#0000C0", "c33013": "#0000C0", "c33017": "#0000C0", "c33009": "#0000C0", "c33005": "#0000C0", "c33001": "#0000C0", "c33003": "#0000C0", "c33019": "#0000C0", "c33007": "#0000C0", "c45079": "#0000C0", "c45019": "#0000C0", "c45045": "#0000C0", "c45051": "#0000C0", "c45013": "#0000C0", "c45015": "#0000C0", "c45075": "#0000C0", "c45041": "#0000C0", "c45083": "#0000C0", "c45063": "#0000C0", "c45085": "#0000C0", "c45091": "#0000C0", "c45035": "#0000C0", "c45003": "#0000C0", "c45043": "#0000C0", "c45007": "#0000C0", "c45031": "#0000C0", "c45089": "#0000C0", "c45057": "#0000C0", "c45055": "#0000C0", "c45027": "#0000C0", "c45047": "#0000C0", "c45053": "#0000C0", "c45067": "#0000C0", "c45077": "#0000C0", "c45039": "#0000C0", "c45059": "#0000C0", "c45029": "#0000C0", "c45061": "#0000C0", "c45073": "#0000C0", "c45023": "#0000C0", "c45069": "#0000C0", "c45071": "#0000C0", "c45025": "#0000C0", "c45049": "#0000C0", "c45009": "#0000C0", "c45037": "#0000C0", "c45087": "#0000C0", "c45033": "#0000C0", "c45001": "#0000C0", "c45065": "#0000C0", "c45017": "#0000C0", "c45021": "#0000C0", "c45011": "#0000C0", "c45005": "#0000C0", "c45081": "#0000C0", "c32003": "#0000C0", "c32031": "#0000C0", "c32510": "#0000C0", "c32005": "#0000C0", "c32019": "#0000C0", "c32023": "#0000C0", "c32001": "#0000C0", "c32007": "#0000C0", "c32013": "#0000C0", "c32033": "#0000C0", "c32029": "#0000C0", "c32021": "#0000C0", "c32027": "#0000C0", "c32017": "#0000C0", "c32015": "#0000C0", "c32011": "#0000C0", "c32009": "#0000C0"};
+  var actual = {"c33011": "#0000C0", "c33015": "#0000C0", "c33013": "#0000C0", "c33017": "#0000C0", "c33009": "#0000C0", "c33005": "#0000C0", "c33001": "#0000C0", "c33003": "#0000C0", "c33019": "#0000C0", "c33007": "#0000C0", "c45079": "#0000C0", "c45019": "#0000C0", "c45045": "#0000C0", "c45051": "#0000C0", "c45013": "#0000C0", "c45015": "#0000C0", "c45075": "#0000C0", "c45041": "#0000C0", "c45083": "#0000C0", "c45063": "#0000C0", "c45085": "#0000C0", "c45091": "#0000C0", "c45035": "#0000C0", "c45003": "#0000C0", "c45043": "#0000C0", "c45007": "#0000C0", "c45031": "#0000C0", "c45089": "#0000C0", "c45057": "#0000C0", "c45055": "#0000C0", "c45027": "#0000C0", "c45047": "#0000C0", "c45053": "#0000C0", "c45067": "#0000C0", "c45077": "#0000C0", "c45039": "#0000C0", "c45059": "#0000C0", "c45029": "#0000C0", "c45061": "#0000C0", "c45073": "#0000C0", "c45023": "#0000C0", "c45069": "#0000C0", "c45071": "#0000C0", "c45025": "#0000C0", "c45049": "#0000C0", "c45009": "#0000C0", "c45037": "#0000C0", "c45087": "#0000C0", "c45033": "#0000C0", "c45001": "#0000C0", "c45065": "#0000C0", "c45017": "#0000C0", "c45021": "#0000C0", "c45011": "#0000C0", "c45005": "#0000C0", "c45081": "#0000C0", "c32003": "#0000C0", "c32031": "#0000C0", "c32510": "#0000C0", "c32005": "#0000C0", "c32019": "#0000C0", "c32023": "#0000C0", "c32001": "#0000C0", "c32007": "#0000C0", "c32013": "#0000C0", "c32033": "#0000C0", "c32029": "#0000C0", "c32021": "#0000C0", "c32027": "#0000C0", "c32017": "#0000C0", "c32015": "#0000C0", "c32011": "#0000C0", "c32009": "#0000C0", "c26125": "#0000C0", "c26161": "#0000C0", "c26081": "#0000C0", "c26099": "#0000C0", "c26093": "#0000C0", "c26163": "#0000C0", "c26139": "#0000C0", "c26115": "#0000C0", "c26045": "#0000C0", "c26065": "#0000C0", "c26055": "#0000C0", "c26075": "#0000C0", "c26121": "#0000C0", "c26073": "#0000C0", "c26111": "#0000C0", "c26049": "#0000C0", "c26067": "#0000C0", "c26117": "#0000C0", "c26029": "#0000C0", "c26149": "#0000C0", "c26047": "#0000C0", "c26123": "#0000C0", "c26089": "#0000C0", "c26069": "#0000C0", "c26147": "#0000C0", "c26155": "#0000C0", "c26017": "#0000C0", "c26031": "#0000C0", "c26063": "#0000C0", "c26061": "#0000C0", "c26107": "#0000C0", "c26159": "#0000C0", "c26157": "#0000C0", "c26165": "#0000C0", "c26025": "#0000C0", "c26151": "#0000C0", "c26051": "#0000C0", "c26105": "#0000C0", "c26003": "#0000C0", "c26087": "#0000C0", "c26079": "#0000C0", "c26127": "#0000C0", "c26015": "#0000C0", "c26001": "#0000C0", "c26039": "#0000C0", "c26133": "#0000C0", "c26059": "#0000C0", "c26037": "#0000C0", "c26113": "#0000C0", "c26097": "#0000C0", "c26013": "#0000C0", "c26043": "#0000C0", "c26077": "#0000C0", "c26085": "#0000C0", "c26141": "#0000C0", "c26019": "#0000C0", "c26057": "#0000C0", "c26143": "#0000C0", "c26083": "#0000C0", "c26071": "#0000C0", "c26095": "#0000C0", "c26005": "#0000C0", "c26007": "#FFFFFF", "c26009": "#FFFFFF", "c26011": "#FFFFFF", "c26021": "#FFFFFF", "c26023": "#FFFFFF", "c26027": "#FFFFFF", "c26033": "#FFFFFF", "c26035": "#FFFFFF", "c26041": "#FFFFFF", "c26053": "#FFFFFF", "c26091": "#FFFFFF", "c26101": "#FFFFFF", "c26103": "#FFFFFF", "c26109": "#FFFFFF", "c26119": "#FFFFFF", "c26129": "#FFFFFF", "c26131": "#FFFFFF", "c26135": "#FFFFFF", "c26137": "#FFFFFF", "c26145": "#FFFFFF", "c26153": "#FFFFFF"};
   var margins = {};
   var early_margins = {};
   function colorCounties(fips, colors) {
@@ -8498,6 +8515,1517 @@ Lead: <b>Biden +25.0</b><br>
 </table>
 80.0% of precincts reporting<br>
 Lead: <b>Biden +43.8</b><br>
+</div>
+<div id="26125-results" class="results">
+<b class="name">Oakland</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Joseph R. Biden Jr.</td><td>DEM</td><td class="votes">83,029</td><td class="pct">81.2</td></tr>
+<tr><td>Uncommitted</td><td>DEM</td><td class="votes">13,780</td><td class="pct">13.5</td></tr>
+<tr><td>Dean Phillips</td><td>DEM</td><td class="votes">2,740</td><td class="pct">2.7</td></tr>
+<tr><td>Marianne Williamson</td><td>DEM</td><td class="votes">2,662</td><td class="pct">2.6</td></tr>
+</tbody>
+</table>
+46.2% of precincts reporting<br>
+Lead: <b>Biden +67.8</b><br>
+</div>
+<div id="26161-results" class="results">
+<b class="name">Washtenaw</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Joseph R. Biden Jr.</td><td>DEM</td><td class="votes">24,171</td><td class="pct">73.9</td></tr>
+<tr><td>Uncommitted</td><td>DEM</td><td class="votes">6,926</td><td class="pct">21.2</td></tr>
+<tr><td>Dean Phillips</td><td>DEM</td><td class="votes">803</td><td class="pct">2.5</td></tr>
+<tr><td>Marianne Williamson</td><td>DEM</td><td class="votes">795</td><td class="pct">2.4</td></tr>
+</tbody>
+</table>
+60.8% of precincts reporting<br>
+Lead: <b>Biden +52.7</b><br>
+</div>
+<div id="26081-results" class="results">
+<b class="name">Kent</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Joseph R. Biden Jr.</td><td>DEM</td><td class="votes">14,954</td><td class="pct">77.8</td></tr>
+<tr><td>Uncommitted</td><td>DEM</td><td class="votes">3,000</td><td class="pct">15.6</td></tr>
+<tr><td>Marianne Williamson</td><td>DEM</td><td class="votes">697</td><td class="pct">3.6</td></tr>
+<tr><td>Dean Phillips</td><td>DEM</td><td class="votes">559</td><td class="pct">2.9</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Biden +62.2</b><br>
+</div>
+<div id="26099-results" class="results">
+<b class="name">Macomb</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Joseph R. Biden Jr.</td><td>DEM</td><td class="votes">10,993</td><td class="pct">79.9</td></tr>
+<tr><td>Uncommitted</td><td>DEM</td><td class="votes">1,740</td><td class="pct">12.6</td></tr>
+<tr><td>Marianne Williamson</td><td>DEM</td><td class="votes">520</td><td class="pct">3.8</td></tr>
+<tr><td>Dean Phillips</td><td>DEM</td><td class="votes">509</td><td class="pct">3.7</td></tr>
+</tbody>
+</table>
+23.1% of precincts reporting<br>
+Lead: <b>Biden +67.2</b><br>
+</div>
+<div id="26093-results" class="results">
+<b class="name">Livingston</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Joseph R. Biden Jr.</td><td>DEM</td><td class="votes">7,577</td><td class="pct">81.7</td></tr>
+<tr><td>Uncommitted</td><td>DEM</td><td class="votes">1,067</td><td class="pct">11.5</td></tr>
+<tr><td>Dean Phillips</td><td>DEM</td><td class="votes">345</td><td class="pct">3.7</td></tr>
+<tr><td>Marianne Williamson</td><td>DEM</td><td class="votes">290</td><td class="pct">3.1</td></tr>
+</tbody>
+</table>
+59.5% of precincts reporting<br>
+Lead: <b>Biden +70.2</b><br>
+</div>
+<div id="26163-results" class="results">
+<b class="name">Wayne</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Joseph R. Biden Jr.</td><td>DEM</td><td class="votes">5,985</td><td class="pct">71.0</td></tr>
+<tr><td>Uncommitted</td><td>DEM</td><td class="votes">2,020</td><td class="pct">24.0</td></tr>
+<tr><td>Marianne Williamson</td><td>DEM</td><td class="votes">273</td><td class="pct">3.2</td></tr>
+<tr><td>Dean Phillips</td><td>DEM</td><td class="votes">152</td><td class="pct">1.8</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Biden +47.0</b><br>
+</div>
+<div id="26139-results" class="results">
+<b class="name">Ottawa</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Joseph R. Biden Jr.</td><td>DEM</td><td class="votes">6,160</td><td class="pct">82.9</td></tr>
+<tr><td>Uncommitted</td><td>DEM</td><td class="votes">809</td><td class="pct">10.9</td></tr>
+<tr><td>Marianne Williamson</td><td>DEM</td><td class="votes">252</td><td class="pct">3.4</td></tr>
+<tr><td>Dean Phillips</td><td>DEM</td><td class="votes">214</td><td class="pct">2.9</td></tr>
+</tbody>
+</table>
+32.1% of precincts reporting<br>
+Lead: <b>Biden +72.0</b><br>
+</div>
+<div id="26115-results" class="results">
+<b class="name">Monroe</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Joseph R. Biden Jr.</td><td>DEM</td><td class="votes">4,771</td><td class="pct">81.9</td></tr>
+<tr><td>Uncommitted</td><td>DEM</td><td class="votes">713</td><td class="pct">12.2</td></tr>
+<tr><td>Dean Phillips</td><td>DEM</td><td class="votes">175</td><td class="pct">3.0</td></tr>
+<tr><td>Marianne Williamson</td><td>DEM</td><td class="votes">166</td><td class="pct">2.8</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Biden +69.7</b><br>
+</div>
+<div id="26045-results" class="results">
+<b class="name">Eaton</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Joseph R. Biden Jr.</td><td>DEM</td><td class="votes">4,378</td><td class="pct">82.9</td></tr>
+<tr><td>Uncommitted</td><td>DEM</td><td class="votes">579</td><td class="pct">11.0</td></tr>
+<tr><td>Marianne Williamson</td><td>DEM</td><td class="votes">164</td><td class="pct">3.1</td></tr>
+<tr><td>Dean Phillips</td><td>DEM</td><td class="votes">162</td><td class="pct">3.1</td></tr>
+</tbody>
+</table>
+93.2% of precincts reporting<br>
+Lead: <b>Biden +71.9</b><br>
+</div>
+<div id="26065-results" class="results">
+<b class="name">Ingham</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Joseph R. Biden Jr.</td><td>DEM</td><td class="votes">3,550</td><td class="pct">78.0</td></tr>
+<tr><td>Uncommitted</td><td>DEM</td><td class="votes">723</td><td class="pct">15.9</td></tr>
+<tr><td>Dean Phillips</td><td>DEM</td><td class="votes">144</td><td class="pct">3.2</td></tr>
+<tr><td>Marianne Williamson</td><td>DEM</td><td class="votes">135</td><td class="pct">3.0</td></tr>
+</tbody>
+</table>
+8.7% of precincts reporting<br>
+Lead: <b>Biden +62.1</b><br>
+</div>
+<div id="26055-results" class="results">
+<b class="name">Grand Traverse</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Joseph R. Biden Jr.</td><td>DEM</td><td class="votes">3,858</td><td class="pct">84.8</td></tr>
+<tr><td>Uncommitted</td><td>DEM</td><td class="votes">457</td><td class="pct">10.0</td></tr>
+<tr><td>Dean Phillips</td><td>DEM</td><td class="votes">118</td><td class="pct">2.6</td></tr>
+<tr><td>Marianne Williamson</td><td>DEM</td><td class="votes">115</td><td class="pct">2.5</td></tr>
+</tbody>
+</table>
+28.2% of precincts reporting<br>
+Lead: <b>Biden +74.8</b><br>
+</div>
+<div id="26075-results" class="results">
+<b class="name">Jackson</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Joseph R. Biden Jr.</td><td>DEM</td><td class="votes">3,415</td><td class="pct">82.4</td></tr>
+<tr><td>Uncommitted</td><td>DEM</td><td class="votes">464</td><td class="pct">11.2</td></tr>
+<tr><td>Marianne Williamson</td><td>DEM</td><td class="votes">137</td><td class="pct">3.3</td></tr>
+<tr><td>Dean Phillips</td><td>DEM</td><td class="votes">126</td><td class="pct">3.0</td></tr>
+</tbody>
+</table>
+55.0% of precincts reporting<br>
+Lead: <b>Biden +71.2</b><br>
+</div>
+<div id="26121-results" class="results">
+<b class="name">Muskegon</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Joseph R. Biden Jr.</td><td>DEM</td><td class="votes">3,236</td><td class="pct">85.0</td></tr>
+<tr><td>Uncommitted</td><td>DEM</td><td class="votes">319</td><td class="pct">8.4</td></tr>
+<tr><td>Marianne Williamson</td><td>DEM</td><td class="votes">134</td><td class="pct">3.5</td></tr>
+<tr><td>Dean Phillips</td><td>DEM</td><td class="votes">117</td><td class="pct">3.1</td></tr>
+</tbody>
+</table>
+13.4% of precincts reporting<br>
+Lead: <b>Biden +76.6</b><br>
+</div>
+<div id="26073-results" class="results">
+<b class="name">Isabella</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Joseph R. Biden Jr.</td><td>DEM</td><td class="votes">2,845</td><td class="pct">79.0</td></tr>
+<tr><td>Uncommitted</td><td>DEM</td><td class="votes">509</td><td class="pct">14.1</td></tr>
+<tr><td>Marianne Williamson</td><td>DEM</td><td class="votes">134</td><td class="pct">3.7</td></tr>
+<tr><td>Dean Phillips</td><td>DEM</td><td class="votes">111</td><td class="pct">3.1</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Biden +64.9</b><br>
+</div>
+<div id="26111-results" class="results">
+<b class="name">Midland</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Joseph R. Biden Jr.</td><td>DEM</td><td class="votes">2,487</td><td class="pct">80.9</td></tr>
+<tr><td>Uncommitted</td><td>DEM</td><td class="votes">393</td><td class="pct">12.8</td></tr>
+<tr><td>Dean Phillips</td><td>DEM</td><td class="votes">103</td><td class="pct">3.4</td></tr>
+<tr><td>Marianne Williamson</td><td>DEM</td><td class="votes">91</td><td class="pct">3.0</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Biden +68.1</b><br>
+</div>
+<div id="26049-results" class="results">
+<b class="name">Genesee</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Joseph R. Biden Jr.</td><td>DEM</td><td class="votes">2,493</td><td class="pct">83.2</td></tr>
+<tr><td>Uncommitted</td><td>DEM</td><td class="votes">329</td><td class="pct">11.0</td></tr>
+<tr><td>Dean Phillips</td><td>DEM</td><td class="votes">95</td><td class="pct">3.2</td></tr>
+<tr><td>Marianne Williamson</td><td>DEM</td><td class="votes">81</td><td class="pct">2.7</td></tr>
+</tbody>
+</table>
+10.3% of precincts reporting<br>
+Lead: <b>Biden +72.2</b><br>
+</div>
+<div id="26067-results" class="results">
+<b class="name">Ionia</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Joseph R. Biden Jr.</td><td>DEM</td><td class="votes">2,177</td><td class="pct">78.6</td></tr>
+<tr><td>Uncommitted</td><td>DEM</td><td class="votes">379</td><td class="pct">13.7</td></tr>
+<tr><td>Dean Phillips</td><td>DEM</td><td class="votes">106</td><td class="pct">3.8</td></tr>
+<tr><td>Marianne Williamson</td><td>DEM</td><td class="votes">106</td><td class="pct">3.8</td></tr>
+</tbody>
+</table>
+100.0% of precincts reporting<br>
+Lead: <b>Biden +65.0</b><br>
+</div>
+<div id="26117-results" class="results">
+<b class="name">Montcalm</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Joseph R. Biden Jr.</td><td>DEM</td><td class="votes">2,090</td><td class="pct">80.7</td></tr>
+<tr><td>Uncommitted</td><td>DEM</td><td class="votes">320</td><td class="pct">12.4</td></tr>
+<tr><td>Marianne Williamson</td><td>DEM</td><td class="votes">100</td><td class="pct">3.9</td></tr>
+<tr><td>Dean Phillips</td><td>DEM</td><td class="votes">80</td><td class="pct">3.1</td></tr>
+</tbody>
+</table>
+88.9% of precincts reporting<br>
+Lead: <b>Biden +68.3</b><br>
+</div>
+<div id="26029-results" class="results">
+<b class="name">Charlevoix</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Joseph R. Biden Jr.</td><td>DEM</td><td class="votes">1,754</td><td class="pct">83.0</td></tr>
+<tr><td>Uncommitted</td><td>DEM</td><td class="votes">222</td><td class="pct">10.5</td></tr>
+<tr><td>Dean Phillips</td><td>DEM</td><td class="votes">70</td><td class="pct">3.3</td></tr>
+<tr><td>Marianne Williamson</td><td>DEM</td><td class="votes">68</td><td class="pct">3.2</td></tr>
+</tbody>
+</table>
+100.0% of precincts reporting<br>
+Lead: <b>Biden +72.5</b><br>
+</div>
+<div id="26149-results" class="results">
+<b class="name">St. Joseph</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Joseph R. Biden Jr.</td><td>DEM</td><td class="votes">1,678</td><td class="pct">82.4</td></tr>
+<tr><td>Uncommitted</td><td>DEM</td><td class="votes">239</td><td class="pct">11.7</td></tr>
+<tr><td>Dean Phillips</td><td>DEM</td><td class="votes">68</td><td class="pct">3.3</td></tr>
+<tr><td>Marianne Williamson</td><td>DEM</td><td class="votes">52</td><td class="pct">2.6</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Biden +70.6</b><br>
+</div>
+<div id="26047-results" class="results">
+<b class="name">Emmet</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Joseph R. Biden Jr.</td><td>DEM</td><td class="votes">1,633</td><td class="pct">83.3</td></tr>
+<tr><td>Uncommitted</td><td>DEM</td><td class="votes">215</td><td class="pct">11.0</td></tr>
+<tr><td>Marianne Williamson</td><td>DEM</td><td class="votes">58</td><td class="pct">3.0</td></tr>
+<tr><td>Dean Phillips</td><td>DEM</td><td class="votes">55</td><td class="pct">2.8</td></tr>
+</tbody>
+</table>
+59.1% of precincts reporting<br>
+Lead: <b>Biden +72.3</b><br>
+</div>
+<div id="26123-results" class="results">
+<b class="name">Newaygo</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Joseph R. Biden Jr.</td><td>DEM</td><td class="votes">1,547</td><td class="pct">82.2</td></tr>
+<tr><td>Uncommitted</td><td>DEM</td><td class="votes">207</td><td class="pct">11.0</td></tr>
+<tr><td>Marianne Williamson</td><td>DEM</td><td class="votes">70</td><td class="pct">3.7</td></tr>
+<tr><td>Dean Phillips</td><td>DEM</td><td class="votes">57</td><td class="pct">3.0</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Biden +71.2</b><br>
+</div>
+<div id="26089-results" class="results">
+<b class="name">Leelanau</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Joseph R. Biden Jr.</td><td>DEM</td><td class="votes">1,495</td><td class="pct">83.9</td></tr>
+<tr><td>Uncommitted</td><td>DEM</td><td class="votes">203</td><td class="pct">11.4</td></tr>
+<tr><td>Marianne Williamson</td><td>DEM</td><td class="votes">50</td><td class="pct">2.8</td></tr>
+<tr><td>Dean Phillips</td><td>DEM</td><td class="votes">34</td><td class="pct">1.9</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Biden +72.5</b><br>
+</div>
+<div id="26069-results" class="results">
+<b class="name">Iosco</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Joseph R. Biden Jr.</td><td>DEM</td><td class="votes">1,489</td><td class="pct">84.2</td></tr>
+<tr><td>Uncommitted</td><td>DEM</td><td class="votes">164</td><td class="pct">9.3</td></tr>
+<tr><td>Marianne Williamson</td><td>DEM</td><td class="votes">66</td><td class="pct">3.7</td></tr>
+<tr><td>Dean Phillips</td><td>DEM</td><td class="votes">49</td><td class="pct">2.8</td></tr>
+</tbody>
+</table>
+100.0% of precincts reporting<br>
+Lead: <b>Biden +74.9</b><br>
+</div>
+<div id="26147-results" class="results">
+<b class="name">St. Clair</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Joseph R. Biden Jr.</td><td>DEM</td><td class="votes">1,381</td><td class="pct">81.1</td></tr>
+<tr><td>Uncommitted</td><td>DEM</td><td class="votes">202</td><td class="pct">11.9</td></tr>
+<tr><td>Marianne Williamson</td><td>DEM</td><td class="votes">70</td><td class="pct">4.1</td></tr>
+<tr><td>Dean Phillips</td><td>DEM</td><td class="votes">49</td><td class="pct">2.9</td></tr>
+</tbody>
+</table>
+17.2% of precincts reporting<br>
+Lead: <b>Biden +69.3</b><br>
+</div>
+<div id="26155-results" class="results">
+<b class="name">Shiawassee</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Joseph R. Biden Jr.</td><td>DEM</td><td class="votes">1,377</td><td class="pct">84.6</td></tr>
+<tr><td>Uncommitted</td><td>DEM</td><td class="votes">167</td><td class="pct">10.3</td></tr>
+<tr><td>Marianne Williamson</td><td>DEM</td><td class="votes">49</td><td class="pct">3.0</td></tr>
+<tr><td>Dean Phillips</td><td>DEM</td><td class="votes">35</td><td class="pct">2.1</td></tr>
+</tbody>
+</table>
+41.9% of precincts reporting<br>
+Lead: <b>Biden +74.3</b><br>
+</div>
+<div id="26017-results" class="results">
+<b class="name">Bay</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Joseph R. Biden Jr.</td><td>DEM</td><td class="votes">1,269</td><td class="pct">80.4</td></tr>
+<tr><td>Uncommitted</td><td>DEM</td><td class="votes">190</td><td class="pct">12.0</td></tr>
+<tr><td>Dean Phillips</td><td>DEM</td><td class="votes">61</td><td class="pct">3.9</td></tr>
+<tr><td>Marianne Williamson</td><td>DEM</td><td class="votes">59</td><td class="pct">3.7</td></tr>
+</tbody>
+</table>
+40.0% of precincts reporting<br>
+Lead: <b>Biden +68.3</b><br>
+</div>
+<div id="26031-results" class="results">
+<b class="name">Cheboygan</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Joseph R. Biden Jr.</td><td>DEM</td><td class="votes">1,221</td><td class="pct">82.6</td></tr>
+<tr><td>Uncommitted</td><td>DEM</td><td class="votes">177</td><td class="pct">12.0</td></tr>
+<tr><td>Dean Phillips</td><td>DEM</td><td class="votes">44</td><td class="pct">3.0</td></tr>
+<tr><td>Marianne Williamson</td><td>DEM</td><td class="votes">37</td><td class="pct">2.5</td></tr>
+</tbody>
+</table>
+100.0% of precincts reporting<br>
+Lead: <b>Biden +70.6</b><br>
+</div>
+<div id="26063-results" class="results">
+<b class="name">Huron</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Joseph R. Biden Jr.</td><td>DEM</td><td class="votes">1,228</td><td class="pct">83.0</td></tr>
+<tr><td>Uncommitted</td><td>DEM</td><td class="votes">157</td><td class="pct">10.6</td></tr>
+<tr><td>Dean Phillips</td><td>DEM</td><td class="votes">50</td><td class="pct">3.4</td></tr>
+<tr><td>Marianne Williamson</td><td>DEM</td><td class="votes">44</td><td class="pct">3.0</td></tr>
+</tbody>
+</table>
+100.0% of precincts reporting<br>
+Lead: <b>Biden +72.4</b><br>
+</div>
+<div id="26061-results" class="results">
+<b class="name">Houghton</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Joseph R. Biden Jr.</td><td>DEM</td><td class="votes">990</td><td class="pct">72.2</td></tr>
+<tr><td>Uncommitted</td><td>DEM</td><td class="votes">175</td><td class="pct">12.8</td></tr>
+<tr><td>Marianne Williamson</td><td>DEM</td><td class="votes">157</td><td class="pct">11.5</td></tr>
+<tr><td>Dean Phillips</td><td>DEM</td><td class="votes">49</td><td class="pct">3.6</td></tr>
+</tbody>
+</table>
+62.1% of precincts reporting<br>
+Lead: <b>Biden +59.4</b><br>
+</div>
+<div id="26107-results" class="results">
+<b class="name">Mecosta</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Joseph R. Biden Jr.</td><td>DEM</td><td class="votes">1,109</td><td class="pct">83.6</td></tr>
+<tr><td>Uncommitted</td><td>DEM</td><td class="votes">120</td><td class="pct">9.0</td></tr>
+<tr><td>Marianne Williamson</td><td>DEM</td><td class="votes">60</td><td class="pct">4.5</td></tr>
+<tr><td>Dean Phillips</td><td>DEM</td><td class="votes">38</td><td class="pct">2.9</td></tr>
+</tbody>
+</table>
+60.0% of precincts reporting<br>
+Lead: <b>Biden +74.5</b><br>
+</div>
+<div id="26159-results" class="results">
+<b class="name">Van Buren</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Joseph R. Biden Jr.</td><td>DEM</td><td class="votes">1,017</td><td class="pct">80.5</td></tr>
+<tr><td>Uncommitted</td><td>DEM</td><td class="votes">161</td><td class="pct">12.7</td></tr>
+<tr><td>Marianne Williamson</td><td>DEM</td><td class="votes">50</td><td class="pct">4.0</td></tr>
+<tr><td>Dean Phillips</td><td>DEM</td><td class="votes">36</td><td class="pct">2.8</td></tr>
+</tbody>
+</table>
+45.5% of precincts reporting<br>
+Lead: <b>Biden +67.7</b><br>
+</div>
+<div id="26157-results" class="results">
+<b class="name">Tuscola</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Joseph R. Biden Jr.</td><td>DEM</td><td class="votes">1,011</td><td class="pct">81.3</td></tr>
+<tr><td>Uncommitted</td><td>DEM</td><td class="votes">153</td><td class="pct">12.3</td></tr>
+<tr><td>Dean Phillips</td><td>DEM</td><td class="votes">42</td><td class="pct">3.4</td></tr>
+<tr><td>Marianne Williamson</td><td>DEM</td><td class="votes">38</td><td class="pct">3.1</td></tr>
+</tbody>
+</table>
+42.3% of precincts reporting<br>
+Lead: <b>Biden +69.0</b><br>
+</div>
+<div id="26165-results" class="results">
+<b class="name">Wexford</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Joseph R. Biden Jr.</td><td>DEM</td><td class="votes">865</td><td class="pct">83.4</td></tr>
+<tr><td>Uncommitted</td><td>DEM</td><td class="votes">97</td><td class="pct">9.4</td></tr>
+<tr><td>Marianne Williamson</td><td>DEM</td><td class="votes">45</td><td class="pct">4.3</td></tr>
+<tr><td>Dean Phillips</td><td>DEM</td><td class="votes">30</td><td class="pct">2.9</td></tr>
+</tbody>
+</table>
+64.5% of precincts reporting<br>
+Lead: <b>Biden +74.1</b><br>
+</div>
+<div id="26025-results" class="results">
+<b class="name">Calhoun</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Joseph R. Biden Jr.</td><td>DEM</td><td class="votes">803</td><td class="pct">81.5</td></tr>
+<tr><td>Uncommitted</td><td>DEM</td><td class="votes">101</td><td class="pct">10.3</td></tr>
+<tr><td>Dean Phillips</td><td>DEM</td><td class="votes">45</td><td class="pct">4.6</td></tr>
+<tr><td>Marianne Williamson</td><td>DEM</td><td class="votes">36</td><td class="pct">3.7</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Biden +71.3</b><br>
+</div>
+<div id="26151-results" class="results">
+<b class="name">Sanilac</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Joseph R. Biden Jr.</td><td>DEM</td><td class="votes">722</td><td class="pct">79.2</td></tr>
+<tr><td>Uncommitted</td><td>DEM</td><td class="votes">124</td><td class="pct">13.6</td></tr>
+<tr><td>Marianne Williamson</td><td>DEM</td><td class="votes">36</td><td class="pct">3.9</td></tr>
+<tr><td>Dean Phillips</td><td>DEM</td><td class="votes">30</td><td class="pct">3.3</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Biden +65.6</b><br>
+</div>
+<div id="26051-results" class="results">
+<b class="name">Gladwin</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Joseph R. Biden Jr.</td><td>DEM</td><td class="votes">666</td><td class="pct">78.3</td></tr>
+<tr><td>Uncommitted</td><td>DEM</td><td class="votes">129</td><td class="pct">15.2</td></tr>
+<tr><td>Dean Phillips</td><td>DEM</td><td class="votes">30</td><td class="pct">3.5</td></tr>
+<tr><td>Marianne Williamson</td><td>DEM</td><td class="votes">26</td><td class="pct">3.1</td></tr>
+</tbody>
+</table>
+72.2% of precincts reporting<br>
+Lead: <b>Biden +63.1</b><br>
+</div>
+<div id="26105-results" class="results">
+<b class="name">Mason</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Joseph R. Biden Jr.</td><td>DEM</td><td class="votes">627</td><td class="pct">83.0</td></tr>
+<tr><td>Uncommitted</td><td>DEM</td><td class="votes">79</td><td class="pct">10.5</td></tr>
+<tr><td>Marianne Williamson</td><td>DEM</td><td class="votes">29</td><td class="pct">3.8</td></tr>
+<tr><td>Dean Phillips</td><td>DEM</td><td class="votes">20</td><td class="pct">2.6</td></tr>
+</tbody>
+</table>
+53.8% of precincts reporting<br>
+Lead: <b>Biden +72.6</b><br>
+</div>
+<div id="26003-results" class="results">
+<b class="name">Alger</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Joseph R. Biden Jr.</td><td>DEM</td><td class="votes">612</td><td class="pct">86.4</td></tr>
+<tr><td>Uncommitted</td><td>DEM</td><td class="votes">67</td><td class="pct">9.5</td></tr>
+<tr><td>Dean Phillips</td><td>DEM</td><td class="votes">16</td><td class="pct">2.3</td></tr>
+<tr><td>Marianne Williamson</td><td>DEM</td><td class="votes">13</td><td class="pct">1.8</td></tr>
+</tbody>
+</table>
+88.9% of precincts reporting<br>
+Lead: <b>Biden +77.0</b><br>
+</div>
+<div id="26087-results" class="results">
+<b class="name">Lapeer</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Joseph R. Biden Jr.</td><td>DEM</td><td class="votes">565</td><td class="pct">80.0</td></tr>
+<tr><td>Uncommitted</td><td>DEM</td><td class="votes">93</td><td class="pct">13.2</td></tr>
+<tr><td>Marianne Williamson</td><td>DEM</td><td class="votes">33</td><td class="pct">4.7</td></tr>
+<tr><td>Dean Phillips</td><td>DEM</td><td class="votes">15</td><td class="pct">2.1</td></tr>
+</tbody>
+</table>
+6.1% of precincts reporting<br>
+Lead: <b>Biden +66.9</b><br>
+</div>
+<div id="26079-results" class="results">
+<b class="name">Kalkaska</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Joseph R. Biden Jr.</td><td>DEM</td><td class="votes">584</td><td class="pct">84.3</td></tr>
+<tr><td>Uncommitted</td><td>DEM</td><td class="votes">67</td><td class="pct">9.7</td></tr>
+<tr><td>Dean Phillips</td><td>DEM</td><td class="votes">27</td><td class="pct">3.9</td></tr>
+<tr><td>Marianne Williamson</td><td>DEM</td><td class="votes">15</td><td class="pct">2.2</td></tr>
+</tbody>
+</table>
+69.2% of precincts reporting<br>
+Lead: <b>Biden +74.6</b><br>
+</div>
+<div id="26127-results" class="results">
+<b class="name">Oceana</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Joseph R. Biden Jr.</td><td>DEM</td><td class="votes">581</td><td class="pct">84.9</td></tr>
+<tr><td>Uncommitted</td><td>DEM</td><td class="votes">62</td><td class="pct">9.1</td></tr>
+<tr><td>Dean Phillips</td><td>DEM</td><td class="votes">25</td><td class="pct">3.7</td></tr>
+<tr><td>Marianne Williamson</td><td>DEM</td><td class="votes">16</td><td class="pct">2.3</td></tr>
+</tbody>
+</table>
+55.6% of precincts reporting<br>
+Lead: <b>Biden +75.9</b><br>
+</div>
+<div id="26015-results" class="results">
+<b class="name">Barry</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Joseph R. Biden Jr.</td><td>DEM</td><td class="votes">543</td><td class="pct">83.3</td></tr>
+<tr><td>Uncommitted</td><td>DEM</td><td class="votes">86</td><td class="pct">13.2</td></tr>
+<tr><td>Marianne Williamson</td><td>DEM</td><td class="votes">14</td><td class="pct">2.1</td></tr>
+<tr><td>Dean Phillips</td><td>DEM</td><td class="votes">9</td><td class="pct">1.4</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Biden +70.1</b><br>
+</div>
+<div id="26001-results" class="results">
+<b class="name">Alcona</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Joseph R. Biden Jr.</td><td>DEM</td><td class="votes">549</td><td class="pct">84.6</td></tr>
+<tr><td>Uncommitted</td><td>DEM</td><td class="votes">67</td><td class="pct">10.3</td></tr>
+<tr><td>Dean Phillips</td><td>DEM</td><td class="votes">19</td><td class="pct">2.9</td></tr>
+<tr><td>Marianne Williamson</td><td>DEM</td><td class="votes">14</td><td class="pct">2.2</td></tr>
+</tbody>
+</table>
+100.0% of precincts reporting<br>
+Lead: <b>Biden +74.3</b><br>
+</div>
+<div id="26039-results" class="results">
+<b class="name">Crawford</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Joseph R. Biden Jr.</td><td>DEM</td><td class="votes">567</td><td class="pct">87.6</td></tr>
+<tr><td>Uncommitted</td><td>DEM</td><td class="votes">56</td><td class="pct">8.7</td></tr>
+<tr><td>Dean Phillips</td><td>DEM</td><td class="votes">12</td><td class="pct">1.9</td></tr>
+<tr><td>Marianne Williamson</td><td>DEM</td><td class="votes">12</td><td class="pct">1.9</td></tr>
+</tbody>
+</table>
+70.0% of precincts reporting<br>
+Lead: <b>Biden +79.0</b><br>
+</div>
+<div id="26133-results" class="results">
+<b class="name">Osceola</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Joseph R. Biden Jr.</td><td>DEM</td><td class="votes">538</td><td class="pct">85.1</td></tr>
+<tr><td>Uncommitted</td><td>DEM</td><td class="votes">55</td><td class="pct">8.7</td></tr>
+<tr><td>Marianne Williamson</td><td>DEM</td><td class="votes">21</td><td class="pct">3.3</td></tr>
+<tr><td>Dean Phillips</td><td>DEM</td><td class="votes">18</td><td class="pct">2.8</td></tr>
+</tbody>
+</table>
+72.2% of precincts reporting<br>
+Lead: <b>Biden +76.4</b><br>
+</div>
+<div id="26059-results" class="results">
+<b class="name">Hillsdale</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Joseph R. Biden Jr.</td><td>DEM</td><td class="votes">502</td><td class="pct">80.8</td></tr>
+<tr><td>Uncommitted</td><td>DEM</td><td class="votes">79</td><td class="pct">12.7</td></tr>
+<tr><td>Marianne Williamson</td><td>DEM</td><td class="votes">29</td><td class="pct">4.7</td></tr>
+<tr><td>Dean Phillips</td><td>DEM</td><td class="votes">11</td><td class="pct">1.8</td></tr>
+</tbody>
+</table>
+42.3% of precincts reporting<br>
+Lead: <b>Biden +68.1</b><br>
+</div>
+<div id="26037-results" class="results">
+<b class="name">Clinton</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Joseph R. Biden Jr.</td><td>DEM</td><td class="votes">463</td><td class="pct">80.4</td></tr>
+<tr><td>Uncommitted</td><td>DEM</td><td class="votes">73</td><td class="pct">12.7</td></tr>
+<tr><td>Marianne Williamson</td><td>DEM</td><td class="votes">21</td><td class="pct">3.6</td></tr>
+<tr><td>Dean Phillips</td><td>DEM</td><td class="votes">19</td><td class="pct">3.3</td></tr>
+</tbody>
+</table>
+9.1% of precincts reporting<br>
+Lead: <b>Biden +67.7</b><br>
+</div>
+<div id="26113-results" class="results">
+<b class="name">Missaukee</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Joseph R. Biden Jr.</td><td>DEM</td><td class="votes">439</td><td class="pct">82.8</td></tr>
+<tr><td>Uncommitted</td><td>DEM</td><td class="votes">52</td><td class="pct">9.8</td></tr>
+<tr><td>Marianne Williamson</td><td>DEM</td><td class="votes">22</td><td class="pct">4.2</td></tr>
+<tr><td>Dean Phillips</td><td>DEM</td><td class="votes">17</td><td class="pct">3.2</td></tr>
+</tbody>
+</table>
+100.0% of precincts reporting<br>
+Lead: <b>Biden +73.0</b><br>
+</div>
+<div id="26097-results" class="results">
+<b class="name">Mackinac</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Joseph R. Biden Jr.</td><td>DEM</td><td class="votes">430</td><td class="pct">81.3</td></tr>
+<tr><td>Uncommitted</td><td>DEM</td><td class="votes">70</td><td class="pct">13.2</td></tr>
+<tr><td>Marianne Williamson</td><td>DEM</td><td class="votes">15</td><td class="pct">2.8</td></tr>
+<tr><td>Dean Phillips</td><td>DEM</td><td class="votes">14</td><td class="pct">2.6</td></tr>
+</tbody>
+</table>
+100.0% of precincts reporting<br>
+Lead: <b>Biden +68.1</b><br>
+</div>
+<div id="26013-results" class="results">
+<b class="name">Baraga</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Joseph R. Biden Jr.</td><td>DEM</td><td class="votes">411</td><td class="pct">79.8</td></tr>
+<tr><td>Uncommitted</td><td>DEM</td><td class="votes">60</td><td class="pct">11.7</td></tr>
+<tr><td>Marianne Williamson</td><td>DEM</td><td class="votes">26</td><td class="pct">5.0</td></tr>
+<tr><td>Dean Phillips</td><td>DEM</td><td class="votes">18</td><td class="pct">3.5</td></tr>
+</tbody>
+</table>
+100.0% of precincts reporting<br>
+Lead: <b>Biden +68.2</b><br>
+</div>
+<div id="26043-results" class="results">
+<b class="name">Dickinson</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Joseph R. Biden Jr.</td><td>DEM</td><td class="votes">418</td><td class="pct">82.4</td></tr>
+<tr><td>Uncommitted</td><td>DEM</td><td class="votes">73</td><td class="pct">14.4</td></tr>
+<tr><td>Dean Phillips</td><td>DEM</td><td class="votes">11</td><td class="pct">2.2</td></tr>
+</tbody>
+</table>
+33.3% of precincts reporting<br>
+Lead: <b>Biden +68.0</b><br>
+</div>
+<div id="26077-results" class="results">
+<b class="name">Kalamazoo</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Joseph R. Biden Jr.</td><td>DEM</td><td class="votes">348</td><td class="pct">79.5</td></tr>
+<tr><td>Uncommitted</td><td>DEM</td><td class="votes">67</td><td class="pct">15.3</td></tr>
+<tr><td>Marianne Williamson</td><td>DEM</td><td class="votes">17</td><td class="pct">3.9</td></tr>
+<tr><td>Dean Phillips</td><td>DEM</td><td class="votes">6</td><td class="pct">1.4</td></tr>
+</tbody>
+</table>
+3.8% of precincts reporting<br>
+Lead: <b>Biden +64.2</b><br>
+</div>
+<div id="26085-results" class="results">
+<b class="name">Lake</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Joseph R. Biden Jr.</td><td>DEM</td><td class="votes">372</td><td class="pct">85.1</td></tr>
+<tr><td>Uncommitted</td><td>DEM</td><td class="votes">43</td><td class="pct">9.8</td></tr>
+<tr><td>Marianne Williamson</td><td>DEM</td><td class="votes">17</td><td class="pct">3.9</td></tr>
+<tr><td>Dean Phillips</td><td>DEM</td><td class="votes">5</td><td class="pct">1.1</td></tr>
+</tbody>
+</table>
+80.0% of precincts reporting<br>
+Lead: <b>Biden +75.3</b><br>
+</div>
+<div id="26141-results" class="results">
+<b class="name">Presque Isle</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Joseph R. Biden Jr.</td><td>DEM</td><td class="votes">379</td><td class="pct">86.9</td></tr>
+<tr><td>Uncommitted</td><td>DEM</td><td class="votes">35</td><td class="pct">8.0</td></tr>
+<tr><td>Marianne Williamson</td><td>DEM</td><td class="votes">14</td><td class="pct">3.2</td></tr>
+<tr><td>Dean Phillips</td><td>DEM</td><td class="votes">8</td><td class="pct">1.8</td></tr>
+</tbody>
+</table>
+75.0% of precincts reporting<br>
+Lead: <b>Biden +78.9</b><br>
+</div>
+<div id="26019-results" class="results">
+<b class="name">Benzie</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Joseph R. Biden Jr.</td><td>DEM</td><td class="votes">329</td><td class="pct">82.0</td></tr>
+<tr><td>Uncommitted</td><td>DEM</td><td class="votes">42</td><td class="pct">10.5</td></tr>
+<tr><td>Marianne Williamson</td><td>DEM</td><td class="votes">17</td><td class="pct">4.2</td></tr>
+<tr><td>Dean Phillips</td><td>DEM</td><td class="votes">13</td><td class="pct">3.2</td></tr>
+</tbody>
+</table>
+7.7% of precincts reporting<br>
+Lead: <b>Biden +71.6</b><br>
+</div>
+<div id="26057-results" class="results">
+<b class="name">Gratiot</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Joseph R. Biden Jr.</td><td>DEM</td><td class="votes">322</td><td class="pct">83.9</td></tr>
+<tr><td>Uncommitted</td><td>DEM</td><td class="votes">43</td><td class="pct">11.2</td></tr>
+<tr><td>Marianne Williamson</td><td>DEM</td><td class="votes">10</td><td class="pct">2.6</td></tr>
+<tr><td>Dean Phillips</td><td>DEM</td><td class="votes">9</td><td class="pct">2.3</td></tr>
+</tbody>
+</table>
+42.9% of precincts reporting<br>
+Lead: <b>Biden +72.7</b><br>
+</div>
+<div id="26143-results" class="results">
+<b class="name">Roscommon</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Joseph R. Biden Jr.</td><td>DEM</td><td class="votes">284</td><td class="pct">82.6</td></tr>
+<tr><td>Uncommitted</td><td>DEM</td><td class="votes">45</td><td class="pct">13.1</td></tr>
+<tr><td>Marianne Williamson</td><td>DEM</td><td class="votes">8</td><td class="pct">2.3</td></tr>
+<tr><td>Dean Phillips</td><td>DEM</td><td class="votes">7</td><td class="pct">2.0</td></tr>
+</tbody>
+</table>
+35.7% of precincts reporting<br>
+Lead: <b>Biden +69.5</b><br>
+</div>
+<div id="26083-results" class="results">
+<b class="name">Keweenaw</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Joseph R. Biden Jr.</td><td>DEM</td><td class="votes">211</td><td class="pct">82.1</td></tr>
+<tr><td>Uncommitted</td><td>DEM</td><td class="votes">33</td><td class="pct">12.8</td></tr>
+<tr><td>Dean Phillips</td><td>DEM</td><td class="votes">8</td><td class="pct">3.1</td></tr>
+<tr><td>Marianne Williamson</td><td>DEM</td><td class="votes">5</td><td class="pct">1.9</td></tr>
+</tbody>
+</table>
+100.0% of precincts reporting<br>
+Lead: <b>Biden +69.3</b><br>
+</div>
+<div id="26071-results" class="results">
+<b class="name">Iron</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Joseph R. Biden Jr.</td><td>DEM</td><td class="votes">180</td><td class="pct">84.9</td></tr>
+<tr><td>Uncommitted</td><td>DEM</td><td class="votes">24</td><td class="pct">11.3</td></tr>
+<tr><td>Marianne Williamson</td><td>DEM</td><td class="votes">6</td><td class="pct">2.8</td></tr>
+</tbody>
+</table>
+25.0% of precincts reporting<br>
+Lead: <b>Biden +73.6</b><br>
+</div>
+<div id="26095-results" class="results">
+<b class="name">Luce</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Joseph R. Biden Jr.</td><td>DEM</td><td class="votes">149</td><td class="pct">75.3</td></tr>
+<tr><td>Uncommitted</td><td>DEM</td><td class="votes">31</td><td class="pct">15.7</td></tr>
+<tr><td>Marianne Williamson</td><td>DEM</td><td class="votes">12</td><td class="pct">6.1</td></tr>
+<tr><td>Dean Phillips</td><td>DEM</td><td class="votes">6</td><td class="pct">3.0</td></tr>
+</tbody>
+</table>
+100.0% of precincts reporting<br>
+Lead: <b>Biden +59.6</b><br>
+</div>
+<div id="26005-results" class="results">
+<b class="name">Allegan</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Joseph R. Biden Jr.</td><td>DEM</td><td class="votes">40</td><td class="pct">81.6</td></tr>
+<tr><td>Uncommitted</td><td>DEM</td><td class="votes">5</td><td class="pct">10.2</td></tr>
+<tr><td>Dean Phillips</td><td>DEM</td><td class="votes">4</td><td class="pct">8.2</td></tr>
+</tbody>
+</table>
+2.3% of precincts reporting<br>
+Lead: <b>Biden +71.4</b><br>
+</div>
+<div id="26007-results" class="results">
+<b class="name">Alpena</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Joseph R. Biden Jr.</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Tie</b><br>
+</div>
+<div id="26009-results" class="results">
+<b class="name">Antrim</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Joseph R. Biden Jr.</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Tie</b><br>
+</div>
+<div id="26011-results" class="results">
+<b class="name">Arenac</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Joseph R. Biden Jr.</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Tie</b><br>
+</div>
+<div id="26021-results" class="results">
+<b class="name">Berrien</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Joseph R. Biden Jr.</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Tie</b><br>
+</div>
+<div id="26023-results" class="results">
+<b class="name">Branch</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Joseph R. Biden Jr.</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Tie</b><br>
+</div>
+<div id="26027-results" class="results">
+<b class="name">Cass</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Joseph R. Biden Jr.</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Tie</b><br>
+</div>
+<div id="26033-results" class="results">
+<b class="name">Chippewa</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Joseph R. Biden Jr.</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Tie</b><br>
+</div>
+<div id="26035-results" class="results">
+<b class="name">Clare</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Joseph R. Biden Jr.</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Tie</b><br>
+</div>
+<div id="26041-results" class="results">
+<b class="name">Delta</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Joseph R. Biden Jr.</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Tie</b><br>
+</div>
+<div id="26053-results" class="results">
+<b class="name">Gogebic</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Joseph R. Biden Jr.</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Tie</b><br>
+</div>
+<div id="26091-results" class="results">
+<b class="name">Lenawee</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Joseph R. Biden Jr.</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Tie</b><br>
+</div>
+<div id="26101-results" class="results">
+<b class="name">Manistee</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Joseph R. Biden Jr.</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Tie</b><br>
+</div>
+<div id="26103-results" class="results">
+<b class="name">Marquette</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Joseph R. Biden Jr.</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Tie</b><br>
+</div>
+<div id="26109-results" class="results">
+<b class="name">Menominee</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Joseph R. Biden Jr.</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Tie</b><br>
+</div>
+<div id="26119-results" class="results">
+<b class="name">Montmorency</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Joseph R. Biden Jr.</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Tie</b><br>
+</div>
+<div id="26129-results" class="results">
+<b class="name">Ogemaw</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Joseph R. Biden Jr.</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Tie</b><br>
+</div>
+<div id="26131-results" class="results">
+<b class="name">Ontonagon</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Joseph R. Biden Jr.</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Tie</b><br>
+</div>
+<div id="26135-results" class="results">
+<b class="name">Oscoda</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Joseph R. Biden Jr.</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Tie</b><br>
+</div>
+<div id="26137-results" class="results">
+<b class="name">Otsego</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Joseph R. Biden Jr.</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Tie</b><br>
+</div>
+<div id="26145-results" class="results">
+<b class="name">Saginaw</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Joseph R. Biden Jr.</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Tie</b><br>
+</div>
+<div id="26153-results" class="results">
+<b class="name">Schoolcraft</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Joseph R. Biden Jr.</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Tie</b><br>
 </div>
 </div>
 </div>
