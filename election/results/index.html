@@ -7,12 +7,186 @@
 <h1>Election Results</h1>
 <hr />
 <h3><a title="Elections" href="../"><< Back to Elections Home</a></h3>
+<h3><a title="Elections" href="../2024/president">2024 Election Forecast</a></h3>
 <!--
 <h3><a title="2021 Election Forecast" href="../2021">2021 Election Forecast</a></h3>
 <h3><a title="2021 Governors" href="2021/governors">2021 Gubernatorial Election Results</a></h3>
-<h3><a title="Elections" href="../2020/president">2020 Election Forecast</a></h3>
 <h3><a title="2020 President" href="2020/president">2020 Presidential Election Results</a> (<a title="2020 Senate" href="2020/senate">Senate</a>, <a title="2020 House" href="2020/house">House</a>, <a title="2020 Governors" href="2020/governors">Governors</a>)</h3>
 -->
+<p>Typically, I run a live model of the final outcome in each statewide race based on partial vote counts as they come in. I expect that the models will give us better insight on election night as to what the reporting results say about the final outcome than the raw vote counts can, and I publish the model results both via the interactive web app below and on my Twitch stream.</p>
+<p>Each model looks at the votes being reporting alongside the political geography in each state to provide its best estimate of the final outcome. The nature of this model is similar to the New York Times Election Needle. However, my approach is a bit different. Instead of having a single model with a confidence interval of the final outcome, I try the spaghetti model approach, similar to how a hurricane forecast works. Either four or six models will be running, each using separate assumptions and looking at the data in a different way, and one is not fundamentally more correct than another. I strongly caution against reading too much into what the models are guessing until different parts of the state are reporting. Each model has its strengths and weaknesses, but eventually, they should converge and stabilize as more votes come in. When there are sufficient samples across different political geographies of a state and the models converge, then we can become more confident of the final outcome.</p>
+<h2>Live Stream</h2>
+<p>This page will serve as the live stream for all upcoming election results. Most of the time, this stream is dormant. See the calendar below for a schedule of when this stream will broadcast.</p>
+<p>When this stream is broadcasting, it analyzes election results as they come in, and for major statewide non-primary elections, it also features a live estimate of the final election result.</p>
+<html>
+  <body>
+    <!-- Add a placeholder for the Twitch embed -->
+    <div id="twitch-embed"></div>
+
+    <!-- Load the Twitch embed script -->
+    <script src="https://embed.twitch.tv/embed/v1.js"></script>
+
+    <!-- Create a Twitch.Embed object that will render within the "twitch-embed" root element. -->
+    <script type="text/javascript">
+      new Twitch.Embed("twitch-embed", {
+        width: 1180,
+        height: 480,
+        channel: "xiongfeidu"
+      });
+    </script>
+  </body>
+</html>
+<p>The election analysis uses the following terminology:</p>
+<ul>
+<li><strong>Likely</strong> means that based on exit polls, pre-election polling data, and initial reports, it is <i>very likely</i> that a candidate will win the race.</li>
+<li><strong>Safe</strong> means that based on our model, it is <i>almost certain</i> that a candidate will win the election, or that a candidate will win unless there's an extremely unlikely shift in the results being reported and that absentee and preliminary ballots shift the election outcome.</li>
+<li><strong>Called</strong> means that a major news organization, such as the AP, has <i>called</i> the election for a candidate.</li>
+</ul>
+<p>In the color scheme, light represents 'likely', moderate represents 'high probability', and dark represents 'called'.</p>
+<h2>Calendar</h2>
+<p>The following calendar displays all future scheduled streams. All times EST/EDT.</p>
+<table style="height: px; font-size: 12;" width="600">
+<tbody>
+<tr>
+<td style="text-align: center;"><strong>Date</strong></td>
+<td style="text-align: center;"><strong>Event</strong></td>
+<td style="text-align: center;"><strong>Time</strong></td>
+<td style="text-align: center;"><strong>Model</strong></td>
+<td style="text-align: center;"><strong>Commentary</strong></td>
+</tr>
+<tr>
+<td style="text-align: center;">2024 November 5</td>
+<td style="text-align: center;"><strong>2024 General Elections</strong></td>
+<td style="text-align: center;">18:00</td>
+<td style="text-align: center;">Yes</td>
+<td style="text-align: center;">Yes</td>
+</tr>
+</tbody>
+</table>
+<h3>Past Streams</h3>
+<table style="height: px; font-size: 12;" width="600">
+<tbody>
+<tr>
+<td style="text-align: center;"><strong>Date</strong></td>
+<td style="text-align: center;"><strong>Event</strong></td>
+<td style="text-align: center;"><strong>Time</strong></td>
+<td style="text-align: center;"><strong>Model</strong></td>
+<td style="text-align: center;"><strong>Commentary</strong></td>
+</tr>
+<tr>
+<td style="text-align: center;">2018 November 6</td>
+<td style="text-align: center;"><strong>2018 Midterm Elections</strong></td>
+<td style="text-align: center;">18:00</td>
+<td style="text-align: center;">Yes</td>
+<td style="text-align: center;">Yes</td>
+</tr>
+<tr>
+<td style="text-align: center;">2019 October 12</td>
+<td style="text-align: center;">2019 Louisiana Gubernatorial Jungle Primary</td>
+<td style="text-align: center;">21:00</td>
+<td style="text-align: center;">No</td>
+<td style="text-align: center;">No</td>
+</tr>
+<tr>
+<td style="text-align: center;">2019 November 5</td>
+<td style="text-align: center;">2019 Gubernatorial Elections (KY, MS)</td>
+<td style="text-align: center;">18:00</td>
+<td style="text-align: center;">Yes</td>
+<td style="text-align: center;">No</td>
+</tr>
+<tr>
+<td style="text-align: center;">2019 November 16</td>
+<td style="text-align: center;">2019 Louisiana Gubernatorial Runoff</td>
+<td style="text-align: center;">21:00</td>
+<td style="text-align: center;">Yes</td>
+<td style="text-align: center;">No</td>
+</tr>
+<tr>
+<td style="text-align: center;">2020 February 3</td>
+<td style="text-align: center;">2020 Iowa Caucuses</td>
+<td style="text-align: center;">22:00</td>
+<td style="text-align: center;">No</td>
+<td style="text-align: center;">No</td>
+</tr>
+<tr>
+<td style="text-align: center;">2020 February 11</td>
+<td style="text-align: center;">2020 New Hampshire Primaries</td>
+<td style="text-align: center;">19:00</td>
+<td style="text-align: center;">No</td>
+<td style="text-align: center;">No</td>
+</tr>
+<tr>
+<td style="text-align: center;">2020 February 22</td>
+<td style="text-align: center;">2020 Nevada Democratic Caucuses</td>
+<td style="text-align: center;">22:00</td>
+<td style="text-align: center;">No</td>
+<td style="text-align: center;">No</td>
+</tr>
+<tr>
+<td style="text-align: center;">2020 February 29</td>
+<td style="text-align: center;">2020 South Carolina Democratic Primaries</td>
+<td style="text-align: center;">19:00</td>
+<td style="text-align: center;">No</td>
+<td style="text-align: center;">No</td>
+</tr>
+<tr>
+<td style="text-align: center;">2020 March 3</td>
+<td style="text-align: center;">2020 Super Tuesday Primaries and Caucuses</td>
+<td style="text-align: center;">19:00</td>
+<td style="text-align: center;">No</td>
+<td style="text-align: center;">Yes</td>
+</tr>
+<tr>
+<td style="text-align: center;">2020 March 10</td>
+<td style="text-align: center;">2020 ID, MI, MS, MO, ND, WA Primaries</td>
+<td style="text-align: center;">20:00</td>
+<td style="text-align: center;">No</td>
+<td style="text-align: center;">No</td>
+</tr>
+<tr>
+<td style="text-align: center;">2020 March 17</td>
+<td style="text-align: center;">2020 AZ, FL, IL Primaries</td>
+<td style="text-align: center;">19:00</td>
+<td style="text-align: center;">No</td>
+<td style="text-align: center;">No</td>
+</tr>
+<tr>
+<td style="text-align: center;">2020 November 3</td>
+<td style="text-align: center;"><strong>2020 General Elections</strong></td>
+<td style="text-align: center;">18:00</td>
+<td style="text-align: center;">Yes</td>
+<td style="text-align: center;">Yes</td>
+</tr>
+<tr>
+<td style="text-align: center;">2021 January 5</td>
+<td style="text-align: center;">2020 Georgia Senate Runoffs</td>
+<td style="text-align: center;">19:30</td>
+<td style="text-align: center;">Yes</td>
+<td style="text-align: center;">Yes</td>
+</tr>
+<tr>
+<td style="text-align: center;">2021 September 14</td>
+<td style="text-align: center;">2021 California Gubernatorial Recall</td>
+<td style="text-align: center;">23:00</td>
+<td style="text-align: center;">Yes</td>
+<td style="text-align: center;">Yes</td>
+</tr>
+<tr>
+<td style="text-align: center;">2021 November 2</td>
+<td style="text-align: center;">2021 Gubernatorial Elections (NJ, VA)</td>
+<td style="text-align: center;">19:00</td>
+<td style="text-align: center;">Yes</td>
+<td style="text-align: center;">Yes</td>
+</tr>
+<tr>
+<td style="text-align: center;">2022 November 8</td>
+<td style="text-align: center;"><strong>2022 Midterm Elections</strong></td>
+<td style="text-align: center;">18:00</td>
+<td style="text-align: center;">Yes</td>
+<td style="text-align: center;">Yes</td>
+</tr>
+</tbody>
+</table>
 <h2>Past Results Portal</h2>
 <p>Here are some links to the results from past elections going back to 2000. Model results are added where applicable.</p>
 <table style="font-size: 12; text-align: center;" width="480">
@@ -193,178 +367,6 @@
     <td><a title="2000 Democratic Primaries" href="2000/demprimaries">Democratic</a>, <a title="2000 Republican Primaries" href="2000/repprimaries">Republican</a></td>
   </tr>
 </table>
-<h2>Live Stream</h2>
-<p>This page will serve as the live stream for all upcoming election results. Most of the time, this stream is dormant. See the calendar below for a schedule of when this stream will broadcast.</p>
-<p>When this stream is broadcasting, it analyzes election results as they come in, and for major statewide non-primary elections, it also features a live estimate of the final election result.</p>
-<html>
-  <body>
-    <!-- Add a placeholder for the Twitch embed -->
-    <div id="twitch-embed"></div>
-
-    <!-- Load the Twitch embed script -->
-    <script src="https://embed.twitch.tv/embed/v1.js"></script>
-
-    <!-- Create a Twitch.Embed object that will render within the "twitch-embed" root element. -->
-    <script type="text/javascript">
-      new Twitch.Embed("twitch-embed", {
-        width: 1180,
-        height: 480,
-        channel: "xiongfeidu"
-      });
-    </script>
-  </body>
-</html>
-<p>The election analysis uses the following terminology:</p>
-<ul>
-<li><strong>Likely</strong> means that based on exit polls, pre-election polling data, and initial reports, it is <i>very likely</i> that a candidate will win the race.</li>
-<li><strong>Safe</strong> means that based on our model, it is <i>almost certain</i> that a candidate will win the election, or that a candidate will win unless there's an extremely unlikely shift in the results being reported and that absentee and preliminary ballots shift the election outcome.</li>
-<li><strong>Called</strong> means that a major news organization, such as the AP, has <i>called</i> the election for a candidate.</li>
-</ul>
-<p>In the color scheme, light represents 'likely', moderate represents 'high probability', and dark represents 'called'.</p>
-<h2>Calendar</h2>
-<p>The following calendar displays all future scheduled streams. All times EST/EDT.</p>
-<table style="height: px; font-size: 12;" width="600">
-<tbody>
-<tr>
-<td style="text-align: center;"><strong>Date</strong></td>
-<td style="text-align: center;"><strong>Event</strong></td>
-<td style="text-align: center;"><strong>Time</strong></td>
-<td style="text-align: center;"><strong>Model</strong></td>
-<td style="text-align: center;"><strong>Commentary</strong></td>
-</tr>
-<tr>
-<td style="text-align: center;">2024 November 5</td>
-<td style="text-align: center;"><strong>2024 General Elections</strong></td>
-<td style="text-align: center;">18:00</td>
-<td style="text-align: center;">Yes</td>
-<td style="text-align: center;">Yes</td>
-</tr>
-</tbody>
-</table>
-<h3>Past Streams</h3>
-<table style="height: px; font-size: 12;" width="600">
-<tbody>
-<tr>
-<td style="text-align: center;"><strong>Date</strong></td>
-<td style="text-align: center;"><strong>Event</strong></td>
-<td style="text-align: center;"><strong>Time</strong></td>
-<td style="text-align: center;"><strong>Model</strong></td>
-<td style="text-align: center;"><strong>Commentary</strong></td>
-</tr>
-<tr>
-<td style="text-align: center;">2018 November 6</td>
-<td style="text-align: center;"><strong>2018 Midterm Elections</strong></td>
-<td style="text-align: center;">18:00</td>
-<td style="text-align: center;">Yes</td>
-<td style="text-align: center;">Yes</td>
-</tr>
-<tr>
-<td style="text-align: center;">2019 October 12</td>
-<td style="text-align: center;">2019 Louisiana Gubernatorial Jungle Primary</td>
-<td style="text-align: center;">21:00</td>
-<td style="text-align: center;">No</td>
-<td style="text-align: center;">No</td>
-</tr>
-<tr>
-<td style="text-align: center;">2019 November 5</td>
-<td style="text-align: center;">2019 Gubernatorial Elections (KY, MS)</td>
-<td style="text-align: center;">18:00</td>
-<td style="text-align: center;">Yes</td>
-<td style="text-align: center;">No</td>
-</tr>
-<tr>
-<td style="text-align: center;">2019 November 16</td>
-<td style="text-align: center;">2019 Louisiana Gubernatorial Runoff</td>
-<td style="text-align: center;">21:00</td>
-<td style="text-align: center;">Yes</td>
-<td style="text-align: center;">No</td>
-</tr>
-<tr>
-<td style="text-align: center;">2020 February 3</td>
-<td style="text-align: center;">2020 Iowa Caucuses</td>
-<td style="text-align: center;">22:00</td>
-<td style="text-align: center;">No</td>
-<td style="text-align: center;">No</td>
-</tr>
-<tr>
-<td style="text-align: center;">2020 February 11</td>
-<td style="text-align: center;">2020 New Hampshire Primaries</td>
-<td style="text-align: center;">19:00</td>
-<td style="text-align: center;">No</td>
-<td style="text-align: center;">No</td>
-</tr>
-<tr>
-<td style="text-align: center;">2020 February 22</td>
-<td style="text-align: center;">2020 Nevada Democratic Caucuses</td>
-<td style="text-align: center;">22:00</td>
-<td style="text-align: center;">No</td>
-<td style="text-align: center;">No</td>
-</tr>
-<tr>
-<td style="text-align: center;">2020 February 29</td>
-<td style="text-align: center;">2020 South Carolina Democratic Primaries</td>
-<td style="text-align: center;">19:00</td>
-<td style="text-align: center;">No</td>
-<td style="text-align: center;">No</td>
-</tr>
-<tr>
-<td style="text-align: center;">2020 March 3</td>
-<td style="text-align: center;">2020 Super Tuesday Primaries and Caucuses</td>
-<td style="text-align: center;">19:00</td>
-<td style="text-align: center;">No</td>
-<td style="text-align: center;">Yes</td>
-</tr>
-<tr>
-<td style="text-align: center;">2020 March 10</td>
-<td style="text-align: center;">2020 ID, MI, MS, MO, ND, WA Primaries</td>
-<td style="text-align: center;">20:00</td>
-<td style="text-align: center;">No</td>
-<td style="text-align: center;">No</td>
-</tr>
-<tr>
-<td style="text-align: center;">2020 March 17</td>
-<td style="text-align: center;">2020 AZ, FL, IL Primaries</td>
-<td style="text-align: center;">19:00</td>
-<td style="text-align: center;">No</td>
-<td style="text-align: center;">No</td>
-</tr>
-<tr>
-<td style="text-align: center;">2020 November 3</td>
-<td style="text-align: center;"><strong>2020 General Elections</strong></td>
-<td style="text-align: center;">18:00</td>
-<td style="text-align: center;">Yes</td>
-<td style="text-align: center;">Yes</td>
-</tr>
-<tr>
-<td style="text-align: center;">2021 January 5</td>
-<td style="text-align: center;">2020 Georgia Senate Runoffs</td>
-<td style="text-align: center;">19:30</td>
-<td style="text-align: center;">Yes</td>
-<td style="text-align: center;">Yes</td>
-</tr>
-<tr>
-<td style="text-align: center;">2021 September 14</td>
-<td style="text-align: center;">2021 California Gubernatorial Recall</td>
-<td style="text-align: center;">23:00</td>
-<td style="text-align: center;">Yes</td>
-<td style="text-align: center;">Yes</td>
-</tr>
-<tr>
-<td style="text-align: center;">2021 November 2</td>
-<td style="text-align: center;">2021 Gubernatorial Elections (NJ, VA)</td>
-<td style="text-align: center;">19:00</td>
-<td style="text-align: center;">Yes</td>
-<td style="text-align: center;">Yes</td>
-</tr>
-<tr>
-<td style="text-align: center;">2022 November 8</td>
-<td style="text-align: center;"><strong>2022 Midterm Elections</strong></td>
-<td style="text-align: center;">18:00</td>
-<td style="text-align: center;">Yes</td>
-<td style="text-align: center;">Yes</td>
-</tr>
-</tbody>
-</table>
 <h2>Live Model Methodology</h2>
 <p>In terms of methodology, this model essentially guesses the final results of the election based on the geographic distribution of results that are reporting so far and the historical partisan lean of that region. Because it analyzes historical partisan lean, it only works on elections for which there are only two major candidates: one Democrat and one Republican. The model is fundamentally biased for historical results, so there's a reasonable margin of error of about a point or so. The margin of error is typically higher when:</p>
 <ul>
@@ -383,13 +385,23 @@
   <li>States in <i>light green</i> are the states that we expect the models to somewhat well or mostly well. These states tend to be:
   <ul>
     <li>Small states with very few jurisdictions, which makes it hard to analyze, such as Delaware.</li>
-    <li>States with a lot of early vote, which tends to throw off early reports, such as Florida, Georgia, Nevada, North Carolina, and Texas.</li>
+    <li>States with a lot of early vote, which tends to throw off early reports, such as Florida, Georgia, North Carolina, Pennsylvania, and Texas.</li>
     <li>States with a high percentage of votes in concentrated in very few jurisdictions, such as Illinois and New York.</li>
     <li>States with substantial vote by mail, which can take time for votes to arrive, such as Colorado, Oregon, and Washington.</li>
   </ul>
   <li>States in <i>yellow</i> are the states that we expect the models to be the most susceptible to inaccuracy. These states have substantial vote by mail and take days to weeks for votes to be received and counted, and the late-reporting votes tend to sway election results decisively.</li>
   <li>The state in <i>red</i> is Alaska, for which there is not a model.</li>
 </ul>
+<p>Currently, I'm running four or six models, depending on the state:</p>
+<ul>
+  <li>The type 1 models look at what votes have been counted.</li>
+  <li>The type 2 models look at what votes remain outstanding.</li>
+  <li>The type A models analyze what precincts are reporting.</li>
+  <li>The type B models analyze what votes are reporting.</li>
+  <li>The type C models analyze what votes are reporting, accounting for disparities in early and day-of voting.</li>
+</ul>
+<p>These models all walk a balance between variance and bias, according to the <a href="https://en.wikipedia.org/wiki/Bias-variance_tradeoff">bias-variance tradeoff</a> that governs statistical modeling. These models are designed so that when one model suffers from high variance but has low bias, another suffers from high bias but has low variance, so looking at all of the models together will mitigate the problems present in one model alone. Type A, B, and C models are guaranteed to converge once all votes have been counted, but type 1 and 2 models are not. In fact, only type 2 models are guaranteed to converge to the final outcome. Additionally, type 2 models are seeded with an initial bias to stabilize the model during initial reports. That bias is devised from pre-election polls with an underestimate the expected winner, which means that most battleground races are seeded with a bias of 0.</p>
+<p>The type C model attempts to account for the partisan differences between early voting and election day voting. This is meant to account for the recent increase in the use of early and mail-in voting, which are often counted separately from same day vote and tend to skew Democratic. For this, we adjust the priors based on polls that estimate the proportion of Democratic and Republican voters that will vote early versus day-of and estimates of how much of the vote that is being reported is early versus day-of. These disparities have caused inaccurate analytics in past elections, such as overestimating Biden's performance in Arizona and Ohio in 2020 and overestimating Trump's performance in Michigan, Pennsylvania, and Wisconsin in 2020, based on the first results reporting. However, this model depends on knowing which votes are which, and this information is not always accurately reported on election night. There usually is a good amount of guessing what vote is currently reporting, and the type C model is only as good as its assumptions.</p>
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 <p>&nbsp;</p>
