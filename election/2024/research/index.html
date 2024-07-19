@@ -1,0 +1,59 @@
+<head>
+<title>2024 New Correlation Model Research</title>
+</head>
+<body style="background-color:lightgray; font-family:verdana;">
+<div style="word-wrap: break-word; width: 640px; margin-left: 100px; margin-top: 0px;">
+<font size = "2">
+<h1>2024 New Correlation Model Research</h1>
+<hr />
+<p>16 July 2024</p>
+<p>To call this the 2024 model is a bit of a lie, I actually started using this in the 2022 midterms to estimate the outcome of the Senate.</p>
+<p>A historical shortfall of my 2018 model is that it underestimates how different states are correlated with each other. Similarly, a common shortfall of models estimating the 2016 presidential election was failing to estimate that the results of Midwestern states were correlated. For example, given that Clinton underperformed in states like Iowa and Ohio, it was also likely that Clinton would underperform in similar states such as Michigan and Wisconsin.</p>
+<p>The new correlation model that I started running for the 2022 midterms was meant to address this by looking at historical margins of different states and finding patterns, then applying those patterns in the simulation of all of the states. Even though <a title="2022 Senate Forecast" href="../../2022/senate">the model favored a GOP Senate in 2022</a>, I think that the results reasonably represented the distribution of results based on the polls.</p>
+<p>So how does this technique measure? Here are the results.</p>
+<h3>2016 President - Clinton vs. Trump</h3>
+<table style="font-size: 12; text-align: center;">
+<tbody>
+<tr style="font-weight: bold">
+<td>Candidate</td>
+<td>Probability</td>
+</tr>
+<tr>
+<td><span style="color: #0000ff;">Hillary Clinton</span></td>
+<td><span style="color: #0000ff;"><b>73.4%</b></span></td>
+</tr>
+<tr>
+<td><span style="color: #ff0000;">Donald Trump</span></td>
+<td><span style="color: #ff0000;"><b>26.5%</b></span></td>
+</tr>
+</tbody>
+</table>
+<p>The remaining 0.1% is the possiblity of a 269-269 tie.</p>
+<p>The expected result is <span style="color: #0000ff;">Clinton</span> winning 297.2 to 240.8.</p>
+<p>The median result is <span style="color: #0000ff;">Clinton</span> winning 303-235.</p>
+<p>The most likely result is <span style="color: #0000ff;">Clinton</span> winning 323-215.</p>
+<p>An 80% confidence interval ranges from Clinton winning 347-191 to Trump winning 306-232.</p>
+<p>As we know, <a title="2016 Presidential Election Results" href="../../results/2016/president">Trump ended up winning the election 306-232</a>, which was an outcome that fell within the 80% confidence interval, even though this simulation does not favor Trump winning. My initial prediction, a <a title="2016 Election Forecast" href="../../2016/president">347-191 Clinton victory</a>, was on the other side of the confidence interval. Overall, these results match quite closely with <a title="FiveThirtyEight 2016 Election Forecast" href="https://projects.fivethirtyeight.com/2016-election-forecast/">FiveThirtyEight's model by Nate Silver</a>.</p>
+<h3>2020 President - Biden vs. Trump</h3>
+<table style="font-size: 12; text-align: center;">
+<tbody>
+<tr style="font-weight: bold">
+<td>Candidate</td>
+<td>Probability</td>
+</tr>
+<tr>
+<td><span style="color: #0000ff;">Joe Biden</span></td>
+<td><span style="color: #0000ff;"><b>90.4%</b></span></td>
+</tr>
+<tr>
+<td><span style="color: #ff0000;">Donald Trump</span></td>
+<td><span style="color: #ff0000;"><b>9.3%</b></span></td>
+</tr>
+</tbody>
+</table>
+<p>The remaining 0.3% is the possiblity of a 269-269 tie.</p>
+<p>The expected result is <span style="color: #0000ff;">Biden</span> winning 334.7 to 203.3.</p>
+<p>The median result is <span style="color: #0000ff;">Biden</span> winning 341-197.</p>
+<p>The most likely result is <span style="color: #0000ff;">Biden</span> winning 348-190.</p>
+<p>An 80% confidence interval ranges from Biden winning 388-150 to Biden winning 271-267.</p>
+<p>The <a title="2020 Presidential Election Results" href="../../results/2020/president">final result of Biden winning 306-232</a> ended up being the 25th percentile result. This result is also very similar to that of <a title="FiveThirtyEight 2020 Election Forecast" href="https://projects.fivethirtyeight.com/2020-election-forecast/">FiveThirtyEight</a>.</p>

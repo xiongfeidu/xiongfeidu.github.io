@@ -57,7 +57,7 @@
 <!--
 <h3>| President | <a title="Senate" href="../senate/">Senate</a> | <a title="Governors" href="../governors/">Governors</a> | <a title="Results" href="../results/">Results</a> |</h3>
 -->
-<p>For this year's forecast, I'm trying out some new techniques in an effort to improve from the <a href="../../2020/president/">last election model</a>. Similar to last time, the model will primarily emphasize the probability of an outcome occurring and the uncertainty of the forecasted result. A core weakness of previous forecasts was that the outcomes between different states were correlated in ways that the model had a tendency to underestimate, and this effect was most notable in the <a href="../../2022/house/">2022 house forecast</a>. Hence, the methodology for forecasting individual states has not changed, but how the individual probabilities are aggregated is significantly different.</p>
+<p>For this year's forecast, I'm trying out some new techniques in an effort to improve from the <a href="../../2020/president/">last election model</a>. Similar to last time, the model will primarily emphasize the probability of an outcome occurring and the uncertainty of the forecasted result. A core weakness of previous forecasts was that the outcomes between different states were correlated in ways that the model had a tendency to underestimate, and this effect was most notable in the <a href="../../2022/house/">2022 house forecast</a>. Hence, the methodology for forecasting individual states has not changed, but how the individual probabilities are aggregated is significantly different. Some results from running this model on previous presidential elections is shown <a title="2024 New Correlation Model Research" href="../research">here</a>.</p>
 <p>A note copy-pasted from previous years, I'm putting here the important caveat with reading probabilistic models: <i>Just because it's more likely than not to happen doesn't mean that it will</i>. Furthermore, this forecast is not meant to be an endorsement of a political candidate, party, ideology, or system, but rather meant to be an academic exercise on predicting election outcomes.</p>
 <p>As with the last election, there will be a live <a title="Election Results" href="../../results/">election results stream on Twitch</a> during election night, starting at 6:00 PM EST on November 5, with a live model based on partial results and commentary focusing on the political geography of the data. In 2020, I forecasted the reasonably high probability of Biden's victory while Trump led the overnight vote count in key Midwestern battleground states, and I'm hoping to repeat that this year.</p>
 <p>So here are the results:</p>
@@ -66,8 +66,8 @@
     <table class="scoreboard-table">
     <tbody>
     <tr>
-    <td style="color: #00f; font-weight: bold;"><span style="color: #00f; font-size: 24;">221</span> Biden/Harris <span class="checkmark" style="font-size: 24;"></span></td>
-    <td style="color: #f00; font-weight: bold; text-align: right;"><span class="checkmark" style="font-size: 24;"></span> Trump/Vance <span style="color: #f00; font-size: 24;">262</span></td>
+    <td style="color: #00f; font-weight: bold;"><span style="color: #00f; font-size: 24;">208</span> Biden/Harris <span class="checkmark" style="font-size: 24;"></span></td>
+    <td style="color: #f00; font-weight: bold; text-align: right;"><span class="checkmark" style="font-size: 24;">✔</span> Trump/Vance <span style="color: #f00; font-size: 24;">297</span></td>
     </tr>
     </tbody>
     </table>
@@ -76,19 +76,19 @@
     <div style="width:640px; height:20px; background-color: #FFFFFF; position: relative;">&nbsp;</div>
   </div>
   <div class="no-height">
-    <div style="width:215px; height:20px; background-color: #00008B; position: relative; color: white; text-align: center; z-index: 1;">181</div>
+    <div style="width:199px; height:20px; background-color: #00008B; position: relative; color: white; text-align: center; z-index: 1;">167</div>
   </div>
   <div class="no-height">
-    <div style="width:18px; height:20px; left: 215px; background-color: #0000FF; position: relative; color: white; text-align: center; z-index: 1;">15</div>
+    <div style="width:28px; height:20px; left: 199px; background-color: #0000FF; position: relative; color: white; text-align: center; z-index: 1;">24</div>
   </div>
   <div class="no-height">
-    <div style="width:30px; height:20px; left: 233px; background-color: #6060FF; position: relative; color: white; text-align: center; z-index: 1;">25</div>
+    <div style="width:20px; height:20px; left: 227px; background-color: #6060FF; position: relative; color: white; text-align: center; z-index: 1;">17</div>
   </div>
   <div class="no-height">
-    <div style="width:51px; height:20px; left: 328px; background-color: #FF6060; position: relative; color: white; text-align: center; z-index: 1;">43</div>
+    <div style="width:73px; height:20px; left: 287px; background-color: #FF6060; position: relative; color: white; text-align: center; z-index: 1;">62</div>
   </div>
   <div class="no-height">
-    <div style="width:112px; height:20px; left: 379px; background-color: #FF0000; position: relative; color: white; text-align: center; z-index: 1;">94</div>
+    <div style="width:131px; height:20px; left: 360px; background-color: #FF0000; position: relative; color: white; text-align: center; z-index: 1;">110</div>
   </div>
   <div class="no-height">
     <div style="width:149px; height:20px; left: 491px; background-color: #8B0000; position: relative; color: white; text-align: center; z-index: 1;">125</div>
@@ -104,22 +104,22 @@
     .state path:hover {stroke-width:2px;}
 
     /* Tossup */
-    #MI, #NH, #NV, #PA, #WI {fill: #FFFFFF;}
+    #MI, #NH, #VA {fill: #FFFFFF;}
 
     /* Leans D */
-    #ME, #MN, #VA {fill: #6060FF;}
+    #ME, #MN, #NM {fill: #6060FF;}
 
     /* Likely D */
-    #CO, #NM {fill: #0000FF;}
+    #CO, #NJ {fill: #0000FF;}
 
     /* Safe D */
-    #CA, #CT, #DC, #DE, #HI, #IL, #MA, #MD, #NJ, #NY, #OR, #RI, #VT, #WA {fill: #00008B;}
+    #CA, #CT, #DC, #DE, #HI, #IL, #MA, #MD, #NY, #OR, #RI, #VT, #WA {fill: #00008B;}
 
     /* Leans R */
-    #AZ, #GA, #NC {fill: #FF6060;}
+    #AZ, #GA, #NV, #PA, #WI {fill: #FF6060;}
 
     /* Likely R */
-    #FL, #IA, #OH, #TX {fill: #FF0000;}
+    #FL, #IA, #NC, #OH, #TX {fill: #FF0000;}
 
     /* Safe R */
     #AK, #AL, #AR, #ID, #IN, #KS, #KY, #LA, #MO, #MS, #MT, #ND, #NE, #OK, #SC, #SD, #TN, #UT, #WV, #WY {fill: #8B0000;}
@@ -191,17 +191,17 @@
 </tr>
 <tr>
 <td><span style="color: #0000ff;">Joe Biden</span></td>
-<td><span style="color: #0000ff;"><b>12.6%</b></span></td>
+<td><span style="color: #0000ff;"><b>11.8%</b></span></td>
 </tr>
 <tr>
 <td><span style="color: #ff0000;">Donald Trump</span></td>
-<td><span style="color: #ff0000;"><b>87.3%</b></span></td>
+<td><span style="color: #ff0000;"><b>88.1%</b></span></td>
 </tr>
 </tbody>
 </table>
 <p>The remaining 0.1% is the possiblity of a 269-269 tie.</p>
 <p>The median result is <span style="color: #ff0000;">Trump</span> winning 325-213.</p>
-<p>The most likely result is <span style="color: #ff0000;">Trump</span> winning 312-226.</p>
+<p>The most likely result is <span style="color: #ff0000;">Trump</span> winning 325-213.</p>
 <p>An 80% confidence interval ranges from Biden winning 279-259 to Trump winning 340-198.</p>
 <h3>History</h3>
 <p>This table shows the results of the simulation over time.</p>
@@ -226,6 +226,19 @@
 <td style="padding: 0 5px;"><span style="color: #ff0000;">Trump</span></td>
 <td style="padding: 0 5px;"><span style="color: #0000ff;">Biden</span></td>
 <td style="padding: 0 5px;"><span style="color: #ff0000;">Trump</span></td>
+</tr>
+<tr>
+<td>07/18</td>
+<td><span style="color: #0000ff; text-align: right;">11.8%</span></td>
+<td><span style="color: #ff0000; text-align: right;">88.1%</span></td>
+<td><span style="color: #0000ff; text-align: right;">208</span></td>
+<td><span style="color: #ff0000; text-align: right;">297</span></td>
+<td><span style="color: #0000ff; text-align: right;">224.2</span></td>
+<td><span style="color: #ff0000; text-align: right;">313.8</span></td>
+<td><span style="color: #0000ff; text-align: right;">213</span></td>
+<td><span style="color: #ff0000; text-align: right;">325</span></td>
+<td><span style="color: #0000ff; text-align: right;">213</span></td>
+<td><span style="color: #ff0000; text-align: right;">325</span></td>
 </tr>
 <tr>
 <td>07/15</td>
@@ -292,6 +305,19 @@
 <td style="padding: 0 5px;"><span style="color: #ff0000;">Trump</span></td>
 </tr>
 <tr>
+<td>07/18</td>
+<td><span style="color: #0000ff; text-align: right;">29.9%</span></td>
+<td><span style="color: #ff0000; text-align: right;">69.8%</span></td>
+<td><span style="color: #0000ff; text-align: right;">208</span></td>
+<td><span style="color: #ff0000; text-align: right;">297</span></td>
+<td><span style="color: #0000ff; text-align: right;">248.5</span></td>
+<td><span style="color: #ff0000; text-align: right;">289.5</span></td>
+<td><span style="color: #0000ff; text-align: right;">226</span></td>
+<td><span style="color: #ff0000; text-align: right;">312</span></td>
+<td><span style="color: #0000ff; text-align: right;">203</span></td>
+<td><span style="color: #ff0000; text-align: right;">335</span></td>
+</tr>
+<tr>
 <td>07/15</td>
 <td><span style="color: #0000ff; text-align: right;">31.6%</span></td>
 <td><span style="color: #ff0000; text-align: right;">68.0%</span></td>
@@ -328,13 +354,13 @@
 <p><b>Maine (Leans Biden)</b>. Maine is one of two states, alongside Nebraska, that splits its electoral votes by congressional district, and there is a demographic split between the more urban, Portland-based first congressional district, and the second congressional district that covers the rural interior. President Trump won the second congressional district twice by comfortable margins following a nationwide shift of rural voters away from the Democratic Party in 2016, and is favored to win the single electoral vote again. Meanwhile, the first district is not contested and is expected to go for President Biden, though how two districts balance out will determine the two statewide electoral votes, which currently narrowly favors President Biden. President Biden must win the two statewide electoral votes to have a realistic path to 270.</p>
 <p><b>Michigan (Tossup)</b>. As one of the three Midwestern "blue wall" states that have come to decide presidential elections since 2016, the Wolverine State again finds itself at the center of attention. Since George Bush's 1988 landslide, no Republican has ever won Michigan with the exception of President Trump's upset in 2016 due to winning over traditionally Democratic rural voters and working class union households. President Biden flipped Michigan back in 2020 by winning back some working class voters while also cutting into traditionally Republican suburban voters, particularly around Grand Rapids and Traverse City. The key to winning Michigan remains appealing to surburban voters and working class voters, which both campaigns are attempting to do. President Biden likely needs to win Michigan to win 270 electoral votes. Without Michigan, President Biden would have to win a large swath of Southern states to be able to win reelection.</p>
 <p><b>Minnesota (Leans Biden)</b>. In a pattern similar to the Midwestern blue wall states, Minnesota has voted Democratic in every presidential election since 1976. President Obama won this state by large margins in 2008 and 2012, but Minnesota saw closer margins in more recent elections due to realignment of rural voters and working class voters across the Midwest. Despite Republican attempts to make a play for Minnesota, Democrats have managed to hold on. Minnesota is considered a must-win state for President Biden's reelection.</p>
-<p><b>Nevada (Tossup)</b>. Although no Republican has won Nevada since 2004, the Silver State features as a key battleground for working class Hispanic voters. President Obama won Nevada twice by wide margins, though President Trump has held the margins much closer by appealing to working class voters and Hispanic voters. Nevada has a history of inaccurate polling that tends to underestimate Democratic candidates, and a better than expected posting for President Biden remains a real possibility. President Trump hopes the trend of Hispanic voters towards the GOP can flip Nevada, but Republicans still have to contend with the formidable Democratic turnout machine in Clark County established by the late Senate Majority Leader Harry Reid. Given the concentration of votes in one particularly populous county, Clark County, which contains Las Vegas, it will be hard to model this state on election night, and it may take a long time to know a winner in Nevada as it was in 2020 and 2022.</p>
+<p><b>Nevada (Leans Trump)</b>. Although no Republican has won Nevada since 2004, the Silver State features as a key battleground for working class Hispanic voters. President Obama won Nevada twice by wide margins, though President Trump has held the margins much closer by appealing to working class voters and Hispanic voters. Nevada has a history of inaccurate polling that tends to underestimate Democratic candidates, and a better than expected posting for President Biden remains a real possibility. President Trump hopes the trend of Hispanic voters towards the GOP can flip Nevada, but Republicans still have to contend with the formidable Democratic turnout machine in Clark County established by the late Senate Majority Leader Harry Reid. Given the concentration of votes in one particularly populous county, Clark County, which contains Las Vegas, it will be hard to model this state on election night, and it may take a long time to know a winner in Nevada as it was in 2020 and 2022.</p>
 <p><b>New Hampshire (Tossup)</b>. Despite awarding only four electoral votes, New Hampshire could matter in a close election. In 2000, Vice President Al Gore could have won without Florida by winning the Granite State, and former Secretary of State Hillary Clinton won it by only a fraction of a point. Winning moderate surburban voters is the key to winning New Hampshire, and President Trump has historically struggled to win that vote. Currently, polls are suggesting that President Biden is struggling to hold on to New Hampshire.</p>
-<p><b>North Carolina (Leans Trump)</b>. Similar to Georgia, North Carolina has a large urban-rural divide, with Democratic urban centers around Triangle and Charlotte and Republicans favored in much of the rest of the state. The Tar Heel State has been a fleeting target for Democrats in recent years, where every Democratic campaign has heavily invested in the state since President Obama in 2008, yet 2008 was the only time the Democrats were able to win. In 2016 and 2020, President Trump was able to win statewide by running up large margins in predominantly white rural areas even while Democrats posted a strong performance in the Triangle. President Biden faces an uphill battle to win the state due to President Trump's strength among rural voters, which make up a significant portion of the state's population.</p>
+<p><b>North Carolina (Likely Trump)</b>. Similar to Georgia, North Carolina has a large urban-rural divide, with Democratic urban centers around Triangle and Charlotte and Republicans favored in much of the rest of the state. The Tar Heel State has been a fleeting target for Democrats in recent years, where every Democratic campaign has heavily invested in the state since President Obama in 2008, yet 2008 was the only time the Democrats were able to win. In 2016 and 2020, President Trump was able to win statewide by running up large margins in predominantly white rural areas even while Democrats posted a strong performance in the Triangle. President Biden faces an uphill battle to win the state due to President Trump's strength among rural voters, which make up a significant portion of the state's population.</p>
 <p><b>Ohio (Likely Trump)</b>. Similar to Iowa, Ohio has recently been losing its status as a core presidential battleground. The Buckeye State has voted with the winner of every presidential election from 1964 to 2016. That trend broke in 2020 when President Trump won Ohio comfortably due to his hold on traditionally Democratic working class voters in the Midwest despite losing nationwide. Ohio is now significantly more Republican leaning than the nation overall, and the Democrats no longer see Ohio as a top target. President Trump is a strong favorite to win again in Ohio.</p>
-<p><b>Pennsylvania (Tossup)</b>. Similarly to Michigan, Pennsylvania is one of the three "blue wall" states in the upper Midwest that have come to define the most recent presidential elections. President Trump narrowly flipped the Keystone State in 2016 by winning over rural voters and traditionally Democratic working class voters in northeastern and western Pennsylvania. However, Trump underperformed among suburban voters in the Philadelphia suburbs, which President Biden capitalized on to win the state back in 2020. Biden also performed better than former Secretary of State Hillary Clinton among blue collar workers, which played a key role in his 2020 win. This year, it is again expected that working class voters and suburban voters will decide the state and perhaps the presidency, and both campaigns see Pennsylvania's 19 electoral votes as critical to victory. For President Biden to win reelection, Biden must hold Pennsylvania or hold some of the southern battlegrounds of Arizona or Georgia. Similarly for President Trump to win reelection, Trump can flip back Arizona and Georgia and one of the blue wall states.</p>
+<p><b>Pennsylvania (Leans Trump)</b>. Similarly to Michigan, Pennsylvania is one of the three "blue wall" states in the upper Midwest that have come to define the most recent presidential elections. President Trump narrowly flipped the Keystone State in 2016 by winning over rural voters and traditionally Democratic working class voters in northeastern and western Pennsylvania. However, Trump underperformed among suburban voters in the Philadelphia suburbs, which President Biden capitalized on to win the state back in 2020. Biden also performed better than former Secretary of State Hillary Clinton among blue collar workers, which played a key role in his 2020 win. This year, it is again expected that working class voters and suburban voters will decide the state and perhaps the presidency, and both campaigns see Pennsylvania's 19 electoral votes as critical to victory. For President Biden to win reelection, Biden must hold Pennsylvania or hold some of the southern battlegrounds of Arizona or Georgia. Similarly for President Trump to win reelection, Trump can flip back Arizona and Georgia and one of the blue wall states.</p>
 <p><b>Texas (Likely Trump)</b>. With 40 electoral votes, Democrats have been eyeing the traditionally Republican state with more interest in recent cycles. While suburban voters around metropolitan areas have trended away from Republicans during the Trump years, particularly around Austin, Dallas, Houston, and San Antonio, Texas has remained a reliably red state where Democrats have found limited success. Part of this is due to countercurrents in the Rio Grande valley, where rural Hispanic voters have moved in the direction of President Trump. Democrats have not won an election statewide since 1994, when some down ballot Democrats were able to hold on to office riding the coattails of the late Gov. Ann Richards (D), despite Richards losing the gubernatorial race to George W. Bush, and no Democratic presidential candidate has won Texas since 1976, when former Georgia Gov. Jimmy Carter swept the South. In order for President Biden to flip Texas, Democrats must vastly improve margins among urban and suburban voters in Texas while maintaining support from Hispanic voters, and a Democratic win in Texas likely implies a Biden landslide nationwide. It remains unlikely for this to happen, and President Trump is heavily favored to win.</p>
-<p><b>Wisconsin (Tossup)</b>. Along with Michigan and Pennsylvania, Wisconsin is one of the three "blue wall" states that were traditionally Democratic until President Trump's upset victory in 2016 due to rural voters shifting towards the GOP. Similarly to Iowa, Democrats historically did well with rural voters in Wisconsin, particularly southwestern Wisconsin, but these areas have moved to be increasingly out of reach for Democrats. In 2020, President Biden won the Badger State by outperforming in traditionally Republican suburbs, particularly those around Milwaukee, despite Trump holding most of the GOP gains in rural areas. Wisconsin was decided by less than a point in both of the last two elections and played a pivotal role in Trump and Biden's victories respectively, and is heavily contested by both campaigns this year. The election in Wisconsin will be decided by how much Trump can improve Republican margins in rural areas and how much Biden can improve Democratic margins in urban and suburban areas.</p>
+<p><b>Wisconsin (Leans Trump)</b>. Along with Michigan and Pennsylvania, Wisconsin is one of the three "blue wall" states that were traditionally Democratic until President Trump's upset victory in 2016 due to rural voters shifting towards the GOP. Similarly to Iowa, Democrats historically did well with rural voters in Wisconsin, particularly southwestern Wisconsin, but these areas have moved to be increasingly out of reach for Democrats. In 2020, President Biden won the Badger State by outperforming in traditionally Republican suburbs, particularly those around Milwaukee, despite Trump holding most of the GOP gains in rural areas. Wisconsin was decided by less than a point in both of the last two elections and played a pivotal role in Trump and Biden's victories respectively, and is heavily contested by both campaigns this year. The election in Wisconsin will be decided by how much Trump can improve Republican margins in rural areas and how much Biden can improve Democratic margins in urban and suburban areas.</p>
 <p>Find a bug or inconsistency? Feel free to shoot me an email!</p>
 <p><b><a title="Elections" href="../../"><< Back to Elections Home</a></b></p>
 <p>&nbsp;</p>
@@ -417,11 +443,11 @@ Rating: <b>Safe Trump</b>
 <table class="results-table">
 <tbody>
 <tr style="font-weight: bold; text-align: center;"><td style="text-align: left;">Model</td><td>Spread</td><td>Probability</td></tr>
-<tr><td>2018-OLS</td><td style="text-align: center;">--</td><td style="text-align: center;">Trump 74.2%</td></tr>
+<tr><td>2018-OLS</td><td style="text-align: center;">--</td><td style="text-align: center;">Trump 75.4%</td></tr>
 <tr><td>2018-LAD</td><td style="text-align: center;">--</td><td style="text-align: center;">--</td></tr>
-<tr><td>2012</td><td style="text-align: center;">Trump +5.3</td><td style="text-align: center;">--</td></tr>
+<tr><td>2012</td><td style="text-align: center;">Trump +5.5</td><td style="text-align: center;">--</td></tr>
 <tr><td>2018-M</td><td style="text-align: center;">--</td><td style="text-align: center;">--</td></tr>
-<tr><td>2020-NN-M</td><td style="text-align: center;">Trump +7.5</td><td style="text-align: center;">Trump 92.8%</td></tr>
+<tr><td>2020-NN-M</td><td style="text-align: center;">Trump +7.4</td><td style="text-align: center;">Trump 92.8%</td></tr>
 <tr><td>2020-NN-P</td><td style="text-align: center;">--</td><td style="text-align: center;">--</td></tr>
 <tr><td>2020-LINREG</td><td style="text-align: center;">--</td><td style="text-align: center;">--</td></tr>
 </tbody>
@@ -519,11 +545,11 @@ Rating: <b>Safe Biden</b>
 <table class="results-table">
 <tbody>
 <tr style="font-weight: bold; text-align: center;"><td style="text-align: left;">Model</td><td>Spread</td><td>Probability</td></tr>
-<tr><td>2018-OLS</td><td style="text-align: center;">--</td><td style="text-align: center;">Trump 92.6%</td></tr>
+<tr><td>2018-OLS</td><td style="text-align: center;">--</td><td style="text-align: center;">Trump 93.7%</td></tr>
 <tr><td>2018-LAD</td><td style="text-align: center;">--</td><td style="text-align: center;">--</td></tr>
-<tr><td>2012</td><td style="text-align: center;">Trump +6.3</td><td style="text-align: center;">--</td></tr>
+<tr><td>2012</td><td style="text-align: center;">Trump +6.2</td><td style="text-align: center;">--</td></tr>
 <tr><td>2018-M</td><td style="text-align: center;">--</td><td style="text-align: center;">--</td></tr>
-<tr><td>2020-NN-M</td><td style="text-align: center;">Trump +7.4</td><td style="text-align: center;">Trump 90.6%</td></tr>
+<tr><td>2020-NN-M</td><td style="text-align: center;">Trump +7.2</td><td style="text-align: center;">Trump 90.6%</td></tr>
 <tr><td>2020-NN-P</td><td style="text-align: center;">--</td><td style="text-align: center;">--</td></tr>
 <tr><td>2020-LINREG</td><td style="text-align: center;">--</td><td style="text-align: center;">--</td></tr>
 </tbody>
@@ -536,11 +562,11 @@ Rating: <b>Likely Trump</b>
 <table class="results-table">
 <tbody>
 <tr style="font-weight: bold; text-align: center;"><td style="text-align: left;">Model</td><td>Spread</td><td>Probability</td></tr>
-<tr><td>2018-OLS</td><td style="text-align: center;">--</td><td style="text-align: center;">Trump 63.9%</td></tr>
+<tr><td>2018-OLS</td><td style="text-align: center;">--</td><td style="text-align: center;">Trump 66.8%</td></tr>
 <tr><td>2018-LAD</td><td style="text-align: center;">--</td><td style="text-align: center;">--</td></tr>
-<tr><td>2012</td><td style="text-align: center;">Trump +3.7</td><td style="text-align: center;">--</td></tr>
+<tr><td>2012</td><td style="text-align: center;">Trump +3.8</td><td style="text-align: center;">--</td></tr>
 <tr><td>2018-M</td><td style="text-align: center;">--</td><td style="text-align: center;">--</td></tr>
-<tr><td>2020-NN-M</td><td style="text-align: center;">Trump +6.3</td><td style="text-align: center;">Trump 90.2%</td></tr>
+<tr><td>2020-NN-M</td><td style="text-align: center;">Trump +6.0</td><td style="text-align: center;">Trump 90.0%</td></tr>
 <tr><td>2020-NN-P</td><td style="text-align: center;">--</td><td style="text-align: center;">--</td></tr>
 <tr><td>2020-LINREG</td><td style="text-align: center;">--</td><td style="text-align: center;">--</td></tr>
 </tbody>
@@ -755,11 +781,11 @@ Rating: <b>Likely Trump</b>
 <table class="results-table">
 <tbody>
 <tr style="font-weight: bold; text-align: center;"><td style="text-align: left;">Model</td><td>Spread</td><td>Probability</td></tr>
-<tr><td>2018-OLS</td><td style="text-align: center;">--</td><td style="text-align: center;">Trump 52.0%</td></tr>
+<tr><td>2018-OLS</td><td style="text-align: center;">--</td><td style="text-align: center;">Trump 56.4%</td></tr>
 <tr><td>2018-LAD</td><td style="text-align: center;">--</td><td style="text-align: center;">--</td></tr>
-<tr><td>2012</td><td style="text-align: center;">Trump +0.9</td><td style="text-align: center;">--</td></tr>
+<tr><td>2012</td><td style="text-align: center;">Trump +1.8</td><td style="text-align: center;">--</td></tr>
 <tr><td>2018-M</td><td style="text-align: center;">--</td><td style="text-align: center;">--</td></tr>
-<tr><td>2020-NN-M</td><td style="text-align: center;">Trump +4.1</td><td style="text-align: center;">Trump 82.6%</td></tr>
+<tr><td>2020-NN-M</td><td style="text-align: center;">Trump +4.0</td><td style="text-align: center;">Trump 82.6%</td></tr>
 <tr><td>2020-NN-P</td><td style="text-align: center;">--</td><td style="text-align: center;">--</td></tr>
 <tr><td>2020-LINREG</td><td style="text-align: center;">--</td><td style="text-align: center;">--</td></tr>
 </tbody>
@@ -772,11 +798,11 @@ Rating: <b>Tossup</b>
 <table class="results-table">
 <tbody>
 <tr style="font-weight: bold; text-align: center;"><td style="text-align: left;">Model</td><td>Spread</td><td>Probability</td></tr>
-<tr><td>2018-OLS</td><td style="text-align: center;">--</td><td style="text-align: center;">Biden 59.1%</td></tr>
+<tr><td>2018-OLS</td><td style="text-align: center;">--</td><td style="text-align: center;">Biden 60.4%</td></tr>
 <tr><td>2018-LAD</td><td style="text-align: center;">--</td><td style="text-align: center;">--</td></tr>
-<tr><td>2012</td><td style="text-align: center;">Biden +2.0</td><td style="text-align: center;">--</td></tr>
+<tr><td>2012</td><td style="text-align: center;">Biden +2.4</td><td style="text-align: center;">--</td></tr>
 <tr><td>2018-M</td><td style="text-align: center;">--</td><td style="text-align: center;">--</td></tr>
-<tr><td>2020-NN-M</td><td style="text-align: center;">Biden +0.2</td><td style="text-align: center;">Biden 51.7%</td></tr>
+<tr><td>2020-NN-M</td><td style="text-align: center;">Biden +0.5</td><td style="text-align: center;">Biden 54.7%</td></tr>
 <tr><td>2020-NN-P</td><td style="text-align: center;">--</td><td style="text-align: center;">--</td></tr>
 <tr><td>2020-LINREG</td><td style="text-align: center;">--</td><td style="text-align: center;">--</td></tr>
 </tbody>
@@ -840,16 +866,16 @@ Rating: <b>Safe Trump</b>
 <table class="results-table">
 <tbody>
 <tr style="font-weight: bold; text-align: center;"><td style="text-align: left;">Model</td><td>Spread</td><td>Probability</td></tr>
-<tr><td>2018-OLS</td><td style="text-align: center;">--</td><td style="text-align: center;">Trump 73.1%</td></tr>
+<tr><td>2018-OLS</td><td style="text-align: center;">--</td><td style="text-align: center;">Trump 75.9%</td></tr>
 <tr><td>2018-LAD</td><td style="text-align: center;">--</td><td style="text-align: center;">--</td></tr>
-<tr><td>2012</td><td style="text-align: center;">Trump +4.7</td><td style="text-align: center;">--</td></tr>
+<tr><td>2012</td><td style="text-align: center;">Trump +5.3</td><td style="text-align: center;">--</td></tr>
 <tr><td>2018-M</td><td style="text-align: center;">--</td><td style="text-align: center;">--</td></tr>
-<tr><td>2020-NN-M</td><td style="text-align: center;">Trump +7.4</td><td style="text-align: center;">Trump 92.3%</td></tr>
+<tr><td>2020-NN-M</td><td style="text-align: center;">Trump +7.6</td><td style="text-align: center;">Trump 92.9%</td></tr>
 <tr><td>2020-NN-P</td><td style="text-align: center;">--</td><td style="text-align: center;">--</td></tr>
 <tr><td>2020-LINREG</td><td style="text-align: center;">--</td><td style="text-align: center;">--</td></tr>
 </tbody>
 </table>
-Rating: <b>Leans Trump</b>
+Rating: <b>Likely Trump</b>
 </div>
 
 <div id="ND-popup" class="popup">
@@ -906,11 +932,11 @@ Rating: <b>Tossup</b>
 <table class="results-table">
 <tbody>
 <tr style="font-weight: bold; text-align: center;"><td style="text-align: left;">Model</td><td>Spread</td><td>Probability</td></tr>
-<tr><td>2018-OLS</td><td style="text-align: center;">--</td><td style="text-align: center;">Biden 59.7%</td></tr>
+<tr><td>2018-OLS</td><td style="text-align: center;">--</td><td style="text-align: center;">Biden 57.3%</td></tr>
 <tr><td>2018-LAD</td><td style="text-align: center;">--</td><td style="text-align: center;">--</td></tr>
-<tr><td>2012</td><td style="text-align: center;">Biden +1.0</td><td style="text-align: center;">--</td></tr>
+<tr><td>2012</td><td style="text-align: center;">Biden +2.2</td><td style="text-align: center;">--</td></tr>
 <tr><td>2018-M</td><td style="text-align: center;">--</td><td style="text-align: center;">--</td></tr>
-<tr><td>2020-NN-M</td><td style="text-align: center;">Trump +0.8</td><td style="text-align: center;">Trump 56.9%</td></tr>
+<tr><td>2020-NN-M</td><td style="text-align: center;">Biden +0.3</td><td style="text-align: center;">Biden 52.4%</td></tr>
 <tr><td>2020-NN-P</td><td style="text-align: center;">--</td><td style="text-align: center;">--</td></tr>
 <tr><td>2020-LINREG</td><td style="text-align: center;">--</td><td style="text-align: center;">--</td></tr>
 </tbody>
@@ -932,7 +958,7 @@ Rating: <b>Tossup</b>
 <tr><td>2020-LINREG</td><td style="text-align: center;">--</td><td style="text-align: center;">--</td></tr>
 </tbody>
 </table>
-Rating: <b>Safe Biden</b>
+Rating: <b>Likely Biden</b>
 </div>
 
 <div id="NM-popup" class="popup">
@@ -949,7 +975,7 @@ Rating: <b>Safe Biden</b>
 <tr><td>2020-LINREG</td><td style="text-align: center;">--</td><td style="text-align: center;">--</td></tr>
 </tbody>
 </table>
-Rating: <b>Likely Biden</b>
+Rating: <b>Leans Biden</b>
 </div>
 
 <div id="NV-popup" class="popup">
@@ -957,16 +983,16 @@ Rating: <b>Likely Biden</b>
 <table class="results-table">
 <tbody>
 <tr style="font-weight: bold; text-align: center;"><td style="text-align: left;">Model</td><td>Spread</td><td>Probability</td></tr>
-<tr><td>2018-OLS</td><td style="text-align: center;">--</td><td style="text-align: center;">Trump 74.6%</td></tr>
+<tr><td>2018-OLS</td><td style="text-align: center;">--</td><td style="text-align: center;">Trump 77.9%</td></tr>
 <tr><td>2018-LAD</td><td style="text-align: center;">--</td><td style="text-align: center;">--</td></tr>
-<tr><td>2012</td><td style="text-align: center;">Trump +5.0</td><td style="text-align: center;">--</td></tr>
+<tr><td>2012</td><td style="text-align: center;">Trump +5.5</td><td style="text-align: center;">--</td></tr>
 <tr><td>2018-M</td><td style="text-align: center;">--</td><td style="text-align: center;">--</td></tr>
-<tr><td>2020-NN-M</td><td style="text-align: center;">Trump +6.9</td><td style="text-align: center;">Trump 91.3%</td></tr>
+<tr><td>2020-NN-M</td><td style="text-align: center;">Trump +7.5</td><td style="text-align: center;">Trump 93.0%</td></tr>
 <tr><td>2020-NN-P</td><td style="text-align: center;">--</td><td style="text-align: center;">--</td></tr>
 <tr><td>2020-LINREG</td><td style="text-align: center;">--</td><td style="text-align: center;">--</td></tr>
 </tbody>
 </table>
-Rating: <b>Tossup</b>
+Rating: <b>Leans Trump</b>
 </div>
 
 <div id="NY-popup" class="popup">
@@ -1042,16 +1068,16 @@ Rating: <b>Safe Biden</b>
 <table class="results-table">
 <tbody>
 <tr style="font-weight: bold; text-align: center;"><td style="text-align: left;">Model</td><td>Spread</td><td>Probability</td></tr>
-<tr><td>2018-OLS</td><td style="text-align: center;">--</td><td style="text-align: center;">Trump 77.3%</td></tr>
+<tr><td>2018-OLS</td><td style="text-align: center;">--</td><td style="text-align: center;">Trump 77.0%</td></tr>
 <tr><td>2018-LAD</td><td style="text-align: center;">--</td><td style="text-align: center;">--</td></tr>
-<tr><td>2012</td><td style="text-align: center;">Trump +4.5</td><td style="text-align: center;">--</td></tr>
+<tr><td>2012</td><td style="text-align: center;">Trump +4.4</td><td style="text-align: center;">--</td></tr>
 <tr><td>2018-M</td><td style="text-align: center;">--</td><td style="text-align: center;">--</td></tr>
-<tr><td>2020-NN-M</td><td style="text-align: center;">Trump +5.9</td><td style="text-align: center;">Trump 88.8%</td></tr>
+<tr><td>2020-NN-M</td><td style="text-align: center;">Trump +5.5</td><td style="text-align: center;">Trump 88.3%</td></tr>
 <tr><td>2020-NN-P</td><td style="text-align: center;">--</td><td style="text-align: center;">--</td></tr>
 <tr><td>2020-LINREG</td><td style="text-align: center;">--</td><td style="text-align: center;">--</td></tr>
 </tbody>
 </table>
-Rating: <b>Tossup</b>
+Rating: <b>Leans Trump</b>
 </div>
 
 <div id="RI-popup" class="popup">
@@ -1127,11 +1153,11 @@ Rating: <b>Safe Trump</b>
 <table class="results-table">
 <tbody>
 <tr style="font-weight: bold; text-align: center;"><td style="text-align: left;">Model</td><td>Spread</td><td>Probability</td></tr>
-<tr><td>2018-OLS</td><td style="text-align: center;">--</td><td style="text-align: center;">Trump 89.1%</td></tr>
+<tr><td>2018-OLS</td><td style="text-align: center;">--</td><td style="text-align: center;">Trump 87.4%</td></tr>
 <tr><td>2018-LAD</td><td style="text-align: center;">--</td><td style="text-align: center;">--</td></tr>
-<tr><td>2012</td><td style="text-align: center;">Trump +9.0</td><td style="text-align: center;">--</td></tr>
+<tr><td>2012</td><td style="text-align: center;">Trump +8.1</td><td style="text-align: center;">--</td></tr>
 <tr><td>2018-M</td><td style="text-align: center;">--</td><td style="text-align: center;">--</td></tr>
-<tr><td>2020-NN-M</td><td style="text-align: center;">Trump +11.0</td><td style="text-align: center;">Trump 96.8%</td></tr>
+<tr><td>2020-NN-M</td><td style="text-align: center;">Trump +10.2</td><td style="text-align: center;">Trump 96.1%</td></tr>
 <tr><td>2020-NN-P</td><td style="text-align: center;">--</td><td style="text-align: center;">--</td></tr>
 <tr><td>2020-LINREG</td><td style="text-align: center;">--</td><td style="text-align: center;">--</td></tr>
 </tbody>
@@ -1161,16 +1187,16 @@ Rating: <b>Safe Trump</b>
 <table class="results-table">
 <tbody>
 <tr style="font-weight: bold; text-align: center;"><td style="text-align: left;">Model</td><td>Spread</td><td>Probability</td></tr>
-<tr><td>2018-OLS</td><td style="text-align: center;">--</td><td style="text-align: center;">Biden 58.1%</td></tr>
+<tr><td>2018-OLS</td><td style="text-align: center;">--</td><td style="text-align: center;">Biden 51.3%</td></tr>
 <tr><td>2018-LAD</td><td style="text-align: center;">--</td><td style="text-align: center;">--</td></tr>
-<tr><td>2012</td><td style="text-align: center;">Biden +1.2</td><td style="text-align: center;">--</td></tr>
+<tr><td>2012</td><td style="text-align: center;">Trump +0.4</td><td style="text-align: center;">--</td></tr>
 <tr><td>2018-M</td><td style="text-align: center;">--</td><td style="text-align: center;">--</td></tr>
-<tr><td>2020-NN-M</td><td style="text-align: center;">Trump +1.2</td><td style="text-align: center;">Trump 60.2%</td></tr>
+<tr><td>2020-NN-M</td><td style="text-align: center;">Trump +3.1</td><td style="text-align: center;">Trump 76.3%</td></tr>
 <tr><td>2020-NN-P</td><td style="text-align: center;">--</td><td style="text-align: center;">--</td></tr>
 <tr><td>2020-LINREG</td><td style="text-align: center;">--</td><td style="text-align: center;">--</td></tr>
 </tbody>
 </table>
-Rating: <b>Leans Biden</b>
+Rating: <b>Tossup</b>
 </div>
 
 <div id="VT-popup" class="popup">
@@ -1212,16 +1238,16 @@ Rating: <b>Safe Biden</b>
 <table class="results-table">
 <tbody>
 <tr style="font-weight: bold; text-align: center;"><td style="text-align: left;">Model</td><td>Spread</td><td>Probability</td></tr>
-<tr><td>2018-OLS</td><td style="text-align: center;">--</td><td style="text-align: center;">Trump 61.6%</td></tr>
+<tr><td>2018-OLS</td><td style="text-align: center;">--</td><td style="text-align: center;">Trump 65.3%</td></tr>
 <tr><td>2018-LAD</td><td style="text-align: center;">--</td><td style="text-align: center;">--</td></tr>
-<tr><td>2012</td><td style="text-align: center;">Trump +2.4</td><td style="text-align: center;">--</td></tr>
+<tr><td>2012</td><td style="text-align: center;">Trump +3.0</td><td style="text-align: center;">--</td></tr>
 <tr><td>2018-M</td><td style="text-align: center;">--</td><td style="text-align: center;">--</td></tr>
-<tr><td>2020-NN-M</td><td style="text-align: center;">Trump +4.0</td><td style="text-align: center;">Trump 81.6%</td></tr>
+<tr><td>2020-NN-M</td><td style="text-align: center;">Trump +4.8</td><td style="text-align: center;">Trump 85.9%</td></tr>
 <tr><td>2020-NN-P</td><td style="text-align: center;">--</td><td style="text-align: center;">--</td></tr>
 <tr><td>2020-LINREG</td><td style="text-align: center;">--</td><td style="text-align: center;">--</td></tr>
 </tbody>
 </table>
-Rating: <b>Tossup</b>
+Rating: <b>Leans Trump</b>
 </div>
 
 <div id="WV-popup" class="popup">
