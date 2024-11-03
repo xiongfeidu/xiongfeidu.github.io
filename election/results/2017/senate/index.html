@@ -16,6 +16,8 @@
 <div class="dropdown dropdown-year dropdown-elem-year">
   <div class="dropbtn">2017<span style="float:right;">▼</span></div>
   <div class="dropdown-content dropdown-elem-year">
+    <a href="../../2024/senate">2024</a>
+    <a href="../../2022/senate">2022</a>
     <a href="../../2020/senate">2020</a>
     <a href="../../2018/senate">2018</a>
     <a href="../../2017/senate">2017</a>
@@ -6706,11 +6708,14 @@ Pre-election estimate: <b>Leans R</b>
   </div>
 </div>
 <div id="performance-buttons" class="no-height">
-  <div id="results-button" class="button margin-button" style="top: 507px;" onclick="colorCounties(current_fips, actual);">
-    See actual margins
+  <div id="early-margins-button" class="button margin-button" style="top: 457px;" onclick="colorCounties(current_fips, early_margins);">
+    See early-adjusted margins
   </div>
-  <div id="margins-button" class="button margin-button" style="top: 514px;" onclick="colorCounties(current_fips, margins);">
+  <div id="margins-button" class="button margin-button" style="top: 464px;" onclick="colorCounties(current_fips, margins);">
     See performance margins
+  </div>
+  <div id="results-button" class="button margin-button" style="top: 471px;" onclick="colorCounties(current_fips, actual);">
+    See actual margins
   </div>
 </div>
 <div id="spaceholder">
@@ -6817,9 +6822,13 @@ Pre-election estimate: <b>Leans R</b>
   }
   function showCountiesState(box, state, fips) {
     var model_states = ["AL"];
+    var early_model_states = [];
     if (model_states.includes(state)) {
       show('results-button');
       show('margins-button');
+      if (early_model_states.includes(state)) {
+        show('early-margins-button');
+      }
     }
     current_fips = fips;
     zoomCounties(box);
@@ -6858,6 +6867,7 @@ Pre-election estimate: <b>Leans R</b>
     }
     hide('results-button');
     hide('margins-button');
+    hide('early-margins-button');
   }
   function leaveState(stateId, resultsId) {
     if (document.getElementById('national-map').style.visibility === 'visible') {
@@ -6893,6 +6903,7 @@ Pre-election estimate: <b>Leans R</b>
   colorAll();
   var actual = {"c01001": "#C00000", "c01003": "#C00000", "c01005": "#0000FF", "c01007": "#C00000", "c01009": "#C00000", "c01011": "#0000C0", "c01013": "#6060FF", "c01015": "#FF0000", "c01017": "#0000FF", "c01019": "#C00000", "c01021": "#C00000", "c01023": "#3030FF", "c01025": "#6060FF", "c01027": "#C00000", "c01029": "#C00000", "c01031": "#C00000", "c01033": "#FF3030", "c01035": "#0000FF", "c01037": "#FF0000", "c01039": "#C00000", "c01041": "#C00000", "c01043": "#C00000", "c01045": "#C00000", "c01047": "#0000C0", "c01049": "#C00000", "c01051": "#C00000", "c01053": "#FF0000", "c01055": "#FF0000", "c01057": "#C00000", "c01059": "#C00000", "c01061": "#C00000", "c01063": "#0000C0", "c01065": "#0000C0", "c01067": "#C00000", "c01069": "#C00000", "c01071": "#C00000", "c01073": "#0000C0", "c01075": "#C00000", "c01077": "#FF0000", "c01079": "#C00000", "c01081": "#0000FF", "c01083": "#FF0000", "c01085": "#0000C0", "c01087": "#0000C0", "c01089": "#0000FF", "c01091": "#0000C0", "c01093": "#C00000", "c01095": "#C00000", "c01097": "#0000FF", "c01099": "#FF9090", "c01101": "#0000C0", "c01103": "#C00000", "c01105": "#0000C0", "c01107": "#9090FF", "c01109": "#FF6060", "c01111": "#C00000", "c01113": "#0000C0", "c01115": "#C00000", "c01117": "#FF0000", "c01119": "#0000C0", "c01121": "#9090FF", "c01123": "#C00000", "c01125": "#0000FF", "c01127": "#C00000", "c01129": "#C00000", "c01131": "#0000C0", "c01133": "#C00000"};
   var margins = {"c01001": "#FF9090", "c01003": "#3030FF", "c01005": "#FF0000", "c01007": "#FF0000", "c01009": "#FF0000", "c01011": "#FF0000", "c01013": "#FF0000", "c01015": "#FF9090", "c01017": "#FF3030", "c01019": "#FF0000", "c01021": "#FF0000", "c01023": "#FF3030", "c01025": "#FF3030", "c01027": "#FF0000", "c01029": "#FF0000", "c01031": "#FF3030", "c01033": "#FF6060", "c01035": "#FF0000", "c01037": "#FF0000", "c01039": "#FF0000", "c01041": "#FF0000", "c01043": "#FF0000", "c01045": "#FF3030", "c01047": "#FF0000", "c01049": "#FF0000", "c01051": "#FF3030", "c01053": "#FF3030", "c01055": "#FF6060", "c01057": "#C00000", "c01059": "#C00000", "c01061": "#FF0000", "c01063": "#FF0000", "c01065": "#FF3030", "c01067": "#FF0000", "c01069": "#FF6060", "c01071": "#FF0000", "c01073": "#3030FF", "c01075": "#C00000", "c01077": "#FF9090", "c01079": "#FF0000", "c01081": "#0000FF", "c01083": "#6060FF", "c01085": "#FF0000", "c01087": "#FF0000", "c01089": "#0000FF", "c01091": "#FF3030", "c01093": "#C00000", "c01095": "#FF3030", "c01097": "#9090FF", "c01099": "#FF0000", "c01101": "#FF6060", "c01103": "#FF6060", "c01105": "#FF0000", "c01107": "#FF0000", "c01109": "#FF0000", "c01111": "#FF0000", "c01113": "#9090FF", "c01115": "#FF6060", "c01117": "#0000FF", "c01119": "#FF0000", "c01121": "#FF6060", "c01123": "#FF0000", "c01125": "#3030FF", "c01127": "#FF0000", "c01129": "#FF0000", "c01131": "#FF0000", "c01133": "#C00000"};
+  var early_margins = {};
   function colorCounties(fips, colors) {
     if (!fips && fips !== "") {
       fips = current_fips;

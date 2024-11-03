@@ -16,6 +16,8 @@
 <div class="dropdown dropdown-year dropdown-elem-year">
   <div class="dropbtn">2020<span style="float:right;">▼</span></div>
   <div class="dropdown-content dropdown-elem-year">
+    <a href="../../2024/house">2024</a>
+    <a href="../../2022/house">2022</a>
     <a href="../../2020/house">2020</a>
     <a href="../../2018/house">2018</a>
     <a href="../../2016/house">2016</a>
@@ -542,11 +544,14 @@
   </div>
 </div>
 <div id="performance-buttons" class="no-height">
-  <div id="results-button" class="button margin-button" style="top: 507px;" onclick="colorCounties(current_fips, actual);">
-    See actual margins
+  <div id="early-margins-button" class="button margin-button" style="top: 457px;" onclick="colorCounties(current_fips, early_margins);">
+    See early-adjusted margins
   </div>
-  <div id="margins-button" class="button margin-button" style="top: 514px;" onclick="colorCounties(current_fips, margins);">
+  <div id="margins-button" class="button margin-button" style="top: 464px;" onclick="colorCounties(current_fips, margins);">
     See performance margins
+  </div>
+  <div id="results-button" class="button margin-button" style="top: 471px;" onclick="colorCounties(current_fips, actual);">
+    See actual margins
   </div>
 </div>
 <div id="spaceholder">
@@ -653,9 +658,13 @@
   }
   function showCountiesState(box, state, fips) {
     var model_states = [];
+    var early_model_states = [];
     if (model_states.includes(state)) {
       show('results-button');
       show('margins-button');
+      if (early_model_states.includes(state)) {
+        show('early-margins-button');
+      }
     }
     current_fips = fips;
     zoomCounties(box);
@@ -694,6 +703,7 @@
     }
     hide('results-button');
     hide('margins-button');
+    hide('early-margins-button');
   }
   function leaveState(stateId, resultsId) {
     if (document.getElementById('national-map').style.visibility === 'visible') {
@@ -729,6 +739,7 @@
   colorAll();
   var actual = {"c22d009": "#FF0000", "c22d021": "#C00000", "c22d025": "#C00000", "c22d029": "#C00000", "c22d035": "#C00000", "c22d037": "#FF3030", "c22d041": "#C00000", "c22d043": "#FF3030", "c22d049": "#C00000", "c22d059": "#C00000", "c22d061": "#C00000", "c22d065": "#C00000", "c22d067": "#C00000", "c22d073": "#C00000", "c22d079": "#FF00FF", "c22d083": "#C00000", "c22d091": "#C00000", "c22d097": "#C00000", "c22d105": "#FF0000", "c22d107": "#C00000", "c22d117": "#C00000", "c22d123": "#C00000", "c22d125": "#C00000", "c22d127": "#C00000"};
   var margins = {};
+  var early_margins = {};
   function colorCounties(fips, colors) {
     if (!fips && fips !== "") {
       fips = current_fips;
