@@ -730,7 +730,7 @@
   function setColor(id, color) {
     document.getElementById(id).style.fill = color;    
   }
-  var stateColors = {"AL-01": "#FF0000", "AL-02": "#0000FF", "AL-03": "#FF0000", "AL-04": "#FF0000", "AL-05": "#FF0000", "AL-06": "#FF0000", "AL-07": "#0000FF", "AK-AL": "#FF9090", "AZ-01": "#FF9090", "AZ-02": "#FF9090", "AZ-03": "#0000FF", "AZ-04": "#9090FF", "AZ-05": "#FF0000", "AZ-06": "#9090FF", "AZ-07": "#0000FF", "AZ-08": "#FF9090", "AZ-09": "#FF0000", "AR-01": "#FF0000", "AR-02": "#FF0000", "AR-03": "#FF0000", "AR-04": "#FF0000", "CA-01": "#FF0000", "CA-02": "#0000FF", "CA-03": "#FF0000", "CA-04": "#0000FF", "CA-05": "#FF0000", "CA-06": "#0000FF", "CA-07": "#0000FF", "CA-08": "#0000FF", "CA-09": "#9090FF", "CA-10": "#0000FF", "CA-11": "#0000FF", "CA-12": "#9090FF", "CA-13": "#FF9090", "CA-14": "#0000FF", "CA-15": "#0000FF", "CA-16": "#9090FF", "CA-17": "#0000FF", "CA-18": "#0000FF", "CA-19": "#0000FF", "CA-20": "#FF0000", "CA-21": "#9090FF", "CA-22": "#FF9090", "CA-23": "#FF0000", "CA-24": "#0000FF", "CA-25": "#9090FF", "CA-26": "#9090FF", "CA-27": "#FF9090", "CA-28": "#0000FF", "CA-29": "#0000FF", "CA-30": "#0000FF", "CA-31": "#0000FF", "CA-32": "#0000FF", "CA-33": "#0000FF", "CA-34": "#9090FF", "CA-35": "#0000FF", "CA-36": "#0000FF", "CA-37": "#0000FF", "CA-38": "#0000FF", "CA-39": "#9090FF", "CA-40": "#FF9090", "CA-41": "#FF9090", "CA-42": "#0000FF", "CA-43": "#0000FF", "CA-44": "#0000FF", "CA-45": "#FF9090", "CA-46": "#0000FF", "CA-47": "#FF9090", "CA-48": "#FF0000", "CA-49": "#9090FF", "CA-50": "#0000FF", "CA-51": "#0000FF", "CA-52": "#0000FF", "CO-01": "#0000FF", "CO-02": "#0000FF", "CO-03": "#FF9090", "CO-04": "#FF0000", "CO-05": "#FF0000", "CO-06": "#0000FF", "CO-07": "#0000FF", "CO-08": "#9090FF", "CT-01": "#0000FF", "CT-02": "#0000FF", "CT-03": "#0000FF", "CT-04": "#0000FF", "CT-05": "#0000FF", "DE-AL": "#0000FF", "FL-01": "#FF0000", "FL-02": "#FF0000", "FL-03": "#FF0000", "FL-04": "#FF0000", "FL-05": "#FF0000", "FL-06": "#FF0000", "FL-07": "#FF0000", "FL-08": "#FF0000", "FL-09": "#0000FF", "FL-10": "#0000FF", "FL-11": "#FF0000", "FL-12": "#FF0000", "FL-13": "#FF0000", "FL-14": "#0000FF", "FL-15": "#FF0000", "FL-16": "#FF0000", "FL-17": "#FF0000", "FL-18": "#FF0000", "FL-19": "#FF0000", "FL-20": "#0000FF", "FL-21": "#FF0000", "FL-22": "#0000FF", "FL-23": "#0000FF", "FL-24": "#0000FF", "FL-25": "#0000FF", "FL-26": "#FF0000", "FL-27": "#FF0000", "FL-28": "#FF0000", "GA-01": "#FF0000", "GA-02": "#0000FF", "GA-03": "#FF0000", "GA-04": "#0000FF", "GA-05": "#0000FF", "GA-06": "#0000FF", "GA-07": "#FF0000", "GA-08": "#FF0000", "GA-09": "#FF0000", "GA-10": "#FF0000", "GA-11": "#FF0000", "GA-12": "#FF0000", "GA-13": "#0000FF", "GA-14": "#FF0000", "HI-01": "#0000FF", "HI-02": "#0000FF", "ID-01": "#FF0000", "ID-02": "#FF0000", "IL-01": "#0000FF", "IL-02": "#0000FF", "IL-03": "#0000FF", "IL-04": "#0000FF", "IL-05": "#0000FF", "IL-06": "#0000FF", "IL-07": "#0000FF", "IL-08": "#0000FF", "IL-09": "#0000FF", "IL-10": "#0000FF", "IL-11": "#0000FF", "IL-12": "#FF0000", "IL-13": "#0000FF", "IL-14": "#0000FF", "IL-15": "#FF0000", "IL-16": "#FF0000", "IL-17": "#0000FF", "IN-01": "#0000FF", "IN-02": "#FF0000", "IN-03": "#FF0000", "IN-04": "#FF0000", "IN-05": "#FF0000", "IN-06": "#FF0000", "IN-07": "#0000FF", "IN-08": "#FF0000", "IN-09": "#FF0000", "IA-01": "#FF9090", "IA-02": "#FF0000", "IA-03": "#FF0000", "IA-04": "#FF0000", "KS-01": "#FF0000", "KS-02": "#FF0000", "KS-03": "#0000FF", "KS-04": "#FF0000", "KY-01": "#FF0000", "KY-02": "#FF0000", "KY-03": "#0000FF", "KY-04": "#FF0000", "KY-05": "#FF0000", "KY-06": "#FF0000", "LA-01": "#FF0000", "LA-02": "#0000FF", "LA-03": "#FF0000", "LA-04": "#FF0000", "LA-05": "#FF0000", "LA-06": "#9090FF", "ME-01": "#0000FF", "ME-02": "#9090FF", "MD-01": "#FF0000", "MD-02": "#0000FF", "MD-03": "#0000FF", "MD-04": "#0000FF", "MD-05": "#0000FF", "MD-06": "#9090FF", "MD-07": "#0000FF", "MD-08": "#0000FF", "MA-01": "#0000FF", "MA-02": "#0000FF", "MA-03": "#0000FF", "MA-04": "#0000FF", "MA-05": "#0000FF", "MA-06": "#0000FF", "MA-07": "#0000FF", "MA-08": "#0000FF", "MA-09": "#0000FF", "MI-01": "#FF0000", "MI-02": "#FF0000", "MI-03": "#0000FF", "MI-04": "#FF0000", "MI-05": "#FF0000", "MI-06": "#0000FF", "MI-07": "#FF0000", "MI-08": "#0000FF", "MI-09": "#FF0000", "MI-10": "#FF0000", "MI-11": "#0000FF", "MI-12": "#0000FF", "MI-13": "#0000FF", "MN-01": "#FF0000", "MN-02": "#0000FF", "MN-03": "#0000FF", "MN-04": "#0000FF", "MN-05": "#0000FF", "MN-06": "#FF0000", "MN-07": "#FF0000", "MN-08": "#FF0000", "MS-01": "#FF0000", "MS-02": "#0000FF", "MS-03": "#FF0000", "MS-04": "#FF0000", "MO-01": "#0000FF", "MO-02": "#FF0000", "MO-03": "#FF0000", "MO-04": "#FF0000", "MO-05": "#0000FF", "MO-06": "#FF0000", "MO-07": "#FF0000", "MO-08": "#FF0000", "MT-01": "#FF0000", "MT-02": "#FF0000", "NE-01": "#FF0000", "NE-02": "#FF9090", "NE-03": "#FF0000", "NV-01": "#9090FF", "NV-02": "#FF0000", "NV-03": "#9090FF", "NV-04": "#9090FF", "NH-01": "#0000FF", "NH-02": "#0000FF", "NJ-01": "#0000FF", "NJ-02": "#FF0000", "NJ-03": "#0000FF", "NJ-04": "#FF0000", "NJ-05": "#0000FF", "NJ-06": "#0000FF", "NJ-07": "#FF0000", "NJ-08": "#0000FF", "NJ-09": "#0000FF", "NJ-10": "#0000FF", "NJ-11": "#0000FF", "NJ-12": "#0000FF", "NM-01": "#0000FF", "NM-02": "#0000FF", "NM-03": "#0000FF", "NY-01": "#FF0000", "NY-02": "#FF0000", "NY-03": "#0000FF", "NY-04": "#9090FF", "NY-05": "#0000FF", "NY-06": "#0000FF", "NY-07": "#0000FF", "NY-08": "#0000FF", "NY-09": "#0000FF", "NY-10": "#0000FF", "NY-11": "#FF0000", "NY-12": "#0000FF", "NY-13": "#0000FF", "NY-14": "#0000FF", "NY-15": "#0000FF", "NY-16": "#0000FF", "NY-17": "#FF0000", "NY-18": "#0000FF", "NY-19": "#0000FF", "NY-20": "#0000FF", "NY-21": "#FF0000", "NY-22": "#0000FF", "NY-23": "#FF0000", "NY-24": "#FF0000", "NY-25": "#0000FF", "NY-26": "#0000FF", "NC-01": "#9090FF", "NC-02": "#0000FF", "NC-03": "#FF0000", "NC-04": "#0000FF", "NC-05": "#FF0000", "NC-06": "#FF0000", "NC-07": "#FF0000", "NC-08": "#FF0000", "NC-09": "#FF0000", "NC-10": "#FF0000", "NC-11": "#FF0000", "NC-12": "#0000FF", "NC-13": "#FF0000", "NC-14": "#FF0000", "ND-AL": "#FF0000", "OH-01": "#0000FF", "OH-02": "#FF0000", "OH-03": "#0000FF", "OH-04": "#FF0000", "OH-05": "#FF0000", "OH-06": "#FF0000", "OH-07": "#FF0000", "OH-08": "#FF0000", "OH-09": "#9090FF", "OH-10": "#FF0000", "OH-11": "#0000FF", "OH-12": "#FF0000", "OH-13": "#0000FF", "OH-14": "#FF0000", "OH-15": "#FF0000", "OK-01": "#FF0000", "OK-02": "#FF0000", "OK-03": "#FF0000", "OK-04": "#FF0000", "OK-05": "#FF0000", "OR-01": "#0000FF", "OR-02": "#FF0000", "OR-03": "#0000FF", "OR-04": "#9090FF", "OR-05": "#9090FF", "OR-06": "#9090FF", "PA-01": "#FF0000", "PA-02": "#0000FF", "PA-03": "#0000FF", "PA-04": "#0000FF", "PA-05": "#0000FF", "PA-06": "#0000FF", "PA-07": "#FF9090", "PA-08": "#FF9090", "PA-09": "#FF0000", "PA-10": "#FF9090", "PA-11": "#FF0000", "PA-12": "#0000FF", "PA-13": "#FF0000", "PA-14": "#FF0000", "PA-15": "#FF0000", "PA-16": "#FF0000", "PA-17": "#0000FF", "RI-01": "#0000FF", "RI-02": "#0000FF", "SC-01": "#FF0000", "SC-02": "#FF0000", "SC-03": "#FF0000", "SC-04": "#FF0000", "SC-05": "#FF0000", "SC-06": "#0000FF", "SC-07": "#FF0000", "SD-AL": "#FF0000", "TN-01": "#FF0000", "TN-02": "#FF0000", "TN-03": "#FF0000", "TN-04": "#FF0000", "TN-05": "#FF0000", "TN-06": "#FF0000", "TN-07": "#FF0000", "TN-08": "#FF0000", "TN-09": "#0000FF", "TX-01": "#FF0000", "TX-02": "#FF0000", "TX-03": "#FF0000", "TX-04": "#FF0000", "TX-05": "#FF0000", "TX-06": "#FF0000", "TX-07": "#0000FF", "TX-08": "#FF0000", "TX-09": "#0000FF", "TX-10": "#FF0000", "TX-11": "#FF0000", "TX-12": "#FF0000", "TX-13": "#FF0000", "TX-14": "#FF0000", "TX-15": "#FF0000", "TX-16": "#0000FF", "TX-17": "#FF0000", "TX-18": "#0000FF", "TX-19": "#FF0000", "TX-20": "#0000FF", "TX-21": "#FF0000", "TX-22": "#FF0000", "TX-23": "#FF0000", "TX-24": "#FF0000", "TX-25": "#FF0000", "TX-26": "#FF0000", "TX-27": "#FF0000", "TX-28": "#0000FF", "TX-29": "#0000FF", "TX-30": "#0000FF", "TX-31": "#FF0000", "TX-32": "#0000FF", "TX-33": "#0000FF", "TX-34": "#0000FF", "TX-35": "#0000FF", "TX-36": "#FF0000", "TX-37": "#0000FF", "TX-38": "#FF0000", "UT-01": "#FF0000", "UT-02": "#FF0000", "UT-03": "#FF0000", "UT-04": "#FF0000", "VT-AL": "#0000FF", "VA-01": "#FF0000", "VA-02": "#FF0000", "VA-03": "#0000FF", "VA-04": "#0000FF", "VA-05": "#FF0000", "VA-06": "#FF0000", "VA-07": "#0000FF", "VA-08": "#0000FF", "VA-09": "#FF0000", "VA-10": "#0000FF", "VA-11": "#0000FF", "WA-01": "#0000FF", "WA-02": "#0000FF", "WA-03": "#9090FF", "WA-04": "#FF9090", "WA-05": "#FF0000", "WA-06": "#0000FF", "WA-07": "#0000FF", "WA-08": "#9090FF", "WA-09": "#0000FF", "WA-10": "#0000FF", "WV-01": "#FF0000", "WV-02": "#FF0000", "WI-01": "#FF0000", "WI-02": "#0000FF", "WI-03": "#FF0000", "WI-04": "#0000FF", "WI-05": "#FF0000", "WI-06": "#FF0000", "WI-07": "#FF0000", "WI-08": "#FF0000", "WY-AL": "#FF0000"};
+  var stateColors = {"AL-01": "#FF0000", "AL-02": "#0000FF", "AL-03": "#FF0000", "AL-04": "#FF0000", "AL-05": "#FF0000", "AL-06": "#FF0000", "AL-07": "#0000FF", "AK-AL": "#FF9090", "AZ-01": "#FF9090", "AZ-02": "#FF9090", "AZ-03": "#0000FF", "AZ-04": "#9090FF", "AZ-05": "#FF0000", "AZ-06": "#FF9090", "AZ-07": "#0000FF", "AZ-08": "#FF9090", "AZ-09": "#FF0000", "AR-01": "#FF0000", "AR-02": "#FF0000", "AR-03": "#FF0000", "AR-04": "#FF0000", "CA-01": "#FF0000", "CA-02": "#0000FF", "CA-03": "#FF0000", "CA-04": "#0000FF", "CA-05": "#FF0000", "CA-06": "#0000FF", "CA-07": "#0000FF", "CA-08": "#0000FF", "CA-09": "#9090FF", "CA-10": "#0000FF", "CA-11": "#0000FF", "CA-12": "#9090FF", "CA-13": "#FF9090", "CA-14": "#0000FF", "CA-15": "#0000FF", "CA-16": "#9090FF", "CA-17": "#0000FF", "CA-18": "#0000FF", "CA-19": "#0000FF", "CA-20": "#FF0000", "CA-21": "#9090FF", "CA-22": "#FF9090", "CA-23": "#FF0000", "CA-24": "#0000FF", "CA-25": "#9090FF", "CA-26": "#9090FF", "CA-27": "#FF9090", "CA-28": "#0000FF", "CA-29": "#0000FF", "CA-30": "#0000FF", "CA-31": "#0000FF", "CA-32": "#0000FF", "CA-33": "#0000FF", "CA-34": "#9090FF", "CA-35": "#0000FF", "CA-36": "#0000FF", "CA-37": "#0000FF", "CA-38": "#0000FF", "CA-39": "#9090FF", "CA-40": "#FF9090", "CA-41": "#FF9090", "CA-42": "#0000FF", "CA-43": "#0000FF", "CA-44": "#0000FF", "CA-45": "#FF9090", "CA-46": "#0000FF", "CA-47": "#FF9090", "CA-48": "#FF0000", "CA-49": "#9090FF", "CA-50": "#0000FF", "CA-51": "#0000FF", "CA-52": "#0000FF", "CO-01": "#0000FF", "CO-02": "#0000FF", "CO-03": "#FF9090", "CO-04": "#FF0000", "CO-05": "#FF0000", "CO-06": "#0000FF", "CO-07": "#0000FF", "CO-08": "#9090FF", "CT-01": "#0000FF", "CT-02": "#0000FF", "CT-03": "#0000FF", "CT-04": "#0000FF", "CT-05": "#0000FF", "DE-AL": "#0000FF", "FL-01": "#FF0000", "FL-02": "#FF0000", "FL-03": "#FF0000", "FL-04": "#FF0000", "FL-05": "#FF0000", "FL-06": "#FF0000", "FL-07": "#FF0000", "FL-08": "#FF0000", "FL-09": "#0000FF", "FL-10": "#0000FF", "FL-11": "#FF0000", "FL-12": "#FF0000", "FL-13": "#FF0000", "FL-14": "#0000FF", "FL-15": "#FF0000", "FL-16": "#FF0000", "FL-17": "#FF0000", "FL-18": "#FF0000", "FL-19": "#FF0000", "FL-20": "#0000FF", "FL-21": "#FF0000", "FL-22": "#0000FF", "FL-23": "#0000FF", "FL-24": "#0000FF", "FL-25": "#0000FF", "FL-26": "#FF0000", "FL-27": "#FF0000", "FL-28": "#FF0000", "GA-01": "#FF0000", "GA-02": "#0000FF", "GA-03": "#FF0000", "GA-04": "#0000FF", "GA-05": "#0000FF", "GA-06": "#0000FF", "GA-07": "#FF0000", "GA-08": "#FF0000", "GA-09": "#FF0000", "GA-10": "#FF0000", "GA-11": "#FF0000", "GA-12": "#FF0000", "GA-13": "#0000FF", "GA-14": "#FF0000", "HI-01": "#0000FF", "HI-02": "#0000FF", "ID-01": "#FF0000", "ID-02": "#FF0000", "IL-01": "#0000FF", "IL-02": "#0000FF", "IL-03": "#0000FF", "IL-04": "#0000FF", "IL-05": "#0000FF", "IL-06": "#0000FF", "IL-07": "#0000FF", "IL-08": "#0000FF", "IL-09": "#0000FF", "IL-10": "#0000FF", "IL-11": "#0000FF", "IL-12": "#FF0000", "IL-13": "#0000FF", "IL-14": "#0000FF", "IL-15": "#FF0000", "IL-16": "#FF0000", "IL-17": "#0000FF", "IN-01": "#0000FF", "IN-02": "#FF0000", "IN-03": "#FF0000", "IN-04": "#FF0000", "IN-05": "#FF0000", "IN-06": "#FF0000", "IN-07": "#0000FF", "IN-08": "#FF0000", "IN-09": "#FF0000", "IA-01": "#FF9090", "IA-02": "#FF0000", "IA-03": "#FF0000", "IA-04": "#FF0000", "KS-01": "#FF0000", "KS-02": "#FF0000", "KS-03": "#0000FF", "KS-04": "#FF0000", "KY-01": "#FF0000", "KY-02": "#FF0000", "KY-03": "#0000FF", "KY-04": "#FF0000", "KY-05": "#FF0000", "KY-06": "#FF0000", "LA-01": "#FF0000", "LA-02": "#0000FF", "LA-03": "#FF0000", "LA-04": "#FF0000", "LA-05": "#FF0000", "LA-06": "#9090FF", "ME-01": "#0000FF", "ME-02": "#9090FF", "MD-01": "#FF0000", "MD-02": "#0000FF", "MD-03": "#0000FF", "MD-04": "#0000FF", "MD-05": "#0000FF", "MD-06": "#9090FF", "MD-07": "#0000FF", "MD-08": "#0000FF", "MA-01": "#0000FF", "MA-02": "#0000FF", "MA-03": "#0000FF", "MA-04": "#0000FF", "MA-05": "#0000FF", "MA-06": "#0000FF", "MA-07": "#0000FF", "MA-08": "#0000FF", "MA-09": "#0000FF", "MI-01": "#FF0000", "MI-02": "#FF0000", "MI-03": "#0000FF", "MI-04": "#FF0000", "MI-05": "#FF0000", "MI-06": "#0000FF", "MI-07": "#FF0000", "MI-08": "#0000FF", "MI-09": "#FF0000", "MI-10": "#FF0000", "MI-11": "#0000FF", "MI-12": "#0000FF", "MI-13": "#0000FF", "MN-01": "#FF0000", "MN-02": "#0000FF", "MN-03": "#0000FF", "MN-04": "#0000FF", "MN-05": "#0000FF", "MN-06": "#FF0000", "MN-07": "#FF0000", "MN-08": "#FF0000", "MS-01": "#FF0000", "MS-02": "#0000FF", "MS-03": "#FF0000", "MS-04": "#FF0000", "MO-01": "#0000FF", "MO-02": "#FF0000", "MO-03": "#FF0000", "MO-04": "#FF0000", "MO-05": "#0000FF", "MO-06": "#FF0000", "MO-07": "#FF0000", "MO-08": "#FF0000", "MT-01": "#FF0000", "MT-02": "#FF0000", "NE-01": "#FF0000", "NE-02": "#FF9090", "NE-03": "#FF0000", "NV-01": "#9090FF", "NV-02": "#FF0000", "NV-03": "#9090FF", "NV-04": "#9090FF", "NH-01": "#0000FF", "NH-02": "#0000FF", "NJ-01": "#0000FF", "NJ-02": "#FF0000", "NJ-03": "#0000FF", "NJ-04": "#FF0000", "NJ-05": "#0000FF", "NJ-06": "#0000FF", "NJ-07": "#FF0000", "NJ-08": "#0000FF", "NJ-09": "#0000FF", "NJ-10": "#0000FF", "NJ-11": "#0000FF", "NJ-12": "#0000FF", "NM-01": "#0000FF", "NM-02": "#0000FF", "NM-03": "#0000FF", "NY-01": "#FF0000", "NY-02": "#FF0000", "NY-03": "#0000FF", "NY-04": "#9090FF", "NY-05": "#0000FF", "NY-06": "#0000FF", "NY-07": "#0000FF", "NY-08": "#0000FF", "NY-09": "#0000FF", "NY-10": "#0000FF", "NY-11": "#FF0000", "NY-12": "#0000FF", "NY-13": "#0000FF", "NY-14": "#0000FF", "NY-15": "#0000FF", "NY-16": "#0000FF", "NY-17": "#FF0000", "NY-18": "#0000FF", "NY-19": "#0000FF", "NY-20": "#0000FF", "NY-21": "#FF0000", "NY-22": "#0000FF", "NY-23": "#FF0000", "NY-24": "#FF0000", "NY-25": "#0000FF", "NY-26": "#0000FF", "NC-01": "#9090FF", "NC-02": "#0000FF", "NC-03": "#FF0000", "NC-04": "#0000FF", "NC-05": "#FF0000", "NC-06": "#FF0000", "NC-07": "#FF0000", "NC-08": "#FF0000", "NC-09": "#FF0000", "NC-10": "#FF0000", "NC-11": "#FF0000", "NC-12": "#0000FF", "NC-13": "#FF0000", "NC-14": "#FF0000", "ND-AL": "#FF0000", "OH-01": "#0000FF", "OH-02": "#FF0000", "OH-03": "#0000FF", "OH-04": "#FF0000", "OH-05": "#FF0000", "OH-06": "#FF0000", "OH-07": "#FF0000", "OH-08": "#FF0000", "OH-09": "#9090FF", "OH-10": "#FF0000", "OH-11": "#0000FF", "OH-12": "#FF0000", "OH-13": "#0000FF", "OH-14": "#FF0000", "OH-15": "#FF0000", "OK-01": "#FF0000", "OK-02": "#FF0000", "OK-03": "#FF0000", "OK-04": "#FF0000", "OK-05": "#FF0000", "OR-01": "#0000FF", "OR-02": "#FF0000", "OR-03": "#0000FF", "OR-04": "#9090FF", "OR-05": "#9090FF", "OR-06": "#9090FF", "PA-01": "#FF0000", "PA-02": "#0000FF", "PA-03": "#0000FF", "PA-04": "#0000FF", "PA-05": "#0000FF", "PA-06": "#0000FF", "PA-07": "#FF9090", "PA-08": "#FF9090", "PA-09": "#FF0000", "PA-10": "#FF9090", "PA-11": "#FF0000", "PA-12": "#0000FF", "PA-13": "#FF0000", "PA-14": "#FF0000", "PA-15": "#FF0000", "PA-16": "#FF0000", "PA-17": "#0000FF", "RI-01": "#0000FF", "RI-02": "#0000FF", "SC-01": "#FF0000", "SC-02": "#FF0000", "SC-03": "#FF0000", "SC-04": "#FF0000", "SC-05": "#FF0000", "SC-06": "#0000FF", "SC-07": "#FF0000", "SD-AL": "#FF0000", "TN-01": "#FF0000", "TN-02": "#FF0000", "TN-03": "#FF0000", "TN-04": "#FF0000", "TN-05": "#FF0000", "TN-06": "#FF0000", "TN-07": "#FF0000", "TN-08": "#FF0000", "TN-09": "#0000FF", "TX-01": "#FF0000", "TX-02": "#FF0000", "TX-03": "#FF0000", "TX-04": "#FF0000", "TX-05": "#FF0000", "TX-06": "#FF0000", "TX-07": "#0000FF", "TX-08": "#FF0000", "TX-09": "#0000FF", "TX-10": "#FF0000", "TX-11": "#FF0000", "TX-12": "#FF0000", "TX-13": "#FF0000", "TX-14": "#FF0000", "TX-15": "#FF0000", "TX-16": "#0000FF", "TX-17": "#FF0000", "TX-18": "#0000FF", "TX-19": "#FF0000", "TX-20": "#0000FF", "TX-21": "#FF0000", "TX-22": "#FF0000", "TX-23": "#FF0000", "TX-24": "#FF0000", "TX-25": "#FF0000", "TX-26": "#FF0000", "TX-27": "#FF0000", "TX-28": "#0000FF", "TX-29": "#0000FF", "TX-30": "#0000FF", "TX-31": "#FF0000", "TX-32": "#0000FF", "TX-33": "#0000FF", "TX-34": "#0000FF", "TX-35": "#0000FF", "TX-36": "#FF0000", "TX-37": "#0000FF", "TX-38": "#FF0000", "UT-01": "#FF0000", "UT-02": "#FF0000", "UT-03": "#FF0000", "UT-04": "#FF0000", "VT-AL": "#0000FF", "VA-01": "#FF0000", "VA-02": "#FF0000", "VA-03": "#0000FF", "VA-04": "#0000FF", "VA-05": "#FF0000", "VA-06": "#FF0000", "VA-07": "#0000FF", "VA-08": "#0000FF", "VA-09": "#FF0000", "VA-10": "#0000FF", "VA-11": "#0000FF", "WA-01": "#0000FF", "WA-02": "#0000FF", "WA-03": "#9090FF", "WA-04": "#FF9090", "WA-05": "#FF0000", "WA-06": "#0000FF", "WA-07": "#0000FF", "WA-08": "#9090FF", "WA-09": "#0000FF", "WA-10": "#0000FF", "WV-01": "#FF0000", "WV-02": "#FF0000", "WI-01": "#FF0000", "WI-02": "#0000FF", "WI-03": "#FF0000", "WI-04": "#0000FF", "WI-05": "#FF0000", "WI-06": "#FF0000", "WI-07": "#FF0000", "WI-08": "#FF0000", "WY-AL": "#FF0000"};
   function colorAll() {
     for (var state in stateColors) {
       setColor(state, stateColors[state]);
@@ -1028,14 +1028,14 @@ Pre-election estimate: <b>Likely R</b>
 <td>Pct</td>
 
 </tr>
-<tr><td>Kirsten Engel</td><td>DEM</td><td class="votes">135,168</td><td class="pct">49.6</td></tr>
-<tr><td>Juan Ciscomani*</td><td>REP</td><td class="votes">131,607</td><td class="pct">48.3</td></tr>
-<tr><td>Athena Eastwood</td><td>GRE</td><td class="votes">5,712</td><td class="pct">2.1</td></tr>
+<tr><td>Juan Ciscomani*</td><td>REP</td><td class="votes">142,925</td><td class="pct">49.0</td></tr>
+<tr><td>Kirsten Engel</td><td>DEM</td><td class="votes">142,508</td><td class="pct">48.8</td></tr>
+<tr><td>Athena Eastwood</td><td>GRE</td><td class="votes">6,517</td><td class="pct">2.2</td></tr>
 </tbody>
 </table>
-59.5% of precincts reporting<br>
+63.6% of precincts reporting<br>
 Status: <b>Not called</b><br>
-Lead: <b>Engel +1.3</b><br>
+Lead: <b>Ciscomani +0.1</b><br>
 Pre-election estimate: <b>Leans R</b>
 </div>
 <div id="AZ-07-results" class="results">
@@ -1049,13 +1049,13 @@ Pre-election estimate: <b>Leans R</b>
 <td>Pct</td>
 
 </tr>
-<tr><td style="color: #fff" bgcolor="#0000FF">Raul Grijalva* ✔</td><td>DEM</td><td class="votes">95,826</td><td class="pct">63.8</td></tr>
-<tr><td>Daniel Butierez</td><td>REP</td><td class="votes">54,475</td><td class="pct">36.2</td></tr>
+<tr><td style="color: #fff" bgcolor="#0000FF">Raul Grijalva* ✔</td><td>DEM</td><td class="votes">106,376</td><td class="pct">63.0</td></tr>
+<tr><td>Daniel Butierez</td><td>REP</td><td class="votes">62,606</td><td class="pct">37.0</td></tr>
 </tbody>
 </table>
-48.5% of precincts reporting<br>
+54.9% of precincts reporting<br>
 Status: <b>Called for Grijalva (D)</b><br>
-Lead: <b>Grijalva +27.5</b><br>
+Lead: <b>Grijalva +25.9</b><br>
 Pre-election estimate: <b>Safe D</b>
 </div>
 <div id="AZ-08-results" class="results">
@@ -1971,8 +1971,8 @@ Pre-election estimate: <b>Safe D</b>
 <td>Pct</td>
 
 </tr>
-<tr><td>Young Kim*</td><td>REP</td><td class="votes">157,681</td><td class="pct">56.8</td></tr>
-<tr><td>Joe Kerr</td><td>DEM</td><td class="votes">119,706</td><td class="pct">43.2</td></tr>
+<tr><td>Young Kim*</td><td>REP</td><td class="votes">157,697</td><td class="pct">56.8</td></tr>
+<tr><td>Joe Kerr</td><td>DEM</td><td class="votes">119,711</td><td class="pct">43.2</td></tr>
 </tbody>
 </table>
 68.9% of precincts reporting<br>
@@ -2271,9 +2271,9 @@ Pre-election estimate: <b>Safe D</b>
 <td>Pct</td>
 
 </tr>
-<tr><td>Jeff Hurd</td><td>REP</td><td class="votes">184,787</td><td class="pct">50.1</td></tr>
-<tr><td>Adam Frisch</td><td>DEM</td><td class="votes">172,417</td><td class="pct">46.7</td></tr>
-<tr><td>James Wiley</td><td>LIB</td><td class="votes">9,297</td><td class="pct">2.5</td></tr>
+<tr><td>Jeff Hurd</td><td>REP</td><td class="votes">184,892</td><td class="pct">50.1</td></tr>
+<tr><td>Adam Frisch</td><td>DEM</td><td class="votes">172,479</td><td class="pct">46.7</td></tr>
+<tr><td>James Wiley</td><td>LIB</td><td class="votes">9,312</td><td class="pct">2.5</td></tr>
 </tbody>
 </table>
 88.4% of precincts reporting<br>
@@ -2353,14 +2353,14 @@ Pre-election estimate: <b>Safe D</b>
 <td>Pct</td>
 
 </tr>
-<tr><td style="color: #fff" bgcolor="#0000FF">Brittany Pettersen* ✔</td><td>DEM</td><td class="votes">230,298</td><td class="pct">55.5</td></tr>
-<tr><td>Sergei Matveyuk</td><td>REP</td><td class="votes">170,573</td><td class="pct">41.1</td></tr>
-<tr><td>Patrick Bohan</td><td>LIB</td><td class="votes">9,162</td><td class="pct">2.2</td></tr>
+<tr><td style="color: #fff" bgcolor="#0000FF">Brittany Pettersen* ✔</td><td>DEM</td><td class="votes">230,444</td><td class="pct">55.4</td></tr>
+<tr><td>Sergei Matveyuk</td><td>REP</td><td class="votes">171,039</td><td class="pct">41.1</td></tr>
+<tr><td>Patrick Bohan</td><td>LIB</td><td class="votes">9,187</td><td class="pct">2.2</td></tr>
 </tbody>
 </table>
 97.0% of precincts reporting<br>
 Status: <b>Called for Pettersen (D)</b><br>
-Lead: <b>Pettersen +14.4</b><br>
+Lead: <b>Pettersen +14.3</b><br>
 Pre-election estimate: <b>Likely D</b>
 </div>
 <div id="CO-08-results" class="results">
@@ -3400,7 +3400,7 @@ Pre-election estimate: <b>Safe D</b>
 <tr><td>Matt Loesby</td><td>LIB</td><td class="votes">9,393</td><td class="pct">2.1</td></tr>
 </tbody>
 </table>
-98.0% of precincts reporting<br>
+97.8% of precincts reporting<br>
 Status: <b>Called for Fulcher (R)</b><br>
 Lead: <b>Fulcher +46.4</b><br>
 Pre-election estimate: <b>Safe R</b>
@@ -4397,11 +4397,11 @@ Pre-election estimate: <b>Safe D</b>
 <td>Pct</td>
 
 </tr>
-<tr><td>Jared Forrest Golden*</td><td>DEM</td><td class="votes">181,634</td><td class="pct">50.2</td></tr>
-<tr><td>Austin Theriault</td><td>REP</td><td class="votes">178,921</td><td class="pct">49.5</td></tr>
+<tr><td>Jared Forrest Golden*</td><td>DEM</td><td class="votes">181,842</td><td class="pct">50.2</td></tr>
+<tr><td>Austin Theriault</td><td>REP</td><td class="votes">179,192</td><td class="pct">49.5</td></tr>
 </tbody>
 </table>
-84.1% of precincts reporting<br>
+84.3% of precincts reporting<br>
 Status: <b>Not called</b><br>
 Lead: <b>Golden +0.7</b><br>
 Pre-election estimate: <b>Leans R</b>
@@ -5477,7 +5477,7 @@ Pre-election estimate: <b>Safe R</b>
 <tr><td>Carol Blood</td><td>DEM</td><td class="votes">118,491</td><td class="pct">39.5</td></tr>
 </tbody>
 </table>
-98.6% of precincts reporting<br>
+98.8% of precincts reporting<br>
 Status: <b>Called for Flood (R)</b><br>
 Lead: <b>Flood +21.1</b><br>
 Pre-election estimate: <b>Likely R</b>
@@ -5821,7 +5821,7 @@ Pre-election estimate: <b>Safe D</b>
 <tr><td>Billy Prempeh</td><td>REP</td><td class="votes">113,020</td><td class="pct">46.2</td></tr>
 </tbody>
 </table>
-98.6% of precincts reporting<br>
+93.3% of precincts reporting<br>
 Status: <b>Called for Pou (D)</b><br>
 Lead: <b>Pou +4.4</b><br>
 Pre-election estimate: <b>Likely D</b>
@@ -7215,7 +7215,7 @@ Pre-election estimate: <b>Safe D</b>
 <tr><td>Michael Stettler</td><td>CON</td><td class="votes">10,172</td><td class="pct">3.1</td></tr>
 </tbody>
 </table>
-87.6% of precincts reporting<br>
+87.0% of precincts reporting<br>
 Status: <b>Called for Bentz (R)</b><br>
 Lead: <b>Bentz +31.3</b><br>
 Pre-election estimate: <b>Safe R</b>
@@ -7554,11 +7554,11 @@ Pre-election estimate: <b>Likely D</b>
 <td>Pct</td>
 
 </tr>
-<tr><td style="color: #fff" bgcolor="#FF0000">John Joyce* ✔</td><td>REP</td><td class="votes">267,229</td><td class="pct">74.1</td></tr>
-<tr><td>Beth Farnham</td><td>DEM</td><td class="votes">93,319</td><td class="pct">25.9</td></tr>
+<tr><td style="color: #fff" bgcolor="#FF0000">John Joyce* ✔</td><td>REP</td><td class="votes">268,662</td><td class="pct">74.1</td></tr>
+<tr><td>Beth Farnham</td><td>DEM</td><td class="votes">93,803</td><td class="pct">25.9</td></tr>
 </tbody>
 </table>
-87.6% of precincts reporting<br>
+88.0% of precincts reporting<br>
 Status: <b>Called for Joyce (R)</b><br>
 Lead: <b>Joyce +48.2</b><br>
 Pre-election estimate: <b>Safe R</b>
@@ -8805,7 +8805,7 @@ Pre-election estimate: <b>Likely R</b>
 <tr><td>Daniel Cottam</td><td>LIB</td><td class="votes">10,801</td><td class="pct">4.2</td></tr>
 </tbody>
 </table>
-74.3% of precincts reporting<br>
+71.9% of precincts reporting<br>
 Status: <b>Called for Moore (R)</b><br>
 Lead: <b>Moore +32.1</b><br>
 Pre-election estimate: <b>Safe R</b>
@@ -8821,9 +8821,9 @@ Pre-election estimate: <b>Safe R</b>
 <td>Pct</td>
 
 </tr>
-<tr><td style="color: #fff" bgcolor="#FF0000">Celeste Maloy* ✔</td><td>REP</td><td class="votes">152,339</td><td class="pct">59.8</td></tr>
-<tr><td>Nathaniel Woodward</td><td>DEM</td><td class="votes">84,162</td><td class="pct">33.0</td></tr>
-<tr><td>Cassie Easley</td><td>CON</td><td class="votes">13,332</td><td class="pct">5.2</td></tr>
+<tr><td style="color: #fff" bgcolor="#FF0000">Celeste Maloy* ✔</td><td>REP</td><td class="votes">152,343</td><td class="pct">59.8</td></tr>
+<tr><td>Nathaniel Woodward</td><td>DEM</td><td class="votes">84,165</td><td class="pct">33.0</td></tr>
+<tr><td>Cassie Easley</td><td>CON</td><td class="votes">13,334</td><td class="pct">5.2</td></tr>
 </tbody>
 </table>
 67.9% of precincts reporting<br>
@@ -8846,7 +8846,7 @@ Pre-election estimate: <b>Likely R</b>
 <tr><td>Glenn Wright</td><td>DEM</td><td class="votes">81,373</td><td class="pct">34.7</td></tr>
 </tbody>
 </table>
-59.4% of precincts reporting<br>
+58.9% of precincts reporting<br>
 Status: <b>Called for Kennedy (R)</b><br>
 Lead: <b>Kennedy +30.6</b><br>
 Pre-election estimate: <b>Safe R</b>
@@ -9131,7 +9131,7 @@ Pre-election estimate: <b>Safe D</b>
 <tr><td>Jeb Brewer</td><td>REP</td><td class="votes">87,504</td><td class="pct">35.4</td></tr>
 </tbody>
 </table>
-76.6% of precincts reporting<br>
+75.8% of precincts reporting<br>
 Status: <b>Called for DelBene (D)</b><br>
 Lead: <b>DelBene +29.1</b><br>
 Pre-election estimate: <b>Safe D</b>
@@ -9147,11 +9147,11 @@ Pre-election estimate: <b>Safe D</b>
 <td>Pct</td>
 
 </tr>
-<tr><td style="color: #fff" bgcolor="#0000FF">Rick Larsen* ✔</td><td>DEM</td><td class="votes">171,764</td><td class="pct">64.5</td></tr>
-<tr><td>Cody Hart</td><td>REP</td><td class="votes">94,513</td><td class="pct">35.5</td></tr>
+<tr><td style="color: #fff" bgcolor="#0000FF">Rick Larsen* ✔</td><td>DEM</td><td class="votes">172,096</td><td class="pct">64.5</td></tr>
+<tr><td>Cody Hart</td><td>REP</td><td class="votes">94,753</td><td class="pct">35.5</td></tr>
 </tbody>
 </table>
-71.0% of precincts reporting<br>
+71.1% of precincts reporting<br>
 Status: <b>Called for Larsen (D)</b><br>
 Lead: <b>Larsen +29.0</b><br>
 Pre-election estimate: <b>Safe D</b>
@@ -9191,7 +9191,7 @@ Pre-election estimate: <b>Leans R</b>
 <tr><td>Jerrod Sessler</td><td>REP</td><td class="votes">81,292</td><td class="pct">48.7</td></tr>
 </tbody>
 </table>
-65.7% of precincts reporting<br>
+67.6% of precincts reporting<br>
 Status: <b>Likely Newhouse (R) <span style="color: #FF0000">⬛</span></b><br>
 Lead: <b>Newhouse +2.6</b><br>
 Pre-election estimate: <b>Safe R</b>
@@ -9227,13 +9227,13 @@ Pre-election estimate: <b>Likely R</b>
 <td>Pct</td>
 
 </tr>
-<tr><td style="color: #fff" bgcolor="#0000FF">Emily Randall ✔</td><td>DEM</td><td class="votes">167,827</td><td class="pct">57.4</td></tr>
-<tr><td>Drew MacEwen</td><td>REP</td><td class="votes">124,717</td><td class="pct">42.6</td></tr>
+<tr><td style="color: #fff" bgcolor="#0000FF">Emily Randall ✔</td><td>DEM</td><td class="votes">172,733</td><td class="pct">57.2</td></tr>
+<tr><td>Drew MacEwen</td><td>REP</td><td class="votes">129,126</td><td class="pct">42.8</td></tr>
 </tbody>
 </table>
-73.2% of precincts reporting<br>
+70.3% of precincts reporting<br>
 Status: <b>Called for Randall (D)</b><br>
-Lead: <b>Randall +14.7</b><br>
+Lead: <b>Randall +14.4</b><br>
 Pre-election estimate: <b>Likely D</b>
 </div>
 <div id="WA-07-results" class="results">
@@ -9251,7 +9251,7 @@ Pre-election estimate: <b>Likely D</b>
 <tr><td>Dan Alexander</td><td>REP</td><td class="votes">47,155</td><td class="pct">15.1</td></tr>
 </tbody>
 </table>
-82.1% of precincts reporting<br>
+80.0% of precincts reporting<br>
 Status: <b>Called for Jayapal (D)</b><br>
 Lead: <b>Jayapal +69.9</b><br>
 Pre-election estimate: <b>Safe D</b>
@@ -9271,7 +9271,7 @@ Pre-election estimate: <b>Safe D</b>
 <tr><td>Carmen Goers</td><td>REP</td><td class="votes">140,083</td><td class="pct">45.3</td></tr>
 </tbody>
 </table>
-76.1% of precincts reporting<br>
+75.1% of precincts reporting<br>
 Status: <b>Not called</b><br>
 Lead: <b>Schrier +9.5</b><br>
 Pre-election estimate: <b>Leans D</b>
@@ -9291,7 +9291,7 @@ Pre-election estimate: <b>Leans D</b>
 <tr><td>Melissa Chaudhry</td><td>DEM</td><td class="votes">60,658</td><td class="pct">30.1</td></tr>
 </tbody>
 </table>
-82.0% of precincts reporting<br>
+80.0% of precincts reporting<br>
 Status: <b>Called for Smith (D)</b><br>
 Lead: <b>Smith +39.8</b><br>
 Pre-election estimate: <b>Safe D</b>
@@ -9413,7 +9413,7 @@ Pre-election estimate: <b>Safe D</b>
 <tr><td>Rebecca Cooke</td><td>DEM</td><td class="votes">200,556</td><td class="pct">48.6</td></tr>
 </tbody>
 </table>
-99.8% of precincts reporting<br>
+100.0% of precincts reporting<br>
 Status: <b>Called for Van Orden (R)</b><br>
 Lead: <b>Van Orden +2.7</b><br>
 Pre-election estimate: <b>Leans R</b>
@@ -9494,7 +9494,7 @@ Pre-election estimate: <b>Likely R</b>
 <tr><td>Kyle Kilbourn</td><td>DEM</td><td class="votes">156,730</td><td class="pct">36.4</td></tr>
 </tbody>
 </table>
-95.2% of precincts reporting<br>
+100.0% of precincts reporting<br>
 Status: <b>Called for Tiffany (R)</b><br>
 Lead: <b>Tiffany +27.2</b><br>
 Pre-election estimate: <b>Likely R</b>
