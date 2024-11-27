@@ -730,7 +730,7 @@
   function setColor(id, color) {
     document.getElementById(id).style.fill = color;    
   }
-  var stateColors = {"AL-01": "#FF0000", "AL-02": "#0000FF", "AL-03": "#FF0000", "AL-04": "#FF0000", "AL-05": "#FF0000", "AL-06": "#FF0000", "AL-07": "#0000FF", "AK-AL": "#FF0000", "AZ-01": "#FF0000", "AZ-02": "#FF0000", "AZ-03": "#0000FF", "AZ-04": "#0000FF", "AZ-05": "#FF0000", "AZ-06": "#FF0000", "AZ-07": "#0000FF", "AZ-08": "#FF0000", "AZ-09": "#FF0000", "AR-01": "#FF0000", "AR-02": "#FF0000", "AR-03": "#FF0000", "AR-04": "#FF0000", "CA-01": "#FF0000", "CA-02": "#0000FF", "CA-03": "#FF0000", "CA-04": "#0000FF", "CA-05": "#FF0000", "CA-06": "#0000FF", "CA-07": "#0000FF", "CA-08": "#0000FF", "CA-09": "#0000FF", "CA-10": "#0000FF", "CA-11": "#0000FF", "CA-12": "#0000FF", "CA-13": "#FF9090", "CA-14": "#0000FF", "CA-15": "#0000FF", "CA-16": "#0000FF", "CA-17": "#0000FF", "CA-18": "#0000FF", "CA-19": "#0000FF", "CA-20": "#FF0000", "CA-21": "#0000FF", "CA-22": "#FF0000", "CA-23": "#FF0000", "CA-24": "#0000FF", "CA-25": "#0000FF", "CA-26": "#0000FF", "CA-27": "#0000FF", "CA-28": "#0000FF", "CA-29": "#0000FF", "CA-30": "#0000FF", "CA-31": "#0000FF", "CA-32": "#0000FF", "CA-33": "#0000FF", "CA-34": "#0000FF", "CA-35": "#0000FF", "CA-36": "#0000FF", "CA-37": "#0000FF", "CA-38": "#0000FF", "CA-39": "#0000FF", "CA-40": "#FF0000", "CA-41": "#FF0000", "CA-42": "#0000FF", "CA-43": "#0000FF", "CA-44": "#0000FF", "CA-45": "#9090FF", "CA-46": "#0000FF", "CA-47": "#0000FF", "CA-48": "#FF0000", "CA-49": "#0000FF", "CA-50": "#0000FF", "CA-51": "#0000FF", "CA-52": "#0000FF", "CO-01": "#0000FF", "CO-02": "#0000FF", "CO-03": "#FF0000", "CO-04": "#FF0000", "CO-05": "#FF0000", "CO-06": "#0000FF", "CO-07": "#0000FF", "CO-08": "#FF0000", "CT-01": "#0000FF", "CT-02": "#0000FF", "CT-03": "#0000FF", "CT-04": "#0000FF", "CT-05": "#0000FF", "DE-AL": "#0000FF", "FL-01": "#FF0000", "FL-02": "#FF0000", "FL-03": "#FF0000", "FL-04": "#FF0000", "FL-05": "#FF0000", "FL-06": "#FF0000", "FL-07": "#FF0000", "FL-08": "#FF0000", "FL-09": "#0000FF", "FL-10": "#0000FF", "FL-11": "#FF0000", "FL-12": "#FF0000", "FL-13": "#FF0000", "FL-14": "#0000FF", "FL-15": "#FF0000", "FL-16": "#FF0000", "FL-17": "#FF0000", "FL-18": "#FF0000", "FL-19": "#FF0000", "FL-20": "#0000FF", "FL-21": "#FF0000", "FL-22": "#0000FF", "FL-23": "#0000FF", "FL-24": "#0000FF", "FL-25": "#0000FF", "FL-26": "#FF0000", "FL-27": "#FF0000", "FL-28": "#FF0000", "GA-01": "#FF0000", "GA-02": "#0000FF", "GA-03": "#FF0000", "GA-04": "#0000FF", "GA-05": "#0000FF", "GA-06": "#0000FF", "GA-07": "#FF0000", "GA-08": "#FF0000", "GA-09": "#FF0000", "GA-10": "#FF0000", "GA-11": "#FF0000", "GA-12": "#FF0000", "GA-13": "#0000FF", "GA-14": "#FF0000", "HI-01": "#0000FF", "HI-02": "#0000FF", "ID-01": "#FF0000", "ID-02": "#FF0000", "IL-01": "#0000FF", "IL-02": "#0000FF", "IL-03": "#0000FF", "IL-04": "#0000FF", "IL-05": "#0000FF", "IL-06": "#0000FF", "IL-07": "#0000FF", "IL-08": "#0000FF", "IL-09": "#0000FF", "IL-10": "#0000FF", "IL-11": "#0000FF", "IL-12": "#FF0000", "IL-13": "#0000FF", "IL-14": "#0000FF", "IL-15": "#FF0000", "IL-16": "#FF0000", "IL-17": "#0000FF", "IN-01": "#0000FF", "IN-02": "#FF0000", "IN-03": "#FF0000", "IN-04": "#FF0000", "IN-05": "#FF0000", "IN-06": "#FF0000", "IN-07": "#0000FF", "IN-08": "#FF0000", "IN-09": "#FF0000", "IA-01": "#FF9090", "IA-02": "#FF0000", "IA-03": "#FF0000", "IA-04": "#FF0000", "KS-01": "#FF0000", "KS-02": "#FF0000", "KS-03": "#0000FF", "KS-04": "#FF0000", "KY-01": "#FF0000", "KY-02": "#FF0000", "KY-03": "#0000FF", "KY-04": "#FF0000", "KY-05": "#FF0000", "KY-06": "#FF0000", "LA-01": "#FF0000", "LA-02": "#0000FF", "LA-03": "#FF0000", "LA-04": "#FF0000", "LA-05": "#FF0000", "LA-06": "#0000FF", "ME-01": "#0000FF", "ME-02": "#0000FF", "MD-01": "#FF0000", "MD-02": "#0000FF", "MD-03": "#0000FF", "MD-04": "#0000FF", "MD-05": "#0000FF", "MD-06": "#0000FF", "MD-07": "#0000FF", "MD-08": "#0000FF", "MA-01": "#0000FF", "MA-02": "#0000FF", "MA-03": "#0000FF", "MA-04": "#0000FF", "MA-05": "#0000FF", "MA-06": "#0000FF", "MA-07": "#0000FF", "MA-08": "#0000FF", "MA-09": "#0000FF", "MI-01": "#FF0000", "MI-02": "#FF0000", "MI-03": "#0000FF", "MI-04": "#FF0000", "MI-05": "#FF0000", "MI-06": "#0000FF", "MI-07": "#FF0000", "MI-08": "#0000FF", "MI-09": "#FF0000", "MI-10": "#FF0000", "MI-11": "#0000FF", "MI-12": "#0000FF", "MI-13": "#0000FF", "MN-01": "#FF0000", "MN-02": "#0000FF", "MN-03": "#0000FF", "MN-04": "#0000FF", "MN-05": "#0000FF", "MN-06": "#FF0000", "MN-07": "#FF0000", "MN-08": "#FF0000", "MS-01": "#FF0000", "MS-02": "#0000FF", "MS-03": "#FF0000", "MS-04": "#FF0000", "MO-01": "#0000FF", "MO-02": "#FF0000", "MO-03": "#FF0000", "MO-04": "#FF0000", "MO-05": "#0000FF", "MO-06": "#FF0000", "MO-07": "#FF0000", "MO-08": "#FF0000", "MT-01": "#FF0000", "MT-02": "#FF0000", "NE-01": "#FF0000", "NE-02": "#FF0000", "NE-03": "#FF0000", "NV-01": "#0000FF", "NV-02": "#FF0000", "NV-03": "#0000FF", "NV-04": "#0000FF", "NH-01": "#0000FF", "NH-02": "#0000FF", "NJ-01": "#0000FF", "NJ-02": "#FF0000", "NJ-03": "#0000FF", "NJ-04": "#FF0000", "NJ-05": "#0000FF", "NJ-06": "#0000FF", "NJ-07": "#FF0000", "NJ-08": "#0000FF", "NJ-09": "#0000FF", "NJ-10": "#0000FF", "NJ-11": "#0000FF", "NJ-12": "#0000FF", "NM-01": "#0000FF", "NM-02": "#0000FF", "NM-03": "#0000FF", "NY-01": "#FF0000", "NY-02": "#FF0000", "NY-03": "#0000FF", "NY-04": "#0000FF", "NY-05": "#0000FF", "NY-06": "#0000FF", "NY-07": "#0000FF", "NY-08": "#0000FF", "NY-09": "#0000FF", "NY-10": "#0000FF", "NY-11": "#FF0000", "NY-12": "#0000FF", "NY-13": "#0000FF", "NY-14": "#0000FF", "NY-15": "#0000FF", "NY-16": "#0000FF", "NY-17": "#FF0000", "NY-18": "#0000FF", "NY-19": "#0000FF", "NY-20": "#0000FF", "NY-21": "#FF0000", "NY-22": "#0000FF", "NY-23": "#FF0000", "NY-24": "#FF0000", "NY-25": "#0000FF", "NY-26": "#0000FF", "NC-01": "#0000FF", "NC-02": "#0000FF", "NC-03": "#FF0000", "NC-04": "#0000FF", "NC-05": "#FF0000", "NC-06": "#FF0000", "NC-07": "#FF0000", "NC-08": "#FF0000", "NC-09": "#FF0000", "NC-10": "#FF0000", "NC-11": "#FF0000", "NC-12": "#0000FF", "NC-13": "#FF0000", "NC-14": "#FF0000", "ND-AL": "#FF0000", "OH-01": "#0000FF", "OH-02": "#FF0000", "OH-03": "#0000FF", "OH-04": "#FF0000", "OH-05": "#FF0000", "OH-06": "#FF0000", "OH-07": "#FF0000", "OH-08": "#FF0000", "OH-09": "#0000FF", "OH-10": "#FF0000", "OH-11": "#0000FF", "OH-12": "#FF0000", "OH-13": "#0000FF", "OH-14": "#FF0000", "OH-15": "#FF0000", "OK-01": "#FF0000", "OK-02": "#FF0000", "OK-03": "#FF0000", "OK-04": "#FF0000", "OK-05": "#FF0000", "OR-01": "#0000FF", "OR-02": "#FF0000", "OR-03": "#0000FF", "OR-04": "#0000FF", "OR-05": "#0000FF", "OR-06": "#0000FF", "PA-01": "#FF0000", "PA-02": "#0000FF", "PA-03": "#0000FF", "PA-04": "#0000FF", "PA-05": "#0000FF", "PA-06": "#0000FF", "PA-07": "#FF0000", "PA-08": "#FF0000", "PA-09": "#FF0000", "PA-10": "#FF0000", "PA-11": "#FF0000", "PA-12": "#0000FF", "PA-13": "#FF0000", "PA-14": "#FF0000", "PA-15": "#FF0000", "PA-16": "#FF0000", "PA-17": "#0000FF", "RI-01": "#0000FF", "RI-02": "#0000FF", "SC-01": "#FF0000", "SC-02": "#FF0000", "SC-03": "#FF0000", "SC-04": "#FF0000", "SC-05": "#FF0000", "SC-06": "#0000FF", "SC-07": "#FF0000", "SD-AL": "#FF0000", "TN-01": "#FF0000", "TN-02": "#FF0000", "TN-03": "#FF0000", "TN-04": "#FF0000", "TN-05": "#FF0000", "TN-06": "#FF0000", "TN-07": "#FF0000", "TN-08": "#FF0000", "TN-09": "#0000FF", "TX-01": "#FF0000", "TX-02": "#FF0000", "TX-03": "#FF0000", "TX-04": "#FF0000", "TX-05": "#FF0000", "TX-06": "#FF0000", "TX-07": "#0000FF", "TX-08": "#FF0000", "TX-09": "#0000FF", "TX-10": "#FF0000", "TX-11": "#FF0000", "TX-12": "#FF0000", "TX-13": "#FF0000", "TX-14": "#FF0000", "TX-15": "#FF0000", "TX-16": "#0000FF", "TX-17": "#FF0000", "TX-18": "#0000FF", "TX-19": "#FF0000", "TX-20": "#0000FF", "TX-21": "#FF0000", "TX-22": "#FF0000", "TX-23": "#FF0000", "TX-24": "#FF0000", "TX-25": "#FF0000", "TX-26": "#FF0000", "TX-27": "#FF0000", "TX-28": "#0000FF", "TX-29": "#0000FF", "TX-30": "#0000FF", "TX-31": "#FF0000", "TX-32": "#0000FF", "TX-33": "#0000FF", "TX-34": "#0000FF", "TX-35": "#0000FF", "TX-36": "#FF0000", "TX-37": "#0000FF", "TX-38": "#FF0000", "UT-01": "#FF0000", "UT-02": "#FF0000", "UT-03": "#FF0000", "UT-04": "#FF0000", "VT-AL": "#0000FF", "VA-01": "#FF0000", "VA-02": "#FF0000", "VA-03": "#0000FF", "VA-04": "#0000FF", "VA-05": "#FF0000", "VA-06": "#FF0000", "VA-07": "#0000FF", "VA-08": "#0000FF", "VA-09": "#FF0000", "VA-10": "#0000FF", "VA-11": "#0000FF", "WA-01": "#0000FF", "WA-02": "#0000FF", "WA-03": "#0000FF", "WA-04": "#FF0000", "WA-05": "#FF0000", "WA-06": "#0000FF", "WA-07": "#0000FF", "WA-08": "#0000FF", "WA-09": "#0000FF", "WA-10": "#0000FF", "WV-01": "#FF0000", "WV-02": "#FF0000", "WI-01": "#FF0000", "WI-02": "#0000FF", "WI-03": "#FF0000", "WI-04": "#0000FF", "WI-05": "#FF0000", "WI-06": "#FF0000", "WI-07": "#FF0000", "WI-08": "#FF0000", "WY-AL": "#FF0000"};
+  var stateColors = {"AL-01": "#FF0000", "AL-02": "#0000FF", "AL-03": "#FF0000", "AL-04": "#FF0000", "AL-05": "#FF0000", "AL-06": "#FF0000", "AL-07": "#0000FF", "AK-AL": "#FF0000", "AZ-01": "#FF0000", "AZ-02": "#FF0000", "AZ-03": "#0000FF", "AZ-04": "#0000FF", "AZ-05": "#FF0000", "AZ-06": "#FF0000", "AZ-07": "#0000FF", "AZ-08": "#FF0000", "AZ-09": "#FF0000", "AR-01": "#FF0000", "AR-02": "#FF0000", "AR-03": "#FF0000", "AR-04": "#FF0000", "CA-01": "#FF0000", "CA-02": "#0000FF", "CA-03": "#FF0000", "CA-04": "#0000FF", "CA-05": "#FF0000", "CA-06": "#0000FF", "CA-07": "#0000FF", "CA-08": "#0000FF", "CA-09": "#0000FF", "CA-10": "#0000FF", "CA-11": "#0000FF", "CA-12": "#0000FF", "CA-13": "#9090FF", "CA-14": "#0000FF", "CA-15": "#0000FF", "CA-16": "#0000FF", "CA-17": "#0000FF", "CA-18": "#0000FF", "CA-19": "#0000FF", "CA-20": "#FF0000", "CA-21": "#0000FF", "CA-22": "#FF0000", "CA-23": "#FF0000", "CA-24": "#0000FF", "CA-25": "#0000FF", "CA-26": "#0000FF", "CA-27": "#0000FF", "CA-28": "#0000FF", "CA-29": "#0000FF", "CA-30": "#0000FF", "CA-31": "#0000FF", "CA-32": "#0000FF", "CA-33": "#0000FF", "CA-34": "#0000FF", "CA-35": "#0000FF", "CA-36": "#0000FF", "CA-37": "#0000FF", "CA-38": "#0000FF", "CA-39": "#0000FF", "CA-40": "#FF0000", "CA-41": "#FF0000", "CA-42": "#0000FF", "CA-43": "#0000FF", "CA-44": "#0000FF", "CA-45": "#9090FF", "CA-46": "#0000FF", "CA-47": "#0000FF", "CA-48": "#FF0000", "CA-49": "#0000FF", "CA-50": "#0000FF", "CA-51": "#0000FF", "CA-52": "#0000FF", "CO-01": "#0000FF", "CO-02": "#0000FF", "CO-03": "#FF0000", "CO-04": "#FF0000", "CO-05": "#FF0000", "CO-06": "#0000FF", "CO-07": "#0000FF", "CO-08": "#FF0000", "CT-01": "#0000FF", "CT-02": "#0000FF", "CT-03": "#0000FF", "CT-04": "#0000FF", "CT-05": "#0000FF", "DE-AL": "#0000FF", "FL-01": "#FF0000", "FL-02": "#FF0000", "FL-03": "#FF0000", "FL-04": "#FF0000", "FL-05": "#FF0000", "FL-06": "#FF0000", "FL-07": "#FF0000", "FL-08": "#FF0000", "FL-09": "#0000FF", "FL-10": "#0000FF", "FL-11": "#FF0000", "FL-12": "#FF0000", "FL-13": "#FF0000", "FL-14": "#0000FF", "FL-15": "#FF0000", "FL-16": "#FF0000", "FL-17": "#FF0000", "FL-18": "#FF0000", "FL-19": "#FF0000", "FL-20": "#0000FF", "FL-21": "#FF0000", "FL-22": "#0000FF", "FL-23": "#0000FF", "FL-24": "#0000FF", "FL-25": "#0000FF", "FL-26": "#FF0000", "FL-27": "#FF0000", "FL-28": "#FF0000", "GA-01": "#FF0000", "GA-02": "#0000FF", "GA-03": "#FF0000", "GA-04": "#0000FF", "GA-05": "#0000FF", "GA-06": "#0000FF", "GA-07": "#FF0000", "GA-08": "#FF0000", "GA-09": "#FF0000", "GA-10": "#FF0000", "GA-11": "#FF0000", "GA-12": "#FF0000", "GA-13": "#0000FF", "GA-14": "#FF0000", "HI-01": "#0000FF", "HI-02": "#0000FF", "ID-01": "#FF0000", "ID-02": "#FF0000", "IL-01": "#0000FF", "IL-02": "#0000FF", "IL-03": "#0000FF", "IL-04": "#0000FF", "IL-05": "#0000FF", "IL-06": "#0000FF", "IL-07": "#0000FF", "IL-08": "#0000FF", "IL-09": "#0000FF", "IL-10": "#0000FF", "IL-11": "#0000FF", "IL-12": "#FF0000", "IL-13": "#0000FF", "IL-14": "#0000FF", "IL-15": "#FF0000", "IL-16": "#FF0000", "IL-17": "#0000FF", "IN-01": "#0000FF", "IN-02": "#FF0000", "IN-03": "#FF0000", "IN-04": "#FF0000", "IN-05": "#FF0000", "IN-06": "#FF0000", "IN-07": "#0000FF", "IN-08": "#FF0000", "IN-09": "#FF0000", "IA-01": "#FF9090", "IA-02": "#FF0000", "IA-03": "#FF0000", "IA-04": "#FF0000", "KS-01": "#FF0000", "KS-02": "#FF0000", "KS-03": "#0000FF", "KS-04": "#FF0000", "KY-01": "#FF0000", "KY-02": "#FF0000", "KY-03": "#0000FF", "KY-04": "#FF0000", "KY-05": "#FF0000", "KY-06": "#FF0000", "LA-01": "#FF0000", "LA-02": "#0000FF", "LA-03": "#FF0000", "LA-04": "#FF0000", "LA-05": "#FF0000", "LA-06": "#0000FF", "ME-01": "#0000FF", "ME-02": "#0000FF", "MD-01": "#FF0000", "MD-02": "#0000FF", "MD-03": "#0000FF", "MD-04": "#0000FF", "MD-05": "#0000FF", "MD-06": "#0000FF", "MD-07": "#0000FF", "MD-08": "#0000FF", "MA-01": "#0000FF", "MA-02": "#0000FF", "MA-03": "#0000FF", "MA-04": "#0000FF", "MA-05": "#0000FF", "MA-06": "#0000FF", "MA-07": "#0000FF", "MA-08": "#0000FF", "MA-09": "#0000FF", "MI-01": "#FF0000", "MI-02": "#FF0000", "MI-03": "#0000FF", "MI-04": "#FF0000", "MI-05": "#FF0000", "MI-06": "#0000FF", "MI-07": "#FF0000", "MI-08": "#0000FF", "MI-09": "#FF0000", "MI-10": "#FF0000", "MI-11": "#0000FF", "MI-12": "#0000FF", "MI-13": "#0000FF", "MN-01": "#FF0000", "MN-02": "#0000FF", "MN-03": "#0000FF", "MN-04": "#0000FF", "MN-05": "#0000FF", "MN-06": "#FF0000", "MN-07": "#FF0000", "MN-08": "#FF0000", "MS-01": "#FF0000", "MS-02": "#0000FF", "MS-03": "#FF0000", "MS-04": "#FF0000", "MO-01": "#0000FF", "MO-02": "#FF0000", "MO-03": "#FF0000", "MO-04": "#FF0000", "MO-05": "#0000FF", "MO-06": "#FF0000", "MO-07": "#FF0000", "MO-08": "#FF0000", "MT-01": "#FF0000", "MT-02": "#FF0000", "NE-01": "#FF0000", "NE-02": "#FF0000", "NE-03": "#FF0000", "NV-01": "#0000FF", "NV-02": "#FF0000", "NV-03": "#0000FF", "NV-04": "#0000FF", "NH-01": "#0000FF", "NH-02": "#0000FF", "NJ-01": "#0000FF", "NJ-02": "#FF0000", "NJ-03": "#0000FF", "NJ-04": "#FF0000", "NJ-05": "#0000FF", "NJ-06": "#0000FF", "NJ-07": "#FF0000", "NJ-08": "#0000FF", "NJ-09": "#0000FF", "NJ-10": "#0000FF", "NJ-11": "#0000FF", "NJ-12": "#0000FF", "NM-01": "#0000FF", "NM-02": "#0000FF", "NM-03": "#0000FF", "NY-01": "#FF0000", "NY-02": "#FF0000", "NY-03": "#0000FF", "NY-04": "#0000FF", "NY-05": "#0000FF", "NY-06": "#0000FF", "NY-07": "#0000FF", "NY-08": "#0000FF", "NY-09": "#0000FF", "NY-10": "#0000FF", "NY-11": "#FF0000", "NY-12": "#0000FF", "NY-13": "#0000FF", "NY-14": "#0000FF", "NY-15": "#0000FF", "NY-16": "#0000FF", "NY-17": "#FF0000", "NY-18": "#0000FF", "NY-19": "#0000FF", "NY-20": "#0000FF", "NY-21": "#FF0000", "NY-22": "#0000FF", "NY-23": "#FF0000", "NY-24": "#FF0000", "NY-25": "#0000FF", "NY-26": "#0000FF", "NC-01": "#0000FF", "NC-02": "#0000FF", "NC-03": "#FF0000", "NC-04": "#0000FF", "NC-05": "#FF0000", "NC-06": "#FF0000", "NC-07": "#FF0000", "NC-08": "#FF0000", "NC-09": "#FF0000", "NC-10": "#FF0000", "NC-11": "#FF0000", "NC-12": "#0000FF", "NC-13": "#FF0000", "NC-14": "#FF0000", "ND-AL": "#FF0000", "OH-01": "#0000FF", "OH-02": "#FF0000", "OH-03": "#0000FF", "OH-04": "#FF0000", "OH-05": "#FF0000", "OH-06": "#FF0000", "OH-07": "#FF0000", "OH-08": "#FF0000", "OH-09": "#0000FF", "OH-10": "#FF0000", "OH-11": "#0000FF", "OH-12": "#FF0000", "OH-13": "#0000FF", "OH-14": "#FF0000", "OH-15": "#FF0000", "OK-01": "#FF0000", "OK-02": "#FF0000", "OK-03": "#FF0000", "OK-04": "#FF0000", "OK-05": "#FF0000", "OR-01": "#0000FF", "OR-02": "#FF0000", "OR-03": "#0000FF", "OR-04": "#0000FF", "OR-05": "#0000FF", "OR-06": "#0000FF", "PA-01": "#FF0000", "PA-02": "#0000FF", "PA-03": "#0000FF", "PA-04": "#0000FF", "PA-05": "#0000FF", "PA-06": "#0000FF", "PA-07": "#FF0000", "PA-08": "#FF0000", "PA-09": "#FF0000", "PA-10": "#FF0000", "PA-11": "#FF0000", "PA-12": "#0000FF", "PA-13": "#FF0000", "PA-14": "#FF0000", "PA-15": "#FF0000", "PA-16": "#FF0000", "PA-17": "#0000FF", "RI-01": "#0000FF", "RI-02": "#0000FF", "SC-01": "#FF0000", "SC-02": "#FF0000", "SC-03": "#FF0000", "SC-04": "#FF0000", "SC-05": "#FF0000", "SC-06": "#0000FF", "SC-07": "#FF0000", "SD-AL": "#FF0000", "TN-01": "#FF0000", "TN-02": "#FF0000", "TN-03": "#FF0000", "TN-04": "#FF0000", "TN-05": "#FF0000", "TN-06": "#FF0000", "TN-07": "#FF0000", "TN-08": "#FF0000", "TN-09": "#0000FF", "TX-01": "#FF0000", "TX-02": "#FF0000", "TX-03": "#FF0000", "TX-04": "#FF0000", "TX-05": "#FF0000", "TX-06": "#FF0000", "TX-07": "#0000FF", "TX-08": "#FF0000", "TX-09": "#0000FF", "TX-10": "#FF0000", "TX-11": "#FF0000", "TX-12": "#FF0000", "TX-13": "#FF0000", "TX-14": "#FF0000", "TX-15": "#FF0000", "TX-16": "#0000FF", "TX-17": "#FF0000", "TX-18": "#0000FF", "TX-19": "#FF0000", "TX-20": "#0000FF", "TX-21": "#FF0000", "TX-22": "#FF0000", "TX-23": "#FF0000", "TX-24": "#FF0000", "TX-25": "#FF0000", "TX-26": "#FF0000", "TX-27": "#FF0000", "TX-28": "#0000FF", "TX-29": "#0000FF", "TX-30": "#0000FF", "TX-31": "#FF0000", "TX-32": "#0000FF", "TX-33": "#0000FF", "TX-34": "#0000FF", "TX-35": "#0000FF", "TX-36": "#FF0000", "TX-37": "#0000FF", "TX-38": "#FF0000", "UT-01": "#FF0000", "UT-02": "#FF0000", "UT-03": "#FF0000", "UT-04": "#FF0000", "VT-AL": "#0000FF", "VA-01": "#FF0000", "VA-02": "#FF0000", "VA-03": "#0000FF", "VA-04": "#0000FF", "VA-05": "#FF0000", "VA-06": "#FF0000", "VA-07": "#0000FF", "VA-08": "#0000FF", "VA-09": "#FF0000", "VA-10": "#0000FF", "VA-11": "#0000FF", "WA-01": "#0000FF", "WA-02": "#0000FF", "WA-03": "#0000FF", "WA-04": "#FF0000", "WA-05": "#FF0000", "WA-06": "#0000FF", "WA-07": "#0000FF", "WA-08": "#0000FF", "WA-09": "#0000FF", "WA-10": "#0000FF", "WV-01": "#FF0000", "WV-02": "#FF0000", "WI-01": "#FF0000", "WI-02": "#0000FF", "WI-03": "#FF0000", "WI-04": "#0000FF", "WI-05": "#FF0000", "WI-06": "#FF0000", "WI-07": "#FF0000", "WI-08": "#FF0000", "WY-AL": "#FF0000"};
   function colorAll() {
     for (var state in stateColors) {
       setColor(state, stateColors[state]);
@@ -773,7 +773,7 @@
 <tr><td>Tom Holmes</td><td>DEM</td><td class="votes">70,451</td><td class="pct">21.5</td></tr>
 </tbody>
 </table>
-98.8% of precincts reporting<br>
+100.0% of precincts reporting<br>
 Status: <b>Called for Moore (R)</b><br>
 Lead: <b>Moore +57.0</b><br>
 Pre-election estimate: <b>Safe R</b>
@@ -1194,7 +1194,7 @@ Pre-election estimate: <b>Safe R</b>
 <tr><td>Rose Yee</td><td>DEM</td><td class="votes">104,495</td><td class="pct">34.8</td></tr>
 </tbody>
 </table>
-94.0% of precincts reporting<br>
+94.2% of precincts reporting<br>
 Status: <b>Called for LaMalfa (R)</b><br>
 Lead: <b>LaMalfa +30.4</b><br>
 Pre-election estimate: <b>Likely R</b>
@@ -1210,13 +1210,13 @@ Pre-election estimate: <b>Likely R</b>
 <td>Pct</td>
 
 </tr>
-<tr><td style="color: #fff" bgcolor="#0000FF">Jared Huffman* ✔</td><td>DEM</td><td class="votes">263,916</td><td class="pct">72.2</td></tr>
-<tr><td>Chris Coulombe</td><td>REP</td><td class="votes">101,395</td><td class="pct">27.8</td></tr>
+<tr><td style="color: #fff" bgcolor="#0000FF">Jared Huffman* ✔</td><td>DEM</td><td class="votes">265,104</td><td class="pct">72.2</td></tr>
+<tr><td>Chris Coulombe</td><td>REP</td><td class="votes">102,225</td><td class="pct">27.8</td></tr>
 </tbody>
 </table>
-95.4% of precincts reporting<br>
+96.2% of precincts reporting<br>
 Status: <b>Called for Huffman (D)</b><br>
-Lead: <b>Huffman +44.5</b><br>
+Lead: <b>Huffman +44.3</b><br>
 Pre-election estimate: <b>Safe D</b>
 </div>
 <div id="CA-03-results" class="results">
@@ -1230,11 +1230,11 @@ Pre-election estimate: <b>Safe D</b>
 <td>Pct</td>
 
 </tr>
-<tr><td style="color: #fff" bgcolor="#FF0000">Kevin Kiley* ✔</td><td>REP</td><td class="votes">229,753</td><td class="pct">55.4</td></tr>
-<tr><td>Jessica Morse</td><td>DEM</td><td class="votes">185,279</td><td class="pct">44.6</td></tr>
+<tr><td style="color: #fff" bgcolor="#FF0000">Kevin Kiley* ✔</td><td>REP</td><td class="votes">230,085</td><td class="pct">55.4</td></tr>
+<tr><td>Jessica Morse</td><td>DEM</td><td class="votes">185,508</td><td class="pct">44.6</td></tr>
 </tbody>
 </table>
-97.9% of precincts reporting<br>
+98.5% of precincts reporting<br>
 Status: <b>Called for Kiley (R)</b><br>
 Lead: <b>Kiley +10.7</b><br>
 Pre-election estimate: <b>Leans R</b>
@@ -1250,13 +1250,13 @@ Pre-election estimate: <b>Leans R</b>
 <td>Pct</td>
 
 </tr>
-<tr><td style="color: #fff" bgcolor="#0000FF">Mike Thompson* ✔</td><td>DEM</td><td class="votes">217,468</td><td class="pct">66.8</td></tr>
-<tr><td>John R. Munn</td><td>REP</td><td class="votes">107,985</td><td class="pct">33.2</td></tr>
+<tr><td style="color: #fff" bgcolor="#0000FF">Mike Thompson* ✔</td><td>DEM</td><td class="votes">222,243</td><td class="pct">67.0</td></tr>
+<tr><td>John R. Munn</td><td>REP</td><td class="votes">109,607</td><td class="pct">33.0</td></tr>
 </tbody>
 </table>
-94.2% of precincts reporting<br>
+96.2% of precincts reporting<br>
 Status: <b>Called for Thompson (D)</b><br>
-Lead: <b>Thompson +33.6</b><br>
+Lead: <b>Thompson +33.9</b><br>
 Pre-election estimate: <b>Safe D</b>
 </div>
 <div id="CA-05-results" class="results">
@@ -1270,8 +1270,8 @@ Pre-election estimate: <b>Safe D</b>
 <td>Pct</td>
 
 </tr>
-<tr><td style="color: #fff" bgcolor="#FF0000">Tom McClintock* ✔</td><td>REP</td><td class="votes">225,596</td><td class="pct">61.8</td></tr>
-<tr><td>Michael Barkley</td><td>DEM</td><td class="votes">139,373</td><td class="pct">38.2</td></tr>
+<tr><td style="color: #fff" bgcolor="#FF0000">Tom McClintock* ✔</td><td>REP</td><td class="votes">225,600</td><td class="pct">61.8</td></tr>
+<tr><td>Michael Barkley</td><td>DEM</td><td class="votes">139,374</td><td class="pct">38.2</td></tr>
 </tbody>
 </table>
 98.8% of precincts reporting<br>
@@ -1290,13 +1290,13 @@ Pre-election estimate: <b>Likely R</b>
 <td>Pct</td>
 
 </tr>
-<tr><td style="color: #fff" bgcolor="#0000FF">Ami Bera* ✔</td><td>DEM</td><td class="votes">161,872</td><td class="pct">57.8</td></tr>
-<tr><td>Christine Bish</td><td>REP</td><td class="votes">118,359</td><td class="pct">42.2</td></tr>
+<tr><td style="color: #fff" bgcolor="#0000FF">Ami Bera* ✔</td><td>DEM</td><td class="votes">163,485</td><td class="pct">57.7</td></tr>
+<tr><td>Christine Bish</td><td>REP</td><td class="votes">119,930</td><td class="pct">42.3</td></tr>
 </tbody>
 </table>
-97.1% of precincts reporting<br>
+99.0% of precincts reporting<br>
 Status: <b>Called for Bera (D)</b><br>
-Lead: <b>Bera +15.5</b><br>
+Lead: <b>Bera +15.4</b><br>
 Pre-election estimate: <b>Likely D</b>
 </div>
 <div id="CA-07-results" class="results">
@@ -1310,13 +1310,13 @@ Pre-election estimate: <b>Likely D</b>
 <td>Pct</td>
 
 </tr>
-<tr><td style="color: #fff" bgcolor="#0000FF">Doris Matsui* ✔</td><td>DEM</td><td class="votes">192,932</td><td class="pct">66.9</td></tr>
-<tr><td>Tom Silva</td><td>REP</td><td class="votes">95,623</td><td class="pct">33.1</td></tr>
+<tr><td style="color: #fff" bgcolor="#0000FF">Doris Matsui* ✔</td><td>DEM</td><td class="votes">195,186</td><td class="pct">66.8</td></tr>
+<tr><td>Tom Silva</td><td>REP</td><td class="votes">97,096</td><td class="pct">33.2</td></tr>
 </tbody>
 </table>
-96.6% of precincts reporting<br>
+98.8% of precincts reporting<br>
 Status: <b>Called for Matsui (D)</b><br>
-Lead: <b>Matsui +33.7</b><br>
+Lead: <b>Matsui +33.6</b><br>
 Pre-election estimate: <b>Safe D</b>
 </div>
 <div id="CA-08-results" class="results">
@@ -1351,7 +1351,7 @@ Pre-election estimate: <b>Safe D</b>
 
 </tr>
 <tr><td style="color: #fff" bgcolor="#0000FF">Josh Harder* ✔</td><td>DEM</td><td class="votes">125,773</td><td class="pct">51.8</td></tr>
-<tr><td>Kevin Lincoln</td><td>REP</td><td class="votes">116,929</td><td class="pct">48.2</td></tr>
+<tr><td>Kevin Lincoln</td><td>REP</td><td class="votes">116,934</td><td class="pct">48.2</td></tr>
 </tbody>
 </table>
 97.2% of precincts reporting<br>
@@ -1430,13 +1430,13 @@ Pre-election estimate: <b>Safe D</b>
 <td>Pct</td>
 
 </tr>
-<tr><td>John Duarte*</td><td>REP</td><td class="votes">102,653</td><td class="pct">50.1</td></tr>
-<tr><td>Adam Gray</td><td>DEM</td><td class="votes">102,446</td><td class="pct">49.9</td></tr>
+<tr><td>Adam Gray</td><td>DEM</td><td class="votes">104,503</td><td class="pct">50.0</td></tr>
+<tr><td>John Duarte*</td><td>REP</td><td class="votes">104,321</td><td class="pct">50.0</td></tr>
 </tbody>
 </table>
-97.9% of precincts reporting<br>
+99.0% of precincts reporting<br>
 Status: <b>Not called</b><br>
-Lead: <b>Duarte +0.1</b><br>
+Lead: <b>Gray +0.09</b><br>
 Pre-election estimate: <b>Leans D</b>
 </div>
 <div id="CA-14-results" class="results">
@@ -1470,8 +1470,8 @@ Pre-election estimate: <b>Safe D</b>
 <td>Pct</td>
 
 </tr>
-<tr><td style="color: #fff" bgcolor="#0000FF">Kevin Mullin* ✔</td><td>DEM</td><td class="votes">211,232</td><td class="pct">73.1</td></tr>
-<tr><td>Anna Kramer</td><td>REP</td><td class="votes">77,739</td><td class="pct">26.9</td></tr>
+<tr><td style="color: #fff" bgcolor="#0000FF">Kevin Mullin* ✔</td><td>DEM</td><td class="votes">211,574</td><td class="pct">73.1</td></tr>
+<tr><td>Anna Kramer</td><td>REP</td><td class="votes">77,853</td><td class="pct">26.9</td></tr>
 </tbody>
 </table>
 99.0% of precincts reporting<br>
@@ -1490,8 +1490,8 @@ Pre-election estimate: <b>Safe D</b>
 <td>Pct</td>
 
 </tr>
-<tr><td style="color: #fff" bgcolor="#0000FF">Sam Liccardo ✔</td><td>DEM</td><td class="votes">179,435</td><td class="pct">58.2</td></tr>
-<tr><td>Evan Low</td><td>DEM</td><td class="votes">128,790</td><td class="pct">41.8</td></tr>
+<tr><td style="color: #fff" bgcolor="#0000FF">Sam Liccardo ✔</td><td>DEM</td><td class="votes">179,515</td><td class="pct">58.2</td></tr>
+<tr><td>Evan Low</td><td>DEM</td><td class="votes">128,833</td><td class="pct">41.8</td></tr>
 </tbody>
 </table>
 98.9% of precincts reporting<br>
@@ -1530,8 +1530,8 @@ Pre-election estimate: <b>Safe D</b>
 <td>Pct</td>
 
 </tr>
-<tr><td style="color: #fff" bgcolor="#0000FF">Zoe Lofgren* ✔</td><td>DEM</td><td class="votes">147,283</td><td class="pct">64.6</td></tr>
-<tr><td>Peter Hernandez</td><td>REP</td><td class="votes">80,575</td><td class="pct">35.4</td></tr>
+<tr><td style="color: #fff" bgcolor="#0000FF">Zoe Lofgren* ✔</td><td>DEM</td><td class="votes">147,439</td><td class="pct">64.6</td></tr>
+<tr><td>Peter Hernandez</td><td>REP</td><td class="votes">80,667</td><td class="pct">35.4</td></tr>
 </tbody>
 </table>
 99.1% of precincts reporting<br>
@@ -1550,11 +1550,11 @@ Pre-election estimate: <b>Safe D</b>
 <td>Pct</td>
 
 </tr>
-<tr><td style="color: #fff" bgcolor="#0000FF">Jimmy Panetta* ✔</td><td>DEM</td><td class="votes">249,647</td><td class="pct">69.3</td></tr>
-<tr><td>Jason Anderson</td><td>REP</td><td class="votes">110,639</td><td class="pct">30.7</td></tr>
+<tr><td style="color: #fff" bgcolor="#0000FF">Jimmy Panetta* ✔</td><td>DEM</td><td class="votes">250,470</td><td class="pct">69.3</td></tr>
+<tr><td>Jason Anderson</td><td>REP</td><td class="votes">110,856</td><td class="pct">30.7</td></tr>
 </tbody>
 </table>
-98.2% of precincts reporting<br>
+98.6% of precincts reporting<br>
 Status: <b>Called for Panetta (D)</b><br>
 Lead: <b>Panetta +38.6</b><br>
 Pre-election estimate: <b>Safe D</b>
@@ -1570,11 +1570,11 @@ Pre-election estimate: <b>Safe D</b>
 <td>Pct</td>
 
 </tr>
-<tr><td style="color: #fff" bgcolor="#FF0000">Vince Fong* ✔</td><td>REP</td><td class="votes">186,028</td><td class="pct">65.1</td></tr>
-<tr><td>Mike Boudreaux</td><td>REP</td><td class="votes">99,546</td><td class="pct">34.9</td></tr>
+<tr><td style="color: #fff" bgcolor="#FF0000">Vince Fong* ✔</td><td>REP</td><td class="votes">186,708</td><td class="pct">65.1</td></tr>
+<tr><td>Mike Boudreaux</td><td>REP</td><td class="votes">99,976</td><td class="pct">34.9</td></tr>
 </tbody>
 </table>
-98.6% of precincts reporting<br>
+99.0% of precincts reporting<br>
 Status: <b>Called for Fong (R)</b><br>
 Lead: <b>Fong +30.3</b><br>
 Pre-election estimate: <b>Safe R</b>
@@ -1610,11 +1610,11 @@ Pre-election estimate: <b>Likely D</b>
 <td>Pct</td>
 
 </tr>
-<tr><td style="color: #fff" bgcolor="#FF0000">David Valadao* ✔</td><td>REP</td><td class="votes">88,766</td><td class="pct">53.4</td></tr>
-<tr><td>Rudy Salas</td><td>DEM</td><td class="votes">77,407</td><td class="pct">46.6</td></tr>
+<tr><td style="color: #fff" bgcolor="#FF0000">David Valadao* ✔</td><td>REP</td><td class="votes">89,422</td><td class="pct">53.4</td></tr>
+<tr><td>Rudy Salas</td><td>DEM</td><td class="votes">77,971</td><td class="pct">46.6</td></tr>
 </tbody>
 </table>
-98.7% of precincts reporting<br>
+99.0% of precincts reporting<br>
 Status: <b>Called for Valadao (R)</b><br>
 Lead: <b>Valadao +6.8</b><br>
 Pre-election estimate: <b>Leans D</b>
@@ -1630,8 +1630,8 @@ Pre-election estimate: <b>Leans D</b>
 <td>Pct</td>
 
 </tr>
-<tr><td style="color: #fff" bgcolor="#FF0000">Jay Obernolte* ✔</td><td>REP</td><td class="votes">158,158</td><td class="pct">60.2</td></tr>
-<tr><td>Derek Marshall</td><td>DEM</td><td class="votes">104,762</td><td class="pct">39.8</td></tr>
+<tr><td style="color: #fff" bgcolor="#FF0000">Jay Obernolte* ✔</td><td>REP</td><td class="votes">158,200</td><td class="pct">60.2</td></tr>
+<tr><td>Derek Marshall</td><td>DEM</td><td class="votes">104,793</td><td class="pct">39.8</td></tr>
 </tbody>
 </table>
 99.0% of precincts reporting<br>
@@ -1650,8 +1650,8 @@ Pre-election estimate: <b>Likely R</b>
 <td>Pct</td>
 
 </tr>
-<tr><td style="color: #fff" bgcolor="#0000FF">Salud Carbajal* ✔</td><td>DEM</td><td class="votes">210,780</td><td class="pct">62.7</td></tr>
-<tr><td>Thomas Cole</td><td>REP</td><td class="votes">125,468</td><td class="pct">37.3</td></tr>
+<tr><td style="color: #fff" bgcolor="#0000FF">Salud Carbajal* ✔</td><td>DEM</td><td class="votes">210,921</td><td class="pct">62.7</td></tr>
+<tr><td>Thomas Cole</td><td>REP</td><td class="votes">125,567</td><td class="pct">37.3</td></tr>
 </tbody>
 </table>
 97.7% of precincts reporting<br>
@@ -1670,11 +1670,11 @@ Pre-election estimate: <b>Safe D</b>
 <td>Pct</td>
 
 </tr>
-<tr><td style="color: #fff" bgcolor="#0000FF">Raul Ruiz* ✔</td><td>DEM</td><td class="votes">133,368</td><td class="pct">56.4</td></tr>
-<tr><td>Ian Weeks</td><td>REP</td><td class="votes">103,090</td><td class="pct">43.6</td></tr>
+<tr><td style="color: #fff" bgcolor="#0000FF">Raul Ruiz* ✔</td><td>DEM</td><td class="votes">133,711</td><td class="pct">56.4</td></tr>
+<tr><td>Ian Weeks</td><td>REP</td><td class="votes">103,433</td><td class="pct">43.6</td></tr>
 </tbody>
 </table>
-96.9% of precincts reporting<br>
+97.2% of precincts reporting<br>
 Status: <b>Called for Ruiz (D)</b><br>
 Lead: <b>Ruiz +12.8</b><br>
 Pre-election estimate: <b>Likely D</b>
@@ -1690,8 +1690,8 @@ Pre-election estimate: <b>Likely D</b>
 <td>Pct</td>
 
 </tr>
-<tr><td style="color: #fff" bgcolor="#0000FF">Julia Brownley* ✔</td><td>DEM</td><td class="votes">186,510</td><td class="pct">56.1</td></tr>
-<tr><td>Michael Koslow</td><td>REP</td><td class="votes">146,200</td><td class="pct">43.9</td></tr>
+<tr><td style="color: #fff" bgcolor="#0000FF">Julia Brownley* ✔</td><td>DEM</td><td class="votes">187,093</td><td class="pct">56.1</td></tr>
+<tr><td>Michael Koslow</td><td>REP</td><td class="votes">146,697</td><td class="pct">43.9</td></tr>
 </tbody>
 </table>
 99.0% of precincts reporting<br>
@@ -1710,8 +1710,8 @@ Pre-election estimate: <b>Likely D</b>
 <td>Pct</td>
 
 </tr>
-<tr><td style="color: #fff" bgcolor="#0000FF">George Whitesides ✔</td><td>DEM</td><td class="votes">153,847</td><td class="pct">51.3</td></tr>
-<tr><td>Mike Garcia*</td><td>REP</td><td class="votes">145,878</td><td class="pct">48.7</td></tr>
+<tr><td style="color: #fff" bgcolor="#0000FF">George Whitesides ✔</td><td>DEM</td><td class="votes">153,973</td><td class="pct">51.3</td></tr>
+<tr><td>Mike Garcia*</td><td>REP</td><td class="votes">146,011</td><td class="pct">48.7</td></tr>
 </tbody>
 </table>
 99.0% of precincts reporting<br>
@@ -1730,8 +1730,8 @@ Pre-election estimate: <b>Leans D</b>
 <td>Pct</td>
 
 </tr>
-<tr><td style="color: #fff" bgcolor="#0000FF">Judy Chu* ✔</td><td>DEM</td><td class="votes">204,224</td><td class="pct">64.9</td></tr>
-<tr><td>April Verlato</td><td>REP</td><td class="votes">110,269</td><td class="pct">35.1</td></tr>
+<tr><td style="color: #fff" bgcolor="#0000FF">Judy Chu* ✔</td><td>DEM</td><td class="votes">204,356</td><td class="pct">64.9</td></tr>
+<tr><td>April Verlato</td><td>REP</td><td class="votes">110,344</td><td class="pct">35.1</td></tr>
 </tbody>
 </table>
 99.1% of precincts reporting<br>
@@ -1750,8 +1750,8 @@ Pre-election estimate: <b>Safe D</b>
 <td>Pct</td>
 
 </tr>
-<tr><td style="color: #fff" bgcolor="#0000FF">Luz Rivas ✔</td><td>DEM</td><td class="votes">146,129</td><td class="pct">69.8</td></tr>
-<tr><td>Benny Bernal</td><td>REP</td><td class="votes">63,277</td><td class="pct">30.2</td></tr>
+<tr><td style="color: #fff" bgcolor="#0000FF">Luz Rivas ✔</td><td>DEM</td><td class="votes">146,270</td><td class="pct">69.8</td></tr>
+<tr><td>Benny Bernal</td><td>REP</td><td class="votes">63,356</td><td class="pct">30.2</td></tr>
 </tbody>
 </table>
 99.3% of precincts reporting<br>
@@ -1770,13 +1770,13 @@ Pre-election estimate: <b>Safe D</b>
 <td>Pct</td>
 
 </tr>
-<tr><td style="color: #fff" bgcolor="#0000FF">Laura Friedman ✔</td><td>DEM</td><td class="votes">212,887</td><td class="pct">68.4</td></tr>
-<tr><td>Alex Balekian</td><td>REP</td><td class="votes">98,434</td><td class="pct">31.6</td></tr>
+<tr><td style="color: #fff" bgcolor="#0000FF">Laura Friedman ✔</td><td>DEM</td><td class="votes">213,039</td><td class="pct">68.4</td></tr>
+<tr><td>Alex Balekian</td><td>REP</td><td class="votes">98,539</td><td class="pct">31.6</td></tr>
 </tbody>
 </table>
 99.0% of precincts reporting<br>
 Status: <b>Called for Friedman (D)</b><br>
-Lead: <b>Friedman +36.8</b><br>
+Lead: <b>Friedman +36.7</b><br>
 Pre-election estimate: <b>Safe D</b>
 </div>
 <div id="CA-31-results" class="results">
@@ -1790,8 +1790,8 @@ Pre-election estimate: <b>Safe D</b>
 <td>Pct</td>
 
 </tr>
-<tr><td style="color: #fff" bgcolor="#0000FF">Gil Cisneros ✔</td><td>DEM</td><td class="votes">147,943</td><td class="pct">59.7</td></tr>
-<tr><td>Daniel Martinez</td><td>REP</td><td class="votes">99,748</td><td class="pct">40.3</td></tr>
+<tr><td style="color: #fff" bgcolor="#0000FF">Gil Cisneros ✔</td><td>DEM</td><td class="votes">148,056</td><td class="pct">59.7</td></tr>
+<tr><td>Daniel Martinez</td><td>REP</td><td class="votes">99,832</td><td class="pct">40.3</td></tr>
 </tbody>
 </table>
 98.9% of precincts reporting<br>
@@ -1810,8 +1810,8 @@ Pre-election estimate: <b>Safe D</b>
 <td>Pct</td>
 
 </tr>
-<tr><td style="color: #fff" bgcolor="#0000FF">Brad Sherman* ✔</td><td>DEM</td><td class="votes">212,721</td><td class="pct">66.2</td></tr>
-<tr><td>Larry Thompson</td><td>REP</td><td class="votes">108,578</td><td class="pct">33.8</td></tr>
+<tr><td style="color: #fff" bgcolor="#0000FF">Brad Sherman* ✔</td><td>DEM</td><td class="votes">212,874</td><td class="pct">66.2</td></tr>
+<tr><td>Larry Thompson</td><td>REP</td><td class="votes">108,687</td><td class="pct">33.8</td></tr>
 </tbody>
 </table>
 98.9% of precincts reporting<br>
@@ -1850,8 +1850,8 @@ Pre-election estimate: <b>Safe D</b>
 <td>Pct</td>
 
 </tr>
-<tr><td style="color: #fff" bgcolor="#0000FF">Jimmy Gomez* ✔</td><td>DEM</td><td class="votes">105,296</td><td class="pct">55.6</td></tr>
-<tr><td>David Kim</td><td>DEM</td><td class="votes">83,916</td><td class="pct">44.4</td></tr>
+<tr><td style="color: #fff" bgcolor="#0000FF">Jimmy Gomez* ✔</td><td>DEM</td><td class="votes">105,370</td><td class="pct">55.6</td></tr>
+<tr><td>David Kim</td><td>DEM</td><td class="votes">83,991</td><td class="pct">44.4</td></tr>
 </tbody>
 </table>
 98.7% of precincts reporting<br>
@@ -1870,11 +1870,11 @@ Pre-election estimate: <b>Safe D</b>
 <td>Pct</td>
 
 </tr>
-<tr><td style="color: #fff" bgcolor="#0000FF">Norma Torres* ✔</td><td>DEM</td><td class="votes">135,588</td><td class="pct">58.4</td></tr>
-<tr><td>Mike Cargile</td><td>REP</td><td class="votes">96,419</td><td class="pct">41.6</td></tr>
+<tr><td style="color: #fff" bgcolor="#0000FF">Norma Torres* ✔</td><td>DEM</td><td class="votes">135,641</td><td class="pct">58.4</td></tr>
+<tr><td>Mike Cargile</td><td>REP</td><td class="votes">96,476</td><td class="pct">41.6</td></tr>
 </tbody>
 </table>
-98.9% of precincts reporting<br>
+99.1% of precincts reporting<br>
 Status: <b>Called for Torres (D)</b><br>
 Lead: <b>Torres +16.9</b><br>
 Pre-election estimate: <b>Safe D</b>
@@ -1890,8 +1890,8 @@ Pre-election estimate: <b>Safe D</b>
 <td>Pct</td>
 
 </tr>
-<tr><td style="color: #fff" bgcolor="#0000FF">Ted Lieu* ✔</td><td>DEM</td><td class="votes">245,752</td><td class="pct">68.7</td></tr>
-<tr><td>Melissa Toomim</td><td>REP</td><td class="votes">111,868</td><td class="pct">31.3</td></tr>
+<tr><td style="color: #fff" bgcolor="#0000FF">Ted Lieu* ✔</td><td>DEM</td><td class="votes">245,943</td><td class="pct">68.7</td></tr>
+<tr><td>Melissa Toomim</td><td>REP</td><td class="votes">111,959</td><td class="pct">31.3</td></tr>
 </tbody>
 </table>
 98.9% of precincts reporting<br>
@@ -1910,8 +1910,8 @@ Pre-election estimate: <b>Safe D</b>
 <td>Pct</td>
 
 </tr>
-<tr><td style="color: #fff" bgcolor="#0000FF">Sydney Kamlager-Dove* ✔</td><td>DEM</td><td class="votes">160,167</td><td class="pct">78.3</td></tr>
-<tr><td>Juan Rey</td><td>IND</td><td class="votes">44,372</td><td class="pct">21.7</td></tr>
+<tr><td style="color: #fff" bgcolor="#0000FF">Sydney Kamlager-Dove* ✔</td><td>DEM</td><td class="votes">160,325</td><td class="pct">78.3</td></tr>
+<tr><td>Juan Rey</td><td>IND</td><td class="votes">44,426</td><td class="pct">21.7</td></tr>
 </tbody>
 </table>
 98.8% of precincts reporting<br>
@@ -1930,8 +1930,8 @@ Pre-election estimate: <b>Safe D</b>
 <td>Pct</td>
 
 </tr>
-<tr><td style="color: #fff" bgcolor="#0000FF">Linda Sanchez* ✔</td><td>DEM</td><td class="votes">164,927</td><td class="pct">59.8</td></tr>
-<tr><td>Eric Ching</td><td>REP</td><td class="votes">110,667</td><td class="pct">40.2</td></tr>
+<tr><td style="color: #fff" bgcolor="#0000FF">Linda Sanchez* ✔</td><td>DEM</td><td class="votes">165,053</td><td class="pct">59.8</td></tr>
+<tr><td>Eric Ching</td><td>REP</td><td class="votes">110,779</td><td class="pct">40.2</td></tr>
 </tbody>
 </table>
 99.0% of precincts reporting<br>
@@ -1950,11 +1950,11 @@ Pre-election estimate: <b>Safe D</b>
 <td>Pct</td>
 
 </tr>
-<tr><td style="color: #fff" bgcolor="#0000FF">Mark Takano* ✔</td><td>DEM</td><td class="votes">128,662</td><td class="pct">56.6</td></tr>
-<tr><td>David Serpa</td><td>REP</td><td class="votes">98,487</td><td class="pct">43.4</td></tr>
+<tr><td style="color: #fff" bgcolor="#0000FF">Mark Takano* ✔</td><td>DEM</td><td class="votes">129,027</td><td class="pct">56.6</td></tr>
+<tr><td>David Serpa</td><td>REP</td><td class="votes">98,759</td><td class="pct">43.4</td></tr>
 </tbody>
 </table>
-99.2% of precincts reporting<br>
+98.8% of precincts reporting<br>
 Status: <b>Called for Takano (D)</b><br>
 Lead: <b>Takano +13.3</b><br>
 Pre-election estimate: <b>Safe D</b>
@@ -1970,8 +1970,8 @@ Pre-election estimate: <b>Safe D</b>
 <td>Pct</td>
 
 </tr>
-<tr><td style="color: #fff" bgcolor="#FF0000">Young Kim* ✔</td><td>REP</td><td class="votes">211,323</td><td class="pct">55.3</td></tr>
-<tr><td>Joe Kerr</td><td>DEM</td><td class="votes">171,001</td><td class="pct">44.7</td></tr>
+<tr><td style="color: #fff" bgcolor="#FF0000">Young Kim* ✔</td><td>REP</td><td class="votes">211,622</td><td class="pct">55.3</td></tr>
+<tr><td>Joe Kerr</td><td>DEM</td><td class="votes">171,290</td><td class="pct">44.7</td></tr>
 </tbody>
 </table>
 99.0% of precincts reporting<br>
@@ -1990,11 +1990,11 @@ Pre-election estimate: <b>Leans R</b>
 <td>Pct</td>
 
 </tr>
-<tr><td style="color: #fff" bgcolor="#FF0000">Ken Calvert* ✔</td><td>REP</td><td class="votes">181,600</td><td class="pct">51.7</td></tr>
-<tr><td>Will Rollins</td><td>DEM</td><td class="votes">169,936</td><td class="pct">48.3</td></tr>
+<tr><td style="color: #fff" bgcolor="#FF0000">Ken Calvert* ✔</td><td>REP</td><td class="votes">182,041</td><td class="pct">51.7</td></tr>
+<tr><td>Will Rollins</td><td>DEM</td><td class="votes">170,311</td><td class="pct">48.3</td></tr>
 </tbody>
 </table>
-98.6% of precincts reporting<br>
+99.0% of precincts reporting<br>
 Status: <b>Called for Calvert (R)</b><br>
 Lead: <b>Calvert +3.3</b><br>
 Pre-election estimate: <b>Leans R</b>
@@ -2010,8 +2010,8 @@ Pre-election estimate: <b>Leans R</b>
 <td>Pct</td>
 
 </tr>
-<tr><td style="color: #fff" bgcolor="#0000FF">Robert Garcia* ✔</td><td>DEM</td><td class="votes">158,971</td><td class="pct">68.1</td></tr>
-<tr><td>John Briscoe</td><td>REP</td><td class="votes">74,318</td><td class="pct">31.9</td></tr>
+<tr><td style="color: #fff" bgcolor="#0000FF">Robert Garcia* ✔</td><td>DEM</td><td class="votes">159,106</td><td class="pct">68.1</td></tr>
+<tr><td>John Briscoe</td><td>REP</td><td class="votes">74,395</td><td class="pct">31.9</td></tr>
 </tbody>
 </table>
 98.9% of precincts reporting<br>
@@ -2030,13 +2030,13 @@ Pre-election estimate: <b>Safe D</b>
 <td>Pct</td>
 
 </tr>
-<tr><td style="color: #fff" bgcolor="#0000FF">Maxine Waters* ✔</td><td>DEM</td><td class="votes">159,901</td><td class="pct">75.1</td></tr>
-<tr><td>Steve Williams</td><td>REP</td><td class="votes">53,087</td><td class="pct">24.9</td></tr>
+<tr><td style="color: #fff" bgcolor="#0000FF">Maxine Waters* ✔</td><td>DEM</td><td class="votes">160,027</td><td class="pct">75.1</td></tr>
+<tr><td>Steve Williams</td><td>REP</td><td class="votes">53,137</td><td class="pct">24.9</td></tr>
 </tbody>
 </table>
 98.8% of precincts reporting<br>
 Status: <b>Called for Waters (D)</b><br>
-Lead: <b>Waters +50.2</b><br>
+Lead: <b>Waters +50.1</b><br>
 Pre-election estimate: <b>Safe D</b>
 </div>
 <div id="CA-44-results" class="results">
@@ -2050,13 +2050,13 @@ Pre-election estimate: <b>Safe D</b>
 <td>Pct</td>
 
 </tr>
-<tr><td style="color: #fff" bgcolor="#0000FF">Nanette Barragan* ✔</td><td>DEM</td><td class="votes">164,613</td><td class="pct">71.4</td></tr>
-<tr><td>Roger Groh</td><td>REP</td><td class="votes">66,018</td><td class="pct">28.6</td></tr>
+<tr><td style="color: #fff" bgcolor="#0000FF">Nanette Barragan* ✔</td><td>DEM</td><td class="votes">164,728</td><td class="pct">71.4</td></tr>
+<tr><td>Roger Groh</td><td>REP</td><td class="votes">66,076</td><td class="pct">28.6</td></tr>
 </tbody>
 </table>
 99.0% of precincts reporting<br>
 Status: <b>Called for Barragan (D)</b><br>
-Lead: <b>Barragan +42.8</b><br>
+Lead: <b>Barragan +42.7</b><br>
 Pre-election estimate: <b>Safe D</b>
 </div>
 <div id="CA-45-results" class="results">
@@ -2070,8 +2070,8 @@ Pre-election estimate: <b>Safe D</b>
 <td>Pct</td>
 
 </tr>
-<tr><td>Derek Tran</td><td>DEM</td><td class="votes">157,622</td><td class="pct">50.1</td></tr>
-<tr><td>Michelle Steel*</td><td>REP</td><td class="votes">157,041</td><td class="pct">49.9</td></tr>
+<tr><td>Derek Tran</td><td>DEM</td><td class="votes">157,960</td><td class="pct">50.1</td></tr>
+<tr><td>Michelle Steel*</td><td>REP</td><td class="votes">157,347</td><td class="pct">49.9</td></tr>
 </tbody>
 </table>
 99.0% of precincts reporting<br>
@@ -2090,8 +2090,8 @@ Pre-election estimate: <b>Leans D</b>
 <td>Pct</td>
 
 </tr>
-<tr><td style="color: #fff" bgcolor="#0000FF">Lou Correa* ✔</td><td>DEM</td><td class="votes">133,327</td><td class="pct">63.4</td></tr>
-<tr><td>David Pan</td><td>REP</td><td class="votes">76,967</td><td class="pct">36.6</td></tr>
+<tr><td style="color: #fff" bgcolor="#0000FF">Lou Correa* ✔</td><td>DEM</td><td class="votes">133,640</td><td class="pct">63.4</td></tr>
+<tr><td>David Pan</td><td>REP</td><td class="votes">77,120</td><td class="pct">36.6</td></tr>
 </tbody>
 </table>
 98.9% of precincts reporting<br>
@@ -2110,8 +2110,8 @@ Pre-election estimate: <b>Safe D</b>
 <td>Pct</td>
 
 </tr>
-<tr><td style="color: #fff" bgcolor="#0000FF">Dave Min ✔</td><td>DEM</td><td class="votes">181,085</td><td class="pct">51.4</td></tr>
-<tr><td>Scott Baugh</td><td>REP</td><td class="votes">170,962</td><td class="pct">48.6</td></tr>
+<tr><td style="color: #fff" bgcolor="#0000FF">Dave Min ✔</td><td>DEM</td><td class="votes">181,501</td><td class="pct">51.4</td></tr>
+<tr><td>Scott Baugh</td><td>REP</td><td class="votes">171,378</td><td class="pct">48.6</td></tr>
 </tbody>
 </table>
 98.9% of precincts reporting<br>
@@ -2130,11 +2130,11 @@ Pre-election estimate: <b>Leans D</b>
 <td>Pct</td>
 
 </tr>
-<tr><td style="color: #fff" bgcolor="#FF0000">Darrell Issa* ✔</td><td>REP</td><td class="votes">212,276</td><td class="pct">59.3</td></tr>
-<tr><td>Stephen Houlahan</td><td>DEM</td><td class="votes">145,836</td><td class="pct">40.7</td></tr>
+<tr><td style="color: #fff" bgcolor="#FF0000">Darrell Issa* ✔</td><td>REP</td><td class="votes">212,438</td><td class="pct">59.3</td></tr>
+<tr><td>Stephen Houlahan</td><td>DEM</td><td class="votes">145,942</td><td class="pct">40.7</td></tr>
 </tbody>
 </table>
-98.0% of precincts reporting<br>
+98.2% of precincts reporting<br>
 Status: <b>Called for Issa (R)</b><br>
 Lead: <b>Issa +18.6</b><br>
 Pre-election estimate: <b>Likely R</b>
@@ -2150,11 +2150,11 @@ Pre-election estimate: <b>Likely R</b>
 <td>Pct</td>
 
 </tr>
-<tr><td style="color: #fff" bgcolor="#0000FF">Mike Levin* ✔</td><td>DEM</td><td class="votes">196,473</td><td class="pct">52.2</td></tr>
-<tr><td>Matt Gunderson</td><td>REP</td><td class="votes">179,890</td><td class="pct">47.8</td></tr>
+<tr><td style="color: #fff" bgcolor="#0000FF">Mike Levin* ✔</td><td>DEM</td><td class="votes">196,569</td><td class="pct">52.2</td></tr>
+<tr><td>Matt Gunderson</td><td>REP</td><td class="votes">180,041</td><td class="pct">47.8</td></tr>
 </tbody>
 </table>
-98.3% of precincts reporting<br>
+98.5% of precincts reporting<br>
 Status: <b>Called for Levin (D)</b><br>
 Lead: <b>Levin +4.4</b><br>
 Pre-election estimate: <b>Leans D</b>
@@ -2250,8 +2250,8 @@ Pre-election estimate: <b>Safe D</b>
 <td>Pct</td>
 
 </tr>
-<tr><td style="color: #fff" bgcolor="#0000FF">Joe Neguse* ✔</td><td>DEM</td><td class="votes">284,786</td><td class="pct">68.4</td></tr>
-<tr><td>Marshall Dawson</td><td>REP</td><td class="votes">120,587</td><td class="pct">28.9</td></tr>
+<tr><td style="color: #fff" bgcolor="#0000FF">Joe Neguse* ✔</td><td>DEM</td><td class="votes">284,994</td><td class="pct">68.4</td></tr>
+<tr><td>Marshall Dawson</td><td>REP</td><td class="votes">120,633</td><td class="pct">28.9</td></tr>
 </tbody>
 </table>
 99.0% of precincts reporting<br>
@@ -2291,7 +2291,7 @@ Pre-election estimate: <b>Leans R</b>
 <td>Pct</td>
 
 </tr>
-<tr><td style="color: #fff" bgcolor="#FF0000">Lauren Boebert ✔</td><td>REP</td><td class="votes">240,211</td><td class="pct">53.6</td></tr>
+<tr><td style="color: #fff" bgcolor="#FF0000">Lauren Boebert ✔</td><td>REP</td><td class="votes">240,213</td><td class="pct">53.6</td></tr>
 <tr><td>Trisha Calvarese</td><td>DEM</td><td class="votes">188,249</td><td class="pct">42.0</td></tr>
 <tr><td>Hannah Goodman</td><td>LIB</td><td class="votes">11,676</td><td class="pct">2.6</td></tr>
 </tbody>
@@ -2332,8 +2332,8 @@ Pre-election estimate: <b>Likely R</b>
 <td>Pct</td>
 
 </tr>
-<tr><td style="color: #fff" bgcolor="#0000FF">Jason Crow* ✔</td><td>DEM</td><td class="votes">202,657</td><td class="pct">59.0</td></tr>
-<tr><td>John Fabbricatore</td><td>REP</td><td class="votes">132,156</td><td class="pct">38.5</td></tr>
+<tr><td style="color: #fff" bgcolor="#0000FF">Jason Crow* ✔</td><td>DEM</td><td class="votes">202,686</td><td class="pct">59.0</td></tr>
+<tr><td>John Fabbricatore</td><td>REP</td><td class="votes">132,174</td><td class="pct">38.5</td></tr>
 </tbody>
 </table>
 99.1% of precincts reporting<br>
@@ -2352,8 +2352,8 @@ Pre-election estimate: <b>Safe D</b>
 <td>Pct</td>
 
 </tr>
-<tr><td style="color: #fff" bgcolor="#0000FF">Brittany Pettersen* ✔</td><td>DEM</td><td class="votes">235,680</td><td class="pct">55.3</td></tr>
-<tr><td>Sergei Matveyuk</td><td>REP</td><td class="votes">175,270</td><td class="pct">41.2</td></tr>
+<tr><td style="color: #fff" bgcolor="#0000FF">Brittany Pettersen* ✔</td><td>DEM</td><td class="votes">235,688</td><td class="pct">55.3</td></tr>
+<tr><td>Sergei Matveyuk</td><td>REP</td><td class="votes">175,273</td><td class="pct">41.2</td></tr>
 <tr><td>Patrick Bohan</td><td>LIB</td><td class="votes">9,697</td><td class="pct">2.3</td></tr>
 </tbody>
 </table>
@@ -2373,8 +2373,8 @@ Pre-election estimate: <b>Likely D</b>
 <td>Pct</td>
 
 </tr>
-<tr><td style="color: #fff" bgcolor="#FF0000">Gabe Evans ✔</td><td>REP</td><td class="votes">163,316</td><td class="pct">49.0</td></tr>
-<tr><td>Yadira Caraveo*</td><td>DEM</td><td class="votes">160,868</td><td class="pct">48.2</td></tr>
+<tr><td style="color: #fff" bgcolor="#FF0000">Gabe Evans ✔</td><td>REP</td><td class="votes">163,320</td><td class="pct">49.0</td></tr>
+<tr><td>Yadira Caraveo*</td><td>DEM</td><td class="votes">160,871</td><td class="pct">48.2</td></tr>
 </tbody>
 </table>
 99.0% of precincts reporting<br>
@@ -3354,8 +3354,8 @@ Pre-election estimate: <b>Safe R</b>
 <td>Pct</td>
 
 </tr>
-<tr><td style="color: #fff" bgcolor="#0000FF">Ed Case* ✔</td><td>DEM</td><td class="votes">163,921</td><td class="pct">71.8</td></tr>
-<tr><td>Patrick Largey</td><td>REP</td><td class="votes">64,226</td><td class="pct">28.2</td></tr>
+<tr><td style="color: #fff" bgcolor="#0000FF">Ed Case* ✔</td><td>DEM</td><td class="votes">164,237</td><td class="pct">71.8</td></tr>
+<tr><td>Patrick Largey</td><td>REP</td><td class="votes">64,373</td><td class="pct">28.2</td></tr>
 </tbody>
 </table>
 100.0% of precincts reporting<br>
@@ -3374,8 +3374,8 @@ Pre-election estimate: <b>Safe D</b>
 <td>Pct</td>
 
 </tr>
-<tr><td style="color: #fff" bgcolor="#0000FF">Jill Tokuda* ✔</td><td>DEM</td><td class="votes">165,881</td><td class="pct">66.5</td></tr>
-<tr><td>Steven Bond</td><td>REP</td><td class="votes">75,282</td><td class="pct">30.2</td></tr>
+<tr><td style="color: #fff" bgcolor="#0000FF">Jill Tokuda* ✔</td><td>DEM</td><td class="votes">166,251</td><td class="pct">66.5</td></tr>
+<tr><td>Steven Bond</td><td>REP</td><td class="votes">75,471</td><td class="pct">30.2</td></tr>
 </tbody>
 </table>
 100.0% of precincts reporting<br>
@@ -3437,8 +3437,8 @@ Pre-election estimate: <b>Safe R</b>
 <td>Pct</td>
 
 </tr>
-<tr><td style="color: #fff" bgcolor="#0000FF">Jonathan Jackson* ✔</td><td>DEM</td><td class="votes">208,388</td><td class="pct">65.9</td></tr>
-<tr><td>Marcus Lewis</td><td>REP</td><td class="votes">108,062</td><td class="pct">34.1</td></tr>
+<tr><td style="color: #fff" bgcolor="#0000FF">Jonathan Jackson* ✔</td><td>DEM</td><td class="votes">208,398</td><td class="pct">65.9</td></tr>
+<tr><td>Marcus Lewis</td><td>REP</td><td class="votes">108,064</td><td class="pct">34.1</td></tr>
 </tbody>
 </table>
 100.0% of precincts reporting<br>
@@ -3457,7 +3457,7 @@ Pre-election estimate: <b>Safe D</b>
 <td>Pct</td>
 
 </tr>
-<tr><td style="color: #fff" bgcolor="#0000FF">Robin Kelly* ✔</td><td>DEM</td><td class="votes">195,642</td><td class="pct">67.6</td></tr>
+<tr><td style="color: #fff" bgcolor="#0000FF">Robin Kelly* ✔</td><td>DEM</td><td class="votes">195,646</td><td class="pct">67.6</td></tr>
 <tr><td>Ashley Ramos</td><td>REP</td><td class="votes">93,852</td><td class="pct">32.4</td></tr>
 </tbody>
 </table>
@@ -3477,8 +3477,8 @@ Pre-election estimate: <b>Safe D</b>
 <td>Pct</td>
 
 </tr>
-<tr><td style="color: #fff" bgcolor="#0000FF">Delia Ramirez* ✔</td><td>DEM</td><td class="votes">174,805</td><td class="pct">67.3</td></tr>
-<tr><td>John Booras</td><td>REP</td><td class="votes">84,964</td><td class="pct">32.7</td></tr>
+<tr><td style="color: #fff" bgcolor="#0000FF">Delia Ramirez* ✔</td><td>DEM</td><td class="votes">174,825</td><td class="pct">67.3</td></tr>
+<tr><td>John Booras</td><td>REP</td><td class="votes">84,987</td><td class="pct">32.7</td></tr>
 </tbody>
 </table>
 100.0% of precincts reporting<br>
@@ -3497,9 +3497,9 @@ Pre-election estimate: <b>Safe D</b>
 <td>Pct</td>
 
 </tr>
-<tr><td style="color: #fff" bgcolor="#0000FF">Chuy Garcia* ✔</td><td>DEM</td><td class="votes">139,327</td><td class="pct">67.5</td></tr>
-<tr><td>Lupe Castillo</td><td>REP</td><td class="votes">56,319</td><td class="pct">27.3</td></tr>
-<tr><td>Edward Hershey</td><td>WOR</td><td class="votes">10,702</td><td class="pct">5.2</td></tr>
+<tr><td style="color: #fff" bgcolor="#0000FF">Chuy Garcia* ✔</td><td>DEM</td><td class="votes">139,343</td><td class="pct">67.5</td></tr>
+<tr><td>Lupe Castillo</td><td>REP</td><td class="votes">56,323</td><td class="pct">27.3</td></tr>
+<tr><td>Edward Hershey</td><td>WOR</td><td class="votes">10,704</td><td class="pct">5.2</td></tr>
 </tbody>
 </table>
 100.0% of precincts reporting<br>
@@ -3519,7 +3519,7 @@ Pre-election estimate: <b>Safe D</b>
 
 </tr>
 <tr><td style="color: #fff" bgcolor="#0000FF">Mike Quigley* ✔</td><td>DEM</td><td class="votes">251,026</td><td class="pct">69.0</td></tr>
-<tr><td>Tommy Hanson</td><td>REP</td><td class="votes">112,931</td><td class="pct">31.0</td></tr>
+<tr><td>Tommy Hanson</td><td>REP</td><td class="votes">112,932</td><td class="pct">31.0</td></tr>
 </tbody>
 </table>
 100.0% of precincts reporting<br>
@@ -3538,8 +3538,8 @@ Pre-election estimate: <b>Safe D</b>
 <td>Pct</td>
 
 </tr>
-<tr><td style="color: #fff" bgcolor="#0000FF">Sean Casten* ✔</td><td>DEM</td><td class="votes">196,645</td><td class="pct">54.2</td></tr>
-<tr><td>Niki Conforti</td><td>REP</td><td class="votes">166,115</td><td class="pct">45.8</td></tr>
+<tr><td style="color: #fff" bgcolor="#0000FF">Sean Casten* ✔</td><td>DEM</td><td class="votes">196,647</td><td class="pct">54.2</td></tr>
+<tr><td>Niki Conforti</td><td>REP</td><td class="votes">166,116</td><td class="pct">45.8</td></tr>
 </tbody>
 </table>
 100.0% of precincts reporting<br>
@@ -3558,8 +3558,8 @@ Pre-election estimate: <b>Leans D</b>
 <td>Pct</td>
 
 </tr>
-<tr><td style="color: #fff" bgcolor="#0000FF">Danny Davis* ✔</td><td>DEM</td><td class="votes">222,398</td><td class="pct">83.3</td></tr>
-<tr><td>Chad Koppie</td><td>REP</td><td class="votes">44,593</td><td class="pct">16.7</td></tr>
+<tr><td style="color: #fff" bgcolor="#0000FF">Danny Davis* ✔</td><td>DEM</td><td class="votes">222,408</td><td class="pct">83.3</td></tr>
+<tr><td>Chad Koppie</td><td>REP</td><td class="votes">44,598</td><td class="pct">16.7</td></tr>
 </tbody>
 </table>
 100.0% of precincts reporting<br>
@@ -3599,7 +3599,7 @@ Pre-election estimate: <b>Likely D</b>
 
 </tr>
 <tr><td style="color: #fff" bgcolor="#0000FF">Janice Schakowsky* ✔</td><td>DEM</td><td class="votes">231,722</td><td class="pct">68.4</td></tr>
-<tr><td>Seth Cohen</td><td>REP</td><td class="votes">107,105</td><td class="pct">31.6</td></tr>
+<tr><td>Seth Cohen</td><td>REP</td><td class="votes">107,106</td><td class="pct">31.6</td></tr>
 </tbody>
 </table>
 100.0% of precincts reporting<br>
@@ -3965,8 +3965,8 @@ Pre-election estimate: <b>Safe R</b>
 <td>Pct</td>
 
 </tr>
-<tr><td>Mariannette Miller-Meeks*</td><td>REP</td><td class="votes">206,946</td><td class="pct">50.1</td></tr>
-<tr><td>Christina Bohannan</td><td>DEM</td><td class="votes">206,149</td><td class="pct">49.9</td></tr>
+<tr><td>Mariannette Miller-Meeks*</td><td>REP</td><td class="votes">206,956</td><td class="pct">50.1</td></tr>
+<tr><td>Christina Bohannan</td><td>DEM</td><td class="votes">206,156</td><td class="pct">49.9</td></tr>
 </tbody>
 </table>
 100.0% of precincts reporting<br>
@@ -4131,7 +4131,7 @@ Pre-election estimate: <b>Safe R</b>
 <tr><td>Erin Marshall</td><td>DEM</td><td class="votes">85,494</td><td class="pct">25.3</td></tr>
 </tbody>
 </table>
-99.1% of precincts reporting<br>
+100.0% of precincts reporting<br>
 Status: <b>Called for Comer (R)</b><br>
 Lead: <b>Comer +49.4</b><br>
 Pre-election estimate: <b>Safe R</b>
@@ -4151,7 +4151,7 @@ Pre-election estimate: <b>Safe R</b>
 <tr><td>Hank Linderman</td><td>DEM</td><td class="votes">93,029</td><td class="pct">26.9</td></tr>
 </tbody>
 </table>
-99.1% of precincts reporting<br>
+100.0% of precincts reporting<br>
 Status: <b>Called for Guthrie (R)</b><br>
 Lead: <b>Guthrie +46.2</b><br>
 Pre-election estimate: <b>Safe R</b>
@@ -4171,7 +4171,7 @@ Pre-election estimate: <b>Safe R</b>
 <tr><td>Mike Craven</td><td>REP</td><td class="votes">124,713</td><td class="pct">38.0</td></tr>
 </tbody>
 </table>
-99.0% of precincts reporting<br>
+100.0% of precincts reporting<br>
 Status: <b>Called for McGarvey (D)</b><br>
 Lead: <b>McGarvey +23.9</b><br>
 Pre-election estimate: <b>Safe D</b>
@@ -4229,7 +4229,7 @@ Pre-election estimate: <b>Safe R</b>
 <tr><td>Randy Cravens</td><td>DEM</td><td class="votes">127,536</td><td class="pct">36.6</td></tr>
 </tbody>
 </table>
-99.0% of precincts reporting<br>
+100.0% of precincts reporting<br>
 Status: <b>Called for Barr (R)</b><br>
 Lead: <b>Barr +26.8</b><br>
 Pre-election estimate: <b>Likely R</b>
@@ -4375,14 +4375,14 @@ Pre-election estimate: <b>Likely D</b>
 <td>Pct</td>
 
 </tr>
-<tr><td style="color: #fff" bgcolor="#0000FF">Chellie Pingree* ✔</td><td>DEM</td><td class="votes">246,874</td><td class="pct">58.1</td></tr>
-<tr><td>Ronald C. Russell</td><td>REP</td><td class="votes">153,979</td><td class="pct">36.2</td></tr>
-<tr><td>Ethan Weld Alcorn</td><td>IND</td><td class="votes">20,669</td><td class="pct">4.9</td></tr>
+<tr><td style="color: #fff" bgcolor="#0000FF">Chellie Pingree* ✔</td><td>DEM</td><td class="votes">249,968</td><td class="pct">58.5</td></tr>
+<tr><td>Ronald C. Russell</td><td>REP</td><td class="votes">154,481</td><td class="pct">36.1</td></tr>
+<tr><td>Ethan Weld Alcorn</td><td>IND</td><td class="votes">20,799</td><td class="pct">4.9</td></tr>
 </tbody>
 </table>
 100.0% of precincts reporting<br>
 Status: <b>Called for Pingree (D)</b><br>
-Lead: <b>Pingree +21.9</b><br>
+Lead: <b>Pingree +22.3</b><br>
 Pre-election estimate: <b>Safe D</b>
 </div>
 <div id="ME-02-results" class="results">
@@ -4437,9 +4437,9 @@ Pre-election estimate: <b>Likely R</b>
 <td>Pct</td>
 
 </tr>
-<tr><td style="color: #fff" bgcolor="#0000FF">John Olszewski ✔</td><td>DEM</td><td class="votes">223,516</td><td class="pct">58.3</td></tr>
-<tr><td>Kim Klacik</td><td>REP</td><td class="votes">152,030</td><td class="pct">39.6</td></tr>
-<tr><td>Jasen Wunder</td><td>LIB</td><td class="votes">8,160</td><td class="pct">2.1</td></tr>
+<tr><td style="color: #fff" bgcolor="#0000FF">John Olszewski ✔</td><td>DEM</td><td class="votes">223,644</td><td class="pct">58.3</td></tr>
+<tr><td>Kim Klacik</td><td>REP</td><td class="votes">152,054</td><td class="pct">39.6</td></tr>
+<tr><td>Jasen Wunder</td><td>LIB</td><td class="votes">8,166</td><td class="pct">2.1</td></tr>
 </tbody>
 </table>
 100.0% of precincts reporting<br>
@@ -4479,13 +4479,13 @@ Pre-election estimate: <b>Safe D</b>
 <td>Pct</td>
 
 </tr>
-<tr><td style="color: #fff" bgcolor="#0000FF">Glenn Ivey* ✔</td><td>DEM</td><td class="votes">228,829</td><td class="pct">88.9</td></tr>
-<tr><td>George McDermott</td><td>REP</td><td class="votes">28,632</td><td class="pct">11.1</td></tr>
+<tr><td style="color: #fff" bgcolor="#0000FF">Glenn Ivey* ✔</td><td>DEM</td><td class="votes">231,809</td><td class="pct">88.8</td></tr>
+<tr><td>George McDermott</td><td>REP</td><td class="votes">29,236</td><td class="pct">11.2</td></tr>
 </tbody>
 </table>
 100.0% of precincts reporting<br>
 Status: <b>Called for Ivey (D)</b><br>
-Lead: <b>Ivey +77.8</b><br>
+Lead: <b>Ivey +77.6</b><br>
 Pre-election estimate: <b>Safe D</b>
 </div>
 <div id="MD-05-results" class="results">
@@ -4499,8 +4499,8 @@ Pre-election estimate: <b>Safe D</b>
 <td>Pct</td>
 
 </tr>
-<tr><td style="color: #fff" bgcolor="#0000FF">Steny Hoyer* ✔</td><td>DEM</td><td class="votes">280,141</td><td class="pct">67.7</td></tr>
-<tr><td>Michelle Talkington</td><td>REP</td><td class="votes">133,463</td><td class="pct">32.3</td></tr>
+<tr><td style="color: #fff" bgcolor="#0000FF">Steny Hoyer* ✔</td><td>DEM</td><td class="votes">280,852</td><td class="pct">67.8</td></tr>
+<tr><td>Michelle Talkington</td><td>REP</td><td class="votes">133,568</td><td class="pct">32.2</td></tr>
 </tbody>
 </table>
 100.0% of precincts reporting<br>
@@ -4519,8 +4519,8 @@ Pre-election estimate: <b>Safe D</b>
 <td>Pct</td>
 
 </tr>
-<tr><td style="color: #fff" bgcolor="#0000FF">April McClain Delaney ✔</td><td>DEM</td><td class="votes">199,760</td><td class="pct">53.2</td></tr>
-<tr><td>Neil Parrott</td><td>REP</td><td class="votes">175,965</td><td class="pct">46.8</td></tr>
+<tr><td style="color: #fff" bgcolor="#0000FF">April McClain Delaney ✔</td><td>DEM</td><td class="votes">199,788</td><td class="pct">53.2</td></tr>
+<tr><td>Neil Parrott</td><td>REP</td><td class="votes">175,974</td><td class="pct">46.8</td></tr>
 </tbody>
 </table>
 100.0% of precincts reporting<br>
@@ -4539,14 +4539,14 @@ Pre-election estimate: <b>Leans D</b>
 <td>Pct</td>
 
 </tr>
-<tr><td style="color: #fff" bgcolor="#0000FF">Kweisi Mfume* ✔</td><td>DEM</td><td class="votes">224,495</td><td class="pct">80.2</td></tr>
-<tr><td>Scott Collier</td><td>REP</td><td class="votes">48,790</td><td class="pct">17.4</td></tr>
-<tr><td>Ronald Owens-Bey</td><td>LIB</td><td class="votes">6,560</td><td class="pct">2.3</td></tr>
+<tr><td style="color: #fff" bgcolor="#0000FF">Kweisi Mfume* ✔</td><td>DEM</td><td class="votes">229,192</td><td class="pct">80.3</td></tr>
+<tr><td>Scott Collier</td><td>REP</td><td class="votes">49,331</td><td class="pct">17.3</td></tr>
+<tr><td>Ronald Owens-Bey</td><td>LIB</td><td class="votes">6,722</td><td class="pct">2.4</td></tr>
 </tbody>
 </table>
 100.0% of precincts reporting<br>
 Status: <b>Called for Mfume (D)</b><br>
-Lead: <b>Mfume +62.8</b><br>
+Lead: <b>Mfume +63.1</b><br>
 Pre-election estimate: <b>Safe D</b>
 </div>
 <div id="MD-08-results" class="results">
@@ -4560,14 +4560,14 @@ Pre-election estimate: <b>Safe D</b>
 <td>Pct</td>
 
 </tr>
-<tr><td style="color: #fff" bgcolor="#0000FF">Jamie Raskin* ✔</td><td>DEM</td><td class="votes">287,797</td><td class="pct">77.1</td></tr>
-<tr><td>Cheryl Riley</td><td>REP</td><td class="votes">76,329</td><td class="pct">20.4</td></tr>
-<tr><td>Nancy Wallace</td><td>GRE</td><td class="votes">9,258</td><td class="pct">2.5</td></tr>
+<tr><td style="color: #fff" bgcolor="#0000FF">Jamie Raskin* ✔</td><td>DEM</td><td class="votes">292,101</td><td class="pct">77.0</td></tr>
+<tr><td>Cheryl Riley</td><td>REP</td><td class="votes">77,821</td><td class="pct">20.5</td></tr>
+<tr><td>Nancy Wallace</td><td>GRE</td><td class="votes">9,612</td><td class="pct">2.5</td></tr>
 </tbody>
 </table>
 99.5% of precincts reporting<br>
 Status: <b>Called for Raskin (D)</b><br>
-Lead: <b>Raskin +56.6</b><br>
+Lead: <b>Raskin +56.5</b><br>
 Pre-election estimate: <b>Safe D</b>
 </div>
 <div id="MA-01-results" class="results">
@@ -5025,7 +5025,7 @@ Pre-election estimate: <b>Safe D</b>
 
 </tr>
 <tr><td style="color: #fff" bgcolor="#FF0000">Brad Finstad* ✔</td><td>REP</td><td class="votes">220,929</td><td class="pct">58.6</td></tr>
-<tr><td>Rachel Bohman</td><td>DEM</td><td class="votes">156,374</td><td class="pct">41.4</td></tr>
+<tr><td>Rachel Bohman</td><td>DEM</td><td class="votes">156,375</td><td class="pct">41.4</td></tr>
 </tbody>
 </table>
 100.0% of precincts reporting<br>
@@ -5044,9 +5044,9 @@ Pre-election estimate: <b>Likely R</b>
 <td>Pct</td>
 
 </tr>
-<tr><td style="color: #fff" bgcolor="#0000FF">Angie Craig* ✔</td><td>DEM</td><td class="votes">231,750</td><td class="pct">55.6</td></tr>
-<tr><td>Joe Teirab</td><td>REP</td><td class="votes">175,620</td><td class="pct">42.1</td></tr>
-<tr><td>Thomas Bowman</td><td>IND</td><td class="votes">9,491</td><td class="pct">2.3</td></tr>
+<tr><td style="color: #fff" bgcolor="#0000FF">Angie Craig* ✔</td><td>DEM</td><td class="votes">231,751</td><td class="pct">55.6</td></tr>
+<tr><td>Joe Teirab</td><td>REP</td><td class="votes">175,621</td><td class="pct">42.1</td></tr>
+<tr><td>Thomas Bowman</td><td>IND</td><td class="votes">9,492</td><td class="pct">2.3</td></tr>
 </tbody>
 </table>
 100.0% of precincts reporting<br>
@@ -5065,8 +5065,8 @@ Pre-election estimate: <b>Leans D</b>
 <td>Pct</td>
 
 </tr>
-<tr><td style="color: #fff" bgcolor="#0000FF">Kelly Morrison ✔</td><td>DEM</td><td class="votes">240,207</td><td class="pct">58.5</td></tr>
-<tr><td>Tad Jude</td><td>REP</td><td class="votes">170,426</td><td class="pct">41.5</td></tr>
+<tr><td style="color: #fff" bgcolor="#0000FF">Kelly Morrison ✔</td><td>DEM</td><td class="votes">240,209</td><td class="pct">58.5</td></tr>
+<tr><td>Tad Jude</td><td>REP</td><td class="votes">170,427</td><td class="pct">41.5</td></tr>
 </tbody>
 </table>
 100.0% of precincts reporting<br>
@@ -5085,8 +5085,8 @@ Pre-election estimate: <b>Likely D</b>
 <td>Pct</td>
 
 </tr>
-<tr><td style="color: #fff" bgcolor="#0000FF">Betty McCollum* ✔</td><td>DEM</td><td class="votes">242,801</td><td class="pct">67.4</td></tr>
-<tr><td>May Lor Xiong</td><td>REP</td><td class="votes">117,617</td><td class="pct">32.6</td></tr>
+<tr><td style="color: #fff" bgcolor="#0000FF">Betty McCollum* ✔</td><td>DEM</td><td class="votes">242,802</td><td class="pct">67.4</td></tr>
+<tr><td>May Lor Xiong</td><td>REP</td><td class="votes">117,618</td><td class="pct">32.6</td></tr>
 </tbody>
 </table>
 100.0% of precincts reporting<br>
@@ -5105,13 +5105,13 @@ Pre-election estimate: <b>Safe D</b>
 <td>Pct</td>
 
 </tr>
-<tr><td style="color: #fff" bgcolor="#0000FF">Ilhan Omar* ✔</td><td>DEM</td><td class="votes">261,061</td><td class="pct">75.2</td></tr>
-<tr><td>Dalia Al-Aqidi</td><td>REP</td><td class="votes">86,210</td><td class="pct">24.8</td></tr>
+<tr><td style="color: #fff" bgcolor="#0000FF">Ilhan Omar* ✔</td><td>DEM</td><td class="votes">261,066</td><td class="pct">75.2</td></tr>
+<tr><td>Dalia Al-Aqidi</td><td>REP</td><td class="votes">86,213</td><td class="pct">24.8</td></tr>
 </tbody>
 </table>
 100.0% of precincts reporting<br>
 Status: <b>Called for Omar (D)</b><br>
-Lead: <b>Omar +50.4</b><br>
+Lead: <b>Omar +50.3</b><br>
 Pre-election estimate: <b>Safe D</b>
 </div>
 <div id="MN-06-results" class="results">
@@ -5125,8 +5125,8 @@ Pre-election estimate: <b>Safe D</b>
 <td>Pct</td>
 
 </tr>
-<tr><td style="color: #fff" bgcolor="#FF0000">Tom Emmer* ✔</td><td>REP</td><td class="votes">260,091</td><td class="pct">62.5</td></tr>
-<tr><td>Jeanne Hendricks</td><td>DEM</td><td class="votes">155,830</td><td class="pct">37.5</td></tr>
+<tr><td style="color: #fff" bgcolor="#FF0000">Tom Emmer* ✔</td><td>REP</td><td class="votes">260,095</td><td class="pct">62.5</td></tr>
+<tr><td>Jeanne Hendricks</td><td>DEM</td><td class="votes">155,836</td><td class="pct">37.5</td></tr>
 </tbody>
 </table>
 100.0% of precincts reporting<br>
@@ -5145,8 +5145,8 @@ Pre-election estimate: <b>Likely R</b>
 <td>Pct</td>
 
 </tr>
-<tr><td style="color: #fff" bgcolor="#FF0000">Michelle Fischbach* ✔</td><td>REP</td><td class="votes">275,096</td><td class="pct">70.5</td></tr>
-<tr><td>AJ Peters</td><td>DEM</td><td class="votes">114,978</td><td class="pct">29.5</td></tr>
+<tr><td style="color: #fff" bgcolor="#FF0000">Michelle Fischbach* ✔</td><td>REP</td><td class="votes">275,098</td><td class="pct">70.5</td></tr>
+<tr><td>AJ Peters</td><td>DEM</td><td class="votes">114,979</td><td class="pct">29.5</td></tr>
 </tbody>
 </table>
 100.0% of precincts reporting<br>
@@ -5165,8 +5165,8 @@ Pre-election estimate: <b>Safe R</b>
 <td>Pct</td>
 
 </tr>
-<tr><td style="color: #fff" bgcolor="#FF0000">Pete Stauber* ✔</td><td>REP</td><td class="votes">244,496</td><td class="pct">58.0</td></tr>
-<tr><td>Jen Schultz</td><td>DEM</td><td class="votes">176,723</td><td class="pct">42.0</td></tr>
+<tr><td style="color: #fff" bgcolor="#FF0000">Pete Stauber* ✔</td><td>REP</td><td class="votes">244,498</td><td class="pct">58.0</td></tr>
+<tr><td>Jen Schultz</td><td>DEM</td><td class="votes">176,724</td><td class="pct">42.0</td></tr>
 </tbody>
 </table>
 100.0% of precincts reporting<br>
@@ -5536,7 +5536,7 @@ Pre-election estimate: <b>Safe R</b>
 <tr><td>Mark Robertson</td><td>REP</td><td class="votes">143,650</td><td class="pct">44.5</td></tr>
 </tbody>
 </table>
-99.0% of precincts reporting<br>
+100.0% of precincts reporting<br>
 Status: <b>Called for Titus (D)</b><br>
 Lead: <b>Titus +7.5</b><br>
 Pre-election estimate: <b>Leans D</b>
@@ -5558,7 +5558,7 @@ Pre-election estimate: <b>Leans D</b>
 <tr><td>Javi Tachiquin</td><td>LIB</td><td class="votes">15,817</td><td class="pct">4.0</td></tr>
 </tbody>
 </table>
-99.0% of precincts reporting<br>
+100.0% of precincts reporting<br>
 Status: <b>Called for Amodei (R)</b><br>
 Lead: <b>Amodei +19.0</b><br>
 Pre-election estimate: <b>Safe R</b>
@@ -5578,7 +5578,7 @@ Pre-election estimate: <b>Safe R</b>
 <tr><td>Drew Johnson</td><td>REP</td><td class="votes">181,084</td><td class="pct">48.6</td></tr>
 </tbody>
 </table>
-98.9% of precincts reporting<br>
+100.0% of precincts reporting<br>
 Status: <b>Called for Lee (D)</b><br>
 Lead: <b>Lee +2.7</b><br>
 Pre-election estimate: <b>Leans D</b>
@@ -5598,7 +5598,7 @@ Pre-election estimate: <b>Leans D</b>
 <tr><td>John Lee</td><td>REP</td><td class="votes">148,061</td><td class="pct">44.6</td></tr>
 </tbody>
 </table>
-99.0% of precincts reporting<br>
+100.0% of precincts reporting<br>
 Status: <b>Called for Horsford (D)</b><br>
 Lead: <b>Horsford +8.1</b><br>
 Pre-election estimate: <b>Leans D</b>
@@ -5900,7 +5900,7 @@ Pre-election estimate: <b>Safe D</b>
 <tr><td>Steve Jones</td><td>REP</td><td class="votes">149,546</td><td class="pct">43.6</td></tr>
 </tbody>
 </table>
-99.0% of precincts reporting<br>
+100.0% of precincts reporting<br>
 Status: <b>Called for Stansbury (D)</b><br>
 Lead: <b>Stansbury +12.7</b><br>
 Pre-election estimate: <b>Likely D</b>
@@ -5920,7 +5920,7 @@ Pre-election estimate: <b>Likely D</b>
 <tr><td>Yvette Herrell</td><td>REP</td><td class="votes">127,145</td><td class="pct">47.9</td></tr>
 </tbody>
 </table>
-98.9% of precincts reporting<br>
+100.0% of precincts reporting<br>
 Status: <b>Called for Vasquez (D)</b><br>
 Lead: <b>Vasquez +4.2</b><br>
 Pre-election estimate: <b>Leans D</b>
@@ -5940,7 +5940,7 @@ Pre-election estimate: <b>Leans D</b>
 <tr><td>Sharon Clahchischilliage</td><td>REP</td><td class="votes">126,085</td><td class="pct">43.7</td></tr>
 </tbody>
 </table>
-99.1% of precincts reporting<br>
+100.0% of precincts reporting<br>
 Status: <b>Called for Leger Fernandez (D)</b><br>
 Lead: <b>Leger Fernandez +12.6</b><br>
 Pre-election estimate: <b>Likely D</b>
@@ -7937,9 +7937,9 @@ Pre-election estimate: <b>Safe R</b>
 <td>Pct</td>
 
 </tr>
-<tr><td style="color: #fff" bgcolor="#FF0000">Andy Ogles* ✔</td><td>REP</td><td class="votes">204,807</td><td class="pct">56.9</td></tr>
-<tr><td>Maryam Abolfazli</td><td>DEM</td><td class="votes">142,136</td><td class="pct">39.5</td></tr>
-<tr><td>Jim Larkin</td><td>IND</td><td class="votes">7,588</td><td class="pct">2.1</td></tr>
+<tr><td style="color: #fff" bgcolor="#FF0000">Andy Ogles* ✔</td><td>REP</td><td class="votes">204,952</td><td class="pct">56.8</td></tr>
+<tr><td>Maryam Abolfazli</td><td>DEM</td><td class="votes">142,336</td><td class="pct">39.5</td></tr>
+<tr><td>Jim Larkin</td><td>IND</td><td class="votes">7,595</td><td class="pct">2.1</td></tr>
 </tbody>
 </table>
 98.9% of precincts reporting<br>
@@ -7958,8 +7958,8 @@ Pre-election estimate: <b>Likely R</b>
 <td>Pct</td>
 
 </tr>
-<tr><td style="color: #fff" bgcolor="#FF0000">John Rose* ✔</td><td>REP</td><td class="votes">225,453</td><td class="pct">68.0</td></tr>
-<tr><td>Lore Bergman</td><td>DEM</td><td class="votes">106,058</td><td class="pct">32.0</td></tr>
+<tr><td style="color: #fff" bgcolor="#FF0000">John Rose* ✔</td><td>REP</td><td class="votes">225,510</td><td class="pct">68.0</td></tr>
+<tr><td>Lore Bergman</td><td>DEM</td><td class="votes">106,177</td><td class="pct">32.0</td></tr>
 </tbody>
 </table>
 98.9% of precincts reporting<br>
@@ -7978,9 +7978,9 @@ Pre-election estimate: <b>Safe R</b>
 <td>Pct</td>
 
 </tr>
-<tr><td style="color: #fff" bgcolor="#FF0000">Mark Green* ✔</td><td>REP</td><td class="votes">191,832</td><td class="pct">59.5</td></tr>
-<tr><td>Megan Barry</td><td>DEM</td><td class="votes">122,593</td><td class="pct">38.0</td></tr>
-<tr><td>Shaun Greene</td><td>IND</td><td class="votes">7,879</td><td class="pct">2.4</td></tr>
+<tr><td style="color: #fff" bgcolor="#FF0000">Mark Green* ✔</td><td>REP</td><td class="votes">191,933</td><td class="pct">59.5</td></tr>
+<tr><td>Megan Barry</td><td>DEM</td><td class="votes">122,737</td><td class="pct">38.0</td></tr>
+<tr><td>Shaun Greene</td><td>IND</td><td class="votes">7,898</td><td class="pct">2.4</td></tr>
 </tbody>
 </table>
 99.1% of precincts reporting<br>
@@ -8805,7 +8805,7 @@ Pre-election estimate: <b>Likely R</b>
 <tr><td>Daniel Cottam</td><td>LIB</td><td class="votes">17,601</td><td class="pct">4.8</td></tr>
 </tbody>
 </table>
-98.4% of precincts reporting<br>
+100.0% of precincts reporting<br>
 Status: <b>Called for Moore (R)</b><br>
 Lead: <b>Moore +31.1</b><br>
 Pre-election estimate: <b>Safe R</b>
@@ -8827,7 +8827,7 @@ Pre-election estimate: <b>Safe R</b>
 <tr><td>Tyler Murset</td><td>IND</td><td class="votes">7,840</td><td class="pct">2.2</td></tr>
 </tbody>
 </table>
-98.2% of precincts reporting<br>
+100.0% of precincts reporting<br>
 Status: <b>Called for Maloy (R)</b><br>
 Lead: <b>Maloy +23.8</b><br>
 Pre-election estimate: <b>Likely R</b>
@@ -8847,7 +8847,7 @@ Pre-election estimate: <b>Likely R</b>
 <tr><td>Glenn Wright</td><td>DEM</td><td class="votes">122,780</td><td class="pct">33.6</td></tr>
 </tbody>
 </table>
-98.6% of precincts reporting<br>
+100.0% of precincts reporting<br>
 Status: <b>Called for Kennedy (R)</b><br>
 Lead: <b>Kennedy +32.8</b><br>
 Pre-election estimate: <b>Safe R</b>
@@ -8868,7 +8868,7 @@ Pre-election estimate: <b>Safe R</b>
 <tr><td>Vaughn Cook</td><td>UNI</td><td class="votes">17,347</td><td class="pct">4.8</td></tr>
 </tbody>
 </table>
-98.5% of precincts reporting<br>
+100.0% of precincts reporting<br>
 Status: <b>Called for Owens (R)</b><br>
 Lead: <b>Owens +33.2</b><br>
 Pre-election estimate: <b>Safe R</b>
@@ -9128,8 +9128,8 @@ Pre-election estimate: <b>Safe D</b>
 <td>Pct</td>
 
 </tr>
-<tr><td style="color: #fff" bgcolor="#0000FF">Suzan DelBene* ✔</td><td>DEM</td><td class="votes">227,097</td><td class="pct">63.2</td></tr>
-<tr><td>Jeb Brewer</td><td>REP</td><td class="votes">132,470</td><td class="pct">36.8</td></tr>
+<tr><td style="color: #fff" bgcolor="#0000FF">Suzan DelBene* ✔</td><td>DEM</td><td class="votes">227,213</td><td class="pct">63.2</td></tr>
+<tr><td>Jeb Brewer</td><td>REP</td><td class="votes">132,538</td><td class="pct">36.8</td></tr>
 </tbody>
 </table>
 99.0% of precincts reporting<br>
@@ -9148,8 +9148,8 @@ Pre-election estimate: <b>Safe D</b>
 <td>Pct</td>
 
 </tr>
-<tr><td style="color: #fff" bgcolor="#0000FF">Rick Larsen* ✔</td><td>DEM</td><td class="votes">263,262</td><td class="pct">64.0</td></tr>
-<tr><td>Cody Hart</td><td>REP</td><td class="votes">147,879</td><td class="pct">36.0</td></tr>
+<tr><td style="color: #fff" bgcolor="#0000FF">Rick Larsen* ✔</td><td>DEM</td><td class="votes">263,750</td><td class="pct">64.0</td></tr>
+<tr><td>Cody Hart</td><td>REP</td><td class="votes">148,167</td><td class="pct">36.0</td></tr>
 </tbody>
 </table>
 99.0% of precincts reporting<br>
@@ -9168,13 +9168,13 @@ Pre-election estimate: <b>Safe D</b>
 <td>Pct</td>
 
 </tr>
-<tr><td style="color: #fff" bgcolor="#0000FF">Marie Gluesenkamp Perez* ✔</td><td>DEM</td><td class="votes">214,816</td><td class="pct">52.0</td></tr>
-<tr><td>Joe Kent</td><td>REP</td><td class="votes">198,464</td><td class="pct">48.0</td></tr>
+<tr><td style="color: #fff" bgcolor="#0000FF">Marie Gluesenkamp Perez* ✔</td><td>DEM</td><td class="votes">215,177</td><td class="pct">51.9</td></tr>
+<tr><td>Joe Kent</td><td>REP</td><td class="votes">199,054</td><td class="pct">48.1</td></tr>
 </tbody>
 </table>
 99.0% of precincts reporting<br>
 Status: <b>Called for Gluesenkamp Perez (D)</b><br>
-Lead: <b>Gluesenkamp Perez +4.0</b><br>
+Lead: <b>Gluesenkamp Perez +3.9</b><br>
 Pre-election estimate: <b>Leans R</b>
 </div>
 <div id="WA-04-results" class="results">
@@ -9188,13 +9188,13 @@ Pre-election estimate: <b>Leans R</b>
 <td>Pct</td>
 
 </tr>
-<tr><td style="color: #fff" bgcolor="#FF0000">Dan Newhouse* ✔</td><td>REP</td><td class="votes">152,329</td><td class="pct">53.0</td></tr>
-<tr><td>Jerrod Sessler</td><td>REP</td><td class="votes">135,261</td><td class="pct">47.0</td></tr>
+<tr><td style="color: #fff" bgcolor="#FF0000">Dan Newhouse* ✔</td><td>REP</td><td class="votes">153,477</td><td class="pct">53.0</td></tr>
+<tr><td>Jerrod Sessler</td><td>REP</td><td class="votes">136,175</td><td class="pct">47.0</td></tr>
 </tbody>
 </table>
 99.0% of precincts reporting<br>
 Status: <b>Called for Newhouse (R)</b><br>
-Lead: <b>Newhouse +5.9</b><br>
+Lead: <b>Newhouse +6.0</b><br>
 Pre-election estimate: <b>Safe R</b>
 </div>
 <div id="WA-05-results" class="results">
@@ -9208,8 +9208,8 @@ Pre-election estimate: <b>Safe R</b>
 <td>Pct</td>
 
 </tr>
-<tr><td style="color: #fff" bgcolor="#FF0000">Michael Baumgartner ✔</td><td>REP</td><td class="votes">239,745</td><td class="pct">60.7</td></tr>
-<tr><td>Carmela Conroy</td><td>DEM</td><td class="votes">155,542</td><td class="pct">39.3</td></tr>
+<tr><td style="color: #fff" bgcolor="#FF0000">Michael Baumgartner ✔</td><td>REP</td><td class="votes">240,619</td><td class="pct">60.7</td></tr>
+<tr><td>Carmela Conroy</td><td>DEM</td><td class="votes">156,074</td><td class="pct">39.3</td></tr>
 </tbody>
 </table>
 99.0% of precincts reporting<br>
@@ -9228,13 +9228,13 @@ Pre-election estimate: <b>Likely R</b>
 <td>Pct</td>
 
 </tr>
-<tr><td style="color: #fff" bgcolor="#0000FF">Emily Randall ✔</td><td>DEM</td><td class="votes">238,962</td><td class="pct">56.8</td></tr>
-<tr><td>Drew MacEwen</td><td>REP</td><td class="votes">181,521</td><td class="pct">43.2</td></tr>
+<tr><td style="color: #fff" bgcolor="#0000FF">Emily Randall ✔</td><td>DEM</td><td class="votes">239,687</td><td class="pct">56.8</td></tr>
+<tr><td>Drew MacEwen</td><td>REP</td><td class="votes">182,182</td><td class="pct">43.2</td></tr>
 </tbody>
 </table>
 99.1% of precincts reporting<br>
 Status: <b>Called for Randall (D)</b><br>
-Lead: <b>Randall +13.7</b><br>
+Lead: <b>Randall +13.6</b><br>
 Pre-election estimate: <b>Likely D</b>
 </div>
 <div id="WA-07-results" class="results">
@@ -9248,13 +9248,13 @@ Pre-election estimate: <b>Likely D</b>
 <td>Pct</td>
 
 </tr>
-<tr><td style="color: #fff" bgcolor="#0000FF">Pramila Jayapal* ✔</td><td>DEM</td><td class="votes">351,983</td><td class="pct">84.2</td></tr>
-<tr><td>Dan Alexander</td><td>REP</td><td class="votes">66,174</td><td class="pct">15.8</td></tr>
+<tr><td style="color: #fff" bgcolor="#0000FF">Pramila Jayapal* ✔</td><td>DEM</td><td class="votes">352,286</td><td class="pct">84.2</td></tr>
+<tr><td>Dan Alexander</td><td>REP</td><td class="votes">66,220</td><td class="pct">15.8</td></tr>
 </tbody>
 </table>
 99.0% of precincts reporting<br>
 Status: <b>Called for Jayapal (D)</b><br>
-Lead: <b>Jayapal +68.3</b><br>
+Lead: <b>Jayapal +68.4</b><br>
 Pre-election estimate: <b>Safe D</b>
 </div>
 <div id="WA-08-results" class="results">
@@ -9268,8 +9268,8 @@ Pre-election estimate: <b>Safe D</b>
 <td>Pct</td>
 
 </tr>
-<tr><td style="color: #fff" bgcolor="#0000FF">Kim Schrier* ✔</td><td>DEM</td><td class="votes">224,313</td><td class="pct">54.1</td></tr>
-<tr><td>Carmen Goers</td><td>REP</td><td class="votes">190,422</td><td class="pct">45.9</td></tr>
+<tr><td style="color: #fff" bgcolor="#0000FF">Kim Schrier* ✔</td><td>DEM</td><td class="votes">224,607</td><td class="pct">54.1</td></tr>
+<tr><td>Carmen Goers</td><td>REP</td><td class="votes">190,675</td><td class="pct">45.9</td></tr>
 </tbody>
 </table>
 99.0% of precincts reporting<br>
@@ -9288,8 +9288,8 @@ Pre-election estimate: <b>Leans D</b>
 <td>Pct</td>
 
 </tr>
-<tr><td style="color: #fff" bgcolor="#0000FF">Adam Smith* ✔</td><td>DEM</td><td class="votes">182,696</td><td class="pct">66.9</td></tr>
-<tr><td>Melissa Chaudhry</td><td>DEM</td><td class="votes">90,526</td><td class="pct">33.1</td></tr>
+<tr><td style="color: #fff" bgcolor="#0000FF">Adam Smith* ✔</td><td>DEM</td><td class="votes">182,780</td><td class="pct">66.9</td></tr>
+<tr><td>Melissa Chaudhry</td><td>DEM</td><td class="votes">90,601</td><td class="pct">33.1</td></tr>
 </tbody>
 </table>
 98.9% of precincts reporting<br>
@@ -9308,13 +9308,13 @@ Pre-election estimate: <b>Safe D</b>
 <td>Pct</td>
 
 </tr>
-<tr><td style="color: #fff" bgcolor="#0000FF">Marilyn Strickland* ✔</td><td>DEM</td><td class="votes">203,428</td><td class="pct">58.7</td></tr>
-<tr><td>Don Hewett</td><td>REP</td><td class="votes">143,256</td><td class="pct">41.3</td></tr>
+<tr><td style="color: #fff" bgcolor="#0000FF">Marilyn Strickland* ✔</td><td>DEM</td><td class="votes">203,732</td><td class="pct">58.7</td></tr>
+<tr><td>Don Hewett</td><td>REP</td><td class="votes">143,492</td><td class="pct">41.3</td></tr>
 </tbody>
 </table>
 99.0% of precincts reporting<br>
 Status: <b>Called for Strickland (D)</b><br>
-Lead: <b>Strickland +17.4</b><br>
+Lead: <b>Strickland +17.3</b><br>
 Pre-election estimate: <b>Likely D</b>
 </div>
 <div id="WV-01-results" class="results">
