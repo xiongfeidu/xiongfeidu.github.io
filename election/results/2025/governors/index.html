@@ -6475,24 +6475,28 @@ Pre-election estimate: <b>Leans D</b>
 <td>Pct</td>
 
 </tr>
-<tr><td>Abigail Spanberger</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
-<tr><td>Winsome Earle-Sears</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
+<tr><td>Abigail Spanberger</td><td>DEM</td><td class="votes">28,215</td><td class="pct">58.9</td></tr>
+<tr><td>Winsome Earle-Sears</td><td>REP</td><td class="votes">19,636</td><td class="pct">41.0</td></tr>
 </tbody>
 </table>
-0.0% of precincts reporting<br>
+1.2% of precincts reporting<br>
 Status: <b>Not called</b><br>
-Lead: <b>Tie</b><br>
+Lead: <b>Spanberger +17.9</b><br>
 <table class="modelstable"">
 <tbody>
 <tr class="cheaderrow">
 <td>Model</td>
 <td colspan="3">Estimate</td>
 </tr>
-<tr><td>Model 1</td><td><b>Tie</b></td><td class="pct"></td><td class="pct"> </td></tr>
-<tr><td>Model 2</td><td><b>Spanberger</b></td><td class="pct">+5.0</td><td class="pct"> </td></tr>
+<tr><td>Model 1A</td><td><b>Spanberger</b></td><td class="pct">+2.2</td><td class="pct"> </td></tr>
+<tr><td>Model 1B</td><td><b>Spanberger</b></td><td class="pct">+10.6</td><td class="pct"> </td></tr>
+<tr><td>Model 2A</td><td><b>Spanberger</b></td><td class="pct">+5.2</td><td class="pct"> </td></tr>
+<tr><td>Model 2B</td><td><b>Spanberger</b></td><td class="pct">+5.1</td><td class="pct"> </td></tr>
+<tr><td>Model 1C</td><td><b>Earle-Sears</b></td><td class="pct">+1.3</td><td class="pct"> </td></tr>
+<tr><td>Model 2C</td><td><b>Spanberger</b></td><td class="pct">+4.9</td><td class="pct"> </td></tr>
 </tbody>
 </table>
-0.0% of estimated vote reporting<br>
+1.4% of estimated vote reporting<br>
 Pre-election estimate: <b>Likely D</b>
 </div>
 
@@ -6935,16 +6939,16 @@ Pre-election estimate: <b>Likely D</b>
   function setColor(id, color) {
     document.getElementById(id).style.fill = color;    
   }
-  var stateColors = {"NJ": "#FFFFFF", "VA": "#FFFFFF"};
+  var stateColors = {"NJ": "#FFFFFF", "VA": "#9090FF"};
   function colorAll() {
     for (var state in stateColors) {
       setColor(state, stateColors[state]);
     }
   }
   colorAll();
-  var actual = {"c34001": "#FFFFFF", "c34003": "#FFFFFF", "c34005": "#FFFFFF", "c34007": "#FFFFFF", "c34009": "#FFFFFF", "c34011": "#FFFFFF", "c34013": "#FFFFFF", "c34015": "#FFFFFF", "c34017": "#FFFFFF", "c34019": "#FFFFFF", "c34021": "#FFFFFF", "c34023": "#FFFFFF", "c34025": "#FFFFFF", "c34027": "#FFFFFF", "c34029": "#FFFFFF", "c34031": "#FFFFFF", "c34033": "#FFFFFF", "c34035": "#FFFFFF", "c34037": "#FFFFFF", "c34039": "#FFFFFF", "c34041": "#FFFFFF", "c51001": "#FFFFFF", "c51003": "#FFFFFF", "c51510": "#FFFFFF", "c51005": "#FFFFFF", "c51007": "#FFFFFF", "c51009": "#FFFFFF", "c51011": "#FFFFFF", "c51013": "#FFFFFF", "c51015": "#FFFFFF", "c51017": "#FFFFFF", "c51019": "#FFFFFF", "c51021": "#FFFFFF", "c51023": "#FFFFFF", "c51520": "#FFFFFF", "c51025": "#FFFFFF", "c51027": "#FFFFFF", "c51029": "#FFFFFF", "c51530": "#FFFFFF", "c51031": "#FFFFFF", "c51033": "#FFFFFF", "c51035": "#FFFFFF", "c51036": "#FFFFFF", "c51037": "#FFFFFF", "c51540": "#FFFFFF", "c51550": "#FFFFFF", "c51041": "#FFFFFF", "c51043": "#FFFFFF", "c51570": "#FFFFFF", "c51580": "#FFFFFF", "c51045": "#FFFFFF", "c51047": "#FFFFFF", "c51049": "#FFFFFF", "c51590": "#FFFFFF", "c51051": "#FFFFFF", "c51053": "#FFFFFF", "c51595": "#FFFFFF", "c51057": "#FFFFFF", "c51059": "#FFFFFF", "c51600": "#FFFFFF", "c51610": "#FFFFFF", "c51061": "#FFFFFF", "c51063": "#FFFFFF", "c51065": "#FFFFFF", "c51067": "#FFFFFF", "c51620": "#FFFFFF", "c51069": "#FFFFFF", "c51630": "#FFFFFF", "c51640": "#FFFFFF", "c51071": "#FFFFFF", "c51073": "#FFFFFF", "c51075": "#FFFFFF", "c51077": "#FFFFFF", "c51079": "#FFFFFF", "c51081": "#FFFFFF", "c51083": "#FFFFFF", "c51650": "#FFFFFF", "c51085": "#FFFFFF", "c51660": "#FFFFFF", "c51087": "#FFFFFF", "c51089": "#FFFFFF", "c51091": "#FFFFFF", "c51670": "#FFFFFF", "c51093": "#FFFFFF", "c51095": "#FFFFFF", "c51097": "#FFFFFF", "c51099": "#FFFFFF", "c51101": "#FFFFFF", "c51103": "#FFFFFF", "c51105": "#FFFFFF", "c51678": "#FFFFFF", "c51107": "#FFFFFF", "c51109": "#FFFFFF", "c51111": "#FFFFFF", "c51680": "#FFFFFF", "c51113": "#FFFFFF", "c51683": "#FFFFFF", "c51685": "#FFFFFF", "c51690": "#FFFFFF", "c51115": "#FFFFFF", "c51117": "#FFFFFF", "c51119": "#FFFFFF", "c51121": "#FFFFFF", "c51125": "#FFFFFF", "c51127": "#FFFFFF", "c51700": "#FFFFFF", "c51710": "#FFFFFF", "c51131": "#FFFFFF", "c51133": "#FFFFFF", "c51720": "#FFFFFF", "c51135": "#FFFFFF", "c51137": "#FFFFFF", "c51139": "#FFFFFF", "c51141": "#FFFFFF", "c51730": "#FFFFFF", "c51143": "#FFFFFF", "c51735": "#FFFFFF", "c51740": "#FFFFFF", "c51145": "#FFFFFF", "c51147": "#FFFFFF", "c51149": "#FFFFFF", "c51153": "#FFFFFF", "c51155": "#FFFFFF", "c51750": "#FFFFFF", "c51157": "#FFFFFF", "c51159": "#FFFFFF", "c51760": "#FFFFFF", "c51161": "#FFFFFF", "c51770": "#FFFFFF", "c51163": "#FFFFFF", "c51165": "#FFFFFF", "c51167": "#FFFFFF", "c51775": "#FFFFFF", "c51169": "#FFFFFF", "c51171": "#FFFFFF", "c51173": "#FFFFFF", "c51175": "#FFFFFF", "c51177": "#FFFFFF", "c51179": "#FFFFFF", "c51790": "#FFFFFF", "c51800": "#FFFFFF", "c51181": "#FFFFFF", "c51183": "#FFFFFF", "c51185": "#FFFFFF", "c51810": "#FFFFFF", "c51187": "#FFFFFF", "c51191": "#FFFFFF", "c51820": "#FFFFFF", "c51193": "#FFFFFF", "c51830": "#FFFFFF", "c51840": "#FFFFFF", "c51195": "#FFFFFF", "c51197": "#FFFFFF", "c51199": "#FFFFFF"};
-  var margins = {"c34001": "#FFFFFF", "c34003": "#FFFFFF", "c34005": "#FFFFFF", "c34007": "#FFFFFF", "c34009": "#FFFFFF", "c34011": "#FFFFFF", "c34013": "#FFFFFF", "c34015": "#FFFFFF", "c34017": "#FFFFFF", "c34019": "#FFFFFF", "c34021": "#FFFFFF", "c34023": "#FFFFFF", "c34025": "#FFFFFF", "c34027": "#FFFFFF", "c34029": "#FFFFFF", "c34031": "#FFFFFF", "c34033": "#FFFFFF", "c34035": "#FFFFFF", "c34037": "#FFFFFF", "c34039": "#FFFFFF", "c34041": "#FFFFFF", "c51001": "#FFFFFF", "c51003": "#FFFFFF", "c51510": "#FFFFFF", "c51005": "#FFFFFF", "c51007": "#FFFFFF", "c51009": "#FFFFFF", "c51011": "#FFFFFF", "c51013": "#FFFFFF", "c51015": "#FFFFFF", "c51017": "#FFFFFF", "c51019": "#FFFFFF", "c51021": "#FFFFFF", "c51023": "#FFFFFF", "c51520": "#FFFFFF", "c51025": "#FFFFFF", "c51027": "#FFFFFF", "c51029": "#FFFFFF", "c51530": "#FFFFFF", "c51031": "#FFFFFF", "c51033": "#FFFFFF", "c51035": "#FFFFFF", "c51036": "#FFFFFF", "c51037": "#FFFFFF", "c51540": "#FFFFFF", "c51550": "#FFFFFF", "c51041": "#FFFFFF", "c51043": "#FFFFFF", "c51570": "#FFFFFF", "c51580": "#FFFFFF", "c51045": "#FFFFFF", "c51047": "#FFFFFF", "c51049": "#FFFFFF", "c51590": "#FFFFFF", "c51051": "#FFFFFF", "c51053": "#FFFFFF", "c51595": "#FFFFFF", "c51057": "#FFFFFF", "c51059": "#FFFFFF", "c51600": "#FFFFFF", "c51610": "#FFFFFF", "c51061": "#FFFFFF", "c51063": "#FFFFFF", "c51065": "#FFFFFF", "c51067": "#FFFFFF", "c51620": "#FFFFFF", "c51069": "#FFFFFF", "c51630": "#FFFFFF", "c51640": "#FFFFFF", "c51071": "#FFFFFF", "c51073": "#FFFFFF", "c51075": "#FFFFFF", "c51077": "#FFFFFF", "c51079": "#FFFFFF", "c51081": "#FFFFFF", "c51083": "#FFFFFF", "c51650": "#FFFFFF", "c51085": "#FFFFFF", "c51660": "#FFFFFF", "c51087": "#FFFFFF", "c51089": "#FFFFFF", "c51091": "#FFFFFF", "c51670": "#FFFFFF", "c51093": "#FFFFFF", "c51095": "#FFFFFF", "c51097": "#FFFFFF", "c51099": "#FFFFFF", "c51101": "#FFFFFF", "c51103": "#FFFFFF", "c51105": "#FFFFFF", "c51678": "#FFFFFF", "c51107": "#FFFFFF", "c51109": "#FFFFFF", "c51111": "#FFFFFF", "c51680": "#FFFFFF", "c51113": "#FFFFFF", "c51683": "#FFFFFF", "c51685": "#FFFFFF", "c51690": "#FFFFFF", "c51115": "#FFFFFF", "c51117": "#FFFFFF", "c51119": "#FFFFFF", "c51121": "#FFFFFF", "c51125": "#FFFFFF", "c51127": "#FFFFFF", "c51700": "#FFFFFF", "c51710": "#FFFFFF", "c51131": "#FFFFFF", "c51133": "#FFFFFF", "c51720": "#FFFFFF", "c51135": "#FFFFFF", "c51137": "#FFFFFF", "c51139": "#FFFFFF", "c51141": "#FFFFFF", "c51730": "#FFFFFF", "c51143": "#FFFFFF", "c51735": "#FFFFFF", "c51740": "#FFFFFF", "c51145": "#FFFFFF", "c51147": "#FFFFFF", "c51149": "#FFFFFF", "c51153": "#FFFFFF", "c51155": "#FFFFFF", "c51750": "#FFFFFF", "c51157": "#FFFFFF", "c51159": "#FFFFFF", "c51760": "#FFFFFF", "c51161": "#FFFFFF", "c51770": "#FFFFFF", "c51163": "#FFFFFF", "c51165": "#FFFFFF", "c51167": "#FFFFFF", "c51775": "#FFFFFF", "c51169": "#FFFFFF", "c51171": "#FFFFFF", "c51173": "#FFFFFF", "c51175": "#FFFFFF", "c51177": "#FFFFFF", "c51179": "#FFFFFF", "c51790": "#FFFFFF", "c51800": "#FFFFFF", "c51181": "#FFFFFF", "c51183": "#FFFFFF", "c51185": "#FFFFFF", "c51810": "#FFFFFF", "c51187": "#FFFFFF", "c51191": "#FFFFFF", "c51820": "#FFFFFF", "c51193": "#FFFFFF", "c51830": "#FFFFFF", "c51840": "#FFFFFF", "c51195": "#FFFFFF", "c51197": "#FFFFFF", "c51199": "#FFFFFF"};
-  var early_margins = {"c34001": "#FFFFFF", "c34003": "#FFFFFF", "c34005": "#FFFFFF", "c34007": "#FFFFFF", "c34009": "#FFFFFF", "c34011": "#FFFFFF", "c34013": "#FFFFFF", "c34015": "#FFFFFF", "c34017": "#FFFFFF", "c34019": "#FFFFFF", "c34021": "#FFFFFF", "c34023": "#FFFFFF", "c34025": "#FFFFFF", "c34027": "#FFFFFF", "c34029": "#FFFFFF", "c34031": "#FFFFFF", "c34033": "#FFFFFF", "c34035": "#FFFFFF", "c34037": "#FFFFFF", "c34039": "#FFFFFF", "c34041": "#FFFFFF", "c51001": "#FFFFFF", "c51003": "#FFFFFF", "c51510": "#FFFFFF", "c51005": "#FFFFFF", "c51007": "#FFFFFF", "c51009": "#FFFFFF", "c51011": "#FFFFFF", "c51013": "#FFFFFF", "c51015": "#FFFFFF", "c51017": "#FFFFFF", "c51019": "#FFFFFF", "c51021": "#FFFFFF", "c51023": "#FFFFFF", "c51520": "#FFFFFF", "c51025": "#FFFFFF", "c51027": "#FFFFFF", "c51029": "#FFFFFF", "c51530": "#FFFFFF", "c51031": "#FFFFFF", "c51033": "#FFFFFF", "c51035": "#FFFFFF", "c51036": "#FFFFFF", "c51037": "#FFFFFF", "c51540": "#FFFFFF", "c51550": "#FFFFFF", "c51041": "#FFFFFF", "c51043": "#FFFFFF", "c51570": "#FFFFFF", "c51580": "#FFFFFF", "c51045": "#FFFFFF", "c51047": "#FFFFFF", "c51049": "#FFFFFF", "c51590": "#FFFFFF", "c51051": "#FFFFFF", "c51053": "#FFFFFF", "c51595": "#FFFFFF", "c51057": "#FFFFFF", "c51059": "#FFFFFF", "c51600": "#FFFFFF", "c51610": "#FFFFFF", "c51061": "#FFFFFF", "c51063": "#FFFFFF", "c51065": "#FFFFFF", "c51067": "#FFFFFF", "c51620": "#FFFFFF", "c51069": "#FFFFFF", "c51630": "#FFFFFF", "c51640": "#FFFFFF", "c51071": "#FFFFFF", "c51073": "#FFFFFF", "c51075": "#FFFFFF", "c51077": "#FFFFFF", "c51079": "#FFFFFF", "c51081": "#FFFFFF", "c51083": "#FFFFFF", "c51650": "#FFFFFF", "c51085": "#FFFFFF", "c51660": "#FFFFFF", "c51087": "#FFFFFF", "c51089": "#FFFFFF", "c51091": "#FFFFFF", "c51670": "#FFFFFF", "c51093": "#FFFFFF", "c51095": "#FFFFFF", "c51097": "#FFFFFF", "c51099": "#FFFFFF", "c51101": "#FFFFFF", "c51103": "#FFFFFF", "c51105": "#FFFFFF", "c51678": "#FFFFFF", "c51107": "#FFFFFF", "c51109": "#FFFFFF", "c51111": "#FFFFFF", "c51680": "#FFFFFF", "c51113": "#FFFFFF", "c51683": "#FFFFFF", "c51685": "#FFFFFF", "c51690": "#FFFFFF", "c51115": "#FFFFFF", "c51117": "#FFFFFF", "c51119": "#FFFFFF", "c51121": "#FFFFFF", "c51125": "#FFFFFF", "c51127": "#FFFFFF", "c51700": "#FFFFFF", "c51710": "#FFFFFF", "c51131": "#FFFFFF", "c51133": "#FFFFFF", "c51720": "#FFFFFF", "c51135": "#FFFFFF", "c51137": "#FFFFFF", "c51139": "#FFFFFF", "c51141": "#FFFFFF", "c51730": "#FFFFFF", "c51143": "#FFFFFF", "c51735": "#FFFFFF", "c51740": "#FFFFFF", "c51145": "#FFFFFF", "c51147": "#FFFFFF", "c51149": "#FFFFFF", "c51153": "#FFFFFF", "c51155": "#FFFFFF", "c51750": "#FFFFFF", "c51157": "#FFFFFF", "c51159": "#FFFFFF", "c51760": "#FFFFFF", "c51161": "#FFFFFF", "c51770": "#FFFFFF", "c51163": "#FFFFFF", "c51165": "#FFFFFF", "c51167": "#FFFFFF", "c51775": "#FFFFFF", "c51169": "#FFFFFF", "c51171": "#FFFFFF", "c51173": "#FFFFFF", "c51175": "#FFFFFF", "c51177": "#FFFFFF", "c51179": "#FFFFFF", "c51790": "#FFFFFF", "c51800": "#FFFFFF", "c51181": "#FFFFFF", "c51183": "#FFFFFF", "c51185": "#FFFFFF", "c51810": "#FFFFFF", "c51187": "#FFFFFF", "c51191": "#FFFFFF", "c51820": "#FFFFFF", "c51193": "#FFFFFF", "c51830": "#FFFFFF", "c51840": "#FFFFFF", "c51195": "#FFFFFF", "c51197": "#FFFFFF", "c51199": "#FFFFFF"};
+  var actual = {"c34001": "#FFFFFF", "c34003": "#FFFFFF", "c34005": "#FFFFFF", "c34007": "#FFFFFF", "c34009": "#FFFFFF", "c34011": "#FFFFFF", "c34013": "#FFFFFF", "c34015": "#FFFFFF", "c34017": "#FFFFFF", "c34019": "#FFFFFF", "c34021": "#FFFFFF", "c34023": "#FFFFFF", "c34025": "#FFFFFF", "c34027": "#FFFFFF", "c34029": "#FFFFFF", "c34031": "#FFFFFF", "c34033": "#FFFFFF", "c34035": "#FFFFFF", "c34037": "#FFFFFF", "c34039": "#FFFFFF", "c34041": "#FFFFFF", "c51710": "#0000C0", "c51165": "#C00000", "c51041": "#0000FF", "c51600": "#0000C0", "c51820": "#6060FF", "c51680": "#0000C0", "c51029": "#FF3030", "c51760": "#0000C0", "c51013": "#0000C0", "c51630": "#0000C0", "c51153": "#C00000", "c51089": "#C00000", "c51149": "#0000C0", "c51025": "#FF3030", "c51147": "#FF6060", "c51193": "#0000FF", "c51021": "#C00000", "c51115": "#C00000", "c51083": "#FF0000", "c51143": "#C00000", "c51135": "#C00000", "c51077": "#C00000", "c51081": "#C00000", "c51001": "#FFFFFF", "c51003": "#FFFFFF", "c51510": "#FFFFFF", "c51005": "#FFFFFF", "c51007": "#FFFFFF", "c51009": "#FFFFFF", "c51011": "#FFFFFF", "c51015": "#FFFFFF", "c51017": "#FFFFFF", "c51019": "#FFFFFF", "c51023": "#FFFFFF", "c51520": "#FFFFFF", "c51027": "#FFFFFF", "c51530": "#FFFFFF", "c51031": "#FFFFFF", "c51033": "#FFFFFF", "c51035": "#FFFFFF", "c51036": "#FFFFFF", "c51037": "#FFFFFF", "c51540": "#FFFFFF", "c51550": "#FFFFFF", "c51043": "#FFFFFF", "c51570": "#FFFFFF", "c51580": "#FFFFFF", "c51045": "#FFFFFF", "c51047": "#FFFFFF", "c51049": "#FFFFFF", "c51590": "#FFFFFF", "c51051": "#FFFFFF", "c51053": "#FFFFFF", "c51595": "#FFFFFF", "c51057": "#FFFFFF", "c51059": "#FFFFFF", "c51610": "#FFFFFF", "c51061": "#FFFFFF", "c51063": "#FFFFFF", "c51065": "#FFFFFF", "c51067": "#FFFFFF", "c51620": "#FFFFFF", "c51069": "#FFFFFF", "c51640": "#FFFFFF", "c51071": "#FFFFFF", "c51073": "#FFFFFF", "c51075": "#FFFFFF", "c51079": "#FFFFFF", "c51650": "#FFFFFF", "c51085": "#FFFFFF", "c51660": "#FFFFFF", "c51087": "#FFFFFF", "c51091": "#FFFFFF", "c51670": "#FFFFFF", "c51093": "#FFFFFF", "c51095": "#FFFFFF", "c51097": "#FFFFFF", "c51099": "#FFFFFF", "c51101": "#FFFFFF", "c51103": "#FFFFFF", "c51105": "#FFFFFF", "c51678": "#FFFFFF", "c51107": "#FFFFFF", "c51109": "#FFFFFF", "c51111": "#FFFFFF", "c51113": "#FFFFFF", "c51683": "#FFFFFF", "c51685": "#FFFFFF", "c51690": "#FFFFFF", "c51117": "#FFFFFF", "c51119": "#FFFFFF", "c51121": "#FFFFFF", "c51125": "#FFFFFF", "c51127": "#FFFFFF", "c51700": "#FFFFFF", "c51131": "#FFFFFF", "c51133": "#FFFFFF", "c51720": "#FFFFFF", "c51137": "#FFFFFF", "c51139": "#FFFFFF", "c51141": "#FFFFFF", "c51730": "#FFFFFF", "c51735": "#FFFFFF", "c51740": "#FFFFFF", "c51145": "#FFFFFF", "c51155": "#FFFFFF", "c51750": "#FFFFFF", "c51157": "#FFFFFF", "c51159": "#FFFFFF", "c51161": "#FFFFFF", "c51770": "#FFFFFF", "c51163": "#FFFFFF", "c51167": "#FFFFFF", "c51775": "#FFFFFF", "c51169": "#FFFFFF", "c51171": "#FFFFFF", "c51173": "#FFFFFF", "c51175": "#FFFFFF", "c51177": "#FFFFFF", "c51179": "#FFFFFF", "c51790": "#FFFFFF", "c51800": "#FFFFFF", "c51181": "#FFFFFF", "c51183": "#FFFFFF", "c51185": "#FFFFFF", "c51810": "#FFFFFF", "c51187": "#FFFFFF", "c51191": "#FFFFFF", "c51830": "#FFFFFF", "c51840": "#FFFFFF", "c51195": "#FFFFFF", "c51197": "#FFFFFF", "c51199": "#FFFFFF"};
+  var margins = {"c34001": "#FFFFFF", "c34003": "#FFFFFF", "c34005": "#FFFFFF", "c34007": "#FFFFFF", "c34009": "#FFFFFF", "c34011": "#FFFFFF", "c34013": "#FFFFFF", "c34015": "#FFFFFF", "c34017": "#FFFFFF", "c34019": "#FFFFFF", "c34021": "#FFFFFF", "c34023": "#FFFFFF", "c34025": "#FFFFFF", "c34027": "#FFFFFF", "c34029": "#FFFFFF", "c34031": "#FFFFFF", "c34033": "#FFFFFF", "c34035": "#FFFFFF", "c34037": "#FFFFFF", "c34039": "#FFFFFF", "c34041": "#FFFFFF", "c51710": "#0000FF", "c51165": "#FF0000", "c51041": "#0000FF", "c51600": "#0000FF", "c51820": "#0000FF", "c51680": "#0000C0", "c51029": "#0000FF", "c51760": "#FF0000", "c51013": "#FF6060", "c51630": "#0000C0", "c51153": "#C00000", "c51089": "#FF0000", "c51149": "#0000C0", "c51025": "#FF0000", "c51147": "#6060FF", "c51193": "#0000C0", "c51021": "#FF6060", "c51115": "#FF6060", "c51083": "#0000FF", "c51143": "#0000FF", "c51135": "#FF3030", "c51077": "#FF6060", "c51081": "#C00000", "c51001": "#FFFFFF", "c51003": "#FFFFFF", "c51510": "#FFFFFF", "c51005": "#FFFFFF", "c51007": "#FFFFFF", "c51009": "#FFFFFF", "c51011": "#FFFFFF", "c51015": "#FFFFFF", "c51017": "#FFFFFF", "c51019": "#FFFFFF", "c51023": "#FFFFFF", "c51520": "#FFFFFF", "c51027": "#FFFFFF", "c51530": "#FFFFFF", "c51031": "#FFFFFF", "c51033": "#FFFFFF", "c51035": "#FFFFFF", "c51036": "#FFFFFF", "c51037": "#FFFFFF", "c51540": "#FFFFFF", "c51550": "#FFFFFF", "c51043": "#FFFFFF", "c51570": "#FFFFFF", "c51580": "#FFFFFF", "c51045": "#FFFFFF", "c51047": "#FFFFFF", "c51049": "#FFFFFF", "c51590": "#FFFFFF", "c51051": "#FFFFFF", "c51053": "#FFFFFF", "c51595": "#FFFFFF", "c51057": "#FFFFFF", "c51059": "#FFFFFF", "c51610": "#FFFFFF", "c51061": "#FFFFFF", "c51063": "#FFFFFF", "c51065": "#FFFFFF", "c51067": "#FFFFFF", "c51620": "#FFFFFF", "c51069": "#FFFFFF", "c51640": "#FFFFFF", "c51071": "#FFFFFF", "c51073": "#FFFFFF", "c51075": "#FFFFFF", "c51079": "#FFFFFF", "c51650": "#FFFFFF", "c51085": "#FFFFFF", "c51660": "#FFFFFF", "c51087": "#FFFFFF", "c51091": "#FFFFFF", "c51670": "#FFFFFF", "c51093": "#FFFFFF", "c51095": "#FFFFFF", "c51097": "#FFFFFF", "c51099": "#FFFFFF", "c51101": "#FFFFFF", "c51103": "#FFFFFF", "c51105": "#FFFFFF", "c51678": "#FFFFFF", "c51107": "#FFFFFF", "c51109": "#FFFFFF", "c51111": "#FFFFFF", "c51113": "#FFFFFF", "c51683": "#FFFFFF", "c51685": "#FFFFFF", "c51690": "#FFFFFF", "c51117": "#FFFFFF", "c51119": "#FFFFFF", "c51121": "#FFFFFF", "c51125": "#FFFFFF", "c51127": "#FFFFFF", "c51700": "#FFFFFF", "c51131": "#FFFFFF", "c51133": "#FFFFFF", "c51720": "#FFFFFF", "c51137": "#FFFFFF", "c51139": "#FFFFFF", "c51141": "#FFFFFF", "c51730": "#FFFFFF", "c51735": "#FFFFFF", "c51740": "#FFFFFF", "c51145": "#FFFFFF", "c51155": "#FFFFFF", "c51750": "#FFFFFF", "c51157": "#FFFFFF", "c51159": "#FFFFFF", "c51161": "#FFFFFF", "c51770": "#FFFFFF", "c51163": "#FFFFFF", "c51167": "#FFFFFF", "c51775": "#FFFFFF", "c51169": "#FFFFFF", "c51171": "#FFFFFF", "c51173": "#FFFFFF", "c51175": "#FFFFFF", "c51177": "#FFFFFF", "c51179": "#FFFFFF", "c51790": "#FFFFFF", "c51800": "#FFFFFF", "c51181": "#FFFFFF", "c51183": "#FFFFFF", "c51185": "#FFFFFF", "c51810": "#FFFFFF", "c51187": "#FFFFFF", "c51191": "#FFFFFF", "c51830": "#FFFFFF", "c51840": "#FFFFFF", "c51195": "#FFFFFF", "c51197": "#FFFFFF", "c51199": "#FFFFFF"};
+  var early_margins = {"c34001": "#FFFFFF", "c34003": "#FFFFFF", "c34005": "#FFFFFF", "c34007": "#FFFFFF", "c34009": "#FFFFFF", "c34011": "#FFFFFF", "c34013": "#FFFFFF", "c34015": "#FFFFFF", "c34017": "#FFFFFF", "c34019": "#FFFFFF", "c34021": "#FFFFFF", "c34023": "#FFFFFF", "c34025": "#FFFFFF", "c34027": "#FFFFFF", "c34029": "#FFFFFF", "c34031": "#FFFFFF", "c34033": "#FFFFFF", "c34035": "#FFFFFF", "c34037": "#FFFFFF", "c34039": "#FFFFFF", "c34041": "#FFFFFF", "c51710": "#6060FF", "c51165": "#C00000", "c51041": "#FF9090", "c51600": "#3030FF", "c51820": "#9090FF", "c51680": "#0000C0", "c51029": "#6060FF", "c51760": "#FF0000", "c51013": "#FF0000", "c51630": "#0000C0", "c51153": "#C00000", "c51089": "#C00000", "c51149": "#0000C0", "c51025": "#C00000", "c51147": "#FF3030", "c51193": "#0000C0", "c51021": "#FF0000", "c51115": "#FF0000", "c51083": "#FF9090", "c51143": "#FF9090", "c51135": "#FF0000", "c51077": "#FF0000", "c51081": "#C00000", "c51001": "#FFFFFF", "c51003": "#FFFFFF", "c51510": "#FFFFFF", "c51005": "#FFFFFF", "c51007": "#FFFFFF", "c51009": "#FFFFFF", "c51011": "#FFFFFF", "c51015": "#FFFFFF", "c51017": "#FFFFFF", "c51019": "#FFFFFF", "c51023": "#FFFFFF", "c51520": "#FFFFFF", "c51027": "#FFFFFF", "c51530": "#FFFFFF", "c51031": "#FFFFFF", "c51033": "#FFFFFF", "c51035": "#FFFFFF", "c51036": "#FFFFFF", "c51037": "#FFFFFF", "c51540": "#FFFFFF", "c51550": "#FFFFFF", "c51043": "#FFFFFF", "c51570": "#FFFFFF", "c51580": "#FFFFFF", "c51045": "#FFFFFF", "c51047": "#FFFFFF", "c51049": "#FFFFFF", "c51590": "#FFFFFF", "c51051": "#FFFFFF", "c51053": "#FFFFFF", "c51595": "#FFFFFF", "c51057": "#FFFFFF", "c51059": "#FFFFFF", "c51610": "#FFFFFF", "c51061": "#FFFFFF", "c51063": "#FFFFFF", "c51065": "#FFFFFF", "c51067": "#FFFFFF", "c51620": "#FFFFFF", "c51069": "#FFFFFF", "c51640": "#FFFFFF", "c51071": "#FFFFFF", "c51073": "#FFFFFF", "c51075": "#FFFFFF", "c51079": "#FFFFFF", "c51650": "#FFFFFF", "c51085": "#FFFFFF", "c51660": "#FFFFFF", "c51087": "#FFFFFF", "c51091": "#FFFFFF", "c51670": "#FFFFFF", "c51093": "#FFFFFF", "c51095": "#FFFFFF", "c51097": "#FFFFFF", "c51099": "#FFFFFF", "c51101": "#FFFFFF", "c51103": "#FFFFFF", "c51105": "#FFFFFF", "c51678": "#FFFFFF", "c51107": "#FFFFFF", "c51109": "#FFFFFF", "c51111": "#FFFFFF", "c51113": "#FFFFFF", "c51683": "#FFFFFF", "c51685": "#FFFFFF", "c51690": "#FFFFFF", "c51117": "#FFFFFF", "c51119": "#FFFFFF", "c51121": "#FFFFFF", "c51125": "#FFFFFF", "c51127": "#FFFFFF", "c51700": "#FFFFFF", "c51131": "#FFFFFF", "c51133": "#FFFFFF", "c51720": "#FFFFFF", "c51137": "#FFFFFF", "c51139": "#FFFFFF", "c51141": "#FFFFFF", "c51730": "#FFFFFF", "c51735": "#FFFFFF", "c51740": "#FFFFFF", "c51145": "#FFFFFF", "c51155": "#FFFFFF", "c51750": "#FFFFFF", "c51157": "#FFFFFF", "c51159": "#FFFFFF", "c51161": "#FFFFFF", "c51770": "#FFFFFF", "c51163": "#FFFFFF", "c51167": "#FFFFFF", "c51775": "#FFFFFF", "c51169": "#FFFFFF", "c51171": "#FFFFFF", "c51173": "#FFFFFF", "c51175": "#FFFFFF", "c51177": "#FFFFFF", "c51179": "#FFFFFF", "c51790": "#FFFFFF", "c51800": "#FFFFFF", "c51181": "#FFFFFF", "c51183": "#FFFFFF", "c51185": "#FFFFFF", "c51810": "#FFFFFF", "c51187": "#FFFFFF", "c51191": "#FFFFFF", "c51830": "#FFFFFF", "c51840": "#FFFFFF", "c51195": "#FFFFFF", "c51197": "#FFFFFF", "c51199": "#FFFFFF"};
   function colorCounties(fips, colors) {
     if (!fips && fips !== "") {
       fips = current_fips;
@@ -7320,6 +7324,397 @@ Lead: <b>Tie</b><br>
 0.0% of precincts reporting<br>
 Lead: <b>Tie</b><br>
 </div>
+<div id="51710-results" class="results">
+<b class="name">Norfolk</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Abigail Spanberger</td><td>DEM</td><td class="votes">11,589</td><td class="pct">74.8</td></tr>
+<tr><td>Winsome Earle-Sears</td><td>REP</td><td class="votes">3,881</td><td class="pct">25.1</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Spanberger +49.8</b><br>
+</div>
+<div id="51165-results" class="results">
+<b class="name">Rockingham</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Winsome Earle-Sears</td><td>REP</td><td class="votes">4,345</td><td class="pct">81.6</td></tr>
+<tr><td>Abigail Spanberger</td><td>DEM</td><td class="votes">970</td><td class="pct">18.2</td></tr>
+</tbody>
+</table>
+13.8% of precincts reporting<br>
+Lead: <b>Earle-Sears +63.4</b><br>
+</div>
+<div id="51041-results" class="results">
+<b class="name">Chesterfield</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Abigail Spanberger</td><td>DEM</td><td class="votes">2,511</td><td class="pct">55.9</td></tr>
+<tr><td>Winsome Earle-Sears</td><td>REP</td><td class="votes">1,965</td><td class="pct">43.8</td></tr>
+</tbody>
+</table>
+9.0% of precincts reporting<br>
+Lead: <b>Spanberger +12.2</b><br>
+</div>
+<div id="51600-results" class="results">
+<b class="name">Fairfax City</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Abigail Spanberger</td><td>DEM</td><td class="votes">2,917</td><td class="pct">72.7</td></tr>
+<tr><td>Winsome Earle-Sears</td><td>REP</td><td class="votes">1,088</td><td class="pct">27.1</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Spanberger +45.6</b><br>
+</div>
+<div id="51820-results" class="results">
+<b class="name">Waynesboro</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Abigail Spanberger</td><td>DEM</td><td class="votes">1,832</td><td class="pct">51.2</td></tr>
+<tr><td>Winsome Earle-Sears</td><td>REP</td><td class="votes">1,741</td><td class="pct">48.7</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Spanberger +2.5</b><br>
+</div>
+<div id="51680-results" class="results">
+<b class="name">Lynchburg</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Abigail Spanberger</td><td>DEM</td><td class="votes">1,803</td><td class="pct">75.0</td></tr>
+<tr><td>Winsome Earle-Sears</td><td>REP</td><td class="votes">600</td><td class="pct">25.0</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Spanberger +50.1</b><br>
+</div>
+<div id="51029-results" class="results">
+<b class="name">Buckingham</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Winsome Earle-Sears</td><td>REP</td><td class="votes">1,141</td><td class="pct">54.5</td></tr>
+<tr><td>Abigail Spanberger</td><td>DEM</td><td class="votes">951</td><td class="pct">45.4</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Earle-Sears +9.1</b><br>
+</div>
+<div id="51760-results" class="results">
+<b class="name">Richmond City</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Abigail Spanberger</td><td>DEM</td><td class="votes">1,188</td><td class="pct">73.4</td></tr>
+<tr><td>Winsome Earle-Sears</td><td>REP</td><td class="votes">426</td><td class="pct">26.3</td></tr>
+</tbody>
+</table>
+2.8% of precincts reporting<br>
+Lead: <b>Spanberger +47.1</b><br>
+</div>
+<div id="51013-results" class="results">
+<b class="name">Arlington</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Abigail Spanberger</td><td>DEM</td><td class="votes">971</td><td class="pct">74.8</td></tr>
+<tr><td>Winsome Earle-Sears</td><td>REP</td><td class="votes">323</td><td class="pct">24.9</td></tr>
+</tbody>
+</table>
+3.7% of precincts reporting<br>
+Lead: <b>Spanberger +49.9</b><br>
+</div>
+<div id="51630-results" class="results">
+<b class="name">Fredericksburg</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Abigail Spanberger</td><td>DEM</td><td class="votes">980</td><td class="pct">83.5</td></tr>
+<tr><td>Winsome Earle-Sears</td><td>REP</td><td class="votes">190</td><td class="pct">16.2</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Spanberger +67.3</b><br>
+</div>
+<div id="51153-results" class="results">
+<b class="name">Prince William</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Winsome Earle-Sears</td><td>REP</td><td class="votes">689</td><td class="pct">67.9</td></tr>
+<tr><td>Abigail Spanberger</td><td>DEM</td><td class="votes">322</td><td class="pct">31.8</td></tr>
+</tbody>
+</table>
+1.0% of precincts reporting<br>
+Lead: <b>Earle-Sears +36.2</b><br>
+</div>
+<div id="51089-results" class="results">
+<b class="name">Henry</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Winsome Earle-Sears</td><td>REP</td><td class="votes">698</td><td class="pct">75.1</td></tr>
+<tr><td>Abigail Spanberger</td><td>DEM</td><td class="votes">231</td><td class="pct">24.9</td></tr>
+</tbody>
+</table>
+8.3% of precincts reporting<br>
+Lead: <b>Earle-Sears +50.3</b><br>
+</div>
+<div id="51149-results" class="results">
+<b class="name">Prince George</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Abigail Spanberger</td><td>DEM</td><td class="votes">565</td><td class="pct">62.2</td></tr>
+<tr><td>Winsome Earle-Sears</td><td>REP</td><td class="votes">342</td><td class="pct">37.7</td></tr>
+</tbody>
+</table>
+0.0% of precincts reporting<br>
+Lead: <b>Spanberger +24.6</b><br>
+</div>
+<div id="51025-results" class="results">
+<b class="name">Brunswick</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Winsome Earle-Sears</td><td>REP</td><td class="votes">403</td><td class="pct">54.5</td></tr>
+<tr><td>Abigail Spanberger</td><td>DEM</td><td class="votes">337</td><td class="pct">45.5</td></tr>
+</tbody>
+</table>
+15.4% of precincts reporting<br>
+Lead: <b>Earle-Sears +8.9</b><br>
+</div>
+<div id="51147-results" class="results">
+<b class="name">Prince Edward</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Winsome Earle-Sears</td><td>REP</td><td class="votes">269</td><td class="pct">50.8</td></tr>
+<tr><td>Abigail Spanberger</td><td>DEM</td><td class="votes">257</td><td class="pct">48.5</td></tr>
+</tbody>
+</table>
+10.0% of precincts reporting<br>
+Lead: <b>Earle-Sears +2.3</b><br>
+</div>
+<div id="51193-results" class="results">
+<b class="name">Westmoreland</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Abigail Spanberger</td><td>DEM</td><td class="votes">311</td><td class="pct">59.0</td></tr>
+<tr><td>Winsome Earle-Sears</td><td>REP</td><td class="votes">216</td><td class="pct">41.0</td></tr>
+</tbody>
+</table>
+12.5% of precincts reporting<br>
+Lead: <b>Spanberger +18.0</b><br>
+</div>
+<div id="51021-results" class="results">
+<b class="name">Bland</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Winsome Earle-Sears</td><td>REP</td><td class="votes">423</td><td class="pct">87.8</td></tr>
+<tr><td>Abigail Spanberger</td><td>DEM</td><td class="votes">59</td><td class="pct">12.2</td></tr>
+</tbody>
+</table>
+28.6% of precincts reporting<br>
+Lead: <b>Earle-Sears +75.5</b><br>
+</div>
+<div id="51115-results" class="results">
+<b class="name">Mathews</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Winsome Earle-Sears</td><td>REP</td><td class="votes">304</td><td class="pct">73.3</td></tr>
+<tr><td>Abigail Spanberger</td><td>DEM</td><td class="votes">111</td><td class="pct">26.7</td></tr>
+</tbody>
+</table>
+33.3% of precincts reporting<br>
+Lead: <b>Earle-Sears +46.5</b><br>
+</div>
+<div id="51083-results" class="results">
+<b class="name">Halifax</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Winsome Earle-Sears</td><td>REP</td><td class="votes">210</td><td class="pct">56.9</td></tr>
+<tr><td>Abigail Spanberger</td><td>DEM</td><td class="votes">158</td><td class="pct">42.8</td></tr>
+</tbody>
+</table>
+5.0% of precincts reporting<br>
+Lead: <b>Earle-Sears +14.1</b><br>
+</div>
+<div id="51143-results" class="results">
+<b class="name">Pittsylvania</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Winsome Earle-Sears</td><td>REP</td><td class="votes">124</td><td class="pct">68.1</td></tr>
+<tr><td>Abigail Spanberger</td><td>DEM</td><td class="votes">57</td><td class="pct">31.3</td></tr>
+</tbody>
+</table>
+3.4% of precincts reporting<br>
+Lead: <b>Earle-Sears +36.8</b><br>
+</div>
+<div id="51135-results" class="results">
+<b class="name">Nottoway</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Winsome Earle-Sears</td><td>REP</td><td class="votes">88</td><td class="pct">66.2</td></tr>
+<tr><td>Abigail Spanberger</td><td>DEM</td><td class="votes">44</td><td class="pct">33.1</td></tr>
+</tbody>
+</table>
+14.3% of precincts reporting<br>
+Lead: <b>Earle-Sears +33.1</b><br>
+</div>
+<div id="51077-results" class="results">
+<b class="name">Grayson</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Winsome Earle-Sears</td><td>REP</td><td class="votes">100</td><td class="pct">84.0</td></tr>
+<tr><td>Abigail Spanberger</td><td>DEM</td><td class="votes">17</td><td class="pct">14.3</td></tr>
+</tbody>
+</table>
+6.7% of precincts reporting<br>
+Lead: <b>Earle-Sears +69.7</b><br>
+</div>
+<div id="51081-results" class="results">
+<b class="name">Greensville</b><br>
+<table class="resultstable"">
+<tbody>
+<tr class="cheaderrow">
+<td>Candidate</td>
+<td>Party</td>
+<td>Votes</td>
+<td>Pct</td>
+</tr>
+<tr><td>Winsome Earle-Sears</td><td>REP</td><td class="votes">70</td><td class="pct">67.3</td></tr>
+<tr><td>Abigail Spanberger</td><td>DEM</td><td class="votes">34</td><td class="pct">32.7</td></tr>
+</tbody>
+</table>
+11.1% of precincts reporting<br>
+Lead: <b>Earle-Sears +34.6</b><br>
+</div>
 <div id="51001-results" class="results">
 <b class="name">Accomack</b><br>
 <table class="resultstable"">
@@ -7398,11 +7793,9 @@ Lead: <b>Tie</b><br>
 <td>Votes</td>
 <td>Pct</td>
 </tr>
-<tr><td>Abigail Spanberger</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
-<tr><td>Winsome Earle-Sears</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
 </tbody>
 </table>
-0.0% of precincts reporting<br>
+20.0% of precincts reporting<br>
 Lead: <b>Tie</b><br>
 </div>
 <div id="51009-results" class="results">
@@ -7424,23 +7817,6 @@ Lead: <b>Tie</b><br>
 </div>
 <div id="51011-results" class="results">
 <b class="name">Appomattox</b><br>
-<table class="resultstable"">
-<tbody>
-<tr class="cheaderrow">
-<td>Candidate</td>
-<td>Party</td>
-<td>Votes</td>
-<td>Pct</td>
-</tr>
-<tr><td>Abigail Spanberger</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
-<tr><td>Winsome Earle-Sears</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
-</tbody>
-</table>
-0.0% of precincts reporting<br>
-Lead: <b>Tie</b><br>
-</div>
-<div id="51013-results" class="results">
-<b class="name">Arlington</b><br>
 <table class="resultstable"">
 <tbody>
 <tr class="cheaderrow">
@@ -7507,23 +7883,6 @@ Lead: <b>Tie</b><br>
 0.0% of precincts reporting<br>
 Lead: <b>Tie</b><br>
 </div>
-<div id="51021-results" class="results">
-<b class="name">Bland</b><br>
-<table class="resultstable"">
-<tbody>
-<tr class="cheaderrow">
-<td>Candidate</td>
-<td>Party</td>
-<td>Votes</td>
-<td>Pct</td>
-</tr>
-<tr><td>Abigail Spanberger</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
-<tr><td>Winsome Earle-Sears</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
-</tbody>
-</table>
-0.0% of precincts reporting<br>
-Lead: <b>Tie</b><br>
-</div>
 <div id="51023-results" class="results">
 <b class="name">Botetourt</b><br>
 <table class="resultstable"">
@@ -7558,42 +7917,8 @@ Lead: <b>Tie</b><br>
 0.0% of precincts reporting<br>
 Lead: <b>Tie</b><br>
 </div>
-<div id="51025-results" class="results">
-<b class="name">Brunswick</b><br>
-<table class="resultstable"">
-<tbody>
-<tr class="cheaderrow">
-<td>Candidate</td>
-<td>Party</td>
-<td>Votes</td>
-<td>Pct</td>
-</tr>
-<tr><td>Abigail Spanberger</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
-<tr><td>Winsome Earle-Sears</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
-</tbody>
-</table>
-0.0% of precincts reporting<br>
-Lead: <b>Tie</b><br>
-</div>
 <div id="51027-results" class="results">
 <b class="name">Buchanan</b><br>
-<table class="resultstable"">
-<tbody>
-<tr class="cheaderrow">
-<td>Candidate</td>
-<td>Party</td>
-<td>Votes</td>
-<td>Pct</td>
-</tr>
-<tr><td>Abigail Spanberger</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
-<tr><td>Winsome Earle-Sears</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
-</tbody>
-</table>
-0.0% of precincts reporting<br>
-Lead: <b>Tie</b><br>
-</div>
-<div id="51029-results" class="results">
-<b class="name">Buckingham</b><br>
 <table class="resultstable"">
 <tbody>
 <tr class="cheaderrow">
@@ -7730,23 +8055,6 @@ Lead: <b>Tie</b><br>
 </div>
 <div id="51550-results" class="results">
 <b class="name">Chesapeake</b><br>
-<table class="resultstable"">
-<tbody>
-<tr class="cheaderrow">
-<td>Candidate</td>
-<td>Party</td>
-<td>Votes</td>
-<td>Pct</td>
-</tr>
-<tr><td>Abigail Spanberger</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
-<tr><td>Winsome Earle-Sears</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
-</tbody>
-</table>
-0.0% of precincts reporting<br>
-Lead: <b>Tie</b><br>
-</div>
-<div id="51041-results" class="results">
-<b class="name">Chesterfield</b><br>
 <table class="resultstable"">
 <tbody>
 <tr class="cheaderrow">
@@ -7966,23 +8274,6 @@ Lead: <b>Tie</b><br>
 0.0% of precincts reporting<br>
 Lead: <b>Tie</b><br>
 </div>
-<div id="51600-results" class="results">
-<b class="name">Fairfax City</b><br>
-<table class="resultstable"">
-<tbody>
-<tr class="cheaderrow">
-<td>Candidate</td>
-<td>Party</td>
-<td>Votes</td>
-<td>Pct</td>
-</tr>
-<tr><td>Abigail Spanberger</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
-<tr><td>Winsome Earle-Sears</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
-</tbody>
-</table>
-0.0% of precincts reporting<br>
-Lead: <b>Tie</b><br>
-</div>
 <div id="51610-results" class="results">
 <b class="name">Falls Church</b><br>
 <table class="resultstable"">
@@ -8102,23 +8393,6 @@ Lead: <b>Tie</b><br>
 0.0% of precincts reporting<br>
 Lead: <b>Tie</b><br>
 </div>
-<div id="51630-results" class="results">
-<b class="name">Fredericksburg</b><br>
-<table class="resultstable"">
-<tbody>
-<tr class="cheaderrow">
-<td>Candidate</td>
-<td>Party</td>
-<td>Votes</td>
-<td>Pct</td>
-</tr>
-<tr><td>Abigail Spanberger</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
-<tr><td>Winsome Earle-Sears</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
-</tbody>
-</table>
-0.0% of precincts reporting<br>
-Lead: <b>Tie</b><br>
-</div>
 <div id="51640-results" class="results">
 <b class="name">Galax</b><br>
 <table class="resultstable"">
@@ -8187,59 +8461,8 @@ Lead: <b>Tie</b><br>
 0.0% of precincts reporting<br>
 Lead: <b>Tie</b><br>
 </div>
-<div id="51077-results" class="results">
-<b class="name">Grayson</b><br>
-<table class="resultstable"">
-<tbody>
-<tr class="cheaderrow">
-<td>Candidate</td>
-<td>Party</td>
-<td>Votes</td>
-<td>Pct</td>
-</tr>
-<tr><td>Abigail Spanberger</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
-<tr><td>Winsome Earle-Sears</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
-</tbody>
-</table>
-0.0% of precincts reporting<br>
-Lead: <b>Tie</b><br>
-</div>
 <div id="51079-results" class="results">
 <b class="name">Greene</b><br>
-<table class="resultstable"">
-<tbody>
-<tr class="cheaderrow">
-<td>Candidate</td>
-<td>Party</td>
-<td>Votes</td>
-<td>Pct</td>
-</tr>
-<tr><td>Abigail Spanberger</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
-<tr><td>Winsome Earle-Sears</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
-</tbody>
-</table>
-0.0% of precincts reporting<br>
-Lead: <b>Tie</b><br>
-</div>
-<div id="51081-results" class="results">
-<b class="name">Greensville</b><br>
-<table class="resultstable"">
-<tbody>
-<tr class="cheaderrow">
-<td>Candidate</td>
-<td>Party</td>
-<td>Votes</td>
-<td>Pct</td>
-</tr>
-<tr><td>Abigail Spanberger</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
-<tr><td>Winsome Earle-Sears</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
-</tbody>
-</table>
-0.0% of precincts reporting<br>
-Lead: <b>Tie</b><br>
-</div>
-<div id="51083-results" class="results">
-<b class="name">Halifax</b><br>
 <table class="resultstable"">
 <tbody>
 <tr class="cheaderrow">
@@ -8308,23 +8531,6 @@ Lead: <b>Tie</b><br>
 </div>
 <div id="51087-results" class="results">
 <b class="name">Henrico</b><br>
-<table class="resultstable"">
-<tbody>
-<tr class="cheaderrow">
-<td>Candidate</td>
-<td>Party</td>
-<td>Votes</td>
-<td>Pct</td>
-</tr>
-<tr><td>Abigail Spanberger</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
-<tr><td>Winsome Earle-Sears</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
-</tbody>
-</table>
-0.0% of precincts reporting<br>
-Lead: <b>Tie</b><br>
-</div>
-<div id="51089-results" class="results">
-<b class="name">Henry</b><br>
 <table class="resultstable"">
 <tbody>
 <tr class="cheaderrow">
@@ -8561,23 +8767,6 @@ Lead: <b>Tie</b><br>
 0.0% of precincts reporting<br>
 Lead: <b>Tie</b><br>
 </div>
-<div id="51680-results" class="results">
-<b class="name">Lynchburg</b><br>
-<table class="resultstable"">
-<tbody>
-<tr class="cheaderrow">
-<td>Candidate</td>
-<td>Party</td>
-<td>Votes</td>
-<td>Pct</td>
-</tr>
-<tr><td>Abigail Spanberger</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
-<tr><td>Winsome Earle-Sears</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
-</tbody>
-</table>
-0.0% of precincts reporting<br>
-Lead: <b>Tie</b><br>
-</div>
 <div id="51113-results" class="results">
 <b class="name">Madison</b><br>
 <table class="resultstable"">
@@ -8631,23 +8820,6 @@ Lead: <b>Tie</b><br>
 </div>
 <div id="51690-results" class="results">
 <b class="name">Martinsville</b><br>
-<table class="resultstable"">
-<tbody>
-<tr class="cheaderrow">
-<td>Candidate</td>
-<td>Party</td>
-<td>Votes</td>
-<td>Pct</td>
-</tr>
-<tr><td>Abigail Spanberger</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
-<tr><td>Winsome Earle-Sears</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
-</tbody>
-</table>
-0.0% of precincts reporting<br>
-Lead: <b>Tie</b><br>
-</div>
-<div id="51115-results" class="results">
-<b class="name">Mathews</b><br>
 <table class="resultstable"">
 <tbody>
 <tr class="cheaderrow">
@@ -8765,23 +8937,6 @@ Lead: <b>Tie</b><br>
 0.0% of precincts reporting<br>
 Lead: <b>Tie</b><br>
 </div>
-<div id="51710-results" class="results">
-<b class="name">Norfolk</b><br>
-<table class="resultstable"">
-<tbody>
-<tr class="cheaderrow">
-<td>Candidate</td>
-<td>Party</td>
-<td>Votes</td>
-<td>Pct</td>
-</tr>
-<tr><td>Abigail Spanberger</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
-<tr><td>Winsome Earle-Sears</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
-</tbody>
-</table>
-0.0% of precincts reporting<br>
-Lead: <b>Tie</b><br>
-</div>
 <div id="51131-results" class="results">
 <b class="name">Northampton</b><br>
 <table class="resultstable"">
@@ -8818,23 +8973,6 @@ Lead: <b>Tie</b><br>
 </div>
 <div id="51720-results" class="results">
 <b class="name">Norton</b><br>
-<table class="resultstable"">
-<tbody>
-<tr class="cheaderrow">
-<td>Candidate</td>
-<td>Party</td>
-<td>Votes</td>
-<td>Pct</td>
-</tr>
-<tr><td>Abigail Spanberger</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
-<tr><td>Winsome Earle-Sears</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
-</tbody>
-</table>
-0.0% of precincts reporting<br>
-Lead: <b>Tie</b><br>
-</div>
-<div id="51135-results" class="results">
-<b class="name">Nottoway</b><br>
 <table class="resultstable"">
 <tbody>
 <tr class="cheaderrow">
@@ -8918,23 +9056,6 @@ Lead: <b>Tie</b><br>
 0.0% of precincts reporting<br>
 Lead: <b>Tie</b><br>
 </div>
-<div id="51143-results" class="results">
-<b class="name">Pittsylvania</b><br>
-<table class="resultstable"">
-<tbody>
-<tr class="cheaderrow">
-<td>Candidate</td>
-<td>Party</td>
-<td>Votes</td>
-<td>Pct</td>
-</tr>
-<tr><td>Abigail Spanberger</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
-<tr><td>Winsome Earle-Sears</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
-</tbody>
-</table>
-0.0% of precincts reporting<br>
-Lead: <b>Tie</b><br>
-</div>
 <div id="51735-results" class="results">
 <b class="name">Poquoson</b><br>
 <table class="resultstable"">
@@ -8971,57 +9092,6 @@ Lead: <b>Tie</b><br>
 </div>
 <div id="51145-results" class="results">
 <b class="name">Powhatan</b><br>
-<table class="resultstable"">
-<tbody>
-<tr class="cheaderrow">
-<td>Candidate</td>
-<td>Party</td>
-<td>Votes</td>
-<td>Pct</td>
-</tr>
-<tr><td>Abigail Spanberger</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
-<tr><td>Winsome Earle-Sears</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
-</tbody>
-</table>
-0.0% of precincts reporting<br>
-Lead: <b>Tie</b><br>
-</div>
-<div id="51147-results" class="results">
-<b class="name">Prince Edward</b><br>
-<table class="resultstable"">
-<tbody>
-<tr class="cheaderrow">
-<td>Candidate</td>
-<td>Party</td>
-<td>Votes</td>
-<td>Pct</td>
-</tr>
-<tr><td>Abigail Spanberger</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
-<tr><td>Winsome Earle-Sears</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
-</tbody>
-</table>
-0.0% of precincts reporting<br>
-Lead: <b>Tie</b><br>
-</div>
-<div id="51149-results" class="results">
-<b class="name">Prince George</b><br>
-<table class="resultstable"">
-<tbody>
-<tr class="cheaderrow">
-<td>Candidate</td>
-<td>Party</td>
-<td>Votes</td>
-<td>Pct</td>
-</tr>
-<tr><td>Abigail Spanberger</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
-<tr><td>Winsome Earle-Sears</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
-</tbody>
-</table>
-0.0% of precincts reporting<br>
-Lead: <b>Tie</b><br>
-</div>
-<div id="51153-results" class="results">
-<b class="name">Prince William</b><br>
 <table class="resultstable"">
 <tbody>
 <tr class="cheaderrow">
@@ -9098,28 +9168,9 @@ Lead: <b>Tie</b><br>
 <td>Votes</td>
 <td>Pct</td>
 </tr>
-<tr><td>Abigail Spanberger</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
-<tr><td>Winsome Earle-Sears</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
 </tbody>
 </table>
-0.0% of precincts reporting<br>
-Lead: <b>Tie</b><br>
-</div>
-<div id="51760-results" class="results">
-<b class="name">Richmond City</b><br>
-<table class="resultstable"">
-<tbody>
-<tr class="cheaderrow">
-<td>Candidate</td>
-<td>Party</td>
-<td>Votes</td>
-<td>Pct</td>
-</tr>
-<tr><td>Abigail Spanberger</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
-<tr><td>Winsome Earle-Sears</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
-</tbody>
-</table>
-0.0% of precincts reporting<br>
+60.0% of precincts reporting<br>
 Lead: <b>Tie</b><br>
 </div>
 <div id="51161-results" class="results">
@@ -9158,23 +9209,6 @@ Lead: <b>Tie</b><br>
 </div>
 <div id="51163-results" class="results">
 <b class="name">Rockbridge</b><br>
-<table class="resultstable"">
-<tbody>
-<tr class="cheaderrow">
-<td>Candidate</td>
-<td>Party</td>
-<td>Votes</td>
-<td>Pct</td>
-</tr>
-<tr><td>Abigail Spanberger</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
-<tr><td>Winsome Earle-Sears</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
-</tbody>
-</table>
-0.0% of precincts reporting<br>
-Lead: <b>Tie</b><br>
-</div>
-<div id="51165-results" class="results">
-<b class="name">Rockingham</b><br>
 <table class="resultstable"">
 <tbody>
 <tr class="cheaderrow">
@@ -9447,40 +9481,6 @@ Lead: <b>Tie</b><br>
 </div>
 <div id="51191-results" class="results">
 <b class="name">Washington</b><br>
-<table class="resultstable"">
-<tbody>
-<tr class="cheaderrow">
-<td>Candidate</td>
-<td>Party</td>
-<td>Votes</td>
-<td>Pct</td>
-</tr>
-<tr><td>Abigail Spanberger</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
-<tr><td>Winsome Earle-Sears</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
-</tbody>
-</table>
-0.0% of precincts reporting<br>
-Lead: <b>Tie</b><br>
-</div>
-<div id="51820-results" class="results">
-<b class="name">Waynesboro</b><br>
-<table class="resultstable"">
-<tbody>
-<tr class="cheaderrow">
-<td>Candidate</td>
-<td>Party</td>
-<td>Votes</td>
-<td>Pct</td>
-</tr>
-<tr><td>Abigail Spanberger</td><td>DEM</td><td class="votes">0</td><td class="pct">0.0</td></tr>
-<tr><td>Winsome Earle-Sears</td><td>REP</td><td class="votes">0</td><td class="pct">0.0</td></tr>
-</tbody>
-</table>
-0.0% of precincts reporting<br>
-Lead: <b>Tie</b><br>
-</div>
-<div id="51193-results" class="results">
-<b class="name">Westmoreland</b><br>
 <table class="resultstable"">
 <tbody>
 <tr class="cheaderrow">
